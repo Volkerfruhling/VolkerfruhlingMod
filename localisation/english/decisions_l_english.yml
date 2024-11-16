@@ -1,0 +1,8 @@
+﻿l_english:
+ #decisions
+ forming_category:0 "Formation of States"
+ form_test:0 "Form §YGreat Test State§!"
+ 
+ #tooltip
+ controlling_territories:0 "Controls region §YTest Island§!"
+ form_test_tt:0 "All controlled territories will be §Gnationalised§!."

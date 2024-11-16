@@ -1,0 +1,785 @@
+characters={
+	TST_1_advisor_civilian={
+		allowed_civil_war = {
+			has_government = communism
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_1_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				communist_revolutionary
+			}
+			do_effect = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_1
+			}
+		}
+	}
+	TST_2_advisor_civilian={
+		allowed_civil_war = {
+			has_government = democratic
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_2_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				democratic_reformer
+			}
+			do_effect = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_3_advisor_civilian={
+		allowed_civil_war = {
+			has_government = fascism
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_3_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				fascist_demagogue
+			}
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_3
+			}
+		}
+	}
+	TST_4_advisor_civilian={
+		allowed_civil_war = {
+			has_government = neutrality
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_4_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				staunch_monarchist
+			}
+			do_effect = {
+				NOT = {
+					has_government = neutrality
+				}
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_3
+			}
+		}
+	}
+	TST_5_advisor_civilian={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_5_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				captain_of_industry
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_6_advisor_civilian={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_6_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				war_industrialist
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_7_advisor_civilian={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_7_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				backroom_backstabber
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_8_advisor_civilian={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_8_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				fortification_engineer
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_9_advisor_civilian={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_9_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				ideological_crusader 
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_10_advisor_civilian={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_10_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				smooth_talking_charmer
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_11_advisor_civilian={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_11_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				compassionate_gentleman 
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_12_advisor_civilian={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_12_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				prince_of_terror 
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_13_advisor_civilian={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_13_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				silent_workhorse 
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_14_advisor_civilian={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_14_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				technocrat 
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_15_advisor_civilian={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_15_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				propaganda_expert 
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_16_advisor_civilian={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_16_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				financial_expert 
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_17_advisor_civilian={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_17_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				economist  
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_18_advisor_civilian={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_18_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				editor  
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_19_advisor_civilian={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_19_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				armaments_organizer  
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_20_advisor_civilian={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = political_advisor
+			cost = 100
+			idea_token = TST_20_advisor_civilian
+			allowed = {
+				always = yes
+			}
+			traits = {
+				reluctant_interventionist  
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_1_army_chief={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = army_chief
+			cost = 100	
+			idea_token = TST_1_army_chief
+			ledger = army
+			allowed = {
+				always = yes
+			}
+			traits = {
+				army_chief_offensive_1
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_2_army_chief={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = army_chief
+			cost = 100	
+			idea_token = TST_2_army_chief
+			ledger = army
+			allowed = {
+				always = yes
+			}
+			traits = {
+				army_chief_defensive_1
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_3_army_chief={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = army_chief
+			cost = 100	
+			idea_token = TST_3_army_chief
+			ledger = army
+			allowed = {
+				always = yes
+			}
+			traits = {
+				army_chief_old_guard
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_4_army_chief={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = army_chief
+			cost = 100	
+			idea_token = TST_4_army_chief
+			ledger = army
+			allowed = {
+				always = yes
+			}
+			traits = {
+				army_chief_reform_2
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_5_army_chief={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = army_chief
+			cost = 100	
+			idea_token = TST_5_army_chief
+			ledger = army
+			allowed = {
+				always = yes
+			}
+			traits = {
+				army_chief_drill_2
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_6_army_chief={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = army_chief
+			cost = 100	
+			idea_token = TST_6_army_chief
+			ledger = army
+			allowed = {
+				always = yes
+			}
+			traits = {
+				army_chief_organizational_2
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_7_army_chief={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = army_chief
+			cost = 100	
+			idea_token = TST_7_army_chief
+			ledger = army
+			allowed = {
+				always = yes
+			}
+			traits = {
+				army_chief_morale_2
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_1_high_command={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = high_command
+			cost = 100
+			idea_token = TST_1_high_command
+			allowed = {
+				always = yes
+			}
+			traits = {
+				army_infantry_1
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_2_high_command={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = high_command
+			cost = 100
+			idea_token = TST_2_high_command
+			allowed = {
+				always = yes
+			}
+			traits = {
+				army_armored_1
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_3_high_command={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = high_command
+			cost = 100
+			idea_token = TST_3_high_command
+			allowed = {
+				always = yes
+			}
+			traits = {
+				army_artillery_1
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_4_high_command={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = high_command
+			cost = 100
+			idea_token = TST_4_high_command
+			allowed = {
+				always = yes
+			}
+			traits = {
+				army_commando_1
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_5_high_command={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = high_command
+			cost = 100
+			idea_token = TST_5_high_command
+			allowed = {
+				always = yes
+			}
+			traits = {
+				army_cavalry_1
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_6_high_command={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = high_command
+			cost = 100
+			idea_token = TST_6_high_command
+			allowed = {
+				always = yes
+			}
+			traits = {
+				army_CombinedArms_1
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_7_high_command={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = high_command
+			cost = 100
+			idea_token = TST_7_high_command
+			allowed = {
+				always = yes
+			}
+			traits = {
+				army_regrouping_1
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_8_high_command={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = high_command
+			cost = 100
+			idea_token = TST_8_high_command
+			allowed = {
+				always = yes
+			}
+			traits = {
+				army_concealment_1
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+	TST_9_high_command={
+		allowed_civil_war = {
+			always = yes
+		}
+		advisor={
+			slot = high_command
+			cost = 100
+			idea_token = TST_9_high_command
+			allowed = {
+				always = yes
+			}
+			traits = {
+				army_logistics_1
+			}
+		}
+		portraits={
+			civilian={
+				small=GFX_idea_europe_generic_2
+			}
+		}
+	}
+}

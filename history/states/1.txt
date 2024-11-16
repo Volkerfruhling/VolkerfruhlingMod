@@ -1,0 +1,15 @@
+state={
+	id=1
+	name="STATE_1"
+	provinces={
+		1 2 3 4 5 6 7 8 9
+	}
+	history={
+		owner = TST
+		add_core_of = TST
+	}
+	manpower=100000
+	state_category=rural
+	local_supplies=0.000
+	buildings_max_level_factor=1.000
+}

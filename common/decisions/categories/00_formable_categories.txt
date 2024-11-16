@@ -1,0 +1,8 @@
+forming_category = {
+
+	icon = generic_formable_nations
+
+	allowed = {
+		always = yes
+	}
+}

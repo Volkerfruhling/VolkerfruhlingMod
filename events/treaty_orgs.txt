@@ -1,0 +1,27 @@
+﻿###########################
+# Treaty Organization Events
+###########################
+
+add_namespace = treaty_org
+
+country_event = {
+	id = treaty_org.5
+	title = treaty_org.5.t
+	desc = treaty_org.5.d
+	picture = GFX_report_event_generic_sign_treaty2
+
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+
+	immediate = {
+		
+	}
+	
+	option = {
+		name = treaty_org.5.a
+		
+	}
+
+}

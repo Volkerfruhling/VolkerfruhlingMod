@@ -1,0 +1,42 @@
+forming_category = {
+	
+	form_test = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			always = yes
+		}
+
+		available = {
+			is_subject = no
+			hidden_trigger = {
+				NOT = { has_global_flag = form_test_flag }
+				NOT = { has_country_flag = created_country }
+			}
+			custom_trigger_tooltip = {
+				tooltip = controlling_territories
+				controls_state = 1
+			}
+		}
+		visible = {
+			original_tag = TST
+			NOT = { has_global_flag = form_test_flag }
+			NOT = { has_country_flag = created_country }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = TST_UNIF
+			custom_effect_tooltip = form_test_tt
+			hidden_effect = {
+				set_global_flag = form_test_flag
+				set_country_flag = created_country
+				1 = { add_core_of = ROOT }
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

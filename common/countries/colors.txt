@@ -1,0 +1,4 @@
+TST = {
+	color = rgb { 10 10 10 }
+	color_ui = rgb { 10 10 10 }
+}
