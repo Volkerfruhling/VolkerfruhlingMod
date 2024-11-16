@@ -304,7 +304,7 @@ characters={
 				always = yes
 			}
 			traits = {
-				technocrat 
+	 
 			}
 		}
 		portraits={
@@ -325,7 +325,7 @@ characters={
 				always = yes
 			}
 			traits = {
-				propaganda_expert 
+				 
 			}
 		}
 		portraits={
@@ -346,7 +346,7 @@ characters={
 				always = yes
 			}
 			traits = {
-				financial_expert 
+				 
 			}
 		}
 		portraits={
@@ -367,7 +367,7 @@ characters={
 				always = yes
 			}
 			traits = {
-				economist  
+				  
 			}
 		}
 		portraits={
@@ -388,7 +388,7 @@ characters={
 				always = yes
 			}
 			traits = {
-				editor  
+				  
 			}
 		}
 		portraits={
@@ -430,7 +430,7 @@ characters={
 				always = yes
 			}
 			traits = {
-				reluctant_interventionist  
+				  
 			}
 		}
 		portraits={
