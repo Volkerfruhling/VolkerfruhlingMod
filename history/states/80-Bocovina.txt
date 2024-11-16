@@ -5,8 +5,9 @@ state={
 	
 	state_category = rural
 	
-	history=
-	{
+	history={
+		owner = RUT
+		add_core_of = RUT
 		victory_points = {
 			577 1 
 		}

@@ -3,6 +3,8 @@ state={
 	name="STATE_36"
 
 	history={
+		owner = NET
+		add_core_of = NET
 		victory_points = {
 			6241 5 
 		}

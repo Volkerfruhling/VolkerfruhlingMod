@@ -6,6 +6,8 @@ state={
 	state_category = wasteland
 
 	history={
+		owner = OTT
+		add_core_of = OTT
 		victory_points = {
 			3942 1
 		}

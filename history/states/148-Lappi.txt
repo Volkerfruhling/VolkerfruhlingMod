@@ -11,7 +11,8 @@ state = {
 	}
 
 	history = {
-
+		owner = RUS
+		add_core_of = RUS
 
 		victory_points = { 
 			11164 2 # Kemi

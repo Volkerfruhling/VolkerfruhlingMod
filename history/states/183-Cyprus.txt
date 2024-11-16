@@ -8,8 +8,10 @@ state= {
 		chromium=3 # was: 4
 	}
 
-	history=
-	{
+	history={
+		owner = ENG
+		add_core_of = OTT
+		add_core_of = GRE
 		victory_points = {
 			11984 5
 		}

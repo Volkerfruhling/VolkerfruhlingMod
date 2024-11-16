@@ -8,6 +8,8 @@ state = {
 
 
 	history = {
+		owner = ALI
+		add_core_of = ALI
 		victory_points = { #Fiume (Rijeka)
 			11564 1 
 		}

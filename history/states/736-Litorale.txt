@@ -5,6 +5,8 @@ state = {
 	state_category = city
 
 	history = {
+		owner = ALI
+		add_core_of = ALI
 		victory_points = {
 			6626 3
 		}

@@ -7,6 +7,8 @@ state={
 	}
 
 	history={
+		owner = SER
+		add_core_of = SER
 		victory_points = {
 			9602 3 
 		}

@@ -7,6 +7,8 @@ state={
 	state_category = large_town
 
 	history={
+		owner = RUS
+		add_core_of = RUS
 		victory_points = {
 			488 5
 		}

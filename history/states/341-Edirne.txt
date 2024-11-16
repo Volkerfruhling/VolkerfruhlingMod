@@ -10,6 +10,8 @@ state= {
 	state_category = town
 
 	history= {
+		owner = OTT
+		add_core_of = OTT
 		victory_points = {
 			11842 5
 		}
@@ -20,15 +22,6 @@ state= {
 				naval_base = 3
 				coastal_bunker = 2
 			}
-		}
-
-		1936.1.1.1 = { 
-			if = {
-				limit = { has_dlc = "Battle for the Bosporus" }
-			}
-		}
-
-		1936.11.9.1 = {
 		}
 	}
 	provinces=

@@ -7,7 +7,8 @@ state = {
 	state_category = town
 	
 	history = {
-		
+		owner = RUS
+		add_core_of = RUS
 		victory_points = { #Turku
 			3083 3
 		}

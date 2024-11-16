@@ -9,7 +9,8 @@ state = {
 	
 	
 	history = {
-		
+		owner = RUS
+		add_core_of = RUS
 		victory_points = { #Vaasa
 			3122 2
 		}

@@ -12,6 +12,8 @@ state={
 	}
 
 	history={
+		owner = OTT
+		add_core_of = OTT
 		victory_points = {
 			10203 1
 		}

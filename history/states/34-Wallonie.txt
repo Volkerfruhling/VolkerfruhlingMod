@@ -9,7 +9,8 @@ state = {
 	state_category = large_city
 
 	history = {
-
+		owner = BEL
+		add_core_of = BEL
 
 		victory_points = {
 			3516 5 # Namur

@@ -5,7 +5,8 @@ state = {
 	state_category = pastoral
 
 	history = {
-		
+		owner = OTT
+		add_core_of = OTT
 
 		victory_points = {
 			8051 1

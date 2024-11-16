@@ -7,6 +7,8 @@ state={
 	}
 
 	history={
+		owner = RUT
+		add_core_of = RUT
 		victory_points = {
 			9427 20 
 		}

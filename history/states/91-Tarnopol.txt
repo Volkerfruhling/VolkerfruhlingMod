@@ -6,6 +6,8 @@ state={
 	state_category = city
 	
 	history={
+		owner = RUT
+		add_core_of = RUT
 		victory_points = {
 			11479 3
 		}

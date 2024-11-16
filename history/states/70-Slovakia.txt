@@ -13,7 +13,8 @@ state = {
 	}
 
 	history = {
-
+		owner = SLO
+		add_core_of = SLO
 		
 		buildings = {
 			infrastructure = 3

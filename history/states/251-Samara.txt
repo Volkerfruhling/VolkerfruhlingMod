@@ -6,7 +6,8 @@ state = {
 	state_category = town
 
 	history = {
-
+		owner = RUS
+		add_core_of = RUS
 
 		victory_points = {
 			11225 3 # Kuybyshev

@@ -10,8 +10,9 @@ state= {
 		aluminium=3 # was: 4
 	}
 
-	history=
-	{
+	history={
+		owner = ENG
+		add_core_of = ENG
 		victory_points = {
 			407 3 #Swansea
 		}

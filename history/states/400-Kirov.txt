@@ -10,6 +10,8 @@ state = {
 	state_category = town
 
 	history = {
+		owner = RUS
+		add_core_of = RUS
 		buildings = {
 			infrastructure = 2
 		}

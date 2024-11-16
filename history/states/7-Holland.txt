@@ -6,6 +6,8 @@ state={
 	}
 
 	history={
+		owner = NET
+		add_core_of = NET
 		victory_points = {
 			391 40 
 		}

@@ -8,6 +8,8 @@ state={
 		aluminium=15 # was: 24 
 	}
 	history={
+		owner = ITA
+		add_core_of = ITA
 		victory_points = { 9600 1 }
 		buildings = {
 			infrastructure = 2 
