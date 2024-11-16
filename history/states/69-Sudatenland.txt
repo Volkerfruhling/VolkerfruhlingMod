@@ -51,9 +51,6 @@ state = {
 
 		}
 
-		1938.9.30 = {
-			controller = GER
-		}
 
 	}
 

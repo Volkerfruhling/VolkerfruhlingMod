@@ -25,19 +25,6 @@ state = {
 		}
 
 		
-		# This should isntead be reclaimable through Hungarian focuses with ww
-		IF = {
-			limit = {
-				NOT = {
-					has_dlc = "Gotterdammerung"
-				}
-			}
-		}
-
-		1939.3.14 = {
-			controller = HUN
-			remove_claim_by = HUN
-		}
 	}
 
 	provinces = {

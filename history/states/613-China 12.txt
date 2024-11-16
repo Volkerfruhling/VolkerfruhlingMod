@@ -30,9 +30,6 @@ state = {
 			10076 3 # Suzhou
 		}
 
-		1938.10.25 = {
-			controller = JAP
-		}
 	}
 
 	provinces = {

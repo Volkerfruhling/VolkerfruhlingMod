@@ -7,15 +7,6 @@ state = {
 	history = {
 
 
-		IF = {
-			limit = {
-				has_dlc = "Gotterdammerung"
-			}
-			transfer_state_to = COG
-				modifier = COG_state_loyal_to_free_congo_modifier
-			}
-		}
-
 		victory_points = {
 			2024 1 # Bakwanga
 		}

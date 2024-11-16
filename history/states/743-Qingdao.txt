@@ -22,9 +22,6 @@ state=
 			}
 		}
 
-		1938.10.25 = {
-			controller = JAP
-		}
 	}
 	provinces={
 		10000

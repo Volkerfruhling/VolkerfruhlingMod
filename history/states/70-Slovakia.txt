@@ -35,9 +35,6 @@ state = {
 		}
 
 
-		1939.3.14 = {
-			controller = SLO
-		}
 		
 	}
 

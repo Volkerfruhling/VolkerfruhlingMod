@@ -16,9 +16,6 @@ state={
 			infrastructure = 1
 		}
 
-		1938.9.30 = {
-			controller = TUR
-		}
 	}
 
 	local_supplies=0.0 

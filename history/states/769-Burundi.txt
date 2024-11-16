@@ -6,16 +6,6 @@ state = {
 	manpower = 2145731
 
 	history = {
-
-
-		IF = {
-			limit = {
-				has_dlc = "Gotterdammerung"
-			}
-			transfer_state_to = COG
-				modifier = COG_burundian_separatism_modifier
-			}	
-		}
 		
 
 		victory_points = {

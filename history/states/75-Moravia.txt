@@ -22,10 +22,6 @@ state={
 			air_base = 5
 
 		}
-
-		1939.3.14 = {
-			controller = GER
-		}
 	}
 
 	provinces={

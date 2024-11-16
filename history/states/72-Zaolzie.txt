@@ -10,10 +10,6 @@ state={
 			infrastructure = 3
 			industrial_complex = 1
 		}
-
-		1939.3.14 = {
-			controller = POL
-		}
 	}
 
 	provinces={

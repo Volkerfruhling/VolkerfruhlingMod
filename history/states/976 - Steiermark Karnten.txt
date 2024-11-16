@@ -30,9 +30,6 @@ state = {
 			11612 2
 		}
 
-		1938.3.12 = {
-			controller = GER
-		}
 	}
 
 	provinces = {

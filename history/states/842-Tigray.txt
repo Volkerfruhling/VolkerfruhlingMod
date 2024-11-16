@@ -4,21 +4,6 @@ state={
 	name="STATE_842"
 
 	history={
-		set_variable = {
-			ETH_state_development_production_speed = -0.3
-
-		}
-		set_variable = {
-			ETH_state_development_local_building_slots_factor = -0.3
-
-		}
-			modifier = ETH_state_development_dynamic_modifier
-
-		}
-			modifier = ETH_state_decentralization_dynamic_modifier
-			scope = ETH
-
-		}
 		buildings = {
 
 		}
@@ -30,10 +15,6 @@ state={
 		}
 		victory_points = {
 			13238 1 
-		}
-		1936.6.1 = {
-			controller = ITA
-
 		}
 
 	}

@@ -18,9 +18,6 @@ state = {
 			3581 3 # Presov
 		}
 
-		1939.3.14 = {
-			controller = SLO
-		}
 	}
 
 	provinces = {

@@ -9,16 +9,6 @@ state = {
 	state_category = rural
 
 	history = {
-		set_variable = { ETH_state_development_production_speed = -0.3 }
-		set_variable = { ETH_state_development_local_building_slots_factor = -0.3 }
-		# set_variable = { ETH_state_decentralization_defence = 0.2 }
-		# set_variable = { ETH_state_decentralization_infrastructure = -0.3 }
-		# set_variable = { ETH_state_decentralization_resources = -0.3 }
-			modifier = ETH_state_development_dynamic_modifier
-		}
-			modifier = ETH_state_decentralization_dynamic_modifier
-			scope = ETH
-		}
 		
 		buildings = {
 			# infrastructure = 1
@@ -32,11 +22,6 @@ state = {
 		}
 		victory_points = { 
 			13247 1 
-		}
-		
-
-		1936.6.1 = {
-			controller = ITA
 		}
 	}
 

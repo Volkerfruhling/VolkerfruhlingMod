@@ -21,9 +21,6 @@ state = {
 			3414 2 # Opava
 		}
 
-		1938.9.30 = {
-			controller = GER
-		}
 	}
 
 	provinces = {

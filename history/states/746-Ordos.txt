@@ -14,15 +14,6 @@ state={
 			infrastructure = 1
 		}
 
-		1938.10.25 = {
-			controller = JAP
-		}
-		
-		1939.1.1 = {
-			
-			controller = MEN
-
-		}
 	}
 	manpower=500000
 	buildings_max_level_factor=1.000
