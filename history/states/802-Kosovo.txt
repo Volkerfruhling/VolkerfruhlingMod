@@ -1,32 +1,19 @@
-state = {
-	id = 802
-	name = "STATE_802"
-	resources = {
-		steel = 2.000
+state={
+	id=802
+	name="STATE_802"
+	resources={
+		steel=2.000
 	}
-
+	provinces={
+		937 3922 3939 6913 6940 6953 9849 9874 9890 11832 
+	}
 	history = {
 		owner = OTT
-		add_core_of = OTT
-		victory_points = {
-			6940 3 
-		}
-		victory_points = {
-			9849 2 
-		}
-		buildings = {
-			infrastructure = 1
-
-		}
+		add_core_of = GER
 
 	}
-
-	provinces = {
-		6940 9849 9874 9890 
-	}
-	manpower = 616000
-	buildings_max_level_factor = 1.000
-	state_category = rural
-
-	local_supplies = 0.0 
+	manpower=616000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
 }

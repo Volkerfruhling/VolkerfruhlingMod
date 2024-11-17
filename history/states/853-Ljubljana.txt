@@ -1,24 +1,16 @@
-state=
-{
+state={
 	id=853
 	name="STATE_853"
-	manpower = 333250 # 336279 in 1942 # was 1144300 before Ljubljana split
-	
-	state_category = large_town
-	
-	history ={
+	provinces={
+		6650 9627 11564 13252 
+	}
+	history = {
 		owner = GER
 		add_core_of = GER
-		buildings = {
-			infrastructure = 3
-		}
-		victory_points = {
-			9627 3 
-		}
+
 	}
-	provinces={
-		6650 9627
-	}
-	
-	local_supplies=5.0 
+	manpower=333250
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=5.000
 }
