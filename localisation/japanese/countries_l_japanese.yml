@@ -1,8 +1,4 @@
 ﻿l_japanese:
- ALI: "オーストリア沿海州"
- ALI_DEF: "オーストリア沿海州"
- ALI_ADJ: "オーストリア沿海州"
-
  BEL: "ベルギー"
  BEL_DEF: "ベルギー"
  BEL_ADJ: "ベルギー"
@@ -42,6 +38,10 @@
  ILL: "イリュリア"
  ILL_DEF: "イリュリア"
  ILL_ADJ: "イリュリア"
+
+ IST: "イストリア"
+ IST_DEF: "イストリア"
+ IST_ADJ: "イストリア"
 
  ITA: "イタリア"
  ITA_DEF: "イタリア"
@@ -106,6 +106,10 @@
  SWE: "スウェーデン"
  SWE_DEF: "スウェーデン"
  SWE_ADJ: "スウェーデン"
+
+ SWI: "スイス"
+ SWI_DEF: "スイス"
+ SWI_ADJ: "スイス"
 
  VOJ: "ヴォイヴォディナ"
  VOJ_DEF: "ヴォイヴォディナ"
