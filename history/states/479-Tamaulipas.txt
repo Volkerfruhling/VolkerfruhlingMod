@@ -11,7 +11,8 @@ state = {
 	}
 	
 	history = {
-
+		owner = UMS
+		add_core_of = UMS
 
 		buildings = {
 			infrastructure = 2

@@ -9,8 +9,9 @@ state=
 	resources={
 		chromium=1 # was: 1
 	}
-	history=
-	{
+	history={
+		owner = DOR
+		add_core_of = DOR
 		buildings = {
 			infrastructure = 2
 			arms_factory = 1

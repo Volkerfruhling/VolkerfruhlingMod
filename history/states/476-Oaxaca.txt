@@ -1,35 +1,18 @@
-
 state={
 	id=476
 	name="STATE_476"
-	manpower = 1663331
-	
-	state_category = rural
-
 	resources={
-		oil=8
+		oil=8.000
 	}
-	
-	history={
-		buildings = {
-			infrastructure = 2
-			air_base = 2
-			10889 = {
-				naval_base = 2
-			}
-		}
-		victory_points = {
-			10889 1
-		}
-		victory_points = {
-			2021 3
-		}
-	}
-
 	provinces={
-		2021 8236 10773 10889 12712 
+		2021 8089 8236 10773 10889 12712 12810 
 	}
-	
-
-	local_supplies=8.0 
+	history = {
+		owner = SMX
+		add_core_of = SMX
+	}
+	manpower=1663331
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=8.000
 }

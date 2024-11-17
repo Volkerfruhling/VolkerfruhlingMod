@@ -11,6 +11,8 @@ state={
 	}
 	
 	history={
+		owner = RMX
+		add_core_of = RMX
 		buildings = {
 			infrastructure = 3 #was: 5
 			arms_factory = 2

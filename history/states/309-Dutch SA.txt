@@ -11,6 +11,8 @@ state={
 	state_category = rural
 
 	history={
+		owner = NET
+		add_core_of = NET
 		victory_points = {
 			10906 1
 		}

@@ -11,6 +11,8 @@ state={
 	
 
 	history={
+		owner = COS
+		add_core_of = COS
 		buildings = {
 			infrastructure = 2
 			arms_factory = 1

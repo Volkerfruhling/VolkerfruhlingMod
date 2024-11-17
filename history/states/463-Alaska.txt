@@ -3,6 +3,8 @@ state={
 	name="STATE_463"
 
 	history={
+		owner = RUS
+		add_core_of = RUS
 		buildings = {
 			infrastructure = 1
 			air_base = 1
