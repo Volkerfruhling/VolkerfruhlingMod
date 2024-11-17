@@ -1,0 +1,36 @@
+#バハ・カリフォルニア=ソノラ/Baja_California_Sonora.
+BAJ = "countries/_southamerican.txt"
+
+#カナダ/Canada
+CAN = "countries/_commonwealth.txt"
+
+#中央アメリカ大共和国/Central_American_Republic
+CAR = "countries/_southamerican.txt"
+
+#コスタリカ/Costa_Rica
+COS = "countries/_southamerican.txt"
+
+#キューバ/Cuba
+CUB = "countries/_southamerican.txt"
+
+#ドミニカ共和国/Dominican_Republic
+DOR = "countries/_southamerican.txt"
+
+#グアテマラ/Guatemala
+GUA = "countries/_southamerican.txt"
+
+#ハイチ/Haiti
+HAI = "countries/_southamerican.txt"
+
+#メキシコ共和国/Republic_of_Mexico
+RMX = "countries/_southamerican.txt"
+
+#メキシコ社会主義共和国/Socialist_Republic_of_Mexico
+SMX = "countries/_southamerican.txt"
+
+#メキシコ合衆国/United_Mexican_States
+UMS = "countries/_southamerican.txt"
+
+#アメリカ合衆国/United_States_of_America
+USA = "countries/_western_european.txt"
+
