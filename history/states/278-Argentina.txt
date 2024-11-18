@@ -6,7 +6,8 @@ state = {
 	state_category = large_city
 
 	history = {
-
+		owner = MAP
+		add_core_of = MAP
 
 		buildings = {
 			infrastructure = 3 #was: 6

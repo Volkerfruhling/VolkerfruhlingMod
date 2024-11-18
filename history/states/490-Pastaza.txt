@@ -7,6 +7,8 @@ state = {
 	state_category = pastoral
 
 	history = {
+		owner = ECU
+		add_core_of = ECU
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1

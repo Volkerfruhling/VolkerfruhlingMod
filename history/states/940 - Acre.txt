@@ -11,7 +11,8 @@ state = {
 	}
 
 	history = {
-
+		owner = ACR
+		add_core_of = ACR
 
 		buildings = {
 			infrastructure = 1

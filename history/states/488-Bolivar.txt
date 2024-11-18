@@ -7,6 +7,8 @@ state={
 	state_category = pastoral
 
 	history={
+		owner = VEN
+		add_core_of = VEN
 		buildings = {
 			infrastructure = 1
 

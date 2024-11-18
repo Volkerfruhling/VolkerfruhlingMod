@@ -11,6 +11,8 @@ state={
 	}
 
 	history={
+		owner = COL
+		add_core_of = COL
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 2
