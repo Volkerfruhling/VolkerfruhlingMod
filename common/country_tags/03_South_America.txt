@@ -1,0 +1,30 @@
+#アクレ/Acre
+ACR = "countries/_southamerican.txt"
+
+#アルゼンチン/Argentina
+ARG = "countries/_southamerican.txt"
+
+#ボリビア/Bolivia
+BOL = "countries/_southamerican.txt"
+
+#ブラジル/Brazil
+BRA = "countries/_southamerican.txt"
+
+#チリ/Chile
+CHL = "countries/_southamerican.txt"
+
+#コロンビア/Colombia
+COL = "countries/_southamerican.txt"
+
+#エクアドル/Ecuador
+ECU = "countries/_southamerican.txt"
+
+#マプチェニア/Mapuchenia
+MAP = "countries/_southamerican.txt"
+
+#ペルー/Peru
+PRU = "countries/_southamerican.txt"
+
+#ヴェネズエラ/Venezuela
+VEN = "countries/_southamerican.txt"
+

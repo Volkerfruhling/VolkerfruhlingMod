@@ -248,3 +248,65 @@ USA ={
 	color_ui = rgb{ 8 64 129 }
 }
 
+### 南アメリカ/South America ###
+
+#アクレ/Acre
+ACR ={
+	color = rgb{ 77 175 74 }
+	color_ui = rgb{ 77 175 74 }
+}
+
+#アルゼンチン/Argentina
+ARG ={
+	color = rgb{ 116 173 209 }
+	color_ui = rgb{ 116 173 209 }
+}
+
+#ボリビア/Bolivia
+BOL ={
+	color = rgb{ 189 50 0 }
+	color_ui = rgb{ 189 50 0 }
+}
+
+#ブラジル/Brazil
+BRA ={
+	color = rgb{ 77 175 74 }
+	color_ui = rgb{ 77 175 74 }
+}
+
+#チリ/Chile
+CHL ={
+	color = rgb{ 252 205 229 }
+	color_ui = rgb{ 252 205 229 }
+}
+
+#コロンビア/Colombia
+COL ={
+	color = rgb{ 254 217 118 }
+	color_ui = rgb{ 254 217 118 }
+}
+
+#エクアドル/Ecuador
+ECU ={
+	color = rgb{ 255 255 204 }
+	color_ui = rgb{ 255 255 204 }
+}
+
+#マプチェニア/Mapuchenia
+MAP ={
+	color = rgb{ 148 52 110 }
+	color_ui = rgb{ 148 52 110 }
+}
+
+#ペルー/Peru
+PRU ={
+	color = rgb{ 236 231 242 }
+	color_ui = rgb{ 236 231 242 }
+}
+
+#ヴェネズエラ/Venezuela
+VEN ={
+	color = rgb{ 237 173 8 }
+	color_ui = rgb{ 237 173 8 }
+}
+
