@@ -420,3 +420,65 @@ YEM ={
 	color_ui = rgb{ 229 216 189 }
 }
 
+#### 東・東南アジア/East and Southeast Asia ###
+
+#ブルネイ/Brunei
+BRU ={
+	color = rgb{ 247 224 23 }
+	color_ui = rgb{ 247 224 23 }
+}
+
+#大南/Dai_Nam
+DNA ={
+	color = rgb{ 209 79 57 }
+	color_ui = rgb{ 209 79 57 }
+}
+
+#インドネシア/Indonesia
+INS ={
+	color = rgb{ 254 229 195 }
+	color_ui = rgb{ 254 229 195 }
+}
+
+#日本/Japan
+JAP ={
+	color = rgb{ 189 0 38 }
+	color_ui = rgb{ 189 0 38 }
+}
+
+#コンバウン/Konbaung
+KON ={
+	color = rgb{ 51 160 43 }
+	color_ui = rgb{ 51 160 43 }
+}
+
+#朝鮮/Korea
+KOR ={
+	color = rgb{ 223 194 125 }
+	color_ui = rgb{ 223 194 125 }
+}
+
+#フィリピン/Philippines
+PHI ={
+	color = rgb{ 8 104 172 }
+	color_ui = rgb{ 8 104 172 }
+}
+
+#大清/Qing
+QIN ={
+	color = rgb{ 255 237 160 }
+	color_ui = rgb{ 255 237 160 }
+}
+
+#サラワク/Sarawak
+SAR ={
+	color = rgb{ 237 249 177 }
+	color_ui = rgb{ 237 249 177 }
+}
+
+#タイ/Thailand
+THA ={
+	color = rgb{ 208 209 230 }
+	color_ui = rgb{ 208 209 230 }
+}
+

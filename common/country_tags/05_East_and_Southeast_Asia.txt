@@ -1,0 +1,30 @@
+#ブルネイ/Brunei
+BRU = "countries/_asian.txt"
+
+#大南/Dai_Nam
+DNA = "countries/_asian.txt"
+
+#インドネシア/Indonesia
+INS = "countries/_asian.txt"
+
+#日本/Japan
+JAP = "countries/_asian.txt"
+
+#コンバウン/Konbaung
+KON = "countries/_asian.txt"
+
+#朝鮮/Korea
+KOR = "countries/_asian.txt"
+
+#フィリピン/Philippines
+PHI = "countries/_asian.txt"
+
+#大清/Qing
+QIN = "countries/_asian.txt"
+
+#サラワク/Sarawak
+SAR = "countries/_asian.txt"
+
+#タイ/Thailand
+THA = "countries/_asian.txt"
+
