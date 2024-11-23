@@ -6,7 +6,8 @@ state = {
 	state_category = town
 
 	history = {
-
+		owner = PGI
+		add_core_of = PGI
 
 		victory_points = {
 			10887 5 # Lahore

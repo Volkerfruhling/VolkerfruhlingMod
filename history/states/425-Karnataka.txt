@@ -11,6 +11,8 @@ state={
 	}
 
 	history={
+		owner = UID
+		add_core_of = UID
 		victory_points = {
 			8011 1
 		}

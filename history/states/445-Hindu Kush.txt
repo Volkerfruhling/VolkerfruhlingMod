@@ -1,24 +1,15 @@
-
 state={
 	id=445
-	name="STATE_445" # Quetta
-	manpower = 405100
-	
-	state_category = wasteland
-
-	history={
-		victory_points = {
-			5105 1
-		}
-		buildings = {
-			infrastructure = 2
-			air_base = 4
-		}
-	}
-
+	name="STATE_445"
 	provinces={
-		1107 4990 5105 7847 7903 7975 8044 8098 10813 
+		1107 4990 5075 5105 7847 7903 7975 8013 8044 12761 
 	}
-
-	local_supplies=0.0 
+	history = {
+		owner = CTB
+		add_core_of = CTB
+	}
+	manpower=405100
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
 }

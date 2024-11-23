@@ -1,15 +1,15 @@
 state={
 	id=855
 	name="STATE_855"
+	provinces={
+		1033 2027 2095 8092 12101 12455 
+	}
 	history = {
 		owner = OTT
 		add_core_of = OTT
 	}
-	provinces={
-		1033 2027 2095 5027 7970 8092 12101 12455 
-	}
 	manpower=500000
-	state_category = pastoral
 	buildings_max_level_factor=1.000
+	state_category=pastoral
 	local_supplies=0.000
 }

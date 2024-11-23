@@ -11,6 +11,8 @@ state={
 	}
 
 	history={
+		owner = UID
+		add_core_of = UID
 		buildings = {
 			infrastructure = 3 #was: 5
 			industrial_complex = 1

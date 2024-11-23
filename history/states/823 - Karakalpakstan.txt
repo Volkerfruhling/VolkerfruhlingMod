@@ -4,7 +4,8 @@ state = {
 	name = "STATE_823" #Karakalpakstan
 
 	history = {
-	
+		owner = RUS
+		add_core_of = RUS
 		victory_points = {
 			1614 1
 		}

@@ -9,7 +9,8 @@ state = {
 	}
 
 	history = {
-
+		owner = RUS
+		add_core_of = RUS
 		victory_points = {
 			12594 2 # Seipalatinsk
 		}

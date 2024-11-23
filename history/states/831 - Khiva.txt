@@ -4,7 +4,8 @@ state = {
 	name = "STATE_831" #Khiva
 
 	history = {
-	
+		owner = RUS
+		add_core_of = RUS
 		victory_points = {
 			12465 1
 		}

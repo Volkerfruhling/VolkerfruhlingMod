@@ -12,6 +12,8 @@ state={
 	}
 
 	history={
+		owner = PGI
+		add_core_of = PGI
 		victory_points = {
 			2054 1
 		}
