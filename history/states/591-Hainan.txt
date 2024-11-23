@@ -5,7 +5,8 @@ state={
 	state_category = town
 
 	history={
-		
+		owner = QIN
+		add_core_of = QIN
 		victory_points = {
 			1070 1 
 		}

@@ -8,24 +8,10 @@ state={
 	buildings_max_level_factor=1.000
 	state_category = wasteland
 	history={
+		owner = QIN
+		add_core_of = QIN
 		buildings = {
 			infrastructure = 1
-
-		}
-		1938.10.25 = {
-			if = {
-				limit = {
-					NOT = {
-						has_dlc = "Waking the Tiger" 
-					}
-
-				}
-				CHI = {
-					transfer_state = PREV
-
-				}
-
-			}
 
 		}
 

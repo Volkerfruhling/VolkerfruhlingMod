@@ -3,6 +3,8 @@ state = {
 	name = "STATE_877" # Verkhoyansk
 
 	history = {
+		owner = RUS
+		add_core_of = RUS
 		victory_points = {
 			12549 1 
 		}

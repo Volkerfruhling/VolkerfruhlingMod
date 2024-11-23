@@ -6,6 +6,8 @@ state={
 	}
 
 	history={
+		owner = QIN
+		add_core_of = QIN
 		buildings = {
 			infrastructure = 3 #was: 5
 			industrial_complex = 2

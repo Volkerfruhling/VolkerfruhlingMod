@@ -3,8 +3,9 @@ state= {
 	name="STATE_595"
 	manpower = 11755600
 	state_category = city
-	history=
-	{
+	history={
+		owner = QIN
+		add_core_of = QIN
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1

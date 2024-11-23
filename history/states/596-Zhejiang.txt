@@ -5,7 +5,8 @@ state = {
 	state_category = city
 
 	history = {
-
+		owner = QIN
+		add_core_of = QIN
 		
 		victory_points = { 
 			9974 1 # Ningbo

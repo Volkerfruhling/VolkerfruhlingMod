@@ -14,8 +14,9 @@ state = {
 	}
 
 	history = {
-
-
+		owner = ENG
+		add_core_of = THA
+		
 		victory_points = {
 			12299 10
 		}

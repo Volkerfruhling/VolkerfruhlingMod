@@ -3,6 +3,8 @@ state = {
 	name = "STATE_875" #Chukchi Peninsula
 
 	history = {
+		owner = RUS
+		add_core_of = RUS
 		victory_points = {
 			13204 1 
 		}

@@ -8,6 +8,10 @@ state={
 	provinces={
 		1766 1970 2015 4828 5016 5042 5087 7273 7519 7790 7949 8005 8112 10821 12119 12884 
 	}
+	history = {
+		owner = QIN
+		add_core_of = QIN
+	}
 	manpower=1430700
 	buildings_max_level_factor=1.000
 	state_category=pastoral

@@ -1,13 +1,13 @@
-state=
-{
+state={
 	id=615
 	name="STATE_615"
 	manpower = 11601000
 	
 	state_category = town
 	
-	history=
-	{
+	history={
+		owner = QIN
+		add_core_of = QIN
 		victory_points = {
 			1519 3 
 		}
