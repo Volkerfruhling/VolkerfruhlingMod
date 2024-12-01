@@ -1,0 +1,27 @@
+﻿l_japanese:
+
+ # 自由主義/liberalism
+ liberalism: "自由主義"
+ liberalism_noun: "自由主義"
+ liberalism_desc: "民主主義政権"
+ liberalism_ideology: "自由主義"
+ liberalism_ideology_desc: "個人の自由に価値を置く哲学的な長い伝統から、自由主義は諸権利の保護を国家第一の役割と考える。"
+
+ # 保守主義/conservatism
+ conservatism: "保守主義"
+ conservatism_noun: "保守主義"
+ conservatism_desc: "民主主義政権"
+ conservatism_ideology_desc: "社会の急激な変化は危険であると考え、保守主義は伝統と穏健な改革の信奉者となり、時には古い道徳的価値観へ戻ることを提唱する。"
+
+ # 社会主義/socialism
+ socialism: "社会主義"
+ socialism_noun: "社会主義"
+ socialism_desc: "社会主義政権"
+ socialism_ideology_desc: "改良主義的手段によって平等及び社会主義国家を追求すべく、民主社会主義は国民の信任にもとづいて資本主義の影響を軽減ないし無効化することを目指す。"
+ marxism: "マルクス主義"
+ marxism_desc: "経済学ならびに歴史学に関する幅広い領域を包摂するマルクス主義にもとづき、マルクス主義政治はマルクスの諸理論を政治的現実にも適用しようとする。このイデオロギーは階級闘争と生産手段の公有化に基づいた社会の移行の必要性により特徴づけられる。"
+ # 反動主義/reactionism
+ reactionism: "反動主義"
+ reactionism_noun: "反動主義"
+ reactionism_desc: "権威主義政権"
+ reactionism_ideology_desc: "権威主義政権"

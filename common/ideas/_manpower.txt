@@ -138,16 +138,6 @@ ideas = {
 					manpower_per_military_factory < 2000
 				}
 				modifier = {
-					tag = ENG
-					has_idea_with_trait = military_theorist
-					factor = 20
-				}
-				modifier = {
-					tag = SOV
-					threat > 0.8
-					factor = 3
-				}
-				modifier = {
 					factor = 0
 					NOT = { has_idea = volunteer_only }
 				}
@@ -161,8 +151,8 @@ ideas = {
 			available = {
 				#has_manpower_for_recruit_change_to = { value = 0.05 group = mobilization_laws }
 				OR = {
-					has_government = fascism
-					has_government = communism
+					# has_government = fascism
+					# has_government = communism
 					if = {
 						limit = {
 							original_tag = DEN
@@ -313,8 +303,8 @@ ideas = {
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.1 group = mobilization_laws }
 				OR = {
-					has_government = fascism
-					has_government = communism
+					# has_government = fascism
+					# has_government = communism
 					AND = {
 						has_war = yes
 						enemies_strength_ratio > 0.6

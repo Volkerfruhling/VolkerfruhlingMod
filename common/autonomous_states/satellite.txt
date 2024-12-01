@@ -36,15 +36,6 @@ autonomy_state = {
 	}
 
 	allowed = {
-		OR = {
-			has_dlc = "Death or Dishonor"
-			AND = {
-				OR = {
-				has_dlc = "No Step Back"
-			}
-		}
-		has_government = fascism
-		if = {
-		}
+		
 	}
 }

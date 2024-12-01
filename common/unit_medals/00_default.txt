@@ -114,10 +114,10 @@ unit_medals = {
 	communist_service_medal = {
 		
 		available = { 
-			has_government = communism
+			has_government = socialism
 		}
 		frame = 1
-		icon = "GFX_medal_icon_communism"
+		icon = "GFX_medal_icon_socialism"
 	
 		cost = @cost
 		
@@ -135,10 +135,10 @@ unit_medals = {
 	communist_red_star = {
 		
 		available = { 
-			has_government = communism
+			has_government = socialism
 		}
 		frame = 2
-		icon = "GFX_medal_icon_communism"
+		icon = "GFX_medal_icon_socialism"
 	
 		cost = @cost
 		
@@ -156,10 +156,10 @@ unit_medals = {
 	communist_merit_medal = {
 		
 		available = { 
-			has_government = communism
+			has_government = socialism
 		}
 		frame = 3
-		icon = "GFX_medal_icon_communism"
+		icon = "GFX_medal_icon_socialism"
 	
 		cost = @cost
 		
@@ -176,10 +176,10 @@ unit_medals = {
 	communist_hero_of_revolution = {
 		
 		available = { 
-			has_government = communism
+			has_government = socialism
 		}
 		frame = 4
-		icon = "GFX_medal_icon_communism"
+		icon = "GFX_medal_icon_socialism"
 	
 		cost = @cost
 		
@@ -193,15 +193,15 @@ unit_medals = {
 		
 	}
 	
-	### Generic Fascism
+	### Generic reactionism
 	
-	fascism_bravery = {
+	reactionism_bravery = {
 		
 		available = { 
-			has_government = fascism
+			has_government = reactionism
 		}
 		frame = 1
-		icon = "GFX_medal_icon_fascism"
+		icon = "GFX_medal_icon_reactionism"
 		
 		cost = @cost
 		
@@ -215,13 +215,13 @@ unit_medals = {
 		
 	}
 	
-	fascism_merit = {
+	reactionism_merit = {
 		
 		available = { 
-			has_government = fascism
+			has_government = reactionism
 		}
 		frame = 2
-		icon = "GFX_medal_icon_fascism"
+		icon = "GFX_medal_icon_reactionism"
 		
 		cost = @cost
 		
@@ -235,13 +235,13 @@ unit_medals = {
 		
 	}
 	
-	fascism_order_brave = {
+	reactionism_order_brave = {
 		
 		available = { 
-			has_government = fascism
+			has_government = reactionism
 		}
 		frame = 3
-		icon = "GFX_medal_icon_fascism"
+		icon = "GFX_medal_icon_reactionism"
 		
 		cost = @cost
 		
@@ -256,13 +256,13 @@ unit_medals = {
 		
 	}
 	
-	fascism_heroism = {
+	reactionism_heroism = {
 		
 		available = { 
-			has_government = fascism
+			has_government = reactionism
 		}
 		frame = 4
-		icon = "GFX_medal_icon_fascism"
+		icon = "GFX_medal_icon_reactionism"
 	
 		cost = @cost
 		

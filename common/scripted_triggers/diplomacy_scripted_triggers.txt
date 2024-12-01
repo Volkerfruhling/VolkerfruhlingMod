@@ -668,16 +668,16 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 				NOT = {
 					AND = {
 						FROM = {
-							NOT = { has_government = communism }
-							NOT = { has_government = democratic }
+							NOT = { has_government = socialism }
+							NOT = { has_government = liberalism }
 						}
 					}
 				}
 				NOT = {
 					AND = {
 						FROM = {
-							NOT = { has_government = fascism }
-							NOT = { has_government = neutrality }
+							NOT = { has_government = reactionism }
+							NOT = { has_government = conservatism }
 						}
 					}
 				}
@@ -685,7 +685,7 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 		}
 		else_if = { #Soviet volunteers to China (Communist Soviet -> Only to the supported China)
 			limit = {
-				has_government = communism
+				has_government = socialism
 			}
 			custom_trigger_tooltip = {
 				tooltip = RULE_VOLUNTEERS_SOVIET_CHINA_SUPPORT_CHOSEN_ONE_TT
@@ -693,7 +693,7 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 		}
 		else_if = { #Soviet volunteers to China (other ideologies -> Only to one China)
 			limit = {
-				NOT = { has_government = communism }
+				NOT = { has_government = socialism }
 			}
 			custom_trigger_tooltip = {
 				tooltip = RULE_VOLUNTEERS_SOVIET_CHINA_ONLY_ONE_TT
@@ -703,8 +703,8 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 			limit = {
 				has_dlc = "No Step Back"
 				OR = {
-					has_government = communism
-					has_government = democratic
+					has_government = socialism
+					has_government = liberalism
 				}
 			}
 			custom_trigger_tooltip = {
@@ -717,8 +717,8 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 						AND = {
 							NOT = { has_dlc = "La Resistance" }
 							FROM = {
-								NOT = { has_government = communism }
-								NOT = { has_government = democratic }
+								NOT = { has_government = socialism }
+								NOT = { has_government = liberalism }
 							}
 						}
 					}
@@ -729,7 +729,7 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 			limit = {
 				has_dlc = "No Step Back"
 				has_dlc = "La Resistance"
-				has_government = communism
+				has_government = socialism
 			}
 			custom_trigger_tooltip = {
 				tooltip = RULE_VOLUNTEERS_SOVIET_SCW_COVERT_POUM_TT
@@ -739,7 +739,7 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 			limit = {
 				has_dlc = "No Step Back"
 				has_dlc = "La Resistance"
-				has_government = communism
+				has_government = socialism
 			}
 			custom_trigger_tooltip = {
 				tooltip = RULE_VOLUNTEERS_SOVIET_SCW_POUM_TT
@@ -749,8 +749,8 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 			limit = {
 				NOT = { has_dlc = "No Step Back" }
 				OR = {
-					has_government = communism
-					has_government = democratic
+					has_government = socialism
+					has_government = liberalism
 				}
 			}
 			custom_trigger_tooltip = {
@@ -763,8 +763,8 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 						AND = {
 							NOT = { has_dlc = "La Resistance" }
 							FROM = {
-								NOT = { has_government = communism }
-								NOT = { has_government = democratic }
+								NOT = { has_government = socialism }
+								NOT = { has_government = liberalism }
 							}
 						}
 					}
@@ -775,8 +775,8 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 		else_if = { #Soviet volunteers to Spain (Exiles)
 			limit = {
 				OR = {
-					has_government = fascism
-					has_government = neutrality
+					has_government = reactionism
+					has_government = conservatism
 				}
 			}
 			custom_trigger_tooltip = {
@@ -789,8 +789,8 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 						AND = {
 							NOT = { has_dlc = "La Resistance" }
 							FROM = {
-								NOT = { has_government = fascism }
-								NOT = { has_government = neutrality }
+								NOT = { has_government = reactionism }
+								NOT = { has_government = conservatism }
 							}
 						}
 					}
@@ -856,12 +856,12 @@ DIPLOMACY_JOIN_ALLY_ENABLE_TRIGGER = {
 		limit = {
 			has_dlc = "Arms Against Tyranny"
 			ROOT = {
-				has_idea = neutrality_idea
+				has_idea = conservatism_idea
 				is_subject = yes 
 			}
 		}
 		custom_trigger_tooltip = {
-			tooltip = ICELAND_HAS_DECLARED_NEUTRALITY_JOIN
+			tooltip = ICELAND_HAS_DECLARED_conservatism_JOIN
 			always = no
 		}
 	}

@@ -147,14 +147,14 @@ set_stability = 0.75
 }
 
 set_politics = {
-	ruling_party = fascism
+	ruling_party = reactionism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 
 }
 set_popularities = {
-	fascism = 100 
+	reactionism = 100 
 }
 
 add_ideas = {
