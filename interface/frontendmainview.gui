@@ -279,10 +279,10 @@ guiTypes = {
 	### MAIN MENU PANEL (bottom)
 	containerWindowType = {
 		name ="mainmenu_panel_bottom"
-		position = { x=0 y =280}
+		position = { x=83 y =-455}
 		size = { width = 320 height = 435 }
-		Orientation = CENTER
-		Origo = center		
+		Orientation = LOWER_LEFT
+		Origo = upper_left		
 
 		positionType = {
 			name = "subscription_size"
@@ -448,14 +448,14 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "mainmenu_social_buttons"
-		position = { x=-50 y=25 }	
+		position = { x=0 y=-90 }	
 		size = { width = 240 height = 90 }
-		Orientation = center	
-		origo = center
+		Orientation = LOWER_LEFT	
+		origo = upper_left
 		
 		positionType = {
 			name = "position_without_social_gui"
-			position = { x = 0 y = 455 }
+			position = { x = 120 y = -110 }
 		}
 
 		positionType = {
