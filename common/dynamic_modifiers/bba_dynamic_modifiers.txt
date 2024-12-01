@@ -1215,7 +1215,7 @@ ITA_pacified_italian_east_africa_modifier = {
 ITA_fronte_militare_clandestino_modifier = { #In a RSI state
 	enable = { always = yes }
 	remove_trigger = {
-		ROOT = { is_controlled_by = RDS } # ROOT refers to the state on which the modifier is added
+		always = no
 	}
 	icon = GFX_modifiers_SOV_invaders_must_die
 
