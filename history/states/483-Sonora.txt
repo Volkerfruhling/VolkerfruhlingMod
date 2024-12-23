@@ -5,8 +5,8 @@ state={
 		4908 4977 8033 10765 10848 13214 
 	}
 	history = {
-		owner = UMS
-		add_core_of = UMS
+		owner = MEX
+		add_core_of = MEX
 	}
 	manpower=303987
 	buildings_max_level_factor=1.000

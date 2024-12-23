@@ -7,8 +7,8 @@ state = {
 	} 
 
 	history = {
-		owner = OTT
-		add_core_of = OTT
+		owner = SER
+		add_core_of = SER
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1

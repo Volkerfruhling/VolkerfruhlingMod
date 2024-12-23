@@ -6,7 +6,7 @@ state={
 		aluminium=70.000
 	}
 	provinces={
-		9809 9821 11858 
+		937 6913 9809 9821 11858 
 	}
 	history = {
 		owner = MNT

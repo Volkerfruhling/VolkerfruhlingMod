@@ -11,8 +11,8 @@ state = {
 	}
 	
 	history = {
-		owner = UMS
-		add_core_of = UMS
+		owner = MEX
+		add_core_of = MEX
 
 		buildings = {
 			infrastructure = 2

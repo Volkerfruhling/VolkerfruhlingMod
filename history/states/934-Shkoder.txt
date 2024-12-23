@@ -8,8 +8,8 @@ state = {
 	}
 
 	history = {
-		owner = OTT
-		add_core_of = OTT
+		owner = ALB
+		add_core_of = ALB
         victory_points = {
             9780 3 
         }

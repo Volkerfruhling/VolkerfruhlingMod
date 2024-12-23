@@ -1,5 +1,11 @@
 ### ヨーロッパ/Europe ###
 
+#アルバニア/Albania
+ALB ={
+	color = rgb{ 227 26 28 }
+	color_ui = rgb{ 227 26 28 }
+}
+
 #ベルギー/Belgium
 BEL ={
 	color = rgb{ 253 212 158 }
@@ -16,6 +22,12 @@ BOH ={
 BUL ={
 	color = rgb{ 112 164 148 }
 	color_ui = rgb{ 112 164 148 }
+}
+
+#イリュリア/Croatia
+CRO ={
+	color = rgb{ 34 94 168 }
+	color_ui = rgb{ 34 94 168 }
 }
 
 #デンマーク/Denmark
@@ -52,12 +64,6 @@ GRE ={
 HUN ={
 	color = rgb{ 115 175 72 }
 	color_ui = rgb{ 115 175 72 }
-}
-
-#イリュリア/Illyria
-ILL ={
-	color = rgb{ 34 94 168 }
-	color_ui = rgb{ 34 94 168 }
 }
 
 #イストリア/Istria
@@ -126,28 +132,10 @@ RUS ={
 	color_ui = rgb{ 0 68 27 }
 }
 
-#ルテニア/Ruthenia
-RUT ={
-	color = rgb{ 254 178 76 }
-	color_ui = rgb{ 254 178 76 }
-}
-
 #セルビア/Serbia
 SER ={
 	color = rgb{ 153 112 171 }
 	color_ui = rgb{ 153 112 171 }
-}
-
-#シチリア/Sicily
-SIC ={
-	color = rgb{ 255 255 51 }
-	color_ui = rgb{ 255 255 51 }
-}
-
-#スロヴァキア/Slovakia
-SLO ={
-	color = rgb{ 43 140 190 }
-	color_ui = rgb{ 43 140 190 }
 }
 
 #スペイン/Spain
@@ -168,19 +156,7 @@ SWI ={
 	color_ui = rgb{ 237 73 39 }
 }
 
-#ヴォイヴォディナ/Vojvodina
-VOJ ={
-	color = rgb{ 54 144 192 }
-	color_ui = rgb{ 54 144 192 }
-}
-
 ### 北アメリカ/North America ###
-
-#バハ・カリフォルニア=ソノラ/Baja_California_Sonora
-BAJ ={
-	color = rgb{ 217 180 0 }
-	color_ui = rgb{ 217 180 0 }
-}
 
 #カナダ/Canada
 CAN ={
@@ -224,20 +200,8 @@ HAI ={
 	color_ui = rgb{ 151 107 160 }
 }
 
-#メキシコ共和国/Republic_of_Mexico
-RMX ={
-	color = rgb{ 15 133 84 }
-	color_ui = rgb{ 15 133 84 }
-}
-
-#メキシコ社会主義共和国/Socialist_Republic_of_Mexico
-SMX ={
-	color = rgb{ 227 26 28 }
-	color_ui = rgb{ 227 26 28 }
-}
-
-#メキシコ合衆国/United_Mexican_States
-UMS ={
+#メキシコ合衆国/Mexico
+MEX ={
 	color = rgb{ 166 219 160 }
 	color_ui = rgb{ 166 219 160 }
 }
@@ -247,6 +211,8 @@ USA ={
 	color = rgb{ 8 64 129 }
 	color_ui = rgb{ 8 64 129 }
 }
+
+
 
 ### 南アメリカ/South America ###
 

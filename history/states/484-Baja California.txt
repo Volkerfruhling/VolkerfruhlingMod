@@ -5,8 +5,8 @@ state={
 		1892 1904 2069 5071 7964 8012 8119 12461 12736 12833 12859 13215 13216 
 	}
 	history = {
-		owner = BAJ
-		add_core_of = BAJ
+		owner = MEX
+		add_core_of = MEX
 	}
 	manpower=108841
 	buildings_max_level_factor=1.000

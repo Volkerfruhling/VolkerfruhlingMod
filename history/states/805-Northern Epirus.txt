@@ -5,8 +5,8 @@ state={
 		841 914 3914 3980 9805 9837 9916 13234 13235 
 	}
 	history = {
-		owner = OTT
-		add_core_of = OTT
+		owner = GRE
+		add_core_of = GRE
 
 	}
 	manpower=262200
