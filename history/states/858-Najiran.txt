@@ -5,7 +5,7 @@ state={
 		2059 2103 12894 13079 
 	}
 	history = {
-		owner = MAF
+		owner = ENG
 		add_core_of = MAF
 	}
 	manpower=69

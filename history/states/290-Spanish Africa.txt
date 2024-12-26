@@ -12,6 +12,8 @@ state={
 	}
 
 	history={
+		owner = SPA
+		add_core_of = MOR
 		victory_points = {
 			9945 3
 		}

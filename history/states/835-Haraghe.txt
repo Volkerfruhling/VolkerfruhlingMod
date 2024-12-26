@@ -8,7 +8,8 @@ state = {
 	state_category = rural
 
 	history = {
-		
+		owner = ETH
+		add_core_of = ETH
 		buildings = {
 			industrial_complex = 1
 			air_base = 1

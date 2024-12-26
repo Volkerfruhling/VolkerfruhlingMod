@@ -4,6 +4,8 @@ state={
 	name="STATE_842"
 
 	history={
+		owner = ETH
+		add_core_of = ETH
 		buildings = {
 
 		}

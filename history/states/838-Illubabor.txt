@@ -9,7 +9,8 @@ state = {
 	state_category = pastoral
 
 	history = {
-		
+		owner = ETH
+		add_core_of = ETH
 		buildings = {
 			# infrastructure = 1
 		}

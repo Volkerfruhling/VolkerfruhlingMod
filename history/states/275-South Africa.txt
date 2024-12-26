@@ -12,6 +12,8 @@ state={
 	}
 
 	history={
+		owner = SAF
+		add_core_of = SAF
 		buildings = {
 			infrastructure = 3 #was: 5
 			arms_factory = 1

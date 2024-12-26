@@ -448,3 +448,47 @@ THA ={
 	color_ui = rgb{ 208 209 230 }
 }
 
+### アフリカ/Africa ###
+
+#エジプト/Egypt
+EGY ={
+	color = rgb{ 245 229 193 }
+	color_ui = rgb{ 245 229 193 }
+}
+
+#チュニジア/Tunisia
+TUN ={
+	color = rgb{ 227 175 121 }
+	color_ui = rgb{ 227 175 121 }
+}
+
+#モロッコ/Morocco
+MOR ={
+	color = rgb{ 230 216 189 }
+	color_ui = rgb{ 230 216 189 }
+}
+
+#スーダン/Sudan
+SUD ={
+	color = rgb{ 224 236 244 }
+	color_ui = rgb{ 224 236 244 }
+}
+
+#エチオピア/Ethiopia
+ETH ={
+	color = rgb{ 65 174 118 }
+	color_ui = rgb{ 65 174 118 }
+}
+
+#ソマリア/Somalia
+SOM ={
+	color = rgb{ 0 147 146 }
+	color_ui = rgb{ 0 147 146 }
+}
+
+#南アフリカ/South_Africa
+SAF ={
+	color = rgb{ 253 180 98 }
+	color_ui = rgb{ 253 180 98 }
+}
+

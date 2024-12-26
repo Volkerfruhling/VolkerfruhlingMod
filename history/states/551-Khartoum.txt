@@ -5,6 +5,8 @@ state={
 	manpower = 821003
 
 	history={
+		owner = SUD
+		add_core_of = SUD
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1

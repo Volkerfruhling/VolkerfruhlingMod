@@ -6,6 +6,8 @@ state={
 	manpower = 1802132
 
 	history = {
+		owner = SUD
+		add_core_of = SUD
 		victory_points = {
 			2096 1 
 		}

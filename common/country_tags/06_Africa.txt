@@ -1,0 +1,20 @@
+#エジプト/Egypt
+EGY = "countries/_middle_eastern.txt"
+
+#チュニジア/Tunisia
+TUN = "countries/_middle_eastern.txt"
+
+#モロッコ/Morocco
+MOR = "countries/_middle_eastern.txt"
+
+#スーダン/Sudan
+SUD = "countries/_middle_eastern.txt"
+
+#エチオピア/Ethiopia
+ETH = "countries/_african.txt"
+
+#ソマリア/Somalia
+SOM = "countries/_african.txt"
+
+#南アフリカ/South_Africa
+SAF = "countries/_commonwealth.txt"
