@@ -2,7 +2,7 @@ state={
 	id=679
 	name="STATE_679"
 	provinces={
-		2033 4981 7934 10835 12758 
+		2033 4981 7934 10835 
 	}
 	history = {
 		owner = OTT
