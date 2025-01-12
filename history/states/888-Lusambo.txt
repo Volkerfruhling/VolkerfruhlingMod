@@ -6,7 +6,7 @@ state = {
 
 	history = {
 
-
+		owner = BEL
 		victory_points = {
 			2024 1 # Bakwanga
 		}

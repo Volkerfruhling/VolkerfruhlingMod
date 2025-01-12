@@ -6,6 +6,7 @@ state={
 	state_category=rural
 
 	history={
+		owner = FRA
 		victory_points = {
 			4927 1 
 		}

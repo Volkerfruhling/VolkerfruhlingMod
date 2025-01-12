@@ -10,6 +10,8 @@ state = {
 
 	history = {
 
+
+		owner = BEL
 		victory_points = {
 			988 2 # Coquilhatville
 		}

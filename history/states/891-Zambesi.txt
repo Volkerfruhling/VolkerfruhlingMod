@@ -9,6 +9,8 @@ state={
 	}
 
 	history={
+		owner = KOP
+		add_core_of = KOP
 		buildings = {
 			infrastructure = 1
 		}

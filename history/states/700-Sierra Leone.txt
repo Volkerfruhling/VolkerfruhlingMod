@@ -8,8 +8,8 @@ state={
 		steel = 32
 	}
 	
-	history=
-	{
+	history={
+		owner = FRA
 		victory_points = {
 			2038 1 
 		}

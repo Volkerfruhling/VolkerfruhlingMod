@@ -488,7 +488,37 @@ SOM ={
 
 #南アフリカ/South_Africa
 SAF ={
+	color = rgb{ 31 120 180 }
+	color_ui = rgb{ 31 120 180 }
+}
+
+#ケープ植民地/Cape
+CAP ={
+	color = rgb{ 214 64 51 }
+	color_ui = rgb{ 214 64 51 }
+}
+
+#スワジランド/Swaziland
+SWZ ={
+	color = rgb{ 241 246 59 }
+	color_ui = rgb{ 241 246 59 }
+}
+
+#レソト/Lesotho
+LES ={
+	color = rgb{ 141 55 134 }
+	color_ui = rgb{ 141 55 134 }
+}
+
+#オレンジ自由国/Orange_Free_State
+OFS ={
 	color = rgb{ 253 180 98 }
 	color_ui = rgb{ 253 180 98 }
+}
+
+#ポルトガル王国/Kingdom_of_Portugal
+KOP ={
+	color = rgb{ 116 169 207 }
+	color_ui = rgb{ 116 169 207 }
 }
 

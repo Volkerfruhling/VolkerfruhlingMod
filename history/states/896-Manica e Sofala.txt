@@ -4,6 +4,8 @@ state={
 	manpower = 188600
 	state_category = pastoral
 	history={
+		owner = KOP
+		add_core_of = KOP
 		buildings = {
 			infrastructure = 2
 

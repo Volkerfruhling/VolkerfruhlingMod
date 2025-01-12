@@ -18,3 +18,19 @@ SOM = "countries/_african.txt"
 
 #南アフリカ/South_Africa
 SAF = "countries/_commonwealth.txt"
+
+#ケープ植民地/Cape
+CAP = "countries/_commonwealth.txt"
+
+#スワジランド/Swaziland
+SWZ = "countries/_african.txt"
+
+#レソト/Lesotho
+LES = "countries/_african.txt"
+
+#オレンジ自由国/Orange_Free_State
+OFS = "countries/_commonwealth.txt"
+
+#ポルトガル王国/Kingdom_of_Portugal
+KOP = "countries/_western_european.txt"
+

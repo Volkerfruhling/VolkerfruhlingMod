@@ -4,6 +4,9 @@ state={
 	name="STATE_544"
 	manpower = 1226000
 	history={
+
+		owner = KOP
+		add_core_of = KOP
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1

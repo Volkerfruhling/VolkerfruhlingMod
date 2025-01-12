@@ -6,6 +6,9 @@ state={
 	state_category = pastoral
 
 	history={
+
+		owner = GER
+
 		buildings = {
 			infrastructure = 2
 
