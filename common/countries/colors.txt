@@ -522,3 +522,15 @@ KOP ={
 	color_ui = rgb{ 116 169 207 }
 }
 
+#リベリア/Liberia
+LIB ={
+	color = rgb{ 231 212 232 }
+	color_ui = rgb{ 231 212 232 }
+}
+
+#ローデシア/Rhodesia
+RHO ={
+	color = rgb{ 209 219 221 }
+	color_ui = rgb{ 209 219 221 }
+}
+

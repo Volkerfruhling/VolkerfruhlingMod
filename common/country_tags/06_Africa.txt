@@ -34,3 +34,9 @@ OFS = "countries/_commonwealth.txt"
 #ポルトガル王国/Kingdom_of_Portugal
 KOP = "countries/_western_european.txt"
 
+#リベリア/Liberia
+LIB = "countries/_african.txt"
+
+#ローデシア/Rhodesia
+RHO = "countries/_african.txt"
+
