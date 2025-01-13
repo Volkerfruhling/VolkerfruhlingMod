@@ -6,7 +6,8 @@ state = {
 	state_category = small_island
 
 	history = {
-
+		owner = AST
+		add_core_of = AST
 
 		victory_points = {
 			5187 1 # Hobart

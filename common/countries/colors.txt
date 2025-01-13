@@ -448,6 +448,19 @@ THA ={
 	color_ui = rgb{ 208 209 230 }
 }
 
+#オーストラリア/Australia
+AST ={
+	color = rgb{ 114 179 142 }
+	color_ui = rgb{ 114 179 142 }
+}
+
+#ニュージーランド/New_Zealand
+NZL ={
+	color = rgb{ 113 112 110 }
+	color_ui = rgb{ 113 112 110 }
+}
+
+
 ### アフリカ/Africa ###
 
 #エジプト/Egypt

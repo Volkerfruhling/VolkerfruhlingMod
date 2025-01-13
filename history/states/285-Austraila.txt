@@ -5,7 +5,8 @@ state = {
 	manpower = 2563100
 
 	history = {
-
+		owner = AST
+		add_core_of = AST
 
 		buildings = {
 			infrastructure = 3 #was: 6

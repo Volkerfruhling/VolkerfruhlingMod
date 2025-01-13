@@ -5,6 +5,8 @@ state={
 		1526 2191 8200 10949 10969 10997 11011 12948 12962 12976 12990 
 	}
 	history = {
+		owner = AST
+		add_core_of = AST
 		buildings = {
 			infrastructure = 1
 		}

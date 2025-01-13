@@ -3,6 +3,9 @@ state={
 	name="STATE_522"
 
 	history={
+
+		owner = AST
+		add_core_of = AST
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
