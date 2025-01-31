@@ -1,5 +1,3 @@
-
-
 update_operation_ai = {
 	# old target is no longer relevant
 	if = {
@@ -132,7 +130,7 @@ update_operation_ai = {
 					limit = { 
 						PREV = {
 							NOT = { tag = ENG } # ENG already does it against GER
-							NOT = { has_government = reactionism } 
+							NOT = { has_government = ultra_nationalism } 
 							NOT = {
 								has_operation_token = {
 									tag = var:generic_operation_target
@@ -140,7 +138,7 @@ update_operation_ai = {
 								}
 							}
 						}
-						has_government = reactionism
+						has_government = ultra_nationalism
 						check_variable = { occupied_countries^num > 0 }
 						has_added_tension_amount > 20
 					}

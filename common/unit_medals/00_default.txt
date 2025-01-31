@@ -193,15 +193,15 @@ unit_medals = {
 		
 	}
 	
-	### Generic reactionism
+	### Generic ultra_nationalism
 	
-	reactionism_bravery = {
+	ultra_nationalism_bravery = {
 		
 		available = { 
-			has_government = reactionism
+			has_government = ultra_nationalism
 		}
 		frame = 1
-		icon = "GFX_medal_icon_reactionism"
+		icon = "GFX_medal_icon_ultra_nationalism"
 		
 		cost = @cost
 		
@@ -215,13 +215,13 @@ unit_medals = {
 		
 	}
 	
-	reactionism_merit = {
+	ultra_nationalism_merit = {
 		
 		available = { 
-			has_government = reactionism
+			has_government = ultra_nationalism
 		}
 		frame = 2
-		icon = "GFX_medal_icon_reactionism"
+		icon = "GFX_medal_icon_ultra_nationalism"
 		
 		cost = @cost
 		
@@ -235,13 +235,13 @@ unit_medals = {
 		
 	}
 	
-	reactionism_order_brave = {
+	ultra_nationalism_order_brave = {
 		
 		available = { 
-			has_government = reactionism
+			has_government = ultra_nationalism
 		}
 		frame = 3
-		icon = "GFX_medal_icon_reactionism"
+		icon = "GFX_medal_icon_ultra_nationalism"
 		
 		cost = @cost
 		
@@ -256,13 +256,13 @@ unit_medals = {
 		
 	}
 	
-	reactionism_heroism = {
+	ultra_nationalism_heroism = {
 		
 		available = { 
-			has_government = reactionism
+			has_government = ultra_nationalism
 		}
 		frame = 4
-		icon = "GFX_medal_icon_reactionism"
+		icon = "GFX_medal_icon_ultra_nationalism"
 	
 		cost = @cost
 		

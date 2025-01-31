@@ -52,7 +52,7 @@ peace_ai_desires = {
         ai_desire = -1000
     }
 
-    generic_influence_cutoff_force_government_reactionism_unaligned = { #Don't do ANYTHING outside influence range
+    generic_influence_cutoff_force_government_ultra_nationalism_unaligned = { #Don't do ANYTHING outside influence range
         peace_action_type = { take_states puppet force_government liberate }
         enable = {
             # ROOT = { tag = ROOT.FROM } #We are negotiating for ourselves
@@ -130,7 +130,7 @@ peace_ai_desires = {
         enable = {
             ROOT = { 
                 is_major = yes                #We are big
-                has_government = reactionism    #We are the baddies
+                has_government = ultra_nationalism    #We are the baddies
                 tag = ROOT.FROM                #We are acting for ourselves
             }
         }
@@ -143,7 +143,7 @@ peace_ai_desires = {
         enable = {
             ROOT = {
                 is_major = yes                #We are big
-                has_government = reactionism    #We are the baddies
+                has_government = ultra_nationalism    #We are the baddies
             }
         }
 
@@ -155,10 +155,10 @@ peace_ai_desires = {
         enable = {
             ROOT = {
                 is_major = yes                #We are big
-                has_government = reactionism    #We are the baddies
+                has_government = ultra_nationalism    #We are the baddies
                 tag = ROOT.FROM                #We are acting for ourselves
             }
-            ROOT.FROM.FROM = { NOT = { has_government = reactionism } }
+            ROOT.FROM.FROM = { NOT = { has_government = ultra_nationalism } }
         }
 
         ai_desire = -75
@@ -201,7 +201,7 @@ peace_ai_desires = {
         enable = {
             ROOT = {
                 NOT = { has_government = liberalism }
-                NOT = { has_government = reactionism }
+                NOT = { has_government = ultra_nationalism }
                 NOT = {
                     tag = ROOT.FROM
                 }
@@ -305,7 +305,7 @@ peace_ai_desires = {
             ROOT = { has_government = liberalism }
             ROOT.FROM = {
                 OR = {
-                    has_government = reactionism
+                    has_government = ultra_nationalism
                     has_government = socialism
                 }
             }
@@ -323,8 +323,8 @@ peace_ai_desires = {
                 ROOT.FROM.FROM = { pc_is_forced_government_to = liberalism }
             }
             else_if = {
-                limit = { has_government = reactionism }
-                ROOT.FROM.FROM = { pc_is_forced_government_to = reactionism }
+                limit = { has_government = ultra_nationalism }
+                ROOT.FROM.FROM = { pc_is_forced_government_to = ultra_nationalism }
             }
             else_if = {
                 limit = { has_government = socialism }
@@ -372,14 +372,14 @@ peace_ai_desires = {
     }
 
 
-    reactionism_dont_liberate_the_wrong_ideology = {
+    ultra_nationalism_dont_liberate_the_wrong_ideology = {
         peace_action_type = liberate
         enable = {
-            ROOT = { has_government = reactionism }
+            ROOT = { has_government = ultra_nationalism }
             ROOT.FROM = {
                 NOT = {
                     OR = {
-                        has_government = reactionism
+                        has_government = ultra_nationalism
                         has_government = conservatism
                     }
                 }
@@ -519,8 +519,8 @@ peace_ai_desires = {
                 ROOT.FROM.FROM = { pc_is_forced_government_to = liberalism }
             }
             else_if = {
-                limit = { has_government = reactionism }
-                ROOT.FROM.FROM = { pc_is_forced_government_to = reactionism }
+                limit = { has_government = ultra_nationalism }
+                ROOT.FROM.FROM = { pc_is_forced_government_to = ultra_nationalism }
             }
             else_if = {
                 limit = { has_government = socialism }
@@ -543,7 +543,7 @@ peace_ai_desires = {
         enable = {
             ROOT.FROM = {
                 original_tag = GER
-                has_government = reactionism
+                has_government = ultra_nationalism
             }
         }
         ai_desire = -100

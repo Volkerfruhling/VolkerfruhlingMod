@@ -275,8 +275,8 @@ has_same_ideology = {
 				ROOT = { has_government = liberalism }
 			}
 			AND = {
-				has_government = reactionism
-				ROOT = { has_government = reactionism }
+				has_government = ultra_nationalism
+				ROOT = { has_government = ultra_nationalism }
 			}
 			AND = {
 				has_government = socialism
@@ -413,7 +413,7 @@ big_communist_exists = {
 big_fascist_exists = {
 	any_other_country = {
 		is_major = yes 
-		has_government = reactionism
+		has_government = ultra_nationalism
 		has_capitulated = no 
 		exists = yes 
 	}
@@ -631,8 +631,8 @@ is_liberalism_seller_trigger = {
 
 #Subsidy Seller Triggers
 is_fascist_seller_trigger = {
-	NOT = { has_war_with = ROOT	}
-	has_government = reactionism 
+	NOT = { has_war_with = ROOT }
+	has_government = ultra_nationalism 
 }
 
 is_democracy_seller_trigger = {

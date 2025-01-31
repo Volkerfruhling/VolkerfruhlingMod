@@ -676,7 +676,7 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 				NOT = {
 					AND = {
 						FROM = {
-							NOT = { has_government = reactionism }
+							NOT = { has_government = ultra_nationalism }
 							NOT = { has_government = conservatism }
 						}
 					}
@@ -775,7 +775,7 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 		else_if = { #Soviet volunteers to Spain (Exiles)
 			limit = {
 				OR = {
-					has_government = reactionism
+					has_government = ultra_nationalism
 					has_government = conservatism
 				}
 			}
@@ -789,7 +789,7 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 						AND = {
 							NOT = { has_dlc = "La Resistance" }
 							FROM = {
-								NOT = { has_government = reactionism }
+								NOT = { has_government = ultra_nationalism }
 								NOT = { has_government = conservatism }
 							}
 						}
