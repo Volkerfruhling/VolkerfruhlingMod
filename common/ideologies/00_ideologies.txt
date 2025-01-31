@@ -5,6 +5,11 @@ ideologies = {
 		types = {
 			liberalism_ideology = {
 			}
+			national_liberalism = {}
+			market_liberalism = {}
+			social_liberalism = {}
+			classical_liberalism = {}
+			christian_democracism = {}
 		}
 
 		dynamic_faction_names = {
@@ -50,6 +55,12 @@ ideologies = {
 		types = {
 			conservatism_ideology = {
 			}
+			liberal_conservatism = {}
+			national_conservatism = {}
+			social_conservatism = {}
+			agrarian_fundamentalism = {}
+			paternalistic_conservatism = {}
+			christian_conservatism = {}
 		}
 
 		dynamic_faction_names = {
@@ -95,8 +106,17 @@ ideologies = {
 
 		types = {
 
-			marxism = {
+			socialism_ideology = {
 			}
+			socialdemocratism = {}
+			democratic_socialism = {}
+			social_populism = {}
+			religious_socialism = {}
+			revolutionary_front = {}
+			sandicalism = {}
+			left_wing_nationalism = {}
+			social_nationalism = {}
+			anarcho_communism = {}
 		}
 
 		dynamic_faction_names = {
@@ -142,6 +162,9 @@ ideologies = {
 		types = {
 			communism_ideology = {
 			}
+			collective_communism = {}
+			left_wing_communism = {}
+			military_communism = {}
 		}
 		
 		dynamic_faction_names = {
@@ -186,6 +209,17 @@ ideologies = {
 		types = {
 			despotism_ideology = {
 			}
+			military_regime = {}
+			civilian_dictatorship = {}
+			aristocratic_reactionism = {}
+			royal_autocracy = {}
+			warlord_dictatorship = {}
+			business_nation = {}
+			interim_government = {}
+			oligarchy = {}
+			priestly_system = {}
+			theocracy = {}
+			colonial_government = {}
 		}
 		
 		dynamic_faction_names = {
@@ -225,6 +259,10 @@ ideologies = {
 		types = {
 			national_totalism_ideology = {
 			}
+			national_socialism = {}
+			national_syndicalism = {}
+			national_corporatism = {}
+			revolutionary_nationalism = {}
 		}
 		
 		dynamic_faction_names = {
@@ -264,6 +302,10 @@ ideologies = {
 		types = {
 			ultra_nationalism_ideology = {
 			}
+			supermilitarism = {}
+			religious_fundamentalism = {}
+			eurasianism = {}
+			slavo_national_movement = {}
 		}
 		
 		dynamic_faction_names = {
