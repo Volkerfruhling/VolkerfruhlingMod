@@ -479,30 +479,60 @@ spriteTypes = {
 		texturefile = "gfx/interface/icon_occupied_territories.dds"
 	}
 
-	spriteType = {
-		name = "GFX_ideology_neutrality_group"
-		texturefile = "gfx/interface/ideologies/neutrality_group.dds"
-	}	
+	# spriteType = {
+	# 	name = "GFX_ideology_neutrality_group"
+	# 	texturefile = "gfx/interface/ideologies/neutrality_group.dds"
+	# }	
 	
 	spriteType = {
-		name = "GFX_ideology_communism_group"
-		texturefile = "gfx/interface/ideologies/communism_group.dds"
+		name = "GFX_ideology_liberalism_group"
+		texturefile = "gfx/interface/ideologies/liberalism_group.png"
 	}
 	
 	spriteType = {
-		name = "GFX_ideology_fascism_group"
-		texturefile = "gfx/interface/ideologies/fascism_group.dds"
+		name = "GFX_ideology_conservatism_group"
+		texturefile = "gfx/interface/ideologies/conservatism_group.png"
 	}
 	
 	spriteType = {
-		name = "GFX_ideology_democratic_group"
-		texturefile = "gfx/interface/ideologies/democratic_group.dds"
+		name = "GFX_ideology_socialism_group"
+		texturefile = "gfx/interface/ideologies/socialism_group.png"
 	}
 
 	spriteType = {
-		name = "GFX_ideology_anarchism"
-		texturefile = "gfx/interface/ideologies/anarchism.dds"
+		name = "GFX_ideology_despotism_group"
+		texturefile = "gfx/interface/ideologies/despotism_group.png"
 	}
+
+	spriteType = {
+		name = "GFX_ideology_national_totalism_group"
+		texturefile = "gfx/interface/ideologies/national_totalism_group.png"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_ultra_nationalism_group"
+		texturefile = "gfx/interface/ideologies/ultra_nationalism_group.png"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_communism_group"
+		texturefile = "gfx/interface/ideologies/communism_group.png"
+	}
+	
+	# spriteType = {
+	# 	name = "GFX_ideology_fascism_group"
+	# 	texturefile = "gfx/interface/ideologies/fascism_group.dds"
+	# }
+	
+	# spriteType = {
+	# 	name = "GFX_ideology_democratic_group"
+	# 	texturefile = "gfx/interface/ideologies/democratic_group.dds"
+	# }
+
+	# spriteType = {
+	# 	name = "GFX_ideology_anarchism"
+	# 	texturefile = "gfx/interface/ideologies/anarchism.dds"
+	# }
 	
 	spriteType = {
 		name = "GFX_ideology_unknown"
