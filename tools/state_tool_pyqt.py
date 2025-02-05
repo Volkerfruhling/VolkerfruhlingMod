@@ -1,6 +1,7 @@
 import os
 import re
 import sys
+import configparser
 from PyQt5.QtWidgets import (QApplication, QWidget, QVBoxLayout, QHBoxLayout,
                              QLabel, QComboBox, QPushButton, QTreeWidget, QTreeWidgetItem,
                              QLineEdit, QScrollArea, QFrame, QMenu, QAction,
@@ -26,19 +27,28 @@ class ProvinceListDialog(QDialog):
 class StateFileLister(QWidget):
     def __init__(self, state_dir="history/states", localisation_dir="localisation/japanese", localisation_file_name="state_names_l_japanese.yml"):
         super().__init__()
-        self.state_dir = state_dir
-        self.localisation_dir = localisation_dir
-        self.localisation_file_name = localisation_file_name
+
+        # 設定ファイルの読み込み
+        self.config = configparser.ConfigParser()
+        self.config.read('state_tool_config.ini') # 設定ファイル名を指定
+
+        # 設定値の取得 (デフォルト値も指定)
+        self.state_dir = self.config.get('Directories', 'state_dir', fallback='history/states')
+        self.localisation_dir = self.config.get('Directories', 'localisation_dir', fallback='localisation/japanese')
+        self.localisation_file_name = self.config.get('Directories', 'localisation_file_name', fallback='state_names_l_japanese.yml')
+        self.default_sort_key = self.config.get('UI', 'default_sort_key', fallback='state_id')
+        self.default_sort_order_ascending = self.config.getboolean('UI', 'default_sort_order_ascending', fallback=True) # boolean型で取得
+
         self.state_files_info = []
-        self.filtered_state_files_info = [] # 検索結果を格納するリスト
-        self.sort_key = "state_id"
-        self.sort_order_ascending = True
+        self.filtered_state_files_info = []
+        self.sort_key = self.default_sort_key # デフォルトソートキーを設定から読み込む
+        self.sort_order_ascending = self.default_sort_order_ascending # デフォルトソート順を設定から読み込む
         self.localisation_strings = self.load_localisation()
-        self.current_item = None # 右クリックされたアイテムを保持
+        self.current_item = None
 
         self.init_ui()
         self.load_state_files()
-        self.filtered_state_files_info = list(self.state_files_info) # 初期状態ではフィルタリングなし
+        self.filtered_state_files_info = list(self.state_files_info)
         self.display_state_files()
 
     def load_localisation(self):
@@ -85,22 +95,23 @@ class StateFileLister(QWidget):
 
         # 検索バー
         search_layout = QHBoxLayout()
-        self.search_entry_id = QLineEdit()
-        self.search_entry_name = QLineEdit()
-        self.search_entry_localized_name = QLineEdit()
-        self.search_entry_owner = QLineEdit()
-        self.search_entry_manpower = QLineEdit()
+        self.search_criteria_combo = QComboBox() # 検索対象切り替えコンボボックス
+        self.search_criteria_combo.addItems(["ステートID", "ステート名", "ローカライズ名", "領有国", "人口", "プロビンス"]) # 検索対象項目に「プロビンス」を追加
+        search_layout.addWidget(self.search_criteria_combo)
+
+        self.search_entry = QLineEdit() # 統合検索窓
+        search_layout.addWidget(self.search_entry)
+
+        self.match_type_combo = QComboBox() # 完全一致/部分一致切り替えコンボボックス
+        self.match_type_combo.addItems(["部分一致", "完全一致"]) # 検索タイプ項目を追加
+        self.match_type_combo.setCurrentText("部分一致") # デフォルトを部分一致に設定
+        search_layout.addWidget(self.match_type_combo)
+
         search_button = QPushButton("検索")
         search_button.clicked.connect(self.search_state_files)
 
-        search_layout.addWidget(self.search_entry_id)
-        search_layout.addWidget(self.search_entry_name)
-        search_layout.addWidget(self.search_entry_localized_name)
-        search_layout.addWidget(self.search_entry_owner)
-        search_layout.addWidget(self.search_entry_manpower)
         search_layout.addWidget(search_button)
         layout.addLayout(search_layout)
-
 
         # TreeView
         self.tree_widget = QTreeWidget()
@@ -168,13 +179,11 @@ class StateFileLister(QWidget):
                 if provinces_match:
                     provinces_str = provinces_match.group(1).strip()
                     provinces = [p_id.strip() for p_id in provinces_str.split()] # 空白で区切られたプロビンスIDをリスト化
-
-
         except Exception as e:
             print(f"Error parsing {filepath}: {e}")
             return None
 
-        return {"state_id": state_id, "filename": filename, "state_name": state_name_from_file, "localized_name": localized_name, "owner": owner, "manpower": manpower, "provinces": provinces} # provinces を state_info に追加
+        return {"state_id": state_id, "filename": filename, "state_name": state_name_from_file, "localized_name": localized_name, "owner": owner, "manpower": manpower, "provinces": provinces}
 
     def display_state_files(self):
         self.tree_widget.clear() # TreeWidgetの内容をクリア
@@ -184,28 +193,14 @@ class StateFileLister(QWidget):
                 state_info["state_name"],
                 state_info["localized_name"],
                 state_info["owner"],
-                str(state_info["manpower"])
+                state_info["manpower"]
             ])
             self.tree_widget.addTopLevelItem(item)
 
     def sort_state_files(self):
-        reverse_order = not self.sort_order_ascending
-        if self.sort_key == "state_id":
-            self.filtered_state_files_info.sort(key=lambda x: x["state_id"], reverse=reverse_order)
-        elif self.sort_key == "state_name":
-            self.filtered_state_files_info.sort(key=lambda x: x["state_name"], reverse=reverse_order)
-        elif self.sort_key == "localized_name":
-            self.filtered_state_files_info.sort(key=lambda x: x["localized_name"], reverse=reverse_order)
-        elif self.sort_key == "owner":
-            self.filtered_state_files_info.sort(key=lambda x: x["owner"], reverse=reverse_order)
-        elif self.sort_key == "manpower":
-            self.filtered_state_files_info.sort(key=lambda x: int(x["manpower"]) if x["manpower"] != "N/A" else -1, reverse=reverse_order)
-
+        self.sort_key = self.sort_combo.currentText()
+        self.filtered_state_files_info.sort(key=lambda x: x[self.sort_key], reverse=not self.sort_order_ascending)
         self.display_state_files()
-
-    def change_sort_key(self, key):
-        self.sort_key = key
-        self.sort_state_files()
 
     def toggle_sort_order(self):
         self.sort_order_ascending = not self.sort_order_ascending
@@ -215,40 +210,68 @@ class StateFileLister(QWidget):
             self.order_button.setText("昇順")
         self.sort_state_files()
 
-    def sort_by_column(self, column, order): # PyQtのTreeWidgetはヘッダークリックソートを標準でサポート
-        key = ["state_id", "state_name", "localized_name", "owner", "manpower"][column]
-        if self.sort_key == key:
-            self.toggle_sort_order()
-        else:
-            self.sort_key = key
-            self.sort_order_ascending = True
-            self.order_button.setText("降順")
-        self.sort_state_files()
-
     def search_state_files(self):
-        search_id = self.search_entry_id.text().strip()
-        search_name = self.search_entry_name.text().strip().lower()
-        search_localized_name = self.search_entry_localized_name.text().strip().lower()
-        search_owner = self.search_entry_owner.text().strip().upper()
-        search_manpower = self.search_entry_manpower.text().strip()
+        search_text = self.search_entry.text().strip().lower() # 検索テキストを取得
+        search_criteria = self.search_criteria_combo.currentText() # 検索対象項目を取得
+        match_type = self.match_type_combo.currentText() # 一致タイプを取得 ("部分一致" or "完全一致")
 
         self.filtered_state_files_info = []
         for state_info in self.state_files_info:
-            match = True
-            if search_id and str(state_info["state_id"]) != search_id:
-                match = False
-            if search_name and search_name not in state_info["state_name"].lower():
-                match = False
-            if search_localized_name and search_localized_name not in state_info["localized_name"].lower():
-                match = False
-            if search_owner and search_owner != state_info["owner"]:
-                match = False
-            if search_manpower:
-                try:
-                    if str(int(search_manpower)) != state_info["manpower"]:
-                        match = False
-                except ValueError:
-                    pass
+            match = False # 初期値はマッチしない
+
+            if search_criteria == "ステートID":
+                if search_text:
+                    if match_type == "完全一致":
+                        if str(state_info["state_id"]) == search_text:
+                            match = True
+                    elif match_type == "部分一致":
+                        if search_text in str(state_info["state_id"]):
+                            match = True
+            elif search_criteria == "ステート名":
+                if search_text:
+                    if match_type == "完全一致":
+                        if state_info["state_name"].lower() == search_text:
+                            match = True
+                    elif match_type == "部分一致":
+                        if search_text in state_info["state_name"].lower():
+                            match = True
+            elif search_criteria == "ローカライズ名":
+                if search_text:
+                    if match_type == "完全一致":
+                        if state_info["localized_name"].lower() == search_text:
+                            match = True
+                    elif match_type == "部分一致":
+                        if search_text in state_info["localized_name"].lower():
+                            match = True
+            elif search_criteria == "領有国":
+                if search_text:
+                    if match_type == "完全一致":
+                        if state_info["owner"].upper() == search_text.upper(): # 大文字で比較
+                            match = True
+                    elif match_type == "部分一致":
+                        if search_text.upper() in state_info["owner"].upper(): # 大文字で比較
+                            match = True
+            elif search_criteria == "人口":
+                if search_text:
+                    try:
+                        if match_type == "完全一致":
+                            if str(int(search_text)) == state_info["manpower"]:
+                                match = True
+                        elif match_type == "部分一致":
+                            if search_text in str(state_info["manpower"]):
+                                match = True
+                    except ValueError:
+                        pass # 数値変換に失敗した場合は無視
+            elif search_criteria == "プロビンス": # プロビンス検索の条件を追加
+                if search_text:
+                    if match_type == "完全一致": # プロビンスIDは通常完全一致で検索する方が自然
+                        if search_text in state_info["provinces"]: # リストにプロビンスIDが含まれているか確認
+                            match = True
+                    elif match_type == "部分一致": # 部分一致も実装 (例: "77" で "778" などもヒットさせる)
+                        for province_id in state_info["provinces"]:
+                            if search_text in province_id:
+                                match = True
+                                break # 一つでも部分一致があればマッチ
 
             if match:
                 self.filtered_state_files_info.append(state_info)
