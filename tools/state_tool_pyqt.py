@@ -53,6 +53,72 @@ class BelongingStateDialog(QDialog):
 
         self.setLayout(layout)
 
+class ProvinceTransferDialog(QDialog):
+    def __init__(self, province_list, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("移譲するプロビンスを選択")
+        layout = QVBoxLayoutDialog()
+
+        self.province_list_widget = QListWidget()
+        self.province_list_widget.setSelectionMode(QListWidget.MultiSelection) # 複数選択を可能にする
+        self.province_list_widget.addItems(province_list)
+        layout.addWidget(self.province_list_widget)
+
+        button_layout = QHBoxLayout()
+
+        next_button = QPushButtonDialog("次へ")
+        next_button.clicked.connect(self.accept) # 次へボタンでダイアログを閉じる
+        button_layout.addWidget(next_button)
+
+        cancel_button = QPushButtonDialog("キャンセル")
+        cancel_button.clicked.connect(self.reject) # キャンセルボタン
+        button_layout.addWidget(cancel_button)
+
+        layout.addLayout(button_layout)
+        self.setLayout(layout)
+
+    def get_selected_provinces(self):
+        return [item.text() for item in self.province_list_widget.selectedItems()]
+
+class TargetStateDialog(QDialog):
+    def __init__(self, parent=None, source_state_info=None):
+        super().__init__(parent)
+        self.setWindowTitle("移譲先のステートIDを入力")
+        self.source_state_info = source_state_info # 移譲元ステート情報を保存
+        layout = QVBoxLayoutDialog()
+
+        if self.source_state_info:
+            source_state_name = self.source_state_info["localized_name"]
+            source_state_label = QLabel(f"移譲元ステート: {source_state_name} ({self.source_state_info['state_id']})")
+            layout.addWidget(source_state_label)
+
+        self.target_state_id_entry = QLineEdit()
+        self.target_state_id_entry.setPlaceholderText("移譲先ステートIDを入力")
+        layout.addWidget(self.target_state_id_entry)
+
+        button_layout = QHBoxLayout()
+
+        transfer_button = QPushButtonDialog("移譲")
+        transfer_button.clicked.connect(self.accept)
+        button_layout.addWidget(transfer_button)
+
+        back_button = QPushButtonDialog("戻る")
+        back_button.clicked.connect(self.reject) # reject で ProvinceTransferDialog に戻るように修正
+        button_layout.addWidget(back_button)
+
+        cancel_button = QPushButtonDialog("キャンセル")
+        cancel_button.clicked.connect(self.reject) # キャンセルボタン
+        button_layout.addWidget(cancel_button)
+
+        layout.addLayout(button_layout)
+        self.setLayout(layout)
+
+    def get_target_state_id(self):
+        target_state_id_text = self.target_state_id_entry.text()
+        if target_state_id_text.isdigit():
+            return int(target_state_id_text)
+        return None
+
 class StateFileLister(QWidget):
     def __init__(self, state_dir="history/states", localisation_dir="localisation/japanese", localisation_file_name="state_names_l_japanese.yml"):
         super().__init__()
@@ -509,6 +575,9 @@ class StateFileLister(QWidget):
                 show_provinces_action = QAction("プロビンスを表示", self)
                 show_provinces_action.triggered.connect(self.show_province_list_from_menu)
                 menu.addAction(show_provinces_action)
+                transfer_provinces_action = QAction("プロビンス移譲", self)
+                transfer_provinces_action.triggered.connect(self.show_transfer_province_dialog)
+                menu.addAction(transfer_provinces_action)
             elif self.strategic_region_tree_widget.itemAt(point):  # strategic_region_tree_widget 上で右クリックされた場合
                 menu = QMenu(self)
                 open_vscode_action = QAction("VSCodeで開く", self)
@@ -520,6 +589,9 @@ class StateFileLister(QWidget):
                 show_provinces_action = QAction("プロビンスを表示", self)
                 show_provinces_action.triggered.connect(self.show_province_list_from_menu)
                 menu.addAction(show_provinces_action)
+                transfer_provinces_action = QAction("プロビンス移譲", self)
+                transfer_provinces_action.triggered.connect(self.show_transfer_province_dialog)
+                menu.addAction(transfer_provinces_action)
             menu.exec_(self.tree_widget.viewport().mapToGlobal(point))
         else:
             self.current_item = None
@@ -706,6 +778,104 @@ class StateFileLister(QWidget):
                 dialog.exec_()
             else:
                 print("Invalid item index.")
+
+    def show_transfer_province_dialog(self):
+        if self.current_item:
+            state_id_str = self.current_item.text(0)
+            state_id = int(state_id_str)
+            state_info = next((info for info in self.filtered_state_files_info if info["state_id"] == state_id), None)
+            if state_info:
+                province_list = state_info["provinces"]
+                dialog = ProvinceTransferDialog(province_list, self)
+                result = dialog.exec_()
+                if result == QDialog.Accepted:
+                    selected_provinces = dialog.get_selected_provinces()
+                    if selected_provinces:
+                        self.show_target_state_dialog(selected_provinces, state_info)
+            else:
+                print("Invalid item index.")
+
+    def show_target_state_dialog(self, selected_provinces, source_state_info):
+        dialog = TargetStateDialog(self, source_state_info)
+        result = dialog.exec_()
+        if result == QDialog.Accepted:
+            target_state_id = dialog.get_target_state_id()
+            if target_state_id:
+                self.transfer_provinces(selected_provinces, source_state_info["state_id"], target_state_id)
+
+    def transfer_provinces(self, selected_provinces, source_state_id, target_state_id):
+        if not selected_provinces or not target_state_id:
+            return
+
+        source_state_info = self.find_state_info_by_id(source_state_id)
+        target_state_info = self.find_state_info_by_id(target_state_id)
+
+        if not source_state_info or not target_state_info:
+            print("Error: Source or target state not found.")
+            return
+
+        # プロビンスを移譲元から削除
+        updated_source_provinces = [p for p in source_state_info["provinces"] if p not in selected_provinces]
+        source_state_info["provinces"] = updated_source_provinces
+
+        # プロビンスを移譲先に追加
+        target_state_info["provinces"].extend(selected_provinces)
+        target_state_info["provinces"] = sorted(list(set(target_state_info["provinces"]))) # 重複削除とソート
+
+        # ファイルを更新
+        self.update_state_file(source_state_info)
+        self.update_state_file(target_state_info)
+
+        # データと表示を更新
+        self.load_state_files() # ファイルを再読み込みして state_files_info を更新
+        self.filtered_state_files_info = list(self.state_files_info) # フィルタリングリストも更新
+        self.display_state_files() # ステートリストを再表示
+        self.load_province_data() # プロビンスデータも再読み込み
+        self.filtered_province_data = list(self.province_data)
+        self.display_province_data() # プロビンスリストも再表示
+
+    def update_state_file(self, state_info):
+        filepath = os.path.join(self.state_dir, state_info["filename"])
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                content_lines = f.readlines()
+
+            updated_lines = []
+            provinces_started = False
+            existing_provinces_section_lines = [] # 既存の provinces セクションの行を保持
+
+            for line in content_lines:
+                if re.search(r'provinces\s*=\s*\{', line): # 正規表現で provinces = { を検索 (空白を考慮)
+                    provinces_started = True
+                    updated_lines.append(line) # provinces = { 行はそのまま
+                    continue
+                if provinces_started:
+                    if '}' in line:
+                        provinces_started = False
+                        if state_info["provinces"]: # プロビンスがある場合のみ provinces = { ... } を書き出す
+                            updated_lines.extend([f'\t\t\t{province}\n' for province in sorted(state_info["provinces"])]) # プロビンスIDをソートして追加
+                        updated_lines.append('\t\t}\n') # 閉じ括弧を追加
+                        existing_provinces_section_lines = [] # provinces セクションの処理が終わったらクリア
+                        continue
+                    else:
+                        existing_provinces_section_lines.append(line) # 既存の provinces セクションの行を保持
+                        continue # 既存のプロビンス行はスキップ
+                updated_lines.append(line) # provinces セクション以外の行はそのまま
+
+            # provinces = {} がない場合の処理 (ファイルの末尾に追加)
+            if not any(re.search(r'provinces\s*=\s*\{', line) for line in content_lines) and state_info["provinces"]: # 正規表現で provinces = { を検索 (空白を考慮)
+                updated_lines.append('\tprovinces = {\n')
+                updated_lines.extend([f'\t\t\t{province}\n' for province in sorted(state_info["provinces"])])
+                updated_lines.append('\t\t}\n')
+
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.writelines(updated_lines)
+
+        except Exception as e:
+            print(f"Error updating state file {filepath}: {e}")
+
+    def find_state_info_by_id(self, state_id):
+        return next((info for info in self.state_files_info if info["state_id"] == state_id), None)
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
