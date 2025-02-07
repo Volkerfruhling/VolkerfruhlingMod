@@ -6,8 +6,13 @@ state={
 		aluminium=70.000
 	}
 	provinces={
-		937 6913 9809 9821 11858 
-	}
+			11858
+			3922
+			6913
+			937
+			9809
+			9821
+		}
 	history = {
 		owner = MNT
 		add_core_of = MNT

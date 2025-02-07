@@ -814,15 +814,33 @@ class StateFileLister(QWidget):
             print("Error: Source or target state not found.")
             return
 
-        # プロビンスを移譲元から削除
+        # 戦略地域の更新処理
+        for province_id in selected_provinces:
+            source_region_info = self.find_strategic_region_by_province(province_id)
+            # 移譲先ステートの最初のプロビンスが属する戦略地域を取得 (存在する場合)
+            target_region_info = None
+            if target_state_info["provinces"]:
+                target_region_info = self.find_strategic_region_by_province(target_state_info["provinces"][0])
+
+            if source_region_info and target_region_info != source_region_info: # 異なる戦略地域に移動する場合のみ更新
+                # 移譲元戦略地域からプロビンスを削除
+                source_region_info["provinces"] = [p for p in source_region_info["provinces"] if p != str(province_id)] # 文字列比較
+                self.update_strategic_region_file(source_region_info)
+
+                # 移譲先戦略地域にプロビンスを追加
+                target_region_info["provinces"].append(str(province_id))
+                target_region_info["provinces"] = sorted(list(set(target_region_info["provinces"]))) # 重複削除とソート
+                self.update_strategic_region_file(target_region_info)
+
+        # プロビンスを移譲元から削除 (ステートファイルの provinces リストを更新)
         updated_source_provinces = [p for p in source_state_info["provinces"] if p not in selected_provinces]
         source_state_info["provinces"] = updated_source_provinces
 
-        # プロビンスを移譲先に追加
+        # プロビンスを移譲先に追加 (ステートファイルの provinces リストを更新)
         target_state_info["provinces"].extend(selected_provinces)
         target_state_info["provinces"] = sorted(list(set(target_state_info["provinces"]))) # 重複削除とソート
 
-        # ファイルを更新
+        # ステートファイルを更新
         self.update_state_file(source_state_info)
         self.update_state_file(target_state_info)
 
@@ -833,6 +851,9 @@ class StateFileLister(QWidget):
         self.load_province_data() # プロビンスデータも再読み込み
         self.filtered_province_data = list(self.province_data)
         self.display_province_data() # プロビンスリストも再表示
+        self.load_strategic_regions() # 戦略地域データも再読み込み
+        self.filtered_strategic_region_files_info = list(self.strategic_region_files_info)
+        self.display_strategic_region_data() # 戦略地域リストも再表示
 
     def update_state_file(self, state_info):
         filepath = os.path.join(self.state_dir, state_info["filename"])
@@ -877,8 +898,45 @@ class StateFileLister(QWidget):
     def find_state_info_by_id(self, state_id):
         return next((info for info in self.state_files_info if info["state_id"] == state_id), None)
 
+    def find_strategic_region_by_province(self, province_id):
+        for region_info in self.strategic_region_files_info:
+            if str(province_id) in region_info["provinces"]: # province_id は文字列として比較
+                return region_info
+        return None # 見つからない場合は None を返す
+
+    def update_strategic_region_file(self, region_info):
+        filepath = os.path.join(self.strategic_regions_dir, region_info["strategic_region_name"] + ".txt")
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                content_lines = f.readlines()
+
+            updated_lines = []
+            provinces_started = False
+
+            for line in content_lines:
+                if re.search(r'provinces\s*=\s*\{', line): # 正規表現で provinces = { を検索 (空白を考慮)
+                    provinces_started = True
+                    updated_lines.append(line)
+                    continue
+                if provinces_started:
+                    if '}' in line:
+                        provinces_started = False
+                        if region_info["provinces"]:
+                            updated_lines.extend([f'\t\t\t{province}\n' for province in sorted(region_info["provinces"])]) # プロビンスIDをソートして追加
+                        updated_lines.append('\t\t}\n')
+                        continue
+                    else:
+                        continue # 既存のプロビンス行はスキップ
+                updated_lines.append(line)
+
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.writelines(updated_lines)
+
+        except Exception as e:
+            print(f"Error updating strategic region file {filepath}: {e}")
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = StateFileLister()
     ex.show()
-    sys.exit(app.exec_()) 
+    sys.exit(app.exec_())

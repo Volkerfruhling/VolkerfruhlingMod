@@ -5,8 +5,15 @@ state={
 		steel=3.000
 	}
 	provinces={
-		630 6970 6998 9602 9756 9906 11887 
-	}
+			11887
+			630
+			6953
+			6970
+			6998
+			9602
+			9756
+			9906
+		}
 	history = {
 		owner = SER
 		add_core_of = SER
