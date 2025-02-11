@@ -10,10 +10,10 @@ BOH = "countries/_eastern_european.txt"
 #ブルガリア/Bulgaria
 BUL = "countries/_eastern_european.txt"
 
-#イリュリア/Croatia
+#クロアチア/Croatia
 CRO = "countries/_eastern_european.txt"
 
-#デンマーク/Denmark
+#kin/Denmark
 DEN = "countries/_western_european.txt"
 
 #イギリス/United_Kingdom
@@ -30,6 +30,9 @@ GRE = "countries/_western_european.txt"
 
 #ハンガリー/Hungary
 HUN = "countries/_eastern_european.txt"
+
+#アイルランド/Ireland
+IRE = "countries/_western_european.txt"
 
 #イストリア/Istria
 IST = "countries/_western_european.txt"
@@ -75,3 +78,4 @@ SWE = "countries/_western_european.txt"
 
 #スイス/Switzerland
 SWI = "countries/_western_european.txt"
+

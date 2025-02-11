@@ -19,9 +19,9 @@
  CRO_DEF: "クロアチア"
  CRO_ADJ: "クロアチア"
 
- DEN: "デンマーク"
- DEN_DEF: "デンマーク"
- DEN_ADJ: "デンマーク"
+ DEN: "kin"
+ DEN_DEF: "kin"
+ DEN_ADJ: "kin"
 
  ENG: "イギリス"
  ENG_DEF: "イギリス"
@@ -42,6 +42,10 @@
  HUN: "ハンガリー"
  HUN_DEF: "ハンガリー"
  HUN_ADJ: "ハンガリー"
+
+ IRE: "アイルランド"
+ IRE_DEF: "アイルランド"
+ IRE_ADJ: "アイルランド"
 
  IST: "イストリア"
  IST_DEF: "イストリア"
@@ -102,5 +106,4 @@
  SWI: "スイス"
  SWI_DEF: "スイス"
  SWI_ADJ: "スイス"
-
 

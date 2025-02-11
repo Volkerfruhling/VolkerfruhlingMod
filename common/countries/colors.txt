@@ -24,13 +24,13 @@ BUL ={
 	color_ui = rgb{ 112 164 148 }
 }
 
-#イリュリア/Croatia
+#クロアチア/Croatia
 CRO ={
 	color = rgb{ 34 94 168 }
 	color_ui = rgb{ 34 94 168 }
 }
 
-#デンマーク/Denmark
+#kin/Denmark
 DEN ={
 	color = rgb{ 253 219 199 }
 	color_ui = rgb{ 253 219 199 }
@@ -64,6 +64,12 @@ GRE ={
 HUN ={
 	color = rgb{ 115 175 72 }
 	color_ui = rgb{ 115 175 72 }
+}
+
+#アイルランド/Ireland
+IRE ={
+	color = rgb{ 179 222 105 }
+	color_ui = rgb{ 179 222 105 }
 }
 
 #イストリア/Istria
@@ -155,6 +161,7 @@ SWI ={
 	color = rgb{ 237 73 39 }
 	color_ui = rgb{ 237 73 39 }
 }
+
 
 ### 北アメリカ/North America ###
 
