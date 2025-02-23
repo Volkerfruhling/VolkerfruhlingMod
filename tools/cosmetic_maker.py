@@ -48,6 +48,22 @@ def create_hoi4_startup_script(tsv_filepath, output_filepath):
 
         f.write('}\n') # 変更: startup_cosmetic_tag 形式の閉じ括弧
 
+def create_hoi4_colors_file(tsv_file, output_file):
+    """
+    tsvファイルから Hoi4 の colors.txt ファイルを作成する。
+    """
+    df = pd.read_csv(tsv_file, sep='\t')
+    with open(output_file, 'w', encoding='utf-8') as f:
+        for index, row in df.iterrows():
+            color_value = row['色']
+            if pd.notna(color_value):
+                tag = row['cosmetic_tag']
+                loc = row['ローカライズ']
+                f.write(f'#{loc}/{tag}\n')
+                f.write(f'{tag} = {{\n')
+                f.write(f'    color = rgb{{ {color_value} }}\n')
+                f.write(f'    color_ui = rgb{{ {color_value} }}\n')
+                f.write(f'}}\n')
 
 if __name__ == "__main__":
     script_dir = os.path.dirname(os.path.abspath(__file__)) # スクリプトのディレクトリを取得
@@ -59,4 +75,10 @@ if __name__ == "__main__":
     print(f"{loc_output_file} を作成しました。")
 
     create_hoi4_startup_script(tsv_file, startup_output_file)
-    print(f"{startup_output_file} を作成しました。") 
+    print(f"{startup_output_file} を作成しました。")
+
+    # colors.txt を作成
+    create_hoi4_colors_file(tsv_file, os.path.join(script_dir, 'output', 'colors.txt'))
+    print(f"output/colors.txt を作成しました。")
+
+

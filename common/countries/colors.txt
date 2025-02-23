@@ -42,6 +42,12 @@ ENG ={
 	color_ui = rgb{ 214 96 77 }
 }
 
+#フィンランド/Finland
+FIN ={
+	color = rgb{ 128 177 211 }
+	color_ui = rgb{ 128 177 211 }
+}
+
 #フランス/France
 FRA ={
 	color = rgb{ 8 29 88 }
@@ -76,6 +82,12 @@ IRE ={
 IST ={
 	color = rgb{ 150 150 150 }
 	color_ui = rgb{ 150 150 150 }
+}
+
+#リトアニア/Lithuania
+LIT ={
+	color = rgb{ 246 232 195 }
+	color_ui = rgb{ 246 232 195 }
 }
 
 #イタリア/Italy
@@ -553,4 +565,3 @@ RHO ={
 	color = rgb{ 209 219 221 }
 	color_ui = rgb{ 209 219 221 }
 }
-

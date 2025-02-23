@@ -19,6 +19,9 @@ DEN = "countries/_western_european.txt"
 #イギリス/United_Kingdom
 ENG = "countries/_western_european.txt"
 
+#フィンランド/Finland
+FIN = "countries/_eastern_european.txt"
+
 #フランス/France
 FRA = "countries/_western_european.txt"
 
@@ -39,6 +42,9 @@ IST = "countries/_western_european.txt"
 
 #イタリア/Italy
 ITA = "countries/_western_european.txt"
+
+#リトアニア/Lithuania
+LIT = "countries/_eastern_european.txt"
 
 #ルクセンブルク/Luxembourg
 LUX = "countries/_western_european.txt"

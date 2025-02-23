@@ -27,6 +27,10 @@
  ENG_DEF: "イギリス"
  ENG_ADJ: "イギリス"
 
+ FIN: "フィンランド"
+ FIN_DEF: "フィンランド"
+ FIN_ADJ: "フィンランド"
+
  FRA: "フランス"
  FRA_DEF: "フランス"
  FRA_ADJ: "フランス"
@@ -54,6 +58,10 @@
  ITA: "イタリア"
  ITA_DEF: "イタリア"
  ITA_ADJ: "イタリア"
+
+ LIT: "リトアニア"
+ LIT_DEF: "リトアニア"
+ LIT_ADJ: "リトアニア"
 
  LUX: "ルクセンブルク"
  LUX_DEF: "ルクセンブルク"
