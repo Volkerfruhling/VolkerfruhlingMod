@@ -1,10 +1,10 @@
 #フィンランド大公国/FIN_grand_duchy_of_finland
 FIN_RUS_grand_duchy_of_finland = {
-    color = rgb{ 64 123 119 }
-    color_ui = rgb{ 64 123 119 }
+    color = rgb{ 32 95 73 }
+    color_ui = rgb{ 32 95 73 }
 }
 #リトアニア王国/LIT_kingdom_of_lithuania
 LIT_GER_kingdom_of_lithuania = {
-    color = rgb{ 164 157 139 }
-    color_ui = rgb{ 164 157 139 }
+    color = rgb{ 148 142 127 }
+    color_ui = rgb{ 148 142 127 }
 }
