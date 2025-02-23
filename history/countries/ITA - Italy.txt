@@ -100,5 +100,5 @@ set_popularities = {
 add_ideas = {
 	ITA_economic_stagnation
 	ITA_unstable_regime
-	ITA_pope_pius_XII
+	ITA_pope_pius_xii
 }

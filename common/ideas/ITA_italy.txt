@@ -33,8 +33,8 @@ ideas = {
 			}
 		}
 		# 教皇ピウスXII世
-		ITA_pope_pius_XII = {
-			picture = ITA_pope_pius_XII
+		ITA_pope_pius_xii = {
+			picture = ITA_pope_pius_xii
 			allowed = {
 				always = yes
 			}

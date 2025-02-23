@@ -189,14 +189,6 @@ technologies = {
 
 					load_oob = "unlock_tanks"
 				}
-
-				if = { #Italian templates
-					limit = {
-						original_tag = ITA
-						has_completed_focus = ITA_italian_tankettes
-					}
-					ITA_add_improved_light_tank_templates = yes
-				}
 			}
 
 			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
@@ -317,38 +309,6 @@ technologies = {
 		}
 
 		on_research_complete = {
-			if = { #Italian templates
-				limit = {
-					original_tag = ITA
-					has_completed_focus = ITA_italian_tankettes
-				}
-				ITA_add_improved_light_tank_templates = yes
-			}
-			IF = { #Hungarian templates
-				limit = {
-					original_tag = HUN
-					has_completed_focus = wuw_HUN_the_toldi
-				}
-				#38M Toldi
-				create_equipment_variant = {
-					name = "38M Toldi"
-					type = light_tank_chassis_2
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_small_cannon_2
-						turret_type_slot = tank_light_fixed_superstructure_turret
-						suspension_type_slot = tank_torsion_bar_suspension
-						armor_type_slot = tank_riveted_armor
-						engine_type_slot = tank_gasoline_engine
-						special_type_slot_2 = tank_radio_1
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 3
-						tank_nsb_armor_upgrade = 2
-					}
-					#icon = "GFX_ITA_improved_light_tank_medium"
-				}
-			}
 		}
 
 		categories = {
@@ -623,22 +583,6 @@ technologies = {
 				factor = 1.1
 				date > "1942.1.1"
 			}
-
-			modifier = {
-				factor = 15.0
-				tag = GER
-				has_completed_focus = GER_advanced_panzer_research
-				has_tech_bonus = {
-				    category = cat_medium_armor
-				}
-			}
-			modifier = { #Use the research bonus from the focus! 
-				factor = 0.5
-				tag = GER
-				NOT = {
-					has_completed_focus = GER_advanced_panzer_research
-				}	
-			}
 		}
 
 		categories = {
@@ -674,68 +618,6 @@ technologies = {
 		}
 
 		on_research_complete = {
-			if = { #Italian templates
-				limit = {
-					original_tag = ITA
-					OR = {
-						has_completed_focus = ITA_end_fiat_ansaldo_duopoly
-						has_completed_focus = ITA_modernize_ansaldo_facilities
-					}
-				}
-				ITA_add_improved_medium_tank_templates = yes
-			}
-			IF = { #Hungarian templates
-				limit = {
-					original_tag = HUN
-					has_completed_focus = wuw_HUN_the_turan
-				}
-				#40M Turán
-				create_equipment_variant = {
-					name = "40M Turán"
-					type = medium_tank_chassis_2
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_medium_cannon_2
-						turret_type_slot = tank_medium_two_man_tank_turret
-						suspension_type_slot = tank_bogie_suspension
-						armor_type_slot = tank_welded_armor
-						engine_type_slot = tank_gasoline_engine
-						special_type_slot_1 = additional_machine_guns
-						special_type_slot_2 = additional_machine_guns
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 3
-						tank_nsb_armor_upgrade = 3
-					}
-					#icon = "GFX_ITA_basic_medium_tank_medium"
-				}
-			}
-			IF = { #Hungarian templates
-				limit = {
-					original_tag = HUN
-					has_completed_focus = wuw_HUN_assault_gun_focus
-				}
-				# 40M Nimród
-				create_equipment_variant = {
-					name = "40M Nimród"
-					type = medium_tank_aa_chassis_2
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_anti_air_cannon_2
-						turret_type_slot = tank_medium_two_man_tank_turret
-						suspension_type_slot = tank_torsion_bar_suspension
-						armor_type_slot = tank_riveted_armor
-						engine_type_slot = tank_gasoline_engine
-						special_type_slot_1 = auto_loader
-						special_type_slot_2 = secondary_turret_small_cannon
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 6
-						tank_nsb_armor_upgrade = 2
-					}
-					#icon = "GFX_ITA_advanced_medium_spaa_medium"
-				}
-			}
 		}
 
 		ai_will_do = {
@@ -809,63 +691,6 @@ technologies = {
 		}
 
 		on_research_complete = {
-			if = { #Italian templates
-				limit = {
-					original_tag = ITA
-					has_completed_focus = ITA_ferrea_mole_ferreo_cuore
-				}
-				ITA_add_advanced_medium_tank_templates = yes
-			}
-			IF = { #Hungarian templates
-				limit = {
-					original_tag = HUN
-					has_completed_focus = wuw_HUN_the_turan
-				}
-				#43M Turán III
-				create_equipment_variant = {
-					name = "43M Turán III"
-					type = medium_tank_chassis_3
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_medium_cannon_2
-						turret_type_slot = tank_medium_three_man_tank_turret
-						suspension_type_slot = tank_bogie_suspension
-						armor_type_slot = tank_welded_armor
-						engine_type_slot = tank_gasoline_engine
-						special_type_slot_1 = secondary_turret_hmg
-						special_type_slot_2 = additional_machine_guns
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 3
-						tank_nsb_armor_upgrade = 7
-					}
-					#icon = "GFX_ITA_basic_medium_tank_medium"
-				}
-			}
-			IF = { #Hungarian templates
-				limit = {
-					original_tag = HUN
-					has_completed_focus = wuw_HUN_assault_gun_focus
-				}
-				# 43M Zrínyi
-				create_equipment_variant = {
-					name = "43M Zrínyi"
-					type = medium_tank_artillery_chassis_3
-					parent_version = 0
-					modules = {
-						main_armament_slot = tank_medium_howitzer_2
-						turret_type_slot = tank_medium_one_man_tank_turret
-						suspension_type_slot = tank_torsion_bar_suspension
-						armor_type_slot = tank_riveted_armor
-						engine_type_slot = tank_gasoline_engine
-					}
-					upgrades = {
-						tank_nsb_engine_upgrade = 3
-						tank_nsb_armor_upgrade = 3
-					}
-					#icon = "GFX_ITA_advanced_medium_art_medium"
-				}
-			}
 		}
 
 		ai_will_do = {
@@ -884,15 +709,6 @@ technologies = {
 			modifier = {
 				factor = 1.2
 				date > "1946.1.1"
-			}
-			modifier = {
-				factor = 5.0
-				tag = GER
-				date > "1943.1.1"
-				has_completed_focus = GER_expand_kummersdorfs_capacity
-				has_tech_bonus = {
-				    category = cat_medium_armor
-				}
 			}
 		}
 
@@ -1071,16 +887,6 @@ technologies = {
 		}
 
 		on_research_complete = {
-			if = { #Italian templates
-				limit = {
-					original_tag = ITA
-					OR = {
-						has_completed_focus = ITA_end_fiat_ansaldo_duopoly
-						has_completed_focus = ITA_modernize_ansaldo_facilities
-					}
-				}
-				ITA_add_improved_heavy_tank_templates = yes
-			}
 		}
 
 		ai_will_do = {
@@ -1103,14 +909,6 @@ technologies = {
 			modifier = {
 				factor = 1.2
 				date > "1944.1.1"
-			}
-			modifier = {
-				factor = 5.0
-				tag = GER
-				has_completed_focus = GER_expand_kummersdorfs_capacity
-				has_tech_bonus = {
-				    category = cat_heavy_armor
-				}
 			}
 		}
 
@@ -1147,13 +945,6 @@ technologies = {
 		}
 
 		on_research_complete = {
-			if = { #Italian templates
-				limit = {
-					original_tag = ITA
-					has_completed_focus = ITA_ferrea_mole_ferreo_cuore
-				}
-				ITA_add_advanced_heavy_tank_templates = yes
-			}
 		}
 
 		ai_will_do = {
@@ -1229,29 +1020,6 @@ technologies = {
 		}
 
 		on_research_complete = {
-			if = { #Italian templates
-				limit = {
-					original_tag = ITA
-				}
-				if = {
-					limit = {
-						has_completed_focus = ITA_capo_supremo
-					}
-					ITA_add_il_duce_sh_tank_template_and_production = yes
-				}
-				else_if = {
-					limit = {
-						has_completed_focus = ITA_modern_musculus
-					}
-					ITA_add_modern_musculus_sh_tank_template_and_production = yes
-				}
-				else_if = {
-					limit = {
-						has_completed_focus = ITA_a_time_for_war
-					}
-					ITA_add_hand_of_god_sh_tank_template_and_production = yes
-				}
-			}
 
 			if = {
 				limit = {
