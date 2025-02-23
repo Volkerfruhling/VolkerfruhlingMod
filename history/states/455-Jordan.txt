@@ -2,7 +2,7 @@ state={
 	id=455
 	name="STATE_455"
 	provinces={
-		4017 4115 4562 4574 4591 4603 7001 7151 7170 10089 11976 
+		4017 4115 7151 7170 10089 11976 
 	}
 	history = {
 		owner = OTT
@@ -12,4 +12,6 @@ state={
 	buildings_max_level_factor=1.000
 	state_category=rural
 	local_supplies=0.000
+        manpower=1
+        state_category = town
 }

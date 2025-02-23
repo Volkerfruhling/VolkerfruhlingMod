@@ -7,6 +7,7 @@ state={
 	state_category = rural
 
 	history={
+		owner = GER
 		victory_points = {
 			2080 1
 		}
@@ -22,8 +23,10 @@ state={
 	}
 
 	provinces={
-		2080 5036 5054 6039 7963 9137 11194 
+		2080 5036 5054 6039 7963 7978 9137 11194 
 	}
 
 	local_supplies=0.0 
+        manpower=1
+        state_category = town
 }

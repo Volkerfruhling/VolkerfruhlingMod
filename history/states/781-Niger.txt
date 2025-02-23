@@ -6,7 +6,7 @@ state = {
 	state_category = rural
 
 	history = { 
-
+		owner = FRA
 
 		victory_points = {
 			2056 1 # Niamey
@@ -23,4 +23,6 @@ state = {
 	}
 
 	local_supplies = 1.0 
+        manpower=1
+        state_category = town
 }

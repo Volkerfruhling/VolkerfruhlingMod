@@ -1,4 +1,8 @@
 ﻿l_japanese:
+ ALB: "アルバニア"
+ ALB_DEF: "アルバニア"
+ ALB_ADJ: "アルバニア"
+
  BEL: "ベルギー"
  BEL_DEF: "ベルギー"
  BEL_ADJ: "ベルギー"
@@ -11,13 +15,21 @@
  BUL_DEF: "ブルガリア"
  BUL_ADJ: "ブルガリア"
 
- DEN: "デンマーク"
- DEN_DEF: "デンマーク"
- DEN_ADJ: "デンマーク"
+ CRO: "クロアチア"
+ CRO_DEF: "クロアチア"
+ CRO_ADJ: "クロアチア"
+
+ DEN: "kin"
+ DEN_DEF: "kin"
+ DEN_ADJ: "kin"
 
  ENG: "イギリス"
  ENG_DEF: "イギリス"
  ENG_ADJ: "イギリス"
+
+ FIN: "フィンランド"
+ FIN_DEF: "フィンランド"
+ FIN_ADJ: "フィンランド"
 
  FRA: "フランス"
  FRA_DEF: "フランス"
@@ -35,9 +47,9 @@
  HUN_DEF: "ハンガリー"
  HUN_ADJ: "ハンガリー"
 
- ILL: "イリュリア"
- ILL_DEF: "イリュリア"
- ILL_ADJ: "イリュリア"
+ IRE: "アイルランド"
+ IRE_DEF: "アイルランド"
+ IRE_ADJ: "アイルランド"
 
  IST: "イストリア"
  IST_DEF: "イストリア"
@@ -46,6 +58,10 @@
  ITA: "イタリア"
  ITA_DEF: "イタリア"
  ITA_ADJ: "イタリア"
+
+ LIT: "リトアニア"
+ LIT_DEF: "リトアニア"
+ LIT_ADJ: "リトアニア"
 
  LUX: "ルクセンブルク"
  LUX_DEF: "ルクセンブルク"
@@ -83,21 +99,9 @@
  RUS_DEF: "ロシア"
  RUS_ADJ: "ロシア"
 
- RUT: "ルテニア"
- RUT_DEF: "ルテニア"
- RUT_ADJ: "ルテニア"
-
  SER: "セルビア"
  SER_DEF: "セルビア"
  SER_ADJ: "セルビア"
-
- SIC: "シチリア"
- SIC_DEF: "シチリア"
- SIC_ADJ: "シチリア"
-
- SLO: "スロヴァキア"
- SLO_DEF: "スロヴァキア"
- SLO_ADJ: "スロヴァキア"
 
  SPA: "スペイン"
  SPA_DEF: "スペイン"
@@ -110,8 +114,4 @@
  SWI: "スイス"
  SWI_DEF: "スイス"
  SWI_ADJ: "スイス"
-
- VOJ: "ヴォイヴォディナ"
- VOJ_DEF: "ヴォイヴォディナ"
- VOJ_ADJ: "ヴォイヴォディナ"
 

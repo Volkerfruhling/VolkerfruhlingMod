@@ -1,0 +1,16 @@
+characters = {
+	FRA_napoleon_iv = {
+		name = FRA_napoleon_iv
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_FRA_napoleon_iv"
+			}
+		}
+		country_leader = {
+			ideology = royal_autocracy
+			id = -1
+			traits = {
+			}
+		}
+	}
+}

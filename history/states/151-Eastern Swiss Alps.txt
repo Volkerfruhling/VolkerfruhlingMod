@@ -20,4 +20,6 @@ state={
 		658 661 3660 3662 11601 
 	}
 	local_supplies=0.0 
+        manpower=1
+        state_category = town
 }

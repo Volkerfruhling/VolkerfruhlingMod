@@ -28,3 +28,9 @@ SAR = "countries/_asian.txt"
 #タイ/Thailand
 THA = "countries/_asian.txt"
 
+#オーストラリア/Australia
+AST = "countries/_commonwealth.txt"
+
+#ニュージーランド/New_Zealand
+NZL = "countries/_commonwealth.txt"
+

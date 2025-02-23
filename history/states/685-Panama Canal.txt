@@ -6,7 +6,7 @@ state={
 	state_category = enclave
 
 	history={
-		owner = COL
+		owner = USA
 		add_core_of = COL
 		victory_points = {
 			7617 5 
@@ -23,4 +23,6 @@ state={
 	provinces={ 7617 }
 
 	local_supplies=0.0 
+        manpower=1
+        state_category = town
 }

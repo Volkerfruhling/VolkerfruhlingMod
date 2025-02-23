@@ -26,8 +26,10 @@ state={
 	}
 
 	provinces={
-		1920 1973 4924 10752 10840 
+		1920 1973 4924 8030 10752 10840 
 	}
 
 	local_supplies=0.0 
+        manpower=1
+        state_category = town
 }

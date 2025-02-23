@@ -6,7 +6,8 @@ state = {
 	state_category = small_island
 
 	history = { 
-
+		owner = KOP
+		add_core_of = KOP
 
 		victory_points = {
 			13014 1 # Praia
@@ -26,4 +27,6 @@ state = {
 	}
 
 	local_supplies = 0.0 
+        manpower=1
+        state_category = town
 }

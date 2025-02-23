@@ -8,12 +8,14 @@ state={
 		878 893 3937 6857 6923 9818 9862 11813 
 	}
 	history = {
-		owner = OTT
-		add_core_of = OTT
+		owner = BUL
+		add_core_of = BUL
 
 	}
 	manpower=1814936
 	buildings_max_level_factor=1.000
 	state_category=large_town
 	local_supplies=5.000
+        manpower=1
+        state_category = town
 }

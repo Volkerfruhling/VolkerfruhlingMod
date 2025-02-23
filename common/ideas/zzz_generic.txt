@@ -153,7 +153,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = reactionism
+				has_government = ultra_nationalism
 			}
 
 			removal_cost = -1
@@ -162,7 +162,7 @@ ideas = {
 
 			
 			modifier = {
-				reactionism_drift = 0.1
+				ultra_nationalism_drift = 0.1
 			}
 		}
 		MTG_TEST_NAVAL_IDEA = { #MTG_TODO_GABRIEL: remove before shipping
@@ -210,16 +210,16 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = reactionism
+				has_government = ultra_nationalism
 			}
 
 			removal_cost = -1
 
-			picture = generic_reactionism_drift_bonus
+			picture = generic_ultra_nationalism_drift_bonus
 			
 			modifier = {
-				reactionism_drift = 0.1
-				reactionism_acceptance = 85
+				ultra_nationalism_drift = 0.1
+				ultra_nationalism_acceptance = 85
 			}
 		}
 		
@@ -291,16 +291,16 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = reactionism
+				has_government = ultra_nationalism
 			}
 
 			removal_cost = -1
 
-			picture = generic_reactionism_drift_bonus
+			picture = generic_ultra_nationalism_drift_bonus
 			
 			modifier = {
-				reactionism_drift = 0.1
-				reactionism_acceptance = 35
+				ultra_nationalism_drift = 0.1
+				ultra_nationalism_acceptance = 35
 			}
 		}
 		
@@ -415,15 +415,15 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = reactionism
+				has_government = ultra_nationalism
 			}
 
 			removal_cost = -1
 
-			picture = generic_reactionism_drift_bonus
+			picture = generic_ultra_nationalism_drift_bonus
 			
 			modifier = {
-				reactionism_drift = 0.1
+				ultra_nationalism_drift = 0.1
 				experience_gain_army = 0.1
 			}
 		}
@@ -535,7 +535,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				has_government = reactionism
+				has_government = ultra_nationalism
 			}
 			
 			removal_cost = -1
@@ -558,7 +558,7 @@ ideas = {
 			allowed_civil_war = {
 				OR = {
 					has_government = socialism
-					has_government = reactionism
+					has_government = ultra_nationalism
 				}
 			}
 			
@@ -581,7 +581,7 @@ ideas = {
 			allowed_civil_war = {
 				OR = {
 					has_government = socialism
-					has_government = reactionism
+					has_government = ultra_nationalism
 				}
 			}
 			
@@ -604,7 +604,7 @@ ideas = {
 			allowed_civil_war = {
 				OR = {
 					has_government = socialism
-					has_government = reactionism
+					has_government = ultra_nationalism
 				}
 			}
 			
@@ -801,9 +801,9 @@ ideas = {
 			}
 		}
 
-		reactionism_banned = {
+		ultra_nationalism_banned = {
 
-			picture = generic_reactionism_banned
+			picture = generic_ultra_nationalism_banned
 
 			allowed = {
 				always = no
@@ -811,12 +811,12 @@ ideas = {
 
 			allowed_civil_war = {
 				NOT = {
-					has_government = reactionism
+					has_government = ultra_nationalism
 				}
 			}
 
 			modifier = {
-				reactionism_drift = -0.05
+				ultra_nationalism_drift = -0.05
 			}
 		}
 

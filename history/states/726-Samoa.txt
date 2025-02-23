@@ -5,6 +5,8 @@ state={
 	state_category = small_island
 
 	history={
+		owner = NZL
+		add_core_of = NZL
 		buildings = {
 			infrastructure = 2
 			7290 = {
@@ -20,4 +22,6 @@ state={
 	}
 
 	local_supplies=0.0 
+        manpower=1
+        state_category = town
 }

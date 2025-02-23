@@ -5,6 +5,8 @@ state={
 	state_category = tiny_island
 
 	history={
+		owner = KOP
+		add_core_of = KOP
 		buildings = {
 			infrastructure = 1
 			13015 ={
@@ -18,4 +20,6 @@ state={
 	}
 
 	local_supplies=0.0 
+        manpower=1
+        state_category = town
 }

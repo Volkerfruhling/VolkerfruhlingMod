@@ -6,8 +6,8 @@ state = {
 	state_category = enclave
 	
 	history = {
-		owner = ILL
-		add_core_of = ILL
+		owner = CRO
+		add_core_of = CRO
 		victory_points = { #Zara/Zadar
 			3943 5 
 		}
@@ -28,4 +28,6 @@ state = {
 	}
 
 	local_supplies = 0.0 
+        manpower=1
+        state_category = town
 }

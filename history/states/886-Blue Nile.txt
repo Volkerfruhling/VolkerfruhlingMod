@@ -4,6 +4,8 @@ state = {
 	manpower = 661102
 	state_category = pastoral
 	history = {
+		owner = SUD
+		add_core_of = SUD
 		buildings = {
 			infrastructure = 1
 		}
@@ -14,4 +16,6 @@ state = {
 	
 	buildings_max_level_factor = 1.000
 	local_supplies = 0.000
+        manpower=1
+        state_category = town
 }

@@ -10,8 +10,8 @@ state = {
 	}
 
 	history = {
-		owner = BOL
-		add_core_of = BOL
+		owner = CHL
+		add_core_of = CHL
 
 		buildings = {
 			infrastructure = 3
@@ -34,4 +34,6 @@ state = {
 	}
 
 	local_supplies = 0.0 
+        manpower=1
+        state_category = town
 }

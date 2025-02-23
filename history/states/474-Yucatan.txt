@@ -6,8 +6,9 @@ state = {
 	state_category = rural
 
 	history = {
-		owner = SMX
-		add_core_of = SMX
+		
+		owner = MEX
+		add_core_of = MEX
 
 		buildings = {
 			infrastructure = 2
@@ -35,4 +36,6 @@ state = {
 		4904 4965 12715 
 	}
 	local_supplies = 0.0 
+        manpower=1
+        state_category = town
 }

@@ -1,0 +1,21 @@
+state={
+	id=980
+	name="STATE_980"
+	resources={
+		steel=9.000
+	}
+	provinces={
+		6537 9418 9444 11407 
+	}
+	history = {
+		owner = BEL
+		add_core_of = BEL
+
+	}
+	manpower=338130
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=14.000
+        manpower=1
+        state_category = town
+}

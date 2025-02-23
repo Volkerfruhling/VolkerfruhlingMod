@@ -12,6 +12,8 @@ state={
 	}
 
 	history={
+		owner = SAF
+		add_core_of = SAF
 		buildings = {
 			infrastructure = 3 #was: 5
 			arms_factory = 1
@@ -24,8 +26,10 @@ state={
 	}
 
 	provinces={
-		1688 2171 2213 5106 5217 5231 10400 10566 10668 12064 12648 
+		1688 2171 2213 5106 5217 10400 10566 
 	}
 
 	local_supplies=0.0 
+        manpower=1
+        state_category = town
 }

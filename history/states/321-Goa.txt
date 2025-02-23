@@ -7,7 +7,7 @@ state={
 	state_category = enclave
 
 	history={
-		# owner = POR
+		owner = KOP
 		add_core_of = UID
 		victory_points = {
 			1273 1 
@@ -25,4 +25,6 @@ state={
 	}
 
 	local_supplies=0.0 
+        manpower=1
+        state_category = town
 }

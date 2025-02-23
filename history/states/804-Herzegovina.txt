@@ -12,8 +12,8 @@ state={
 	}
 
 	history={
-		owner = ILL
-		add_core_of = ILL
+		owner = CRO
+		add_core_of = CRO
 		victory_points = {
 			9894 3
 		}
@@ -27,4 +27,6 @@ state={
 	}
 
 	local_supplies=0.0 
+        manpower=1
+        state_category = town
 }

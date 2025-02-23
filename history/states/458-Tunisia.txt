@@ -9,6 +9,8 @@ state={
 	}
 
 	history={
+		owner = TUN
+		add_core_of = TUN
 		victory_points = {
 			11969 10 
 		}
@@ -33,4 +35,6 @@ state={
 	}
 
 	local_supplies=0.0 
+        manpower=1
+        state_category = town
 }

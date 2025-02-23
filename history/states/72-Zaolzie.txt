@@ -6,8 +6,8 @@ state={
 	state_category = rural
 	
 	history={
-		owner = RUT
-		add_core_of = RUT
+		owner = POL
+		add_core_of = POL
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
@@ -19,4 +19,6 @@ state={
 	}
 
 	local_supplies=1.0 
+        manpower=1
+        state_category = town
 }

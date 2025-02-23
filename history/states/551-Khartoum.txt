@@ -5,6 +5,8 @@ state={
 	manpower = 821003
 
 	history={
+		owner = SUD
+		add_core_of = SUD
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
@@ -25,4 +27,6 @@ state={
 	buildings_max_level_factor=1.000
 	state_category=rural
 	local_supplies=0.000
+        manpower=1
+        state_category = town
 }

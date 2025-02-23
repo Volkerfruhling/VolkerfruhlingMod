@@ -1,3 +1,6 @@
+#アルバニア/Albania
+ALB = "countries/_eastern_european.txt"
+
 #ベルギー/Belgium
 BEL = "countries/_western_european.txt"
 
@@ -7,11 +10,17 @@ BOH = "countries/_eastern_european.txt"
 #ブルガリア/Bulgaria
 BUL = "countries/_eastern_european.txt"
 
-#デンマーク/Denmark
+#クロアチア/Croatia
+CRO = "countries/_eastern_european.txt"
+
+#kin/Denmark
 DEN = "countries/_western_european.txt"
 
 #イギリス/United_Kingdom
 ENG = "countries/_western_european.txt"
+
+#フィンランド/Finland
+FIN = "countries/_eastern_european.txt"
 
 #フランス/France
 FRA = "countries/_western_european.txt"
@@ -25,14 +34,17 @@ GRE = "countries/_western_european.txt"
 #ハンガリー/Hungary
 HUN = "countries/_eastern_european.txt"
 
-#イリュリア/Illyria
-ILL = "countries/_eastern_european.txt"
+#アイルランド/Ireland
+IRE = "countries/_western_european.txt"
 
 #イストリア/Istria
 IST = "countries/_western_european.txt"
 
 #イタリア/Italy
 ITA = "countries/_western_european.txt"
+
+#リトアニア/Lithuania
+LIT = "countries/_eastern_european.txt"
 
 #ルクセンブルク/Luxembourg
 LUX = "countries/_western_european.txt"
@@ -61,17 +73,8 @@ ROM = "countries/_eastern_european.txt"
 #ロシア/Russia
 RUS = "countries/_eastern_european.txt"
 
-#ルテニア/Ruthenia
-RUT = "countries/_eastern_european.txt"
-
 #セルビア/Serbia
 SER = "countries/_eastern_european.txt"
-
-#シチリア/Sicily
-SIC = "countries/_western_european.txt"
-
-#スロヴァキア/Slovakia
-SLO = "countries/_eastern_european.txt"
 
 #スペイン/Spain
 SPA = "countries/_western_european.txt"
@@ -81,7 +84,4 @@ SWE = "countries/_western_european.txt"
 
 #スイス/Switzerland
 SWI = "countries/_western_european.txt"
-
-#ヴォイヴォディナ/Vojvodina
-VOJ = "countries/_eastern_european.txt"
 

@@ -10,8 +10,8 @@ state = {
 	}
 	
 	history = {
-		owner = GER
-		add_core_of = GER
+		owner = BOH
+		add_core_of = BOH
 		victory_points = {
 			3585 3
 		}
@@ -60,4 +60,6 @@ state = {
 	}
 	local_supplies = 0.0 
 
+        manpower=1
+        state_category = town
 }

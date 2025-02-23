@@ -17,8 +17,10 @@ state=
 		}
 	}
 	provinces={
-		596 665 3631 3654 6672 9596
+		596 665 3631 3654 9596
 	}
 	
 	local_supplies=0.0 
+        manpower=1
+        state_category = town
 }

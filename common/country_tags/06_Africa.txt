@@ -1,0 +1,42 @@
+#エジプト/Egypt
+EGY = "countries/_middle_eastern.txt"
+
+#チュニジア/Tunisia
+TUN = "countries/_middle_eastern.txt"
+
+#モロッコ/Morocco
+MOR = "countries/_middle_eastern.txt"
+
+#スーダン/Sudan
+SUD = "countries/_middle_eastern.txt"
+
+#エチオピア/Ethiopia
+ETH = "countries/_african.txt"
+
+#ソマリア/Somalia
+SOM = "countries/_african.txt"
+
+#南アフリカ/South_Africa
+SAF = "countries/_commonwealth.txt"
+
+#ケープ植民地/Cape
+CAP = "countries/_commonwealth.txt"
+
+#スワジランド/Swaziland
+SWZ = "countries/_african.txt"
+
+#レソト/Lesotho
+LES = "countries/_african.txt"
+
+#オレンジ自由国/Orange_Free_State
+OFS = "countries/_commonwealth.txt"
+
+#ポルトガル王国/Kingdom_of_Portugal
+KOP = "countries/_western_european.txt"
+
+#リベリア/Liberia
+LIB = "countries/_african.txt"
+
+#ローデシア/Rhodesia
+RHO = "countries/_african.txt"
+

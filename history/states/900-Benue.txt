@@ -6,7 +6,7 @@ state = {
 
 	history = {
 
-
+		owner = ENG
 
 		victory_points = {
 			8034 2 # Enugu
@@ -19,9 +19,11 @@ state = {
 	}
 
 	provinces = {
-		1992 4889 7978 8034 10831 
+		1992 4889 8034 10831 
 	}
 	
 	buildings_max_level_factor = 1.000
 	local_supplies = 0.000
+        manpower=1
+        state_category = town
 }

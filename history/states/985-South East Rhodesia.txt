@@ -1,0 +1,22 @@
+state={
+	id=985
+	name="STATE_985"
+	provinces={
+		10929 
+	}
+	history = {
+		
+		owner = KOP
+		add_core_of = RHO
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			10929 1 
+		}
+	}
+	state_category=wasteland
+	manpower=0
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

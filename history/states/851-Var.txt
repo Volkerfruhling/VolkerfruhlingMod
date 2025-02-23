@@ -38,8 +38,10 @@ state = {
 	}
 
 	provinces = {
-		911 956 3928 3961
+		911 956 3928 3959 3961
 	}
 
 	local_supplies = 0.0 
+        manpower=1
+        state_category = town
 }

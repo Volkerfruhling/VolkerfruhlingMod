@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_ENG_david_lloyd_george"
+		texturefile = "gfx/interface/leaders/ENG/portrait_leader_ENG_david_lloyd_george.png"
+	}
+}

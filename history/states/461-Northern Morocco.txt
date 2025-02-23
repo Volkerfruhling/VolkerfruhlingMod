@@ -11,7 +11,8 @@ state = {
 	state_category = rural
 	
 	history = {
-
+		owner = MOR
+		add_core_of = MOR
 
 		victory_points = {
 			7069 10 # Casablanca
@@ -36,4 +37,6 @@ state = {
 	}
 
 	local_supplies = 0.0 
+        manpower=1
+        state_category = town
 }

@@ -11,8 +11,8 @@ state={
 	state_category = city
 	
 	history={
-		owner = ENG
-		add_core_of = ENG
+		owner = IRE
+		add_core_of = IRE
 		victory_points = {
 			285 1 #Wexford
 		}
@@ -38,4 +38,6 @@ state={
 	}
 
 	local_supplies=0.0 
+        manpower=1
+        state_category = town
 }

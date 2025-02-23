@@ -3,6 +3,8 @@ state={
 	name="STATE_539"
 
 	history={
+
+		owner = FRA
 		victory_points = {
 			5139 1 
 		}
@@ -25,4 +27,6 @@ state={
 	state_category=pastoral
 
 	local_supplies=1.0 
+        manpower=1
+        state_category = town
 }

@@ -5,7 +5,7 @@ state={
 		oil=15.000
 	}
 	provinces={
-		78 2004 2089 2097 3795 7977 7994 12046 12726 12855 
+		78 2004 2089 2097 3795 7977 7994 12046 12726 12855 10876 12413 12839
 	}
 	history = {
 		owner = OTT
@@ -15,4 +15,6 @@ state={
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=6.000
+        manpower=1
+        state_category = town
 }

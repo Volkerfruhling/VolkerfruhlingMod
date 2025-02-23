@@ -5,7 +5,8 @@ state = {
 	manpower = 2563100
 
 	history = {
-
+		owner = AST
+		add_core_of = AST
 
 		buildings = {
 			infrastructure = 3 #was: 6
@@ -55,4 +56,6 @@ state = {
 	
 
 	local_supplies = 0.0 
+        manpower=1
+        state_category = town
 }

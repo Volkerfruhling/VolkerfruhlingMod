@@ -2,7 +2,7 @@ state={
 	id=678
 	name="STATE_678"
 	provinces={
-		4932 5081 8030 8118 10870 12740 12768 
+		4932 5081 8118 10870 12740 12768 
 	}
 	history = {
 		owner = RIY
@@ -12,4 +12,6 @@ state={
 	buildings_max_level_factor=1.000
 	state_category=wasteland
 	local_supplies=0.000
+        manpower=1
+        state_category = town
 }

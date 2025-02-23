@@ -51,4 +51,6 @@ state = {
 	}
 
 	local_supplies = 15.0 
+        manpower=1
+        state_category = town
 }

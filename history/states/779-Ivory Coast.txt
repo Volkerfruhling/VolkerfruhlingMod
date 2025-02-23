@@ -6,6 +6,7 @@ state={
 	
 	state_category = pastoral
 	history={
+		owner = FRA
 		victory_points = {
 			10803 1
 		}
@@ -22,4 +23,6 @@ state={
 	}
 
 	local_supplies=1.0 
+        manpower=1
+        state_category = town
 }

@@ -4,14 +4,45 @@ bookmarks = {
 		desc = "GATHERING_STORM_DESC"
 		date = 1984.1.1.12
 		picture = "GFX_select_date_1936"
-		default_country = "TST"
+		default_country = "GER"
 		default = yes
 		
-		"TST"={
+		GER={
+			ideology = liberalism
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		GER={
+			ideology = liberalism
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		GER={
+			ideology = liberalism
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		GER={
+			ideology = liberalism
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		GER={
+			ideology = liberalism
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		GER={
+			ideology = liberalism
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		GER={
+			ideology = liberalism
 			history = "OTHER_GATHERING_STORM_DESC"
 		}
 		"---"={
 			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		effect = {
+			randomize_weather = 12345
+			GER = {
+				startup_cosmetic_tag = yes
+			}
 		}
 	}
 }

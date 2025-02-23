@@ -4,8 +4,8 @@ state={
 	name="STATE_815"
 
 	history={
-		owner = RUS
-		add_core_of = RUS
+		owner = LIT
+		add_core_of = LIT
 		victory_points = {
 			6229 1 #Panevezys
 		}
@@ -22,4 +22,6 @@ state={
 	manpower=161450
 	buildings_max_level_factor=1.000
 	state_category=town
+        manpower=1
+        state_category = town
 }

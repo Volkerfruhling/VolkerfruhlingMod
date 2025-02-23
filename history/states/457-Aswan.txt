@@ -7,6 +7,8 @@ state=
 	state_category = wasteland
 	
 	history = {
+		owner = EGY
+		add_core_of = EGY
 		buildings = {
 			infrastructure = 1
 		}
@@ -21,4 +23,6 @@ state=
 	}
 
 	local_supplies=0.0 
+        manpower=1
+        state_category = town
 }

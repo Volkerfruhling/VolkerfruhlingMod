@@ -4,6 +4,8 @@ state={
 	name="STATE_519"
 
 	history={
+		owner = AST
+		add_core_of = AST
 		buildings = {
 			infrastructure = 1
 			12910 = {
@@ -26,4 +28,6 @@ state={
 	state_category=rural
 
 	local_supplies=0.0 
+        manpower=1
+        state_category = town
 }

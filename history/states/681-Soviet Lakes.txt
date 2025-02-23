@@ -6,7 +6,8 @@ state = {
 	state_category = town
 
 	history = {
-
+		owner = CAP
+		add_core_of = CAP
 
 		buildings = {
 			infrastructure = 3 #was: 5
@@ -25,12 +26,16 @@ state = {
 		victory_points = {
 			12589 10 # Cape Town
 		}
-		
+		victory_points = {
+			4696 1 
+		}
 	}
 
 	provinces = {
-		1509 4528 4822 5203 10415 10442 10697 12419 12547 12589 12692 
+		1833 4528 4584 4696 4822 10415 10442 10697 12419 12547 12589 12692 
 	}
 
 	local_supplies = 0.0 
+        manpower=1
+        state_category = town
 }

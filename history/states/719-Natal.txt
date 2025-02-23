@@ -10,6 +10,8 @@ state={
 
 
 	history={
+		owner = SAF
+		add_core_of = SAF
 		buildings = {
 			infrastructure = 3 #was: 5
 			industrial_complex = 2
@@ -24,14 +26,13 @@ state={
 		victory_points = {
 			1468 3 
 		}
-		victory_points = {
-			4696 1 
-		}
 	}
 
 	provinces={
-		1468 1494 1833 4556 4584 4696 7576 7900 8178 
+		1468 1494 7576 8178 
 	}
 
 	local_supplies=0.0 
+        manpower=1
+        state_category = town
 }

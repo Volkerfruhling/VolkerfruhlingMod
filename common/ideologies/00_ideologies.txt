@@ -5,6 +5,11 @@ ideologies = {
 		types = {
 			liberalism_ideology = {
 			}
+			national_liberalism = {}
+			market_liberalism = {}
+			social_liberalism = {}
+			classical_liberalism = {}
+			christian_democracism = {}
 		}
 
 		dynamic_faction_names = {
@@ -50,6 +55,12 @@ ideologies = {
 		types = {
 			conservatism_ideology = {
 			}
+			liberal_conservatism = {}
+			national_conservatism = {}
+			social_conservatism = {}
+			agrarian_fundamentalism = {}
+			paternalistic_conservatism = {}
+			christian_conservatism = {}
 		}
 
 		dynamic_faction_names = {
@@ -95,8 +106,17 @@ ideologies = {
 
 		types = {
 
-			marxism = {
+			socialism_ideology = {
 			}
+			socialdemocratism = {}
+			democratic_socialism = {}
+			social_populism = {}
+			religious_socialism = {}
+			revolutionary_front = {}
+			sandicalism = {}
+			left_wing_nationalism = {}
+			social_nationalism = {}
+			anarcho_communism = {}
 		}
 
 		dynamic_faction_names = {
@@ -138,49 +158,188 @@ ideologies = {
 
 	}
 
-	reactionism = {
-
+	communism = {
 		types = {
-
-			reactionism  = {
+			communism_ideology = {
 			}
+			collective_communism = {}
+			left_wing_communism = {}
+			military_communism = {}
 		}
-
+		
 		dynamic_faction_names = {
-			"FACTION_NAME_NONALIGNED_1"
-			"FACTION_NAME_NONALIGNED_2"
-			"FACTION_NAME_NONALIGNED_3"
-			"FACTION_NAME_NONALIGNED_4"
-			"FACTION_NAME_NONALIGNED_5"
+			"FACTION_NAME_COMMUNIST_1"
+			"FACTION_NAME_COMMUNIST_2"
+			"FACTION_NAME_COMMUNIST_3"
+			"FACTION_NAME_COMMUNIST_4"
+			"FACTION_NAME_COMMUNIST_5"
 		}
-
-		color = { 128 128 128 }
-
-
-		war_impact_on_world_tension = 1.0
-		faction_impact_on_world_tension = 1.0
-
+		
+		color = { 204 0 0 }  # 明るい赤（社会主義より鮮やか）
+		
 		rules = {
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
 		}
-
+		
 		can_collaborate = yes
-
+		
 		modifiers = {
-			civilian_intel_to_others = 15.0
-			army_intel_to_others = 10.0
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 15.0
 			navy_intel_to_others = 10.0
 			airforce_intel_to_others = 10.0
-			embargo_cost_factor = 1
-			lend_lease_tension = 0.50
+			embargo_cost_factor = 0.75
+			lend_lease_tension = 0.75
 		}
-
+		
+		war_impact_on_world_tension = 0.8
+		faction_impact_on_world_tension = 0.5
+		
+		ai_communist = yes
+		ai_ideology_wanted_units_factor = 1.25
+		
 		faction_modifiers = {
+			faction_trade_opinion_factor = 0.40
 		}
+	}
 
-		ai_neutral = yes #
-		ai_ideology_wanted_units_factor = 1.15
+	despotism = {
+		types = {
+			despotism_ideology = {
+			}
+			military_regime = {}
+			civilian_dictatorship = {}
+			aristocratic_reactionism = {}
+			royal_autocracy = {}
+			warlord_dictatorship = {}
+			business_nation = {}
+			interim_government = {}
+			oligarchy = {}
+			priestly_system = {}
+			theocracy = {}
+			colonial_government = {}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_DESPOTIC_1"
+			"FACTION_NAME_DESPOTIC_2"
+			"FACTION_NAME_DESPOTIC_3"
+			"FACTION_NAME_DESPOTIC_4"
+		}
+		
+		color = { 77 26 94 }  # 深い紫
+		
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 15.0
+			navy_intel_to_others = 10.0
+			airforce_intel_to_others = 10.0
+			embargo_cost_factor = 0.5
+			lend_lease_tension = 1.0
+		}
+		
+		war_impact_on_world_tension = 1.0
+		faction_impact_on_world_tension = 0.75
+		
+		ai_neutral = yes
+		ai_ideology_wanted_units_factor = 1.25
+	}
+
+	national_totalism = {
+		types = {
+			national_totalism_ideology = {
+			}
+			national_socialism = {}
+			national_syndicalism = {}
+			national_corporatism = {}
+			revolutionary_nationalism = {}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_TOTALIST_1"
+			"FACTION_NAME_TOTALIST_2"
+			"FACTION_NAME_TOTALIST_3"
+			"FACTION_NAME_TOTALIST_4"
+		}
+		
+		color = { 153 0 0 }  # 深い赤
+		
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			civilian_intel_to_others = 5.0
+			army_intel_to_others = 20.0
+			navy_intel_to_others = 15.0
+			airforce_intel_to_others = 15.0
+			embargo_cost_factor = 0.25
+			lend_lease_tension = 1.5
+		}
+		
+		war_impact_on_world_tension = 1.25
+		faction_impact_on_world_tension = 1.0
+		
+		ai_fascist = yes
+		ai_ideology_wanted_units_factor = 1.35
+	}
+
+	ultra_nationalism = {
+		types = {
+			ultra_nationalism_ideology = {
+			}
+			supermilitarism = {}
+			religious_fundamentalism = {}
+			eurasianism = {}
+			slavo_national_movement = {}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_ULTRANATION_1"
+			"FACTION_NAME_ULTRANATION_2"
+			"FACTION_NAME_ULTRANATION_3"
+			"FACTION_NAME_ULTRANATION_4"
+		}
+		
+		color = { 89 0 0 }  # 暗い赤
+		
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			civilian_intel_to_others = 5.0
+			army_intel_to_others = 25.0
+			navy_intel_to_others = 15.0
+			airforce_intel_to_others = 15.0
+			embargo_cost_factor = 0.1
+			lend_lease_tension = 2.0
+		}
+		
+		war_impact_on_world_tension = 1.5
+		faction_impact_on_world_tension = 1.25
+		
+		ai_fascist = yes
+		ai_ideology_wanted_units_factor = 1.45
 	}
 }
+
+

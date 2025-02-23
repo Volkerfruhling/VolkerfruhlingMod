@@ -5,6 +5,8 @@ state={
 	impassable = yes
 
 	history={
+		owner = AST
+		add_core_of = AST
 		buildings = {
 			infrastructure = 1
 
@@ -20,4 +22,6 @@ state={
 	state_category=wasteland
 
 	local_supplies=0.0 
+        manpower=1
+        state_category = town
 }

@@ -4,8 +4,8 @@ state={
 	name="STATE_731"
 
 	history={
-		owner = OTT
-		add_core_of = OTT
+		owner = GRE
+		add_core_of = GRE
 		victory_points = {
 			11818 5 
 		}
@@ -23,11 +23,23 @@ state={
 	}
 
 	provinces={
-		895 936 966 3526 3844 3936 6990 10163 11818 
-	}
+			10163
+			11818
+			3526
+			3844
+			3936
+			6990
+			895
+			936
+			966
+			9791
+			9930
+		}
 	manpower=1155700
 	buildings_max_level_factor=1.000
 	state_category=town
 
 	local_supplies=0.0 
+        manpower=1
+        state_category = town
 }
