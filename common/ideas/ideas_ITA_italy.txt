@@ -14,7 +14,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.15
 			}
 		}
 		# 不安定な体勢
@@ -29,7 +30,8 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				
+				stability_factor = -0.2
+				political_power_cost = 0.5
 			}
 		}
 		# 教皇ピウスXII世
@@ -43,7 +45,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				
+				stability_factor = 0.3
 			}
 		}
 	}

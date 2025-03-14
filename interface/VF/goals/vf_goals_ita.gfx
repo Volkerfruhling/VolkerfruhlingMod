@@ -1,0 +1,9 @@
+spriteTypes = {
+	
+	# 政治ツリー
+	spriteType = {
+		name = "GFX_goal_focus_ITA_pol_coalition_turmoil"
+		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_coalition_turmoil.png"
+	}
+}
+

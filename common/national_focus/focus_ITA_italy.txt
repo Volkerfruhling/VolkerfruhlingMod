@@ -1,0 +1,128 @@
+focus_tree = {
+	id = focus_ITA # 焦点ツリーのID。一意なものにする。ファイル名と一致させておくのがおすすめ。
+	country = {
+		factor = 0 # この焦点ツリーをアクティブにするための条件の初期値。0にすると、この条件を他に指定しない限り、どの国でもNFツリーを開始できない。
+		modifier = {
+			add = 10 # 条件が満たされた場合の加算値
+			tag = ITA # この条件が満たされる国のタグ。この場合はイタリア（ITA）
+		}
+	}
+	
+	default = no # デフォルトの焦点ツリーかどうか。基本no
+	
+	# 以下は必須ではないが、あると良い。
+	continuous_focus_position = { x = 50 y = 1000 } # 連続NFの位置
+	
+	# # コピペ用のフォーカス
+	# focus = {
+	# 	id = focus_ITA_0	
+	#	# IDの規則 : <NFツリーのID>_<フォーカスツリーの種類>_<ルートの接頭辞>_<NF名の英訳>
+	# 	# フォーカスツリーの種類は、以下を参考にする。
+	# 	#		pol : 政治ツリー
+	# 	#		arm : 陸軍ツリー
+	# 	#		nav : 海軍ツリー
+	# 	#		air : 空軍ツリー
+	# 	#		ind : 産業ツリー
+	#
+	# 	icon = GFX_goal_unknown
+	#	# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	# 
+	# 	cost = 5 # 1 = 7days
+	#
+	# 	x = 0
+	# 	y = 0
+	#	relative_position_id = "" # 親NFのID
+	# 	prerequisite = { # 前提NF
+	#	}
+	# 	available = {
+	# 		always = yes
+	# 	}
+	# 	completion_reward = {
+	# 	}
+
+	# }
+
+	### 政治ツリー
+
+
+	# 連立の動揺
+	focus = {
+		id = focus_ITA_pol_coalition_turmoil
+		icon = GFX_goal_focus_ITA_pol_coalition_turmoil
+		cost = 5
+		x = 9
+		y = 0
+		available = {
+			# イベントによる取得
+			custom_trigger_tooltip = {
+				tooltip = tooltip_focus_only_event_trigger
+				always = no
+			}
+		}
+		completion_reward = {
+			# to do : NFの効果を追加
+		}
+
+	}
+
+	## 民主系ルート
+
+	# 国家主義者の取締
+	focus = {
+		id = focus_ITA_pol_dem_crackdown_on_nationalist_movements
+	
+		icon = GFX_goal_unknown
+	
+		cost = 5
+	
+		x = -2
+		y = 1
+		relative_position_id = focus_ITA_pol_coalition_turmoil
+		prerequisite = {
+			focus = focus_ITA_pol_coalition_turmoil
+		}
+		available = {
+			# イベントによる取得
+			custom_trigger_tooltip = {
+				tooltip = tooltip_focus_only_event_trigger
+				always = no
+			}
+		}
+		completion_reward = {
+			# to do : NFの効果を追加
+		}
+
+	}
+	
+	## 国家主義系ルート
+	
+	# 国家主義者への迎合
+	focus = {
+		id = focus_ITA_pol_nat_pandering_to_nationalists
+	
+		icon = GFX_goal_unknown
+	
+		cost = 5
+	
+		x = 2
+		y = 1
+		relative_position_id = focus_ITA_pol_coalition_turmoil
+		prerequisite = {
+			focus = focus_ITA_pol_coalition_turmoil
+		}
+		available = {
+			# イベントによる取得
+			custom_trigger_tooltip = {
+				tooltip = tooltip_focus_only_event_trigger
+				always = no
+			}
+		}
+		completion_reward = {
+			# to do : NFの効果を追加
+		}
+
+	}
+	
+	
+
+}
