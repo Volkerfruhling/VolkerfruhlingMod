@@ -29,21 +29,6 @@ ideas = {
 
 			available = {
 				#has_manpower_for_recruit_change_to =  { value = 0.015 group = mobilization_laws }
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						NOT = { has_idea = HUN_treaty_of_triannon_aat }
-					}
-					else = {
-						NOT = { has_idea = HUN_treaty_of_triannon }
-					}
-				}
 				NOT = { has_idea = undisturbed_isolation }
 				NOT = { has_idea = isolation }
 			}
@@ -85,40 +70,6 @@ ideas = {
 					is_subject = no
 				}
 
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						NOT = { has_idea = HUN_treaty_of_triannon_aat }
-					}
-					else = {
-						NOT = { has_idea = HUN_treaty_of_triannon }
-					}
-				}
-				if = {
-					limit = {
-						original_tag = BUL
-						has_dlc = "Battle for the Bosporus"
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						NOT = {
-							# has_idea = BUL_army_restrictions_aat
-						}
-					}
-					else = {
-						NOT = {
-							# has_idea = BUL_army_restrictions
-						}
-					}
-				}
 			}
 
 			modifier = {
@@ -193,41 +144,6 @@ ideas = {
 						has_dlc = "Together for Victory"
 					}
 					is_subject = no
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						NOT = { has_idea = HUN_treaty_of_triannon_aat }
-					}
-					else = {
-						NOT = { has_idea = HUN_treaty_of_triannon }
-					}
-				}
-				if = {
-					limit = {
-						original_tag = BUL
-						has_dlc = "Battle for the Bosporus"
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						NOT = {
-							# has_idea = BUL_army_restrictions_aat
-						}
-					}
-					else = {
-						NOT = {
-							# has_idea = BUL_army_restrictions
-						}
-					}
 				}
 				
 			}
@@ -328,40 +244,6 @@ ideas = {
 					is_subject = no
 				}
 
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						NOT = { has_idea = HUN_treaty_of_triannon_aat }
-					}
-					else = {
-						NOT = { has_idea = HUN_treaty_of_triannon }
-					}
-				}
-				if = {
-					limit = {
-						original_tag = BUL
-						has_dlc = "Battle for the Bosporus"
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						NOT = {
-							# has_idea = BUL_army_restrictions_aat
-						}
-					}
-					else = {
-						NOT = {
-							# has_idea = BUL_army_restrictions
-						}
-					}
-				}
 			}
 
 			ai_will_do = {
@@ -445,41 +327,6 @@ ideas = {
 					}
 					is_subject = no
 				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						NOT = { has_idea = HUN_treaty_of_triannon_aat }
-					}
-					else = {
-						NOT = { has_idea = HUN_treaty_of_triannon }
-					}
-				}
-				if = {
-					limit = {
-						original_tag = BUL
-						has_dlc = "Battle for the Bosporus"
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						NOT = {
-							# has_idea = BUL_army_restrictions_aat
-						}
-					}
-					else = {
-						NOT = {
-							# has_idea = BUL_army_restrictions
-						}
-					}
-				}
 			}
 
 			ai_will_do = {
@@ -555,40 +402,6 @@ ideas = {
 					is_subject = no
 				}
 
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						NOT = { has_idea = HUN_treaty_of_triannon_aat }
-					}
-					else = {
-						NOT = { has_idea = HUN_treaty_of_triannon }
-					}
-				}
-				if = {
-					limit = {
-						original_tag = BUL
-						has_dlc = "Battle for the Bosporus"
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						NOT = {
-							# has_idea = BUL_army_restrictions_aat
-						}
-					}
-					else = {
-						NOT = {
-							# has_idea = BUL_army_restrictions
-						}
-					}
-				}
 			}
 
 			ai_will_do = {

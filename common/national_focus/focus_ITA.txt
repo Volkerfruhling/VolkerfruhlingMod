@@ -1,3 +1,4 @@
+#!gfx:interface\VF\goals\vf_goals_ita.gfx
 focus_tree = {
 	id = focus_ITA # 焦点ツリーのID。一意なものにする。ファイル名と一致させておくのがおすすめ。
 	country = {
@@ -61,6 +62,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			# to do : NFの効果を追加
+			country_event = {
+				id = vf_ITA_pol.2
+				days = 7
+			}
 		}
 
 	}
@@ -122,7 +127,60 @@ focus_tree = {
 		}
 
 	}
+
+	# ムッソリーニ
+	focus = {
+		id = focus_ITA_pol_nat_mussolini
 	
+		icon = GFX_goal_unknown
+	
+		cost = 5
+	
+		x = 1
+		y = 1
+		relative_position_id = focus_ITA_pol_nat_pandering_to_nationalists
+		prerequisite = {
+			focus = focus_ITA_pol_nat_pandering_to_nationalists
+		}
+		available = {
+			# イベントによる取得
+			custom_trigger_tooltip = {
+				tooltip = tooltip_focus_only_event_trigger
+				always = no
+			}
+		}
+		completion_reward = {
+			# to do : NFの効果を追加
+		}
+
+	}
+
+	# ダンヌンツィオ
+	focus = {
+		id = focus_ITA_pol_nat_dannunzio
+	
+		icon = GFX_goal_unknown
+	
+		cost = 5
+	
+		x = -1
+		y = 1
+		relative_position_id = focus_ITA_pol_nat_pandering_to_nationalists
+		prerequisite = {
+			focus = focus_ITA_pol_nat_pandering_to_nationalists
+		}
+		available = {
+			# イベントによる取得
+			custom_trigger_tooltip = {
+				tooltip = tooltip_focus_only_event_trigger
+				always = no
+			}
+		}
+		completion_reward = {
+			# to do : NFの効果を追加
+		}
+
+	}
 	
 
 }

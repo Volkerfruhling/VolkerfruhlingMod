@@ -1,4 +1,4 @@
-capital = 2
+capital = 4
 
 # Starting tech
 set_technology = {
@@ -101,4 +101,10 @@ add_ideas = {
 	ITA_economic_stagnation
 	ITA_unstable_regime
 	ITA_pope_pius_xii
+}
+
+# 1925.1.1
+country_event = {
+	id = vf_ITA_pol.1
+	days = 7
 }
