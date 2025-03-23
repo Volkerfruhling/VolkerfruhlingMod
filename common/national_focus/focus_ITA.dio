@@ -1,6 +1,154 @@
 <mxfile host="65bd71144e">
-    <diagram id="2ADNdjjbo93eGt-5p_N_" name="Page-1">
-        <mxGraphModel dx="1619" dy="1539" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <diagram name="NF" id="YQfXNvRA4hNPv4sdJBwv">
+        <mxGraphModel dx="3445" dy="2583" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="BNpKv7ZSM8ImaLfdqDf1-0"/>
+                <mxCell id="BNpKv7ZSM8ImaLfdqDf1-1" parent="BNpKv7ZSM8ImaLfdqDf1-0"/>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-39" value="" style="whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="-760" y="-50" width="1880" height="1120" as="geometry"/>
+                </mxCell>
+                <mxCell id="BNpKv7ZSM8ImaLfdqDf1-3" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="BNpKv7ZSM8ImaLfdqDf1-4" target="BNpKv7ZSM8ImaLfdqDf1-9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="BNpKv7ZSM8ImaLfdqDf1-4" value="連立の動揺" style="whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="360" y="80" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="BNpKv7ZSM8ImaLfdqDf1-5" style="edgeStyle=elbowEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;elbow=vertical;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="BNpKv7ZSM8ImaLfdqDf1-6" target="BNpKv7ZSM8ImaLfdqDf1-4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="BNpKv7ZSM8ImaLfdqDf1-6" value="ファクタ政権の動揺" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="BNpKv7ZSM8ImaLfdqDf1-7" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="BNpKv7ZSM8ImaLfdqDf1-9" target="BNpKv7ZSM8ImaLfdqDf1-12">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="BNpKv7ZSM8ImaLfdqDf1-8" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="BNpKv7ZSM8ImaLfdqDf1-9" target="BNpKv7ZSM8ImaLfdqDf1-15">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="540" y="220" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="BNpKv7ZSM8ImaLfdqDf1-9" value="ローマ進軍" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="360" y="160" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="BNpKv7ZSM8ImaLfdqDf1-10" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;startArrow=classic;startFill=1;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="BNpKv7ZSM8ImaLfdqDf1-12" target="BNpKv7ZSM8ImaLfdqDf1-15">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-1" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="BNpKv7ZSM8ImaLfdqDf1-12" target="TV3Gz4kMu1tyHynNcunm-0">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-3" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="BNpKv7ZSM8ImaLfdqDf1-12" target="TV3Gz4kMu1tyHynNcunm-2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="BNpKv7ZSM8ImaLfdqDf1-12" value="ファクタ政権の戒厳" style="whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="-120" y="240" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-6" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="BNpKv7ZSM8ImaLfdqDf1-15" target="TV3Gz4kMu1tyHynNcunm-5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="BNpKv7ZSM8ImaLfdqDf1-15" value="ファクタ政権の限界" style="whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="840" y="240" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-28" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="BNpKv7ZSM8ImaLfdqDf1-29" target="TV3Gz4kMu1tyHynNcunm-27">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-30" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="BNpKv7ZSM8ImaLfdqDf1-29" target="TV3Gz4kMu1tyHynNcunm-29">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="BNpKv7ZSM8ImaLfdqDf1-29" value="スキオピーオ・&lt;br&gt;ジェネラーレ" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="840" y="600" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-4" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;startArrow=classic;startFill=1;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="TV3Gz4kMu1tyHynNcunm-0" target="TV3Gz4kMu1tyHynNcunm-2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-8" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="TV3Gz4kMu1tyHynNcunm-0" target="TV3Gz4kMu1tyHynNcunm-7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-0" value="連邦国緊急集会" style="whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="-120" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-2" value="獅子として生きる" style="whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="360" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-24" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="TV3Gz4kMu1tyHynNcunm-5" target="TV3Gz4kMu1tyHynNcunm-23">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-5" value="ダンヌンツィオ政権&lt;br&gt;成立" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="840" y="360" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-10" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="TV3Gz4kMu1tyHynNcunm-7" target="TV3Gz4kMu1tyHynNcunm-9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-12" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="TV3Gz4kMu1tyHynNcunm-7" target="TV3Gz4kMu1tyHynNcunm-11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-7" value="責任追及の声" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="-120" y="460" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-9" value="ファクタ政権の継続" style="whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="-720" y="580" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-15" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="TV3Gz4kMu1tyHynNcunm-11" target="TV3Gz4kMu1tyHynNcunm-13">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-17" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="TV3Gz4kMu1tyHynNcunm-11" target="TV3Gz4kMu1tyHynNcunm-16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-19" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="TV3Gz4kMu1tyHynNcunm-11" target="TV3Gz4kMu1tyHynNcunm-18">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-11" value="新たな閣僚評議会" style="whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="-120" y="580" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-13" value="南の海から" style="whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="-120" y="700" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-16" value="花の都から" style="whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="120" y="700" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-18" value="山の麓から" style="whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="-360" y="700" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-26" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="TV3Gz4kMu1tyHynNcunm-23" target="BNpKv7ZSM8ImaLfdqDf1-29">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-23" value="抗議デモの粉砕" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="840" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-32" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="TV3Gz4kMu1tyHynNcunm-27" target="TV3Gz4kMu1tyHynNcunm-31">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-27" value="血塗られた女神" style="whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="720" y="720" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-34" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="TV3Gz4kMu1tyHynNcunm-29" target="TV3Gz4kMu1tyHynNcunm-33">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-29" value="労働者の勝利" style="whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="960" y="720" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-36" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="TV3Gz4kMu1tyHynNcunm-31" target="TV3Gz4kMu1tyHynNcunm-35">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-38" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="TV3Gz4kMu1tyHynNcunm-31" target="TV3Gz4kMu1tyHynNcunm-37">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-31" value="解散命令" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="720" y="840" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-33" value="PCI党大会" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="960" y="840" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-35" value="泥沼の闘争へ" style="whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="720" y="960" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="TV3Gz4kMu1tyHynNcunm-37" value="政治的世界の粉砕" style="whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="480" y="960" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="2ADNdjjbo93eGt-5p_N_" name="ルート大まか">
+        <mxGraphModel dx="2333" dy="1947" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>

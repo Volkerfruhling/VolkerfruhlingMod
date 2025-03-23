@@ -12,7 +12,7 @@ focus_tree = {
 	default = no # デフォルトの焦点ツリーかどうか。基本no
 	
 	# 以下は必須ではないが、あると良い。
-	continuous_focus_position = { x = 50 y = 1000 } # 連続NFの位置
+	continuous_focus_position = { x = 50 y = 5000 } # 連続NFの位置
 	
 	# # コピペ用のフォーカス
 	# focus = {
@@ -43,7 +43,7 @@ focus_tree = {
 
 	# }
 
-	### 政治ツリー
+	#### 政治ツリー
 
 
 	# 連立の動揺
@@ -51,7 +51,7 @@ focus_tree = {
 		id = focus_ITA_pol_coalition_turmoil
 		icon = GFX_goal_focus_ITA_pol_coalition_turmoil
 		cost = 5
-		x = 9
+		x = 12
 		y = 0
 		available = {
 			# イベントによる取得
@@ -70,11 +70,102 @@ focus_tree = {
 
 	}
 
-	## 民主系ルート
+	### 民主系ルート
 
-	# 国家主義者の取締
+	# ファクタ政権の戒厳
 	focus = {
-		id = focus_ITA_pol_dem_crackdown_on_nationalist_movements
+		id = focus_ITA_pol_dem_facta_regime_martial_law
+	
+		icon = GFX_goal_unknown
+	
+		cost = 5
+	
+		x = -4
+		y = 1
+		relative_position_id = focus_ITA_pol_coalition_turmoil
+		prerequisite = {
+			focus = focus_ITA_pol_coalition_turmoil
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_pol_nat_facta_regime_limits
+		}
+		available = {
+			# イベントによる取得
+			custom_trigger_tooltip = {
+				tooltip = tooltip_focus_only_event_trigger
+				always = no
+			}
+		}
+		completion_reward = {
+			# to do : NFの効果を追加
+		}
+
+	}
+
+	# 連邦国緊急集会
+	focus = {
+		id = focus_ITA_pol_dem_emergency_meeting
+	
+		icon = GFX_goal_unknown
+	
+		cost = 5
+	
+		x = 0
+		y = 1
+		relative_position_id = focus_ITA_pol_dem_facta_regime_martial_law
+		prerequisite = {
+			focus = focus_ITA_pol_dem_facta_regime_martial_law
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_pol_nat_live_as_a_lion
+		}
+		available = {
+			# イベントによる取得
+			custom_trigger_tooltip = {
+				tooltip = tooltip_focus_only_event_trigger
+				always = no
+			}
+		}
+		completion_reward = {
+			# to do : NFの効果を追加
+		}
+
+	}
+
+	## ファクタ政権辞職
+	# 新たな閣僚評議会
+	focus = {
+		id = focus_ITA_pol_dem_new_ministers_council
+	
+		icon = GFX_goal_unknown
+	
+		cost = 5
+	
+		x = 0
+		y = 1
+		relative_position_id = focus_ITA_pol_dem_emergency_meeting
+		prerequisite = {
+			focus = focus_ITA_pol_dem_emergency_meeting
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_pol_dem_facta_regime_continuity
+		}
+		available = {
+			# イベントによる取得
+			custom_trigger_tooltip = {
+				tooltip = tooltip_focus_only_event_trigger
+				always = no
+			}
+		}
+		completion_reward = {
+			# to do : NFの効果を追加
+		}
+
+	}
+
+	# 山の麓から
+	focus = {
+		id = focus_ITA_pol_dem_from_mountain_foot
 	
 		icon = GFX_goal_unknown
 	
@@ -82,9 +173,13 @@ focus_tree = {
 	
 		x = -2
 		y = 1
-		relative_position_id = focus_ITA_pol_coalition_turmoil
+		relative_position_id = focus_ITA_pol_dem_new_ministers_council
 		prerequisite = {
-			focus = focus_ITA_pol_coalition_turmoil
+			focus = focus_ITA_pol_dem_new_ministers_council
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_pol_dem_from_south_sea
+			focus = focus_ITA_pol_dem_from_flower_city
 		}
 		available = {
 			# イベントによる取得
@@ -98,12 +193,41 @@ focus_tree = {
 		}
 
 	}
-	
-	## 国家主義系ルート
-	
-	# 国家主義者への迎合
+
+	# 南の海から
 	focus = {
-		id = focus_ITA_pol_nat_pandering_to_nationalists
+		id = focus_ITA_pol_dem_from_south_sea
+	
+		icon = GFX_goal_unknown
+	
+		cost = 5
+	
+		x = 0
+		y = 1
+		relative_position_id = focus_ITA_pol_dem_new_ministers_council
+		prerequisite = {
+			focus = focus_ITA_pol_dem_new_ministers_council
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_pol_dem_from_mountain_foot
+			focus = focus_ITA_pol_dem_from_flower_city
+		}
+		available = {
+			# イベントによる取得
+			custom_trigger_tooltip = {
+				tooltip = tooltip_focus_only_event_trigger
+				always = no
+			}
+		}
+		completion_reward = {
+			# to do : NFの効果を追加
+		}
+
+	}
+
+	# 花の都から
+	focus = {
+		id = focus_ITA_pol_dem_from_flower_city
 	
 		icon = GFX_goal_unknown
 	
@@ -111,9 +235,13 @@ focus_tree = {
 	
 		x = 2
 		y = 1
-		relative_position_id = focus_ITA_pol_coalition_turmoil
+		relative_position_id = focus_ITA_pol_dem_new_ministers_council
 		prerequisite = {
-			focus = focus_ITA_pol_coalition_turmoil
+			focus = focus_ITA_pol_dem_new_ministers_council
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_pol_dem_from_mountain_foot
+			focus = focus_ITA_pol_dem_from_south_sea
 		}
 		available = {
 			# イベントによる取得
@@ -128,19 +256,23 @@ focus_tree = {
 
 	}
 
-	# ムッソリーニ
+	## ファクタ政権存続
+	# ファクタ政権の存続
 	focus = {
-		id = focus_ITA_pol_nat_mussolini
+		id = focus_ITA_pol_dem_facta_regime_continuity
 	
 		icon = GFX_goal_unknown
 	
 		cost = 5
 	
-		x = 1
+		x = -4
 		y = 1
-		relative_position_id = focus_ITA_pol_nat_pandering_to_nationalists
+		relative_position_id = focus_ITA_pol_dem_emergency_meeting
 		prerequisite = {
-			focus = focus_ITA_pol_nat_pandering_to_nationalists
+			focus = focus_ITA_pol_dem_emergency_meeting
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_pol_dem_new_ministers_council
 		}
 		available = {
 			# イベントによる取得
@@ -155,19 +287,176 @@ focus_tree = {
 
 	}
 
-	# ダンヌンツィオ
+	## ムッソリーニルート
+	# 獅子の如く生きる
 	focus = {
-		id = focus_ITA_pol_nat_dannunzio
+		id = focus_ITA_pol_nat_live_as_a_lion
+	
+		icon = GFX_goal_unknown
+	
+		cost = 5
+	
+		x = 4
+		y = 1
+		relative_position_id = focus_ITA_pol_dem_facta_regime_martial_law
+		prerequisite = {
+			focus = focus_ITA_pol_dem_facta_regime_martial_law
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_pol_dem_emergency_meeting
+		}
+		available = {
+			# イベントによる取得
+			custom_trigger_tooltip = {
+				tooltip = tooltip_focus_only_event_trigger
+				always = no
+			}
+		}
+		completion_reward = {
+			# to do : NFの効果を追加
+		}
+
+	}
+	
+	### 国家主義系ルート
+	
+	# ファクタ政権の限界
+	focus = {
+		id = focus_ITA_pol_nat_facta_regime_limits
+	
+		icon = GFX_goal_unknown
+	
+		cost = 5
+	
+		x = 4
+		y = 1
+		relative_position_id = focus_ITA_pol_coalition_turmoil
+		prerequisite = {
+			focus = focus_ITA_pol_coalition_turmoil
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_pol_dem_facta_regime_martial_law
+		}
+		available = {
+			# イベントによる取得
+			custom_trigger_tooltip = {
+				tooltip = tooltip_focus_only_event_trigger
+				always = no
+			}
+		}
+		completion_reward = {
+			# to do : NFの効果を追加
+		}
+
+	}
+
+	# 血濡れた女神
+	focus = {
+		id = focus_ITA_pol_nat_bloodstained_goddess
 	
 		icon = GFX_goal_unknown
 	
 		cost = 5
 	
 		x = -1
-		y = 1
-		relative_position_id = focus_ITA_pol_nat_pandering_to_nationalists
+		y = 4
+		relative_position_id = focus_ITA_pol_nat_facta_regime_limits
 		prerequisite = {
-			focus = focus_ITA_pol_nat_pandering_to_nationalists
+			focus = focus_ITA_pol_nat_facta_regime_limits
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_pol_soc_workers_victory
+		}
+		available = {
+			# イベントによる取得
+			custom_trigger_tooltip = {
+				tooltip = tooltip_focus_only_event_trigger
+				always = no
+			}
+		}
+		completion_reward = {
+			# to do : NFの効果を追加
+		}
+
+	}
+
+	# 政治的世界の粉砕
+	focus = {
+		id = focus_ITA_pol_nat_shattering_political_world
+	
+		icon = GFX_goal_unknown
+	
+		cost = 5
+	
+		x = -2
+		y = 1
+		relative_position_id = focus_ITA_pol_nat_bloodstained_goddess
+		prerequisite = {
+			focus = focus_ITA_pol_nat_bloodstained_goddess
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_pol_nat_struggle_in_the_quagmire
+		}
+		available = {
+			# イベントによる取得
+			custom_trigger_tooltip = {
+				tooltip = tooltip_focus_only_event_trigger
+				always = no
+			}
+		}
+		completion_reward = {
+			# to do : NFの効果を追加
+		}
+
+	}
+
+	# 泥沼の闘争へ
+	focus = {
+		id = focus_ITA_pol_nat_struggle_in_the_quagmire
+	
+		icon = GFX_goal_unknown
+	
+		cost = 5
+	
+		x = 0
+		y = 1
+		relative_position_id = focus_ITA_pol_nat_bloodstained_goddess
+		prerequisite = {
+			focus = focus_ITA_pol_nat_bloodstained_goddess
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_pol_nat_shattering_political_world
+		}
+		available = {
+			# イベントによる取得
+			custom_trigger_tooltip = {
+				tooltip = tooltip_focus_only_event_trigger
+				always = no
+			}
+		}
+		completion_reward = {
+			# to do : NFの効果を追加
+		}
+
+	}
+
+	### 社会主義系ルート
+	# 労働者の勝利
+	focus = {
+		id = focus_ITA_pol_soc_workers_victory
+	
+		icon = GFX_goal_unknown
+	
+		cost = 5
+	
+		x = 1
+		y = 4
+		relative_position_id = focus_ITA_pol_nat_facta_regime_limits
+		prerequisite = {
+			focus = focus_ITA_pol_nat_facta_regime_limits
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_pol_nat_bloodstained_goddess
 		}
 		available = {
 			# イベントによる取得
