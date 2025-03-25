@@ -14,4 +14,19 @@ characters = {
 			}
 		}
 	}
+	ITA_gabriele_dannunzio = {
+		name = ITA_gabriele_dannunzio
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_ITA_Gabriele_Dannunzio"
+			}
+		}
+		country_leader = {
+			ideology = national_syndicalism
+			expire = "1936.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
 }

@@ -1,9 +1,17 @@
 spriteTypes = {
 	
 	# 政治ツリー
-	spriteType = {
+	spriteType = { # 連立の動揺
 		name = "GFX_goal_focus_ITA_pol_coalition_turmoil"
 		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_coalition_turmoil.png"
+	}
+	spriteType = { # ファクタ政権の戒厳
+		name = "GFX_goal_focus_ITA_pol_dem_facta_regime_martial_law"
+		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_dem_facta_regime_martial_law.dds"
+	}
+	spriteType = { # ファクタ政権の限界
+		name = "GFX_goal_focus_ITA_pol_nat_facta_regime_limits"
+		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_nat_facta_regime_limits.dds"
 	}
 }
 

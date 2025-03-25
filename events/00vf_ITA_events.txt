@@ -19,12 +19,12 @@ country_event = {
 	desc = vf_ITA_pol.2.d
 	
 	is_triggered_only = yes
-	option = { # 取締
+	option = { # 取締 -> 戒厳
 		name = vf_ITA_pol.2.a
-		complete_national_focus = focus_ITA_pol_dem_crackdown_on_nationalist_movements
+		complete_national_focus = focus_ITA_pol_dem_facta_regime_martial_law
 	}
-	option = { # 迎合
+	option = { # 迎合 -> 限界
 		name = vf_ITA_pol.2.b
-		complete_national_focus = focus_ITA_pol_nat_pandering_to_nationalists
+		complete_national_focus = focus_ITA_pol_nat_facta_regime_limits
 	}
 }

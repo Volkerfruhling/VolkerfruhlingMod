@@ -49,7 +49,7 @@ focus_tree = {
 	# 連立の動揺
 	focus = {
 		id = focus_ITA_pol_coalition_turmoil
-		icon = GFX_goal_focus_ITA_pol_coalition_turmoil
+		icon = GFX_goal_unknown
 		cost = 5
 		x = 12
 		y = 0
@@ -76,7 +76,7 @@ focus_tree = {
 	focus = {
 		id = focus_ITA_pol_dem_facta_regime_martial_law
 	
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_ITA_pol_dem_facta_regime_martial_law
 	
 		cost = 5
 	
@@ -324,7 +324,7 @@ focus_tree = {
 	focus = {
 		id = focus_ITA_pol_nat_facta_regime_limits
 	
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_ITA_pol_nat_facta_regime_limits
 	
 		cost = 5
 	
