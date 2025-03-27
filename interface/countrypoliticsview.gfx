@@ -1,3 +1,4 @@
+@ -1,723 +0,0 @@
 spriteTypes = {
 	
 	#Government in Exile
@@ -264,30 +265,50 @@ spriteTypes = {
 		textureFile = "gfx/interface/rules_sum_icon.dds"
 	}
 
+    spriteType = {
+		name = "GFX_idea_slot_prime_minister_idea"
+		textureFile = "gfx/interface/officer_corp/VF_select_advisor.png"
+	}
+
+    spriteType = {
+		name = "GFX_idea_slot_foreign_affairs_idea"
+		textureFile = "gfx/interface/officer_corp/VF_select_advisor.png"
+	}
+
+    spriteType = {
+		name = "GFX_idea_slot_minister_interior_idea"
+		textureFile = "gfx/interface/officer_corp/VF_select_advisor.png"
+	}
+
+    spriteType = {
+		name = "GFX_idea_slot_minister_economy_idea"
+		textureFile = "gfx/interface/officer_corp/VF_select_advisor.png"
+	}
+
 
 	spriteType = {
 		name = "GFX_idea_slot_high_command"
-		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+		textureFile = "gfx/interface/officer_corp/VF_select_advisor_high_command.png"
 	}
 
 	spriteType = {
 		name = "GFX_idea_slot_air_chief"
-		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+		textureFile = "gfx/interface/officer_corp/VF_select_advisor_air_chief.png"
 	}
 
 	spriteType = {
 		name = "GFX_idea_slot_navy_chief"
-		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+		textureFile = "gfx/interface/officer_corp/VF_select_advisor_navy_chief.png"
 	}
 
 	spriteType = {
 		name = "GFX_idea_slot_army_chief"
-		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+		textureFile = "gfx/interface/officer_corp/VF_select_advisor_army_chief.png"
 	}
 
 	spriteType = {
 		name = "GFX_idea_slot_theorist"
-		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
+		textureFile = "gfx/interface/officer_corp/VF_select_advisor_theorist.png"
 	}
 
 	spriteType = {
@@ -313,11 +334,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_slot_tank_manufacturer"
 		textureFile = "gfx/interface/idea_slot_tank_manufacturer.dds"
-	}
-
-	spriteType = {
-		name = "GFX_idea_slot_political_advisor"
-		textureFile = "gfx/interface/officer_corp/select_advisor.dds"
 	}
 
 	spriteType = {

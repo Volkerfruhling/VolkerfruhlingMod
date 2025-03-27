@@ -16,58 +16,53 @@ idea_categories = {
 		ledger = hidden
 	}
 	#ここから変更
+
 	cabinet_idea = {
-		character_slot = first_class_idea
+		character_slot = prime_minister_idea
 		character_slot = foreign_affairs_idea
-		character_slot = Minister_Interior_idea
-		character_slot = Minister_Economy_idea
-		ledger = civilian
-		cost = 50
-		removal_cost = 0
-	}
-	national_system_idea = {
-		slot = political_system_idea
-		slot = electoral_system_idea
-		slot = religious_system_idea
-		slot = constitution_idea
-		slot = women_s_rights_idea
-		slot = Ethnicity_idea
+		character_slot = minister_interior_idea
+		character_slot = minister_economy_idea
 		ledger = civilian
 		cost = 150
 		removal_cost = 0
 	}
+
+	national_system_idea = {
+		slot = political_system_idea
+		slot = constitution_idea
+		slot = electoral_system_idea
+		slot = religious_system_idea
+		slot = women_s_rights_idea
+		slot = ethnicity_idea
+		ledger = civilian
+		cost = 150
+		removal_cost = 0
+	}
+
 	economic_law_idea = {
 		slot = economy
 		slot = trade_laws
 		slot = education_system_idea
-		slot = Labor_Standards_Act_idea
-		slot = Economic_Development_Level_idea
+		slot = labor_standards_Act_idea
+		slot = economic_development_Level_idea
 		slot = poverty_level_idea
 		ledger = civilian
 		cost = 150
 		removal_cost = 0
 	}
+
 	military_justice_idea = {
-		slot = mobilization_laws
-		slot = Female_military_service_laws
+		slot = mobilization_laws 
+		slot = female_military_service_laws
 		slot = draft_exemption_laws
-		slot = Military_Training_laws
-		slot = Military_Modernization_laws
+		slot = military_training_laws
+		slot = military_modernization_laws
 		character_slot = theorist
 		ledger = civilian
 		cost = 150
 		removal_cost = 0
 	}
-	research_production = {
-		slot = tank_manufacturer
-		slot = naval_manufacturer
-		slot = aircraft_manufacturer
-		slot = materiel_manufacturer
-		slot = industrial_concern
-		ledger = civilian
-		cost = 150
-		removal_cost = 0
-	}
+
 	military_staff = {
 		character_slot = army_chief
 		character_slot = navy_chief
@@ -79,6 +74,20 @@ idea_categories = {
 		cost = 150
 		removal_cost = 0
 	}
+
+	research_production = {
+		slot = tank_manufacturer
+		slot = naval_manufacturer
+		slot = aircraft_manufacturer
+		slot = materiel_manufacturer
+		slot = industrial_concern
+		ledger = civilian
+		cost = 150
+		removal_cost = 0
+	}
+
+
+	#ここまで
 	academy_spirit = {
 		type = army_spirit
 		cost = 20
