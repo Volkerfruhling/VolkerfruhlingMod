@@ -74,9 +74,9 @@ focus_tree = {
 
 	# ファクタ政権の戒厳
 	focus = {
-		id = focus_ITA_pol_dem_facta_regime_martial_law
+		id = focus_ITA_pol_dem_facta_regime_strict_guard
 	
-		icon = GFX_goal_focus_ITA_pol_dem_facta_regime_martial_law
+		icon = GFX_goal_focus_ITA_pol_dem_facta_regime_strict_guard
 	
 		cost = 5
 	
@@ -112,19 +112,14 @@ focus_tree = {
 	
 		x = 0
 		y = 1
-		relative_position_id = focus_ITA_pol_dem_facta_regime_martial_law
+		relative_position_id = focus_ITA_pol_dem_facta_regime_strict_guard
 		prerequisite = {
-			focus = focus_ITA_pol_dem_facta_regime_martial_law
+			focus = focus_ITA_pol_dem_facta_regime_strict_guard
 		}
 		mutually_exclusive = {
 			focus = focus_ITA_pol_nat_live_as_a_lion
 		}
 		available = {
-			# イベントによる取得
-			custom_trigger_tooltip = {
-				tooltip = tooltip_focus_only_event_trigger
-				always = no
-			}
 		}
 		completion_reward = {
 			# to do : NFの効果を追加
@@ -193,7 +188,37 @@ focus_tree = {
 		}
 
 	}
+	# 花の都から
+	focus = {
+		id = focus_ITA_pol_dem_from_flower_city
+	
+		icon = GFX_goal_unknown
+	
+		cost = 5
+	
+		x = 0
+		y = 1
+		relative_position_id = focus_ITA_pol_dem_new_ministers_council
+		prerequisite = {
+			focus = focus_ITA_pol_dem_new_ministers_council
+		}
+		mutually_exclusive = {
+			focus = focus_ITA_pol_dem_from_mountain_foot
+			focus = focus_ITA_pol_dem_from_south_sea
+		}
+		available = {
+			# イベントによる取得
+			custom_trigger_tooltip = {
+				tooltip = tooltip_focus_only_event_trigger
+				always = no
+			}
+		}
+		completion_reward = {
+			# to do : NFの効果を追加
+		}
 
+	}
+	
 	# 南の海から
 	focus = {
 		id = focus_ITA_pol_dem_from_south_sea
@@ -202,7 +227,7 @@ focus_tree = {
 	
 		cost = 5
 	
-		x = 0
+		x = 2
 		y = 1
 		relative_position_id = focus_ITA_pol_dem_new_ministers_council
 		prerequisite = {
@@ -225,36 +250,6 @@ focus_tree = {
 
 	}
 
-	# 花の都から
-	focus = {
-		id = focus_ITA_pol_dem_from_flower_city
-	
-		icon = GFX_goal_unknown
-	
-		cost = 5
-	
-		x = 2
-		y = 1
-		relative_position_id = focus_ITA_pol_dem_new_ministers_council
-		prerequisite = {
-			focus = focus_ITA_pol_dem_new_ministers_council
-		}
-		mutually_exclusive = {
-			focus = focus_ITA_pol_dem_from_mountain_foot
-			focus = focus_ITA_pol_dem_from_south_sea
-		}
-		available = {
-			# イベントによる取得
-			custom_trigger_tooltip = {
-				tooltip = tooltip_focus_only_event_trigger
-				always = no
-			}
-		}
-		completion_reward = {
-			# to do : NFの効果を追加
-		}
-
-	}
 
 	## ファクタ政権存続
 	# ファクタ政権の存続
@@ -298,19 +293,14 @@ focus_tree = {
 	
 		x = 4
 		y = 1
-		relative_position_id = focus_ITA_pol_dem_facta_regime_martial_law
+		relative_position_id = focus_ITA_pol_dem_facta_regime_strict_guard
 		prerequisite = {
-			focus = focus_ITA_pol_dem_facta_regime_martial_law
+			focus = focus_ITA_pol_dem_facta_regime_strict_guard
 		}
 		mutually_exclusive = {
 			focus = focus_ITA_pol_dem_emergency_meeting
 		}
 		available = {
-			# イベントによる取得
-			custom_trigger_tooltip = {
-				tooltip = tooltip_focus_only_event_trigger
-				always = no
-			}
 		}
 		completion_reward = {
 			# to do : NFの効果を追加
@@ -335,7 +325,7 @@ focus_tree = {
 			focus = focus_ITA_pol_coalition_turmoil
 		}
 		mutually_exclusive = {
-			focus = focus_ITA_pol_dem_facta_regime_martial_law
+			focus = focus_ITA_pol_dem_facta_regime_strict_guard
 		}
 		available = {
 			# イベントによる取得

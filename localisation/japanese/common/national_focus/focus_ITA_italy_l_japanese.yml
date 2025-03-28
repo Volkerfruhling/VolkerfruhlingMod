@@ -2,8 +2,8 @@
  focus_ITA_pol_coalition_turmoil: "連立の動揺"
  focus_ITA_pol_coalition_turmoil_desc: "to do"
 
- focus_ITA_pol_dem_facta_regime_martial_law: "ファクタ政権の戒厳"
- focus_ITA_pol_dem_facta_regime_martial_law_desc: "to do"
+ focus_ITA_pol_dem_facta_regime_strict_guard: "ファクタ政権の厳戒"
+ focus_ITA_pol_dem_facta_regime_strict_guard_desc: "to do"
 
  focus_ITA_pol_dem_emergency_meeting: "連邦国緊急集会"
  focus_ITA_pol_dem_emergency_meeting_desc: "to do"
@@ -14,12 +14,12 @@
  focus_ITA_pol_dem_from_mountain_foot: "山の麓から"
  focus_ITA_pol_dem_from_mountain_foot_desc: "to do"
  
- focus_ITA_pol_dem_from_south_sea: "南の海から"
- focus_ITA_pol_dem_from_south_sea_desc: "to do"
- 
  focus_ITA_pol_dem_from_flower_city: "花の都から"
  focus_ITA_pol_dem_from_flower_city_desc: "to do"
 
+ focus_ITA_pol_dem_from_south_sea: "南の海から"
+ focus_ITA_pol_dem_from_south_sea_desc: "to do"
+ 
  focus_ITA_pol_dem_facta_regime_continuity: "ファクタ政権の存続"
  focus_ITA_pol_dem_facta_regime_continuity_desc: "to do"
 

@@ -6,8 +6,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_coalition_turmoil.png"
 	}
 	spriteType = { # ファクタ政権の戒厳
-		name = "GFX_goal_focus_ITA_pol_dem_facta_regime_martial_law"
-		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_dem_facta_regime_martial_law.dds"
+		name = "GFX_goal_focus_ITA_pol_dem_facta_regime_strict_guard"
+		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_dem_facta_regime_strict_guard.dds"
 	}
 	spriteType = { # ファクタ政権の限界
 		name = "GFX_goal_focus_ITA_pol_nat_facta_regime_limits"
