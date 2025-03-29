@@ -49,7 +49,7 @@ focus_tree = {
 	# 連立の動揺
 	focus = {
 		id = focus_ITA_pol_coalition_turmoil
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_ITA_pol_coalition_turmoil
 		cost = 5
 		x = 12
 		y = 0
@@ -106,7 +106,7 @@ focus_tree = {
 	focus = {
 		id = focus_ITA_pol_dem_emergency_meeting
 	
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_ITA_pol_dem_emergency_meeting
 	
 		cost = 5
 	
@@ -132,7 +132,7 @@ focus_tree = {
 	focus = {
 		id = focus_ITA_pol_dem_new_ministers_council
 	
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_ITA_pol_dem_new_ministers_council
 	
 		cost = 5
 	
@@ -162,7 +162,7 @@ focus_tree = {
 	focus = {
 		id = focus_ITA_pol_dem_from_mountain_foot
 	
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_ITA_pol_dem_from_mountain_foot
 	
 		cost = 5
 	

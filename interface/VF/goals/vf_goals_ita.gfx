@@ -3,7 +3,7 @@ spriteTypes = {
 	# 政治ツリー
 	spriteType = { # 連立の動揺
 		name = "GFX_goal_focus_ITA_pol_coalition_turmoil"
-		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_coalition_turmoil.png"
+		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_coalition_turmoil.dds"
 	}
 	spriteType = { # ファクタ政権の戒厳
 		name = "GFX_goal_focus_ITA_pol_dem_facta_regime_strict_guard"
@@ -12,6 +12,18 @@ spriteTypes = {
 	spriteType = { # ファクタ政権の限界
 		name = "GFX_goal_focus_ITA_pol_nat_facta_regime_limits"
 		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_nat_facta_regime_limits.dds"
+	}
+	spriteType = { # 連邦国緊急集会
+		name = "GFX_goal_focus_ITA_pol_dem_emergency_meeting"
+		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_dem_emergency_meeting.dds"
+	}
+	spriteType = { # 新たなる閣僚会議
+		name = "GFX_goal_focus_ITA_pol_dem_new_ministers_council"
+		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_dem_new_ministers_council.dds"
+	}
+	spriteType = { # 山の麓から
+		name = "GFX_goal_focus_ITA_pol_dem_from_mountain_foot"
+		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_dem_from_mountain_foot.dds"
 	}
 }
 
