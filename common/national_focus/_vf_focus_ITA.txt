@@ -66,6 +66,8 @@ focus_tree = {
 				id = vf_ITA_pol.2
 				days = 7
 			}
+			add_stability = -0.1
+			add_ideas = ITA_growing_nationalism
 		}
 
 	}
@@ -98,6 +100,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			# to do : NFの効果を追加
+			add_stability = 0.1
 		}
 
 	}
