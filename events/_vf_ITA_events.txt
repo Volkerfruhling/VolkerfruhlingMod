@@ -25,11 +25,9 @@ country_event = {
 	option = { # 取締 -> 戒厳
 		name = vf_ITA_pol.2.a
 		complete_national_focus = focus_ITA_pol_dem_facta_regime_strict_guard
-		add_political_power = -100
 	}
 	option = { # 迎合 -> 限界
 		name = vf_ITA_pol.2.b
 		complete_national_focus = focus_ITA_pol_nat_facta_regime_limits
-		add_stability = -0.20
 	}
 }

@@ -1,2 +1,4 @@
 ﻿l_japanese:
  tooltip_focus_only_event_trigger: "この国家方針はイベントによってのみ達成される。"
+ tooltip_focus_trigger_civil_war: "§Rこの国家方針は内戦を引き起こす!§"
+ tooltip_focus_cant_be_selected: "この国家方針は選択できない。"

@@ -72,7 +72,7 @@ focus_tree = {
 
 	### 民主系ルート
 
-	# ファクタ政権の戒厳
+	# ファクタ政権の厳戒
 	focus = {
 		id = focus_ITA_pol_dem_facta_regime_strict_guard
 	
@@ -272,7 +272,7 @@ focus_tree = {
 		available = {
 			# イベントによる取得
 			custom_trigger_tooltip = {
-				tooltip = tooltip_focus_only_event_trigger
+				tooltip = tooltip_focus_cant_be_selected
 				always = no
 			}
 		}
@@ -301,8 +301,13 @@ focus_tree = {
 			focus = focus_ITA_pol_dem_emergency_meeting
 		}
 		available = {
+			custom_trigger_tooltip = {
+				tooltip = tooltip_focus_cant_be_selected
+				always = no
+			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = tooltip_focus_trigger_civil_war
 			# to do : NFの効果を追加
 		}
 
