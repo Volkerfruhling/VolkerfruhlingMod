@@ -29,4 +29,49 @@ characters = {
 			}
 		}
 	}
+	ITA_vittorio_emanuele_iii = {
+		name = ITA_vittorio_emanuele_iii
+		portraits = {
+			civilian = {
+				# large = 
+			}
+		}
+		country_leader = {
+			ideology = liberalism_ideology
+			expire = "1936.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
+	ITA_pietro_ferdinando_i = {
+		name = ITA_pietro_ferdinando_i
+		portraits = {
+			civilian = {
+				# large = 
+			}
+		}
+		country_leader = {
+			ideology = liberalism_ideology
+			expire = "1936.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
+	ITA_alfonso_i = {
+		name = ITA_alfonso_i
+		portraits = {
+			civilian = {
+				# large = 
+			}
+		}
+		country_leader = {
+			ideology = liberalism_ideology
+			expire = "1936.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
 }
