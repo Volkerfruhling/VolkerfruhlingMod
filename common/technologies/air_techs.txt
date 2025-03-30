@@ -692,15 +692,6 @@ technologies = {
 				tag = GER
 			}
 			
-			modifier = {
-				factor = 100
-				tag = SOV
-			}
-			modifier = {
-				has_war_with = GER
-				tag = SOV
-				factor = 2
-			}
 
 		}
 	}
@@ -803,18 +794,6 @@ technologies = {
 				factor = 3
 			}
 
-			modifier = {
-				factor = 2
-				OR = {
-					has_war_with = GER
-					has_war_with = SOV
-				}
-			}
-			
-			modifier = {
-				factor = 3
-				tag = SOV
-			}
 		}
 	}
 	
@@ -913,17 +892,6 @@ technologies = {
 					type = cas
 				}
 				factor = 3
-			}
-			modifier = {
-				factor = 2
-				OR = {
-					has_war_with = GER
-					has_war_with = SOV
-				}
-			}
-			modifier = {
-				factor = 2
-				tag = SOV
 			}
 		}
 	}

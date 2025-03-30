@@ -25,5 +25,21 @@ spriteTypes = {
 		name = "GFX_goal_focus_ITA_pol_dem_from_mountain_foot"
 		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_dem_from_mountain_foot.dds"
 	}
+	spriteType = { # 花の都から
+		name = "GFX_goal_focus_ITA_pol_dem_from_flower_city"
+		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_dem_from_flower_city.dds"
+	}
+	spriteType = { # 南の海から
+		name = "GFX_goal_focus_ITA_pol_dem_from_south_sea"
+		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_dem_from_south_sea.dds"
+	}
+	spriteType = { # ファクタ政権の存続
+		name = "GFX_goal_focus_ITA_pol_dem_facta_regime_continuity"
+		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_dem_facta_regime_continuity.dds"
+	}
+	spriteType = { # 獅子として生きる
+		name = "GFX_goal_focus_ITA_pol_nat_live_as_a_lion"
+		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_nat_live_as_a_lion.dds"
+	}
 }
 

@@ -190,7 +190,7 @@ buildings = {
 		always_shown = yes
 		show_modifier = yes
 		country_modifiers = {
-			enable_for_controllers = { SOV }
+			enable_for_controllers = { RUS }
 			modifiers = {
 				command_power_gain_mult = 0.1 # A lot of their planning and coordination is done from here
 			}
@@ -217,7 +217,7 @@ buildings = {
 		always_shown = yes
 		show_modifier = yes
 		country_modifiers = {
-			enable_for_controllers = { AUS }
+			enable_for_controllers = { GER }
 			modifiers = {
 				stability_factor = 0.05
 			}

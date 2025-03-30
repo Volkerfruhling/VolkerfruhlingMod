@@ -1,4 +1,4 @@
-#!gfx:interface\VF\goals\vf_goals_ita.gfx
+#!gfx:interface\VF\goals\goals_ita.gfx
 focus_tree = {
 	id = focus_ITA # 焦点ツリーのID。一意なものにする。ファイル名と一致させておくのがおすすめ。
 	country = {
@@ -101,6 +101,10 @@ focus_tree = {
 		completion_reward = {
 			# to do : NFの効果を追加
 			add_stability = 0.1
+			country_event = {
+				id = vf_ITA_pol_dem.1
+				hours = 7
+			}
 		}
 
 	}
@@ -126,6 +130,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			# to do : NFの効果を追加
+			country_event = {
+				id = vf_ITA_pol_dem.2
+				hours = 7
+			}
 		}
 
 	}
@@ -157,6 +165,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			# to do : NFの効果を追加
+			custom_effect_tooltip = focus_ITA_pol_dem_new_ministers_council_reward
 		}
 
 	}
@@ -170,7 +179,7 @@ focus_tree = {
 		cost = 5
 	
 		x = -2
-		y = 1
+		y = 2
 		relative_position_id = focus_ITA_pol_dem_new_ministers_council
 		prerequisite = {
 			focus = focus_ITA_pol_dem_new_ministers_council
@@ -195,12 +204,12 @@ focus_tree = {
 	focus = {
 		id = focus_ITA_pol_dem_from_flower_city
 	
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_ITA_pol_dem_from_flower_city
 	
 		cost = 5
 	
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = focus_ITA_pol_dem_new_ministers_council
 		prerequisite = {
 			focus = focus_ITA_pol_dem_new_ministers_council
@@ -226,12 +235,12 @@ focus_tree = {
 	focus = {
 		id = focus_ITA_pol_dem_from_south_sea
 	
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_ITA_pol_dem_from_south_sea
 	
 		cost = 5
 	
 		x = 2
-		y = 1
+		y = 2
 		relative_position_id = focus_ITA_pol_dem_new_ministers_council
 		prerequisite = {
 			focus = focus_ITA_pol_dem_new_ministers_council
@@ -259,11 +268,11 @@ focus_tree = {
 	focus = {
 		id = focus_ITA_pol_dem_facta_regime_continuity
 	
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_ITA_pol_dem_facta_regime_continuity
 	
 		cost = 5
 	
-		x = -4
+		x = -5
 		y = 1
 		relative_position_id = focus_ITA_pol_dem_emergency_meeting
 		prerequisite = {
@@ -281,6 +290,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			# to do : NFの効果を追加
+			custom_effect_tooltip = focus_ITA_pol_dem_facta_regime_continuity_reward
 		}
 
 	}
@@ -290,7 +300,7 @@ focus_tree = {
 	focus = {
 		id = focus_ITA_pol_nat_live_as_a_lion
 	
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_ITA_pol_nat_live_as_a_lion
 	
 		cost = 5
 	

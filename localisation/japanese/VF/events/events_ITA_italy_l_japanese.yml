@@ -7,3 +7,32 @@
  vf_ITA_pol.2.d: "ローマにファシストがせまってるよー"
  vf_ITA_pol.2.a: "取り締まろう"
  vf_ITA_pol.2.b: "受け入れるほかない"
+
+ vf_ITA_pol_dem.1.t: "厳戒態勢"
+ vf_ITA_pol_dem.1.d: "to do"
+ vf_ITA_pol_dem.1.a: "そのままにはしておけない"
+
+ vf_ITA_pol_dem.2.t: "連邦国緊急集会"
+ vf_ITA_pol_dem.2.d: "to do"
+ vf_ITA_pol_dem.2.a: "早急な対応が求められる"
+
+ vf_ITA_pol_dem.3.t: "ファクタ政権の責任"
+ vf_ITA_pol_dem.3.d: "to do"
+ vf_ITA_pol_dem.3.a: "辞任を持って責任を取るしかない"
+ vf_ITA_pol_dem.3.b: "別の形での責任のとり方があるのではないか？"
+
+ vf_ITA_pol_dem.4.t: "強まる「辞任」の声"
+ vf_ITA_pol_dem.4.d: "to do"
+ vf_ITA_pol_dem.4.a: "ファクタ! やめろ！ファクタ! やめろ！"
+
+ vf_ITA_pol_dem.5.t: "ルイージ・ファクタの辞任"
+ vf_ITA_pol_dem.5.d: "to do"
+ vf_ITA_pol_dem.5.a: "新たなる政権の誕生にバンザイ！"
+
+ vf_ITA_pol_dem.6.t: "雪辱の機会"
+ vf_ITA_pol_dem.6.d: "to do"
+ vf_ITA_pol_dem.6.a: "もう一度かけてみてもいいかもしれない"
+
+ vf_ITA_pol_dem.7.t: "ルイージファクタの留任"
+ vf_ITA_pol_dem.7.d: "to do"
+ vf_ITA_pol_dem.7.a: "さあ、期待に応えてもらおう"

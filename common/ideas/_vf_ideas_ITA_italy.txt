@@ -52,6 +52,39 @@ ideas = {
 		###政治ルート
 
 		# 強まる国家主義
+		# detail:連立の動揺により付与される
+		ITA_growing_nationalism = {
+			picture = ITA_growing_nationalism
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.1
+				national_totalism_drift = 0.3
+			}
+		}
+
+		# 国家主義者の取締
+		# detail:ファクタ政権の厳戒により付与される
+		ITA_growing_nationalism = {
+			picture = ITA_growing_nationalism
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				national_totalism_drift = -0.5
+			}
+		}
+
+		# 強まる国家主義
 		# detail:ファクタ政権の厳戒により付与される
 		ITA_growing_nationalism = {
 			picture = ITA_growing_nationalism
