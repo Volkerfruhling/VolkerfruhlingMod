@@ -1,0 +1,1571 @@
+ideas = {
+
+	#国家制度
+
+	#政治体制
+    political_system_idea = {
+
+        law = yes
+		use_list_view = yes
+
+        Peoples_democracy = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+        Presidential_democracy = {
+
+            cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+        Parliamentary_democracy = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+        Tyrannical_monarchy = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+        Colonial_government = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+        Military_occupation = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+    }
+
+	#憲法
+    constitution_idea = {
+
+        law = yes
+		use_list_view = yes
+
+        Strictly_defined_constitution = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+        Incomplete_constitution = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+        Constitution_not_yet_enacted = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+    }
+    
+	#選挙権制度
+    electoral_system_idea = {
+
+        law = yes
+		use_list_view = yes
+
+        Universal_suffrage = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+        Limited_elections  = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+        Hegemonic_party_system_elections = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+        No_electoral_system = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+    }
+	
+	#宗教制度
+    religious_system_idea = {
+
+        law = yes
+		use_list_view = yes
+
+        Religious_state = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+        State_religion = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+        Separation_of_church_and_state = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+        Atheism = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+    }
+
+	#女性の権利
+    women_s_rights_idea = {
+
+        law = yes
+		use_list_view = yes
+        
+        Women_s_suffrage = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+        
+        Promotion_of_women_s_employment = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+        Paternalistic_society = {
+
+			cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			default = yes
+
+			cancel_if_invalid = no
+
+		}
+
+    }
+
+	#人種制度
+    ethnicity_idea = {
+
+        law = yes
+		use_list_view = yes
+
+        Multicultural_coexistence = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+    
+        Partial_integration = {
+    
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+    
+        Neutral_stance = {
+    
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+    
+        Racial_discrimination = {
+    
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+    
+        Single_ethnicity = {
+    
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+        
+    }
+
+	#経済政策
+
+	#教育制度
+	education_system_idea = {
+
+		law = yes
+		use_list_view = yes
+
+		Subsidized_higher_education = {
+
+            cost = 100
+            removal_cost = -1
+
+			level = 1
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Subsidized_post_secondary_education = {
+
+            cost = 100
+            removal_cost = -1
+
+			level = 2
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Compulsory_first_semester_secondary_education = {
+
+            cost = 100
+            removal_cost = -1
+
+			level = 3
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Compulsory_primary_education = {
+
+            cost = 100
+            removal_cost = -1
+
+			level = 4
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Privatized_education = {
+
+            cost = 100
+            removal_cost = -1
+
+			level = 5
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		No_education_law = {
+
+            cost = 100
+            removal_cost = -1
+
+			level = 6
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+
+
+	}
+
+	#労働基準法
+	labor_standards_Act_idea = {
+
+		law = yes
+		use_list_view = yes
+
+		8_hour_workday = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		10_hour_workday = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		12_hour_workday = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		14_hour_workday = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		16_hour_workday = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		No_labor_law = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+		
+
+	}
+
+	#経済発展レベル
+	economic_development_Level_idea = {
+
+		law = yes
+		use_list_view = yes
+
+		Developed_countries = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Developing_countries = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Emerging_countries = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+		
+		Least_developed_countries = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+	}
+
+	#貧困レベル
+	poverty_level_idea = {
+
+		law = yes
+
+		Absolute_poor = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Relative_poor = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Multidimensional_poor = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+		
+		Vulnerable_Near_Poor = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Food_insecure = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Working_poor = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Stable_employment = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Middle_class = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Upper_middle_class = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Affluent = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+		
+
+	}
+	
+	#軍法
+
+	#女性軍役
+	female_military_service_laws = {
+
+		law = yes
+		use_list_view = yes
+
+		Prohibited_military_service = {
+
+            cost = 75
+            removal_cost = -1
+
+			level = 1
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Limited_assistance_missions = {
+
+            cost = 75
+            removal_cost = -1
+
+			level = 2
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Extensive_assistance_missions = {
+
+            cost = 75
+            removal_cost = -1
+
+			level = 3
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Combat_support_missions = {
+
+            cost = 75
+            removal_cost = -1
+
+			level = 4
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Conditional_combat_missions = {
+
+            cost = 75
+            removal_cost = -1
+
+			level = 5
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Unconditional_combat_missions = {
+
+            cost = 75
+            removal_cost = -1
+
+			level = 6
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+	}
+
+	#徴兵免除
+	draft_exemption_laws = {
+
+		law = yes
+		use_list_view = yes
+
+		No_draft_exemption = {
+
+            cost = 100
+            removal_cost = -1
+
+			level = 1
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Religious_draft_exemption = {
+
+            cost = 100
+            removal_cost = -1
+
+			level = 2
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Academic_draft_exemption = {
+
+            cost = 100
+            removal_cost = -1
+
+			level = 2
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Civil_service_draft_exemption = {
+
+            cost = 100
+            removal_cost = -1
+
+			level = 2
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Total_draft_exemption = {
+
+            cost = 100
+            removal_cost = -1
+
+			level = 3
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+	}
+
+	#軍事訓練
+	military_training_laws = {
+
+		law = yes
+		use_list_view = yes
+
+		No_training = {
+
+            cost = 75
+            removal_cost = -1
+
+			level = 1
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Some_military_training = {
+
+            cost = 75
+            removal_cost = -1
+
+			level = 2
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+		
+		Basic_military_training = {
+
+            cost = 75
+            removal_cost = -1
+
+			level = 3
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+		
+		Severe_military_training = {
+
+            cost = 75
+            removal_cost = -1
+
+			level = 4
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+		
+		Advanced_military_training = {
+
+            cost = 75
+            removal_cost = -1
+
+			level = 5
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+		
+		Skilled_military_training = {
+
+            cost = 75
+            removal_cost = -1
+
+			level = 6
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+		
+
+	}
+
+	#軍の近代化
+	military_modernization_laws = {
+
+		law = yes
+		use_list_view = yes
+
+		Modern_armies = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Semi_modern_armies = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Early_20th_century_armies = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Nineteenth_century_army = {
+
+            cost = 0
+            removal_cost = -1
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
+            }
+    
+            default = yes
+    
+            cancel_if_invalid = no
+    
+        }
+
+
+	}
+}

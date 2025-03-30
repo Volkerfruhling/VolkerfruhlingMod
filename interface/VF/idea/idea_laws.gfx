@@ -1,0 +1,33 @@
+spriteTypes = {
+
+    spriteType = {
+		name = "GFX_idea_Peoples_democracy"
+		texturefile = "gfx/interface/ideas/VF_Peoples_democracy.png"
+	}
+
+    spriteType = {
+		name = "GFX_idea_Presidential_democracy"
+		texturefile = "gfx/interface/ideas/VF_Presidential_democracy.png"
+	}
+
+    spriteType = {
+		name = "GFX_idea_Parliamentary_democracy"
+		texturefile = "gfx/interface/ideas/VF_Parliamentary_democracy.png"
+	}
+
+    spriteType = {
+		name = "GFX_idea_Tyrannical_monarchy"
+		texturefile = "gfx/interface/ideas/VF_Tyrannical_monarchy.png"
+	}
+
+    spriteType = {
+		name = "GFX_idea_Colonial_government"
+		texturefile = "gfx/interface/ideas/VF_Colonial_government.png"
+	}
+
+    spriteType = {
+		name = "GFX_idea_Military_occupation"
+		texturefile = "gfx/interface/ideas/VF_Military_occupation.png"
+	}
+
+}
