@@ -2,8 +2,11 @@ state={
 	id=97
 	name="STATE_97"
 	provinces={
-		400 3254 11274 11301 11329 11357 
-	}
+			11274
+			11329
+			3254
+			400
+		}
 	history = {
 		owner = POL
 		add_core_of = POL
