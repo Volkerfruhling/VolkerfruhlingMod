@@ -26,6 +26,6 @@ state = {
 	manpower = 246933
 	state_category = rural
 	local_supplies = 5.000
-        manpower=1
-        state_category = town
+        
+
 }

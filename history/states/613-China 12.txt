@@ -1,6 +1,7 @@
 state={
 	id=613
 	name="STATE_613"
+	manpower = 17305100
 	provinces={
 		996 1089 4091 7014 7120 10034 10076 11913 11928 11982 12052 12076 13142 13387 13390 13391 
 	}
@@ -8,7 +9,7 @@ state={
 		owner = QIN
 		add_core_of = QIN
 	}
-	manpower=1
+	
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000

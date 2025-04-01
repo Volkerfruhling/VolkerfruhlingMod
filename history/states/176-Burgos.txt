@@ -24,6 +24,6 @@ state={
 	state_category=rural
 
 	local_supplies=9.0 
-        manpower=1
-        state_category = town
+        
+
 }
