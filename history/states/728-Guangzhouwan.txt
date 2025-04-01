@@ -6,6 +6,8 @@ state={
 	state_category = enclave
 	
 	history={
+		add_core_of = QIN
+		owner = KOP
 		buildings = {
 			infrastructure = 2
 			11981 = {
@@ -19,6 +21,6 @@ state={
 	}
 
 	local_supplies=0.0 
-        manpower=1
-        state_category = town
+        
+
 }
