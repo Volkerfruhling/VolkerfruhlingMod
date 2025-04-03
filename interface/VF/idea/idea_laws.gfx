@@ -30,4 +30,99 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/VF_Military_occupation.png"
 	}
 
+	spriteType = {
+		name = "GFX_idea_Strictly_defined_constitution"
+		texturefile = "gfx/interface/ideas/VF_Strictly_defined_constitution.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Incomplete_constitution"
+		texturefile = "gfx/interface/ideas/VF_Incomplete_constitution.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Constitution_not_yet_enacted"
+		texturefile = "gfx/interface/ideas/VF_Constitution_not_yet_enacted.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Universal_suffrage"
+		texturefile = "gfx/interface/ideas/VF_Universal_suffrage.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Limited_elections"
+		texturefile = "gfx/interface/ideas/VF_Limited_elections.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Hegemonic_party_system_elections"
+		texturefile = "gfx/interface/ideas/VF_Hegemonic_party_system_elections.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_No_electoral_system"
+		texturefile = "gfx/interface/ideas/VF_No_electoral_system.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Religious_state"
+		texturefile = "gfx/interface/ideas/VF_Religious_state.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_State_religion"
+		texturefile = "gfx/interface/ideas/VF_State_religion.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Separation_of_church_and_state"
+		texturefile = "gfx/interface/ideas/VF_Separation_of_church_and_state.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Atheism"
+		texturefile = "gfx/interface/ideas/VF_Atheism.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Women_s_suffrage"
+		texturefile = "gfx/interface/ideas/VF_Women_s_suffrage.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Promotion_of_women_s_employment"
+		texturefile = "gfx/interface/ideas/VF_Promotion_of_women_s_employment.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Paternalistic_society"
+		texturefile = "gfx/interface/ideas/VF_Paternalistic_society.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Multicultural_coexistence"
+		texturefile = "gfx/interface/ideas/VF_Multicultural_coexistence.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Partial_integration"
+		texturefile = "gfx/interface/ideas/VF_Partial_integration.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Neutral_stance"
+		texturefile = "gfx/interface/ideas/VF_Neutral_stance.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Racial_discrimination"
+		texturefile = "gfx/interface/ideas/VF_Racial_discrimination.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Single_ethnicity"
+		texturefile = "gfx/interface/ideas/VF_Single_ethnicity.png"
+	}
+
 }
