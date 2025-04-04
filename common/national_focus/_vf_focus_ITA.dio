@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram name="NF" id="YQfXNvRA4hNPv4sdJBwv">
-        <mxGraphModel dx="1930" dy="1782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1729" dy="1748" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="BNpKv7ZSM8ImaLfdqDf1-0"/>
                 <mxCell id="BNpKv7ZSM8ImaLfdqDf1-1" parent="BNpKv7ZSM8ImaLfdqDf1-0"/>
@@ -96,11 +96,20 @@
                 <mxCell id="TV3Gz4kMu1tyHynNcunm-11" value="新たな閣僚評議会" style="whiteSpace=wrap;html=1;" parent="BNpKv7ZSM8ImaLfdqDf1-1" vertex="1">
                     <mxGeometry x="-120" y="580" width="120" height="60" as="geometry"/>
                 </mxCell>
+                <mxCell id="14" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="TV3Gz4kMu1tyHynNcunm-13" target="12">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="TV3Gz4kMu1tyHynNcunm-13" value="南の海から" style="whiteSpace=wrap;html=1;" parent="BNpKv7ZSM8ImaLfdqDf1-1" vertex="1">
-                    <mxGeometry x="-120" y="700" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="120" y="700" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="TV3Gz4kMu1tyHynNcunm-16" target="12">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="TV3Gz4kMu1tyHynNcunm-16" value="花の都から" style="whiteSpace=wrap;html=1;" parent="BNpKv7ZSM8ImaLfdqDf1-1" vertex="1">
-                    <mxGeometry x="120" y="700" width="120" height="60" as="geometry"/>
+                    <mxGeometry x="-120" y="700" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="TV3Gz4kMu1tyHynNcunm-18" target="12">
+                    <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="TV3Gz4kMu1tyHynNcunm-18" value="山の麓から" style="whiteSpace=wrap;html=1;" parent="BNpKv7ZSM8ImaLfdqDf1-1" vertex="1">
                     <mxGeometry x="-360" y="700" width="120" height="60" as="geometry"/>
@@ -141,8 +150,17 @@
                 <mxCell id="TV3Gz4kMu1tyHynNcunm-37" value="政治的世界の粉砕" style="whiteSpace=wrap;html=1;" parent="BNpKv7ZSM8ImaLfdqDf1-1" vertex="1">
                     <mxGeometry x="480" y="960" width="120" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="idea:&lt;span style=&quot;background-color: transparent;&quot;&gt;強まる国家主義&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                <mxCell id="3" value="idea:&lt;span style=&quot;background-color: transparent;&quot;&gt;強まる国家主義&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="BNpKv7ZSM8ImaLfdqDf1-1" vertex="1">
                     <mxGeometry x="245" y="-22" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" style="edgeStyle=elbowEdgeStyle;elbow=vertical;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="BNpKv7ZSM8ImaLfdqDf1-1" source="12" target="17">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="ファシスト鎮圧系" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="-120" y="840" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="経済復興系" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="BNpKv7ZSM8ImaLfdqDf1-1">
+                    <mxGeometry x="-120" y="1000" width="120" height="80" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
