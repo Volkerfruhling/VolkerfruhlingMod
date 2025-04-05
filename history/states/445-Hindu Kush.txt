@@ -5,6 +5,8 @@ state={
 		4990 7847 7903 10813 
 	}
 	history = {
+		owner = MUG
+		add_core_of = MUG
 	}
 	manpower=405100
 	buildings_max_level_factor=1.000

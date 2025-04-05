@@ -8,6 +8,8 @@ state={
 		oil=3
 	}
 	history = {
+		owner = MUG
+		add_core_of = MUG
 	}
 	manpower=364000
 	buildings_max_level_factor=1.000

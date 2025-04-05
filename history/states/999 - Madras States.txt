@@ -12,6 +12,8 @@ state={
 	state_category=rural
 	local_supplies=0.000
 	history={
+		owner = TRA
+		add_core_of = TRA
 		buildings = {
 			infrastructure = 1
 		}

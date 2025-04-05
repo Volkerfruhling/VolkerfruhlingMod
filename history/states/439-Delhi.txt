@@ -7,6 +7,8 @@ state={
 	state_category = city
 	
 	history={
+		owner = MUG
+		add_core_of = MUG
 		buildings = {
 			infrastructure = 3 #was: 5
 			industrial_complex = 1

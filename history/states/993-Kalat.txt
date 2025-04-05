@@ -8,7 +8,8 @@ state={
 	manpower = 480164
 
 	history = {
-
+		owner = MUG
+		add_core_of = MUG
 		buildings = {
 			infrastructure = 1 #was: 5
 		}

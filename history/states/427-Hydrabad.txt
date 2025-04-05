@@ -10,6 +10,8 @@ state={
 	}
 
 	history={
+		owner = NIZ
+		add_core_of = NIZ
 		victory_points = {
 			8087 1
 		}

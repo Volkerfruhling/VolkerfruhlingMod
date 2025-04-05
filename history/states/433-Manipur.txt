@@ -12,6 +12,8 @@ state={
 	}
 
 	history={
+		owner = MUG
+		add_core_of = MUG
 		victory_points = {
 			2054 1
 		}

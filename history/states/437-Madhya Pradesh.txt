@@ -5,7 +5,8 @@ state={
 		2092 2105 4106 7080 7205 8076 10816 11993 11995 12080 
 	}
 	history = {
-
+		owner = MUG
+		add_core_of = MUG
 	}
 	manpower=9628198
 	buildings_max_level_factor=1.000
