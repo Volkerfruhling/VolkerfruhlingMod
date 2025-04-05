@@ -1,11 +1,30 @@
 #ブータン/Bhutan
 BHU = "countries/_middle_eastern.txt"
 
+#ヒンドゥースタン/Hinduistan
+HIN = "countries/_middle_eastern.txt"
+
 #カシミール/Kashmir
 KAS = "countries/_middle_eastern.txt"
+
+#モルディブ/Maldives
+MLD = "countries/_middle_eastern.txt"
+
+#ムガル帝国/Mughal
+MUG = "countries/_middle_eastern.txt"
 
 #ネパール/Nepal
 NEP = "countries/_middle_eastern.txt"
 
+#ニザーム王国/Nizam
+NIZ = "countries/_middle_eastern.txt"
+
 #イギリス領インド帝国/British_Raj
 RAJ = "countries/_middle_eastern.txt"
+
+#シッキム/Sikkim
+SIK = "countries/_middle_eastern.txt"
+
+#トラヴァンコール/Travancore
+TRA = "countries/_middle_eastern.txt"
+

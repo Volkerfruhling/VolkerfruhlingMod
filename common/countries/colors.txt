@@ -359,10 +359,28 @@ BHU ={
 	color_ui = rgb{ 202 87 43 }
 }
 
+#ヒンドゥースタン/Hinduistan
+HIN ={
+	color = rgb{ 225 124 5 }
+	color_ui = rgb{ 225 124 5 }
+}
+
 #カシミール/Kashmir
 KAS ={
 	color = rgb{ 158 187 217 }
 	color_ui = rgb{ 158 187 217 }
+}
+
+#モルディブ/Maldives
+MLD ={
+	color = rgb{ 156 203 134 }
+	color_ui = rgb{ 156 203 134 }
+}
+
+#ムガル帝国/Mughal
+MUG ={
+	color = rgb{ 27 120 55 }
+	color_ui = rgb{ 27 120 55 }
 }
 
 #ネパール/Nepal
@@ -370,10 +388,29 @@ NEP ={
 	color = rgb{ 253 140 60 }
 	color_ui = rgb{ 253 140 60 }
 }
+
+#ニザーム王国/Nizam
+NIZ ={
+	color = rgb{ 253 174 97 }
+	color_ui = rgb{ 253 174 97 }
+}
+
 #イギリス領インド帝国/British_Raj
 RAJ ={
 	color = rgb{ 204 51 51 }
 	color_ui = rgb{ 204 51 51 }
+}
+
+#シッキム/Sikkim
+SIK ={
+	color = rgb{ 199 234 229 }
+	color_ui = rgb{ 199 234 229 }
+}
+
+#トラヴァンコール/Travancore
+TRA ={
+	color = rgb{ 228 26 28 }
+	color_ui = rgb{ 228 26 28 }
 }
 
 #### 東・東南アジア/East and Southeast Asia ###
