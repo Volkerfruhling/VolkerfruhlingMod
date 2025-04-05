@@ -140,8 +140,8 @@ POR ={
 
 #ルーマニア/Romania
 ROM ={
-	color = rgb{ 255 255 191 }
-	color_ui = rgb{ 255 255 191 }
+	color = rgb{ 255 255 130 }
+	color_ui = rgb{ 255 255 130 }
 }
 
 #ロシア/Russia
@@ -295,7 +295,7 @@ VEN ={
 	color_ui = rgb{ 237 173 8 }
 }
 
-### 南・西アジア/South and West Asia ###
+### 西アジア/West Asia ###
 
 #アフガニスタン/Afghanistan
 AFG ={
@@ -309,34 +309,10 @@ BAH ={
 	color_ui = rgb{ 251 180 174 }
 }
 
-#ブータン/Bhutan
-BHU ={
-	color = rgb{ 202 87 43 }
-	color_ui = rgb{ 202 87 43 }
-}
-
-#バルチスタン首席弁務官領/Chief_Commissioner_s_Territory_of_Baluchistan
-CTB ={
-	color = rgb{ 245 109 67 }
-	color_ui = rgb{ 245 109 67 }
-}
-
-#ヒンドゥースタン/Hinduistan
-HIN ={
-	color = rgb{ 225 124 5 }
-	color_ui = rgb{ 225 124 5 }
-}
-
 #ジャバル・シャンマル/Jabal Shammar
 JSH ={
 	color = rgb{ 178 24 43 }
 	color_ui = rgb{ 178 24 43 }
-}
-
-#カシミール/Kashmir
-KAS ={
-	color = rgb{ 158 187 217 }
-	color_ui = rgb{ 158 187 217 }
 }
 
 #マフラ王国/Mafra
@@ -351,28 +327,10 @@ MOM ={
 	color_ui = rgb{ 214 96 77 }
 }
 
-#ネパール/Nepal
-NEP ={
-	color = rgb{ 253 140 60 }
-	color_ui = rgb{ 253 140 60 }
-}
-
 #イラン/Iran
 PER ={
 	color = rgb{ 0 128 128 }
 	color_ui = rgb{ 0 128 128 }
-}
-
-#インド臨時政府/Provisional_Government_of_India
-PGI ={
-	color = rgb{ 253 191 111 }
-	color_ui = rgb{ 253 191 111 }
-}
-
-#イギリス領インド帝国/British_Raj
-RAJ ={
-	color = rgb{ 204 51 51 }
-	color_ui = rgb{ 204 51 51 }
 }
 
 #リヤド首長国/Riyadh
@@ -387,22 +345,35 @@ TOM ={
 	color_ui = rgb{ 237 187 138 }
 }
 
-#インド連邦/Union_of_India
-UID ={
-	color = rgb{ 178 223 138 }
-	color_ui = rgb{ 178 223 138 }
-}
-
-#バルーチスターン藩王国連合/Union_of_princely_states_of_Balochistan
-UPB ={
-	color = rgb{ 90 174 97 }
-	color_ui = rgb{ 90 174 97 }
-}
-
 #イエメン/Yemen
 YEM ={
 	color = rgb{ 229 216 189 }
 	color_ui = rgb{ 229 216 189 }
+}
+
+### 南アジア/South Asia ###
+
+#ブータン/Bhutan
+BHU ={
+	color = rgb{ 202 87 43 }
+	color_ui = rgb{ 202 87 43 }
+}
+
+#カシミール/Kashmir
+KAS ={
+	color = rgb{ 158 187 217 }
+	color_ui = rgb{ 158 187 217 }
+}
+
+#ネパール/Nepal
+NEP ={
+	color = rgb{ 253 140 60 }
+	color_ui = rgb{ 253 140 60 }
+}
+#イギリス領インド帝国/British_Raj
+RAJ ={
+	color = rgb{ 204 51 51 }
+	color_ui = rgb{ 204 51 51 }
 }
 
 #### 東・東南アジア/East and Southeast Asia ###

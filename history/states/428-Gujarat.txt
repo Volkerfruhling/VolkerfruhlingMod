@@ -8,8 +8,6 @@ state={
 		1061 1103 1144 1190 4064 4090 4132 7020 7165 7207 9975 10118 12037 12092 
 	}
 	history = {
-		owner = PGI
-		add_core_of = PGI
 	}
 	manpower=10590200
 	buildings_max_level_factor=1.000

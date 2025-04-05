@@ -1,0 +1,27 @@
+#アフガニスタン/Afghanistan
+AFG = "countries/_middle_eastern.txt"
+
+#バーレーン/Bahrain
+BAH = "countries/_middle_eastern.txt"
+
+#ジャバル・シャンマル/Jabal Shammar
+JSH = "countries/_middle_eastern.txt"
+
+#マフラ王国/Mafra
+MAF = "countries/_middle_eastern.txt"
+
+#マスカット・オマーン/Muscat_Oman
+MOM = "countries/_middle_eastern.txt"
+
+#イラン/Iran
+PER = "countries/_middle_eastern.txt"
+
+#リヤド首長国/Riyadh
+RIY = "countries/_middle_eastern.txt"
+
+#トゥルーシャル・オマーン/Trucial_Oman
+TOM = "countries/_middle_eastern.txt"
+
+#イエメン/Yemen
+YEM = "countries/_middle_eastern.txt"
+

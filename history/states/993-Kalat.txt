@@ -1,0 +1,23 @@
+state={
+	id=993
+	name="STATE_993"
+	provinces={
+		7049 8098 8066
+	}
+	state_category = town
+	manpower = 480164
+
+	history = {
+
+		buildings = {
+			infrastructure = 1 #was: 5
+		}
+
+		victory_points = {
+			8098 1 # Kalat
+		}
+	}
+	
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

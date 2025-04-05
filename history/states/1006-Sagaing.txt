@@ -1,0 +1,27 @@
+state = {
+	id = 1006
+	name = "STATE_1006"
+	
+	state_category = rural
+	manpower = 966906
+	
+	history = {
+		owner = KON
+		add_core_of = KON
+
+		buildings = {
+			infrastructure = 1
+		}
+
+		victory_points = {
+			4425 1 
+		}
+	}
+
+	provinces={
+		10386 10486 12335 12464 12492 
+	}
+
+	local_supplies = 0.000
+	buildings_max_level_factor = 1.000
+}

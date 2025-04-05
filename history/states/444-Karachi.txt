@@ -2,15 +2,16 @@ state={
 	id=444
 	name="STATE_444"
 	provinces={
-		1179 5043 7917 8066 8098 12774 
+		1179 5043 7917  12761 12774 
+	}
+	resources={
+		oil=3
 	}
 	history = {
-		owner = UPB
-		add_core_of = UPB
 	}
-	manpower=463500
+	manpower=364000
 	buildings_max_level_factor=1.000
-	state_category=wasteland
+	state_category=rural
 	local_supplies=0.000
         
 

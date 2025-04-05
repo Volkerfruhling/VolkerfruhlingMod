@@ -1,0 +1,11 @@
+#ブータン/Bhutan
+BHU = "countries/_middle_eastern.txt"
+
+#カシミール/Kashmir
+KAS = "countries/_middle_eastern.txt"
+
+#ネパール/Nepal
+NEP = "countries/_middle_eastern.txt"
+
+#イギリス領インド帝国/British_Raj
+RAJ = "countries/_middle_eastern.txt"
