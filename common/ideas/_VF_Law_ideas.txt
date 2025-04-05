@@ -22,6 +22,13 @@ ideas = {
 			}
 
 			modifier = {
+
+				political_power_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.03
+				industrial_capacity_dockyard = 0.03
+				communism_drift = 0.05
+				
 			}
 
 			default = yes
@@ -44,6 +51,11 @@ ideas = {
 			}
 
 			modifier = {
+
+				political_power_factor = -0.05
+				stability_factor = 0.1
+				party_popularity_stability_factor = 0.05
+
 			}
 
 			default = yes
@@ -66,6 +78,11 @@ ideas = {
 			}
 
 			modifier = {
+
+				political_power_factor = -0.1
+				stability_factor = 0.05
+				party_popularity_stability_factor = 0.15
+
 			}
 
 			default = yes
@@ -88,6 +105,11 @@ ideas = {
 			}
 
 			modifier = {
+				
+				political_power_factor = 0.1
+				stability_factor = -0.05
+				research_speed_factor = -0.02
+
 			}
 
 			default = yes
@@ -110,6 +132,15 @@ ideas = {
 			}
 
 			modifier = {
+
+				political_power_factor = -0.1
+				stability_factor = -0.1
+				war_support_factor = -0.2
+				conscription_factor = -0.2
+				non_core_manpower = -0.3
+				local_resources_factor = 0.1
+				min_export = 0.1
+
 			}
 
 			default = yes
@@ -132,6 +163,13 @@ ideas = {
 			}
 
 			modifier = {
+
+				political_power_factor = -0.2
+				stability_factor = -0.3
+				war_support_factor = -0.5
+				conscription_factor = -0.4
+				non_core_manpower = -0.5
+				
 			}
 
 			default = yes
@@ -162,6 +200,13 @@ ideas = {
 			}
 
 			modifier = {
+
+				political_power_factor = -0.05
+				stability_factor = 0.05
+				enemy_justify_war_goal_time = 0.10
+				enemy_declare_war_tension = 0.05
+				drift_defence_factor = 0.1
+
 			}
 
 			default = yes
@@ -184,6 +229,10 @@ ideas = {
 			}
 
 			modifier = {
+				political_power_factor = -0.03
+				stability_factor = 0.03
+				enemy_justify_war_goal_time = 0.05
+				drift_defence_factor = 0.05
 			}
 
 			default = yes
@@ -206,6 +255,11 @@ ideas = {
 			}
 
 			modifier = {
+				political_power_factor = 0.05
+				stability_factor = -0.05
+				enemy_justify_war_goal_time = -0.25
+				enemy_declare_war_tension = -0.15
+				drift_defence_factor = -0.2
 			}
 
 			default = yes
@@ -236,6 +290,10 @@ ideas = {
 			}
 
 			modifier = {
+
+				political_power_factor = 0.05
+                stability_factor = 0.03
+
 			}
 
 			default = yes
@@ -258,6 +316,8 @@ ideas = {
 			}
 
 			modifier = {
+				political_power_factor = 0.03
+                stability_factor = 0.01
 			}
 
 			default = yes
@@ -280,6 +340,7 @@ ideas = {
 			}
 
 			modifier = {
+				political_power_factor = -0.02
 			}
 
 			default = yes
@@ -302,6 +363,7 @@ ideas = {
 			}
 
 			modifier = {
+				political_power_factor = -0.05
 			}
 
 			default = yes
@@ -332,6 +394,12 @@ ideas = {
 			}
 
 			modifier = {
+
+				political_power_factor = -0.05
+				stability_factor = 0.05
+				forced_surrender_limit = 0.3
+				compliance_gain = -0.1
+
 			}
 
 			default = yes
@@ -354,6 +422,10 @@ ideas = {
 			}
 
 			modifier = {
+				political_power_factor = -0.02
+				stability_factor = 0.03
+				forced_surrender_limit = 0.1
+				compliance_gain = -0.05
 			}
 
 			default = yes
@@ -376,6 +448,8 @@ ideas = {
 			}
 
 			modifier = {
+				political_power_factor = 0.02
+				compliance_gain = 0.01
 			}
 
 			default = yes
@@ -398,6 +472,10 @@ ideas = {
 			}
 
 			modifier = {
+				political_power_factor = 0.05
+				stability_factor = -0.05
+				compliance_gain = 0.1
+				research_speed_factor = 0.01
 			}
 
 			default = yes
@@ -428,6 +506,11 @@ ideas = {
 			}
 
 			modifier = {
+				political_power_factor = -0.05
+				stability_factor = 0.05
+				industrial_capacity_factory = 0.05
+				local_resources_factor = 0.05
+                monthly_population = -0.2
 			}
 
 			default = yes
@@ -450,6 +533,10 @@ ideas = {
 			}
 
 			modifier = {
+				political_power_factor = -0.02
+				industrial_capacity_factory = 0.05
+				local_resources_factor = 0.05
+                monthly_population = -0.1
 			}
 
 			default = yes
@@ -472,6 +559,9 @@ ideas = {
 			}
 
 			modifier = {
+				political_power_factor = 0.05
+				stability_factor = -0.05
+                monthly_population = 0.2
 			}
 
 			default = yes
@@ -502,6 +592,10 @@ ideas = {
             }
     
             modifier = {
+				resistance_target = -0.15
+				compliance_gain = 0.05
+				non_core_manpower = 0.2
+                monthly_population = 0.5
             }
     
             default = yes
@@ -524,6 +618,10 @@ ideas = {
             }
     
             modifier = {
+				resistance_target = -0.1
+				compliance_gain = 0.03
+				non_core_manpower = 0.1
+                monthly_population = 0.25
             }
     
             default = yes
@@ -546,6 +644,11 @@ ideas = {
             }
     
             modifier = {
+
+				resistance_target = -0.05
+				compliance_gain = 0.01
+				non_core_manpower = 0.05
+                monthly_population = 0.1
             }
     
             default = yes
@@ -568,6 +671,13 @@ ideas = {
             }
     
             modifier = {
+				resistance_target = 0.1
+				compliance_gain = -0.1
+				non_core_manpower = -0.1
+                offensive_war_stability_factor = 0.05
+				defensive_war_stability_factor = 0.1
+                justify_war_goal_time = -0.05
+
             }
     
             default = yes
@@ -590,6 +700,12 @@ ideas = {
             }
     
             modifier = {
+				resistance_target = 0.2
+				compliance_gain = -0.2
+				non_core_manpower = -0.2
+				offensive_war_stability_factor = 0.1
+				defensive_war_stability_factor = 0.2
+                justify_war_goal_time = -0.1
             }
     
             default = yes
@@ -616,6 +732,12 @@ ideas = {
 			level = 1
     
             modifier = {
+
+                research_speed_factor = 0.1
+                consumer_goods_factor = 0.1
+                political_power_factor = -0.1
+                research_sharing_per_country_bonus = 0.05
+
             }
     
             default = yes
@@ -632,6 +754,12 @@ ideas = {
 			level = 2
     
             modifier = {
+
+                research_speed_factor = 0.05
+                consumer_goods_factor = 0.05
+                political_power_factor = -0.05
+                research_sharing_per_country_bonus = 0.025
+
             }
     
             default = yes
@@ -648,6 +776,8 @@ ideas = {
 			level = 3
     
             modifier = {
+                research_speed_factor = 0.01
+                political_power_factor = -0.01
             }
     
             default = yes
@@ -664,6 +794,8 @@ ideas = {
 			level = 4
     
             modifier = {
+                research_speed_factor = -0.05
+                consumer_goods_factor = -0.05
             }
     
             default = yes
@@ -677,9 +809,11 @@ ideas = {
             cost = 100
             removal_cost = -1
 
-			level = 5
+			level = 4
     
             modifier = {
+                research_speed_factor = 0.02
+                consumer_goods_factor = 0.1
             }
     
             default = yes
@@ -693,9 +827,11 @@ ideas = {
             cost = 100
             removal_cost = -1
 
-			level = 6
+			level = 5
     
             modifier = {
+                research_speed_factor = -0.1
+                consumer_goods_factor = -0.1
             }
     
             default = yes
@@ -728,6 +864,13 @@ ideas = {
             }
     
             modifier = {
+
+                production_factory_start_efficiency_factor = 0.02
+                production_speed_buildings_factor = -0.03
+                local_resources_factor = -0.03
+                stability_factor = 0.03
+                industry_free_repair_factor = -0.1
+
             }
     
             default = yes
@@ -750,6 +893,14 @@ ideas = {
             }
     
             modifier = {
+
+                production_factory_start_efficiency_factor = 0.01
+                production_speed_buildings_factor = -0.015
+                local_resources_factor = -0.015
+                stability_factor = 0.01
+                industry_free_repair_factor = -0.05
+
+
             }
     
             default = yes
@@ -772,6 +923,11 @@ ideas = {
             }
     
             modifier = {
+                production_factory_start_efficiency_factor = -0.01
+                production_speed_buildings_factor = 0.015
+                local_resources_factor = 0.005
+                stability_factor = -0.025
+                industry_free_repair_factor = 0.05
             }
     
             default = yes
@@ -794,6 +950,11 @@ ideas = {
             }
     
             modifier = {
+                production_factory_start_efficiency_factor = -0.02
+                production_speed_buildings_factor = 0.030
+                local_resources_factor = 0.01
+                stability_factor = -0.05
+                industry_free_repair_factor = 0.1
             }
     
             default = yes
@@ -816,6 +977,11 @@ ideas = {
             }
     
             modifier = {
+                production_factory_start_efficiency_factor = -0.03
+                production_speed_buildings_factor = 0.045
+                local_resources_factor = 0.015
+                stability_factor = -0.075
+                industry_free_repair_factor = 0.15
             }
     
             default = yes
@@ -838,6 +1004,11 @@ ideas = {
             }
     
             modifier = {
+                production_factory_start_efficiency_factor = -0.04
+                production_speed_buildings_factor = 0.06
+                local_resources_factor = 0.02
+                stability_factor = -0.1
+                industry_free_repair_factor = 0.20
             }
     
             default = yes
@@ -869,6 +1040,14 @@ ideas = {
             }
     
             modifier = {
+                industrial_capacity_factory = 0.03
+                production_speed_buildings_factor = 0.1
+                consumer_goods_factor = 0.2
+                production_speed_arms_factory_factor = -0.15
+                production_speed_industrial_complex_factor = -0.25
+                research_speed_factor = 0.1
+                stability_factor = 0.03
+                local_resources_factor = 0.15
             }
     
             default = yes
@@ -891,6 +1070,12 @@ ideas = {
             }
     
             modifier = {
+                production_speed_buildings_factor = 0.01
+                consumer_goods_factor = 0.1
+                production_speed_arms_factory_factor = -0.1
+                production_speed_industrial_complex_factor = -0.15
+                research_speed_factor = 0.05
+                local_resources_factor = 0.15
             }
     
             default = yes
@@ -913,6 +1098,10 @@ ideas = {
             }
     
             modifier = {
+                production_speed_arms_factory_factor = 0.05
+                production_speed_industrial_complex_factor = -0.05
+                research_speed_factor = -0.05
+                local_resources_factor = 0.05
             }
     
             default = yes
@@ -935,6 +1124,12 @@ ideas = {
             }
     
             modifier = {
+                production_speed_arms_factory_factor = 0.1
+                production_speed_industrial_complex_factor = 0.05
+                research_speed_factor = -0.1
+                stability_factor = -0.03
+                consumer_goods_factor = -0.1
+                local_resources_factor = -0.05
             }
     
             default = yes
@@ -964,6 +1159,11 @@ ideas = {
             }
     
             modifier = {
+                stability_factor = -0.1
+                production_factory_start_efficiency_factor = -0.2
+                line_change_production_efficiency_factor = -0.2
+                consumer_goods_factor = 0.2
+                monthly_population = -0.4
             }
     
             default = yes
@@ -986,6 +1186,11 @@ ideas = {
             }
     
             modifier = {
+                stability_factor = -0.08
+                production_factory_start_efficiency_factor = -0.16
+                line_change_production_efficiency_factor = -0.16
+                consumer_goods_factor = 0.16
+                monthly_population = -0.3
             }
     
             default = yes
@@ -1008,6 +1213,11 @@ ideas = {
             }
     
             modifier = {
+                stability_factor = -0.06
+                production_factory_start_efficiency_factor = -0.12
+                line_change_production_efficiency_factor = -0.12
+                consumer_goods_factor = 0.12
+                monthly_population = -0.2
             }
     
             default = yes
@@ -1030,6 +1240,11 @@ ideas = {
             }
     
             modifier = {
+                stability_factor = -0.04
+                production_factory_start_efficiency_factor = -0.08
+                line_change_production_efficiency_factor = -0.08
+                consumer_goods_factor = 0.08
+                monthly_population = -0.1
             }
     
             default = yes
@@ -1052,6 +1267,11 @@ ideas = {
             }
     
             modifier = {
+                stability_factor = -0.02
+                production_factory_start_efficiency_factor = -0.04
+                line_change_production_efficiency_factor = -0.04
+                consumer_goods_factor = 0.04
+                monthly_population = -0.05
             }
     
             default = yes
@@ -1074,6 +1294,8 @@ ideas = {
             }
     
             modifier = {
+                stability_factor = 0.01
+                consumer_goods_factor = 0.02
             }
     
             default = yes
@@ -1096,6 +1318,11 @@ ideas = {
             }
     
             modifier = {
+                stability_factor = 0.02
+                production_factory_start_efficiency_factor = 0.025
+                line_change_production_efficiency_factor = 0.025
+                consumer_goods_factor =-0.025
+                monthly_population = 0.025
             }
     
             default = yes
@@ -1118,6 +1345,11 @@ ideas = {
             }
     
             modifier = {
+                stability_factor = 0.03
+                production_factory_start_efficiency_factor = 0.05
+                line_change_production_efficiency_factor = 0.05
+                consumer_goods_factor =-0.050
+                monthly_population = 0.050
             }
     
             default = yes
@@ -1140,6 +1372,11 @@ ideas = {
             }
     
             modifier = {
+                stability_factor = 0.04
+                production_factory_start_efficiency_factor = 0.075
+                line_change_production_efficiency_factor = 0.075
+                consumer_goods_factor =-0.075
+                monthly_population = 0.075
             }
     
             default = yes
@@ -1162,6 +1399,11 @@ ideas = {
             }
     
             modifier = {
+                stability_factor = 0.05
+                production_factory_start_efficiency_factor = 0.1
+                line_change_production_efficiency_factor = 0.1
+                consumer_goods_factor =-0.1
+                monthly_population = 0.1
             }
     
             default = yes
@@ -1183,12 +1425,14 @@ ideas = {
 
 		Prohibited_military_service = {
 
-            cost = 75
+             cost = 100
             removal_cost = -1
 
 			level = 1
     
             modifier = {
+                political_power_factor = 0.05
+                conscription_factor = -0.1
             }
     
             default = yes
@@ -1199,12 +1443,14 @@ ideas = {
 
 		Limited_assistance_missions = {
 
-            cost = 75
+             cost = 100
             removal_cost = -1
 
 			level = 2
     
             modifier = {
+                political_power_factor = 0.025
+                conscription_factor = -0.05
             }
     
             default = yes
@@ -1215,12 +1461,14 @@ ideas = {
 
 		Extensive_assistance_missions = {
 
-            cost = 75
+             cost = 100
             removal_cost = -1
 
 			level = 3
     
             modifier = {
+                political_power_factor = -0.05
+                army_morale_factor = 0.01
             }
     
             default = yes
@@ -1231,12 +1479,15 @@ ideas = {
 
 		Combat_support_missions = {
 
-            cost = 75
+             cost = 100
             removal_cost = -1
 
 			level = 4
     
             modifier = {
+                political_power_factor = -0.1
+                army_morale_factor = 0.01
+                conscription_factor = 0.05
             }
     
             default = yes
@@ -1247,12 +1498,15 @@ ideas = {
 
 		Conditional_combat_missions = {
 
-            cost = 75
+             cost = 100
             removal_cost = -1
 
 			level = 5
     
             modifier = {
+                political_power_factor = -0.15
+                army_morale_factor = 0.01
+                conscription_factor = 0.1
             }
     
             default = yes
@@ -1263,12 +1517,15 @@ ideas = {
 
 		Unconditional_combat_missions = {
 
-            cost = 75
+             cost = 100
             removal_cost = -1
 
 			level = 6
     
             modifier = {
+                political_power_factor = -0.2
+                army_morale_factor = 0.01
+                conscription_factor = 0.2
             }
     
             default = yes
@@ -1293,6 +1550,8 @@ ideas = {
 			level = 1
     
             modifier = {
+                war_support_factor = -0.05
+                consumer_goods_factor = 0.05
             }
     
             default = yes
@@ -1309,6 +1568,8 @@ ideas = {
 			level = 2
     
             modifier = {
+                conscription_factor = -0.1
+                stability_factor = 0.05
             }
     
             default = yes
@@ -1325,6 +1586,9 @@ ideas = {
 			level = 2
     
             modifier = {
+                conscription_factor = -0.1
+                research_speed_factor = 0.05
+                research_sharing_per_country_bonus = 0.03
             }
     
             default = yes
@@ -1341,6 +1605,9 @@ ideas = {
 			level = 2
     
             modifier = {
+                conscription_factor = -0.1
+                political_power_factor = 0.1
+
             }
     
             default = yes
@@ -1357,6 +1624,11 @@ ideas = {
 			level = 3
     
             modifier = {
+                conscription_factor = -0.3
+                political_power_factor = 0.1
+                research_speed_factor = 0.05
+                research_sharing_per_country_bonus = 0.03
+                stability_factor = 0.05
             }
     
             default = yes
@@ -1375,12 +1647,22 @@ ideas = {
 
 		No_training = {
 
-            cost = 75
+             cost = 100
             removal_cost = -1
 
 			level = 1
     
             modifier = {
+                minimum_training_level = -0.2
+                training_time_factor = -0.2
+                experience_loss_factor = 0.5
+                land_night_attack = -0.5
+                supply_consumption_factor = 0.1
+                army_org_factor = -0.1
+                army_org_regain = -0.1
+                army_speed_factor = -0.05
+                attrition = 0.2
+                org_loss_when_moving = 0.2
             }
     
             default = yes
@@ -1391,12 +1673,22 @@ ideas = {
 
 		Some_military_training = {
 
-            cost = 75
+             cost = 100
             removal_cost = -1
 
 			level = 2
     
             modifier = {
+                minimum_training_level = -0.1
+                training_time_factor = -0.1
+                experience_loss_factor = 0.2
+                land_night_attack = -0.25
+                supply_consumption_factor = 0.05
+                army_org_factor = -0.05
+                army_org_regain = -0.05
+                army_speed_factor = -0.025
+                attrition = 0.1
+                org_loss_when_moving = 0.1
             }
     
             default = yes
@@ -1407,12 +1699,15 @@ ideas = {
 		
 		Basic_military_training = {
 
-            cost = 75
+             cost = 100
             removal_cost = -1
 
 			level = 3
     
             modifier = {
+                minimum_training_level = 0
+                training_time_factor = 0.05
+                experience_loss_factor = -0.01
             }
     
             default = yes
@@ -1423,12 +1718,19 @@ ideas = {
 		
 		Severe_military_training = {
 
-            cost = 75
+             cost = 100
             removal_cost = -1
 
 			level = 4
     
             modifier = {
+                minimum_training_level = 0.05
+                training_time_factor = 0.1
+                experience_loss_factor = -0.1
+                army_org_factor = 0.025
+                supply_consumption_factor = -0.025
+                attrition = -0.025
+                org_loss_when_moving = -0.025
             }
     
             default = yes
@@ -1439,12 +1741,19 @@ ideas = {
 		
 		Advanced_military_training = {
 
-            cost = 75
+             cost = 100
             removal_cost = -1
 
 			level = 5
     
             modifier = {
+                minimum_training_level = 0.1
+                training_time_factor = 0.2
+                experience_loss_factor = -0.25
+                army_org_factor = 0.05
+                supply_consumption_factor = -0.05
+                attrition = -0.05
+                org_loss_when_moving = -0.05
             }
     
             default = yes
@@ -1455,12 +1764,19 @@ ideas = {
 		
 		Skilled_military_training = {
 
-            cost = 75
+             cost = 100
             removal_cost = -1
 
 			level = 6
     
             modifier = {
+                minimum_training_level = 0.2
+                training_time_factor = 0.4
+                experience_loss_factor = -0.5
+                army_org_factor = 0.1
+                supply_consumption_factor = -0.1
+                attrition = -0.1
+                org_loss_when_moving = -0.1
             }
     
             default = yes
@@ -1492,6 +1808,16 @@ ideas = {
             }
     
             modifier = {
+                army_attack_factor = 0.1
+                army_defence_factor  = 0.1
+                army_speed_factor = 0.1
+                max_planning = 0.15
+                planning_speed = 0.1
+                dig_in_speed_factor = 0.1
+                max_dig_in_factor = 0.15
+                land_doctrine_cost_factor = -0.1
+                naval_doctrine_cost_factor = -0.1
+                air_doctrine_cost_factor = -0.1
             }
     
             default = yes
@@ -1514,6 +1840,16 @@ ideas = {
             }
     
             modifier = {
+                army_attack_factor = 0.05
+                army_defence_factor  = 0.05
+                army_speed_factor = 0.05
+                max_planning = 0.1
+                planning_speed = 0.05
+                dig_in_speed_factor = 0.1
+                max_dig_in_factor = 0.15
+                land_doctrine_cost_factor = 0.2
+                naval_doctrine_cost_factor = 0.2
+                air_doctrine_cost_factor = 0.2
             }
     
             default = yes
@@ -1536,6 +1872,16 @@ ideas = {
             }
     
             modifier = {
+                army_attack_factor = -0.10
+                army_defence_factor  = -0.05
+                army_speed_factor = -0.1
+                max_planning = -0.1
+                planning_speed = -0.2
+                dig_in_speed_factor = 0.05
+                max_dig_in_factor = 0.2
+                land_doctrine_cost_factor = 0.5
+                naval_doctrine_cost_factor = 0.5
+                air_doctrine_cost_factor = 0.5
             }
     
             default = yes
@@ -1558,6 +1904,16 @@ ideas = {
             }
     
             modifier = {
+                army_attack_factor = -0.20
+                army_defence_factor  = -0.15
+                army_speed_factor = -0.2
+                max_planning = -0.3
+                planning_speed = -0.5
+                dig_in_speed_factor = -0.2
+                max_dig_in_factor = -0.3
+                land_doctrine_cost_factor = 1
+                naval_doctrine_cost_factor = 1
+                air_doctrine_cost_factor = 1
             }
     
             default = yes
