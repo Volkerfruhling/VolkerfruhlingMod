@@ -31,8 +31,6 @@ ideas = {
 				
 			}
 
-			default = yes
-
 			cancel_if_invalid = no
 
 		}
@@ -57,8 +55,6 @@ ideas = {
 				party_popularity_stability_factor = 0.05
 
 			}
-
-			default = yes
 
 			cancel_if_invalid = no
 
@@ -85,8 +81,6 @@ ideas = {
 
 			}
 
-			default = yes
-
 			cancel_if_invalid = no
 
 		}
@@ -95,6 +89,7 @@ ideas = {
 
 			cost = 0
 			removal_cost = -1
+            default = yes
 
             allowed_to_remove = { 
 				always = no 
@@ -111,8 +106,6 @@ ideas = {
 				research_speed_factor = -0.02
 
 			}
-
-			default = yes
 
 			cancel_if_invalid = no
 
@@ -143,7 +136,6 @@ ideas = {
 
 			}
 
-			default = yes
 
 			cancel_if_invalid = no
 
@@ -172,7 +164,7 @@ ideas = {
 				
 			}
 
-			default = yes
+			
 
 			cancel_if_invalid = no
 
@@ -209,7 +201,7 @@ ideas = {
 
 			}
 
-			default = yes
+			
 
 			cancel_if_invalid = no
 
@@ -235,7 +227,7 @@ ideas = {
 				drift_defence_factor = 0.05
 			}
 
-			default = yes
+			
 
 			cancel_if_invalid = no
 
@@ -245,6 +237,7 @@ ideas = {
 
 			cost = 0
 			removal_cost = -1
+            default = yes
 
             allowed_to_remove = { 
 				always = no 
@@ -262,7 +255,7 @@ ideas = {
 				drift_defence_factor = -0.2
 			}
 
-			default = yes
+			
 
 			cancel_if_invalid = no
 
@@ -296,7 +289,7 @@ ideas = {
 
 			}
 
-			default = yes
+			
 
 			cancel_if_invalid = no
 
@@ -320,7 +313,7 @@ ideas = {
                 stability_factor = 0.01
 			}
 
-			default = yes
+			
 
 			cancel_if_invalid = no
 
@@ -343,7 +336,7 @@ ideas = {
 				political_power_factor = -0.02
 			}
 
-			default = yes
+			
 
 			cancel_if_invalid = no
 
@@ -353,6 +346,7 @@ ideas = {
 
 			cost = 0
 			removal_cost = -1
+            default = yes
 
             allowed_to_remove = { 
 				always = no 
@@ -366,7 +360,7 @@ ideas = {
 				political_power_factor = -0.05
 			}
 
-			default = yes
+			
 
 			cancel_if_invalid = no
 
@@ -402,7 +396,7 @@ ideas = {
 
 			}
 
-			default = yes
+			
 
 			cancel_if_invalid = no
 
@@ -428,7 +422,7 @@ ideas = {
 				compliance_gain = -0.05
 			}
 
-			default = yes
+			
 
 			cancel_if_invalid = no
 
@@ -438,6 +432,7 @@ ideas = {
 
 			cost = 0
 			removal_cost = -1
+            default = yes
 
             allowed_to_remove = { 
 				always = no 
@@ -452,7 +447,7 @@ ideas = {
 				compliance_gain = 0.01
 			}
 
-			default = yes
+			
 
 			cancel_if_invalid = no
 
@@ -478,7 +473,7 @@ ideas = {
 				research_speed_factor = 0.01
 			}
 
-			default = yes
+			
 
 			cancel_if_invalid = no
 
@@ -510,10 +505,10 @@ ideas = {
 				stability_factor = 0.05
 				industrial_capacity_factory = 0.05
 				local_resources_factor = 0.05
-                monthly_population = -0.2
+                monthly_population = -0.1
 			}
 
-			default = yes
+			
 
 			cancel_if_invalid = no
 
@@ -536,10 +531,10 @@ ideas = {
 				political_power_factor = -0.02
 				industrial_capacity_factory = 0.05
 				local_resources_factor = 0.05
-                monthly_population = -0.1
+                monthly_population = -0.05
 			}
 
-			default = yes
+			
 
 			cancel_if_invalid = no
 
@@ -549,6 +544,7 @@ ideas = {
 
 			cost = 0
 			removal_cost = -1
+            default = yes
 
             allowed_to_remove = { 
 				always = no 
@@ -561,10 +557,10 @@ ideas = {
 			modifier = {
 				political_power_factor = 0.05
 				stability_factor = -0.05
-                monthly_population = 0.2
+                monthly_population = 0.1
 			}
 
-			default = yes
+			
 
 			cancel_if_invalid = no
 
@@ -598,7 +594,7 @@ ideas = {
                 monthly_population = 0.5
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -624,7 +620,7 @@ ideas = {
                 monthly_population = 0.25
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -651,7 +647,7 @@ ideas = {
                 monthly_population = 0.1
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -661,6 +657,7 @@ ideas = {
     
             cost = 0
             removal_cost = -1
+            default = yes
     
             allowed_to_remove = { 
                 always = no 
@@ -677,10 +674,11 @@ ideas = {
                 offensive_war_stability_factor = 0.05
 				defensive_war_stability_factor = 0.1
                 justify_war_goal_time = -0.05
+                monthly_population = -0.1
 
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -706,9 +704,10 @@ ideas = {
 				offensive_war_stability_factor = 0.1
 				defensive_war_stability_factor = 0.2
                 justify_war_goal_time = -0.1
+                monthly_population = -0.2
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -726,7 +725,7 @@ ideas = {
 
 		Subsidized_higher_education = {
 
-            cost = 100
+           cost = 100
             removal_cost = -1
 
 			level = 1
@@ -740,7 +739,7 @@ ideas = {
 
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -748,7 +747,7 @@ ideas = {
 
 		Subsidized_post_secondary_education = {
 
-            cost = 100
+           cost = 100
             removal_cost = -1
 
 			level = 2
@@ -762,7 +761,7 @@ ideas = {
 
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -770,8 +769,9 @@ ideas = {
 
 		Compulsory_first_semester_secondary_education = {
 
-            cost = 100
+           cost = 100
             removal_cost = -1
+            default = yes
 
 			level = 3
     
@@ -780,7 +780,7 @@ ideas = {
                 political_power_factor = -0.01
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -788,7 +788,7 @@ ideas = {
 
 		Compulsory_primary_education = {
 
-            cost = 100
+           cost = 100
             removal_cost = -1
 
 			level = 4
@@ -798,7 +798,7 @@ ideas = {
                 consumer_goods_factor = -0.05
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -806,7 +806,7 @@ ideas = {
 
 		Privatized_education = {
 
-            cost = 100
+           cost = 100
             removal_cost = -1
 
 			level = 4
@@ -816,7 +816,7 @@ ideas = {
                 consumer_goods_factor = 0.1
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -824,7 +824,7 @@ ideas = {
 
 		No_education_law = {
 
-            cost = 100
+           cost = 100
             removal_cost = -1
 
 			level = 5
@@ -834,7 +834,7 @@ ideas = {
                 consumer_goods_factor = -0.1
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -873,7 +873,7 @@ ideas = {
 
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -903,7 +903,7 @@ ideas = {
 
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -913,6 +913,7 @@ ideas = {
 
             cost = 0
             removal_cost = -1
+            default = yes
     
             allowed_to_remove = { 
                 always = no 
@@ -930,7 +931,7 @@ ideas = {
                 industry_free_repair_factor = 0.05
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -957,7 +958,7 @@ ideas = {
                 industry_free_repair_factor = 0.1
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -984,7 +985,7 @@ ideas = {
                 industry_free_repair_factor = 0.15
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1011,7 +1012,7 @@ ideas = {
                 industry_free_repair_factor = 0.20
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1050,35 +1051,7 @@ ideas = {
                 local_resources_factor = 0.15
             }
     
-            default = yes
-    
-            cancel_if_invalid = no
-    
-        }
-
-		Developing_countries = {
-
-            cost = 0
-            removal_cost = -1
-    
-            allowed_to_remove = { 
-                always = no 
-            }
-    
-            available = { 
-                always = no
-            }
-    
-            modifier = {
-                production_speed_buildings_factor = 0.01
-                consumer_goods_factor = 0.1
-                production_speed_arms_factory_factor = -0.1
-                production_speed_industrial_complex_factor = -0.15
-                research_speed_factor = 0.05
-                local_resources_factor = 0.15
-            }
-    
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1098,13 +1071,42 @@ ideas = {
             }
     
             modifier = {
+                production_speed_buildings_factor = 0.05
+                consumer_goods_factor = 0.1
+                production_speed_arms_factory_factor = -0.1
+                production_speed_industrial_complex_factor = -0.15
+                research_speed_factor = 0.05
+                local_resources_factor = 0.15
+            }
+    
+            
+    
+            cancel_if_invalid = no
+    
+        }
+
+		Developing_countries = {
+
+            cost = 0
+            removal_cost = -1
+            default = yes
+    
+            allowed_to_remove = { 
+                always = no 
+            }
+    
+            available = { 
+                always = no
+            }
+    
+            modifier = {
                 production_speed_arms_factory_factor = 0.05
                 production_speed_industrial_complex_factor = -0.05
                 research_speed_factor = -0.05
                 local_resources_factor = 0.05
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1132,7 +1134,7 @@ ideas = {
                 local_resources_factor = -0.05
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1166,7 +1168,7 @@ ideas = {
                 monthly_population = -0.4
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1193,7 +1195,7 @@ ideas = {
                 monthly_population = -0.3
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1220,7 +1222,7 @@ ideas = {
                 monthly_population = -0.2
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1247,7 +1249,7 @@ ideas = {
                 monthly_population = -0.1
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1274,7 +1276,7 @@ ideas = {
                 monthly_population = -0.05
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1284,6 +1286,7 @@ ideas = {
 
             cost = 0
             removal_cost = -1
+            default = yes
     
             allowed_to_remove = { 
                 always = no 
@@ -1298,7 +1301,7 @@ ideas = {
                 consumer_goods_factor = 0.02
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1325,7 +1328,7 @@ ideas = {
                 monthly_population = 0.025
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1352,7 +1355,7 @@ ideas = {
                 monthly_population = 0.050
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1379,7 +1382,7 @@ ideas = {
                 monthly_population = 0.075
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1406,7 +1409,7 @@ ideas = {
                 monthly_population = 0.1
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1425,8 +1428,9 @@ ideas = {
 
 		Prohibited_military_service = {
 
-             cost = 100
+           cost = 100
             removal_cost = -1
+            default = yes
 
 			level = 1
     
@@ -1435,7 +1439,7 @@ ideas = {
                 conscription_factor = -0.1
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1443,7 +1447,7 @@ ideas = {
 
 		Limited_assistance_missions = {
 
-             cost = 100
+            cost = 100
             removal_cost = -1
 
 			level = 2
@@ -1453,7 +1457,7 @@ ideas = {
                 conscription_factor = -0.05
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1461,7 +1465,7 @@ ideas = {
 
 		Extensive_assistance_missions = {
 
-             cost = 100
+            cost = 100
             removal_cost = -1
 
 			level = 3
@@ -1471,7 +1475,7 @@ ideas = {
                 army_morale_factor = 0.01
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1479,7 +1483,7 @@ ideas = {
 
 		Combat_support_missions = {
 
-             cost = 100
+            cost = 100
             removal_cost = -1
 
 			level = 4
@@ -1490,7 +1494,7 @@ ideas = {
                 conscription_factor = 0.05
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1498,7 +1502,7 @@ ideas = {
 
 		Conditional_combat_missions = {
 
-             cost = 100
+            cost = 100
             removal_cost = -1
 
 			level = 5
@@ -1509,7 +1513,7 @@ ideas = {
                 conscription_factor = 0.1
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1517,7 +1521,7 @@ ideas = {
 
 		Unconditional_combat_missions = {
 
-             cost = 100
+            cost = 100
             removal_cost = -1
 
 			level = 6
@@ -1528,7 +1532,7 @@ ideas = {
                 conscription_factor = 0.2
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1544,8 +1548,9 @@ ideas = {
 
 		No_draft_exemption = {
 
-            cost = 100
+           cost = 100
             removal_cost = -1
+            default = yes
 
 			level = 1
     
@@ -1554,7 +1559,7 @@ ideas = {
                 consumer_goods_factor = 0.05
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1562,7 +1567,7 @@ ideas = {
 
 		Religious_draft_exemption = {
 
-            cost = 100
+           cost = 100
             removal_cost = -1
 
 			level = 2
@@ -1572,7 +1577,7 @@ ideas = {
                 stability_factor = 0.05
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1580,7 +1585,7 @@ ideas = {
 
 		Academic_draft_exemption = {
 
-            cost = 100
+           cost = 100
             removal_cost = -1
 
 			level = 2
@@ -1591,7 +1596,7 @@ ideas = {
                 research_sharing_per_country_bonus = 0.03
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1599,7 +1604,7 @@ ideas = {
 
 		Civil_service_draft_exemption = {
 
-            cost = 100
+           cost = 100
             removal_cost = -1
 
 			level = 2
@@ -1610,7 +1615,7 @@ ideas = {
 
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1618,7 +1623,7 @@ ideas = {
 
 		Total_draft_exemption = {
 
-            cost = 100
+           cost = 100
             removal_cost = -1
 
 			level = 3
@@ -1631,7 +1636,7 @@ ideas = {
                 stability_factor = 0.05
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1647,7 +1652,7 @@ ideas = {
 
 		No_training = {
 
-             cost = 100
+            cost = 100
             removal_cost = -1
 
 			level = 1
@@ -1655,7 +1660,7 @@ ideas = {
             modifier = {
                 minimum_training_level = -0.2
                 training_time_factor = -0.2
-                experience_loss_factor = 0.5
+                experience_loss_factor = 0.2
                 land_night_attack = -0.5
                 supply_consumption_factor = 0.1
                 army_org_factor = -0.1
@@ -1665,7 +1670,7 @@ ideas = {
                 org_loss_when_moving = 0.2
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1673,7 +1678,7 @@ ideas = {
 
 		Some_military_training = {
 
-             cost = 100
+            cost = 100
             removal_cost = -1
 
 			level = 2
@@ -1681,7 +1686,7 @@ ideas = {
             modifier = {
                 minimum_training_level = -0.1
                 training_time_factor = -0.1
-                experience_loss_factor = 0.2
+                experience_loss_factor = 0.1
                 land_night_attack = -0.25
                 supply_consumption_factor = 0.05
                 army_org_factor = -0.05
@@ -1691,7 +1696,7 @@ ideas = {
                 org_loss_when_moving = 0.1
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1699,8 +1704,9 @@ ideas = {
 		
 		Basic_military_training = {
 
-             cost = 100
+            cost = 100
             removal_cost = -1
+            default = yes
 
 			level = 3
     
@@ -1710,7 +1716,7 @@ ideas = {
                 experience_loss_factor = -0.01
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1718,7 +1724,7 @@ ideas = {
 		
 		Severe_military_training = {
 
-             cost = 100
+            cost = 100
             removal_cost = -1
 
 			level = 4
@@ -1726,14 +1732,14 @@ ideas = {
             modifier = {
                 minimum_training_level = 0.05
                 training_time_factor = 0.1
-                experience_loss_factor = -0.1
+                experience_loss_factor = -0.05
                 army_org_factor = 0.025
                 supply_consumption_factor = -0.025
                 attrition = -0.025
                 org_loss_when_moving = -0.025
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1741,7 +1747,7 @@ ideas = {
 		
 		Advanced_military_training = {
 
-             cost = 100
+            cost = 100
             removal_cost = -1
 
 			level = 5
@@ -1749,14 +1755,14 @@ ideas = {
             modifier = {
                 minimum_training_level = 0.1
                 training_time_factor = 0.2
-                experience_loss_factor = -0.25
+                experience_loss_factor = -0.10
                 army_org_factor = 0.05
                 supply_consumption_factor = -0.05
                 attrition = -0.05
                 org_loss_when_moving = -0.05
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1764,7 +1770,7 @@ ideas = {
 		
 		Skilled_military_training = {
 
-             cost = 100
+            cost = 100
             removal_cost = -1
 
 			level = 6
@@ -1772,14 +1778,14 @@ ideas = {
             modifier = {
                 minimum_training_level = 0.2
                 training_time_factor = 0.4
-                experience_loss_factor = -0.5
+                experience_loss_factor = -0.20
                 army_org_factor = 0.1
                 supply_consumption_factor = -0.1
                 attrition = -0.1
                 org_loss_when_moving = -0.1
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1820,7 +1826,7 @@ ideas = {
                 air_doctrine_cost_factor = -0.1
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1852,7 +1858,7 @@ ideas = {
                 air_doctrine_cost_factor = 0.2
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1862,6 +1868,7 @@ ideas = {
 
             cost = 0
             removal_cost = -1
+            default = yes
     
             allowed_to_remove = { 
                 always = no 
@@ -1884,7 +1891,7 @@ ideas = {
                 air_doctrine_cost_factor = 0.5
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
@@ -1916,7 +1923,7 @@ ideas = {
                 air_doctrine_cost_factor = 1
             }
     
-            default = yes
+            
     
             cancel_if_invalid = no
     
