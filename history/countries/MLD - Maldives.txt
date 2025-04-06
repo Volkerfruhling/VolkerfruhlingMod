@@ -154,7 +154,7 @@ set_politics = {
 
 }
 set_popularities = {
-	liberalism = 100 
+	liberalism= 100 
 }
 
 add_ideas = {

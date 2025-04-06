@@ -1,3 +1,6 @@
+#オーッサ/Afar
+AFA = "countries/_african.txt"
+
 #エジプト/Egypt
 EGY = "countries/_middle_eastern.txt"
 

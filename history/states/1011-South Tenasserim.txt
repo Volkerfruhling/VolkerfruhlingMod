@@ -1,0 +1,27 @@
+state = {
+	id = 1011
+	name = "STATE_1011"
+	
+	state_category = rural
+	manpower = 45564
+	
+	history = {
+		owner = THA
+		add_core_of = THA
+
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+	}
+
+	provinces = {
+			10217
+			12292
+			1296
+			1385
+			4275
+		}
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
+}

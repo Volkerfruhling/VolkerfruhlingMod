@@ -1,0 +1,32 @@
+state={
+	id=1012
+	name="STATE_1012"
+	history = {
+		owner = THA
+		add_core_of = THA
+		buildings = {
+			infrastructure = 1
+
+		}
+	}
+	provinces={
+			10134
+			10177
+			10467
+			12191
+			12460
+			1353
+			4251
+			4302
+			4359
+			5236
+			7404
+		}
+	manpower=2622500
+	buildings_max_level_factor=1.000
+	state_category=town
+
+	local_supplies=0.0 
+        
+
+}

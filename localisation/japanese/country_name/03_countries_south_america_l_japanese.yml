@@ -27,13 +27,21 @@
  ECU_DEF: "エクアドル"
  ECU_ADJ: "エクアドル"
 
- MAP: "マプチェニア"
- MAP_DEF: "マプチェニア"
- MAP_ADJ: "マプチェニア"
+ PAN: "パナマ"
+ PAN_DEF: "パナマ"
+ PAN_ADJ: "パナマ"
+
+ PAR: "パラグアイ"
+ PAR_DEF: "パラグアイ"
+ PAR_ADJ: "パラグアイ"
 
  PRU: "ペルー"
  PRU_DEF: "ペルー"
  PRU_ADJ: "ペルー"
+
+ URU: "ウルグアイ"
+ URU_DEF: "ウルグアイ"
+ URU_ADJ: "ウルグアイ"
 
  VEN: "ヴェネズエラ"
  VEN_DEF: "ヴェネズエラ"

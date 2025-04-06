@@ -1,0 +1,26 @@
+state={
+	id=1016
+	name="STATE_1016"
+	manpower = 10000
+	resources = {
+		steel = 2
+	}
+	
+	state_category = rural
+	
+	history={
+		owner = ITA
+		add_core_of = ETH
+		buildings = {
+			infrastructure = 2
+			air_base = 3
+		}
+	}
+	provinces={
+		8043
+	}
+
+	local_supplies=0.0 
+        
+
+}
