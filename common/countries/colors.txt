@@ -277,16 +277,28 @@ ECU ={
 	color_ui = rgb{ 255 255 204 }
 }
 
-#マプチェニア/Mapuchenia
-MAP ={
-	color = rgb{ 148 52 110 }
-	color_ui = rgb{ 148 52 110 }
+#パナマ/Panama
+PAN ={
+	color = rgb{ 191 211 230 }
+	color_ui = rgb{ 191 211 230 }
+}
+
+#パラグアイ/Paraguay
+PAR ={
+	color = rgb{ 247 252 253 }
+	color_ui = rgb{ 247 252 253 }
 }
 
 #ペルー/Peru
 PRU ={
 	color = rgb{ 236 231 242 }
 	color_ui = rgb{ 236 231 242 }
+}
+
+#ウルグアイ/Uruguay
+URU ={
+	color = rgb{ 141 211 199 }
+	color_ui = rgb{ 141 211 199 }
 }
 
 #ヴェネズエラ/Venezuela
