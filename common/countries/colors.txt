@@ -517,10 +517,14 @@ THA ={
 	color_ui = rgb{ 208 209 230 }
 }
 
-
-
-
 ### アフリカ/Africa ###
+
+#オーッサ/Afar
+AFA ={
+	color = rgb{ 153 0 51 }
+	color_ui = rgb{ 153 0 51 }
+}
+
 
 #エジプト/Egypt
 EGY ={
