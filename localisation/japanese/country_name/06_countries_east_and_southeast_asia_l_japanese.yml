@@ -1,7 +1,19 @@
 ﻿l_japanese:
+ AST: "オーストラリア"
+ AUS_DEF: "オーストラリア"
+ AUS_ADJ: "オーストラリア"
+
  BRU: "ブルネイ"
  BRU_DEF: "ブルネイ"
  BRU_ADJ: "ブルネイ"
+
+ CAM: "カンボジア"
+ CAM_DEF: "カンボジア"
+ CAM_ADJ: "カンボジア"
+
+ CHA: "チャンパーサック"
+ CHA_DEF: "チャンパーサック"
+ CHA_ADJ: "チャンパーサック"
 
  DNA: "大南"
  DNA_DEF: "大南"
@@ -23,6 +35,14 @@
  KOR_DEF: "朝鮮"
  KOR_ADJ: "朝鮮"
 
+ LUA: "ルアンパバーン"
+ LUA_DEF: "ルアンパバーン"
+ LUA_ADJ: "ルアンパバーン"
+
+ NZL: "ニュージーランド"
+ NZL_DEF: "ニュージーランド"
+ NZL_ADJ: "ニュージーランド"
+
  PHI: "フィリピン"
  PHI_DEF: "フィリピン"
  PHI_ADJ: "フィリピン"
@@ -38,12 +58,4 @@
  THA: "タイ"
  THA_DEF: "タイ"
  THA_ADJ: "タイ"
-
- AST: "オーストラリア"
- AST_DEF: "オーストラリア"
- AST_ADJ: "オーストラリア"
-
- NZL: "ニュージーランド"
- NZL_DEF: "ニュージーランド"
- NZL_ADJ: "ニュージーランド"
 

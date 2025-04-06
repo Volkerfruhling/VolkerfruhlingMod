@@ -427,10 +427,28 @@ TRA ={
 
 #### 東・東南アジア/East and Southeast Asia ###
 
+#オーストラリア/Australia
+AST ={
+	color = rgb{ 114 179 142 }
+	color_ui = rgb{ 114 179 142 }
+}
+
 #ブルネイ/Brunei
 BRU ={
 	color = rgb{ 247 224 23 }
 	color_ui = rgb{ 247 224 23 }
+}
+
+#カンボジア/Cambodia
+CAM ={
+	color = rgb{ 217 180 0 }
+	color_ui = rgb{ 217 180 0 }
+}
+
+#チャンパーサック/Champasak
+CHA ={
+	color = rgb{ 180 200 168 }
+	color_ui = rgb{ 180 200 168 }
 }
 
 #大南/Dai_Nam
@@ -463,6 +481,18 @@ KOR ={
 	color_ui = rgb{ 223 194 125 }
 }
 
+#ルアンパバーン/Luang_Prabang
+LUA ={
+	color = rgb{ 194 165 207 }
+	color_ui = rgb{ 194 165 207 }
+}
+
+#ニュージーランド/New_Zealand
+NZL ={
+	color = rgb{ 113 112 110 }
+	color_ui = rgb{ 113 112 110 }
+}
+
 #フィリピン/Philippines
 PHI ={
 	color = rgb{ 8 104 172 }
@@ -487,17 +517,7 @@ THA ={
 	color_ui = rgb{ 208 209 230 }
 }
 
-#オーストラリア/Australia
-AST ={
-	color = rgb{ 114 179 142 }
-	color_ui = rgb{ 114 179 142 }
-}
 
-#ニュージーランド/New_Zealand
-NZL ={
-	color = rgb{ 113 112 110 }
-	color_ui = rgb{ 113 112 110 }
-}
 
 
 ### アフリカ/Africa ###

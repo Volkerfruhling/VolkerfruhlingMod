@@ -1,5 +1,14 @@
+#オーストラリア/Australia
+AST = "countries/_commonwealth.txt"
+
 #ブルネイ/Brunei
 BRU = "countries/_asian.txt"
+
+#カンボジア/Cambodia
+CAM = "countries/_asian.txt"
+
+#チャンパーサック/Champasak
+CHA = "countries/_asian.txt"
 
 #大南/Dai_Nam
 DNA = "countries/_asian.txt"
@@ -16,6 +25,12 @@ KON = "countries/_asian.txt"
 #朝鮮/Korea
 KOR = "countries/_asian.txt"
 
+#ルアンパバーン/Luang_Prabang
+LUA = "countries/_asian.txt"
+
+#ニュージーランド/New_Zealand
+NZL = "countries/_commonwealth.txt"
+
 #フィリピン/Philippines
 PHI = "countries/_asian.txt"
 
@@ -27,10 +42,4 @@ SAR = "countries/_asian.txt"
 
 #タイ/Thailand
 THA = "countries/_asian.txt"
-
-#オーストラリア/Australia
-AST = "countries/_commonwealth.txt"
-
-#ニュージーランド/New_Zealand
-NZL = "countries/_commonwealth.txt"
 
