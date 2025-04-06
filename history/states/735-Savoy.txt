@@ -9,10 +9,10 @@ state={
 		add_core_of = FRA
 
 	}
-	manpower=907500
+	manpower=507500
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000
-        manpower=1
-        state_category = town
+        
+
 }

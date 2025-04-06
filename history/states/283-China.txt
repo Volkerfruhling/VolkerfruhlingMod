@@ -1,6 +1,7 @@
 state={
 	id=283
 	name="STATE_283"
+	manpower = 3705400
 	resources={
 		tungsten=1.000
 	}
@@ -11,7 +12,7 @@ state={
 		owner = QIN
 		add_core_of = QIN
 	}
-	manpower=1
+	
 	buildings_max_level_factor=1.000
 	state_category=town
 	local_supplies=0.000
