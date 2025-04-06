@@ -6,8 +6,8 @@ state = {
 	manpower = 966906
 	
 	history = {
-		owner = KON
-		add_core_of = KON
+		owner = QIN
+		add_core_of = QIN
 
 		buildings = {
 			infrastructure = 1
@@ -19,7 +19,7 @@ state = {
 	}
 
 	provinces={
-		10386 10486 12335 12464 12492 
+		1082 1197 1934 4087 4318 4425 4588 4996 8063
 	}
 
 	local_supplies = 0.000

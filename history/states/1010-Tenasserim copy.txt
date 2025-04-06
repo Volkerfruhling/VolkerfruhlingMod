@@ -1,9 +1,9 @@
 state = {
-	id = 1002
-	name = "STATE_1002"
+	id = 1010
+	name = "STATE_1010"
 	
 	state_category = rural
-	manpower = 530980
+	manpower = 45564
 	
 	history = {
 		owner = ENG
@@ -11,13 +11,18 @@ state = {
 
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
 		}
 	}
 
 	provinces = {
-		1014 1142 1333 3651 4019 4059 4147 7122 10182 12090 
-	}
-
-	local_supplies = 0.000
+			12125
+			12238
+			1315
+			1403
+			4408
+			7295
+		}
 	buildings_max_level_factor = 1.000
+	local_supplies = 0.000
 }
