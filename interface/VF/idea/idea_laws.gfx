@@ -125,4 +125,64 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/VF_Single_ethnicity.png"
 	}
 
+	spriteType = {
+		name = "GFX_idea_Subsidized_higher_education"
+		texturefile = "gfx/interface/ideas/VF_Subsidized_higher_education.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Subsidized_post_secondary_education"
+		texturefile = "gfx/interface/ideas/VF_Subsidized_post_secondary_education.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Compulsory_first_semester_secondary_education"
+		texturefile = "gfx/interface/ideas/VF_Compulsory_first_semester_secondary_education.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Compulsory_primary_education"
+		texturefile = "gfx/interface/ideas/VF_Compulsory_primary_education.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Privatized_education"
+		texturefile = "gfx/interface/ideas/VF_Privatized_education.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_No_education_law"
+		texturefile = "gfx/interface/ideas/VF_No_education_law.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_8_hour_workday"
+		texturefile = "gfx/interface/ideas/VF_8_hour_workday.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_10_hour_workday"
+		texturefile = "gfx/interface/ideas/VF_10_hour_workday.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_12_hour_workday"
+		texturefile = "gfx/interface/ideas/VF_12_hour_workday.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_14_hour_workday"
+		texturefile = "gfx/interface/ideas/VF_14_hour_workday.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_16_hour_workday"
+		texturefile = "gfx/interface/ideas/VF_16_hour_workday.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_No_labor_law"
+		texturefile = "gfx/interface/ideas/VF_No_labor_law.png"
+	}
+
 }
