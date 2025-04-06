@@ -1,0 +1,6 @@
+spritetypes = {
+	spriteType = {
+		name = "GFX_idea_ITA_pope_pius_xii"
+		textureFile = "gfx/interface/ideas/ITA/idea_ITA_pope_pius_xii.png"
+	}
+}

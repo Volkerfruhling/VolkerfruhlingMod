@@ -778,10 +778,6 @@ technologies = {
 				tag = USA
 			}
 			modifier = {
-				tag = SOV
-				factor = 4
-			}
-			modifier = {
 				ai_land_doctrine_tier_1_trigger = yes
 				factor = 2
 			}

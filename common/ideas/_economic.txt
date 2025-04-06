@@ -121,21 +121,6 @@ ideas = {
 				has_war_support > 0.15
 				if = {
 					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						NOT = { has_idea = HUN_treaty_of_triannon_aat }
-					}
-					else = {
-						NOT = { has_idea = HUN_treaty_of_triannon }
-					}
-				}
-				if = {
-					limit = {
 						has_defensive_war = no
 					}
 					has_war_support > 0.3
@@ -188,25 +173,6 @@ ideas = {
 			available = {
 				has_war_support > 0.25
 
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						OR = {
-							NOT = { has_idea = HUN_treaty_of_triannon_aat }
-						}
-					}
-					else = {
-						OR = {
-							NOT = { has_idea = HUN_treaty_of_triannon }
-						}
-					}
-				}
 				if = {
 					limit = {
 						has_defensive_war = no
@@ -263,22 +229,6 @@ ideas = {
 								ratio > 0.4
 							}
 						}
-					}
-				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						NOT = { has_idea = HUN_treaty_of_triannon_aat }
-					}
-					else = {
-						NOT = { has_idea = HUN_treaty_of_triannon }
 					}
 				}
 				if = {
@@ -354,22 +304,6 @@ ideas = {
 						ratio > 0.5
 					}
 				}
-
-				if = {
-					limit = {
-						original_tag = HUN
-						has_dlc = "Death or Dishonor"
-					}
-					if = {
-						limit = {
-							has_dlc = "Arms Against Tyranny"
-						}
-						NOT = { has_idea = HUN_treaty_of_triannon_aat }
-					}
-					else = {
-						NOT = { has_idea = HUN_treaty_of_triannon }
-					}
-				}
 				if = {
 					limit = {
 						has_defensive_war = no
@@ -418,21 +352,6 @@ ideas = {
 					NOT = { has_tech = volkssturm }
 					has_war = yes
 					date < 1944.01.01
-				}
-				modifier = {
-					factor = 0
-
-					tag = SOV
-					has_war = yes
-					OR = {
-						has_manpower < 2000000
-						NOT = {
-							OR = {
-								has_idea = all_adults_serve
-								has_idea = service_by_requirement
-							}
-						}
-					}
 				}
    			}
 
@@ -648,19 +567,6 @@ ideas = {
 
 			available = {
 
-				if = {
-					limit = {
-						original_tag = CHI
-						has_dlc = "Waking the Tiger"
-					}
-					NOT = { has_idea = CHI_nine_power_treaty }
-				}
-				if = {
-					limit = {
-						original_tag = SPR
-						has_dlc = "La Resistance"
-					}
-				}
 			}
 
 
@@ -733,14 +639,6 @@ ideas = {
 					}
 				}
 
-
-				if = {
-					limit = {
-						original_tag = CHI
-						has_dlc = "Waking the Tiger"
-					}
-					NOT = { has_idea = CHI_nine_power_treaty }
-				}
 				if = {
 					limit = {
 						original_tag = SPR
@@ -815,14 +713,6 @@ ideas = {
 				OR = {
 					has_idea = war_economy
 					has_idea = tot_economic_mobilisation
-				}
-
-				if = {
-					limit = {
-						original_tag = CHI
-						has_dlc = "Waking the Tiger"
-					}
-					NOT = { has_idea = CHI_nine_power_treaty }
 				}
 			}
 
