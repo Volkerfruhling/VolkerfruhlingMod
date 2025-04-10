@@ -521,8 +521,8 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_ideology_national_totalism_group"
-		texturefile = "gfx/interface/ideologies/national_totalism_group.png"
+		name = "GFX_ideology_totalitarianism_group"
+		texturefile = "gfx/interface/ideologies/totalitarianism_group.png"
 	}
 
 	spriteType = {

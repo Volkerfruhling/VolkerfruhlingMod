@@ -64,7 +64,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				stability_factor = -0.1
-				national_totalism_drift = 0.3
+				totalitarianism_drift = 0.3
 			}
 		}
 
@@ -80,7 +80,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				national_totalism_drift = -0.5
+				totalitarianism_drift = -0.5
 			}
 		}
 
@@ -97,7 +97,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				stability_factor = -0.1
-				national_totalism_drift = 0.3
+				totalitarianism_drift = 0.3
 			}
 		}
 
