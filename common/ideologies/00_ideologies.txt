@@ -255,13 +255,16 @@ ideologies = {
 		ai_ideology_wanted_units_factor = 1.25
 	}
 
-	national_totalism = {
+	totalitarianism = {
 		types = {
-			national_totalism_ideology = {
+			totalitarianism_ideology = {
 			}
 			national_socialism = {}
+			national_bolshevism = {}
 			national_syndicalism = {}
 			national_corporatism = {}
+			personality_cult_socialism = {}
+			caesarism = {}
 			revolutionary_nationalism = {}
 		}
 		

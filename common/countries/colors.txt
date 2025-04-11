@@ -140,8 +140,8 @@ POR ={
 
 #ルーマニア/Romania
 ROM ={
-	color = rgb{ 255 255 191 }
-	color_ui = rgb{ 255 255 191 }
+	color = rgb{ 255 255 130 }
+	color_ui = rgb{ 255 255 130 }
 }
 
 #ロシア/Russia
@@ -277,10 +277,16 @@ ECU ={
 	color_ui = rgb{ 255 255 204 }
 }
 
-#マプチェニア/Mapuchenia
-MAP ={
-	color = rgb{ 148 52 110 }
-	color_ui = rgb{ 148 52 110 }
+#パナマ/Panama
+PAN ={
+	color = rgb{ 191 211 230 }
+	color_ui = rgb{ 191 211 230 }
+}
+
+#パラグアイ/Paraguay
+PAR ={
+	color = rgb{ 247 252 253 }
+	color_ui = rgb{ 247 252 253 }
 }
 
 #ペルー/Peru
@@ -289,13 +295,19 @@ PRU ={
 	color_ui = rgb{ 236 231 242 }
 }
 
+#ウルグアイ/Uruguay
+URU ={
+	color = rgb{ 141 211 199 }
+	color_ui = rgb{ 141 211 199 }
+}
+
 #ヴェネズエラ/Venezuela
 VEN ={
 	color = rgb{ 237 173 8 }
 	color_ui = rgb{ 237 173 8 }
 }
 
-### 南・西アジア/South and West Asia ###
+### 西アジア/West Asia ###
 
 #アフガニスタン/Afghanistan
 AFG ={
@@ -309,34 +321,10 @@ BAH ={
 	color_ui = rgb{ 251 180 174 }
 }
 
-#ブータン/Bhutan
-BHU ={
-	color = rgb{ 202 87 43 }
-	color_ui = rgb{ 202 87 43 }
-}
-
-#バルチスタン首席弁務官領/Chief_Commissioner_s_Territory_of_Baluchistan
-CTB ={
-	color = rgb{ 245 109 67 }
-	color_ui = rgb{ 245 109 67 }
-}
-
-#ヒンドゥースタン/Hinduistan
-HIN ={
-	color = rgb{ 225 124 5 }
-	color_ui = rgb{ 225 124 5 }
-}
-
 #ジャバル・シャンマル/Jabal Shammar
 JSH ={
 	color = rgb{ 178 24 43 }
 	color_ui = rgb{ 178 24 43 }
-}
-
-#カシミール/Kashmir
-KAS ={
-	color = rgb{ 158 187 217 }
-	color_ui = rgb{ 158 187 217 }
 }
 
 #マフラ王国/Mafra
@@ -351,28 +339,10 @@ MOM ={
 	color_ui = rgb{ 214 96 77 }
 }
 
-#ネパール/Nepal
-NEP ={
-	color = rgb{ 253 140 60 }
-	color_ui = rgb{ 253 140 60 }
-}
-
 #イラン/Iran
 PER ={
 	color = rgb{ 0 128 128 }
 	color_ui = rgb{ 0 128 128 }
-}
-
-#インド臨時政府/Provisional_Government_of_India
-PGI ={
-	color = rgb{ 253 191 111 }
-	color_ui = rgb{ 253 191 111 }
-}
-
-#イギリス領インド帝国/British_Raj
-RAJ ={
-	color = rgb{ 204 51 51 }
-	color_ui = rgb{ 204 51 51 }
 }
 
 #リヤド首長国/Riyadh
@@ -387,30 +357,98 @@ TOM ={
 	color_ui = rgb{ 237 187 138 }
 }
 
-#インド連邦/Union_of_India
-UID ={
-	color = rgb{ 178 223 138 }
-	color_ui = rgb{ 178 223 138 }
-}
-
-#バルーチスターン藩王国連合/Union_of_princely_states_of_Balochistan
-UPB ={
-	color = rgb{ 90 174 97 }
-	color_ui = rgb{ 90 174 97 }
-}
-
 #イエメン/Yemen
 YEM ={
 	color = rgb{ 229 216 189 }
 	color_ui = rgb{ 229 216 189 }
 }
 
+### 南アジア/South Asia ###
+
+#ブータン/Bhutan
+BHU ={
+	color = rgb{ 202 87 43 }
+	color_ui = rgb{ 202 87 43 }
+}
+
+#ヒンドゥースタン/Hinduistan
+HIN ={
+	color = rgb{ 225 124 5 }
+	color_ui = rgb{ 225 124 5 }
+}
+
+#カシミール/Kashmir
+KAS ={
+	color = rgb{ 158 187 217 }
+	color_ui = rgb{ 158 187 217 }
+}
+
+#モルディブ/Maldives
+MLD ={
+	color = rgb{ 156 203 134 }
+	color_ui = rgb{ 156 203 134 }
+}
+
+#ムガル帝国/Mughal
+MUG ={
+	color = rgb{ 27 120 55 }
+	color_ui = rgb{ 27 120 55 }
+}
+
+#ネパール/Nepal
+NEP ={
+	color = rgb{ 253 140 60 }
+	color_ui = rgb{ 253 140 60 }
+}
+
+#ニザーム王国/Nizam
+NIZ ={
+	color = rgb{ 253 174 97 }
+	color_ui = rgb{ 253 174 97 }
+}
+
+#イギリス領インド帝国/British_Raj
+RAJ ={
+	color = rgb{ 204 51 51 }
+	color_ui = rgb{ 204 51 51 }
+}
+
+#シッキム/Sikkim
+SIK ={
+	color = rgb{ 199 234 229 }
+	color_ui = rgb{ 199 234 229 }
+}
+
+#トラヴァンコール/Travancore
+TRA ={
+	color = rgb{ 228 26 28 }
+	color_ui = rgb{ 228 26 28 }
+}
+
 #### 東・東南アジア/East and Southeast Asia ###
+
+#オーストラリア/Australia
+AST ={
+	color = rgb{ 114 179 142 }
+	color_ui = rgb{ 114 179 142 }
+}
 
 #ブルネイ/Brunei
 BRU ={
 	color = rgb{ 247 224 23 }
 	color_ui = rgb{ 247 224 23 }
+}
+
+#カンボジア/Cambodia
+CAM ={
+	color = rgb{ 217 180 0 }
+	color_ui = rgb{ 217 180 0 }
+}
+
+#チャンパーサック/Champasak
+CHA ={
+	color = rgb{ 180 200 168 }
+	color_ui = rgb{ 180 200 168 }
 }
 
 #大南/Dai_Nam
@@ -443,6 +481,18 @@ KOR ={
 	color_ui = rgb{ 223 194 125 }
 }
 
+#ルアンパバーン/Luang_Prabang
+LUA ={
+	color = rgb{ 194 165 207 }
+	color_ui = rgb{ 194 165 207 }
+}
+
+#ニュージーランド/New_Zealand
+NZL ={
+	color = rgb{ 113 112 110 }
+	color_ui = rgb{ 113 112 110 }
+}
+
 #フィリピン/Philippines
 PHI ={
 	color = rgb{ 8 104 172 }
@@ -467,20 +517,14 @@ THA ={
 	color_ui = rgb{ 208 209 230 }
 }
 
-#オーストラリア/Australia
-AST ={
-	color = rgb{ 114 179 142 }
-	color_ui = rgb{ 114 179 142 }
-}
-
-#ニュージーランド/New_Zealand
-NZL ={
-	color = rgb{ 113 112 110 }
-	color_ui = rgb{ 113 112 110 }
-}
-
-
 ### アフリカ/Africa ###
+
+#オーッサ/Afar
+AFA ={
+	color = rgb{ 153 0 51 }
+	color_ui = rgb{ 153 0 51 }
+}
+
 
 #エジプト/Egypt
 EGY ={

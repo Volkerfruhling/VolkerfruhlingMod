@@ -1,0 +1,33 @@
+state={
+	id=1014
+	name="STATE_1014"
+	manpower = 394666
+	
+	state_category = pastoral
+
+	history={
+		owner = CHA
+		add_core_of = CHA
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
+
+	provinces={
+			10238
+			10453
+			12210
+			1374
+			1563
+			1577
+			1592
+			4539
+			4554
+			7426
+		}
+
+	local_supplies=0.0 
+        
+
+}
