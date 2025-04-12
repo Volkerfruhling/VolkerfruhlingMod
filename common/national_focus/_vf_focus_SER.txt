@@ -780,8 +780,8 @@ focus_tree = {
 	focus = {
 		id = focus_SER_eco_continue_postwar_reconstruction
 		
-		# icon = GFX_goal_focus_SER_continue_postwar_reconstruction
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_SER_eco_continue_postwar_reconstruction
+		# icon = GFX_goal_unknown
 		
 		cost = 4
 		
