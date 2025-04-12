@@ -159,5 +159,24 @@ set_popularities = {
 	totalitarianism = 100
 }
 
-add_ideas = {
+add_ideas = { # 国民精神
+	SER_huge_compensation
+	SER_ljotic_dictatorship
+	SER_humiliating_defeat
+}
+add_ideas = { # 法律
+	Presidential_democracy
+	Incomplete_constitution
+	No_electoral_system
+	Separation_of_church_and_state
+	Paternalistic_society
+	Racial_discrimination
+	Privatized_education
+	12_hour_workday
+	Developing_countries
+	Vulnerable_Near_Poor
+	Unconditional_combat_missions
+	No_draft_exemption
+	Some_military_training
+	Early_20th_century_armies
 }

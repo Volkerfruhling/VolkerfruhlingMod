@@ -1,6 +1,6 @@
 characters = {
 	SER_dimitrije_ljotić = {
-		name = SER_dimitrije_ljotić
+		name = SER_dimitrije_ljotic
 		portraits = {
 			civilian = {
 				large = GFX_Portrait_Leader_SER_dimitrije_ljotić

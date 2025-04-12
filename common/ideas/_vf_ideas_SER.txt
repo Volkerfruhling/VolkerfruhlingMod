@@ -1,0 +1,49 @@
+ideas = {
+	country = {
+		### 初期国民精神 ###
+		# 莫大な賠償金
+		SER_huge_compensation = {
+			picture = generic_economic_crisis
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.33
+				production_speed_buildings_factor = -0.33
+			}
+		}
+		# リョティッチの独裁
+		SER_ljotic_dictatorship = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.3
+				stability_factor = 0.1
+			}
+		}
+		# 屈辱的な敗北
+		SER_humiliating_defeat = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+			}
+		}
+
+	}
+}
