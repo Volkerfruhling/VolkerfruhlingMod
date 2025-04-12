@@ -1,0 +1,21 @@
+﻿focus_tree:
+ country: "SER"
+ focuses:
+  -
+   tree: "pol"
+   jp: "リョティッチの演説"
+   id: "ljotic_speech"
+   cost: 4
+   x: 10
+   y : 0
+  -
+   tree: "pol"
+   jp: "ZBORの規律"
+   id: "zbor_discipline"
+   cost: 4
+   relative: "pol_ljotic_speech"
+   pre:
+    - "pol_ljotic_speech"
+   x: 0
+   y : 1
+  

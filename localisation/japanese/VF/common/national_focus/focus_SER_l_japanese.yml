@@ -1,0 +1,181 @@
+﻿l_japanese:
+ l_japanese:
+
+ ### 政治ツリー ###
+ # リョティッチの演説
+ focus_SER_pol_ljotic_speech: "リョティッチの演説"
+ focus_SER_pol_ljotic_speech_desc: "リョティッチの演説" # Descは仮置き
+ # ZBORの規律
+ focus_SER_pol_zbor_discipline: "ZBORの規律"
+ focus_SER_pol_zbor_discipline_desc: "ZBORの規律" # Descは仮置き
+ # 国内の引き締め
+ focus_SER_pol_domestic_tightening: "国内の引き締め"
+ focus_SER_pol_domestic_tightening_desc: "国内の引き締め" # Descは仮置き
+ # 反体制派のあぶり出し
+ focus_SER_pol_expose_dissenters: "反体制派のあぶり出し"
+ focus_SER_pol_expose_dissenters_desc: "反体制派のあぶり出し" # Descは仮置き
+ # 見せしめの裁判
+ focus_SER_pol_show_trial: "見せしめの裁判"
+ focus_SER_pol_show_trial_desc: "見せしめの裁判" # Descは仮置き
+ # 国民精神再興運動
+ focus_SER_pol_national_spirits_reform_movement: "国民精神再興運動"
+ focus_SER_pol_national_spirits_reform_movement_desc: "国民精神再興運動" # Descは仮置き
+ # ZBOR青年団
+ focus_SER_pol_zbor_youth_movement: "ZBOR青年団"
+ focus_SER_pol_zbor_youth_movement_desc: "ZBOR青年団" # Descは仮置き
+
+ ### 外交ツリー ###
+ # モンテネグロへの圧力
+ focus_SER_pol_pressure_montenegro: "モンテネグロへの圧力"
+ focus_SER_pol_pressure_montenegro_desc: "モンテネグロへの圧力" # Descは仮置き
+ # 統合プロパガンダ
+ focus_SER_pol_integration_propaganda: "統合プロパガンダ"
+ focus_SER_pol_integration_propaganda_desc: "統合プロパガンダ" # Descは仮置き
+ # 最終提案
+ focus_SER_pol_final_proposal: "最終提案"
+ focus_SER_pol_final_proposal_desc: "最終提案" # Descは仮置き
+ # モンテネグロの統合
+ focus_SER_pol_montenegro_integration: "モンテネグロの統合"
+ focus_SER_pol_montenegro_integration_desc: "モンテネグロの統合" # Descは仮置き
+ ## アルバニアツリー ##
+ # アルバニアの脅威認識
+ focus_SER_pol_albania_threat: "アルバニアの脅威認識"
+ focus_SER_pol_albania_threat_desc: "アルバニアの脅威認識" # Descは仮置き
+ # 失われたコソボ
+ focus_SER_pol_lost_kosovo: "失われたコソボ"
+ focus_SER_pol_lost_kosovo_desc: "失われたコソボ" # Descは仮置き
+ # ティラナへの最後通牒
+ focus_SER_pol_tirana_ultimatum: "ティラナへの最後通牒"
+ focus_SER_pol_tirana_ultimatum_desc: "ティラナへの最後通牒" # Descは仮置き
+ # アルバニア平定作戦
+ focus_SER_pol_pacify_albania: "アルバニア平定作戦"
+ focus_SER_pol_pacify_albania_desc: "アルバニア平定作戦" # Descは仮置き
+ ## 救国同盟ツリー ##
+ # バルカン外交の再開
+ focus_SER_pol_resume_balkan_diplomacy: "バルカン外交の再開"
+ focus_SER_pol_resume_balkan_diplomacy_desc: "バルカン外交の再開" # Descは仮置き
+ # ギリシャへの使節
+ focus_SER_pol_envoy_to_greece: "ギリシャへの使節"
+ focus_SER_pol_envoy_to_greece_desc: "ギリシャへの使節" # Descは仮置き
+ # アテネ秘密協定
+ focus_SER_pol_athens_secret_agreement: "アテネ秘密協定"
+ focus_SER_pol_athens_secret_agreement_desc: "アテネ秘密協定" # Descは仮置き
+ # ルーマニアへの使節
+ focus_SER_pol_envoy_to_romania: "ルーマニアへの使節"
+ focus_SER_pol_envoy_to_romania_desc: "ルーマニアへの使節" # Descは仮置き
+ # ブカレスト秘密協定
+ focus_SER_pol_bucharest_secret_agreement: "ブカレスト秘密協定"
+ focus_SER_pol_bucharest_secret_agreement_desc: "ブカレスト秘密協定" # Descは仮置き
+ # 救国同盟
+ focus_SER_pol_alliance_for_salvation: "救国同盟"
+ focus_SER_pol_alliance_for_salvation_desc: "救国同盟" # Descは仮置き
+ ## バルカン戦争ツリー ##
+ # バルカン協商への対抗
+ focus_SER_pol_oppose_balkan_pact: "バルカン協商への対抗"
+ focus_SER_pol_oppose_balkan_pact_desc: "バルカン協商への対抗" # Descは仮置き
+ # 復讐の日
+ focus_SER_pol_day_of_revenge: "復讐の日"
+ focus_SER_pol_day_of_revenge_desc: "復讐の日" # Descは仮置き
+
+ ### 軍事ツリー ###
+ # 国軍再編成
+ focus_SER_mil_reorg_armies: "国軍再編成"
+ focus_SER_mil_reorg_armies_desc: "国軍再編成" # Descは仮置き
+ # ZBOR戦闘団
+ focus_SER_mil_zbor_battalion: "ZBOR戦闘団"
+ focus_SER_mil_zbor_battalion_desc: "ZBOR戦闘団" # Descは仮置き
+ # 狂信的突撃戦術
+ focus_SER_mil_fanatic_assault_tactics: "狂信的突撃戦術"
+ focus_SER_mil_fanatic_assault_tactics_desc: "狂信的突撃戦術" # Descは仮置き
+ # 山岳地帯への適応
+ focus_SER_mil_adapt_to_mountainous_terrain: "山岳地帯への適応"
+ focus_SER_mil_adapt_to_mountainous_terrain_desc: "山岳地帯への適応" # Descは仮置き
+ # 山岳歩兵部隊の編成
+ focus_SER_mil_mountain_infantry_units: "山岳歩兵部隊の編成"
+ focus_SER_mil_mountain_infantry_units_desc: "山岳歩兵部隊の編成" # Descは仮置き
+ # 特殊部隊創設
+ focus_SER_mil_create_special_forces: "特殊部隊創設"
+ focus_SER_mil_create_special_forces_desc: "特殊部隊創設" # Descは仮置き
+ # 新式歩兵装備の研究
+ focus_SER_mil_research_new_infantry_equipment: "新式歩兵装備の研究"
+ focus_SER_mil_research_new_infantry_equipment_desc: "新式歩兵装備の研究" # Descは仮置き
+ # 国産装備開発
+ focus_SER_mil_develop_domestic_equipment: "国産装備開発"
+ focus_SER_mil_develop_domestic_equipment_desc: "国産装備開発" # Descは仮置き
+ # 装備生産ライセンス交渉
+ focus_SER_mil_license_equipment_production: "装備生産ライセンス交渉"
+ focus_SER_mil_license_equipment_production_desc: "装備生産ライセンス交渉" # Descは仮置き
+ # 参謀本部の刷新
+ focus_SER_mil_refresh_general_staff: "参謀本部の刷新"
+ focus_SER_mil_refresh_general_staff_desc: "参謀本部の刷新" # Descは仮置き
+ # 歩兵重視ドクトリン
+ focus_SER_mil_infantry_centric_doctrine: "歩兵重視ドクトリン"
+ focus_SER_mil_infantry_centric_doctrine_desc: "歩兵重視ドクトリン" # Descは仮置き
+
+ ### 経済ツリー ###
+ # 戦後復興の継続
+ focus_SER_eco_continue_postwar_reconstruction: "戦後復興の継続"
+ focus_SER_eco_continue_postwar_reconstruction_desc: "戦後復興の継続" # Descは仮置き
+ # 科学アカデミーの再建
+ focus_SER_eco_rebuild_academy_of_science: "科学アカデミーの再建"
+ focus_SER_eco_rebuild_academy_of_science_desc: "科学アカデミーの再建" # Descは仮置き
+ # インフラ修復計画
+ focus_SER_eco_infrastructure_repair_plan: "インフラ修復計画"
+ focus_SER_eco_infrastructure_repair_plan_desc: "インフラ修復計画" # Descは仮置き
+ # 賠償金問題への対処方針
+ focus_SER_eco_handling_of_compensation_issue: "賠償金問題への対処方針"
+ focus_SER_eco_handling_of_compensation_issue_desc: "賠償金問題への対処方針" # Descは仮置き
+ # 支払い継続への意思
+ focus_SER_eco_will_continue_payment: "支払い継続への意思"
+ focus_SER_eco_will_continue_payment_desc: "支払い継続への意思" # Descは仮置き
+ # 債務履行と国内安定
+ focus_SER_eco_debt_repayment_and_domestic_stability: "債務履行と国内安定"
+ focus_SER_eco_debt_repayment_and_domestic_stability_desc: "債務履行と国内安定" # Descは仮置き
+ # 計画的工業化
+ focus_SER_eco_planned_industrialization: "計画的工業化"
+ focus_SER_eco_planned_industrialization_desc: "計画的工業化" # Descは仮置き
+ # 民需の拡大
+ focus_SER_eco_expansion_of_consumer_demand: "民需の拡大"
+ focus_SER_eco_expansion_of_consumer_demand_desc: "民需の拡大" # Descは仮置き
+ # 段階的軍事予算
+ focus_SER_eco_gradual_military_budget: "段階的軍事予算"
+ focus_SER_eco_gradual_military_budget_desc: "段階的軍事予算" # Descは仮置き
+ # 再交渉へのテーブル
+ focus_SER_eco_table_for_re-negotiation: "再交渉へのテーブル"
+ focus_SER_eco_table_for_re-negotiation_desc: "再交渉へのテーブル" # Descは仮置き
+ # 軽減された賠償金
+ focus_SER_eco_reduced_compensation: "軽減された賠償金"
+ focus_SER_eco_reduced_compensation_desc: "軽減された賠償金" # Descは仮置き
+ # 信頼回復による投資
+ focus_SER_eco_investment_due_to_trust_restoration: "信頼回復による投資"
+ focus_SER_eco_investment_due_to_trust_restoration_desc: "信頼回復による投資" # Descは仮置き
+ # 条件付き軍拡
+ focus_SER_eco_conditional_military_expansion: "条件付き軍拡"
+ focus_SER_eco_conditional_military_expansion_desc: "条件付き軍拡" # Descは仮置き
+ # 外交孤立の深化
+ focus_SER_eco_deepening_of_diplomatic_isolation: "外交孤立の深化"
+ focus_SER_eco_deepening_of_diplomatic_isolation_desc: "外交孤立の深化" # Descは仮置き
+ # 国内資源への依存
+ focus_SER_eco_dependence_on_domestic_resources: "国内資源への依存"
+ focus_SER_eco_dependence_on_domestic_resources_desc: "国内資源への依存" # Descは仮置き
+ # 略奪への道
+ focus_SER_eco_path_to_plunder: "略奪への道"
+ focus_SER_eco_path_to_plunder_desc: "略奪への道" # Descは仮置き
+ # 鉄の意志
+ focus_SER_eco_iron_will: "鉄の意志"
+ focus_SER_eco_iron_will_desc: "鉄の意志" # Descは仮置き
+ # 闇市場からの調達
+ focus_SER_eco_source_from_black_market: "闇市場からの調達"
+ focus_SER_eco_source_from_black_market_desc: "闇市場からの調達" # Descは仮置き
+ # 軍産複合体からの強制調達
+ focus_SER_eco_forced_acquisition_from_military_complex: "軍産複合体からの強制調達"
+ focus_SER_eco_forced_acquisition_from_military_complex_desc: "軍産複合体からの強制調達" # Descは仮置き
+ # 国家総動員令
+ focus_SER_eco_national_mob: "国家総動員令"
+ focus_SER_eco_national_mob_desc: "国家総動員令" # Descは仮置き
+ # 政治即応体制
+ focus_SER_eco_political_reactionary_system: "政治即応体制"
+ focus_SER_eco_political_reactionary_system_desc: "政治即応体制" # Descは仮置き
+ # 科学技術の軍事転用
+ focus_SER_eco_military_use_of_science_and_technology: "科学技術の軍事転用"
+ focus_SER_eco_military_use_of_science_and_technology_desc: "科学技術の軍事転用" # Descは仮置き
