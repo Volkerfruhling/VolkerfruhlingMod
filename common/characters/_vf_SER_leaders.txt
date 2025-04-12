@@ -1,0 +1,15 @@
+characters = {
+	SER_dimitrije_ljotić = {
+		name = SER_dimitrije_ljotić
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Leader_SER_dimitrije_ljotić
+			}
+		}
+		country_leader = {
+			ideology = caesarism
+			expire = "1945.1.1"
+			id = -1
+		}
+	}
+}
