@@ -1,21 +1,72 @@
 ﻿focus_tree:
- country: "TST"
+ country: "GER"
  focuses:
   -
    tree: "pol"
-   jp: "経済の復興"
-   id: "economic_recovery"
-   cost: 10
+   jp: "内閣の行く末"
+   id: "cabinet_future"
+   cost: 5
    x: 10
-   y : 0
+   y: 0
   -
    tree: "pol"
-   jp: "工場の建設"
-   id: "factory_construction"
-   cost: 10
-   relative: "pol_economic_recovery"
+   jp: "自由之理"
+   id: "freedom_principle"
+   cost: 5
+   relative: "pol_cabinet_future"
    pre:
-    - "pol_economic_recovery"
+    - "pol_cabinet_future"
+   x: -5
+   y: 1
+  -
+   tree: "pol"
+   jp: "帝冠領整理案"
+   id: "proposiation_reform_imperial_crown_lands"
+   cost: 5
+   relative: "pol_freedom_principle"
+   pre:
+    - "pol_freedom_principle"
+   x: -1
+   y: 1
+  -
+   tree: "pol"
+   jp: "少数民族問題"
+   id: "minority_problem"
+   cost: 5
+   relative: "pol_proposiation_reform_imperial_crown_lands"
+   pre:
+    - "pol_proposiation_reform_imperial_crown_lands"
    x: 0
-   y : 1
+   y: 1
+  -
+   tree: "pol"
+   jp: "内閣集権"
+   id: "centralization_of_cabinet"
+   cost: 5
+   relative: "pol_freedom_principle"
+   pre:
+    - "pol_freedom_principle"
+   x: 1
+   y: 1
+  -
+   tree: "pol"
+   jp: "国民議会の強化"
+   id: "strengthen_national_assembly"
+   cost: 5
+   relative: "pol_centralization_of_cabinet"
+   pre:
+    - "pol_centralization_of_cabinet"
+   x: 0
+   y: 1
+  -
+   tree: "pol"
+   jp: "改革準備委員会"
+   id: "preparation_committee_for_reform"
+   cost: 5
+   relative: "pol_freedom_principle"
+   pre:
+    - "pol_minority_problem"
+    - "pol_strengthen_national_assembly"
+   x: 0
+   y: 3
   

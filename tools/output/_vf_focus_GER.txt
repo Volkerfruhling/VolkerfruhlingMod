@@ -1,0 +1,164 @@
+#!gfx:interface\VF\goals\goals_ger.gfx
+focus_tree = {
+	id = focus_GER
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+	# 内閣の行く末
+	focus = {
+		id = focus_GER_pol_cabinet_future
+		
+		# icon = GFX_goal_focus_GER_cabinet_future
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 10
+		y = 0
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 自由之理
+	focus = {
+		id = focus_GER_pol_freedom_principle
+		
+		# icon = GFX_goal_focus_GER_freedom_principle
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = -5
+		y = 1
+		relative_position_id = focus_GER_pol_cabinet_future
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_cabinet_future
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 帝冠領整理案
+	focus = {
+		id = focus_GER_pol_proposiation_reform_imperial_crown_lands
+		
+		# icon = GFX_goal_focus_GER_proposiation_reform_imperial_crown_lands
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_pol_freedom_principle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_freedom_principle
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 少数民族問題
+	focus = {
+		id = focus_GER_pol_minority_problem
+		
+		# icon = GFX_goal_focus_GER_minority_problem
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_proposiation_reform_imperial_crown_lands
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_proposiation_reform_imperial_crown_lands
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 内閣集権
+	focus = {
+		id = focus_GER_pol_centralization_of_cabinet
+		
+		# icon = GFX_goal_focus_GER_centralization_of_cabinet
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_pol_freedom_principle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_freedom_principle
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 国民議会の強化
+	focus = {
+		id = focus_GER_pol_strengthen_national_assembly
+		
+		# icon = GFX_goal_focus_GER_strengthen_national_assembly
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_centralization_of_cabinet
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_centralization_of_cabinet
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 改革準備委員会
+	focus = {
+		id = focus_GER_pol_preparation_committee_for_reform
+		
+		# icon = GFX_goal_focus_GER_preparation_committee_for_reform
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 3
+		relative_position_id = focus_GER_pol_freedom_principle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_minority_problem
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_strengthen_national_assembly
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+}
