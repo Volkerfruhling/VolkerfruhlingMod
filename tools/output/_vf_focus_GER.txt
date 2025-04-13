@@ -8,6 +8,156 @@ focus_tree = {
 			tag = GER
 		}
 	}
+	# 双頭一体の鷲
+	focus = {
+		id = focus_GER_pol_two_headed_eagle
+		
+		# icon = GFX_goal_focus_GER_two_headed_eagle
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 15
+		y = 0
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# プリンツ・マックス
+	focus = {
+		id = focus_GER_pol_prinz_max
+		
+		# icon = GFX_goal_focus_GER_prinz_max
+		icon = GFX_goal_unknown
+		
+		cost = 2
+		
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_pol_two_headed_eagle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_two_headed_eagle
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 国民議会
+	focus = {
+		id = focus_GER_pol_national_assembly
+		
+		# icon = GFX_goal_focus_GER_national_assembly
+		icon = GFX_goal_unknown
+		
+		cost = 2
+		
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_pol_two_headed_eagle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_two_headed_eagle
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# オーストリア帝冠領
+	focus = {
+		id = focus_GER_pol_austrian_imperial_crown_lands
+		
+		# icon = GFX_goal_focus_GER_austrian_imperial_crown_lands
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_prinz_max
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_prinz_max
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# イストリア問題
+	focus = {
+		id = focus_GER_pol_istria_problem
+		
+		# icon = GFX_goal_focus_GER_istria_problem
+		icon = GFX_goal_unknown
+		
+		cost = 2
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_austrian_imperial_crown_lands
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_austrian_imperial_crown_lands
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 枢密院
+	focus = {
+		id = focus_GER_pol_privy_council
+		
+		# icon = GFX_goal_focus_GER_privy_council
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_national_assembly
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_national_assembly
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# バルカン同盟
+	focus = {
+		id = focus_GER_pol_balcan_alliance
+		
+		# icon = GFX_goal_focus_GER_balcan_alliance
+		icon = GFX_goal_unknown
+		
+		cost = 2
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_privy_council
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_privy_council
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
 	# 内閣の行く末
 	focus = {
 		id = focus_GER_pol_cabinet_future
@@ -17,8 +167,15 @@ focus_tree = {
 		
 		cost = 5
 		
-		x = 10
-		y = 0
+		x = 0
+		y = 4
+		relative_position_id = focus_GER_pol_two_headed_eagle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_istria_problem
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_balcan_alliance
+		}
 		available = {
 			always = yes
 		}
@@ -153,6 +310,231 @@ focus_tree = {
 		}
 		prerequisite = { # 前提NF
 			focus = focus_GER_pol_strengthen_national_assembly
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 1926年議会選挙
+	focus = {
+		id = focus_GER_pol_1926_election
+		
+		# icon = GFX_goal_focus_GER_1926_election
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_preparation_committee_for_reform
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_preparation_committee_for_reform
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# ヴァイマル連立の勝利
+	focus = {
+		id = focus_GER_pol_victory_of_weimar_coalition
+		
+		# icon = GFX_goal_focus_GER_victory_of_weimar_coalition
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = -2
+		y = 1
+		relative_position_id = focus_GER_pol_1926_election
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_1926_election
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 保守党の勝利
+	focus = {
+		id = focus_GER_pol_victory_of_conservative_party
+		
+		# icon = GFX_goal_focus_GER_victory_of_conservative_party
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 2
+		y = 1
+		relative_position_id = focus_GER_pol_1926_election
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_1926_election
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# アウスグライヒ
+	focus = {
+		id = focus_GER_pol_ausgleich
+		
+		# icon = GFX_goal_focus_GER_ausgleich
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_cabinet_future
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_cabinet_future
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 枢密院集権
+	focus = {
+		id = focus_GER_pol_centralization_of_privy_council
+		
+		# icon = GFX_goal_focus_GER_centralization_of_privy_council
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_ausgleich
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_ausgleich
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# スペインへの対処
+	focus = {
+		id = focus_GER_dip_dealing_with_spain
+		
+		# icon = GFX_goal_focus_GER_dealing_with_spain
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = -2
+		y = 1
+		relative_position_id = focus_GER_pol_ausgleich
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_ausgleich
+			focus = focus_GER_pol_freedom_principle
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# イストリア交渉
+	focus = {
+		id = focus_GER_dip_istria_negotiation
+		
+		# icon = GFX_goal_focus_GER_istria_negotiation
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 2
+		relative_position_id = focus_GER_dip_dealing_with_spain
+		prerequisite = { # 前提NF
+			focus = focus_GER_dip_dealing_with_spain
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_centralization_of_privy_council
+			focus = focus_GER_pol_strengthen_national_assembly
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 兄弟闘争
+	focus = {
+		id = focus_GER_pol_brother_fight
+		
+		# icon = GFX_goal_focus_GER_brother_fight
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 5
+		y = 1
+		relative_position_id = focus_GER_pol_cabinet_future
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_cabinet_future
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 凱旋はベルリンへ
+	focus = {
+		id = focus_GER_pol_triumph_is_berlin
+		
+		# icon = GFX_goal_focus_GER_triumph_is_berlin
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_brother_fight
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_brother_fight
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 凱旋はウィーンへ
+	focus = {
+		id = focus_GER_pol_triumph_is_vienna
+		
+		# icon = GFX_goal_focus_GER_triumph_is_vienna
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 6
+		y = 1
+		relative_position_id = focus_GER_pol_brother_fight
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_brother_fight
 		}
 		available = {
 			always = yes

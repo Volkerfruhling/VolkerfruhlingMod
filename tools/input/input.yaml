@@ -3,19 +3,90 @@
  focuses:
   -
    tree: "pol"
+   jp: "双頭一体の鷲"
+   id: "two_headed_eagle"
+   cost: 5
+   x: 15
+   y: 0
+  -
+   tree: "pol"
+   jp: "プリンツ・マックス"
+   id: "prinz_max"
+   cost: 2
+   relative: "two_headed_eagle"
+   pre:
+    - "two_headed_eagle"
+   x: -1
+   y: 1
+  -
+   tree: "pol"
+   jp: "国民議会"
+   id: "national_assembly"
+   cost: 2
+   relative: "two_headed_eagle"
+   pre:
+    - "two_headed_eagle"
+   x: 1
+   y: 1
+  -
+   tree: "pol"
+   jp: "オーストリア帝冠領"
+   id: "austrian_imperial_crown_lands"
+   cost: 5
+   relative: "prinz_max"
+   pre:
+    - "prinz_max"
+   x: 0
+   y: 1
+  -
+   tree: "pol"
+   jp: "イストリア問題"
+   id: "istria_problem"
+   cost: 2
+   relative: "austrian_imperial_crown_lands"
+   pre:
+    - "austrian_imperial_crown_lands"
+   x: 0
+   y: 1
+  -
+   tree: "pol"
+   jp: "枢密院"
+   id: "privy_council"
+   cost: 5
+   relative: "national_assembly"
+   pre:
+    - "national_assembly"
+   x: 0
+   y: 1
+  -
+   tree: "pol"
+   jp: "バルカン同盟"
+   id: "balcan_alliance"
+   cost: 2
+   relative: "privy_council"
+   pre:
+    - "privy_council"
+   x: 0
+   y: 1
+  -
+   tree: "pol"
    jp: "内閣の行く末"
    id: "cabinet_future"
    cost: 5
-   x: 10
-   y: 0
+   relative: "two_headed_eagle"
+   pre:
+    - "istria_problem"
+    - "balcan_alliance"
+   x: 0
+   y: 4
   -
    tree: "pol"
    jp: "自由之理"
    id: "freedom_principle"
    cost: 5
-   relative: "pol_cabinet_future"
+   relative: "cabinet_future"
    pre:
-    - "pol_cabinet_future"
+    - "cabinet_future"
    x: -5
    y: 1
   -
@@ -23,9 +94,9 @@
    jp: "帝冠領整理案"
    id: "proposiation_reform_imperial_crown_lands"
    cost: 5
-   relative: "pol_freedom_principle"
+   relative: "freedom_principle"
    pre:
-    - "pol_freedom_principle"
+    - "freedom_principle"
    x: -1
    y: 1
   -
@@ -33,9 +104,9 @@
    jp: "少数民族問題"
    id: "minority_problem"
    cost: 5
-   relative: "pol_proposiation_reform_imperial_crown_lands"
+   relative: "proposiation_reform_imperial_crown_lands"
    pre:
-    - "pol_proposiation_reform_imperial_crown_lands"
+    - "proposiation_reform_imperial_crown_lands"
    x: 0
    y: 1
   -
@@ -43,9 +114,9 @@
    jp: "内閣集権"
    id: "centralization_of_cabinet"
    cost: 5
-   relative: "pol_freedom_principle"
+   relative: "freedom_principle"
    pre:
-    - "pol_freedom_principle"
+    - "freedom_principle"
    x: 1
    y: 1
   -
@@ -53,9 +124,9 @@
    jp: "国民議会の強化"
    id: "strengthen_national_assembly"
    cost: 5
-   relative: "pol_centralization_of_cabinet"
+   relative: "centralization_of_cabinet"
    pre:
-    - "pol_centralization_of_cabinet"
+    - "centralization_of_cabinet"
    x: 0
    y: 1
   -
@@ -63,10 +134,115 @@
    jp: "改革準備委員会"
    id: "preparation_committee_for_reform"
    cost: 5
-   relative: "pol_freedom_principle"
+   relative: "freedom_principle"
    pre:
-    - "pol_minority_problem"
-    - "pol_strengthen_national_assembly"
+    - "minority_problem"
+    - "strengthen_national_assembly"
    x: 0
    y: 3
+  -
+   tree: "pol"
+   jp: "1926年議会選挙"
+   id: "1926_election"
+   cost: 5
+   relative: "preparation_committee_for_reform"
+   pre:
+    - "preparation_committee_for_reform"
+   x: 0
+   y: 1
+  -
+   tree: "pol"
+   jp: "ヴァイマル連立の勝利"
+   id: "victory_of_weimar_coalition"
+   cost: 5
+   relative: "1926_election"
+   pre:
+    - "1926_election"
+   x: -2
+   y: 1
+  -
+   tree: "pol"
+   jp: "保守党の勝利"
+   id: "victory_of_conservative_party"
+   cost: 5
+   relative: "1926_election"
+   pre:
+    - "1926_election"
+   x: 2
+   y: 1
+  -
+   tree: "pol"
+   jp: "アウスグライヒ"
+   id: "ausgleich"
+   cost: 5
+   relative: "cabinet_future"
+   pre:
+    - "cabinet_future"
+   x: 0
+   y: 1
+  -
+   tree: "pol"
+   jp: "枢密院集権"
+   id: "centralization_of_privy_council"
+   cost: 5
+   relative: "ausgleich"
+   pre:
+    - "ausgleich"
+   x: 0
+   y: 1
+  -
+   tree: "dip"
+   jp: "スペインへの対処"
+   id: "dealing_with_spain"
+   cost: 5
+   relative: "ausgleich"
+   pre:
+    - 
+     - "ausgleich"
+     - "freedom_principle"
+   x: -2
+   y: 1
+  -
+   tree: "dip"
+   jp: "イストリア交渉"
+   id: "istria_negotiation"
+   cost: 5
+   relative: "dealing_with_spain"
+   pre:
+    - "dealing_with_spain"
+    -
+     - "centralization_of_privy_council"
+     - "strengthen_national_assembly"
+   x: 0
+   y: 2
+  -
+   tree: "pol"
+   jp: "兄弟闘争"
+   id: "brother_fight"
+   cost: 5
+   relative: "cabinet_future"
+   pre:
+    - "cabinet_future"
+   x: 5
+   y: 1
+  -
+   tree: "pol"
+   jp: "凱旋はベルリンへ"
+   id: "triumph_is_berlin"
+   cost: 5
+   relative: "brother_fight"
+   pre:
+    - "brother_fight"
+   x: 0
+   y: 1
+  -
+   tree: "pol"
+   jp: "凱旋はウィーンへ"
+   id: "triumph_is_vienna"
+   cost: 5
+   relative: "brother_fight"
+   pre:
+    - "brother_fight"
+   x: 6
+   y: 1
   

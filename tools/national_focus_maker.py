@@ -48,15 +48,26 @@ def main():
 
 def relative_or_pre(which,focus,tree_name):
     if which == "relative" and "relative" in focus:
-        return f"		relative_position_id = {tree_name}_{focus["relative"]}\n"
+        return f"		relative_position_id = {tree_name}_{search_tree(focus["relative"])}_{focus["relative"]}\n"
     elif which == "pre" and "pre" in focus:
         pre = ""
         for pre_focus in focus["pre"]:
             pre += "		prerequisite = { # 前提NF\n"
-            pre += f"			focus = {tree_name}_{pre_focus}\n"
+            if type(pre_focus) == list:
+                for pre_focus_id in pre_focus:
+                    pre += f"			focus = {tree_name}_{search_tree(pre_focus_id)}_{pre_focus_id}\n"
+            else:
+                pre += f"			focus = {tree_name}_{search_tree(pre_focus)}_{pre_focus}\n"
             pre += "		}\n"
         return pre
     else:
         return ""
+    
+def search_tree(focusid, data = load_yaml()["focus_tree"]["focuses"]):
+    for focus in data:
+        if focus["id"] == focusid:
+            return focus["tree"]
+    return None
+
 if __name__ == "__main__":
     main()
