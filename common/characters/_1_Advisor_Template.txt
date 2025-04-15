@@ -1,0 +1,27 @@
+#characters = {
+#    
+#    #ID　 = {
+#        name = #名前　
+#
+#        advisor = {
+#
+#            slot = 
+#            idea_token = Kita_ikuyo #名前
+#            ledger = civilian #各論者
+#            traits = { } #効果系
+#
+#        }
+#
+#        portraits = {
+#            civilian = {
+#                small = ""　# GFXの設定
+#            }
+#        }
+#
+#    }
+#}
+
+# 政府首班　slot = prime_minister_idea
+# 外務大臣　slot = foreign_affairs_idea
+# 内務大臣　slot = minister_interior_idea
+# 経済大臣　slot = minister_economy_idea
