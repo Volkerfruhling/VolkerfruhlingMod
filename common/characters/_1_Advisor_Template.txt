@@ -6,7 +6,7 @@
 #        advisor = {
 #
 #            slot = 
-#            idea_token = Kita_ikuyo #名前
+#            idea_token = #名前
 #            ledger = civilian #各論者
 #            traits = { } #効果系
 #
