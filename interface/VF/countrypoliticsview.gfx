@@ -633,7 +633,12 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_pol_view_bg"
-		textureFile = "gfx//interface//pol_view_bg.dds"
+		textureFile = "gfx/interface/GUI/political_tabulation/pol_view_bg.png"
+	}
+
+	spriteType = {
+		name = "GFX_faction_name_box"
+		textureFile = "gfx/interface/GUI/political_tabulation/faction_name_box.png"
 	}
 
 	spriteType = {
