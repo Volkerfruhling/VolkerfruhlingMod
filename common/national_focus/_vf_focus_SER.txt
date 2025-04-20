@@ -297,6 +297,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			add_war_support = 0.10
 		}
 
 	}
@@ -319,6 +320,12 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			802 = {
+				add_core_of = SER
+				remove_core_of = ALB
+				start_resistance = SER
+				add_resistance_target = 50
+			}
 		}
 
 	}
@@ -341,6 +348,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			country_event = event_SER_pol.6
 		}
 
 	}
@@ -363,6 +371,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			country_event = event_SER_pol.7
 		}
 
 	}

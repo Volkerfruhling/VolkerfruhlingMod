@@ -87,3 +87,34 @@ country_event = { # 最終提案: 拒否
 		}
 	}
 }
+country_event = { # ティラナへの最後通牒
+	id = event_SER_pol.6
+	title = event_SER_pol.6.title
+	desc = event_SER_pol.6.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = event_SER_pol.6.a
+		SER = {
+			transfer_state = 802
+		}
+	}
+}
+country_event = { # アルバニア平定作戦
+	id = event_SER_pol.7
+	title = event_SER_pol.7.title
+	desc = event_SER_pol.7.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = event_SER_pol.7.a
+		SER = {
+			declare_war_on = {
+				target = ALB
+				type = annex_everything
+			}
+		}
+	}
+}
