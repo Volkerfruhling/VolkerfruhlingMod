@@ -1,0 +1,16 @@
+﻿l_japanese:
+ event_SER_pol.1.title: "モンテネグロへの圧力"
+ event_SER_pol.1.desc: "モンテネグロに圧力をかけようね。"
+ event_SER_pol.1.a: "圧力をかける"
+
+ event_SER_pol.2.title: "統合プロパガンダ"
+ event_SER_pol.2.desc: "モンテネグロの統合を支援しよう。"
+ event_SER_pol.2.a: "支援する"
+
+ event_SER_pol.3.title: "セルビアからの最後通牒"
+ event_SER_pol.3.desc: "まあ、併合されてもいいか。"
+ event_SER_pol.3.a: "受け入れる他ない"
+
+ event_SER_pol.4.title: "提案の受諾"
+ event_SER_pol.4.desc: "やったー！モンテネグロと統合できたぞ！"
+ event_SER_pol.4.a: "どうしてモンテネグロがセルビアでないと言えようか"

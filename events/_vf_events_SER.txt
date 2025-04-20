@@ -1,0 +1,89 @@
+add_namespace  = event_SER_pol
+
+country_event = { # モンテネグロへの圧力
+	id = event_SER_pol.1
+	title = event_SER_pol.1.title
+	desc = event_SER_pol.1.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = event_SER_pol.1.a
+		MNT = {
+			add_stability = -0.2
+		}
+	}
+}
+country_event = { # 統合プロパガンダ
+	id = event_SER_pol.2
+	title = event_SER_pol.2.title
+	desc = event_SER_pol.2.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = event_SER_pol.2.a
+		SER = {
+			add_political_power = 50
+			add_war_support = 0.10
+		}
+	}
+}
+country_event = { # 最終提案: モンテネグロ側
+	id = event_SER_pol.3
+	title = event_SER_pol.3.title
+	desc = event_SER_pol.3.desc
+
+	is_triggered_only = yes
+
+	option = { # 受諾
+		name = event_SER_pol.3.a
+		SER = {
+			country_event = {
+				id = event_SER_pol.4
+				hours = 7
+			}
+		}
+	}
+	# option = { # 拒否
+	# 	name = event_SER_pol.3.b
+	# 	SER = {
+	# 		country_event = {
+	# 			id = event_SER_pol.5
+	# 		}
+	# 	}
+	# }
+}
+country_event = { # 最終提案: 受諾
+	id = event_SER_pol.4
+	title = event_SER_pol.4.title
+	desc = event_SER_pol.4.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = event_SER_pol.4.a
+		SER = {
+			annex_country = {
+				target = MNT
+			}
+		}
+	}
+}
+country_event = { # 最終提案: 拒否
+	id = event_SER_pol.5
+	title = event_SER_pol.5.title
+	desc = event_SER_pol.5.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = event_SER_pol.5.a
+		SER = {
+			create_wargoal = {
+				target = MNT
+				type = annex_everything
+			}
+		}
+	}
+}

@@ -2,7 +2,7 @@ ideas = {
 	country = {
 		### 初期国民精神 ###
 		# 莫大な賠償金
-		SER_huge_compensation = {
+		idea_SER_huge_compensation = {
 			picture = generic_economic_crisis
 			allowed = {
 				always = yes
@@ -17,7 +17,7 @@ ideas = {
 			}
 		}
 		# リョティッチの独裁
-		SER_ljotic_dictatorship = {
+		idea_SER_ljotic_dictatorship = {
 			allowed = {
 				always = yes
 			}
@@ -31,7 +31,7 @@ ideas = {
 			}
 		}
 		# 屈辱的な敗北
-		SER_humiliating_defeat = {
+		idea_SER_humiliating_defeat = {
 			allowed = {
 				always = yes
 			}
@@ -45,5 +45,34 @@ ideas = {
 			}
 		}
 
+	}
+	country = {
+		## NFにより付与 ##
+		# 反体制派のあぶり出し
+		idea_SER_pol_expose_dissenters = { 
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.03
+				stability_factor = -0.02
+			}
+		}
+		idea_SER_pol_zbor_youth_movement = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.10
+			}
+		}
 	}
 }

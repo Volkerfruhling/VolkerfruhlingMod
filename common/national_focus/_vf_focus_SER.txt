@@ -28,6 +28,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			add_political_power = 50
 		}
 
 	}
@@ -50,6 +51,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			add_stability = 0.03
 		}
 
 	}
@@ -72,6 +74,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			add_stability = 0.02
 		}
 
 	}
@@ -94,6 +97,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			add_ideas = idea_SER_pol_expose_dissenters
 		}
 
 	}
@@ -108,7 +112,7 @@ focus_tree = {
 	
 		x = 0
 		y = 1
-		relative_position_id = "focus_SER_pol_domestic_tightening" # 親NFのID
+		relative_position_id = "focus_SER_pol_expose_dissenters" # 親NFのID
 		prerequisite = { # 前提NF
 			focus = focus_SER_pol_domestic_tightening
 		}
@@ -116,6 +120,11 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = totalitarianism
+				popularity = 0.10
+			}
 		}
 
 	}
@@ -138,6 +147,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			add_war_support = 0.10
 		}
 		
 	}
@@ -160,6 +170,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			add_ideas = idea_SER_pol_zbor_youth_movement
 		}
 		
 	}
@@ -183,6 +194,9 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			country_event = {
+				id = event_SER_pol.1
+			}
 		}
 
 	}
@@ -205,6 +219,9 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			country_event = {
+				id = event_SER_pol.2
+			}
 		}
 
 	}
@@ -230,6 +247,11 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			MNT = {
+				country_event = {
+					id = event_SER_pol.3
+				}
+			}
 		}
 
 	}

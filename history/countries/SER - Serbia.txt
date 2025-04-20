@@ -160,9 +160,9 @@ set_popularities = {
 }
 
 add_ideas = { # 国民精神
-	SER_huge_compensation
-	SER_ljotic_dictatorship
-	SER_humiliating_defeat
+	idea_SER_huge_compensation
+	idea_SER_ljotic_dictatorship
+	idea_SER_humiliating_defeat
 }
 add_ideas = { # 法律
 	Presidential_democracy
