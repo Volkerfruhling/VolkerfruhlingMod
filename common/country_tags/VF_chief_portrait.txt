@@ -1,0 +1,24 @@
+scripted_gui = {
+
+	chief_portrait = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "chief_portrait_container"
+
+		properties = {
+			dual_leader_portrait = {
+				image = "[Root.VF_chief_portrait]"
+			}
+		}
+		
+		visible = {
+		}
+		
+		effects = {
+		}
+		
+		triggers = {
+		}
+	}
+}
+

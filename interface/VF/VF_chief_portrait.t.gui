@@ -1,0 +1,23 @@
+guiTypes = {
+
+    containerWindowType = {
+        name = "chief_portrait_container"
+        position = { x = 0 y = 0 }
+		
+		iconType ={
+			name ="dual_leader_portrait"
+			spriteType = "GFX_portrait_blank"
+			position = { x = 193 y = 87 }
+
+			pdx_tooltip = second_leader_tt
+			pdx_tooltip_delayed = dual_leader_desc_tt
+		}
+		
+		iconType ={
+			name ="dual_leader_bg"
+			spriteType = "GFX_pol_leader_frame"
+			position = { x = 185 y = 44 }
+			alwaystransparent = yes
+		}
+    }
+}
