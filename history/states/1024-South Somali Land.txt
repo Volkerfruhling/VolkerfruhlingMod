@@ -1,0 +1,26 @@
+state={
+	id=1024
+	name="STATE_1024"
+	manpower = 10000
+	resources = {
+		steel = 2
+	}
+	
+	state_category = rural
+	
+	history={
+		owner = ETH
+		add_core_of = ETH
+		buildings = {
+			infrastructure = 2
+			air_base = 3
+		}
+	}
+	provinces={
+		5068
+	}
+
+	local_supplies=0.0 
+        
+
+}
