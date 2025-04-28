@@ -1,0 +1,17 @@
+characters = {
+	OTT_abdulmecid_ii = {
+		name = OTT_abdulmecid_ii
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_OTT_abdulmecid_ii"
+			}
+		}
+		country_leader = {
+			ideology = liberalism_ideology
+			expire = "1936.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
+}
