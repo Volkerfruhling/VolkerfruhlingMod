@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_OTT_abdulmecid_ii"
+		texturefile = "gfx/interface/leaders/OTT/portrait_leader_OTT_abdulmecid_ii.dds"
+	}
+}
