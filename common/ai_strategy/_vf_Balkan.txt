@@ -1,0 +1,160 @@
+VF_balkan_strategy = {
+	allowed = {
+		original_tag = SER
+		original_tag = ROM
+		original_tag = GRE
+
+		original_tag = BUL
+		original_tag = ALB
+		original_tag = MNT
+		original_tag = HUN
+	}
+	enable = {
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 999 #88 to 70
+	}
+
+
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 50
+	}
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 100
+	}
+}
+VF_serbia_albania_invation_strategy = {
+	allowed = {
+		original_tag = SER
+		
+	}
+	enable = {
+		original_tag = SER
+		ALB = {
+			exists = yes
+			has_war_with = SER
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = prepare_for_war
+		id = BUL
+		value = -200
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = ALB
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = HUN
+		value = -200
+	}
+}
+VF_serbia_strategy = {
+	allowed = {
+		original_tag = SER
+	}
+	enable = {
+		original_tag = SER
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = BUL
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = ALB
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = HUN
+		value = 100
+	}
+}
+VF_bulgaria_strategy = {
+	allowed = {
+		original_tag = BUL
+	}
+	enable = {
+		original_tag = BUL
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SER
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = ROM
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = GRE
+		value = 50
+	}
+}
+VF_romania_strategy = {
+	allowed = {
+		original_tag = ROM
+	}
+	enable = {
+		original_tag = ROM
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = HUN
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = BUL
+		value = 50
+	}
+}
+VF_hungary_strategy = {
+	allowed = {
+		original_tag = HUN
+	}
+	enable = {
+		original_tag = HUN
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = ROM
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SER
+		value = 50
+	}
+}
+VF_greece_strategy = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		original_tag = GRE
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = BUL
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = ALB
+		value = 50
+	}
+}

@@ -10,7 +10,12 @@ state={
 	history = {
 		owner = BUL
 		add_core_of = BUL
-
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 2
+			air_base = 3
+		}
 	}
 	manpower=1814936
 	buildings_max_level_factor=1.000

@@ -74,5 +74,38 @@ ideas = {
 				conscription_factor = 0.10
 			}
 		}
+		# 軍産複合体からの強制調達
+		idea_SER_eco_forced_acquisition_from_military_complex = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				military_factory_donations = 4
+				conscription_factor = 0.20
+			}
+		}
+		idea_balkan_war = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org = 20
+			}
+			targeted_modifier = {
+				tag = BUL
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+		}
 	}
 }

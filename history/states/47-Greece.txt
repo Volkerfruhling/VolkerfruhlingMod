@@ -13,7 +13,11 @@ state={
 	history = {
 		owner = GRE
 		add_core_of = GRE
-
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 4
+			arms_factory = 4
+		}
 	}
 	manpower=2312500
 	buildings_max_level_factor=1.000

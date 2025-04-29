@@ -5,15 +5,20 @@ state={
 		steel=2.000
 	}
 	provinces={
-			6940
-			6953
-			9849
-			9874
-		}
+		6940
+		6953
+		9849
+		9874
+	}
 	history = {
 		owner = ALB
 		add_core_of = ALB
-
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 1
+		}
 	}
 	manpower=616000
 	buildings_max_level_factor=1.000

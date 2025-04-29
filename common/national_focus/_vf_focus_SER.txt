@@ -274,6 +274,9 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			105 = {
+				add_core_of = SER
+			}
 		}
 
 	}
@@ -439,6 +442,10 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			diplomatic_relation = {
+				country = GRE
+				relation = non_aggression_pact
+			}
 		}
 
 	}
@@ -483,6 +490,10 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			diplomatic_relation = {
+				country = ROM
+				relation = non_aggression_pact
+			}
 		}
 
 	}
@@ -508,6 +519,14 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			create_faction = "救国同盟" # SER_alliance_for_salvation
+			add_to_faction = GRE
+			add_to_faction = ROM
+			every_country = {
+				limit = {
+					is_in_faction_with = SER
+				}
+			}
 		}
 
 	}
@@ -534,6 +553,18 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			every_country = {
+				limit = {
+					is_in_faction_with = SER
+				}
+				add_war_support = 0.1
+				random_state = {
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+					}
+				}
+			}
 		}
 
 	}
@@ -556,7 +587,10 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			country_event = event_SER_pol.8
 		}
+		will_lead_to_war_with = BUL
+		will_lead_to_war_with = HUN
 
 	}
 
@@ -822,6 +856,13 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			107 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+				add_extra_state_shared_building_slots = 4
+			}
 		}
 		
 	}
@@ -844,6 +885,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			add_research_slot = 1
 		}
 		
 	}
@@ -866,6 +908,22 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			107 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 2
+
+			}
+			108 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 2
+
+			}
 		}
 		
 	}
@@ -891,6 +949,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			add_war_support = 0.1
 		}
 		
 	}
@@ -915,7 +974,7 @@ focus_tree = {
 			focus = focus_SER_eco_iron_will
 		}
 		available = {
-			always = yes
+			always = no
 		}
 		completion_reward = {
 		}
@@ -1033,7 +1092,7 @@ focus_tree = {
 			focus = focus_SER_eco_iron_will
 		}
 		available = {
-			always = yes
+			always = no
 		}
 		completion_reward = {
 		}
@@ -1195,6 +1254,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			remove_ideas = idea_SER_huge_compensation
 		}
 		
 	}
@@ -1217,6 +1277,14 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 10000
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 30
+			}
 		}
 		
 	}
@@ -1239,6 +1307,10 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			add_ideas = idea_SER_eco_forced_acquisition_from_military_complex
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 		
 	}
@@ -1261,6 +1333,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			add_ideas = tot_economic_mobilisation
 		}
 		
 	}
@@ -1283,6 +1356,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			add_ideas = service_by_requirement
 		}
 		
 	}
@@ -1308,6 +1382,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			add_research_slot = 1
 		}
 		
 	}
