@@ -15,4 +15,21 @@ guiTypes = {
 		}
         
     }
+
+	containerWindowType = {
+        name = "VF_sub_Ideology_diplomacy_GUI"
+        position = { x = 258 y = 135 }
+        clipping = no
+
+        instantTextboxType = {
+			name = "sub_ideology"
+			position = { x = 5 y = 10 }
+			font = "hoi_16mbs"
+			text = "[THIS.VFsubIdeologyDiplomacy]"
+			maxWidth = 155
+			maxHeight = 27
+			format = left
+		}
+        
+    }
 }
