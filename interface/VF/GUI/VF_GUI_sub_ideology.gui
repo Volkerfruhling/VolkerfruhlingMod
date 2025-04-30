@@ -1,0 +1,18 @@
+guiTypes = {
+    containerWindowType = {
+        name = "VF_sub_Ideology_GUI"
+        position = { x = 88 y = 305 }
+        clipping = no
+
+        instantTextboxType = {
+			name = "sub_ideology"
+			position = { x = 9 y = 26 }
+			font = "hoi_16mbs"
+			text = "[THIS.VFsubIdeology]"
+			maxWidth = 155
+			maxHeight = 27
+			format = left
+		}
+        
+    }
+}
