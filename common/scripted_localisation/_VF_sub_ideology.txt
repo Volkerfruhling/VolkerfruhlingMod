@@ -167,6 +167,13 @@
         localization_key = social_nationalism
     }
 
+    text = { #アナルコ・共産主義
+        trigger = {
+            has_country_leader_ideology = anarcho_communism
+        }
+        localization_key = anarcho_communism
+    }
+
     # 共産主義/communism
 
     text = { #共産主義
