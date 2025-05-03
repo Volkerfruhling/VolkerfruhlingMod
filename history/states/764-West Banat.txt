@@ -8,6 +8,7 @@ state={
 	history={
 		owner = HUN
 		add_core_of = HUN
+		add_claim_by = SER
 		victory_points = {
 			3614 1
 		}

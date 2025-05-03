@@ -28,12 +28,9 @@ state={
 			3526
 			3844
 			3936
-			6990
 			895
 			936
 			966
-			9791
-			9930
 		}
 	manpower=1155700
 	buildings_max_level_factor=1.000
