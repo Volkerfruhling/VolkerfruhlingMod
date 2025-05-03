@@ -12,6 +12,8 @@ state={
 			industrial_complex = 1
 			arms_factory = 1
 		}
+		add_claim_by = SER
+
 	}
 	manpower=210000
 	buildings_max_level_factor=1.000
