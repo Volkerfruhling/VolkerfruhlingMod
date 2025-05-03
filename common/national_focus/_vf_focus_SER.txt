@@ -1282,9 +1282,14 @@ focus_tree = {
 				amount = 10000
 			}
 			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 5000
+			}
+			add_equipment_to_stockpile = {
 				type = train_equipment
 				amount = 30
 			}
+			load_oob = "SER_houhei"
 		}
 		
 	}

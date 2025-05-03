@@ -16,7 +16,7 @@ VF_balkan_strategy = {
 	ai_strategy = {
 		type = role_ratio
 		id = infantry
-		value = 999 #88 to 70
+		value = 100 #88 to 70
 	}
 
 
@@ -59,11 +59,17 @@ VF_serbia_albania_invation_strategy = {
 	}
 }
 VF_serbia_strategy = {
+	
 	allowed = {
 		original_tag = SER
 	}
 	enable = {
 		original_tag = SER
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = artillery
+		value = 80 #88 to 70
 	}
 	ai_strategy = {
 		type = prepare_for_war
