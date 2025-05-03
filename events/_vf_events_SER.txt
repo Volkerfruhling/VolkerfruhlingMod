@@ -99,6 +99,10 @@ country_event = { # ティラナへの最後通牒
 		SER = {
 			transfer_state = 802
 		}
+		GRE = {
+			transfer_state = 805
+			add_state_core = 805
+		}
 	}
 }
 country_event = { # アルバニア平定作戦
