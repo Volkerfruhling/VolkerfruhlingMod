@@ -164,33 +164,63 @@ country_event = { # 戦争からの撤退
 	desc = event_SER_pol.9.desc
 	trigger = {
 		tag = HUN
+		has_global_flag = vf_started_balkan_war
+		NOT = {
+			has_global_flag = vf_HUN_left_balkan_war
+		}		
 		HUN = {
-			OR = {
-				NOT = {
-					controls_state = 764
-				}
-				NOT = {
-					OR = {
-						controls_state = 82
-						controls_state = 84
+			has_war_with = SER
+			set_temp_variable = {
+				VF_HUN_noOf_lost_state = 0
+			}
+			IF = {
+				limit = {
+					NOT = {
+						controls_state = 764
 					}
 				}
-				NOT = {
-					OR = {
+				add_to_temp_variable = {
+					VF_HUN_noOf_lost_state = 1
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
 						controls_state = 82
+					}
+				}
+				add_to_temp_variable = {
+					VF_HUN_noOf_lost_state = 1
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
 						controls_state = 83
 					}
 				}
-				NOT = {
-					OR = {
-						controls_state = 82
+				add_to_temp_variable = {
+					VF_HUN_noOf_lost_state = 1
+				}
+			}
+			IF = {
+				limit = {
+					NOT = {
 						controls_state = 84
 					}
 				}
+				add_to_temp_variable = {
+					VF_HUN_noOf_lost_state = 1
+				}
+			}
+			
+			check_variable = {
+				VF_HUN_noOf_lost_state > 1
 			}
 		}
 	}
 	immediate = {
+		set_global_flag = vf_HUN_left_balkan_war
 		HUN = {
 			leave_faction = yes
 			white_peace = {
@@ -198,15 +228,27 @@ country_event = { # 戦争からの撤退
 			}
 			82 = {
 				transfer_state_to = ROM
+				add_core_of = ROM
+				remove_core_of = HUN
+				add_claim_by = HUN
 			}
 			83 = {
 				transfer_state_to = ROM
+				add_core_of = ROM
+				remove_core_of = HUN
+				add_claim_by = HUN
 			}
 			84 = {
 				transfer_state_to = ROM
+				add_core_of = ROM
+				remove_core_of = HUN
+				add_claim_by = HUN
 			}
 			764 = {
 				transfer_state_to = SER
+				add_core_of = SER
+				remove_core_of = HUN
+				add_claim_by = HUN
 			}
 		}
 		IF = {
@@ -228,6 +270,120 @@ country_event = { # 戦争からの撤退
 			}
 			77 = {
 				transfer_state_to = ROM
+			}
+		}
+	}
+}
+country_event = { # 講話
+	id = event_SER_pol.10
+	title = event_SER_pol.10.title
+	desc = event_SER_pol.10.desc
+	trigger = {
+		BUL = {
+			has_global_flag = vf_started_balkan_war
+			NOT = {
+				has_global_flag = vf_ended_balkan_war
+			}
+			OR = {
+				and = {
+					surrender_progress > 0
+					date > 1928.7.1
+				}
+			}
+		}
+	}
+	immediate = {
+		set_global_flag = vf_ended_balkan_war
+		BUL = {
+			leave_faction = yes
+			HUN = {
+				leave_faction = yes
+			}
+			IF = {
+				limit = {
+					BUL = {
+						surrender_progress > 0.7
+					}
+				}
+				BUL = {
+					white_peace = {
+						tag = SER
+					}
+					803 = {
+						transfer_state_to = SER
+						add_core_of = SER
+						remove_core_of = BUL
+						add_claim_by = BUL
+					}
+					106 = {
+						transfer_state_to = SER
+						add_core_of = SER
+						remove_core_of = BUL
+						add_claim_by = BUL
+					}
+					77 = {
+						transfer_state_to = ROM
+						add_core_of = ROM
+						remove_core_of = BUL
+						add_claim_by = BUL
+					}
+					184 = {
+						transfer_state_to = GRE
+						add_core_of = GRE
+						remove_core_of = BUL
+						add_claim_by = BUL
+					}
+					
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					BUL = {
+						surrender_progress > 0.5
+					}
+				}
+				BUL = {
+					white_peace = {
+						tag = SER
+					}
+					803 = {
+						transfer_state_to = SER
+						add_core_of = SER
+						remove_core_of = BUL
+						add_claim_by = BUL
+					}
+					106 = {
+						transfer_state_to = SER
+						add_core_of = SER
+						remove_core_of = BUL
+						add_claim_by = BUL
+					}
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					BUL = {
+						surrender_progress > 0.3
+					}
+				}
+				BUL = {
+					white_peace = {
+						tag = SER
+					}
+					803 = {
+						transfer_state_to = SER
+						add_core_of = SER
+						remove_core_of = BUL
+						add_claim_by = BUL
+					}
+				}
+			}
+			ELSE = {
+				BUL = {
+					white_peace = {
+						tag = SER
+					}
+				}
 			}
 		}
 	}

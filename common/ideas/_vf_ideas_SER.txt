@@ -89,7 +89,7 @@ ideas = {
 				conscription_factor = 0.20
 			}
 		}
-		idea_balkan_war = {
+		idea_balkan_war = { # バルカン戦争用バフ
 			allowed = {
 				always = yes
 			}
@@ -100,11 +100,17 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				army_org = 20
+				ai_focus_aggressive_factor = 1.00
 			}
 			targeted_modifier = {
 				tag = BUL
 				attack_bonus_against = 0.25
 				defense_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = HUN
+				attack_bonus_against = 0.45
+				defense_bonus_against = 0.45
 			}
 		}
 	}

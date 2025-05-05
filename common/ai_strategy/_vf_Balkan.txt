@@ -21,10 +21,6 @@ VF_balkan_strategy = {
 
 
 	ai_strategy = {
-		type = added_military_to_civilian_factory_ratio
-		value = 50
-	}
-	ai_strategy = {
 		type = ai_wanted_divisions_factor
 		value = 100
 	}
@@ -65,6 +61,11 @@ VF_serbia_strategy = {
 	}
 	enable = {
 		original_tag = SER
+		NOT = {
+			AND ={
+				has_global_flag = vf_started_balkan_war
+			}
+		}
 	}
 	ai_strategy = {
 		type = role_ratio
@@ -80,6 +81,65 @@ VF_serbia_strategy = {
 		type = prepare_for_war
 		id = ALB
 		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = HUN
+		value = 100
+	}
+}
+VF_serbia_bw_strategy = {
+	
+	allowed = {
+		original_tag = SER
+	}
+	enable = {
+		original_tag = SER
+		AND ={
+			has_global_flag = vf_started_balkan_war
+		}
+		NOT = {
+			AND ={
+				has_global_flag = vf_ended_balkan_war
+			}
+		}
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = artillery
+		value = 80 #88 to 70
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = BUL
+		value = 50
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = HUN
+		value = 100
+	}
+}
+VF_serbia_after_bw_strategy = {
+	
+	allowed = {
+		original_tag = SER
+	}
+	enable = {
+		original_tag = SER
+		AND ={
+			has_global_flag = vf_ended_balkan_war
+		}
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = artillery
+		value = 80 #88 to 70
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = BUL
+		value = -100
 	}
 	ai_strategy = {
 		type = prepare_for_war
