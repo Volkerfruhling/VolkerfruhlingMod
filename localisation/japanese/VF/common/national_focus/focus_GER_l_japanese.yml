@@ -1,0 +1,184 @@
+﻿l_japanese:
+  focus_GER_pol_two_headed_eagle: "双頭一体の鷲"
+  focus_GER_pol_two_headed_eagle_desc: "to_do:双頭一体の鷲"
+
+  focus_GER_pol_prinz_max: "プリンツ・マックス"
+  focus_GER_pol_prinz_max_desc: "to_do:プリンツ・マックス"
+
+  focus_GER_pol_national_assembly: "国民議会"
+  focus_GER_pol_national_assembly_desc: "to_do:国民議会"
+
+  focus_GER_pol_austrian_imperial_crown_lands: "オーストリア帝冠領"
+  focus_GER_pol_austrian_imperial_crown_lands_desc: "to_do:オーストリア帝冠領"
+
+  focus_GER_pol_istria_problem: "イストリア問題"
+  focus_GER_pol_istria_problem_desc: "to_do:イストリア問題"
+
+  focus_GER_pol_privy_council: "枢密院"
+  focus_GER_pol_privy_council_desc: "to_do:枢密院"
+
+  focus_GER_pol_balcan_alliance: "バルカン同盟"
+  focus_GER_pol_balcan_alliance_desc: "to_do:バルカン同盟"
+
+  focus_GER_pol_cabinet_future: "内閣の行く末"
+  focus_GER_pol_cabinet_future_desc: "to_do:内閣の行く末"
+
+  focus_GER_pol_freedom_principle: "自由之理"
+  focus_GER_pol_freedom_principle_desc: "to_do:自由之理"
+
+  focus_GER_pol_proposiation_reform_imperial_crown_lands: "帝冠領整理案"
+  focus_GER_pol_proposiation_reform_imperial_crown_lands_desc: "to_do:帝冠領整理案"
+
+  focus_GER_pol_minority_problem: "少数民族問題"
+  focus_GER_pol_minority_problem_desc: "to_do:少数民族問題"
+
+  focus_GER_pol_centralization_of_cabinet: "内閣集権"
+  focus_GER_pol_centralization_of_cabinet_desc: "to_do:内閣集権"
+
+  focus_GER_pol_strengthen_national_assembly: "国民議会の強化"
+  focus_GER_pol_strengthen_national_assembly_desc: "to_do:国民議会の強化"
+
+  focus_GER_pol_preparation_committee_for_reform: "改革準備委員会"
+  focus_GER_pol_preparation_committee_for_reform_desc: "to_do:改革準備委員会"
+
+  focus_GER_pol_1926_election: "1926年議会選挙"
+  focus_GER_pol_1926_election_desc: "to_do:1926年議会選挙"
+
+  focus_GER_pol_victory_of_weimar_coalition: "ヴァイマル連立の勝利"
+  focus_GER_pol_victory_of_weimar_coalition_desc: "to_do:ヴァイマル連立の勝利"
+
+  focus_GER_pol_victory_of_conservative_party: "保守党の勝利"
+  focus_GER_pol_victory_of_conservative_party_desc: "to_do:保守党の勝利"
+
+  focus_GER_pol_ausgleich: "アウスグライヒ"
+  focus_GER_pol_ausgleich_desc: "to_do:アウスグライヒ"
+
+  focus_GER_pol_centralization_of_privy_council: "枢密院集権"
+  focus_GER_pol_centralization_of_privy_council_desc: "to_do:枢密院集権"
+
+  focus_GER_dip_dealing_with_spain: "スペインへの対処"
+  focus_GER_dip_dealing_with_spain_desc: "to_do:スペインへの対処"
+
+  focus_GER_dip_istria_negotiation: "イストリア交渉"
+  focus_GER_dip_istria_negotiation_desc: "to_do:イストリア交渉"
+
+  focus_GER_pol_brother_fight: "兄弟闘争"
+  focus_GER_pol_brother_fight_desc: "to_do:兄弟闘争"
+
+  focus_GER_pol_triumph_is_berlin: "凱旋はベルリンへ"
+  focus_GER_pol_triumph_is_berlin_desc: "to_do:凱旋はベルリンへ"
+
+  focus_GER_pol_triumph_is_vienna: "凱旋はウィーンへ"
+  focus_GER_pol_triumph_is_vienna_desc: "to_do:凱旋はウィーンへ"
+
+  #### 軍事NF ####
+  focus_GER_mil_total_war_institute: "総力戦研究所"
+  focus_GER_mil_total_war_institute_desc: "to_do: 総力戦研究所"
+
+  focus_GER_mil_ludendorff_proposal: "ルーデンドルフの提言"
+  focus_GER_mil_ludendorff_proposal_desc: "to_do: ルーデンドルフの提言"
+
+  focus_GER_mil_theorical_deepning_of_siege_and_annihilation: "包囲殲滅戦の理論深化"
+  focus_GER_mil_theorical_deepning_of_siege_and_annihilation_desc: "to_do: 包囲殲滅戦の理論深化"
+
+  focus_GER_mil_cavalry_strengthening: "騎兵強化"
+  focus_GER_mil_cavalry_strengthening_desc: "to_do: 騎兵強化"
+
+  focus_GER_mil_politics_should_be_subordinate_to_war_leadership: "政治は戦争指導に従属すべきである"
+  focus_GER_mil_politics_should_be_subordinate_to_war_leadership_desc: "to_do: 政治は戦争指導に従属すべきである"
+
+  focus_GER_mil_improved_schlieffen_plan: "改良シュリーフェン・プラン"
+  focus_GER_mil_improved_schlieffen_plan_desc: "to_do: 改良シュリーフェン・プラン"
+
+  focus_GER_mil_bewegungskrieg: "機動戦"
+  focus_GER_mil_bewegungskrieg_desc: "to_do: 機動戦"
+
+  focus_GER_mil_engineer_corps_strengthening: "工兵隊充実化"
+  focus_GER_mil_engineer_corps_strengthening_desc: "to_do: 工兵隊充実化"
+
+  focus_GER_mil_large_scale_breakthrough: "大規模突破"
+  focus_GER_mil_large_scale_breakthrough_desc: "to_do: 大規模突破"
+
+  focus_GER_mil_forward: "前進！"
+  focus_GER_mil_forward_desc: "to_do: 前進！"
+
+  focus_GER_mil_groener_proposal: "グレーナーの提言"
+  focus_GER_mil_groener_proposal_desc: "to_do: グレーナーの提言"
+
+  focus_GER_mil_construction_theory_of_machine_gun_fortifications: "機関銃陣地の構築理論"
+  focus_GER_mil_construction_theory_of_machine_gun_fortifications_desc: "to_do: 機関銃陣地の構築理論"
+
+  focus_GER_mil_supply_department_expansion: "兵站部門拡充"
+  focus_GER_mil_supply_department_expansion_desc: "to_do: 兵站部門拡充"
+
+  focus_GER_mil_infantry_strengthening: "歩兵強化"
+  focus_GER_mil_infantry_strengthening_desc: "to_do: 歩兵強化"
+
+  focus_GER_mil_railway_network_improvement: "鉄道網の整備"
+  focus_GER_mil_railway_network_improvement_desc: "to_do: 鉄道網の整備"
+
+  focus_GER_mil_officer_training: "士官養成"
+  focus_GER_mil_officer_training_desc: "to_do: 士官養成"
+
+  focus_GER_mil_national_defence_plan: "国土防衛計画"
+  focus_GER_mil_national_defence_plan_desc: "to_do: 国土防衛計画"
+
+  focus_GER_mil_stellungskrieg: "持久戦"
+  focus_GER_mil_stellungskrieg_desc: "to_do: 持久戦"
+
+  focus_GER_mil_defence_in_depth: "縦深防御"
+  focus_GER_mil_defence_in_depth_desc: "to_do: 縦深防御"
+
+  focus_GER_mil_the_army_is_a_tool_of_the_state: "軍は国家の道具である"
+  focus_GER_mil_the_army_is_a_tool_of_the_state_desc: "to_do: 軍は国家の道具である"
+
+  focus_GER_mil_civilian_control: "文民統制"
+  focus_GER_mil_civilian_control_desc: "to_do: 文民統制"
+
+  focus_GER_mil_ostwall: "オストヴァル"
+  focus_GER_mil_ostwall_desc: "to_do: オストヴァル"
+
+  focus_GER_mil_westwall: "ヴェストヴァル"
+  focus_GER_mil_westwall_desc: "to_do: ヴェストヴァル"
+
+  focus_GER_mil_absolute_defence: "絶対的防御"
+  focus_GER_mil_absolute_defence_desc: "to_do: 絶対的防御"
+
+  focus_GER_mil_weapons_modernization: "兵器の近代化"
+  focus_GER_mil_weapons_modernization_desc: "to_do: 兵器の近代化"
+
+  focus_GER_mil_automobile_military_use: "自動車の軍事運用"
+  focus_GER_mil_automobile_military_use_desc: "to_do: 自動車の軍事運用"
+
+  focus_GER_mil_fighter_aircraft_verification: "戦闘機の検証"
+  focus_GER_mil_fighter_aircraft_verification_desc: "to_do: 戦闘機の検証"
+
+  focus_GER_mil_prepare_for_storm: "嵐へ備える"
+  focus_GER_mil_prepare_for_storm_desc: "to_do: 嵐へ備える"
+
+  focus_GER_mil_tank_research: "戦車研究"
+  focus_GER_mil_tank_research_desc: "to_do: 戦車研究"
+
+  focus_GER_mil_armored_car_use: "装甲車の採用"
+  focus_GER_mil_armored_car_use_desc: "to_do: 装甲車の採用"
+
+  focus_GER_mil_bomber_research: "爆撃機の研究"
+  focus_GER_mil_bomber_research_desc: "to_do: 爆撃機の研究"
+
+  focus_GER_mil_concentration_breakthrough: "集中突破"
+  focus_GER_mil_concentration_breakthrough_desc: "to_do: 集中突破"
+
+  focus_GER_mil_chemical_weapon_production: "化学兵器製造"
+  focus_GER_mil_chemical_weapon_production_desc: "to_do: 化学兵器製造"
+
+  focus_GER_mil_break_morale: "士気を挫く"
+  focus_GER_mil_break_morale_desc: "to_do: 士気を挫く"
+
+  focus_GER_mil_break_stalemate: "膠着突破"
+  focus_GER_mil_break_stalemate_desc: "to_do: 膠着突破"
+
+  focus_GER_mil_fortress_city_setting: "要塞都市の設定"
+  focus_GER_mil_fortress_city_setting_desc: "to_do: 要塞都市の設定"
+
+  focus_GER_mil_maneuver_defence: "機動的防御"
+  focus_GER_mil_maneuver_defence_desc: "to_do: 機動的防御"

@@ -45,6 +45,15 @@ def main():
                 f"	}}\n"\
             )
         file.write(f"}}\n")
+    
+    with open(f"tools/output/_vf_{tree_name}.yaml", "w", encoding="utf-8-sig") as file:
+        file.write("l_japanese:\n")
+        for focus in data["focus_tree"]["focuses"]:
+            file.write(
+                f"  {tree_name}_{focus["tree"]}_{focus["id"]}: \"{focus["jp"]}\"\n"\
+                f"  {tree_name}_{focus["tree"]}_{focus["id"]}_desc: \"to_do: {focus["jp"]}\"\n\n"
+            )
+
 
 def relative_or_pre(which,focus,tree_name):
     if which == "relative" and "relative" in focus:

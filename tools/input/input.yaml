@@ -2,247 +2,389 @@
  country: "GER"
  focuses:
   -
-   tree: "pol"
-   jp: "双頭一体の鷲"
-   id: "two_headed_eagle"
+   tree: "mil"
+   jp: "総力戦研究所"
+   id: "total_war_institute"
    cost: 5
-   x: 15
+   x: 35
    y: 0
   -
-   tree: "pol"
-   jp: "プリンツ・マックス"
-   id: "prinz_max"
-   cost: 2
-   relative: "two_headed_eagle"
+   tree: "mil"
+   jp: "ルーデンドルフの提言"
+   id: "ludendorff_proposal"
+   cost: 5
+   relative: "total_war_institute"
    pre:
-    - "two_headed_eagle"
-   x: -1
+    - "total_war_institute"
+   x: -4
    y: 1
   -
-   tree: "pol"
-   jp: "国民議会"
-   id: "national_assembly"
-   cost: 2
-   relative: "two_headed_eagle"
+   tree: "mil"
+   jp: "包囲殲滅戦の理論深化"
+   id: "theorical_deepning_of_siege_and_annihilation"
+   cost: 5
+   relative: "ludendorff_proposal"
    pre:
-    - "two_headed_eagle"
+    - "ludendorff_proposal"
+   x: 0
+   y: 1
+  -
+   tree: "mil"
+   jp: "騎兵強化"
+   id: "cavalry_strengthening"
+   cost: 5
+   relative: "theorical_deepning_of_siege_and_annihilation"
+   pre:
+    - "theorical_deepning_of_siege_and_annihilation"
    x: 1
    y: 1
   -
-   tree: "pol"
-   jp: "オーストリア帝冠領"
-   id: "austrian_imperial_crown_lands"
+   tree: "mil"
+   jp: "政治は戦争指導に従属すべきである"
+   id: "politics_should_be_subordinate_to_war_leadership"
    cost: 5
-   relative: "prinz_max"
+   relative: "theorical_deepning_of_siege_and_annihilation"
    pre:
-    - "prinz_max"
-   x: 0
-   y: 1
-  -
-   tree: "pol"
-   jp: "イストリア問題"
-   id: "istria_problem"
-   cost: 2
-   relative: "austrian_imperial_crown_lands"
-   pre:
-    - "austrian_imperial_crown_lands"
-   x: 0
-   y: 1
-  -
-   tree: "pol"
-   jp: "枢密院"
-   id: "privy_council"
-   cost: 5
-   relative: "national_assembly"
-   pre:
-    - "national_assembly"
-   x: 0
-   y: 1
-  -
-   tree: "pol"
-   jp: "バルカン同盟"
-   id: "balcan_alliance"
-   cost: 2
-   relative: "privy_council"
-   pre:
-    - "privy_council"
-   x: 0
-   y: 1
-  -
-   tree: "pol"
-   jp: "内閣の行く末"
-   id: "cabinet_future"
-   cost: 5
-   relative: "two_headed_eagle"
-   pre:
-    - "istria_problem"
-    - "balcan_alliance"
-   x: 0
-   y: 4
-  -
-   tree: "pol"
-   jp: "自由之理"
-   id: "freedom_principle"
-   cost: 5
-   relative: "cabinet_future"
-   pre:
-    - "cabinet_future"
-   x: -5
-   y: 1
-  -
-   tree: "pol"
-   jp: "帝冠領整理案"
-   id: "proposiation_reform_imperial_crown_lands"
-   cost: 5
-   relative: "freedom_principle"
-   pre:
-    - "freedom_principle"
+    - "theorical_deepning_of_siege_and_annihilation"
    x: -1
    y: 1
   -
-   tree: "pol"
-   jp: "少数民族問題"
-   id: "minority_problem"
+   tree: "mil"
+   jp: "改良シュリーフェン・プラン"
+   id: "improved_schlieffen_plan"
    cost: 5
-   relative: "proposiation_reform_imperial_crown_lands"
+   relative: "theorical_deepning_of_siege_and_annihilation"
    pre:
-    - "proposiation_reform_imperial_crown_lands"
-   x: 0
-   y: 1
-  -
-   tree: "pol"
-   jp: "内閣集権"
-   id: "centralization_of_cabinet"
-   cost: 5
-   relative: "freedom_principle"
-   pre:
-    - "freedom_principle"
-   x: 1
-   y: 1
-  -
-   tree: "pol"
-   jp: "国民議会の強化"
-   id: "strengthen_national_assembly"
-   cost: 5
-   relative: "centralization_of_cabinet"
-   pre:
-    - "centralization_of_cabinet"
-   x: 0
-   y: 1
-  -
-   tree: "pol"
-   jp: "改革準備委員会"
-   id: "preparation_committee_for_reform"
-   cost: 5
-   relative: "freedom_principle"
-   pre:
-    - "minority_problem"
-    - "strengthen_national_assembly"
-   x: 0
-   y: 3
-  -
-   tree: "pol"
-   jp: "1926年議会選挙"
-   id: "1926_election"
-   cost: 5
-   relative: "preparation_committee_for_reform"
-   pre:
-    - "preparation_committee_for_reform"
-   x: 0
-   y: 1
-  -
-   tree: "pol"
-   jp: "ヴァイマル連立の勝利"
-   id: "victory_of_weimar_coalition"
-   cost: 5
-   relative: "1926_election"
-   pre:
-    - "1926_election"
-   x: -2
-   y: 1
-  -
-   tree: "pol"
-   jp: "保守党の勝利"
-   id: "victory_of_conservative_party"
-   cost: 5
-   relative: "1926_election"
-   pre:
-    - "1926_election"
-   x: 2
-   y: 1
-  -
-   tree: "pol"
-   jp: "アウスグライヒ"
-   id: "ausgleich"
-   cost: 5
-   relative: "cabinet_future"
-   pre:
-    - "cabinet_future"
-   x: 0
-   y: 1
-  -
-   tree: "pol"
-   jp: "枢密院集権"
-   id: "centralization_of_privy_council"
-   cost: 5
-   relative: "ausgleich"
-   pre:
-    - "ausgleich"
-   x: 0
-   y: 1
-  -
-   tree: "dip"
-   jp: "スペインへの対処"
-   id: "dealing_with_spain"
-   cost: 5
-   relative: "ausgleich"
-   pre:
-    - 
-     - "ausgleich"
-     - "freedom_principle"
-   x: -2
-   y: 1
-  -
-   tree: "dip"
-   jp: "イストリア交渉"
-   id: "istria_negotiation"
-   cost: 5
-   relative: "dealing_with_spain"
-   pre:
-    - "dealing_with_spain"
-    -
-     - "centralization_of_privy_council"
-     - "strengthen_national_assembly"
+    - "cavalry_strengthening"
+    - "politics_should_be_subordinate_to_war_leadership"
    x: 0
    y: 2
   -
-   tree: "pol"
-   jp: "兄弟闘争"
-   id: "brother_fight"
+   tree: "mil"
+   jp: "機動戦"
+   id: "bewegungskrieg"
    cost: 5
-   relative: "cabinet_future"
+   relative: "improved_schlieffen_plan"
    pre:
-    - "cabinet_future"
-   x: 5
-   y: 1
-  -
-   tree: "pol"
-   jp: "凱旋はベルリンへ"
-   id: "triumph_is_berlin"
-   cost: 5
-   relative: "brother_fight"
-   pre:
-    - "brother_fight"
+    - "improved_schlieffen_plan"
    x: 0
    y: 1
   -
-   tree: "pol"
-   jp: "凱旋はウィーンへ"
-   id: "triumph_is_vienna"
+   tree: "mil"
+   jp: "工兵隊充実化"
+   id: "engineer_corps_strengthening"
    cost: 5
-   relative: "brother_fight"
+   relative: "bewegungskrieg"
    pre:
-    - "brother_fight"
-   x: 6
+    - "bewegungskrieg"
+   x: -3
    y: 1
-  
+  -
+   tree: "mil"
+   jp: "大規模突破"
+   id: "large_scale_breakthrough"
+   cost: 5
+   relative: "engineer_corps_strengthening"
+   pre:
+    - "engineer_corps_strengthening"
+    - "tank_research"
+   x: 0
+   y: 2
+  -
+   tree: "mil"
+   jp: "前進！"
+   id: "forward"
+   cost: 5
+   relative: "large_scale_breakthrough"
+   pre:
+    - "large_scale_breakthrough"
+   x: 0
+   y: 1
+  -
+   tree: "mil"
+   jp: "グレーナーの提言"
+   id: "groener_proposal"
+   cost: 5
+   relative: "total_war_institute"
+   pre:
+    - "total_war_institute"
+   x: 4
+   y: 1
+  -
+   tree: "mil"
+   jp: "機関銃陣地の構築理論"
+   id: "construction_theory_of_machine_gun_fortifications"
+   cost: 5
+   relative: "groener_proposal"
+   pre:
+    - "groener_proposal"
+   x: 0
+   y: 1
+  -
+   tree: "mil"
+   jp: "兵站部門拡充"
+   id: "supply_department_expansion"
+   cost: 5
+   relative: "groener_proposal"
+   pre:
+    - "groener_proposal"
+   x: 2
+   y: 1
+  -
+   tree: "mil"
+   jp: "歩兵強化"
+   id: "infantry_strengthening"
+   cost: 5
+   relative: "construction_theory_of_machine_gun_fortifications"
+   pre:
+    - "construction_theory_of_machine_gun_fortifications"
+   x: -1
+   y: 1
+  -
+   tree: "mil"
+   jp: "鉄道網の整備"
+   id: "railway_network_improvement"
+   cost: 5
+   relative: "supply_department_expansion"
+   pre:
+    - "construction_theory_of_machine_gun_fortifications"
+    - "supply_department_expansion"
+   x: -1
+   y: 1
+  -
+   tree: "mil"
+   jp: "士官養成"
+   id: "officer_training"
+   cost: 5
+   relative: "supply_department_expansion"
+   pre:
+    - "supply_department_expansion"
+   x: 1
+   y: 1
+  -
+   tree: "mil"
+   jp: "国土防衛計画"
+   id: "national_defence_plan"
+   cost: 5
+   relative: "infantry_strengthening"
+   pre:
+    - "infantry_strengthening"
+    - "railway_network_improvement"
+   x: 1
+   y: 1
+  -
+   tree: "mil"
+   jp: "持久戦"
+   id: "stellungskrieg"
+   cost: 5
+   relative: "national_defence_plan"
+   pre:
+    - "national_defence_plan"
+    - "defence_in_depth"
+   x: 0
+   y: 1
+  -
+   tree: "mil"
+   jp: "縦深防御"
+   id: "defence_in_depth"
+   cost: 5
+   relative: "officer_training"
+   pre:
+    - "railway_network_improvement"
+    - "officer_training"
+   x: -1
+   y: 1
+  -
+   tree: "mil"
+   jp: "軍は国家の道具である"
+   id: "the_army_is_a_tool_of_the_state"
+   cost: 5
+   relative: "officer_training"
+   pre:
+    - "officer_training"
+    - "defence_in_depth"
+   x: 1
+   y: 1
+  -
+   tree: "mil" 
+   jp: "文民統制"
+   id: "civilian_control"
+   cost: 5
+   relative: "defence_in_depth"
+   pre:
+    - "defence_in_depth"
+    - "the_army_is_a_tool_of_the_state"
+   x: 2
+   y: 1
+  -
+   tree: "mil"
+   jp: "オストヴァル"
+   id: "ostwall"
+   cost: 5
+   relative: "defence_in_depth"
+   pre:
+    - "defence_in_depth"
+    - "civilian_control"
+   x: 0
+   y: 2
+  -
+   tree: "mil"
+   jp: "ヴェストヴァル"
+   id: "westwall"
+   cost: 5
+   relative: "ostwall"
+   pre:
+    - "ostwall"
+   x: 0
+   y: 1
+  -
+   tree: "mil"
+   jp: "絶対的防御"
+   id: "absolute_defence"
+   cost: 5
+   relative: "westwall"
+   pre:
+    - "westwall"
+   x: 0
+   y: 1
+
+  -
+   tree: "mil"
+   jp: "兵器の近代化"
+   id: "weapons_modernization"
+   cost: 5
+   relative: "total_war_institute"
+   pre:
+    -
+     - "ludendorff_proposal"
+     - "groener_proposal"
+   x: 0
+   y: 2
+  -
+   tree: "mil"
+   jp: "自動車の軍事運用"
+   id: "automobile_military_use"
+   cost: 5
+   relative: "weapons_modernization"
+   pre:
+    - "weapons_modernization"
+   x: 0 
+   y: 1
+  -
+   tree: "mil"
+   jp: "戦闘機の検証"
+   id: "fighter_aircraft_verification"
+   cost: 5
+   relative: "automobile_military_use"
+   pre:
+    - "automobile_military_use"
+   x: 0
+   y: 1
+  -
+   tree: "mil"
+   jp: "嵐へ備える"
+   id: "prepare_for_storm"
+   cost: 5
+   relative: "fighter_aircraft_verification"
+   pre:
+    - "fighter_aircraft_verification"
+    -
+     - "bewegungskrieg"
+     - "stellungskrieg"
+   x: 0
+   y: 2
+  -
+   tree: "mil"
+   jp: "戦車研究"
+   id: "tank_research"
+   cost: 5
+   relative: "prepare_for_storm"
+   pre: 
+    - "prepare_for_storm"
+   x: -4
+   y: 1
+  -
+   tree: "mil"
+   jp: "装甲車の採用"
+   id: "armored_car_use"
+   cost: 5
+   relative: "prepare_for_storm"
+   pre:
+    - "prepare_for_storm"
+   x: -2
+   y: 1
+  -
+   tree: "mil"
+   jp: "爆撃機の研究"
+   id: "bomber_research"
+   cost: 5
+   relative: "prepare_for_storm"
+   pre:
+    - "prepare_for_storm"
+   x: 0
+   y: 1
+  -
+   tree: "mil"
+   jp: "集中突破"
+   id: "concentration_breakthrough"
+   cost: 5
+   relative: "tank_research"
+   pre:
+    - "tank_research"
+    - "armored_car_use"
+   x: 1
+   y: 1
+  -
+   tree: "mil"
+   jp: "化学兵器製造"
+   id: "chemical_weapon_production"
+   cost: 5
+   relative: "armored_car_use"
+   pre:
+    - "armored_car_use"
+    - "bomber_research"
+   x: 1
+   y: 1
+  -
+   tree: "mil"
+   jp: "士気を挫く"
+   id: "break_morale"
+   cost: 5
+   relative: "bomber_research"
+   pre:
+    - "bomber_research"
+   x: 1
+   y: 1
+  -
+   tree: "mil"
+   jp: "膠着突破"
+   id: "break_stalemate"
+   cost: 5
+   relative: "chemical_weapon_production"
+   pre:
+    - "concentration_breakthrough"
+    - "chemical_weapon_production"
+    - "break_morale"
+   x: 0
+   y: 1
+  -
+   tree: "mil"
+   jp: "要塞都市の設定"
+   id: "fortress_city_setting"
+   cost: 5
+   relative: "prepare_for_storm"
+   pre:
+    - "prepare_for_storm"
+    - "ostwall"
+   x: 4
+   y: 1
+  -
+   tree: "mil"
+   jp: "機動的防御"
+   id: "maneuver_defence"
+   cost: 5
+   relative: "fortress_city_setting"
+   pre:
+    - "fortress_city_setting"
+   x: 0
+   y: 1
