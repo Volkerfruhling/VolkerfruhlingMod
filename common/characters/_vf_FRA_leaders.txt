@@ -13,4 +13,12 @@ characters = {
 			}
 		}
 	}
+
+	FRA_French_emperor = {
+		name = FRA_French_emperor
+	}
+	
+	chief_FRA_napoleon_iv = {
+		name = chief_FRA_napoleon_iv
+	}
 }

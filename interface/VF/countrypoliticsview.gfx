@@ -633,7 +633,72 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_pol_view_bg"
-		textureFile = "gfx//interface//pol_view_bg.dds"
+		textureFile = "gfx/interface/GUI/political_tabulation/pol_view_bg.png"
+	}
+
+	spriteType = {
+		name = "GFX_header_bg_pol"
+		textureFile = "gfx/interface/GUI/political_tabulation/header_bg_pol.png"
+	}
+
+	spriteType = {
+		name = "GFX_category_header_pol"
+		textureFile = "gfx/interface/GUI/political_tabulation/category_header_pol.png"
+	}	
+
+	spriteType = {
+		name = "GFX_government_button_occupied_territories"
+		textureFile = "gfx/interface/GUI/political_tabulation/government_button_occupied_territories.png"
+	}
+
+	spriteType = {
+		name = "GFX_government_button_exiled_governments"
+		textureFile = "gfx/interface/GUI/political_tabulation/government_button_exiled_governments.png"
+	}
+
+	spriteType = {
+		name = "GFX_government_button_manage_subjects"
+		textureFile = "gfx/interface/GUI/political_tabulation/government_button_manage_subjects.png"
+	}
+
+	spriteType = {
+		name = "GFX_politics_main_screens_bottom"
+		textureFile = "gfx/interface/GUI/political_tabulation/politics_main_screens_bottom.png"
+	}
+
+	spriteType = {
+		name = "GFX_faction_name_box"
+		textureFile = "gfx/interface/GUI/political_tabulation/faction_name_box.png"
+	}
+
+	spriteType = {
+		name = "GFX_NF_box"
+		textureFile = "gfx/interface/GUI/political_tabulation/NF_box.png"
+	}
+
+	spriteType = {
+		name = "GFX_VF_localization_portrait_blank"
+		texturefile = "gfx/interface/GUI/political_tabulation/portrait_blank.png"
+	}
+
+	spriteType = {
+		name = "GFX_CP_"
+		texturefile = "gfx/interface/GUI/political_tabulation/portrait_blank.png"
+	}
+
+	spriteType = {
+		name = "GFX_VF_president_diplomacy_portrait_button"
+		texturefile = "gfx/interface/GUI/diplomacy_tabulation/president_diplomacy_portrait_button.png"
+	}
+
+	spriteType = {
+		name = "GFX_VF_monarch_diplomacy_portrait_button"
+		texturefile = "gfx/interface/GUI/diplomacy_tabulation/monarch_diplomacy_portrait_button.png"
+	}
+
+	spriteType = {
+		name = "GFX_VF_button_148x34"
+		texturefile = "pdx_launcher/game/gfx/interface/button_148x34.dds"
 	}
 
 	spriteType = {
