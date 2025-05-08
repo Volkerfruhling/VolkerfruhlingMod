@@ -11,10 +11,25 @@ guiTypes = {
 		
 		#hide_sound = menu_close_window
 		show_sound = menu_open_window
-		
-		background = {
-			name = "Background" 
-			quadTextureSprite ="GFX_tiled_plain_bg"
+
+		containerWindowType = {
+			name = "countrypoliticsview_Background"
+			size = { width=550 height=100%% }
+
+			background = {
+				name = "Background" 
+				quadTextureSprite ="GFX_tiled_plain_bg"
+			}
+		}
+
+		containerWindowType = {
+			name = "countrypoliticsview_Background_2"
+			size = { width=632 height= 485 }
+
+			background = {
+				name = "Background" 
+				quadTextureSprite ="GFX_tiled_plain_bg"
+			}
 		}
 
 		iconType ={
@@ -125,7 +140,7 @@ guiTypes = {
 				vertical_alignment = center
 			}
 
-			background = {
+			iconType = {
 				name = "faction_name_box"	
 				position = { x = 177 y = -292 }	
 				quadTextureSprite = "GFX_faction_name_box"
@@ -454,40 +469,6 @@ guiTypes = {
 			position = { x = 18 y = 58 }
 			spriteType = "GFX_leader_unknown"
 		}
-
-		containerWindowType = {
-			name = "chief_portrait_container"
-			position = { x = 0 y = 0 }
-			
-			iconType ={
-				name ="chief_portrait_blank"
-				spriteType = "GFX_portrait_blank"
-				position = { x = 193 y = 57 }
-	
-				pdx_tooltip = second_leader_tt
-				pdx_tooltip_delayed = dual_leader_desc_tt
-			}
-			
-			iconType ={
-				name ="dual_leader_bg"
-				spriteType = "GFX_pol_leader_frame"
-				position = { x = 185 y = 44 }
-				alwaystransparent = yes
-			}	
-	
-			instantTextBoxType = {
-				name ="dual_leader_name_text"
-				position = { x = 193 y = 270 }
-				font = "hoi_18mbs"
-				text = "chief_portrait_name"
-				maxWidth = 155
-				maxHeight = 20
-				format = center
-				vertical_alignment = center
-	
-				pdx_tooltip = second_leader_tt
-			}
-		}
 		
 		iconType = {
 			name = "leader_frame2"
@@ -510,7 +491,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "ideas"
 			position = { x = 0 y = 470 }
-			size = { width=100%% height=100%% }
+			size = { width=550 height=100%% }
 			verticalScrollbar = "right_vertical_slider"
 			scroll_wheel_factor = 40
 			smooth_scrolling = yes
@@ -611,7 +592,7 @@ guiTypes = {
 		
 		iconType ={
 			name ="category_header"
-			spriteType = "GFX_category_header_pol"
+			spriteType = "GFX_category_header"
 			position = { x=-5 y=2 }
 			Orientation = "UPPER_LEFT"
 		}
