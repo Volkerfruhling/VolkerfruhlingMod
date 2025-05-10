@@ -1,0 +1,6 @@
+spriteTypes = {
+    spriteType = {
+		name = "GFX_VF_national_focus_box"
+		textureFile = "gfx/interface/GUI/nationalfocus/VF_national_focus_box.png"
+	}
+}
