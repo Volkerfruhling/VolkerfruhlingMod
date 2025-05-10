@@ -87,3 +87,17 @@ scripted_gui = {
 
 }
 
+scripted_gui = {
+    VF_sub_Ideology_GUI = {
+        window_name = "VF_sub_Ideology_GUI"
+        context_type = player_context
+        parent_window_token = politics_tab
+    }
+
+    VF_sub_Ideology_diplomacy_GUI = {
+        window_name = "VF_sub_Ideology_diplomacy_GUI"
+        context_type = selected_country_context
+        parent_window_token = selected_country_view_diplomacy
+    }
+    
+}
