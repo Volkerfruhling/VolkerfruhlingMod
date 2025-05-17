@@ -10,6 +10,9 @@ VF_balkan_strategy = {
 		original_tag = HUN
 	}
 	enable = {
+		NOT = {
+			has_global_flag = vf_ended_balkan_war
+		}
 	}
 	abort_when_not_enabled = yes
 
@@ -67,6 +70,7 @@ VF_serbia_strategy = {
 			}
 		}
 	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = role_ratio
 		id = artillery
@@ -104,6 +108,7 @@ VF_serbia_bw_strategy = {
 			}
 		}
 	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = role_ratio
 		id = artillery
@@ -131,6 +136,7 @@ VF_serbia_after_bw_strategy = {
 			has_global_flag = vf_ended_balkan_war
 		}
 	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = role_ratio
 		id = artillery
@@ -154,6 +160,7 @@ VF_bulgaria_strategy = {
 	enable = {
 		original_tag = BUL
 	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = prepare_for_war
 		id = SER
@@ -177,6 +184,7 @@ VF_romania_strategy = {
 	enable = {
 		original_tag = ROM
 	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = prepare_for_war
 		id = HUN
@@ -195,6 +203,7 @@ VF_hungary_strategy = {
 	enable = {
 		original_tag = HUN
 	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = prepare_for_war
 		id = ROM
@@ -213,6 +222,7 @@ VF_greece_strategy = {
 	enable = {
 		original_tag = GRE
 	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = prepare_for_war
 		id = BUL

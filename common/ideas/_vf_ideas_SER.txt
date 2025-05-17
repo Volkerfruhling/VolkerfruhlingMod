@@ -89,6 +89,20 @@ ideas = {
 				conscription_factor = 0.20
 			}
 		}
+		# 軍の再編
+		idea_SER_mil_reorg_armies = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_army = 0.33
+				training_time_army_factor = -0.33
+			}
+		}
 		idea_balkan_war = { # バルカン戦争用バフ
 			allowed = {
 				always = yes

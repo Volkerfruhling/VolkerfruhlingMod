@@ -55,29 +55,29 @@ focus_tree = {
 		}
 
 	}
-	# 国内の引き締め
-	focus = {
-		id = focus_SER_pol_domestic_tightening
+	# # 国内の引き締め
+	# focus = {
+	# 	id = focus_SER_pol_domestic_tightening
 	
-		icon = GFX_goal_unknown
-		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	# 	icon = GFX_goal_unknown
+	# 	# アイコン名の規則 : GFX_goal_<NF名の英訳>
 	
-		cost = 4 # 1 = 7days
+	# 	cost = 4 # 1 = 7days
 	
-		x = 0
-		y = 1
-		relative_position_id = "focus_SER_pol_zbor_discipline" # 親NFのID
-		prerequisite = { # 前提NF
-			focus = focus_SER_pol_zbor_discipline
-		}
-		available = {
-			always = yes
-		}
-		completion_reward = {
-			add_stability = 0.02
-		}
+	# 	x = 0
+	# 	y = 1
+	# 	relative_position_id = "focus_SER_pol_zbor_discipline" # 親NFのID
+	# 	prerequisite = { # 前提NF
+	# 		focus = focus_SER_pol_zbor_discipline
+	# 	}
+	# 	available = {
+	# 		always = yes
+	# 	}
+	# 	completion_reward = {
+	# 		add_stability = 0.02
+	# 	}
 
-	}
+	# }
 	# 反体制派のあぶり出し
 	focus = {
 		id = focus_SER_pol_expose_dissenters
@@ -88,15 +88,17 @@ focus_tree = {
 		cost = 4 # 1 = 7days
 	
 		x = 0
-		y = 1
-		relative_position_id = "focus_SER_pol_domestic_tightening" # 親NFのID
+		y = 2
+		# relative_position_id = "focus_SER_pol_domestic_tightening" # 親NFのID
+		relative_position_id = "focus_SER_pol_zbor_discipline" # 親NFのID
 		prerequisite = { # 前提NF
-			focus = focus_SER_pol_domestic_tightening
+			focus = focus_SER_pol_zbor_discipline
 		}
 		available = {
 			always = yes
 		}
 		completion_reward = {
+			add_stability = 0.02
 			add_ideas = idea_SER_pol_expose_dissenters
 		}
 
@@ -114,7 +116,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = "focus_SER_pol_expose_dissenters" # 親NFのID
 		prerequisite = { # 前提NF
-			focus = focus_SER_pol_domestic_tightening
+			focus = focus_SER_pol_expose_dissenters
 		}
 		available = {
 			always = yes
@@ -200,31 +202,31 @@ focus_tree = {
 		}
 
 	}
-	# 統合プロパガンダ
-	focus = {
-		id = focus_SER_pol_integration_propaganda
+	# # 統合プロパガンダ
+	# focus = {
+	# 	id = focus_SER_pol_integration_propaganda
 	
-		icon = GFX_goal_unknown
-		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	# 	icon = GFX_goal_unknown
+	# 	# アイコン名の規則 : GFX_goal_<NF名の英訳>
 	
-		cost = 4 # 1 = 7days
+	# 	cost = 4 # 1 = 7days
 	
-		x = 0
-		y = 1
-		relative_position_id = focus_SER_pol_pressure_montenegro # 親NFのID
-		prerequisite = { # 前提NF
-			focus = focus_SER_pol_pressure_montenegro
-		}
-		available = {
-			always = yes
-		}
-		completion_reward = {
-			country_event = {
-				id = event_SER_pol.2
-			}
-		}
+	# 	x = 0
+	# 	y = 1
+	# 	relative_position_id = focus_SER_pol_pressure_montenegro # 親NFのID
+	# 	prerequisite = { # 前提NF
+	# 		focus = focus_SER_pol_pressure_montenegro
+	# 	}
+	# 	available = {
+	# 		always = yes
+	# 	}
+	# 	completion_reward = {
+	# 		country_event = {
+	# 			id = event_SER_pol.2
+	# 		}
+	# 	}
 
-	}
+	# }
 	# 最終提案
 	focus = {
 		id = focus_SER_pol_final_proposal
@@ -235,10 +237,11 @@ focus_tree = {
 		cost = 4 # 1 = 7days
 	
 		x = -2
-		y = 2
-		relative_position_id = focus_SER_pol_integration_propaganda # 親NFのID
+		y = 3
+		# relative_position_id = focus_SER_pol_integration_propaganda # 親NFのID
+		relative_position_id = focus_SER_pol_pressure_montenegro # 親NFのID
 		prerequisite = { # 前提NF
-			focus = focus_SER_pol_integration_propaganda
+			focus = focus_SER_pol_pressure_montenegro
 		}
 		prerequisite = { # 前提NF
 			focus = focus_SER_pol_expose_dissenters
@@ -281,9 +284,32 @@ focus_tree = {
 
 	}
 	## アルバニアツリー ##
-	# アルバニアの脅威認識
+	# # アルバニアの脅威認識
+	# focus = {
+	# 	id = focus_SER_pol_albania_threat
+	
+	# 	icon = GFX_goal_unknown
+	# 	# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+	# 	cost = 4 # 1 = 7days
+	
+	# 	x = -2
+	# 	y = 1
+	# 	relative_position_id = focus_SER_pol_final_proposal # 親NFのID
+	# 	prerequisite = { # 前提NF
+	# 		focus = focus_SER_pol_final_proposal
+	# 	}
+	# 	available = {
+	# 		always = yes
+	# 	}
+	# 	completion_reward = {
+	# 		add_war_support = 0.10
+	# 	}
+
+	# }
+	# 失われたコソボ
 	focus = {
-		id = focus_SER_pol_albania_threat
+		id = focus_SER_pol_lost_kosovo
 	
 		icon = GFX_goal_unknown
 		# アイコン名の規則 : GFX_goal_<NF名の英訳>
@@ -295,29 +321,6 @@ focus_tree = {
 		relative_position_id = focus_SER_pol_final_proposal # 親NFのID
 		prerequisite = { # 前提NF
 			focus = focus_SER_pol_final_proposal
-		}
-		available = {
-			always = yes
-		}
-		completion_reward = {
-			add_war_support = 0.10
-		}
-
-	}
-	# 失われたコソボ
-	focus = {
-		id = focus_SER_pol_lost_kosovo
-	
-		icon = GFX_goal_unknown
-		# アイコン名の規則 : GFX_goal_<NF名の英訳>
-	
-		cost = 4 # 1 = 7days
-	
-		x = 0
-		y = 1
-		relative_position_id = focus_SER_pol_albania_threat # 親NFのID
-		prerequisite = { # 前提NF
-			focus = focus_SER_pol_albania_threat
 		}
 		available = {
 			always = yes
@@ -342,7 +345,7 @@ focus_tree = {
 		cost = 4 # 1 = 7days
 	
 		x = 0
-		y = 1
+		y = 2
 		relative_position_id = focus_SER_pol_lost_kosovo # 親NFのID
 		prerequisite = { # 前提NF
 			focus = focus_SER_pol_lost_kosovo
@@ -408,7 +411,7 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		# アイコン名の規則 : GFX_goal_<NF名の英訳>
 	
-		cost = 4 # 1 = 7days
+		cost = 2 # 1 = 7days
 	
 		x = -1
 		y = 1
@@ -430,7 +433,7 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		# アイコン名の規則 : GFX_goal_<NF名の英訳>
 	
-		cost = 4 # 1 = 7days
+		cost = 2 # 1 = 7days
 	
 		x = 0
 		y = 1
@@ -456,7 +459,7 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		# アイコン名の規則 : GFX_goal_<NF名の英訳>
 	
-		cost = 4 # 1 = 7days
+		cost = 2 # 1 = 7days
 	
 		x = 1
 		y = 1
@@ -478,7 +481,7 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		# アイコン名の規則 : GFX_goal_<NF名の英訳>
 	
-		cost = 4 # 1 = 7days
+		cost = 2 # 1 = 7days
 	
 		x = 0
 		y = 1
@@ -610,6 +613,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			add_ideas = idea_SER_mil_reorg_armies
 		}
 		
 	}
@@ -635,6 +639,7 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+
 		}
 		
 	}
@@ -679,6 +684,11 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			set_technology = {
+				mountaineers_combat_1 = 1
+				mountaineers_combat_2 = 1
+			}
+			load_oob = "SER_mountain"
 		}
 		
 	}
@@ -748,6 +758,11 @@ focus_tree = {
 			always = yes
 		}
 		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_equipment
+				bonus = 1
+				uses = 3
+			}
 		}
 		
 	}

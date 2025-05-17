@@ -16,17 +16,18 @@ SER_plan = {
         focus_SER_pol_ljotic_speech
 		focus_SER_eco_continue_postwar_reconstruction
 		focus_SER_pol_zbor_discipline
-		focus_SER_pol_domestic_tightening
+		# focus_SER_pol_domestic_tightening
 		focus_SER_pol_expose_dissenters
 		focus_SER_pol_pressure_montenegro
 		focus_SER_eco_rebuild_academy_of_science
-		focus_SER_pol_integration_propaganda
+		# focus_SER_pol_integration_propaganda
 		focus_SER_eco_infrastructure_repair_plan
 		focus_SER_pol_final_proposal
 		focus_SER_eco_handling_of_compensation_issue
 		focus_SER_pol_montenegro_integration
 		focus_SER_eco_iron_will
-		focus_SER_pol_albania_threat
+		focus_SER_mil_reorg_armies
+		# focus_SER_pol_albania_threat
 		focus_SER_pol_lost_kosovo
 		focus_SER_pol_tirana_ultimatum
 		focus_SER_eco_national_mob

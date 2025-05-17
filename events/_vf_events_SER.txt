@@ -287,7 +287,7 @@ country_event = { # 講話
 			OR = {
 				and = {
 					surrender_progress > 0
-					date > 1928.7.1
+					date > 1928.4.1
 				}
 			}
 		}
