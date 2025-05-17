@@ -87,6 +87,12 @@ set_stability = 0.75
 
 recruit_character = FRA_napoleon_iv
 
+set_country_flag = VF_monarch_diplomacy_portrait_button_flag
+
+set_variable = { Sovereign_Title = token:FRA_French_emperor }
+
+set_variable = { Chief_Portrait = token:chief_FRA_napoleon_iv }
+
 set_politics = {
 	ruling_party = despotism
 	last_election = "1936.1.1"
