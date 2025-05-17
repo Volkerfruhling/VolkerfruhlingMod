@@ -241,6 +241,31 @@ guiTypes = {
 				position = { x = 20 y = 10 }
 				quadTextureSprite = "GFX_autonomy_unknown_icon"
 			}
+
+			buttonType = {
+				name = "next_autonomy_level"
+				position = { x= -500 y = 0 }
+				quadTextureSprite = "GFX_occupation_policy_button_selected"
+			}
+
+			iconType = {
+				name = "next_autonomy_level_icon"
+				position = { x= -500 y = 0 }
+			}
+
+
+			iconType = {
+				name = "prev_autonomy_level_icon"
+				position = { x= -500 y = 0 }
+			}
+
+
+			buttonType = {
+				name = "prev_autonomy_level"
+				position = { x= -500 y = 0 }
+				quadTextureSprite = "GFX_autonomy_level_button"
+			}
+
 		}
 		
 		# buttonType = {
@@ -511,7 +536,17 @@ guiTypes = {
 				Orientation = "UPPER_RIGHT"
 			}
 
+            iconType = {
+                name = "icon_manage_subjects"
+                position = { x= -500 y = 0 }
+            }
+
 		}
+
+		iconType = {
+            name = "icon_occupied_territories"
+            position = { x= -500 y = 0 }
+        }
 		
 		buttonType = {
 			name = "show_exiles_collaborations_button"
@@ -521,6 +556,17 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			format = right
 		}
+
+		instantTextboxType = {
+            name = "manage_exiled_collaborations_governments"
+            position = { x= -500 y = 0 }
+        }
+
+		iconType = {
+            name = "icon_exiled_collaborations_governments"
+            position = { x= -500 y = 0 }
+        }
+
 
 				
 	}
@@ -1684,4 +1730,5 @@ guiTypes = {
 		}		
 		
 	}
+
 }
