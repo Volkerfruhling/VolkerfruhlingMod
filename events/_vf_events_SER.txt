@@ -156,6 +156,104 @@ country_event = { # 復讐の日
 				days = 180
 			}
 		}
+		hidden_effect = {
+			BUL = {
+				division_template = {
+					name = "Militiaaaa"
+				
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+				
+					priority = 2
+				}
+				48 = {
+					create_unit = {
+						division = "name = \"Militiaaaa\" division_template = \"Militiaaaa\" start_experience_factor = 0.5"
+						owner = PREV
+						prioritize_location = 9660
+						count = 10
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			SER = {
+				division_template = {
+					name = "Militiaaaa"
+				
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+				
+					priority = 2
+				}
+				107 = {
+					create_unit = {
+						division = "name = \"Militiaaaa\" division_template = \"Militiaaaa\" start_experience_factor = 0.5"
+						owner = PREV
+						prioritize_location = 9660
+						count = 10
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+			HUN = {
+				division_template = {
+					name = "Militiaaaa"
+				
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+				
+					priority = 2
+				}
+				43 = {
+					create_unit = {
+						division = "name = \"Militiaaaa\" division_template = \"Militiaaaa\" start_experience_factor = 0.5"
+						owner = PREV
+						prioritize_location = 9660
+						count = 10
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+				country_event = {
+					id = event_HUN_pol.1
+					days = 30
+				}
+			}
+			ROM ={
+				division_template = {
+					name = "Militiaaaa"
+				
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+				
+					priority = 2
+				}
+				46 = {
+					create_unit = {
+						division = "name = \"Militiaaaa\" division_template = \"Militiaaaa\" start_experience_factor = 0.5"
+						owner = PREV
+						prioritize_location = 9660
+						count = 10
+						allow_spawning_on_enemy_provs = yes
+					}
+				}
+			}
+		}
 	}
 }
 country_event = { # 戦争からの撤退

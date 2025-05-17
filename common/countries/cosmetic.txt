@@ -8,3 +8,7 @@ LIT_GER_kingdom_of_lithuania = {
     color = rgb{ 148 142 127 }
     color_ui = rgb{ 148 142 127 }
 }
+HUN_soviet = {
+    color = rgb{ 173 0 0 }
+    color_ui = rgb{ 173 0 0 }
+}
