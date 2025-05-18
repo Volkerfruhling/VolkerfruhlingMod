@@ -1,4 +1,4 @@
-#!gfx:interface\VF\goals\goals_ser.gfx
+#!gfx:interface\_VF\goals\goals_ser.gfx
 focus_tree = {
 	id = focus_SER # 焦点ツリーのID。一意なものにする。ファイル名と一致させておくのがおすすめ。
 	country = {
@@ -181,7 +181,7 @@ focus_tree = {
 	focus = {
 		id = focus_SER_pol_pressure_montenegro
 	
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_SER_pol_pressure_montenegro
 		# アイコン名の規則 : GFX_goal_<NF名の英訳>
 	
 		cost = 4 # 1 = 7days
