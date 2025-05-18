@@ -36,7 +36,7 @@ focus_tree = {
 	focus = {
 		id = focus_SER_pol_zbor_discipline
 	
-		icon = GFX_goal_unknown
+		icon = GFX_goal_focus_SER_pol_zbor_discipline
 		# アイコン名の規則 : GFX_goal_<NF名の英訳>
 	
 		cost = 4 # 1 = 7days

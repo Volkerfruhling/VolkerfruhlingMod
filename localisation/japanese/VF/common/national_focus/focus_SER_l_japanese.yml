@@ -27,7 +27,7 @@
  ### 外交ツリー ###
  # モンテネグロへの圧力
  focus_SER_pol_pressure_montenegro: "モンテネグロへの圧力"
- focus_SER_pol_pressure_montenegro_desc: "モンテネグロへの圧力" # Descは仮置き
+ focus_SER_pol_pressure_montenegro_desc: "失われた栄光を取り戻す聖戦において、モンテネグロもまた我らが取り戻すべき故地の一部である。彼らの現政権がその事実から目を背けるならば、我々は断固たる圧力をもって、彼らに歴史の真実を思い起こさせねばならない。これは警告であり、最後の機会でもある。"
  # 統合プロパガンダ
  focus_SER_pol_integration_propaganda: "統合プロパガンダ"
  focus_SER_pol_integration_propaganda_desc: "統合プロパガンダ" # Descは仮置き
