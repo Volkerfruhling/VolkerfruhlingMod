@@ -17,8 +17,14 @@ characters = {
 	FRA_French_emperor = {
 		name = FRA_French_emperor
 	}
+
+	FRA_French_emperor_Left = {
+		name = FRA_French_emperor_Left
+	}
 	
 	chief_FRA_napoleon_iv = {
 		name = chief_FRA_napoleon_iv
 	}
+
+	
 }

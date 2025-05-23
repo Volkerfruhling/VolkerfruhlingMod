@@ -2,7 +2,7 @@ guiTypes = {
 
     containerWindowType = {
         name = "VF_GUi_portrait_container"
-        position = { x = 0 y = 0 }
+        position = { x = -5 y = 30 }
 
 		iconType ={
 			name ="VF_GFX_portrait"
@@ -16,6 +16,28 @@ guiTypes = {
 			spriteType = "GFX_pol_leader_frame"
 			position = { x = 185 y = 44 }
 			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "State_Positions_leader_name"
+			position = { x = 26 y = 15 }
+			font = "hoi_18mbs"
+			text = "State_Positions_Left"
+			maxWidth = 155
+			maxHeight = 36
+			format = center
+			vertical_alignment = center
+		}
+
+		instantTextboxType = {
+			name = "State_Positions_chief_portrait_name"
+			position = { x = 193 y = 15 }
+			font = "hoi_18mbs"
+			text = "State_Positions_Right"
+			maxWidth = 155
+			maxHeight = 36
+			format = center
+			vertical_alignment = center
 		}
 
 		instantTextBoxType = {

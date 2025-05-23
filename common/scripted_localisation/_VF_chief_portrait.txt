@@ -11,7 +11,7 @@ defined_text = {
     name = VfSovereignText
 
     text = { 
-        localization_key = "[?Sovereign_Title.GetTokenKey]_desc"
+        localization_key = "[?State_Positions_Right_Title.GetTokenKey]_desc"
     }
 
 }
