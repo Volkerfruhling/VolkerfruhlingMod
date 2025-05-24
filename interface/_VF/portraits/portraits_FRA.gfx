@@ -7,6 +7,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_CP_chief_FRA_napoleon_iv"
 		texturefile = "gfx/interface/leaders/FRA/portrait_leader_FRA_napoleon_iv.dds"
+		legacy_lazy_load = no
 	}
 
 }

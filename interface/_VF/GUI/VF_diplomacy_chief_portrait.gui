@@ -4,11 +4,10 @@ guiTypes = {
         name = "VF_president_diplomacy_portrait_button"
         position = { x = 446 y = -45 }
 
-        buttonType = {
+        iconType = {
 			name ="VF_president_portrait_button"
 			position = { x = 0 y = 0 }
 			spriteType = "GFX_VF_president_diplomacy_portrait_button"
-            clicksound = click_ok
             pdx_tooltip = "VF_president_portrait_button_t"
 		}
         
@@ -18,11 +17,10 @@ guiTypes = {
         name = "VF_monarch_diplomacy_portrait_button"
         position = { x = 446 y = -45 }
 
-        buttonType = {
+        iconType = {
 			name ="VF_monarch_portrait_button"
 			position = { x = 0 y = 0 }
 			spriteType = "GFX_VF_monarch_diplomacy_portrait_button"
-            clicksound = click_ok
             pdx_tooltip = "VF_monarch_portrait_button_t"
 		}
         
