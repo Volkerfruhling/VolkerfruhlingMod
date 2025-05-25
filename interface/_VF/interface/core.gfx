@@ -1678,11 +1678,6 @@ bitmapfonts = {
 			"gfx/fonts/japanese/hoi_mapfont4_4"
 			"gfx/fonts/japanese/hoi_mapfont4_5"
 			"gfx/fonts/japanese/hoi_mapfont4_6"
-			"gfx/fonts/japanese/hoi_mapfont4_7"
-			"gfx/fonts/japanese/hoi_mapfont4_8"
-			"gfx/fonts/japanese/hoi_mapfont4_9"
-			"gfx/fonts/japanese/hoi_mapfont4_10"
-			"gfx/fonts/japanese/hoi_mapfont4_11"
 		}
 		languages = { "l_japanese" }
 	}
