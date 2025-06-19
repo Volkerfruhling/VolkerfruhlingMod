@@ -89,7 +89,9 @@ recruit_character = FRA_napoleon_iv
 
 set_country_flag = VF_monarch_diplomacy_portrait_button_flag
 
-set_variable = { Sovereign_Title = token:FRA_French_emperor }
+set_variable = { State_Positions_Right_Title = token:FRA_French_emperor }
+
+set_variable = { State_Positions_Left_Title = token:FRA_French_emperor_Left }
 
 set_variable = { Chief_Portrait = token:chief_FRA_napoleon_iv }
 

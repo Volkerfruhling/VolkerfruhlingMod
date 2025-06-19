@@ -1,0 +1,12 @@
+﻿l_japanese:
+ VF_chief_portrait:0 "[?Chief_Portrait.GetTokenLocalizedKey]"
+ VF_chief_portrait_t:0 "§H[?Chief_Portrait.GetTokenLocalizedKey]"
+ VF_chief_portrait_tt:0 "§L[THIS.VfChiefPortrait]"
+ State_Positions_Left:0 "[?State_Positions_Left_Title.GetTokenLocalizedKey]"
+ State_Positions_Right:0 "[?State_Positions_Right_Title.GetTokenLocalizedKey]"
+ State_Positions_Right_t:0 "§H[?State_Positions_Right_Title.GetTokenLocalizedKey]"
+ State_Positions_Right_tt:0 "[THIS.VfSovereignText]"
+ VF_chief_portrait_blank_t:0 "§H設定中…"
+ VF_chief_portrait_blank_tt:0 "§Lこの国家はポートレードは設定させていません\nアップデートより追加されるかもしれません"
+ VF_monarch_portrait_button_t:0 "§H[?State_Positions_Right_Title.GetTokenLocalizedKey]§!\n\n\n\n\n\n\n\n\n\n£GFX_CP_[?Chief_Portrait.GetTokenKey]\n\n\n\n\n\n\n\n\n\n----------------------------------\n[?Chief_Portrait.GetTokenLocalizedKey]\n----------------------------------\n§L[THIS.VfChiefPortrait]"
+ VF_president_portrait_button_t:0 "§H[?State_Positions_Right_Title.GetTokenLocalizedKey]§!\n\n\n\n\n\n\n\n\n\n£GFX_CP_[?Chief_Portrait.GetTokenKey]\n\n\n\n\n\n\n\n\n\n----------------------------------\n[?Chief_Portrait.GetTokenLocalizedKey]\n----------------------------------\n§L[THIS.VfChiefPortrait]"

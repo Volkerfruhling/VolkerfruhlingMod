@@ -672,6 +672,16 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_x128_box"
+		textureFile = "gfx/interface/GUI/diplomacy_tabulation/x128_box.png"
+	}
+
+	spriteType = {
+		name = "GFX_diplo_opinion"
+		textureFile = "gfx/interface/GUI/diplomacy_tabulation/diplo_opinion_bg.png"
+	}
+
+	spriteType = {
 		name = "GFX_NF_box"
 		textureFile = "gfx/interface/GUI/political_tabulation/NF_box.png"
 	}

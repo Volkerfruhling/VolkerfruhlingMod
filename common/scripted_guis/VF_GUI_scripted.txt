@@ -21,18 +21,18 @@ scripted_gui = {
 			has_country_flag = VF_president_diplomacy_portrait_button_flag
 		}
 
-		effects = {
-			VF_diplomacy_portrait_button_click = {
-				if = {
-					limit = { NOT = { has_country_flag = diplomacy_portrait_Window_open_flag } }
-					set_country_flag = diplomacy_portrait_Window_open_flag
-				}
-				else_if = {
-					limit = { has_country_flag = diplomacy_portrait_Window_open_flag }
-					clr_country_flag = diplomacy_portrait_Window_open_flag
-				}
-			}
-		}
+		#effects = {
+		#	VF_diplomacy_portrait_button_click = {
+		#		if = {
+		#			limit = { NOT = { has_country_flag = diplomacy_portrait_Window_open_flag } }
+		#			set_country_flag = diplomacy_portrait_Window_open_flag
+		#		}
+		#		else_if = {
+		#			limit = { has_country_flag = diplomacy_portrait_Window_open_flag }
+		#			clr_country_flag = diplomacy_portrait_Window_open_flag
+		#		}
+		#	}
+		#}
 	}
 
 	monarch_diplomacy_button = {
@@ -44,18 +44,18 @@ scripted_gui = {
 			has_country_flag = VF_monarch_diplomacy_portrait_button_flag
 		}
 
-		effects = {
-			VF_monarch_portrait_button_click = {
-				if = {
-					limit = { NOT = { has_country_flag = diplomacy_portrait_Window_open_flag } }
-					set_country_flag = diplomacy_portrait_Window_open_flag
-				}
-				else_if = {
-					limit = { has_country_flag = diplomacy_portrait_Window_open_flag }
-					clr_country_flag = diplomacy_portrait_Window_open_flag
-				}
-			}
-		}
+		#effects = {
+		#	VF_monarch_portrait_button_click = {
+		#		if = {
+		#			limit = { NOT = { has_country_flag = diplomacy_portrait_Window_open_flag } }
+		#			set_country_flag = diplomacy_portrait_Window_open_flag
+		#		}
+		#		else_if = {
+		#			limit = { has_country_flag = diplomacy_portrait_Window_open_flag }
+		#			clr_country_flag = diplomacy_portrait_Window_open_flag
+		#		}
+		#	}
+		#}
 	}
 
 	diplomacy_portrait_Window = {

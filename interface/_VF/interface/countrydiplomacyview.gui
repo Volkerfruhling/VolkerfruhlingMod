@@ -108,26 +108,26 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "opinion_info"
-				position = { x = 341 y = 5 } #position = { x = 425 y = 5 }
+				position = { x =152 y =-35 } #position = { x = 425 y = 5 }
 				size = { width = 100 height = 60 }
 				clipping = no
 
 				background = {
 					name = "Background"
-					spriteType ="GFX_diplo_opinion_bg"
+					spriteType ="GFX_diplo_opinion"
 					position = { x = 33 y = -4 }
 				}
 
 				iconType = {
 					name = "our_opinion_left_flag"
 					quadTextureSprite ="GFX_flag_small"
-					position = { x = 38 y = 9 }
+					position = { x = 38 y = 0 }
 					alwaystransparent = yes
 				}
 
 				instantTextboxType = {
 					name = "our_opinion_value"
-					position = { x = 67 y = -4 }
+					position = { x = 61 y = -3 }
 					font = "hoi_16mbs"
 					text = "+50"
 					maxWidth = 30
@@ -138,13 +138,13 @@ guiTypes = {
 				iconType = {
 					name = "their_opinion_left_flag"
 					quadTextureSprite ="GFX_flag_small"
-					position = { x = 74 y = 21 }
+					position = { x = 130 y = 0 }
 					alwaystransparent = yes
 				}
 
 				instantTextboxType = {
 					name = "their_opinion_value"
-					position = { x = 37 y = 42 }
+					position = { x = 101 y = 7 }
 					font = "hoi_16mbs"
 					text = "-100"
 					maxWidth = 30
@@ -153,23 +153,29 @@ guiTypes = {
 				}
 			}
 
-			iconType =
-			{
-				name ="stability_bg"
-				spriteType = "GFX_diplo_unity_bg"
-				position = { x= 447 y = 1 } #position = { x= 370 y = 1 }
+			iconType = {
+				name = "x128_box"
+				spriteType = "GFX_x128_box"
+				position = { x = 318 y =-39 }
 			}
+
+			#iconType =
+			#{
+			#	name ="stability_bg"
+			#	spriteType = "GFX_diplo_unity_bg"
+			#	position = { x= 447 y = 1 } #position = { x= 370 y = 1 }
+			#}
 
 			iconType =
 			{
 				name ="stability_icon"
 				spriteType = "GFX_stability_icon"
-				position = { x= 455 y = 9 } #position = { x= 378 y = 9 }
+				position = { x = 323 y =-36 } #position = { x= 378 y = 9 }
 			}
 
 			instantTextboxType = {
 				name = "stability_value"
-				position = { x = 446 y = 42 } #position = { x = 369 y = 42 }
+				position = { x = 343 y =-33 } #position = { x = 369 y = 42 }
 				font = "hoi_16mbs"
 				text = "100%"
 				maxWidth = 44
@@ -177,23 +183,23 @@ guiTypes = {
 				format = center
 			}
 
-			iconType =
-			{
-				name ="war_support_bg"
-				spriteType = "GFX_diplo_unity_bg"
-				position = { x= 490 y = 1 } #position = { x= 414 y = 1 }
-			}
+			#iconType =
+			#{
+			#	name ="war_support_bg"
+			#	spriteType = "GFX_diplo_unity_bg"
+			#	position = { x= 490 y = 1 } #position = { x= 414 y = 1 }
+			#}
 
 			iconType =
 			{
 				name ="war_support_icon"
 				spriteType = "GFX_war_support_icon"
-				position = { x= 497 y = 9 } #position = { x= 421 y = 9 }
+				position = { x = 383 y =-36 } #position = { x= 421 y = 9 }
 			}
 
 			instantTextboxType = {
 				name = "war_support_value"
-				position = { x = 490 y = 42 } #osition = { x = 414 y = 42 }
+				position = { x = 403 y =-33 } #osition = { x = 414 y = 42 }
 				font = "hoi_16mbs"
 				text = "100%"
 				maxWidth = 44
@@ -759,12 +765,12 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "player_info_box"
-			position = { x = 230 y = 11 }
+			position = { x = 175 y = 11 }
 			size = { width = 270 height = 40 }
 
 			iconType ={
 				name ="player_name_bg"
-				spriteType = "GFX_generic_text_bg_203"
+				spriteType = "GFX_x128_box"
 				position = { x= 10 y = 0 }
 				Orientation = "UPPER_LEFT"
 			}
@@ -783,7 +789,7 @@ guiTypes = {
 				font = "hoi_18mbs"
 				borderSize = {x = 0 y = 0}
 				text = "Player"
-				maxWidth = 175
+				maxWidth = 95
 				maxHeight = 40
 				fixedsize = yes
 				format = left
@@ -794,13 +800,14 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "diplomacy_title"
-			position = { x = 45 y = 8 }
+			position = { x = 25 y = 8 }
 			textureFile = ""
 			font = "hoi_36header"
 			borderSize = {x = 0 y = 0}
 			text = "DIPLOMACY_DIPLOMACY"
 			maxWidth = 240
 			maxHeight = 20
+			alwaystransparent = yes
 			format = left
 		}
 

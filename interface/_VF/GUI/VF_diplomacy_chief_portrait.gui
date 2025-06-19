@@ -4,11 +4,10 @@ guiTypes = {
         name = "VF_president_diplomacy_portrait_button"
         position = { x = 446 y = -45 }
 
-        buttonType = {
+        iconType = {
 			name ="VF_president_portrait_button"
 			position = { x = 0 y = 0 }
 			spriteType = "GFX_VF_president_diplomacy_portrait_button"
-            clicksound = click_ok
             pdx_tooltip = "VF_president_portrait_button_t"
 		}
         
@@ -18,11 +17,10 @@ guiTypes = {
         name = "VF_monarch_diplomacy_portrait_button"
         position = { x = 446 y = -45 }
 
-        buttonType = {
+        iconType = {
 			name ="VF_monarch_portrait_button"
 			position = { x = 0 y = 0 }
 			spriteType = "GFX_VF_monarch_diplomacy_portrait_button"
-            clicksound = click_ok
             pdx_tooltip = "VF_monarch_portrait_button_t"
 		}
         
@@ -35,7 +33,7 @@ guiTypes = {
 
         background = {
 			name = "Background"
-			spriteType ="GFX_tiled_bg"
+			spriteType ="GFX_tiled_window_thin_border2"
 		}
        
     }
@@ -68,15 +66,15 @@ guiTypes = {
                 name ="VF_Sovereign_"
                 position = { x = 0 y = -7 }
                 spriteType = "GFX_VF_button_148x34"
-                pdx_tooltip = "VF_Sovereign_portrait_t"
-                pdx_tooltip_delayed = "VF_Sovereign_portrait_tt"
+                pdx_tooltip = "State_Positions_Right_t"
+                pdx_tooltip_delayed = "State_Positions_Right_tt"
             }
     
             instantTextBoxType = {
                 name ="VF_Sovereign_text"
                 position = { x = 0 y = 0 }
                 font = "hoi_18mbs"
-                text = "VF_Sovereign_portrait"
+                text = "State_Positions_Right"
                 maxWidth = 148
                 maxHeight = 20
                 alwaystransparent = yes
