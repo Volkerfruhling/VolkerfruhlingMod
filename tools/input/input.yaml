@@ -1,0 +1,21 @@
+﻿focus_tree:
+ country: "TST"
+ focuses:
+  -
+   tree: "pol"
+   jp: "経済の復興"
+   id: "economic_recovery"
+   cost: 10
+   x: 10
+   y : 0
+  -
+   tree: "pol"
+   jp: "工場の建設"
+   id: "factory_construction"
+   cost: 10
+   relative: "pol_economic_recovery"
+   pre:
+    - "pol_economic_recovery"
+   x: 0
+   y : 1
+  

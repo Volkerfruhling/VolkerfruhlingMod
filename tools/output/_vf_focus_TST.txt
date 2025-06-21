@@ -1,0 +1,51 @@
+#!gfx:interface\VF\goals\goals_tst.gfx
+focus_tree = {
+	id = focus_TST
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = TST
+		}
+	}
+	# 経済の復興
+	focus = {
+		id = focus_TST_pol_economic_recovery
+		
+		# icon = GFX_goal_focus_TST_economic_recovery
+		icon = GFX_goal_unknown
+		
+		cost = 10
+		
+		x = 10
+		y = 0
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 工場の建設
+	focus = {
+		id = focus_TST_pol_factory_construction
+		
+		# icon = GFX_goal_focus_TST_factory_construction
+		icon = GFX_goal_unknown
+		
+		cost = 10
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_TST_pol_economic_recovery
+		prerequisite = { # 前提NF
+			focus = focus_TST_pol_economic_recovery
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+}

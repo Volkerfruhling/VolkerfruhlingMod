@@ -5,19 +5,24 @@ state={
 		steel=3.000
 	}
 	provinces={
-			11887
-			630
-			6970
-			6998
-			9602
-			9756
-			9890
-			9906
-		}
+		11887
+		630
+		6970
+		6998
+		9602
+		9756
+		9890
+		9906
+	}
 	history = {
 		owner = SER
 		add_core_of = SER
-
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 2
+			air_base = 1
+		}
 	}
 	manpower=707000
 	buildings_max_level_factor=1.000

@@ -6,17 +6,22 @@ state={
 		aluminium=70.000
 	}
 	provinces={
-			11858
-			3922
-			6913
-			937
-			9809
-			9821
-		}
+		11858
+		3922
+		6913
+		937
+		9809
+		9821
+	}
 	history = {
 		owner = MNT
 		add_core_of = MNT
-
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 1
+		}
 	}
 	manpower=895500
 	buildings_max_level_factor=1.000

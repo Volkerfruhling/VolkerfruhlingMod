@@ -6,7 +6,7 @@ state = {
 		oil = 44 # was: 70
 	}
 
-	state_category = city
+	state_category = large_city
 
 	history = {
 		owner = ROM
@@ -22,8 +22,8 @@ state = {
 
 		buildings = {
 			infrastructure = 3
-			arms_factory = 3
-			industrial_complex = 1
+			arms_factory = 4
+			industrial_complex = 4
 			air_base = 3
 		}
 		

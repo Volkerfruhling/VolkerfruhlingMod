@@ -9,6 +9,11 @@ state={
 	history = {
 		owner = ALB
 		add_core_of = ALB
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+		}
 		add_claim_by = GRE
 
 	}

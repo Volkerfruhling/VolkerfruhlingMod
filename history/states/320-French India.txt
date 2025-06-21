@@ -8,7 +8,7 @@ state={
 
 	history={
 		owner = FRA
-		add_core_of = UID
+		add_core_of = MUG
 		buildings = {
 			infrastructure = 3 #was: 5
 			10149 = {
