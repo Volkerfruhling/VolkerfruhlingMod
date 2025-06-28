@@ -17,4 +17,42 @@ characters = {
 			}
 		}
 	}
+
+	RUS_Alexander_Kolchak = {
+		name = RUS_Alexander_Kolchak
+
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_RUS_Alexander_Kolchak"
+			}
+		}
+
+		country_leader = {
+			ideology = royal_autocracy
+			expire = "1936.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+
+		country_leader = {
+			ideology = totalitarianism_ideology
+			expire = "1936.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+	}
+
+	RUS_tsar = {
+		name = RUS_tsar
+	}
+
+	RUS_commander = {
+		name = RUS_commander
+	}
 }

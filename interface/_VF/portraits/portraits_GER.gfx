@@ -3,4 +3,22 @@ spriteTypes = {
 		name = "GFX_Portrait_Leader_GER_wilhelm_ii"
 		texturefile = "gfx/interface/leaders/GER/portrait_leader_GER_wilhelm_ii.png"
 	}
+
+	spriteType = {
+		name = "GFX_CP_GER_wilhelm_ii"
+		texturefile = "gfx/interface/leaders/GER/portrait_leader_GER_wilhelm_ii.png"
+		legacy_lazy_load = no
+	}
+
+	spriteType = {
+		name = "GFX_Portrait_Leader_GER_Karl_I"
+		texturefile = "gfx/interface/leaders/GER/portrait_leader_GER_Karl_I.png"
+	}
+
+	spriteType = {
+		name = "GFX_CP_GER_Karl_I"
+		texturefile = "gfx/interface/leaders/GER/portrait_leader_GER_Karl_I.png"
+		legacy_lazy_load = no
+	}
+
 }

@@ -18,4 +18,33 @@ characters = {
 			}
 		}
 	}
+
+	GER_Karl_I = {
+		name = GER_Karl_I
+		
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_GER_Karl_I"
+			}
+		}
+		
+		country_leader = {
+			ideology = paternalistic_conservatism
+			expire = "1936.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+	}
+
+	GER_Geiser = {
+		name = GER_Geiser
+	}
+	
+	GER_regent = {
+		name = GER_regent
+	}
+
 }

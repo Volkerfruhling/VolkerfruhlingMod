@@ -1,0 +1,173 @@
+VF_debug_Russia_Germany_War = {
+    debug_Russia_Germany_War = {
+        available = {
+            country_exists = RUS
+            country_exists = GER
+            NOT = {
+
+                GER = {
+                    has_war_with = RUS
+                }
+
+                RUS = {
+                    has_war_with = GER   
+                }
+
+            }
+        }
+
+        visible = {
+            is_debug = yes
+            NOT = {
+
+                GER = {
+                    has_war_with = RUS
+                }
+
+                RUS = {
+                    has_war_with = GER   
+                }
+
+            }
+        }
+
+        complete_effect = {
+            GER = {
+
+                create_faction = "帝国協定"
+
+                annex_country = {
+                    target  = BOH
+                    transfer_troops = on
+                }
+
+                annex_country = {
+                    target = POL
+                    transfer_troops = on
+                }
+    
+                declare_war_on  = {
+                    target = RUS
+                    type = annex_everything
+                }
+                
+            }
+
+            RUS = {
+
+                create_faction = "サンクトペテルブルク条約機構"
+
+                annex_country = {
+                    target = LIT
+                    transfer_troops = on
+                }
+
+            }
+        }
+    }
+
+    debug_Russia_Germany_War_FRA = {
+        available = {
+            country_exists = RUS
+            country_exists = GER
+            country_exists = FRA
+            GER = {
+                has_war_with = RUS
+            }
+            RUS = {
+                has_war_with = GER   
+            }
+            NOT = {
+                FRA = {
+                  has_war_with = GER
+                }
+            }
+        }
+
+        visible = {
+            is_debug = yes
+            GER = {
+                has_war_with = RUS
+            }
+            RUS = {
+                has_war_with = GER   
+            }
+
+            NOT = {
+                FRA = {
+                  has_war_with = GER
+                }
+            }
+        }    
+
+        complete_effect = {
+            RUS = {
+                add_to_faction = FRA
+            }
+
+            FRA = {
+                annex_country = {
+                    target = BEL
+                    transfer_troops = yes
+                }
+
+                annex_country = {
+                    target = LUX
+                    transfer_troops = yes
+                }
+
+                declare_war_on  = {
+                    target = GER
+                    type = annex_everything
+                }
+            }
+
+            GER = {      
+                annex_country = {
+                    target = NET
+                    transfer_troops = yes
+                }
+            }
+        }
+    }
+
+    debug_FRA_ITA_War = {
+
+         available = {
+            country_exists = ITA
+            country_exists = FRA
+            NOT = {
+
+                GER = {
+                    has_war_with = ITA
+                }
+
+                RUS = {
+                    has_war_with = FRA
+                }
+
+            }
+        }
+
+        vailable = {
+            country_exists = ITA
+            country_exists = FRA
+            ITA = {
+                has_war_with = FRA
+            }
+            FRA = {
+                has_war_with = ITA   
+            }
+            is_debug = yes
+        }
+
+        complete_effect = {
+            FRA = {
+                declare_war_on  = {
+                    target = ITA
+                    type = annex_everything
+                }
+            }
+        }
+    }
+}

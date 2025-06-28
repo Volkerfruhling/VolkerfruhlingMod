@@ -1,0 +1,22 @@
+VF_debug = {
+
+    allowed = {
+        is_debug = yes
+    }
+    visible = {
+        is_debug = yes
+    }
+
+}
+
+VF_debug_Russia_Germany_War = {
+
+    allowed = {
+        is_debug = yes
+        always = no
+    }
+    visible = {
+        is_debug = yes
+    }
+
+}

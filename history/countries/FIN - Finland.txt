@@ -1,5 +1,12 @@
 capital = 797
 
+
+#傀儡国
+
+RUS = {
+	puppet = FIN
+}
+
 oob = "standard_templates"
 # Starting tech
 set_technology = {
@@ -148,14 +155,14 @@ set_stability = 0.75
 }
 
 set_politics = {
-	ruling_party = liberalism
+	ruling_party = despotism
 	last_election = "1936.1.1"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 
 }
 set_popularities = {
-	liberalism = 100 
+	despotism = 100 
 }
 
 add_ideas = {

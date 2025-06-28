@@ -1,0 +1,813 @@
+division_template = {
+    name = "Russian Infantry Division"
+
+    support = {
+		engineer = { x = 0 y = 0 }
+	}
+
+    regiments = {
+        Infantry = { x = 0 y = 0 }
+        Infantry = { x = 0 y = 1 }
+        Infantry = { x = 0 y = 2 }
+        Infantry = { x = 1 y = 0 }
+        Infantry = { x = 1 y = 1 }
+        Infantry = { x = 1 y = 2 }
+        Infantry = { x = 2 y = 0 }
+        Infantry = { x = 2 y = 1 }
+        Infantry = { x = 2 y = 2 }
+    }
+
+    priority = 1
+}
+
+division_template = {
+	name = "Central Asia Infantry Division"
+
+	regiments = {
+		Infantry = { x = 0 y = 0 }
+        Infantry = { x = 0 y = 1 }
+        Infantry = { x = 1 y = 0 }
+        Infantry = { x = 1 y = 1 }
+	}
+
+	priority = 4
+}
+
+division_template = {
+	name = "Russian Far East Infantry Division"
+
+	regiments = {
+		Infantry = { x = 0 y = 0 }
+        Infantry = { x = 0 y = 1 }
+        Infantry = { x = 0 y = 2 }
+        Infantry = { x = 1 y = 0 }
+        Infantry = { x = 1 y = 1 }
+        Infantry = { x = 1 y = 2 }
+	}
+
+	priority = 1
+}
+
+units = {
+    division ={
+        name = "Russian Infantry Division"
+        location = 3151
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 3151
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 3151
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 3151
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 3151
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 9288
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 6245
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 11370
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 11370
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 306
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 6380
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 6380
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 6380
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 3335
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 9355
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 3152
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 9340
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 525
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 525
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 525
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 418
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 11670
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 11437
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 6474
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 9417
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 3686
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 3686
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 3529
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 3529
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 3529
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 7661
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 11375
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 6338
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 1278
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 9292
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 1821
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 6338
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 10696
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 7274
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 422
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 3457
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 6373
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 11202
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 3134
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 6727
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 13399
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 9683
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 3707
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 565
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 3577
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 3407
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 3430
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 462
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 6509
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 6557
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 572
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 513
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 11441
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 6546 
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 3392
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 290
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 11301
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 11357
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 3393
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 3366
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 6413
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 6340
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 11391
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 233
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 11358
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 3255
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 265
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 6342
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 11246
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+    
+
+     division ={
+        name = "Russian Infantry Division"
+        location = 9262
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 3653
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 3656
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 6669
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 12441
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 3564
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 12320
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 6997
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 4660 
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 9715
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 11704
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 12434
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Russian Infantry Division"
+        location = 4473
+        division_template = "Russian Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Central Asia Infantry Division"
+        location = 12454
+        division_template = "Central Asia Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.6
+    }
+
+    division ={
+        name = "Central Asia Infantry Division"
+        location = 1573
+        division_template = "Central Asia Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.6
+    }
+
+    division ={
+        name = "Central Asia Infantry Division"
+        location = 12161
+        division_template = "Central Asia Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.6
+    }
+
+    division ={
+        name = "Central Asia Infantry Division"
+        location = 12333
+        division_template = "Central Asia Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.6
+    }
+
+    division ={
+        name = "Central Asia Infantry Division"
+        location = 1459
+        division_template = "Central Asia Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.6
+    }
+
+    division ={
+        name = "Central Asia Infantry Division"
+        location = 10353
+        division_template = "Central Asia Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.6
+    }
+
+    division ={
+        name = "Central Asia Infantry Division"
+        location = 12152
+        division_template = "Central Asia Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.6
+    }
+
+    division ={
+        name = "Central Asia Infantry Division"
+        location = 4394
+        division_template = "Central Asia Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.6
+    }
+
+}
