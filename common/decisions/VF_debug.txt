@@ -1,3 +1,5 @@
+#暇つぶしに作った適当戦争ディシジョン
+#
 VF_debug_Russia_Germany_War = {
     debug_Russia_Germany_War = {
         available = {
