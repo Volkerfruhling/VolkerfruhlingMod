@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_QIN_aisin_gioro_dzai_fung"
+		texturefile = "gfx/interface/leaders/QIN/portrait_leader_QIN_aisin_gioro_dzai_fung.png"
+	}
+}

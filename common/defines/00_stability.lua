@@ -1,0 +1,2 @@
+NDefines.NCountry.MIN_STABILITY = -1.0
+NDefines.NCountry.MIN_WAR_SUPPORT = -1.0

@@ -148,15 +148,23 @@ set_stability = 0.75
 }
 
 set_politics = {
-	ruling_party = liberalism
+	ruling_party = conservatism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 
 }
 set_popularities = {
-	liberalism = 100 
+	communism = 2
+	socialism = 3
+	liberalism = 5
+	conservatism = 40
+	despotism = 20
+	totalitarianism = 20
+	ultra_nationalism = 10
 }
+
+recruit_character = QIN_aisin_gioro_dzai_fung
 
 add_ideas = {
 }

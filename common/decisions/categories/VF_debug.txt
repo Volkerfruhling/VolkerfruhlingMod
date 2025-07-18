@@ -17,6 +17,7 @@ VF_debug_Russia_Germany_War = {
     }
     visible = {
         is_debug = yes
+        always = no
     }
 
 }

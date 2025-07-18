@@ -87,15 +87,31 @@ set_convoys = 50
 set_stability = 0.75
 
 set_politics = {
-	ruling_party = liberalism
+	ruling_party = conservatism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 
 }
 set_popularities = {
-	liberalism = 100 
+	communism = 1
+	socialism = 10
+	liberalism = 10
+	conservatism = 65
+	despotism = 10
+	totalitarianism = 2
+	ultra_nationalism = 2
 }
+
+recruit_character = HUN_Paternalistic_Conservatism
+
+set_country_flag = VF_monarch_diplomacy_portrait_button_flag
+
+set_variable = { State_Positions_Right_Title = token:HUN_kings }
+
+set_variable = { State_Positions_Left_Title = token:HUN_prime_minister }
+
+set_variable = { Chief_Portrait = token:HUN_Oskar_I }
 
 add_ideas = {
 	idea_HUN_scars_of_revolution

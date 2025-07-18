@@ -82,6 +82,8 @@
  despotism_desc: "権威主義政権"
  despotism_ideology: "専制主義"
  despotism_ideology_desc: "絶対的な支配者による専制政治。"
+ authoritarian_democracy: "権威的民主主義"
+ authoritarian_democracy_desc: "to do"
  military_regime: "軍事政権"
  military_regime_desc: "軍部が政治権力を掌握する政権。"
  civilian_dictatorship: "文民独裁"

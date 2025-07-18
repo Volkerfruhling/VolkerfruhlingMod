@@ -1,4 +1,4 @@
-capital = 797
+capital = 361
 
 oob = "standard_templates"
 # Starting tech
@@ -81,9 +81,10 @@ if = {
 
 
 
-set_research_slots = 3
+set_research_slots = 4
 set_convoys = 50
-set_stability = 0.75
+set_stability = 0.30
+set_war_support = 0.05
 
 1939.1.1 = {
 
@@ -148,15 +149,45 @@ set_stability = 0.75
 }
 
 set_politics = {
-	ruling_party = liberalism
-	last_election = "1936.1.1"
+	ruling_party = conservatism
+	last_election = "1924.11.4"
 	election_frequency = 48
 	elections_allowed = yes
 
 }
 set_popularities = {
-	liberalism = 100 
+	communism = 0
+	socialism = 7
+	liberalism = 35
+	conservatism = 45
+	despotism = 4
+	totalitarianism = 5
+	ultra_nationalism = 4
 }
 
+recruit_character = USA_Calvin_Coolidge 
+
+set_variable = { State_Positions_Right_Title = token:USA_vice_president }
+
+set_variable = { State_Positions_Left_Title = token:USA_president }
+
+set_variable = { Chief_Portrait = token:USA_Charles_Gates_Dawes }
+
 add_ideas = {
+	free_trade
+	undisturbed_isolation
+	Presidential_democracy
+	Strictly_defined_constitution
+	Universal_suffrage
+	Separation_of_church_and_state
+	Women_s_suffrage
+	Partial_integration
+	Compulsory_primary_education
+	10_hour_workday
+	Developed_countries
+	Working_poor
+	Limited_assistance_missions
+	Total_draft_exemption
+	Basic_military_training
+	Modern_armies
 }

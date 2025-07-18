@@ -1,0 +1,21 @@
+characters = {
+    QIN_aisin_gioro_dzai_fung = {
+        name = QIN_aisin_gioro_dzai_fung 
+        portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_QIN_aisin_gioro_dzai_fung"
+			}
+		}
+
+        country_leader = {
+			ideology = paternalistic_conservatism
+			expire = "1936.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+
+    }
+}

@@ -1,0 +1,21 @@
+characters = {
+	JAP_Yusaku_Uehara = {
+		name = JAP_Yusaku_Uehara
+		
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_JAP_Yusaku_Uehara"
+			}
+		}
+		
+		country_leader = {
+			ideology = authoritarian_democracy
+			expire = "1936.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+	}
+}

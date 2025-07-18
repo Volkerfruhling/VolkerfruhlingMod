@@ -86,4 +86,7 @@ startup_cosmetic_tag = {
     SWI = {
         set_cosmetic_tag = SWI_swiss_confederation
     }
+    JAP = {
+        set_cosmetic_tag = JAP_Empire_of_Japan
+    }
 }

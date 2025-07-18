@@ -23,9 +23,12 @@
  INS_DEF: "インドネシア"
  INS_ADJ: "インドネシア"
 
- JAP: "日本"
- JAP_DEF: "日本"
- JAP_ADJ: "日本"
+ JAP: "日本国"
+ JAP_DEF: "日本国"
+ JAP_ADJ: "日本国"
+ JAP_Empire_of_Japan: "大日本帝国"
+ JAP_Empire_of_Japan_DEF: "大日本帝国"
+ JAP_Empire_of_Japan_ADJ: "大日本帝国"
 
  KON: "コンバウン"
  KON_DEF: "コンバウン"
