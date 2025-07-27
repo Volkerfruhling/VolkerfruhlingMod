@@ -7,15 +7,15 @@ characters = {
 			}
 		}
 		
-		country_leader = {
-			ideology = royal_autocracy
-			expire = "1936.1.1"
-			id = -1
-			
-			traits = {
-				
-			}
-		}
+		#country_leader = {
+		#	ideology = royal_autocracy
+		#	expire = "1936.1.1"
+		#	id = -1
+		#	
+		#	traits = {
+		#		
+		#	}
+		#}
 	}
 
 	RUS_Alexander_Kolchak = {
@@ -28,7 +28,7 @@ characters = {
 		}
 
 		country_leader = {
-			ideology = royal_autocracy
+			ideology = military_regime
 			expire = "1936.1.1"
 			id = -1
 			

@@ -18,4 +18,17 @@ characters = {
 		}
 
     }
+
+	QIN_Aisin_Gioro_Puyi = {
+		name = QIN_Aisin_Gioro_Puyi
+	}
+
+	QIN_prime_minister = {
+		name = QIN_prime_minister
+	}
+
+	QIN_emperor = {
+		name = QIN_emperor
+	}
+
 }

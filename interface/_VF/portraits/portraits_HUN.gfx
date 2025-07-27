@@ -7,5 +7,6 @@ spriteTypes = {
     spriteType = {
         name = "GFX_CP_HUN_Oskar_I"
         texturefile = "gfx/interface/leaders/HUN/portrait_leader_HUN_Oskar_I.png"
+        legacy_lazy_load = no
     }
 }

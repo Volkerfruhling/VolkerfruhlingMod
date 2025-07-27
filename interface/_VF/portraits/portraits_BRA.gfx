@@ -1,0 +1,12 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_Portrait_Leader_BRA_Pedro_de_Alcantara_Potre"
+        texturefile = "gfx/interface/leaders/BRA/portrait_leader_BRA_Pedro_de_Alcantara_Potre.png"
+    }
+
+    spriteType = {
+        name = "GFX_CP_BRA_Pedro_III"
+        texturefile = "gfx/interface/leaders/BRA/portrait_leader_BRA_Pedro_III.png"
+        legacy_lazy_load = no
+    }
+}

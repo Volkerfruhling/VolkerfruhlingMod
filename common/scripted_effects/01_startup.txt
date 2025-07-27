@@ -75,7 +75,7 @@ startup_cosmetic_tag = {
         set_cosmetic_tag = RUS_russian_empire
     }
     SER = {
-        set_cosmetic_tag = SER_kingdom_of_serbia
+        set_cosmetic_tag = SER_state_of_serbia
     }
     SPA = {
         set_cosmetic_tag = SPA_kingdom_of_spain
@@ -88,5 +88,9 @@ startup_cosmetic_tag = {
     }
     JAP = {
         set_cosmetic_tag = JAP_Empire_of_Japan
+    }
+    
+    KOR = {
+        set_cosmetic_tag = KOR_Great_Joseon_Kingdom
     }
 }

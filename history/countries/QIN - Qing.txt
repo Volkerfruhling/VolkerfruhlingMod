@@ -166,5 +166,11 @@ set_popularities = {
 
 recruit_character = QIN_aisin_gioro_dzai_fung
 
+set_country_flag = VF_monarch_diplomacy_portrait_button_flag
+set_variable = { State_Positions_Right_Title = token:QIN_emperor }
+set_variable = { State_Positions_Left_Title = token:QIN_prime_minister }
+set_variable = { Chief_Portrait = token:QIN_Aisin_Gioro_Puyi }
+
+
 add_ideas = {
 }

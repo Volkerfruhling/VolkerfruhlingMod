@@ -1,0 +1,29 @@
+characters = {
+    BRA_Pedro_de_Alcantara_Potre = {
+        name = BRA_Pedro_de_Alcantara_Potre
+        portraits = {
+            civilian = {
+                large = "GFX_Portrait_Leader_BRA_Pedro_de_Alcantara_Potre"
+            }
+        }
+
+        country_leader = {
+			ideology = aristocratic_reactionism
+			id = -1
+			traits = {
+			}
+		}
+    }
+
+    BRA_Pedro_III = {
+        name = BRA_Pedro_III
+    }
+
+    BRA_emperor = {
+        name = BRA_emperor
+    }
+
+    BRA_regent = {
+        name = BRA_regent
+    }
+}
