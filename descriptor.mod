@@ -1,9 +1,9 @@
-version="0.0.0"
+version="α0.0.1"
 tags={
 	"Alternative History"
 }
 name="Volkerfruhling"
-supported_version="1.15.*"
+supported_version="1.16.*"
 replace_path="common/abilities"
 replace_path="common/autonomous_states"
 replace_path="common/ai_strategy"
