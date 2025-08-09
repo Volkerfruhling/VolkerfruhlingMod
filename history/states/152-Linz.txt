@@ -1,7 +1,7 @@
 state = {
-	id = 976
-	name = "STATE_976"
-	manpower = 1500000
+	id = 152
+	name = "STATE_152"
+	manpower = 455377 # was 2275377
 	
 	state_category = city
 	
@@ -15,26 +15,21 @@ state = {
 		add_core_of = GER
 
 		buildings = {
-			infrastructure = 3 
-			industrial_complex = 2
+			infrastructure = 3 #was: 6
+			industrial_complex = 1
 		}
 
 		victory_points = {
-			9648 5 
+			9665 3
 		}
 
 		victory_points = {
-			3673 3
+			732 10
 		}
-
-		victory_points = {
-			11612 2
-		}
-
 	}
 
 	provinces = {
-		653 3673 3674 6687 9646 9648 9650 9679 11612 
+		 3684 3703 6691 6708 9665 732
 	}
 
 	local_supplies = 0.0 

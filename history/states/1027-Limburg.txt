@@ -1,0 +1,25 @@
+state={
+	id=1027
+	name="STATE_1027"
+	provinces={
+		11562 
+	}
+
+	history = {
+		owner = GER
+		add_core_of = GER
+		add_claim_by = NET
+
+
+		buildings =  {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+
+	}
+
+	manpower=485000
+	buildings_max_level_factor=1.000
+	state_category=small_island
+	local_supplies=0.000
+}

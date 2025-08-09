@@ -8,16 +8,3 @@ VF_debug = {
     }
 
 }
-
-VF_debug_Russia_Germany_War = {
-
-    allowed = {
-        is_debug = yes
-        always = no
-    }
-    visible = {
-        is_debug = yes
-        always = no
-    }
-
-}
