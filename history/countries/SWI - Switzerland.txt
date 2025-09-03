@@ -1,6 +1,6 @@
-capital = 797
+capital = 3
 
-oob = "standard_templates"
+oob = "SWI_1925"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -83,7 +83,7 @@ if = {
 
 set_research_slots = 3
 set_convoys = 50
-set_stability = 0.75
+set_stability = 0.5
 
 1939.1.1 = {
 
@@ -149,7 +149,7 @@ set_stability = 0.75
 
 set_politics = {
 	ruling_party = liberalism
-	last_election = "1936.1.1"
+	last_election = "1923.12.1"
 	election_frequency = 48
 	elections_allowed = yes
 
@@ -158,5 +158,21 @@ set_popularities = {
 	liberalism = 100 
 }
 
+recruit_character = SWI_Federal_Council
+
 add_ideas = {
+	limited_conscription
+	free_trade
+	Parliamentary_democracy
+	Strictly_defined_constitution
+	Universal_suffrage
+	Women_s_suffrage
+	Partial_integration
+	Subsidized_post_secondary_education
+	10_hour_workday
+	Developed_countries
+	Stable_employment
+	Limited_assistance_missions
+	Total_draft_exemption
+	Semi_modern_armies
 }

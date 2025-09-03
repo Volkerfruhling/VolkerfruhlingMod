@@ -7,4 +7,10 @@ spriteTypes = {
 		name = "GFX_Portrait_Leader_ITA_Gabriele_Dannunzio"
 		textureFile = "gfx/interface/leaders/ITA/portrait_leader_ITA_gabriele_dannunzio.dds"
 	}
+
+	spriteType = {
+        name = "GFX_CP_ITA_Pius_XI"
+        texturefile = "gfx/interface/leaders/ITA/portrait_leader_ITA_Pius_XI.png"
+        legacy_lazy_load = no
+    }
 }

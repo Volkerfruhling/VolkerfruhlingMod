@@ -1,4 +1,4 @@
-capital = 797
+capital = 107
 
 oob = "SER_1925"
 # Starting tech

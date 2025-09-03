@@ -7,7 +7,7 @@ state={
 	history = {
 		owner = RUS
 		add_core_of = RUS
-		add_core_of = POL
+		add_claim_by = POL
 
 		buildings = {
 			infrastructure = 3

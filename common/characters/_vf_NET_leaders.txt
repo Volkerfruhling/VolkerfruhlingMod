@@ -1,0 +1,21 @@
+characters = {
+	NET_Wilhelmina = {
+		name = NET_Wilhelmina
+		
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_NET_Wilhelmina"
+			}
+		}
+		
+		country_leader = {
+			ideology = christian_conservatism
+			expire = "1964.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+	}
+}

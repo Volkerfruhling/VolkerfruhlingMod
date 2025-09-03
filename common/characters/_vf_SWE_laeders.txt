@@ -1,0 +1,70 @@
+characters = {
+    SWE_Gustav_V = {
+        name = "SWE_Gustav_V"
+        portraits = {
+            civilian = {
+                large = "GFX_Portrait_Leader_SWE_Gustav_V"
+            }
+        }
+
+        country_leader = {
+			ideology = socialdemocratism
+			expire = "1964.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+
+        country_leader = {
+			ideology = social_liberalism
+			expire = "1964.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+
+        country_leader = {
+			ideology = liberal_conservatism
+			expire = "1964.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+
+        country_leader = {
+			ideology = despotism_ideology
+			expire = "1964.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+
+        country_leader = {
+			ideology = totalitarianism_ideology
+			expire = "1964.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+
+        country_leader = {
+			ideology = ultra_nationalism_ideology
+			expire = "1964.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+    }
+}

@@ -1,0 +1,85 @@
+division_template = {
+    name = "Infantry Division"
+
+    support = {
+	}
+
+    regiments = {
+        Infantry = { x = 0 y = 0 }
+        Infantry = { x = 0 y = 1 }
+        Infantry = { x = 0 y = 2 }
+        Infantry = { x = 0 y = 3 }
+        Infantry = { x = 1 y = 0 }
+        Infantry = { x = 1 y = 1 }
+        Infantry = { x = 1 y = 2 }
+        Infantry = { x = 1 y = 3 }
+    }
+
+    priority = 1
+}
+
+units = {
+    division ={
+        name = "Infantry Division"
+        location = 12364
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 12364
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 12364
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 1449
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 10953
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 8216
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 7500
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 12942
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.7
+    }
+}

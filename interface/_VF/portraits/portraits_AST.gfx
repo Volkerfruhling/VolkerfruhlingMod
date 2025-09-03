@@ -1,0 +1,6 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_Portrait_Leader_AST_Henry_Foster"
+        texturefile = "gfx/interface/leaders/AST/portrait_leader_AST_Henry_Foster.png"
+    }
+}

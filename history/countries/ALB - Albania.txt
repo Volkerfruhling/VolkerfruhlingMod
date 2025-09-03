@@ -1,6 +1,6 @@
 capital = 797
 
-oob = "standard_templates"
+oob = "ALB_1925"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -83,7 +83,7 @@ if = {
 
 set_research_slots = 3
 set_convoys = 50
-set_stability = 0.75
+set_stability = 0.5
 
 1939.1.1 = {
 
@@ -148,15 +148,28 @@ set_stability = 0.75
 }
 
 set_politics = {
-	ruling_party = liberalism
+	ruling_party = despotism
 	last_election = "1936.1.1"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 
 }
 set_popularities = {
-	liberalism = 100 
+	despotism = 100 
 }
 
+recruit_character = ALB_Ahmet_Bey_Zog
+set_country_flag = VF_monarch_diplomacy_portrait_button_flag
+set_variable = { State_Positions_Right_Title = token:ALB_House }
+set_variable = { State_Positions_Left_Title = token:ALB_prime_minister }
+set_variable = { Chief_Portrait = token:ALB_Skanderbeg_II }
+
 add_ideas = {
+	Tyrannical_monarchy
+	Constitution_not_yet_enacted
+	No_electoral_system
+	State_religion
+	Privatized_education
+	Multidimensional_poor
+	Some_military_training
 }

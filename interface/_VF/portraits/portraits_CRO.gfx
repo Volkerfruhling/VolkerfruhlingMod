@@ -1,0 +1,6 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_Portrait_Leader_PRO_Carlo_IV"
+        texturefile = "gfx/interface/leaders/PRO/portrait_leader_PRO_Carlo_IV.png"
+    }
+}

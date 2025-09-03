@@ -1,0 +1,29 @@
+characters = {
+	SPA_Manuel_Garcia_Prieto = {
+		name = SPA_Manuel_Garcia_Prieto
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_SPA_Manuel_Garcia_Prieto"
+			}
+		}
+		country_leader = {
+			ideology = classical_liberalism
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
+
+    SPA_Alfonso_XIII = {
+        name = SPA_Alfonso_XIII
+    }
+
+	SPA_King = {
+		name = SPA_King
+	}
+
+	SPA_prime_minister = {
+		name = SPA_prime_minister
+	}
+}

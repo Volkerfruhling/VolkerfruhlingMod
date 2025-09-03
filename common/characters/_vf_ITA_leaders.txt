@@ -74,4 +74,16 @@ characters = {
 			}
 		}
 	}
+
+	ITA_Pius_XI = {
+        name = ITA_Pius_XI
+    }
+
+	ITA_Pope = {
+		name = ITA_Pope
+	}
+
+	ITA_prime_minister = {
+		name = ITA_prime_minister
+	}
 }

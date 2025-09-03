@@ -1,0 +1,12 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_POL_Ignace_Paderewski"
+		textureFile = "gfx/interface/leaders/POL/portrait_leader_POL_Ignace_Paderewski.png"
+    }
+
+	spriteType = {
+        name = "GFX_CP_POL_Adam_Ludwik_Czartoryski"
+        texturefile = "gfx/interface/leaders/POL/portrait_leader_POL_Adam_Ludwik_Czartoryski.png"
+        legacy_lazy_load = no
+    }
+}

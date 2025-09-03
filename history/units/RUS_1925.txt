@@ -30,7 +30,7 @@ division_template = {
         Infantry = { x = 1 y = 1 }
 	}
 
-	priority = 4
+	priority = -1
 }
 
 division_template = {
@@ -45,7 +45,7 @@ division_template = {
         Infantry = { x = 1 y = 2 }
 	}
 
-	priority = 1
+	priority = -1
 }
 
 units = {

@@ -1,0 +1,12 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_DEN_Christian_X"
+		texturefile = "gfx/interface/leaders/DEN/Portrait_Leader_DEN_Christian_X.png"
+	}
+
+	#spriteType = {
+	#	name = ""
+	#	texturefile = ""
+	#	legacy_lazy_load = no
+	#}
+}
