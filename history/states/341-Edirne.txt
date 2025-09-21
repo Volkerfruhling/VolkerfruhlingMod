@@ -12,9 +12,11 @@ state= {
 	history= {
 		owner = OTT
 		add_core_of = OTT
+		
 		victory_points = {
-			11842 5
+			849 5
 		}
+		
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
@@ -24,9 +26,9 @@ state= {
 			}
 		}
 	}
-	provinces=
-	{
-849 922 3879 3893 6895 11842 	}
+	provinces={
+		849 3879 6895 13413 13415
+	}
 
 	local_supplies=0.0 
         

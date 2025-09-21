@@ -1,0 +1,21 @@
+characters = {
+	NOR_Haakon_VII = {
+		name = NOR_Haakon_VII
+		
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_NOR_Haakon_VII"
+			}
+		}
+		
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1964.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+	}
+}

@@ -84,7 +84,7 @@ if = {
 
 set_research_slots = 3
 set_convoys = 50
-set_stability = 0.75
+set_stability = 0.47
 
 create_faction = "バルカン協商"
 add_to_faction = MNT
@@ -99,16 +99,40 @@ every_owned_state = {
 }
 
 set_politics = {
-	ruling_party = liberalism
-	last_election = "1936.1.1"
+	ruling_party = despotism
+	last_election = "1923.1.1"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 
 }
 set_popularities = {
-	liberalism = 100 
+	communism = 5
+	socialism = 5
+	liberalism =  15
+	conservatism = 20
+	despotism = 40
+	totalitarianism = 10
+	ultra_nationalism = 5
 }
 
+recruit_character = BUL_Ferdinand_I
+
+
 add_ideas = {
-	# idea_BUL_balkan_prussia
+	Tyrannical_monarchy
+    Constitution_not_yet_enacted
+    No_electoral_system
+    State_religion
+    Paternalistic_society
+    Single_ethnicity
+    Compulsory_primary_education
+    12_hour_workday
+    Developing_countries
+    Food_insecure
+    Prohibited_military_service
+    No_draft_exemption
+    Basic_military_training
+    Early_20th_century_armies
+
+	#idea_BUL_balkan_prussia
 }

@@ -1,0 +1,30 @@
+state= {
+	id=1048
+	name="STATE_1048"
+	manpower = 11530
+	resources={
+
+	}
+	
+	state_category = town
+
+	history= {
+		owner = LIE
+		add_core_of = LIE
+		victory_points = {
+			13416 5
+		}
+		buildings = {
+			infrastructure = 3
+            industrial_complex = 2
+            arms_factory = 1
+		}
+	}
+	provinces={
+        13416
+    }
+
+	local_supplies=0.0
+        
+
+}

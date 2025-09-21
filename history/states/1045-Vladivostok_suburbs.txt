@@ -1,0 +1,19 @@
+state={
+	id=1045
+	name="STATE_1045"
+	resources={
+	}
+	provinces={
+		11879 3977 6838 3787 11750 6989
+	}
+	history = {
+		owner = RUS
+		add_core_of = RUS
+	}
+	manpower= 1
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+        
+
+}

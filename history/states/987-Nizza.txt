@@ -5,9 +5,9 @@ state={
 		9909
 	}
 	history = {
-		owner = ITA # 元のステートと同じオーナーを仮定
-		add_core_of = ITA # 元のステートと同じコアを仮定
-		add_claim_by = FRA
+		owner = FRA # 元のステートと同じオーナーを仮定
+		add_core_of = FRA # 元のステートと同じコアを仮定
+		add_claim_by = ITA
 	}
 	 # デフォルト値
 	buildings_max_level_factor=1.000

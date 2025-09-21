@@ -11,6 +11,17 @@ VF_debug = {
         }
 
         complete_effect = {
+            diplomatic_relation = {
+                country = IST
+                relation = guarantee
+                active = yes
+            }
+            
+	        diplomatic_relation = {
+                country = IST
+                relation = military_access
+                active = yes
+            }
         }
     }
     

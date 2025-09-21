@@ -1,4 +1,4 @@
-capital = 797
+capital = 111
 
 
 #傀儡国
@@ -7,7 +7,7 @@ RUS = {
 	puppet = FIN
 }
 
-oob = "standard_templates"
+oob = "FIN_1925"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -90,7 +90,8 @@ if = {
 
 set_research_slots = 3
 set_convoys = 50
-set_stability = 0.75
+set_stability = 0.27
+set_war_support = 0.15
 
 1939.1.1 = {
 
@@ -156,14 +157,40 @@ set_stability = 0.75
 
 set_politics = {
 	ruling_party = despotism
-	last_election = "1936.1.1"
+	last_election = "1924.7.3"
 	election_frequency = 48
-	elections_allowed = no
+	elections_allowed = yes
 
 }
 set_popularities = {
-	despotism = 100 
+	communism = 5
+	socialism = 25
+	liberalism = 15
+	conservatism = 10
+	despotism = 40
+	totalitarianism = 3
+	ultra_nationalism = 2
 }
 
+recruit_character = FIN_Dmitry_Pavlovich
+set_variable = { State_Positions_Left_Title = token:FIN_governor }
+set_country_flag = VF_monarch_diplomacy_portrait_button_flag
+set_variable = { State_Positions_Right_Title = token:FIN_great_grandfather }
+set_variable = { Chief_Portrait = token:RUS_nicholas_ii}
+
 add_ideas = {
+	Tyrannical_monarchy
+	Strictly_defined_constitution
+	Universal_suffrage
+	Women_s_suffrage
+	State_religion
+	Racial_discrimination
+	Compulsory_first_semester_secondary_education
+	12_hour_workday
+	Developing_countries
+	Vulnerable_Near_Poor
+	Prohibited_military_service
+	No_draft_exemption
+	Basic_military_training
+	Nineteenth_century_army
 }

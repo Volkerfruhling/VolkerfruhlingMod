@@ -89,8 +89,10 @@ startup_cosmetic_tag = {
     JAP = {
         set_cosmetic_tag = JAP_Empire_of_Japan
     }
-    
     KOR = {
         set_cosmetic_tag = KOR_Great_Joseon_Kingdom
+    }
+    AND = {
+        set_cosmetic_tag = AND_Principality_of_Andorra
     }
 }

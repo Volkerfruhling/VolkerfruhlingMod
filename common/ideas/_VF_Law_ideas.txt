@@ -6,7 +6,7 @@ ideas = {
     political_system_idea = {
 
         law = yes
-		use_list_view = yes
+		use_list_view = no
 
         Peoples_democracy = {
 
@@ -110,6 +110,48 @@ ideas = {
 			cancel_if_invalid = no
 
 		}
+
+        Party_state_system = {
+            cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+			}
+
+			cancel_if_invalid = no
+        }
+
+        International_Administrative_Region = {
+            cost = 0
+			removal_cost = -1
+
+            allowed_to_remove = { 
+				always = no 
+			}
+
+			available = { 
+				always = no
+			}
+
+			modifier = {
+                stability_factor = 0.05
+                war_support_factor = -0.1
+                forced_surrender_limit = -0.2
+                conscription_factor = -0.25
+                ai_focus_defense_factor = 2
+                ai_focus_peaceful_factor = 1
+			}
+
+			cancel_if_invalid = no
+        }
 
         Colonial_government = {
 

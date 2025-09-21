@@ -2,26 +2,26 @@
 
 #アルバニア/Albania
 ALB ={
-	color = rgb{ 227 26 28 }
-	color_ui = rgb{ 227 26 28 }
+	color = rgb{ 130 60 60 }
+	color_ui = rgb{ 130 60 60 }
 }
 
 #ベルギー/Belgium
 BEL ={
-	color = rgb{ 253 212 158 }
-	color_ui = rgb{ 253 212 158 }
+	color = rgb{ 235 170 10 }
+	color_ui = rgb{ 235 170 10 }
 }
 
 #ボヘミア/Bohemia
 BOH ={
-	color = rgb{ 215 48 31 }
-	color_ui = rgb{ 215 48 31 }
+	color = rgb{ 174 52 75 }
+	color_ui = rgb{ 174 52 75 }
 }
 
 #ブルガリア/Bulgaria
 BUL ={
-	color = rgb{ 112 164 148 }
-	color_ui = rgb{ 112 164 148 }
+	color = rgb{ 0 105 85 }
+	color_ui = rgb{ 0 105 85 }
 }
 
 #クロアチア/Croatia
@@ -32,14 +32,14 @@ CRO ={
 
 #kin/Denmark
 DEN ={
-	color = rgb{ 253 219 199 }
-	color_ui = rgb{ 253 219 199 }
+	color = rgb{ 151 116 94 }
+	color_ui = rgb{ 151 116 94 }
 }
 
 #イギリス/United_Kingdom
 ENG ={
-	color = rgb{ 214 96 77 }
-	color_ui = rgb{ 214 96 77 }
+	color = rgb{ 180 23 42 }
+	color_ui = rgb{ 180 23 42 }
 }
 
 #フィンランド/Finland
@@ -68,19 +68,19 @@ GRE ={
 
 #ハンガリー/Hungary
 HUN ={
-	color = rgb{ 115 175 72 }
-	color_ui = rgb{ 115 175 72 }
+	color = rgb{ 60 120 70 }
+	color_ui = rgb{ 60 120 70 }
 }
 
 #アイルランド/Ireland
 IRE ={
-	color = rgb{ 179 222 105 }
-	color_ui = rgb{ 179 222 105 }
+	color = rgb{ 65 175 120 }
+	color_ui = rgb{ 65 175 120 }
 }
 
 #イストリア/Istria
 IST ={
-	color = rgb{ 150 150 150 }
+	color = rgb{ 221 135 84 }
 	color_ui = rgb{ 150 150 150 }
 }
 
@@ -104,8 +104,8 @@ LUX ={
 
 #モンテネグロ/Montenegro
 MNT ={
-	color = rgb{ 251 128 114 }
-	color_ui = rgb{ 251 128 114 }
+	color = rgb{ 68 89 116 }
+	color_ui = rgb{ 68 89 116 }
 }
 
 #オランダ/Netherlands
@@ -116,14 +116,14 @@ NET ={
 
 #ノルウェー/Norway
 NOR ={
-	color = rgb{ 127 0 0 }
-	color_ui = rgb{ 127 0 0 }
+	color = rgb{ 110 70 70 }
+	color_ui = rgb{ 110 70 70 }
 }
 
 #オスマン/Ottoman
 OTT ={
-	color = rgb{ 233 226 156 }
-	color_ui = rgb{ 233 226 156 }
+	color = rgb{ 133 0 0 }
+	color_ui = rgb{ 133 0 0 }
 }
 
 #ポーランド/Poland
@@ -134,8 +134,8 @@ POL ={
 
 #ポルトガル/Portugal
 POR ={
-	color = rgb{ 127 205 187 }
-	color_ui = rgb{ 127 205 187 }
+	color = rgb{ 11 133 84 }
+	color_ui = rgb{ 11 133 84 }
 }
 
 #ルーマニア/Romania
@@ -152,8 +152,8 @@ RUS ={
 
 #セルビア/Serbia
 SER ={
-	color = rgb{ 153 112 171 }
-	color_ui = rgb{ 153 112 171 }
+	color = rgb{ 31 25 87 }
+	color_ui = rgb{ 31 25 87 }
 }
 
 #スペイン/Spain
@@ -170,10 +170,27 @@ SWE ={
 
 #スイス/Switzerland
 SWI ={
-	color = rgb{ 237 73 39 }
-	color_ui = rgb{ 237 73 39 }
+	color = rgb{ 226 31 35 }
+	color_ui = rgb{ 226 31 35 }
 }
 
+#アイスランド/Iceland
+ISL ={
+	color = rgb{ 101 123 173 }
+	color_ui = rgb{ 101 123 173 }
+}
+
+#リヒテンシュタイン/Liechtenstein
+LIE ={
+	color = rgb{ 0 40 130 }
+	color_ui = rgb{ 0 40 130 }
+}
+
+#アンドラ/Andorra
+AND = {
+	color = rgb { 66 1 174 }
+	color_ui = rgb { 66 1 174 }
+}
 
 ### 北アメリカ/North America ###
 

@@ -1,5 +1,9 @@
 capital = 109
 
+GER = {
+	puppet = CRO
+}
+
 oob = "CRO_1925"
 # Starting tech
 set_technology = {

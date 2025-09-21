@@ -1,0 +1,12 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_MNT_Anto_Gvozdenovic"
+		textureFile = "gfx/interface/leaders/MNT/portrait_leader_MNT_Anto_Gvozdenovic.png"
+	}
+
+	spriteType = {
+        name = "GFX_CP_MNT_Danilo_III"
+        texturefile = "gfx/interface/leaders/MNT/portrait_leader_MNT_Danilo_III.png"
+        legacy_lazy_load = no
+	}
+}

@@ -1,0 +1,19 @@
+characters = {
+    IST_Istrian_Stewardship_Committee = {
+        name = IST_Istrian_Stewardship_Committee
+
+        portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_IST_Istrian_Stewardship_Committee"
+			}
+		}
+
+		country_leader = {
+			ideology = oligarchy
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+    }
+}

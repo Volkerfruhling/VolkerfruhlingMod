@@ -1,0 +1,12 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_LIT_Antanas_Smetona"
+		texturefile = "gfx/interface/leaders/LIT/portrait_leader_LIT_Antanas_Smetona.png"
+	}
+
+	spriteType = {
+		name = "GFX_CP_LIT_Fridrijas_I"
+		texturefile = "gfx/interface/leaders/LIT/portrait_leader_LIT_Fridrijas_I.png"
+		legacy_lazy_load = no
+	}
+}

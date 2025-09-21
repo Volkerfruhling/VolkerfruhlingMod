@@ -1,0 +1,20 @@
+characters = {
+    BEL_Albert_I = {
+        name = "BEL_Albert_I"
+        portraits = {
+            civilian = {
+                large = "GFX_Portrait_Leader_BEL_Albert_I"
+            }
+        }
+
+        country_leader = {
+			ideology = christian_conservatism
+			expire = "1964.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+    }
+}

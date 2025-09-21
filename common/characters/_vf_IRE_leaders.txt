@@ -1,0 +1,21 @@
+characters = {
+	IRE_William_Thomas_Cosgrave = {
+		name = IRE_William_Thomas_Cosgrave
+		
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_IRE_William_Thomas_Cosgrave"
+			}
+		}
+		
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1964.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+	}
+}
