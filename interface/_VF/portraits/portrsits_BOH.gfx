@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_BOH_Charles_III"
+		textureFile = "gfx/interface/leaders/BOH/portrait_leader_BOH_Charles_III.png"
+	}
+}

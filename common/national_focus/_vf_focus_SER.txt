@@ -1,0 +1,1410 @@
+#!gfx:interface\_VF\goals\goals_ser.gfx
+focus_tree = {
+	id = focus_SER # 焦点ツリーのID。一意なものにする。ファイル名と一致させておくのがおすすめ。
+	country = {
+		factor = 0 # この焦点ツリーをアクティブにするための条件の初期値。0にすると、この条件を他に指定しない限り、どの国でもNFツリーを開始できない。
+		modifier = {
+			add = 10 # 条件が満たされた場合の加算値
+			tag = SER # この条件が満たされる国のタグ。この場合はイタリア（ITA）
+		}
+	}
+	continuous_focus_position = {
+		x = 0
+		y = 1500
+	}
+
+	### 政治ツリー ###
+	# リョティッチの演説
+	focus = {
+		id = focus_SER_pol_ljotic_speech
+	
+		icon = GFX_goal_unknown
+	
+		cost = 4 # 1 = 7days
+	
+		x = 20
+		y = 0
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+
+	}
+	# ZBORの規律
+	focus = {
+		id = focus_SER_pol_zbor_discipline
+	
+		icon = GFX_goal_focus_SER_pol_zbor_discipline
+		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+		cost = 4 # 1 = 7days
+	
+		x = 0
+		y = 1
+		relative_position_id = "focus_SER_pol_ljotic_speech" # 親NFのID
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_ljotic_speech
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			add_stability = 0.03
+		}
+
+	}
+	# # 国内の引き締め
+	# focus = {
+	# 	id = focus_SER_pol_domestic_tightening
+	
+	# 	icon = GFX_goal_unknown
+	# 	# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+	# 	cost = 4 # 1 = 7days
+	
+	# 	x = 0
+	# 	y = 1
+	# 	relative_position_id = "focus_SER_pol_zbor_discipline" # 親NFのID
+	# 	prerequisite = { # 前提NF
+	# 		focus = focus_SER_pol_zbor_discipline
+	# 	}
+	# 	available = {
+	# 		always = yes
+	# 	}
+	# 	completion_reward = {
+	# 		add_stability = 0.02
+	# 	}
+
+	# }
+	# 反体制派のあぶり出し
+	focus = {
+		id = focus_SER_pol_expose_dissenters
+	
+		icon = GFX_goal_unknown
+		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+		cost = 4 # 1 = 7days
+	
+		x = 0
+		y = 2
+		# relative_position_id = "focus_SER_pol_domestic_tightening" # 親NFのID
+		relative_position_id = "focus_SER_pol_zbor_discipline" # 親NFのID
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_zbor_discipline
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			add_stability = 0.02
+			add_ideas = idea_SER_pol_expose_dissenters
+		}
+
+	}
+	# 見せしめの裁判
+	focus = {
+		id = focus_SER_pol_show_trial
+	
+		icon = GFX_goal_unknown
+		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+		cost = 4 # 1 = 7days
+	
+		x = 0
+		y = 1
+		relative_position_id = "focus_SER_pol_expose_dissenters" # 親NFのID
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_expose_dissenters
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = totalitarianism
+				popularity = 0.10
+			}
+		}
+
+	}
+	# 国民精神再興運動
+	focus = {
+		id = focus_SER_pol_national_spirits_reform_movement
+		
+		# icon = GFX_goal_focus_SER_national_spirits_reform_movement
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 2
+		y = 1
+		relative_position_id = focus_SER_pol_ljotic_speech
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_ljotic_speech
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			add_war_support = 0.10
+		}
+		
+	}
+	# ZBOR青年団
+	focus = {
+		id = focus_SER_pol_zbor_youth_movement
+		
+		# icon = GFX_goal_focus_SER_zbor_youth_movement
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_pol_national_spirits_reform_movement
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_national_spirits_reform_movement
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			add_ideas = idea_SER_pol_zbor_youth_movement
+		}
+		
+	}
+	### 外交ツリー ###
+	# モンテネグロへの圧力
+	focus = {
+		id = focus_SER_pol_pressure_montenegro
+	
+		icon = GFX_goal_focus_SER_pol_pressure_montenegro
+		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+		cost = 4 # 1 = 7days
+	
+		x = -2
+		y = 1
+		relative_position_id = focus_SER_pol_ljotic_speech # 親NFのID
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_ljotic_speech
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			country_event = {
+				id = event_SER_pol.1
+			}
+		}
+
+	}
+	# # 統合プロパガンダ
+	# focus = {
+	# 	id = focus_SER_pol_integration_propaganda
+	
+	# 	icon = GFX_goal_unknown
+	# 	# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+	# 	cost = 4 # 1 = 7days
+	
+	# 	x = 0
+	# 	y = 1
+	# 	relative_position_id = focus_SER_pol_pressure_montenegro # 親NFのID
+	# 	prerequisite = { # 前提NF
+	# 		focus = focus_SER_pol_pressure_montenegro
+	# 	}
+	# 	available = {
+	# 		always = yes
+	# 	}
+	# 	completion_reward = {
+	# 		country_event = {
+	# 			id = event_SER_pol.2
+	# 		}
+	# 	}
+
+	# }
+	# 最終提案
+	focus = {
+		id = focus_SER_pol_final_proposal
+	
+		icon = GFX_goal_unknown
+		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+		cost = 4 # 1 = 7days
+	
+		x = -2
+		y = 3
+		# relative_position_id = focus_SER_pol_integration_propaganda # 親NFのID
+		relative_position_id = focus_SER_pol_pressure_montenegro # 親NFのID
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_pressure_montenegro
+		}
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_expose_dissenters
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			MNT = {
+				country_event = {
+					id = event_SER_pol.3
+				}
+			}
+		}
+
+	}
+	# モンテネグロの統合
+	focus = {
+		id = focus_SER_pol_montenegro_integration
+	
+		icon = GFX_goal_unknown
+		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+		cost = 4 # 1 = 7days
+	
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_pol_final_proposal # 親NFのID
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_final_proposal
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			105 = {
+				add_core_of = SER
+			}
+		}
+
+	}
+	## アルバニアツリー ##
+	# # アルバニアの脅威認識
+	# focus = {
+	# 	id = focus_SER_pol_albania_threat
+	
+	# 	icon = GFX_goal_unknown
+	# 	# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+	# 	cost = 4 # 1 = 7days
+	
+	# 	x = -2
+	# 	y = 1
+	# 	relative_position_id = focus_SER_pol_final_proposal # 親NFのID
+	# 	prerequisite = { # 前提NF
+	# 		focus = focus_SER_pol_final_proposal
+	# 	}
+	# 	available = {
+	# 		always = yes
+	# 	}
+	# 	completion_reward = {
+	# 		add_war_support = 0.10
+	# 	}
+
+	# }
+	# 失われたコソボ
+	focus = {
+		id = focus_SER_pol_lost_kosovo
+	
+		icon = GFX_goal_unknown
+		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+		cost = 4 # 1 = 7days
+	
+		x = -2
+		y = 1
+		relative_position_id = focus_SER_pol_final_proposal # 親NFのID
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_final_proposal
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			802 = {
+				add_core_of = SER
+				remove_core_of = ALB
+				start_resistance = SER
+				add_resistance_target = 50
+			}
+		}
+
+	}
+	# ティラナへの最後通牒
+	focus = {
+		id = focus_SER_pol_tirana_ultimatum
+	
+		icon = GFX_goal_unknown
+		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+		cost = 4 # 1 = 7days
+	
+		x = 0
+		y = 2
+		relative_position_id = focus_SER_pol_lost_kosovo # 親NFのID
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_lost_kosovo
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			country_event = event_SER_pol.6
+		}
+
+	}
+	# アルバニア平定作戦
+	focus = {
+		id = focus_SER_pol_pacify_albania
+	
+		icon = GFX_goal_unknown
+		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+		cost = 4 # 1 = 7days
+	
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_pol_tirana_ultimatum # 親NFのID
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_tirana_ultimatum
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			country_event = event_SER_pol.7
+		}
+
+	}
+	## 救国同盟ツリー ##
+	# バルカン外交の再開
+	focus = {
+		id = focus_SER_pol_resume_balkan_diplomacy
+	
+		icon = GFX_goal_unknown
+		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+		cost = 4 # 1 = 7days
+	
+		x = 2
+		y = 1
+		relative_position_id = focus_SER_pol_final_proposal # 親NFのID
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_final_proposal
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+
+	}
+	# ギリシャへの使節
+	focus = {
+		id = focus_SER_pol_envoy_to_greece
+	
+		icon = GFX_goal_unknown
+		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+		cost = 2 # 1 = 7days
+	
+		x = -1
+		y = 1
+		relative_position_id = focus_SER_pol_resume_balkan_diplomacy # 親NFのID
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_resume_balkan_diplomacy
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+
+	}
+	# アテネ秘密協定
+	focus = {
+		id = focus_SER_pol_athens_secret_agreement
+	
+		icon = GFX_goal_unknown
+		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+		cost = 2 # 1 = 7days
+	
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_pol_envoy_to_greece # 親NFのID
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_envoy_to_greece
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			diplomatic_relation = {
+				country = GRE
+				relation = non_aggression_pact
+			}
+		}
+
+	}
+	# ルーマニアへの使節
+	focus = {
+		id = focus_SER_pol_envoy_to_romania
+	
+		icon = GFX_goal_unknown
+		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+		cost = 2 # 1 = 7days
+	
+		x = 1
+		y = 1
+		relative_position_id = focus_SER_pol_resume_balkan_diplomacy # 親NFのID
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_resume_balkan_diplomacy
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+
+	}
+	# ブカレスト秘密協定
+	focus = {
+		id = focus_SER_pol_bucharest_secret_agreement
+	
+		icon = GFX_goal_unknown
+		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+		cost = 2 # 1 = 7days
+	
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_pol_envoy_to_romania # 親NFのID
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_envoy_to_romania
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			diplomatic_relation = {
+				country = ROM
+				relation = non_aggression_pact
+			}
+		}
+
+	}
+	# 救国同盟
+	focus = {
+		id = focus_SER_pol_alliance_for_salvation
+	
+		icon = GFX_goal_unknown
+		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+		cost = 4 # 1 = 7days
+	
+		x = 0
+		y = 3
+		relative_position_id = focus_SER_pol_resume_balkan_diplomacy # 親NFのID
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_athens_secret_agreement
+		}
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_bucharest_secret_agreement
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			create_faction = "救国同盟" # SER_alliance_for_salvation
+			add_to_faction = GRE
+			add_to_faction = ROM
+			every_country = {
+				limit = {
+					is_in_faction_with = SER
+				}
+			}
+		}
+
+	}
+	## バルカン戦争ツリー ##
+	# バルカン協商への対抗
+	focus = {
+		id = focus_SER_pol_oppose_balkan_pact
+	
+		icon = GFX_goal_unknown
+		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+		cost = 4 # 1 = 7days
+	
+		x = 0
+		y = 5
+		relative_position_id = focus_SER_pol_final_proposal # 親NFのID
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_pacify_albania
+		}
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_alliance_for_salvation
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					is_in_faction_with = SER
+				}
+				add_war_support = 0.1
+				random_state = {
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+					}
+				}
+			}
+		}
+
+	}
+	# 復讐の日
+	focus = {
+		id = focus_SER_pol_day_of_revenge
+	
+		icon = GFX_goal_unknown
+		# アイコン名の規則 : GFX_goal_<NF名の英訳>
+	
+		cost = 4 # 1 = 7days
+	
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_pol_oppose_balkan_pact # 親NFのID
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_oppose_balkan_pact
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			country_event = event_SER_pol.8
+		}
+		will_lead_to_war_with = BUL
+		will_lead_to_war_with = HUN
+
+	}
+
+	### 軍事ツリー ###
+	# 国軍再編成
+	focus = {
+		id = focus_SER_mil_reorg_armies
+		
+		# icon = GFX_goal_focus_SER_reorg_armies
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 24
+		y = 3
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			add_ideas = idea_SER_mil_reorg_armies
+		}
+		
+	}
+	# ZBOR戦闘団
+	focus = {
+		id = focus_SER_mil_zbor_battalion
+		
+		# icon = GFX_goal_focus_SER_zbor_battalion
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = -2
+		y = 1
+		relative_position_id = focus_SER_mil_reorg_armies
+		prerequisite = { # 前提NF
+			focus = focus_SER_mil_reorg_armies
+		}
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_zbor_youth_movement
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+
+		}
+		
+	}
+	# 狂信的突撃戦術
+	focus = {
+		id = focus_SER_mil_fanatic_assault_tactics
+		
+		# icon = GFX_goal_focus_SER_fanatic_assault_tactics
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_mil_zbor_battalion
+		prerequisite = { # 前提NF
+			focus = focus_SER_mil_zbor_battalion
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 山岳地帯への適応
+	focus = {
+		id = focus_SER_mil_adapt_to_mountainous_terrain
+		
+		# icon = GFX_goal_focus_SER_adapt_to_mountainous_terrain
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_mil_reorg_armies
+		prerequisite = { # 前提NF
+			focus = focus_SER_mil_reorg_armies
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			set_technology = {
+				mountaineers_combat_1 = 1
+				mountaineers_combat_2 = 1
+			}
+			load_oob = "SER_mountain"
+		}
+		
+	}
+	# 山岳歩兵部隊の編成
+	focus = {
+		id = focus_SER_mil_mountain_infantry_units
+		
+		# icon = GFX_goal_focus_SER_mountain_infantry_units
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_mil_adapt_to_mountainous_terrain
+		prerequisite = { # 前提NF
+			focus = focus_SER_mil_adapt_to_mountainous_terrain
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 特殊部隊創設
+	focus = {
+		id = focus_SER_mil_create_special_forces
+		
+		# icon = GFX_goal_focus_SER_create_special_forces
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = -1
+		y = 1
+		relative_position_id = focus_SER_mil_mountain_infantry_units
+		prerequisite = { # 前提NF
+			focus = focus_SER_mil_fanatic_assault_tactics
+		}
+		prerequisite = { # 前提NF
+			focus = focus_SER_mil_mountain_infantry_units
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 新式歩兵装備の研究
+	focus = {
+		id = focus_SER_mil_research_new_infantry_equipment
+		
+		# icon = GFX_goal_focus_SER_research_new_infantry_equipment
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 3
+		y = 1
+		relative_position_id = focus_SER_mil_reorg_armies
+		prerequisite = { # 前提NF
+			focus = focus_SER_mil_reorg_armies
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_equipment
+				bonus = 1
+				uses = 3
+			}
+		}
+		
+	}
+	# 国産装備開発
+	focus = {
+		id = focus_SER_mil_develop_domestic_equipment
+		
+		# icon = GFX_goal_focus_SER_develop_domestic_equipment
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = -1
+		y = 1
+		relative_position_id = focus_SER_mil_research_new_infantry_equipment
+		prerequisite = { # 前提NF
+			focus = focus_SER_mil_research_new_infantry_equipment
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 装備生産ライセンス交渉
+	focus = {
+		id = focus_SER_mil_license_equipment_production
+		
+		# icon = GFX_goal_focus_SER_license_equipment_production
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 1
+		y = 1
+		relative_position_id = focus_SER_mil_research_new_infantry_equipment
+		prerequisite = { # 前提NF
+			focus = focus_SER_mil_research_new_infantry_equipment
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 参謀本部の刷新
+	focus = {
+		id = focus_SER_mil_refresh_general_staff
+		
+		# icon = GFX_goal_focus_SER_refresh_general_staff
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 6
+		y = 1
+		relative_position_id = focus_SER_mil_reorg_armies
+		prerequisite = { # 前提NF
+			focus = focus_SER_mil_reorg_armies
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 歩兵重視ドクトリン
+	focus = {
+		id = focus_SER_mil_infantry_centric_doctrine
+		
+		# icon = GFX_goal_focus_SER_infantry_centric_doctrine
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_mil_refresh_general_staff
+		prerequisite = { # 前提NF
+			focus = focus_SER_mil_refresh_general_staff
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+
+	### 経済ツリー ###
+	# 戦後復興の継続
+	focus = {
+		id = focus_SER_eco_continue_postwar_reconstruction
+		
+		icon = GFX_goal_focus_SER_eco_continue_postwar_reconstruction
+		# icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 11
+		y = 0
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			107 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+				add_extra_state_shared_building_slots = 4
+			}
+		}
+		
+	}
+	# 科学アカデミーの再建
+	focus = {
+		id = focus_SER_eco_rebuild_academy_of_science
+		
+		# icon = GFX_goal_focus_SER_rebuild_academy_of_science
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = -1
+		y = 1
+		relative_position_id = focus_SER_eco_continue_postwar_reconstruction
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_continue_postwar_reconstruction
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+		
+	}
+	# インフラ修復計画
+	focus = {
+		id = focus_SER_eco_infrastructure_repair_plan
+		
+		# icon = GFX_goal_focus_SER_infrastructure_repair_plan
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 1
+		y = 1
+		relative_position_id = focus_SER_eco_continue_postwar_reconstruction
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_continue_postwar_reconstruction
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			107 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 2
+
+			}
+			108 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 2
+
+			}
+		}
+		
+	}
+	# 賠償金問題への対処方針
+	focus = {
+		id = focus_SER_eco_handling_of_compensation_issue
+		
+		# icon = GFX_goal_focus_SER_handling_of_compensation_issue
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 0
+		y = 3
+		relative_position_id = focus_SER_eco_continue_postwar_reconstruction
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_rebuild_academy_of_science
+		}
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_infrastructure_repair_plan
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			add_war_support = 0.1
+		}
+		
+	}
+	# 支払い継続への意思
+	focus = {
+		id = focus_SER_eco_will_continue_payment
+		
+		# icon = GFX_goal_focus_SER_will_continue_payment
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = -8
+		y = 2
+		relative_position_id = focus_SER_eco_handling_of_compensation_issue
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_handling_of_compensation_issue
+		}
+		mutually_exclusive = {
+			# focus = focus_SER_eco_will_continue_payment
+			focus = focus_SER_eco_table_for_re-negotiation
+			focus = focus_SER_eco_iron_will
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 債務履行と国内安定
+	focus = {
+		id = focus_SER_eco_debt_repayment_and_domestic_stability
+		
+		# icon = GFX_goal_focus_SER_debt_repayment_and_domestic_stability
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_eco_will_continue_payment
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_will_continue_payment
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 計画的工業化
+	focus = {
+		id = focus_SER_eco_planned_industrialization
+		
+		# icon = GFX_goal_focus_SER_planned_industrialization
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = -1
+		y = 1
+		relative_position_id = focus_SER_eco_debt_repayment_and_domestic_stability
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_debt_repayment_and_domestic_stability
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 民需の拡大
+	focus = {
+		id = focus_SER_eco_expansion_of_consumer_demand
+		
+		# icon = GFX_goal_focus_SER_expansion_of_consumer_demand
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 1
+		y = 1
+		relative_position_id = focus_SER_eco_debt_repayment_and_domestic_stability
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_debt_repayment_and_domestic_stability
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 段階的軍事予算
+	focus = {
+		id = focus_SER_eco_gradual_military_budget
+		
+		# icon = GFX_goal_focus_SER_gradual_military_budget
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 0
+		y = 2
+		relative_position_id = focus_SER_eco_debt_repayment_and_domestic_stability
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_planned_industrialization
+		}
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_expansion_of_consumer_demand
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 再交渉へのテーブル
+	focus = {
+		id = focus_SER_eco_table_for_re-negotiation
+		
+		# icon = GFX_goal_focus_SER_table_for_re-negotiation
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = -4
+		y = 2
+		relative_position_id = focus_SER_eco_handling_of_compensation_issue
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_handling_of_compensation_issue
+		}
+		mutually_exclusive = {
+			focus = focus_SER_eco_will_continue_payment
+			# focus = focus_SER_eco_table_for_re-negotiation
+			focus = focus_SER_eco_iron_will
+		}
+		available = {
+			always = no
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 軽減された賠償金
+	focus = {
+		id = focus_SER_eco_reduced_compensation
+		
+		# icon = GFX_goal_focus_SER_reduced_compensation
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = -1
+		y = 1
+		relative_position_id = focus_SER_eco_table_for_re-negotiation
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_table_for_re-negotiation
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 信頼回復による投資
+	focus = {
+		id = focus_SER_eco_investment_due_to_trust_restoration
+		
+		# icon = GFX_goal_focus_SER_investment_due_to_trust_restoration
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_eco_reduced_compensation
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_reduced_compensation
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 条件付き軍拡
+	focus = {
+		id = focus_SER_eco_conditional_military_expansion
+		
+		# icon = GFX_goal_focus_SER_conditional_military_expansion
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_eco_investment_due_to_trust_restoration
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_investment_due_to_trust_restoration
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 外交孤立の深化
+	focus = {
+		id = focus_SER_eco_deepening_of_diplomatic_isolation
+		
+		# icon = GFX_goal_focus_SER_deepening_of_diplomatic_isolation
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 1
+		y = 1
+		relative_position_id = focus_SER_eco_table_for_re-negotiation
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_table_for_re-negotiation
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 国内資源への依存
+	focus = {
+		id = focus_SER_eco_dependence_on_domestic_resources
+		
+		# icon = GFX_goal_focus_SER_dependence_on_domestic_resources
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_eco_deepening_of_diplomatic_isolation
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_deepening_of_diplomatic_isolation
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 略奪への道
+	focus = {
+		id = focus_SER_eco_path_to_plunder
+		
+		# icon = GFX_goal_focus_SER_path_to_plunder
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_eco_dependence_on_domestic_resources
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_dependence_on_domestic_resources
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 鉄の意志
+	focus = {
+		id = focus_SER_eco_iron_will
+		
+		# icon = GFX_goal_focus_SER_iron_will
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 0
+		y = 2
+		relative_position_id = focus_SER_eco_handling_of_compensation_issue
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_handling_of_compensation_issue
+		}
+		mutually_exclusive = {
+			focus = focus_SER_eco_will_continue_payment
+			focus = focus_SER_eco_table_for_re-negotiation
+			# focus = focus_SER_eco_iron_will
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			remove_ideas = idea_SER_huge_compensation
+		}
+		
+	}
+	# 闇市場からの調達
+	focus = {
+		id = focus_SER_eco_source_from_black_market
+		
+		# icon = GFX_goal_focus_SER_source_from_black_market
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = -1
+		y = 1
+		relative_position_id = focus_SER_eco_iron_will
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_iron_will
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 10000
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 5000
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 30
+			}
+			load_oob = "SER_houhei"
+		}
+		
+	}
+	# 軍産複合体からの強制調達
+	focus = {
+		id = focus_SER_eco_forced_acquisition_from_military_complex
+		
+		# icon = GFX_goal_focus_SER_forced_acquisition_from_military_complex
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_eco_source_from_black_market
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_source_from_black_market
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			add_ideas = idea_SER_eco_forced_acquisition_from_military_complex
+			every_owned_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+		
+	}
+	# 国家総動員令
+	focus = {
+		id = focus_SER_eco_national_mob
+		
+		# icon = GFX_goal_focus_SER_national_mob
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 1
+		y = 1
+		relative_position_id = focus_SER_eco_iron_will
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_iron_will
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			add_ideas = tot_economic_mobilisation
+		}
+		
+	}
+	# 政治即応体制
+	focus = {
+		id = focus_SER_eco_political_reactionary_system
+		
+		# icon = GFX_goal_focus_SER_political_reactionary_system
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_eco_national_mob
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_national_mob
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			add_ideas = service_by_requirement
+		}
+		
+	}
+	# 科学技術の軍事転用
+	focus = {
+		id = focus_SER_eco_military_use_of_science_and_technology
+		
+		# icon = GFX_goal_focus_SER_military_use_of_science_and_technology
+		icon = GFX_goal_unknown
+		
+		cost = 4
+		
+		x = 0
+		y = 3
+		relative_position_id = focus_SER_eco_iron_will
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_forced_acquisition_from_military_complex
+		}
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_political_reactionary_system
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+		
+	}
+
+}

@@ -5,16 +5,26 @@ state={
 		steel=35.000
 	}
 	provinces={
-		529 587 3444 3488 3512 3547 6469 6570 9482 9522 11562 
+		587 3444 3488 3547 9522 11435 11470 11494 
 	}
+
 	history = {
 		owner = GER
 		add_core_of = GER
+
+		buildings = {
+			infrastructure = 3
+		    industrial_complex = 2
+		}
+
+		victory_points = { 
+			11435 1 # Bitburg
+		}
+		
 	}
-	manpower=6144743
+
+	manpower=2536000
 	buildings_max_level_factor=1.000
 	state_category=megalopolis
 	local_supplies=0.000
-        
-
 }

@@ -1,0 +1,17 @@
+characters = {
+	AND_Co_public_of_Andorra = {
+		name = AND_Co_public_of_Andorra
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_AND_Co_public_of_Andorra"
+			}
+		}
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
+}

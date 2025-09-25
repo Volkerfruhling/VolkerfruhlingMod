@@ -85,3 +85,11 @@ SWE = "countries/_western_european.txt"
 #スイス/Switzerland
 SWI = "countries/_western_european.txt"
 
+#アイスランド/Iceland
+ISL = "countries/_western_european.txt"
+
+#リヒテンシュタイン/Liechtenstein
+LIE = "countries/_western_european.txt"
+
+#アンドラ/Andorra
+AND = "countries/_western_european.txt"

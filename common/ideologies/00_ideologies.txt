@@ -208,6 +208,7 @@ ideologies = {
 		types = {
 			despotism_ideology = {
 			}
+			authoritarian_democracy = {}
 			military_regime = {}
 			civilian_dictatorship = {}
 			aristocratic_reactionism = {}

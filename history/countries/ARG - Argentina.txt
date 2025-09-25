@@ -1,6 +1,6 @@
-capital = 797
+capital = 278
 
-oob = "standard_templates"
+oob = "ARG_1925"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -83,7 +83,7 @@ if = {
 
 set_research_slots = 3
 set_convoys = 50
-set_stability = 0.75
+set_stability = 0.4
 
 1939.1.1 = {
 
@@ -149,14 +149,32 @@ set_stability = 0.75
 
 set_politics = {
 	ruling_party = liberalism
-	last_election = "1936.1.1"
-	election_frequency = 48
+	last_election = "1922.3.2"
+	election_frequency = 72
 	elections_allowed = yes
 
 }
 set_popularities = {
-	liberalism = 100 
+	communism = 5
+	socialism = 15
+	liberalism = 40
+	conservatism = 30
+	despotism = 5
+	totalitarianism = 3
+	ultra_nationalism = 2
 }
 
+recruit_character = ARG_Marcelo_T_Alvear
+
 add_ideas = {
+	Presidential_democracy
+	Incomplete_constitution
+	Universal_suffrage
+	State_religion
+	Paternalistic_society
+	Neutral_stance
+	Compulsory_primary_education
+	Developing_countries
+	Food_insecure
+	Limited_assistance_missions
 }

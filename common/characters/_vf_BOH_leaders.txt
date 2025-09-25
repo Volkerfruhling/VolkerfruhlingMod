@@ -1,0 +1,21 @@
+characters = {
+    BOH_Charles_III = {
+		name = BOH_Charles_III
+		
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_BOH_Charles_III"
+			}
+		}
+		
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1936.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+	}
+}

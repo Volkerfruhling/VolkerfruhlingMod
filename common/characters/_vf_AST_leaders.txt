@@ -1,0 +1,17 @@
+characters = {
+	AST_Henry_Foster = {
+		name = AST_Henry_Foster
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_AST_Henry_Foster"
+			}
+		}
+		country_leader = {
+			ideology = socialdemocratism
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
+}

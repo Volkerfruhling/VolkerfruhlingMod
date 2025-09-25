@@ -1,0 +1,17 @@
+characters = {
+	SWI_Federal_Council = {
+		name = SWI_Federal_Council
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_SWI_Federal_Council"
+			}
+		}
+		country_leader = {
+			ideology = market_liberalism
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
+}

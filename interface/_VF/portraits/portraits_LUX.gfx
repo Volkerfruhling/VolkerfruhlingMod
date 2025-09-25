@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_LUX_Charlotte"
+		textureFile = "gfx/interface/leaders/LUX/portrait_leader_LUX_Charlotte.png"
+	}
+}

@@ -1,6 +1,6 @@
-capital = 797
+capital = 6
 
-oob = "standard_templates"
+oob = "BEL_1925"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -83,7 +83,8 @@ if = {
 
 set_research_slots = 3
 set_convoys = 50
-set_stability = 0.75
+set_stability = 0.40
+set_war_support = 0.35
 
 1939.1.1 = {
 
@@ -148,15 +149,34 @@ set_stability = 0.75
 }
 
 set_politics = {
-	ruling_party = liberalism
-	last_election = "1936.1.1"
+	ruling_party = conservatism
+	last_election = "1921.5.18"
 	election_frequency = 48
 	elections_allowed = yes
 
 }
 set_popularities = {
-	liberalism = 100 
+	communism = 2
+	socialism = 35
+	liberalism =  15
+	conservatism = 40
+	despotism = 3
+	totalitarianism = 5
+	ultra_nationalism = 0
 }
 
+recruit_character = BEL_Albert_I
+
 add_ideas = {
+	Parliamentary_democracy
+	Strictly_defined_constitution
+	Universal_suffrage
+	Paternalistic_society
+	Semi_modern_armies
+	Religious_draft_exemption
+	Incomplete_constitution
+	State_religion
+	Compulsory_primary_education
+	10_hour_workday
+	Vulnerable_Near_Poor
 }

@@ -1,0 +1,21 @@
+characters = {
+	BUL_Ferdinand_I = {
+		name = BUL_Ferdinand_I
+		
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_BUL_Ferdinand_I"
+			}
+		}
+		
+		country_leader = {
+			ideology = royal_autocracy
+			expire = "1964.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+	}
+}

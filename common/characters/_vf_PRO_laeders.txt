@@ -1,0 +1,17 @@
+characters = {
+	PRO_Carlo_IV = {
+		name = PRO_Carlo_IV
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_PRO_Carlo_IV"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
+}

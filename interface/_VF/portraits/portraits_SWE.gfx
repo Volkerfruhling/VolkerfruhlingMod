@@ -1,0 +1,12 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_SWE_Gustav_V"
+		texturefile = "gfx/interface/leaders/SWE/Portrait_Leader_SWE_Gustav_V.png"
+	}
+
+	#spriteType = {
+	#	name = ""
+	#	texturefile = ""
+	#	legacy_lazy_load = no
+	#}
+}

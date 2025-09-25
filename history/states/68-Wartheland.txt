@@ -15,7 +15,7 @@ state = {
 		victory_points = {
 			3473 1 # Küstrin
 		}
-		
+
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
@@ -24,7 +24,7 @@ state = {
 	}
 
 	provinces = {
-		444 537 3473 3572 6236 9387 11478 
+	 537 3473 3572 6236 9387
 	}
 
 	local_supplies = 0.0 

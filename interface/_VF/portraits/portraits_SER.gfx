@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_Portrait_Leader_SER_dimitrije_ljotić
+		texturefile = "gfx/interface/leaders/SER/portrait_leader_SER_dimitrije_ljotić.png"
+	}	
+}

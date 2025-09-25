@@ -213,6 +213,13 @@
         localization_key = despotism_ideology
     }
 
+    text = {
+        trigger = {#権威的民主主義
+            has_country_leader_ideology = authoritarian_democracy
+        }
+        localization_key = authoritarian_democracy
+    }
+
     text = { #軍事政権
         trigger = {
             has_country_leader_ideology = military_regime

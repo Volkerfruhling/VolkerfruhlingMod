@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_NET_Wilhelmina"
+		textureFile = "gfx/interface/leaders/NET/portrait_leader_NET_Wilhelmina.png"
+	}
+}

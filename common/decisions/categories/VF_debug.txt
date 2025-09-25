@@ -1,0 +1,10 @@
+VF_debug = {
+
+    allowed = {
+        is_debug = yes
+    }
+    visible = {
+        is_debug = yes
+    }
+
+}

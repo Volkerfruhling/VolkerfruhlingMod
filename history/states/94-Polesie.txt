@@ -2,17 +2,12 @@ state={
 	id=94
 	name="STATE_94"
 	provinces={
-			11247
 			11285
-			11301
-			11357
 			11503
 			11528
-			290
 			3256
 			3309
 			3392
-			347
 			3496
 			3556
 			535
@@ -27,8 +22,11 @@ state={
 	history = {
 		owner = RUS
 		add_core_of = RUS
-
+		buildings = {
+			infrastructure = 3
+		}
 	}
+	
 	manpower=1232200
 	buildings_max_level_factor=1.000
 	state_category=rural

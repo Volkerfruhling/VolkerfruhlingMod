@@ -1,6 +1,6 @@
-capital = 797
+capital = 113
 
-oob = "standard_templates"
+oob = "IRE_1925"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -83,7 +83,7 @@ if = {
 
 set_research_slots = 3
 set_convoys = 50
-set_stability = 0.75
+set_stability = 0.40
 
 1939.1.1 = {
 
@@ -148,15 +148,37 @@ set_stability = 0.75
 }
 
 set_politics = {
-	ruling_party = liberalism
-	last_election = "1936.1.1"
+	ruling_party = conservatism
+	last_election = "1923.8.27"
 	election_frequency = 48
 	elections_allowed = yes
 
 }
 set_popularities = {
-	liberalism = 100 
+	communism = 5
+	socialism = 5
+	liberalism =  35
+	conservatism = 40
+	despotism = 10
+	totalitarianism = 3
+	ultra_nationalism = 2
 }
 
+recruit_character = IRE_William_Thomas_Cosgrave
+
 add_ideas = {
+	Parliamentary_democracy
+    Strictly_defined_constitution
+    Universal_suffrage
+    Separation_of_church_and_state
+    Compulsory_primary_education
+    8_hour_workday
+    Developing_countries
+    Prohibited_military_service
+    No_draft_exemption
+    Basic_military_training
+    Early_20th_century_armies
+	Women_s_suffrage
+	Racial_discrimination
+	Food_insecure
 }

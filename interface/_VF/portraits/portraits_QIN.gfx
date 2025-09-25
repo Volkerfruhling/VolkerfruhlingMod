@@ -1,0 +1,12 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_QIN_aisin_gioro_dzai_fung"
+		texturefile = "gfx/interface/leaders/QIN/portrait_leader_QIN_aisin_gioro_dzai_fung.png"
+	}
+
+	spriteType = {
+		name = "GFX_CP_QIN_Aisin_Gioro_Puyi"
+		texturefile = "gfx/interface/leaders/QIN/portrait_leader_QIN_Aisin_Gioro_Puyi.png"
+		legacy_lazy_load = no
+	}
+}

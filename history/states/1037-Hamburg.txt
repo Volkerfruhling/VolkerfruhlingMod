@@ -1,0 +1,29 @@
+state = {
+	id = 1037
+	name = "STATE_1037"
+	manpower = 1025499
+	state_category = megalopolis
+	
+	history = {
+		owner = GER
+		add_core_of = GER
+
+		victory_points = {
+			9347 20 # Hamburg
+		}
+
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			dockyard = 4
+		}
+	}
+
+	provinces = {
+		9347
+ 	}
+
+	local_supplies = 0.0 
+        
+
+}

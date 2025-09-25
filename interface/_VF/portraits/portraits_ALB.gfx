@@ -1,0 +1,12 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_Portrait_Leader_ALB_Ahmet_Bey_Zog"
+        texturefile = "gfx/interface/leaders/ALB/portrait_leader_ALB_Ahmet_Bey_Zog.png"
+    }
+
+    spriteType = {
+        name = "GFX_CP_ALB_Skanderbeg_II"
+        texturefile = "gfx/interface/leaders/ALB/portrait_leader_ALB_Skanderbeg_II.png"
+        legacy_lazy_load = no
+    }
+}

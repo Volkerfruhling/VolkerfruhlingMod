@@ -1,0 +1,46 @@
+characters = {
+	EGY_Edmund_Allenby = {
+		name = EGY_Edmund_Allenby
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_EGY_Edmund_Allenby"
+			}
+		}
+
+        country_leader = {
+			ideology = national_liberalism
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+
+        country_leader = {
+			ideology = liberal_conservatism
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+
+		country_leader = {
+			ideology = military_regime
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
+
+    EGY_Fouad_I = {
+        name = EGY_Fouad_I
+    }
+
+    EGY_sultan = {
+        name = EGY_sultan
+    }
+
+    EGY_high_commissioner = {
+        name = EGY_high_commissioner
+    }
+}

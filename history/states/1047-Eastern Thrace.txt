@@ -1,0 +1,29 @@
+
+state= {
+	id=1047
+	name="STATE_1047"
+	manpower = 363947
+	resources={
+
+	}
+	
+	state_category = town
+
+	history= {
+		owner = OTT
+		add_core_of = OTT
+		victory_points = {
+			11842 5
+		}
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces={
+        13414 3893 922 11842
+    }
+
+	local_supplies=0.0 
+        
+
+}

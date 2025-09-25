@@ -1,0 +1,69 @@
+SER_plan = {
+	name = "Serbia Plan"
+	desc = ""
+
+	allowed = {
+		original_tag = SER
+	}
+	enable = {
+
+	}
+	abort = {
+		is_subject = yes 
+	}
+
+	ai_national_focuses = {
+        focus_SER_pol_ljotic_speech
+		focus_SER_eco_continue_postwar_reconstruction
+		focus_SER_pol_zbor_discipline
+		# focus_SER_pol_domestic_tightening
+		focus_SER_pol_expose_dissenters
+		focus_SER_pol_pressure_montenegro
+		focus_SER_eco_rebuild_academy_of_science
+		# focus_SER_pol_integration_propaganda
+		focus_SER_eco_infrastructure_repair_plan
+		focus_SER_pol_final_proposal
+		focus_SER_eco_handling_of_compensation_issue
+		focus_SER_pol_montenegro_integration
+		focus_SER_eco_iron_will
+		focus_SER_mil_reorg_armies
+		# focus_SER_pol_albania_threat
+		focus_SER_pol_lost_kosovo
+		focus_SER_pol_tirana_ultimatum
+		focus_SER_eco_national_mob
+		focus_SER_eco_political_reactionary_system
+		focus_SER_pol_pacify_albania
+		focus_SER_eco_source_from_black_market
+		focus_SER_eco_forced_acquisition_from_military_complex
+		focus_SER_eco_military_use_of_science_and_technology
+		focus_SER_pol_resume_balkan_diplomacy
+		focus_SER_pol_envoy_to_greece
+		focus_SER_pol_envoy_to_romania
+		focus_SER_pol_athens_secret_agreement
+		focus_SER_pol_bucharest_secret_agreement
+		focus_SER_pol_alliance_for_salvation
+		focus_SER_pol_oppose_balkan_pact
+		focus_SER_pol_day_of_revenge
+    }
+	focus_factors = {
+		
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

@@ -14,6 +14,21 @@ characters = {
 		}
 	}
 
+	FRA_Victor_Napoleon_Bonaparte = {
+		name = FRA_Victor_Napoleon_Bonaparte
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_FRA_Victor_Napoleon_Bonaparte"
+			}
+		}
+		country_leader = {
+			ideology = royal_autocracy
+			id = -1
+			traits = {
+			}
+		}
+	}
+
 	FRA_French_emperor = {
 		name = FRA_French_emperor
 	}
@@ -24,6 +39,10 @@ characters = {
 	
 	chief_FRA_napoleon_iv = {
 		name = chief_FRA_napoleon_iv
+	}
+
+	FRA_prime_minister = {
+		name = FRA_prime_minister
 	}
 
 	

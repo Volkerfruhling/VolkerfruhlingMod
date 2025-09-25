@@ -1,6 +1,6 @@
 capital = 195
 
-oob = "standard_templates"
+oob = "RUS_1925"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -83,10 +83,20 @@ if = {
 
 set_research_slots = 3
 set_convoys = 50
-set_stability = 0.75
+set_stability = 0.27
+set_war_support = 0.29
 
 ### Leaders ###
-recruit_character = RUS_nicholas_ii
+
+recruit_character = RUS_Alexander_Kolchak
+
+set_country_flag = VF_monarch_diplomacy_portrait_button_flag
+
+set_variable = { State_Positions_Right_Title = token:RUS_tsar }
+
+set_variable = { State_Positions_Left_Title = token:RUS_commander }
+
+set_variable = { Chief_Portrait = token:RUS_nicholas_ii}
 
 ### Politics ###
 set_politics = {
@@ -97,8 +107,29 @@ set_politics = {
 
 }
 set_popularities = {
-	despotism = 100 
+	communism = 5
+	socialism = 32
+	liberalism = 21
+	conservatism = 12
+	despotism = 15
+	totalitarianism = 10 
+	ultra_nationalism = 5
 }
 
 add_ideas = {
+	Tyrannical_monarchy
+	Incomplete_constitution
+	State_religion
+	Paternalistic_society
+	Partial_integration
+	Compulsory_primary_education
+	14_hour_workday
+	Emerging_countries
+	Food_insecure
+	Combat_support_missions
+	No_draft_exemption
+	Basic_military_training
+	Nineteenth_century_army
+	partial_economic_mobilisation
+	limited_conscription
 }

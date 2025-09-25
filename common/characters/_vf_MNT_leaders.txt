@@ -1,0 +1,33 @@
+characters = {
+	MNT_Anto_Gvozdenovic = {
+		name = MNT_Anto_Gvozdenovic
+		
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_MNT_Anto_Gvozdenovic"
+			}
+		}
+		
+		country_leader = {
+			ideology = despotism_ideology
+			expire = "1964.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+	}
+
+	MNT_Regent = {
+		name = MNT_Regent 
+	}
+
+	MNT_King = {
+		name = MNT_King
+	}
+
+	MNT_Danilo_III = {
+		name = MNT_Danilo_III
+	}
+}

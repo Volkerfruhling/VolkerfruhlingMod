@@ -1,0 +1,29 @@
+characters = {
+	ALB_Ahmet_Bey_Zog = {
+		name = ALB_Ahmet_Bey_Zog
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_ALB_Ahmet_Bey_Zog"
+			}
+		}
+		country_leader = {
+			ideology = despotism_ideology
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
+
+    ALB_Skanderbeg_II = {
+        name = ALB_Skanderbeg_II
+    }
+
+    ALB_House = {
+        name = ALB_House
+    }
+
+    ALB_prime_minister= {
+        name = ALB_prime_minister
+    }
+}

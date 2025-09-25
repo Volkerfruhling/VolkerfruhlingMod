@@ -1,0 +1,12 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_EGY_Edmund_Allenby"
+		texturefile = "gfx/interface/leaders/EGY/portrait_leader_EGY_Edmund_Allenby.png"
+	}
+
+	spriteType = {
+		name = "GFX_CP_EGY_Fouad_I"
+		texturefile = "gfx/interface/leaders/EGY/portrait_leader_EGY_Fouad_I.png"
+		legacy_lazy_load = no
+	}
+}

@@ -1,9 +1,9 @@
-version="0.0.0"
+version="α0.0.1"
 tags={
 	"Alternative History"
 }
 name="Volkerfruhling"
-supported_version="1.15.*"
+supported_version="1.16.*"
 replace_path="common/abilities"
 replace_path="common/autonomous_states"
 replace_path="common/ai_strategy"
@@ -67,5 +67,5 @@ replace_path="gfx/flags"
 replace_path="gfx/flags/medium"
 replace_path="gfx/flags/small"
 replace_path="gfx/loadingscreens"
-replace_path="gfx/train_gfx_database"
+# replace_path="gfx/train_gfx_database"
 replace_path="gfx/interface/equipmentdesigner/graphic_db"

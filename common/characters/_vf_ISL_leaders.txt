@@ -1,0 +1,32 @@
+characters = {
+	ISL_Jon_Magnusson = {
+		name = ISL_Jon_Magnusson
+		
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_ISL_Jon_Magnusson"
+			}
+		}
+		
+		country_leader = {
+			ideology = national_conservatism
+			expire = "1964.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+	}
+
+    ISL_King = {
+        name = ISL_King
+    }
+    ISL_prime_minister = {
+        name = ISL_prime_minister
+    }
+
+    ISL_Christian_X = {
+        name = ISL_Christian_X
+    }
+}

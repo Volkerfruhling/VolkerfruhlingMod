@@ -1,0 +1,12 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_Portrait_Leader_SPA_Manuel_Garcia_Prieto"
+        texturefile = "gfx/interface/leaders/SPA/portrait_leader_SPA_Manuel_Garcia_Prieto.png"
+    }
+
+    spriteType = {
+        name = "GFX_CP_SPA_Alfonso_XIII"
+        texturefile = "gfx/interface/leaders/SPA/portrait_leader_SPA_Alfonso_XIII.png"
+        legacy_lazy_load = no
+    }
+}

@@ -1,0 +1,17 @@
+characters = {
+	AFG_Amanullah_Khan = {
+		name = AFG_Amanullah_Khan
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_AFG_Amanullah_Khan"
+			}
+		}
+		country_leader = {
+			ideology = despotism_ideology
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
+}

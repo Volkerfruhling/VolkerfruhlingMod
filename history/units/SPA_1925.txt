@@ -1,0 +1,246 @@
+division_template = {
+    name = "Infantry Division"
+
+    support = {
+        engineer = { x = 0 y = 0 }
+	}
+
+    regiments = {
+        Infantry = { x = 0 y = 0 }
+        Infantry = { x = 0 y = 1 }
+        Infantry = { x = 0 y = 2 }
+        Infantry = { x = 1 y = 0 }
+        Infantry = { x = 1 y = 1 }
+        Infantry = { x = 1 y = 2 }
+        Infantry = { x = 2 y = 0 }
+        Infantry = { x = 2 y = 1 }
+        Infantry = { x = 2 y = 2 }        
+    }
+
+    priority = 1
+}
+
+division_template = {
+    name = "Colonial Garrison Corps"
+
+    regiments = {
+        Infantry = { x = 0 y = 0 }
+        Infantry = { x = 0 y = 1 }
+        Infantry = { x = 1 y = 0 }
+        Infantry = { x = 1 y = 1 }
+    }
+
+    priority = -1
+}
+
+units = {
+    division ={
+        name = "Infantry Division"
+        location = 3816
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 3938
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 3938
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 3938
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 9764
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 740
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 11825
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 758
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 6734
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 4098
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 10024
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 7183
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 13228
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 7153
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 875
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 6832
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 6902
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 6906
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 9793
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+}
+
+units = {
+    division ={
+        name = "Colonial Garrison Corps"
+        location = 12100
+        division_template = "Colonial Garrison Corps"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Colonial Garrison Corps"
+        location = 9945
+        division_template = "Colonial Garrison Corps"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Colonial Garrison Corps"
+        location = 8038
+        division_template = "Colonial Garrison Corps"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Colonial Garrison Corps"
+        location = 13071
+        division_template = "Colonial Garrison Corps"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Colonial Garrison Corps"
+        location = 12857
+        division_template = "Colonial Garrison Corps"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Colonial Garrison Corps"
+        location = 8244
+        division_template = "Colonial Garrison Corps"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Colonial Garrison Corps"
+        location = 13071
+        division_template = "Colonial Garrison Corps"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+    }
+}

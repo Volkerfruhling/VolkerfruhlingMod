@@ -1,0 +1,33 @@
+state = {
+	id = 1039
+	name = "STATE_1039"
+	manpower = 227665 # was 2275377
+	
+	state_category=town
+	
+	resources = {
+	}
+
+	history = {
+		owner = GER
+		add_core_of = GER
+
+		buildings = {
+			infrastructure = 3 #was: 6
+		}
+
+        victory_points = {
+			688 10 
+		}
+
+
+	}
+
+	provinces = {
+        3675 688
+	}
+
+	local_supplies = 0.0 
+        
+
+}

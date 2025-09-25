@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_SWI_Federal_Council"
+		texturefile = "gfx/interface/leaders/SWI/portrait_leader_SWI_Federal_Council.png"
+	}
+}

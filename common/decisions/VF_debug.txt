@@ -1,0 +1,28 @@
+
+VF_debug = {
+    VF_debug_demo = {
+
+        available ={
+            is_debug = yes
+        }
+
+        visible = {
+            is_debug = yes
+        }
+
+        complete_effect = {
+            diplomatic_relation = {
+                country = IST
+                relation = guarantee
+                active = yes
+            }
+            
+	        diplomatic_relation = {
+                country = IST
+                relation = military_access
+                active = yes
+            }
+        }
+    }
+    
+} 

@@ -1,0 +1,24 @@
+state={
+	id=1032
+	name="STATE_1032"
+	provinces={
+		13405 
+	}
+
+	history = {
+		owner = GER
+		add_core_of = GER
+		add_claim_by = BEL
+
+
+		buildings =  {
+			infrastructure = 3
+		}
+
+	}
+
+	manpower=58663
+	buildings_max_level_factor=1.000
+	state_category=pastoral 
+	local_supplies=0.000
+}

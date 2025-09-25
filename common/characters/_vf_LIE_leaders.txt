@@ -1,0 +1,21 @@
+characters = {
+	LIE_Johann_II = {
+		name = LIE_Johann_II
+		
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_LIE_Johann_II"
+			}
+		}
+		
+		country_leader = {
+			ideology = christian_conservatism
+			expire = "1936.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+	}
+}

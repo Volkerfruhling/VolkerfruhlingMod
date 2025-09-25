@@ -1,0 +1,217 @@
+division_template = {
+    name = "Infantry Division"
+
+    support = {
+		engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+	}
+
+    regiments = {
+        Infantry = { x = 0 y = 0 }
+        Infantry = { x = 0 y = 1 }
+        Infantry = { x = 0 y = 2 }
+        Infantry = { x = 1 y = 0 }
+        Infantry = { x = 1 y = 1 }
+        Infantry = { x = 1 y = 2 }
+        Infantry = { x = 2 y = 0 }
+        Infantry = { x = 2 y = 1 }
+        Infantry = { x = 2 y = 2 }
+    }
+
+    priority = 1
+}
+
+units = {
+    division ={
+        name = "UK Infantry Division"
+        location = 6103
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 3501
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 9297
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 9458
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 540
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 9315
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 9392
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 3273
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 271
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 6384
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 6103
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 6103
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 3501
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 9297
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 9458
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 540
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 9315
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 9392
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 3273
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 271
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 6384
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 351
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 3369
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+    division ={
+        name = "UK Infantry Division"
+        location = 200
+        division_template = "Infantry Division"
+        start_experience_factor = 0.3
+        start_equipment_factor = 0.9
+    }
+
+}
