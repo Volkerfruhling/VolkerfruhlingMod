@@ -1,0 +1,17 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_RUS_nicholas_ii"
+		texturefile = "gfx/interface/leaders/RUS/portrait_leader_RUS_nicholas_ii.png"
+	}
+
+	spriteType = {
+		name = "GFX_CP_RUS_nicholas_ii"
+		texturefile = "gfx/interface/leaders/RUS/portrait_leader_RUS_nicholas_ii.png"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_Leader_RUS_Alexander_Kolchak"
+		texturefile = "gfx/interface/leaders/RUS/Portrait_Leader_RUS_Alexander_Kolchak.png"
+	}
+}

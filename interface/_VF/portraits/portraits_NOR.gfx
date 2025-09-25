@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_NOR_Haakon_VII"
+		textureFile = "gfx/interface/leaders/NOR/portrait_leader_NOR_Haakon_VII.png"
+	}
+}

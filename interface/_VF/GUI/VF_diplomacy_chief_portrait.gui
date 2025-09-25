@@ -1,0 +1,99 @@
+guiTypes = {
+    
+    containerWindowType = {
+        name = "VF_president_diplomacy_portrait_button"
+        position = { x = 446 y = -45 }
+
+        iconType = {
+			name ="VF_president_portrait_button"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_VF_president_diplomacy_portrait_button"
+            pdx_tooltip = "VF_president_portrait_button_t"
+		}
+        
+    }
+
+    containerWindowType = {
+        name = "VF_monarch_diplomacy_portrait_button"
+        position = { x = 446 y = -45 }
+
+        iconType = {
+			name ="VF_monarch_portrait_button"
+			position = { x = 0 y = 0 }
+			spriteType = "GFX_VF_monarch_diplomacy_portrait_button"
+            pdx_tooltip = "VF_monarch_portrait_button_t"
+		}
+        
+    }
+
+    containerWindowType = {
+        name = "VF_GUI_diplomacy_portrait_Window"
+        position = { x = 544 y = -50 }
+        size = { width = 220 height = 320 }
+
+        background = {
+			name = "Background"
+			spriteType ="GFX_tiled_window_thin_border2"
+		}
+       
+    }
+    
+    containerWindowType = {
+        name = "VF_GUI_diplomacy_portrait"
+        position = { x = 568 y = -2 }
+
+        
+        iconType ={
+            name ="diplomacy_VF_GFX_portrait"
+            position = { x = 9 y = 10 }
+            spriteType = "GFX_VF_localization_portrait_blank"	
+            pdx_tooltip = "VF_chief_portrait_t"
+            pdx_tooltip_delayed = "VF_chief_portrait_tt"		
+        }
+        
+        iconType = {
+            name ="VF_GUI_diplomacy_portrait_button"
+            position = { x = 0 y = 0 }
+            spriteType = "GFX_pol_leader_frame"
+            alwaystransparent = yes
+        }
+
+        containerWindowType = {
+            name = "VF_GUi_Sovereign_portrait"
+            position = { x = 12 y = -27 }
+
+            iconType = {
+                name ="VF_Sovereign_"
+                position = { x = 0 y = -7 }
+                spriteType = "GFX_VF_button_148x34"
+                pdx_tooltip = "State_Positions_Right_t"
+                pdx_tooltip_delayed = "State_Positions_Right_tt"
+            }
+    
+            instantTextBoxType = {
+                name ="VF_Sovereign_text"
+                position = { x = 0 y = 0 }
+                font = "hoi_18mbs"
+                text = "State_Positions_Right"
+                maxWidth = 148
+                maxHeight = 20
+                alwaystransparent = yes
+                format = center
+                vertical_alignment = center
+            }
+        }
+
+        instantTextBoxType = {
+			name ="VF_chief_portrait_name_text"
+			position = { x = 12 y = 226 }
+			font = "hoi_18mbs"
+			text = "VF_chief_portrait"
+			maxWidth = 155
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+			pdx_tooltip = "VF_chief_portrait_t"
+			pdx_tooltip_delayed = "VF_chief_portrait_tt"
+		}
+    }
+}

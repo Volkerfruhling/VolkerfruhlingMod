@@ -1,0 +1,31 @@
+characters = {
+    LIT_Antanas_Smetona = {
+        name = LIT_Antanas_Smetona
+
+        portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_LIT_Antanas_Smetona"
+			}
+		}
+
+		country_leader = {
+			ideology = authoritarian_democracy
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+    }
+
+	LIT_Fridrijas_I = {
+		name = LIT_Fridrijas_I
+	}
+
+	LIT_kings = {
+		name = LIT_kings
+	}
+
+	LIT_prime_minister = {
+		name = LIT_prime_minister
+	}
+}

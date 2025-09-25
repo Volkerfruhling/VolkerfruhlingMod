@@ -1,5 +1,6 @@
-capital = 4
+capital = 2
 
+oob = "ITA_1925"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -85,10 +86,14 @@ set_convoys = 50
 set_stability = 0.50
 
 recruit_character = ITA_luigi_facta
+set_country_flag = VF_monarch_diplomacy_portrait_button_flag
+set_variable = { State_Positions_Right_Title = token:ITA_Pope }
+set_variable = { State_Positions_Left_Title = token:ITA_prime_minister }
+set_variable = { Chief_Portrait = token:ITA_Pius_XI }
 
 set_politics = {
 	ruling_party = liberalism
-	last_election = "1936.1.1"
+	last_election = "1923.7.18"
 	election_frequency = 48
 	elections_allowed = yes
 

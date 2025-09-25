@@ -1,0 +1,30 @@
+state={
+	id=1025
+	name="STATE_1025"
+	manpower = 10000
+	resources = {
+	}
+	
+	state_category = rural
+	
+	history={
+		owner = GRE
+		add_core_of = GRE
+		buildings = {
+			infrastructure = 2
+			air_base = 3
+		}
+	}
+	provinces={
+			3914
+			3980
+			841
+			9805
+			9837
+			9916
+		}
+
+	local_supplies=0.0 
+        
+
+}

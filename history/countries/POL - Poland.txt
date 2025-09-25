@@ -1,5 +1,6 @@
-capital = 797
+capital = 10
 
+oob = "POL_1925"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -82,7 +83,8 @@ if = {
 
 set_research_slots = 3
 set_convoys = 50
-set_stability = 0.75
+set_stability = 0.4
+set_war_support = 0.78
 
 1939.1.1 = {
 
@@ -147,15 +149,37 @@ set_stability = 0.75
 }
 
 set_politics = {
-	ruling_party = liberalism
-	last_election = "1936.1.1"
+	ruling_party = conservatism 
+	last_election = "1924.8.15"
 	election_frequency = 48
 	elections_allowed = yes
-
 }
 set_popularities = {
-	liberalism = 100 
+	communism = 5
+	socialism = 10
+	liberalism =  20
+	conservatism = 45
+	despotism = 5
+	totalitarianism = 10
+	ultra_nationalism = 5
 }
 
+recruit_character = POL_abdulmecid_ii
+set_country_flag = VF_monarch_diplomacy_portrait_button_flag
+set_variable = { State_Positions_Right_Title = token:POL_kings }
+set_variable = { State_Positions_Left_Title = token:POL_prime_minister }
+set_variable = { Chief_Portrait = token:POL_Adam_Ludwik_Czartoryski }
+
+
 add_ideas = {
+	Parliamentary_democracy
+	Incomplete_constitution
+	Universal_suffrage
+	State_religion
+	Compulsory_primary_education
+	Emerging_countries
+	Vulnerable_Near_Poor
+	Limited_assistance_missions
+	Semi_modern_armies
+	limited_conscription
 }

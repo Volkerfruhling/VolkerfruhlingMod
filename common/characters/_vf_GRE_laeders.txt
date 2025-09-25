@@ -1,0 +1,18 @@
+characters = {
+    GRE_Georgios_II = {
+        name = GRE_Georgios_II
+        portraits = {
+            civilian = {
+                large = "GFX_Portrait_Leader_GRE_Georgios_II"
+            }
+        }
+
+        country_leader = {
+			ideology = social_liberalism
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+    }
+}

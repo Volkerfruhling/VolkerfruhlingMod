@@ -18,4 +18,16 @@ characters = {
 			}
 		}
 	}
+
+	ENG_kings = {
+		name = ENG_kings
+	}
+
+	ENG_prime_minister = {
+		name = ENG_prime_minister
+	}
+
+    ENG_George_V = {
+		name = ENG_George_V 
+	}
 }

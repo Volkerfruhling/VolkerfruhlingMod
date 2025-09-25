@@ -23,9 +23,12 @@
  INS_DEF: "インドネシア"
  INS_ADJ: "インドネシア"
 
- JAP: "日本"
- JAP_DEF: "日本"
+ JAP: "日本国"
+ JAP_DEF: "日本国"
  JAP_ADJ: "日本"
+ JAP_Empire_of_Japan: "大日本帝国"
+ JAP_Empire_of_Japan_DEF: "大日本帝国"
+ JAP_Empire_of_Japan_ADJ: "日本"
 
  KON: "コンバウン"
  KON_DEF: "コンバウン"
@@ -34,6 +37,9 @@
  KOR: "朝鮮"
  KOR_DEF: "朝鮮"
  KOR_ADJ: "朝鮮"
+ KOR_Great_Joseon_Kingdom: "大朝鮮国"
+ KOR_Great_Joseon_Kingdom_DEF: "大朝鮮国"
+ KOR_Great_Joseon_Kingdom_ADJ: "朝鮮"
 
  LUA: "ルアンパバーン"
  LUA_DEF: "ルアンパバーン"

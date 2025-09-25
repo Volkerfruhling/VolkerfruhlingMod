@@ -1,0 +1,12 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_ENG_david_lloyd_george"
+		texturefile = "gfx/interface/leaders/ENG/portrait_leader_ENG_david_lloyd_george.png"
+	}
+
+	spriteType = {
+		name = "GFX_CP_ENG_George_V"
+		texturefile = "gfx/interface/leaders/ENG/portrait_leader_ENG_George_V.png"
+		legacy_lazy_load = no
+	}
+}

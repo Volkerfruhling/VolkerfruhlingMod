@@ -1,0 +1,34 @@
+characters = {
+    HUN_Paternalistic_Conservatism = {
+        name = HUN_Paternalistic_Conservatism
+        portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_HUN_Paternalistic_Conservatism"
+			}
+		}
+
+        country_leader = {
+			ideology = paternalistic_conservatism
+			expire = "1936.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+
+    }
+
+	HUN_Oskar_I = {
+		name = HUN_Oskar_I
+	}
+
+	HUN_kings = {
+		name = HUN_kings
+	}
+
+	HUN_prime_minister = {
+		name = HUN_prime_minister
+	}
+	
+}

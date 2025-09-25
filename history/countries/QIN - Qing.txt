@@ -1,5 +1,6 @@
 capital = 797
 
+oob = "standard_templates"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -147,15 +148,29 @@ set_stability = 0.75
 }
 
 set_politics = {
-	ruling_party = liberalism
+	ruling_party = conservatism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 
 }
 set_popularities = {
-	liberalism = 100 
+	communism = 2
+	socialism = 3
+	liberalism = 5
+	conservatism = 40
+	despotism = 20
+	totalitarianism = 20
+	ultra_nationalism = 10
 }
+
+recruit_character = QIN_aisin_gioro_dzai_fung
+
+set_country_flag = VF_monarch_diplomacy_portrait_button_flag
+set_variable = { State_Positions_Right_Title = token:QIN_emperor }
+set_variable = { State_Positions_Left_Title = token:QIN_prime_minister }
+set_variable = { Chief_Portrait = token:QIN_Aisin_Gioro_Puyi }
+
 
 add_ideas = {
 }

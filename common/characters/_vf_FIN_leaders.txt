@@ -1,0 +1,48 @@
+characters = {
+	FIN_nicholas_ii = {
+		name = FIN_nicholas_ii
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_RUS_nicholas_ii"
+			}
+		}
+		
+		country_leader = {
+			ideology = royal_autocracy
+			expire = "1936.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+	}
+
+	FIN_Dmitry_Pavlovich = {
+		name = FIN_Dmitry_Pavlovich
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_FIN_Dmitry_Pavlovich"
+			}
+		}
+		
+		country_leader = {
+			ideology = royal_autocracy
+			expire = "1964.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+	}
+
+	FIN_governor = {
+		name = FIN_governor
+	}
+
+	FIN_great_grandfather = {
+		name = FIN_great_grandfather
+	}
+
+}

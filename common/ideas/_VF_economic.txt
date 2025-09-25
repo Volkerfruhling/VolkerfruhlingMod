@@ -4,6 +4,44 @@ ideas = {
 		law = yes
 		use_list_view = yes
 
+		undisturbed_isolation = {
+
+
+			allowed = {
+				original_tag = USA
+			}
+
+			available = {
+				always = no
+			}
+			
+			removal_cost = -1
+			level = 0
+
+			modifier = {
+				consumer_goods_expected_value = 0.50
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.5
+				production_speed_dockyard_factor = -0.5
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 0.20
+				lend_lease_tension = 0.50
+				send_volunteers_tension = 0.20
+				guarantee_tension = 0.75
+				max_fuel_factor = -0.45
+				fuel_gain_factor = -0.6
+				agency_upgrade_time = 1.0
+			}
+
+			allowed_to_remove = {
+				always = no
+			}
+
+			cancel_if_invalid = no
+		}
+
 
 		civilian_economy = {
 
@@ -239,11 +277,6 @@ ideas = {
 		}
 
         #エラー対策
-        undisturbed_isolation = {
-            allowed = {
-				always = no
-			}
-        }
 
         isolation = {
             allowed = {
@@ -346,6 +379,16 @@ ideas = {
 				civilian_intel_to_others = 40.0
 				navy_intel_to_others = 20.0
 				cic_construction_boost_factor = 0.05
+			}
+
+			allowed_to_remove = {
+				IF = {
+					limit = {
+						has_idea = undisturbed_isolation
+					}
+
+					always = no
+				}
 			}
 
 			cancel_if_invalid = no

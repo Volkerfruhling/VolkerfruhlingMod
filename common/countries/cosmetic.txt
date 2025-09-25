@@ -4,7 +4,11 @@ FIN_RUS_grand_duchy_of_finland = {
     color_ui = rgb{ 32 95 73 }
 }
 #リトアニア王国/LIT_kingdom_of_lithuania
-LIT_GER_kingdom_of_lithuania = {
-    color = rgb{ 148 142 127 }
-    color_ui = rgb{ 148 142 127 }
+#LIT_GER_kingdom_of_lithuania = {
+#    color = rgb{ 148 142 127 }
+#    color_ui = rgb{ 148 142 127 }
+#}
+HUN_soviet = {
+    color = rgb{ 173 0 0 }
+    color_ui = rgb{ 173 0 0 }
 }

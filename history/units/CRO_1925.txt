@@ -1,0 +1,56 @@
+division_template = {
+    name = "Infantry Division"
+
+    regiments = {
+        Infantry = { x = 0 y = 0 }
+        Infantry = { x = 0 y = 1 }
+        Infantry = { x = 0 y = 2 }
+        Infantry = { x = 1 y = 0 }
+        Infantry = { x = 1 y = 1 }
+        Infantry = { x = 1 y = 2 }
+    }
+
+    priority = 1
+}
+
+units = {
+    division ={
+        name = "Infantry Division"
+        location = 11899
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+    
+    division ={
+        name = "Infantry Division"
+        location = 11899
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 6983
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 624
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 3943
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 1
+    }
+}

@@ -1,0 +1,30 @@
+characters = {
+	SER_dimitrije_ljotić = {
+		name = SER_dimitrije_ljotic
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_Leader_SER_dimitrije_ljotić
+			}
+		}
+		country_leader = {
+			ideology = caesarism
+			expire = "1945.1.1"
+			id = -1
+		}
+	}
+	TEST = {
+		name = ITA_gabriele_dannunzio
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_ITA_Gabriele_Dannunzio"
+			}
+		}
+		country_leader = {
+			ideology = communism_ideology
+			expire = "1936.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
+}

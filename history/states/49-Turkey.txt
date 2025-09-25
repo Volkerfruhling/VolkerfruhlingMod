@@ -14,7 +14,7 @@ state={
 		owner = OTT
 		add_core_of = OTT
 		victory_points = {
-			11747 15
+			11747 20
 		}
 		victory_points = {
 			804 5 

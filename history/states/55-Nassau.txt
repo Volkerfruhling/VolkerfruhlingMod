@@ -1,9 +1,9 @@
-state = {
-	id = 55
-	name = "STATE_55"
-	manpower = 3798235
-
-	state_category = large_city
+state={
+	id=55
+	name="STATE_55"
+	provinces={
+		564 3397 3524 6444 6488 6549 9486 9524 9547 11445 11533 
+	}
 
 	history = {
 		owner = GER
@@ -32,9 +32,6 @@ state = {
 			6444 2 # Wiesbaden
 		}
 
-		victory_points = {
-			11560 2 # Mainz
-		}
 
 		1939.1.1 = {
 			buildings = {
@@ -45,12 +42,8 @@ state = {
 			}
 		}
 	}
-
-	provinces = {
-		564 589 3397 3524 3574 6444 6488 6549 9486 9524 9547 11445 11533 11560 
-	}
-
-	local_supplies = 15.0 
-        
-
+	manpower=2998235
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=15.000
 }

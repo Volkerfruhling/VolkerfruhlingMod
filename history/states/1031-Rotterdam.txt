@@ -1,0 +1,32 @@
+state={
+	id=1031
+	name="STATE_1031"
+	provinces={
+		9498 
+	}
+	history = {
+		owner = NET
+		add_core_of = NET
+
+        victory_points = {
+			9498 20 
+		}
+
+        buildings = {
+			infrastructure = 4
+            industrial_complex = 1
+
+            9498 = {
+			naval_base = 10
+		    }
+            
+		}
+		
+	}
+	manpower=563300
+	buildings_max_level_factor=1.000
+	state_category=large_city 
+	local_supplies=0.000
+        
+
+}

@@ -1,0 +1,6 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_Portrait_Leader_ARG_Marcelo_T_Alvear"
+        texturefile = "gfx/interface/leaders/ARG/portrait_leader_ARG_Marcelo_T_Alvear.png"
+    }
+}

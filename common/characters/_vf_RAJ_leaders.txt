@@ -1,0 +1,17 @@
+characters = {
+	RAJ_Rufus_Isaacs = {
+		name = RAJ_Rufus_Isaacs
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_RAJ_Rufus_Isaacs"
+			}
+		}
+		country_leader = {
+			ideology = colonial_government
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
+}

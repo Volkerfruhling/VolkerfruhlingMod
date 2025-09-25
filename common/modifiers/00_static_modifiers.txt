@@ -311,7 +311,10 @@ free_license = {
 ITA_military_agreements = {
 	valid_relation_trigger = {
 		FROM = {
-			is_in_faction_with = ROOT
+			OR = {
+				is_in_faction_with = ROOT
+				has_government = ROOT
+			}
 		}
 	}
 	license_purchase_cost = 0 #base cost reduction
@@ -613,28 +616,36 @@ operative_nationality_operation = {
 
 FRA_host_the_german_exiles = {
 	valid_relation_trigger = {
-		always = no
+		ROOT = {
+			has_government = communism
+		}
 	}
 	compliance_gain = 0.25
 }
 
 FRA_reorganized_departments = {
 	valid_relation_trigger = {
-		always = no
+		ROOT = {
+			has_government = neutrality
+		}
 	}
 	compliance_gain = 0.25
 }
 
 GER_rescued_mussolini = {
 	valid_relation_trigger = {
-		always = no
+		ROOT = {
+			has_government = fascism
+		}
 	}
 	compliance_gain = 0.5
 }
 
 FRA_carry_the_revolution_south = {
 	valid_relation_trigger = {
-		always = no
+		ROOT = {
+			has_government = communism
+		}
 	}
 	compliance_gain = 0.4
 }

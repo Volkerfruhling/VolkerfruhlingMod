@@ -1,0 +1,15 @@
+spriteTypes = {
+	spriteType = {
+		name = GFX_goal_focus_SER_eco_continue_postwar_reconstruction
+		textureFile = "gfx/interface/goals/SER/goal_focus_SER_eco_continue_postwar_reconstruction.png"
+	}
+	spriteType = {
+		name = GFX_goal_focus_SER_pol_pressure_montenegro
+		textureFile = "gfx/interface/goals/SER/goal_focus_SER_pol_pressure_montenegro.dds"
+	}
+
+	spriteType = {
+		name = GFX_goal_focus_SER_pol_zbor_discipline
+		textureFile = "gfx/interface/goals/SER/goal_focus_SER_pol_zbor_discipline.dds"
+	}
+}

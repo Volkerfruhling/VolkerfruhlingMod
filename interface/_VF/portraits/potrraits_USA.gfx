@@ -1,0 +1,11 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_Portrait_Leader_USA_Calvin_Coolidge"
+        texturefile = "gfx/interface/leaders/USA/portrait_leader_USA_Calvin_Coolidge.png"
+    }
+
+    spriteType = {
+        name = "GFX_CP_USA_Charles_Gates_Dawes"
+        texturefile = "gfx/interface/leaders/USA/portrait_leader_USA_Charles_Gates_Dawes.png"
+    }
+}

@@ -1,5 +1,6 @@
-capital = 797
+capital = 391
 
+oob = "NET_1925"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -82,7 +83,7 @@ if = {
 
 set_research_slots = 3
 set_convoys = 50
-set_stability = 0.75
+set_stability = 0.4
 
 1939.1.1 = {
 
@@ -147,15 +148,34 @@ set_stability = 0.75
 }
 
 set_politics = {
-	ruling_party = liberalism
-	last_election = "1936.1.1"
+	ruling_party = conservatism 
+	last_election = "1921.7.1"
 	election_frequency = 48
 	elections_allowed = yes
-
 }
 set_popularities = {
-	liberalism = 100 
+	communism = 5
+	socialism = 25
+	liberalism =  15
+	conservatism = 35
+	despotism = 15
+	totalitarianism = 3
+	ultra_nationalism = 2 
 }
 
+recruit_character = NET_Wilhelmina
+
 add_ideas = {
+	Parliamentary_democracy
+	Strictly_defined_constitution
+	Universal_suffrage
+	State_religion
+	Women_s_suffrage
+	Racial_discrimination
+	10_hour_workday
+	Emerging_countries
+	Food_insecure
+	Extensive_assistance_missions
+	Semi_modern_armies
+    limited_conscription
 }

@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_IST_Istrian_Stewardship_Committee"
+		texturefile = "gfx/interface/leaders/IST/portrait_leader_IST_Istrian_Stewardship_Committee.png"
+	}
+}

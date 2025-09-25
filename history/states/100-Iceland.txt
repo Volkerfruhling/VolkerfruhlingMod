@@ -8,8 +8,8 @@ state = {
 	
 	history = {
 
-		owner = DEN
-		add_core_of = DEN
+		owner = ISL
+		add_core_of = ISL
 		victory_points = { 12674 1 }
 		buildings = {
 			infrastructure = 1

@@ -1,0 +1,34 @@
+characters = {
+	ARG_Marcelo_T_Alvear = {
+		name = ARG_Marcelo_T_Alvear
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_ARG_Marcelo_T_Alvear"
+			}
+		}
+
+        country_leader = {
+			ideology = socialdemocratism
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+
+        country_leader = {
+			ideology = social_liberalism
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+
+		country_leader = {
+			ideology = conservatism_ideology
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
+}

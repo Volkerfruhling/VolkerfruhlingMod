@@ -1,5 +1,108 @@
 ideologies = {
 
+	communism = {
+		types = {
+			communism_ideology = {
+			}
+			collective_communism = {}
+			left_wing_communism = {}
+			military_communism = {}
+		}
+		
+		dynamic_faction_names = {
+			"FACTION_NAME_COMMUNIST_1"
+			"FACTION_NAME_COMMUNIST_2"
+			"FACTION_NAME_COMMUNIST_3"
+			"FACTION_NAME_COMMUNIST_4"
+			"FACTION_NAME_COMMUNIST_5"
+		}
+		
+		color = { 170 0 0 }
+		
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+		}
+		
+		can_collaborate = yes
+		
+		modifiers = {
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 15.0
+			navy_intel_to_others = 10.0
+			airforce_intel_to_others = 10.0
+			embargo_cost_factor = 0.75
+			lend_lease_tension = 0.75
+		}
+		
+		war_impact_on_world_tension = 0.8
+		faction_impact_on_world_tension = 0.5
+		
+		ai_communist = yes
+		ai_ideology_wanted_units_factor = 1.25
+		
+		faction_modifiers = {
+			faction_trade_opinion_factor = 0.40
+		}
+	}
+
+	socialism = {
+
+		types = {
+
+			socialism_ideology = {
+			}
+			socialdemocratism = {}
+			democratic_socialism = {}
+			social_populism = {}
+			religious_socialism = {}
+			revolutionary_front = {}
+			sandicalism = {}
+			left_wing_nationalism = {}
+			social_nationalism = {}
+			anarcho_communism = {}
+		}
+
+		dynamic_faction_names = {
+			"FACTION_NAME_COMMUNIST_1"
+			"FACTION_NAME_COMMUNIST_2"
+			"FACTION_NAME_COMMUNIST_3"
+			"FACTION_NAME_COMMUNIST_4"
+			"FACTION_NAME_COMMUNIST_5"
+		}
+
+		color = { 255 0 130 }
+
+		rules = {
+			can_force_government = yes
+			can_send_volunteers = yes
+			can_puppet = yes
+		}
+
+		can_collaborate = yes
+
+		modifiers = {
+			civilian_intel_to_others = 15.0
+			army_intel_to_others = 10.0
+			navy_intel_to_others = 10.0
+			airforce_intel_to_others = 10.0
+			embargo_cost_factor = 1
+			lend_lease_tension = 0.50
+		}
+
+		ai_communist = yes # uses the commie AI behaviour
+		ai_ideology_wanted_units_factor = 1.20
+
+		war_impact_on_world_tension = 0.75
+		faction_impact_on_world_tension = 0.5
+
+		faction_modifiers = {
+
+		}
+
+	}
+
 	liberalism = {
 
 		types = {
@@ -21,7 +124,7 @@ ideologies = {
 			"FACTION_NAME_DEMOCRATIC_6"
 		}
 
-		color = { 0 0 128 }
+		color = { 255 205 0 }
 
 		rules = {
 			can_force_government = yes
@@ -72,7 +175,7 @@ ideologies = {
 			"FACTION_NAME_DEMOCRATIC_6"
 		}
 
-		color = { 0 128 128 }
+		color = { 0 100 155 }
 
 		rules = {
 			can_force_government = yes
@@ -101,114 +204,11 @@ ideologies = {
 		ai_ideology_wanted_units_factor = 1.10 # multiplies threat impact on number of desired units by this value, defaults to 1.0. If at war, the larger of this value and NDefines::NAI::WANTED_UNITS_WAR_THREAT_FACTOR will be used instead
 	}
 
-
-	socialism = {
-
-		types = {
-
-			socialism_ideology = {
-			}
-			socialdemocratism = {}
-			democratic_socialism = {}
-			social_populism = {}
-			religious_socialism = {}
-			revolutionary_front = {}
-			sandicalism = {}
-			left_wing_nationalism = {}
-			social_nationalism = {}
-			anarcho_communism = {}
-		}
-
-		dynamic_faction_names = {
-			"FACTION_NAME_COMMUNIST_1"
-			"FACTION_NAME_COMMUNIST_2"
-			"FACTION_NAME_COMMUNIST_3"
-			"FACTION_NAME_COMMUNIST_4"
-			"FACTION_NAME_COMMUNIST_5"
-		}
-
-		color = { 128 0 0 }
-
-		rules = {
-			can_force_government = yes
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-
-		can_collaborate = yes
-
-		modifiers = {
-			civilian_intel_to_others = 15.0
-			army_intel_to_others = 10.0
-			navy_intel_to_others = 10.0
-			airforce_intel_to_others = 10.0
-			embargo_cost_factor = 1
-			lend_lease_tension = 0.50
-		}
-
-		ai_communist = yes # uses the commie AI behaviour
-		ai_ideology_wanted_units_factor = 1.20
-
-		war_impact_on_world_tension = 0.75
-		faction_impact_on_world_tension = 0.5
-
-		faction_modifiers = {
-
-		}
-
-	}
-
-	communism = {
-		types = {
-			communism_ideology = {
-			}
-			collective_communism = {}
-			left_wing_communism = {}
-			military_communism = {}
-		}
-		
-		dynamic_faction_names = {
-			"FACTION_NAME_COMMUNIST_1"
-			"FACTION_NAME_COMMUNIST_2"
-			"FACTION_NAME_COMMUNIST_3"
-			"FACTION_NAME_COMMUNIST_4"
-			"FACTION_NAME_COMMUNIST_5"
-		}
-		
-		color = { 204 0 0 }  # 明るい赤（社会主義より鮮やか）
-		
-		rules = {
-			can_force_government = yes
-			can_send_volunteers = yes
-			can_puppet = yes
-		}
-		
-		can_collaborate = yes
-		
-		modifiers = {
-			civilian_intel_to_others = 20.0
-			army_intel_to_others = 15.0
-			navy_intel_to_others = 10.0
-			airforce_intel_to_others = 10.0
-			embargo_cost_factor = 0.75
-			lend_lease_tension = 0.75
-		}
-		
-		war_impact_on_world_tension = 0.8
-		faction_impact_on_world_tension = 0.5
-		
-		ai_communist = yes
-		ai_ideology_wanted_units_factor = 1.25
-		
-		faction_modifiers = {
-			faction_trade_opinion_factor = 0.40
-		}
-	}
-
 	despotism = {
 		types = {
 			despotism_ideology = {
 			}
+			authoritarian_democracy = {}
 			military_regime = {}
 			civilian_dictatorship = {}
 			aristocratic_reactionism = {}
@@ -229,7 +229,7 @@ ideologies = {
 			"FACTION_NAME_DESPOTIC_4"
 		}
 		
-		color = { 77 26 94 }  # 深い紫
+		color = { 132 33 118 } #105 26 94
 		
 		rules = {
 			can_force_government = yes
@@ -275,7 +275,7 @@ ideologies = {
 			"FACTION_NAME_TOTALIST_4"
 		}
 		
-		color = { 153 0 0 }  # 深い赤
+		color = { 48 48 48 } 
 		
 		rules = {
 			can_force_government = yes
@@ -318,7 +318,7 @@ ideologies = {
 			"FACTION_NAME_ULTRANATION_4"
 		}
 		
-		color = { 89 0 0 }  # 暗い赤
+		color = { 8 85 0 }  
 		
 		rules = {
 			can_force_government = yes

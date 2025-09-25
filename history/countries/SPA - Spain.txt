@@ -1,5 +1,6 @@
-capital = 797
+capital = 41
 
+oob = "SPA_1925"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -82,7 +83,7 @@ if = {
 
 set_research_slots = 3
 set_convoys = 50
-set_stability = 0.75
+set_stability = 0.4
 
 1939.1.1 = {
 
@@ -148,14 +149,34 @@ set_stability = 0.75
 
 set_politics = {
 	ruling_party = liberalism
-	last_election = "1936.1.1"
+	last_election = "1923.5.13"
 	election_frequency = 48
 	elections_allowed = yes
-
 }
 set_popularities = {
-	liberalism = 100 
+	communism = 5
+	socialism = 10
+	liberalism =  30
+	conservatism = 25
+	despotism = 15
+	totalitarianism = 10
+	ultra_nationalism = 5
 }
 
+recruit_character = SPA_Manuel_Garcia_Prieto
+set_country_flag = VF_monarch_diplomacy_portrait_button_flag
+set_variable = { State_Positions_Right_Title = token:SPA_King }
+set_variable = { State_Positions_Left_Title = token:SPA_prime_minister }
+set_variable = { Chief_Portrait = token:SPA_Alfonso_XIII }
+
 add_ideas = {
+	Parliamentary_democracy
+	Incomplete_constitution
+	Universal_suffrage
+	State_religion
+	Racial_discrimination
+	Compulsory_primary_education
+	Emerging_countries
+	Vulnerable_Near_Poor
+	Semi_modern_armies
 }

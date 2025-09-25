@@ -9,6 +9,7 @@ state={
 	history={
 		owner = QIN
 		add_core_of = QIN
+		add_claim_by = JAP
 		buildings = {
 			infrastructure = 2
 			air_base = 3

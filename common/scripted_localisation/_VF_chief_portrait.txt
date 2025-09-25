@@ -1,0 +1,17 @@
+defined_text = {
+    name = VfChiefPortrait
+
+    text = { 
+        localization_key = "[?Chief_Portrait.GetTokenKey]_desc"
+    }
+
+}
+
+defined_text = {
+    name = VfSovereignText
+
+    text = { 
+        localization_key = "[?State_Positions_Right_Title.GetTokenKey]_desc"
+    }
+
+}

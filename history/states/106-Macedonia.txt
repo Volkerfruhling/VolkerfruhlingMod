@@ -9,9 +9,11 @@ state = {
 	history = {
 		owner = BUL
 		add_core_of = BUL
+		add_claim_by = SER
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
+			arms_factory = 2
 			air_base = 2
 
 		}

@@ -1,0 +1,29 @@
+characters = {
+	POL_abdulmecid_ii = {
+		name = POL_Ignace_Paderewski
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_POL_Ignace_Paderewski"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
+
+    POL_Adam_Ludwik_Czartoryski = {
+        name = POL_Adam_Ludwik_Czartoryski
+    }
+
+    POL_kings = {
+        name = POL_kings
+    }
+
+    POL_prime_minister = {
+        name = POL_prime_minister
+    }
+}

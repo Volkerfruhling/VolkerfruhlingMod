@@ -1,0 +1,57 @@
+guiTypes = {
+
+    containerWindowType = {
+        name = "VF_GUi_portrait_container"
+        position = { x = -5 y = 30 }
+
+		iconType ={
+			name ="VF_GFX_portrait"
+			position = { x = 193 y = 57 }
+			pdx_tooltip = "VF_chief_portrait_t"
+			pdx_tooltip_delayed = "VF_chief_portrait_tt"		
+		}
+		
+		iconType ={
+			name ="dual_leader_bg"
+			spriteType = "GFX_pol_leader_frame"
+			position = { x = 185 y = 44 }
+			alwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "State_Positions_leader_name"
+			position = { x = 26 y = 15 }
+			font = "hoi_18mbs"
+			text = "State_Positions_Left"
+			maxWidth = 155
+			maxHeight = 36
+			format = center
+			vertical_alignment = center
+		}
+
+		instantTextboxType = {
+			name = "State_Positions_chief_portrait_name"
+			position = { x = 193 y = 15 }
+			font = "hoi_18mbs"
+			text = "State_Positions_Right"
+			maxWidth = 155
+			maxHeight = 36
+			format = center
+			vertical_alignment = center
+		}
+
+		instantTextBoxType = {
+			name ="VF_chief_portrait_name_text"
+			position = { x = 193 y = 270 }
+			font = "hoi_18mbs"
+			text = "VF_chief_portrait"
+			maxWidth = 155
+			maxHeight = 20
+			format = center
+			vertical_alignment = center
+			pdx_tooltip = "VF_chief_portrait_t"
+			pdx_tooltip_delayed = "VF_chief_portrait_tt"
+		}
+		
+    }
+}

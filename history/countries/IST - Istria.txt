@@ -1,5 +1,6 @@
-capital = 797
+capital = 736
 
+oob = "standard_templates"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -82,7 +83,7 @@ if = {
 
 set_research_slots = 3
 set_convoys = 50
-set_stability = 0.75
+set_stability = 0.40
 
 1939.1.1 = {
 
@@ -146,16 +147,68 @@ set_stability = 0.75
 	}
 }
 
+#外交
+
+GER = {
+	diplomatic_relation = {
+        country = IST
+        relation = guarantee
+        active = yes
+    }
+
+	diplomatic_relation = {
+        country = IST
+        relation = military_access
+        active = yes
+    }
+}
+
+ITA = {
+	diplomatic_relation = {
+        country = IST
+        relation = guarantee
+        active = yes
+    }
+
+	diplomatic_relation = {
+        country = IST
+        relation = military_access
+        active = yes
+    }
+}
+
 set_politics = {
-	ruling_party = liberalism
-	last_election = "1936.1.1"
+	ruling_party = despotism
+	last_election = "1924.9.1"
 	election_frequency = 48
-	elections_allowed = yes
+	elections_allowed = no
 
 }
 set_popularities = {
-	liberalism = 100 
+	communism = 3
+	socialism = 10
+	liberalism = 15
+	conservatism = 15
+	despotism = 50
+	totalitarianism = 5
+	ultra_nationalism = 2
 }
 
+recruit_character = IST_Istrian_Stewardship_Committee
+
 add_ideas = {
+	International_Administrative_Region
+	Government_of_the_International_Control_Area
+	Limited_elections
+	Separation_of_church_and_state
+	Paternalistic_society
+	Neutral_stance
+	Privatized_education
+	Developing_countries
+	Food_insecure
+	Prohibited_military_service
+	Total_draft_exemption
+	No_training
+	Early_20th_century_armies
+	disarmed_nation
 }

@@ -1,0 +1,131 @@
+ideas = {
+	country = {
+		### 初期国民精神 ###
+		# 莫大な賠償金
+		idea_SER_huge_compensation = {
+			picture = generic_economic_crisis
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.33
+				production_speed_buildings_factor = -0.33
+			}
+		}
+		# リョティッチの独裁
+		idea_SER_ljotic_dictatorship = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.3
+				stability_factor = 0.1
+			}
+		}
+		# 屈辱的な敗北
+		idea_SER_humiliating_defeat = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+			}
+		}
+
+	}
+	country = {
+		## NFにより付与 ##
+		# 反体制派のあぶり出し
+		idea_SER_pol_expose_dissenters = { 
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.03
+				stability_factor = -0.02
+			}
+		}
+		idea_SER_pol_zbor_youth_movement = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				conscription_factor = 0.10
+			}
+		}
+		# 軍産複合体からの強制調達
+		idea_SER_eco_forced_acquisition_from_military_complex = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.10
+				military_factory_donations = 4
+				conscription_factor = 0.20
+			}
+		}
+		# 軍の再編
+		idea_SER_mil_reorg_armies = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				experience_gain_army = 0.33
+				training_time_army_factor = -0.33
+			}
+		}
+		idea_balkan_war = { # バルカン戦争用バフ
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org = 20
+				ai_focus_aggressive_factor = 1.00
+			}
+			targeted_modifier = {
+				tag = BUL
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+			targeted_modifier = {
+				tag = HUN
+				attack_bonus_against = 0.45
+				defense_bonus_against = 0.45
+			}
+		}
+	}
+}

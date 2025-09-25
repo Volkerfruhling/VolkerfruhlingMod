@@ -1,0 +1,34 @@
+characters = {
+    USA_Calvin_Coolidge = {
+        name = USA_Calvin_Coolidge 
+        portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_USA_Calvin_Coolidge"
+			}
+		}
+
+        country_leader = {
+			ideology = liberal_conservatism
+			expire = "1936.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+
+    }
+
+	USA_Charles_Gates_Dawes = {
+		name = USA_Charles_Gates_Dawes
+	}
+
+	USA_president = {
+		name = USA_president
+	}
+
+	USA_vice_president = {
+		name = USA_vice_president
+	}
+	
+}

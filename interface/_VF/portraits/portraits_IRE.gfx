@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_IRE_William_Thomas_Cosgrave"
+		textureFile = "gfx/interface/leaders/IRE/portrait_leader_IRE_William_Thomas_Cosgrave.png"
+	}
+}

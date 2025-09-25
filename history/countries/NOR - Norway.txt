@@ -1,5 +1,6 @@
 capital = 797
 
+oob = "NOR_1925"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -82,7 +83,7 @@ if = {
 
 set_research_slots = 3
 set_convoys = 50
-set_stability = 0.75
+set_stability = 0.35
 
 1939.1.1 = {
 
@@ -148,14 +149,35 @@ set_stability = 0.75
 
 set_politics = {
 	ruling_party = liberalism
-	last_election = "1936.1.1"
-	election_frequency = 48
+	last_election = "1924.9.13"
+	election_frequency = 36
 	elections_allowed = yes
 
 }
 set_popularities = {
-	liberalism = 100 
+	communism = 3
+	socialism = 15
+	liberalism =  30
+	conservatism = 35
+	despotism = 10
+	totalitarianism = 5
+	ultra_nationalism = 2
 }
 
+recruit_character = NOR_Haakon_VII
+
 add_ideas = {
+	Parliamentary_democracy
+    Strictly_defined_constitution
+    Universal_suffrage
+    Paternalistic_society
+    Neutral_stance
+    Compulsory_first_semester_secondary_education
+    8_hour_workday
+    Emerging_countries
+    Stable_employment
+    Prohibited_military_service
+    Religious_draft_exemption
+    Semi_modern_armies
+    Basic_military_training
 }
