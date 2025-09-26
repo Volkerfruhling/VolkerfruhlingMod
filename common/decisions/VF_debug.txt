@@ -11,18 +11,30 @@ VF_debug = {
         }
 
         complete_effect = {
-            diplomatic_relation = {
-                country = IST
-                relation = guarantee
-                active = yes
-            }
-            
-	        diplomatic_relation = {
-                country = IST
-                relation = military_access
-                active = yes
+            add_ideas = {
+                Absolute_poor
             }
         }
+    }
+
+    VF_debug_demo_totalitarianism = {
+
+        available = {
+            is_debug = yes
+        }
+
+        visible = {
+            is_debug = yes
+        }
+
+        complete_effect = {
+            set_politics = {
+	            ruling_party = ultra_nationalism
+            }
+
+            set_country_leader_ideology = supermilitarism
+        }
+
     }
     
 } 

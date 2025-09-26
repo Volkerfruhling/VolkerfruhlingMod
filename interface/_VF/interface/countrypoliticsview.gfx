@@ -534,6 +534,21 @@ spriteTypes = {
 		name = "GFX_ideology_communism_group"
 		texturefile = "gfx/interface/ideologies/communism_group.png"
 	}
+
+	spriteType = {
+		name = "GFX_ideology_personality_cult_socialism"
+		texturefile = "gfx/interface/ideologies/totalitarianism/personality_cult_socialism.png"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_caesarism"
+		texturefile = "gfx/interface/ideologies/totalitarianism/caesarism.png"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_national_bolshevism"
+		texturefile = "gfx/interface/ideologies/totalitarianism/national_bolshevism.png"
+	}
 	
 	# spriteType = {
 	# 	name = "GFX_ideology_fascism_group"
