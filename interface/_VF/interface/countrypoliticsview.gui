@@ -415,7 +415,7 @@ guiTypes = {
 			containerWindowType = { #国民精神
 				name = "national_spirit_container"
 				position = { x = -70 y = 256 }
-				size = { width = 324 height = 74 }
+				size = { width = 604 height = 74 }
 				verticalScrollbar = "right_vertical_slider"
 				
 				background = {
@@ -524,7 +524,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "manage_occupied_button"
-			position = { x = 355 y = 426 }
+			position = { x = 565 y = 305 }
 			quadTextureSprite = "GFX_government_button_occupied_territories"
 			buttonFont = "hoi_16mbs"
 			Orientation = "UPPER_LEFT"
@@ -536,7 +536,7 @@ guiTypes = {
 
 			buttonType = {
 				name = "show_subjects_button"
-				position = { x = 68 y = -4}
+				position = { x = 197 y = -48 }
 				quadTextureSprite = "GFX_government_button_manage_subjects"
 				buttonFont = "hoi_16mbs"
 				Orientation = "UPPER_RIGHT"
@@ -556,7 +556,7 @@ guiTypes = {
 		
 		buttonType = {
 			name = "show_exiles_collaborations_button"
-			position = { x = 395 y = 426 }
+			position = { x = 565 y = 343 }
 			quadTextureSprite = "GFX_government_button_exiled_governments"
 			buttonFont = "hoi_16mbs"
 			Orientation = "UPPER_LEFT"
