@@ -185,4 +185,24 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/_laws/VF_No_labor_law.png"
 	}
 
+	spriteType = {
+		name = "GFX_idea_Unconditional_combat_missions"
+		texturefile = "gfx/interface/ideas/_laws/VF_Unconditional_combat_missions.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Conditional_combat_missions"
+		texturefile = "gfx/interface/ideas/_laws/VF_Conditional_combat_missions.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Extensive_assistance_missions"
+		texturefile = "gfx/interface/ideas/_laws/VF_Extensive_assistance_missions.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Prohibited_military_service"
+		texturefile = "gfx/interface/ideas/_laws/VF_Prohibited_military_service.png"
+	}
+
 }
