@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_BUK_Aalim_Hahn"
+		textureFile = "gfx/interface/leaders/BUK/portrait_leader_BUK_Aalim_Hahn.png"
+	}
+}

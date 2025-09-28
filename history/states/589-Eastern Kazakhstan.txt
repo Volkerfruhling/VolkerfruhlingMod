@@ -5,8 +5,8 @@ state={
 		4651 4674 4867 7711 7784 7795 7856 10550 10610 10619 10680 12385 12529 12564 12635 12662 13148 13149 13151 13197 
 	}
 	history = {
-		owner = QIN
-		add_core_of = QIN
+		owner = RUS
+		add_core_of = RUS
 	}
 	manpower=535191
 	buildings_max_level_factor=1.000

@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_KHI_Said_Abdullah"
+		textureFile = "gfx/interface/leaders/KHI/portrait_leader_KHI_Said_Abdullah.png"
+	}
+}

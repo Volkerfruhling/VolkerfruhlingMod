@@ -36,5 +36,125 @@ VF_debug = {
         }
 
     }
+
+    VF_debug_demo_KHI = {
+
+        available = {
+            is_debug = yes
+            tag = KHI
+            742 = {
+                is_owned_by = KHI
+                NOT = {
+                    is_core_of = KHI
+                }
+            }
+            1050= {
+                is_owned_by = KHI
+                NOT = {
+                    is_core_of = KHI
+                }
+            }
+            830= {
+                is_owned_by = KHI
+                NOT = {
+                    is_core_of = KHI
+                }
+            }
+        }
+
+        visible = {
+            is_debug = yes
+            tag = KHI
+
+            742 = {
+                is_owned_by = KHI
+                NOT = {
+                    is_core_of = KHI
+                }
+            }
+            1050= {
+                is_owned_by = KHI
+                NOT = {
+                    is_core_of = KHI
+                }
+            }
+            830= {
+                is_owned_by = KHI
+                NOT = {
+                    is_core_of = KHI
+                }
+            }
+            
+        }
+
+        complete_effect = {
+            add_state_core = 742
+            add_state_core = 1050
+            add_state_core = 830
+        }
+
+    }
+
+    VF_debug_demo_KHI_AFG = {
+
+        available = {
+            is_debug = yes
+            tag = KHI
+            742 = {
+                is_core_of = KHI 
+            }
+            1050= {
+                is_core_of = KHI 
+            }
+            830= {
+                is_core_of = KHI 
+            }
+            country_exists = AFG
+            NOT = {
+                has_war = yes
+            }
+        }
+
+        visible = {
+            is_debug = yes
+            tag = KHI
+        }
+
+        complete_effect = {
+            declare_war_on = {
+                target = AFG
+                type = annex_everything
+            }
+        }
+
+    }
+
+    VF_debug_demo_KHI_AFG_2 = {
+
+        available = {
+            is_debug = yes
+            tag = KHI
+            owns_state = 267
+            owns_state = 415
+            owns_state = 991 
+            owns_state = 442
+            NOT = {
+                country_exists = AFG
+            }
+        }
+
+        visible = {
+            is_debug = yes
+            tag = KHI
+        }
+
+        complete_effect = {
+            add_state_core = 267
+            add_state_core = 415
+            add_state_core = 991
+            add_state_core = 442
+        }
+
+    }
     
 } 

@@ -5,8 +5,8 @@ state={
 		1702 1749 1818 1864 4781 4800 10531 10713 12427 12509 
 	}
 	history = {
-		owner = QIN
-		add_core_of = QIN
+		owner = RUS
+		add_core_of = RUS
 	}
 	manpower=153510
 	buildings_max_level_factor=1.000

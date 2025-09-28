@@ -332,6 +332,18 @@ AFG ={
 	color_ui = rgb{ 53 151 143 }
 }
 
+#ヒヴァ/Khiva
+KHI = {
+	color = rgb{ 232 185 141 }
+	color_ui = rgb{ 232 185 141 }
+}
+
+#ブハラ/Bukhara
+BUK= {
+	color = rgb{ 115 162 146 }
+	color_ui = rgb{ 115 162 146 }
+}
+
 #バーレーン/Bahrain
 BAH ={
 	color = rgb{ 251 180 174 }

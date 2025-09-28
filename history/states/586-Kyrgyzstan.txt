@@ -11,8 +11,8 @@ state={
 		1591 1840 4773 4845 7706 10146 10547 10603 12658 
 	}
 	history = {
-		owner = QIN
-		add_core_of = QIN
+		owner = RUS
+		add_core_of = RUS
 	}
 	manpower=2563404
 	buildings_max_level_factor=1.000

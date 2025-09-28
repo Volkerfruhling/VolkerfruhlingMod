@@ -1,0 +1,20 @@
+characters = {
+    BUK_Aalim_Hahn = {
+        name = BUK_Aalim_Hahn
+        portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_BUK_Aalim_Hahn"
+			}
+		}
+
+        country_leader = {
+			ideology = despotism_ideology
+			expire = "1964.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+    }
+}
