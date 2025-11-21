@@ -3,4 +3,10 @@ spriteTypes = {
 		name = "GFX_Portrait_Leader_JAP_Yusaku_Uehara"
 		textureFile = "gfx/interface/leaders/JAP/portrait_leader_JAP_Yusaku_Uehara.png"
 	}
+
+	spriteType = {
+        name = "GFX_CP_JAP_Yoshihito"
+        texturefile = "gfx/interface/leaders/JAP/portrait_leader_JAP_Yoshihito.png"
+        legacy_lazy_load = no
+    }
 }

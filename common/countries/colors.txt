@@ -498,6 +498,12 @@ JAP ={
 	color_ui = rgb{ 189 0 38 }
 }
 
+#琉球/Ryukyu
+RYU = {
+	color = rgb { 246 219 174 }
+	color_ui = rgb { 246 219 174 }
+}
+
 #コンバウン/Konbaung
 KON ={
 	color = rgb{ 51 160 43 }
@@ -505,9 +511,9 @@ KON ={
 }
 
 #朝鮮/Korea
-KOR ={
-	color = rgb{ 223 194 125 }
-	color_ui = rgb{ 223 194 125 }
+KOR = {
+	color = rgb{ 166 85 38 }
+	color_ui = rgb{ 166 85 38 }
 }
 
 #ルアンパバーン/Luang_Prabang

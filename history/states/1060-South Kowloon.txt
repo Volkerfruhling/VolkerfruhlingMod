@@ -1,0 +1,44 @@
+state = {
+	id = 1060
+	name = "STATE_1060" # Kyushu
+	manpower = 2163000
+
+	state_category =  large_town 
+
+	resources = {
+	}
+
+	history = {
+		owner = JAP
+		add_core_of = JAP
+
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+
+        victory_points = {
+			4102 15 # Kagoshima
+		}
+
+		victory_points = {
+			1020 3
+		}
+
+		victory_points = {
+			1183 3
+		}
+
+		victory_points = {
+			13451 2
+		}
+	}
+
+	provinces = {
+        4102 1183 13450 12032 13449 11949 1020 7178 13451
+	}
+
+	local_supplies = 10.0 
+        
+
+}

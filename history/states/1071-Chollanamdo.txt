@@ -1,0 +1,25 @@
+state={
+	id=1071
+	name="STATE_1071"
+	manpower = 2158516
+	state_category = town
+	resources={
+	}
+
+	history={
+		owner = KOR
+		add_core_of = KOR
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+
+	provinces={
+		1177 11948 12085 10110
+	}
+
+	local_supplies=0.0 
+        
+
+}

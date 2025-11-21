@@ -11,8 +11,9 @@ VF_debug = {
         }
 
         complete_effect = {
-            add_ideas = {
-                Absolute_poor
+            declare_war_on = {
+            target = JAP
+            type = annex_everything
             }
         }
     }
@@ -35,6 +36,21 @@ VF_debug = {
             set_country_leader_ideology = supermilitarism
         }
 
+    }
+
+    VF_debug_encampment = {
+
+        available ={
+            is_debug = yes
+        }
+
+        visible = {
+            is_debug = yes
+        }
+
+        complete_effect = {
+            create_faction = "テスト陣営"
+        }
     }
 
     VF_debug_demo_KHI = {

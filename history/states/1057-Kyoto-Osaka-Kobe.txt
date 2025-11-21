@@ -1,0 +1,35 @@
+
+state = {
+	id = 1057
+	name = "STATE_1057"
+	manpower = 3861000
+	state_category = metropolis 
+
+	history = {
+		owner = JAP
+		add_core_of = JAP
+
+		buildings = {
+			infrastructure = 3
+            industrial_complex = 2
+            dockyard = 3
+		}
+
+		victory_points = {
+			11960 30 # Kyoto
+		}
+
+		victory_points = {
+			12031 15
+		}
+
+	}
+
+	provinces = {
+		9985 13443 1136 12031 11960 13446
+	}
+
+	local_supplies = 9.0 
+        
+
+}

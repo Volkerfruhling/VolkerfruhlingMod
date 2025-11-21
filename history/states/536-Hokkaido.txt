@@ -2,7 +2,7 @@
 state = {
 	id = 536
 	name = "STATE_536"
-	manpower = 2812000
+	manpower = 2499000
 	
 	state_category = rural
 
@@ -18,10 +18,14 @@ state = {
 			10444 15 # Sapporo
 		}
 		victory_points = {
-			12421 5 # Asahikawa
+			12421 2 # Asahikawa
 		}
 		victory_points = {
-			3962 2 # Hakodate
+			3962 5 # Hakodate
+		}
+
+		victory_points = {
+			7532 2 # otaru
 		}
 
 	}

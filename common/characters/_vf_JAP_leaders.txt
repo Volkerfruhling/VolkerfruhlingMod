@@ -18,4 +18,16 @@ characters = {
 			}
 		}
 	}
+
+	JAP_Emperor = {
+		name = JAP_Emperor
+	}
+
+	JAP_prime_minister = {
+		name = JAP_prime_minister
+	}
+
+	JAP_Yoshihito = {
+		name = JAP_Yoshihito
+	}
 }
