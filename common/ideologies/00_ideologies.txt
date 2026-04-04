@@ -23,17 +23,20 @@ ideologies = {
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
+			can_create_collaboration_government = no
+			can_join_factions = no
 		}
 		
 		can_collaborate = yes
 		
 		modifiers = {
-			civilian_intel_to_others = 20.0
+			generate_wargoal_tension = 1.00
+			civilian_intel_to_others = 10.0
 			army_intel_to_others = 15.0
 			navy_intel_to_others = 10.0
 			airforce_intel_to_others = 10.0
-			embargo_cost_factor = 0.75
-			lend_lease_tension = 0.75
+			embargo_cost_factor = 0.5
+			lend_lease_tension = 1.0
 		}
 		
 		war_impact_on_world_tension = 0.8
@@ -78,17 +81,20 @@ ideologies = {
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
+			can_create_collaboration_government = no
+			can_join_factions = no
 		}
 
 		can_collaborate = yes
 
 		modifiers = {
-			civilian_intel_to_others = 15.0
-			army_intel_to_others = 10.0
+			generate_wargoal_tension = 1.00
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 15.0
 			navy_intel_to_others = 10.0
 			airforce_intel_to_others = 10.0
-			embargo_cost_factor = 1
-			lend_lease_tension = 0.50
+			embargo_cost_factor = 0.5
+			lend_lease_tension = 1.0
 		}
 
 		ai_communist = yes # uses the commie AI behaviour
@@ -130,17 +136,20 @@ ideologies = {
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
+			can_create_collaboration_government = no
+			can_join_factions = no
 		}
 
 		can_collaborate = yes
 
 		modifiers = {
-			civilian_intel_to_others = 15.0
-			army_intel_to_others = 10.0
+			generate_wargoal_tension = 1.00
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 15.0
 			navy_intel_to_others = 10.0
 			airforce_intel_to_others = 10.0
-			embargo_cost_factor = 1
-			lend_lease_tension = 0.50
+			embargo_cost_factor = 0.5
+			lend_lease_tension = 1.0
 		}
 
 		war_impact_on_world_tension = 0.25		# no major danger, remember this this the 40s!
@@ -181,17 +190,20 @@ ideologies = {
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
+			can_create_collaboration_government = no
+			can_join_factions = no
 		}
 
 		can_collaborate = yes
 
 		modifiers = {
-			civilian_intel_to_others = 15.0
-			army_intel_to_others = 10.0
+			generate_wargoal_tension = 1.00
+			civilian_intel_to_others = 10.0
+			army_intel_to_others = 15.0
 			navy_intel_to_others = 10.0
 			airforce_intel_to_others = 10.0
-			embargo_cost_factor = 1
-			lend_lease_tension = 0.50
+			embargo_cost_factor = 0.5
+			lend_lease_tension = 1.0
 		}
 
 		war_impact_on_world_tension = 0.25		# no major danger, remember this this the 40s!
@@ -235,11 +247,14 @@ ideologies = {
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
+			can_create_collaboration_government = no
+			can_join_factions = no
 		}
 		
 		can_collaborate = yes
 		
 		modifiers = {
+			generate_wargoal_tension = 1.00
 			civilian_intel_to_others = 10.0
 			army_intel_to_others = 15.0
 			navy_intel_to_others = 10.0
@@ -281,11 +296,14 @@ ideologies = {
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
+			can_create_collaboration_government = no
+			can_join_factions = no
 		}
 		
 		can_collaborate = yes
 		
 		modifiers = {
+			generate_wargoal_tension = 1.00
 			civilian_intel_to_others = 5.0
 			army_intel_to_others = 20.0
 			navy_intel_to_others = 15.0
@@ -324,11 +342,14 @@ ideologies = {
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
+			can_create_collaboration_government = no
+			can_join_factions = no
 		}
 		
 		can_collaborate = yes
 		
 		modifiers = {
+			generate_wargoal_tension = 1.00
 			civilian_intel_to_others = 5.0
 			army_intel_to_others = 25.0
 			navy_intel_to_others = 15.0
