@@ -4,6 +4,10 @@ state = {
 	state_category = large_city
 	manpower = 2563100
 
+	resources={
+		coal = 16 
+	}
+
 	history = {
 		owner = AST
 		add_core_of = AST

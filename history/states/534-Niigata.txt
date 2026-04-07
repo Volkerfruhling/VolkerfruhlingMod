@@ -6,6 +6,10 @@ state={
 	
 	state_category = town 
 
+	resources={
+		oil = 3
+	}
+
 	history={
 		owner = JAP
 		add_core_of = JAP

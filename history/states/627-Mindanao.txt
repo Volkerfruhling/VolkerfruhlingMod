@@ -6,6 +6,10 @@ state={
 	
 	state_category = rural
 
+	resources={
+		coal = 2
+	}
+
 	history={
 		owner = PHI
 		add_core_of = PHI

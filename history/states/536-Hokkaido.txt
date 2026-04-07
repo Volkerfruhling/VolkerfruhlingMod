@@ -6,6 +6,11 @@ state = {
 	
 	state_category = rural
 
+	resources={
+		steel= 18
+		coal = 10
+	}
+
 	history = {
 		owner = JAP
 		add_core_of = JAP
