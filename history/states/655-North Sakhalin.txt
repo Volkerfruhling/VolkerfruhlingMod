@@ -5,6 +5,12 @@ state = {
 	manpower = 94759
 	
 	state_category = pastoral
+
+
+	resources={
+		coal = 4
+	}
+	
 	history = {
 		owner = RUS
 		add_core_of = RUS

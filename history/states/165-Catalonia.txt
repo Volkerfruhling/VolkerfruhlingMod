@@ -6,6 +6,10 @@ state={
 	
 	state_category = large_city
 
+	resources={
+		coal = 2
+	}
+	
 	history={
 		owner = SPA
 		add_core_of = SPA
