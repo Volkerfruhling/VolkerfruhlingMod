@@ -114,7 +114,7 @@ add_ideas = {
 	Paternalistic_society
 	Racial_discrimination
 	Compulsory_primary_education
-	12_hour_workday
+	_12_hour_workday
 	Developed_countries
 	Food_insecure
 	Prohibited_military_service

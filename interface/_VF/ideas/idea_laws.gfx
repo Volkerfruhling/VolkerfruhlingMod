@@ -156,27 +156,27 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_idea_8_hour_workday"
+		name = "GFX_idea__8_hour_workday"
 		texturefile = "gfx/interface/ideas/_laws/VF_8_hour_workday.png"
 	}
 
 	spriteType = {
-		name = "GFX_idea_10_hour_workday"
+		name = "GFX_idea__10_hour_workday"
 		texturefile = "gfx/interface/ideas/_laws/VF_10_hour_workday.png"
 	}
 
 	spriteType = {
-		name = "GFX_idea_12_hour_workday"
+		name = "GFX_idea__12_hour_workday"
 		texturefile = "gfx/interface/ideas/_laws/VF_12_hour_workday.png"
 	}
 
 	spriteType = {
-		name = "GFX_idea_14_hour_workday"
+		name = "GFX_idea__14_hour_workday"
 		texturefile = "gfx/interface/ideas/_laws/VF_14_hour_workday.png"
 	}
 
 	spriteType = {
-		name = "GFX_idea_16_hour_workday"
+		name = "GFX_idea__16_hour_workday"
 		texturefile = "gfx/interface/ideas/_laws/VF_16_hour_workday.png"
 	}
 

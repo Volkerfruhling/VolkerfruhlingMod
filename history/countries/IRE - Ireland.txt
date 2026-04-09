@@ -172,7 +172,7 @@ add_ideas = {
     Universal_suffrage
     Separation_of_church_and_state
     Compulsory_primary_education
-    8_hour_workday
+    _8_hour_workday
     Developing_countries
     Prohibited_military_service
     No_draft_exemption

@@ -174,7 +174,7 @@ add_ideas = {
     Paternalistic_society
     Partial_integration
     Compulsory_primary_education
-    8_hour_workday
+    _8_hour_workday
     Developing_countries
     Multidimensional_poor
     Prohibited_military_service

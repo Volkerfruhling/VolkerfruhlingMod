@@ -183,7 +183,7 @@ add_ideas = {
 	Women_s_suffrage
 	Partial_integration
 	Compulsory_primary_education
-	10_hour_workday
+	_10_hour_workday
 	Developed_countries
 	Working_poor
 	Limited_assistance_missions

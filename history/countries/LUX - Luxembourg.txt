@@ -174,7 +174,7 @@ add_ideas = {
     Women_s_suffrage
     Partial_integration
     Compulsory_first_semester_secondary_education
-    12_hour_workday
+    _12_hour_workday
     Prohibited_military_service
     Total_draft_exemption
     No_training

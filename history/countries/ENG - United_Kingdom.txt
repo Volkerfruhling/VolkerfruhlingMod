@@ -121,7 +121,7 @@ add_ideas = {
 	Women_s_suffrage
 	Racial_discrimination
 	Compulsory_first_semester_secondary_education
-	10_hour_workday
+	_10_hour_workday
 	Developed_countries
 	Stable_employment
 	Limited_assistance_missions

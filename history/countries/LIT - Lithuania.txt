@@ -193,7 +193,7 @@ add_ideas = {
 	Paternalistic_society
 	Racial_discrimination
 	Compulsory_primary_education
-	12_hour_workday
+	_12_hour_workday
 	Developing_countries
 	Vulnerable_Near_Poor
 }

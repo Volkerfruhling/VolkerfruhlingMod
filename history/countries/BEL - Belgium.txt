@@ -177,6 +177,6 @@ add_ideas = {
 	Incomplete_constitution
 	State_religion
 	Compulsory_primary_education
-	10_hour_workday
+	_10_hour_workday
 	Vulnerable_Near_Poor
 }

@@ -123,7 +123,7 @@ add_ideas = {
 	Paternalistic_society
 	Partial_integration
 	Compulsory_primary_education
-	14_hour_workday
+	_14_hour_workday
 	Emerging_countries
 	Food_insecure
 	Combat_support_missions

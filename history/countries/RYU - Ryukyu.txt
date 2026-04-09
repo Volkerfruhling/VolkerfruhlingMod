@@ -171,7 +171,7 @@ add_ideas = {
     Paternalistic_society
     Neutral_stance
     Compulsory_primary_education
-    12_hour_workday
+    _12_hour_workday
     Developing_countries
     Food_insecure
 }

@@ -173,7 +173,7 @@ add_ideas = {
 	Paternalistic_society
 	Racial_discrimination
 	Privatized_education
-	12_hour_workday
+	_12_hour_workday
 	Least_developed_countries
 	Multidimensional_poor
 	Prohibited_military_service

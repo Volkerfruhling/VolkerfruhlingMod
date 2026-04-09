@@ -169,7 +169,7 @@ add_ideas = {
 	Women_s_suffrage
 	Partial_integration
 	Subsidized_post_secondary_education
-	10_hour_workday
+	_10_hour_workday
 	Developed_countries
 	Stable_employment
 	Limited_assistance_missions

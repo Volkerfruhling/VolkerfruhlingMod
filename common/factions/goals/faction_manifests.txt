@@ -22,7 +22,7 @@ faction_manifest_defense_of_democracy = {
 				min = @manifest_fulfilled_value
 	
 				modifier = { 
-					democratic_drift_from_guarantees = 0.05
+					#democratic_drift_from_guarantees = 0.05
 					can_guarantee_other_ideologies = 1
 				}
 			}
@@ -49,7 +49,7 @@ faction_manifest_defense_of_democracy_allies = {
 				min = @manifest_fulfilled_value
 	
 				modifier = { 
-					democratic_drift_from_guarantees = 0.08
+					#democratic_drift_from_guarantees = 0.08
 					can_guarantee_other_ideologies = 1
 				}
 			}
@@ -93,7 +93,7 @@ faction_manifest_suppress_regional_fascism = {
 		completed_amount_collection = collection:non_fascist_controlled_states_on_my_continent
 		
 		scale = {
-			fascism_drift = -0.08
+			#fascism_drift = -0.08
 		}
 		
 		progress_sections = {
@@ -171,7 +171,7 @@ faction_manifest_suppress_regional_democracy = {
 		completed_amount_collection = collection:non_democratic_controlled_states_on_my_continent
 		
 		scale = {
-			democratic_drift = -0.05
+			#democratic_drift = -0.05
 		}
 		
 		progress_sections = {

@@ -186,7 +186,7 @@ add_ideas = {
     Women_s_suffrage
     Multicultural_coexistence
     Compulsory_primary_education
-    8_hour_workday
+    _8_hour_workday
     Emerging_countries
     Stable_employment
     Prohibited_military_service

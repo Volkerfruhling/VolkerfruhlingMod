@@ -172,7 +172,7 @@ add_ideas = {
 	Paternalistic_society
 	Racial_discrimination
 	Compulsory_primary_education
-	12_hour_workday
+	_12_hour_workday
 	Emerging_countries
 	Vulnerable_Near_Poor
 	Semi_modern_armies

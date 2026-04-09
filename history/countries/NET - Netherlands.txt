@@ -172,7 +172,7 @@ add_ideas = {
 	State_religion
 	Women_s_suffrage
 	Racial_discrimination
-	10_hour_workday
+	_10_hour_workday
 	Emerging_countries
 	Food_insecure
 	Extensive_assistance_missions

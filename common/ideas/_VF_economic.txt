@@ -240,7 +240,6 @@ ideas = {
 					factor = 0
 
 					tag = GER
-					NOT = { has_tech = volkssturm }
 					has_war = yes
 					date < 1944.01.01
 				}

@@ -891,13 +891,13 @@ technologies = {
 				tag = JAP
 				OR = {
 					has_war_with = USA
-					CHI = {  
-						OR = { 
-							has_capitulated = yes 
-							exists = no
-		                    is_subject_of = JAP
-						}
-					}
+					#CHI = {  
+					#	OR = { 
+					#		has_capitulated = yes 
+					#		exists = no
+		            #        is_subject_of = JAP
+					#	}
+					#}
 				}
 			}
 			

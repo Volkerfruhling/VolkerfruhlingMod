@@ -174,7 +174,7 @@ add_ideas = {
 	Separation_of_church_and_state
 	Women_s_suffrage
 	Neutral_stance
-	10_hour_workday
+	_10_hour_workday
 	Emerging_countries
 	Stable_employment
 	Extensive_assistance_missions

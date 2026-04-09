@@ -174,7 +174,7 @@ add_ideas = {
 	Women_s_suffrage
 	Neutral_stance
 	Compulsory_first_semester_secondary_education
-	10_hour_workday
+	_10_hour_workday
 	Emerging_countries
 	Working_poor
 	Limited_assistance_missions

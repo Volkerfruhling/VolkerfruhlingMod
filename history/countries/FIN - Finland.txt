@@ -186,7 +186,7 @@ add_ideas = {
 	State_religion
 	Racial_discrimination
 	Compulsory_first_semester_secondary_education
-	12_hour_workday
+	_12_hour_workday
 	Developing_countries
 	Vulnerable_Near_Poor
 	Prohibited_military_service
