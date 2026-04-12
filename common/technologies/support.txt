@@ -1888,6 +1888,11 @@ technologies = {
 	### SPECIAL PROJECTS ###
 
 	sp_armored_engineer_tech = {
+
+		allow_branch = {
+			always = no
+		}
+
 		allow = {
 	 		ROOT = {
 				is_special_project_completed = sp:sp_land_military_engineering_vehicles
@@ -1942,6 +1947,11 @@ technologies = {
 	}
 
 	sp_armored_maintenance_tech = {
+
+		allow_branch = {
+			always = no
+		}
+
 		allow = {
 	 		ROOT = {
 				is_special_project_completed = sp:sp_land_military_engineering_vehicles
@@ -1996,6 +2006,10 @@ technologies = {
 	}
 
 	sp_armored_signal_tech = {
+		allow_branch = {
+			always = no
+		}
+		
 		allow = {
 	 		ROOT = {
 				is_special_project_completed = sp:sp_land_military_engineering_vehicles
@@ -2057,6 +2071,7 @@ technologies = {
 	sp_helicopter_transport_pods_tech = {
 		allow_branch = {
 			 has_dlc = "Gotterdammerung"
+			 always = no
 		}
 
 		allow = {
@@ -2102,6 +2117,7 @@ technologies = {
 	sp_helicopter_artillery_observers_tech = {
 		allow_branch = {
 			 has_dlc = "Gotterdammerung"
+			 always = no
 		}
 
 		allow = {
@@ -2152,6 +2168,7 @@ technologies = {
 	sp_helicopter_med_evac_tech = {
 		allow_branch = {
 			 has_dlc = "Gotterdammerung"
+			 always = no
 		}
 
 		allow = {
@@ -2207,6 +2224,7 @@ technologies = {
 	sp_armored_motorized_military_police_tech = {
 		allow_branch = {
 			 has_dlc = "Gotterdammerung"
+			 always = no
 		}
 		
 		allow = {

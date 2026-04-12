@@ -41,6 +41,10 @@ technologies = {
 
 	bba_improved_transport_plane = {
 
+		allow_branch = {
+			always = no
+		}
+
 		enable_equipments = {
 			transport_plane_equipment_2
 		}
@@ -77,6 +81,10 @@ technologies = {
 
 		enable_equipments = {
 			transport_plane_equipment_3
+		}
+
+		allow_branch = {
+			always = no
 		}
 		
 		research_cost = 2
@@ -386,6 +394,10 @@ technologies = {
 	
 	modern_small_airframe = {
 
+		allow_branch = {
+			always = no
+		}
+
 		allow = { 	 		
 			ROOT = {
 				is_special_project_completed = sp:sp_air_axial_jet_engine
@@ -679,6 +691,10 @@ technologies = {
 	
 	modern_medium_airframe = {
 
+		allow_branch = {
+			always = no
+		}
+
 		allow = { 	 		
 			ROOT = {
 				is_special_project_completed = sp:sp_air_axial_jet_engine
@@ -875,6 +891,10 @@ technologies = {
 	}
 	
 	modern_large_airframe = {
+
+		allow_branch = {
+			always = no
+		}
 
 		allow = { 	 		
 			ROOT = {
@@ -1882,6 +1902,7 @@ technologies = {
 	sp_centrifugal_jet_tech = {
 		allow_branch = {
 			has_dlc = "Gotterdammerung"
+			always = no
 		}
 		
 		allow = {
@@ -1931,6 +1952,7 @@ technologies = {
 	reinforced_wings_mothership = {
 		allow_branch = {
 			 has_dlc = "Gotterdammerung"
+			 always = no
 		}	
 
 		allow = {
@@ -1974,6 +1996,11 @@ technologies = {
 	}
 
 	miniature_fighters = {
+
+		allow_branch = {
+			always = no
+		}
+
 		allow = {
 			ROOT = {
 				is_special_project_completed = sp:sp_air_mothership_aircraft
@@ -2019,6 +2046,11 @@ technologies = {
 	}
 
 	aerial_hangars = {
+
+		allow_branch = {
+			always = no
+		}
+
 		allow = {
 			ROOT = {
 				is_special_project_completed = sp:sp_air_mothership_aircraft

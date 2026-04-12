@@ -2745,18 +2745,18 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 
-			instantTextBoxType = {
-				name = "airtech_year7"
-				position = { x = 30 y = 998 }
-				textureFile = ""
-				font = "hoi_36header"
-				borderSize = {x = 0 y = 4}
-				text = "1950"
-				maxWidth = 170
-				maxHeight = 32
-				format = left
-				Orientation = "UPPER_LEFT"
-			}
+			#instantTextBoxType = {
+			#	name = "airtech_year7"
+			#	position = { x = 30 y = 998 }
+			#	textureFile = ""
+			#	font = "hoi_36header"
+			#	borderSize = {x = 0 y = 4}
+			#	text = "1950"
+			#	maxWidth = 170
+			#	maxHeight = 32
+			#	format = left
+			#	Orientation = "UPPER_LEFT"
+			#}
 
 			containerWindowType = {
 				name = "airtech_year_left"
@@ -2829,18 +2829,18 @@ guiTypes = {
 					Orientation = "UPPER_LEFT"
 				}
 
-				instantTextBoxType = {
-					name = "airtech_year7"
-					position = { x = 60 y = 998 }
-					textureFile = ""
-					font = "hoi_36header"
-					borderSize = {x = 0 y = 4}
-					text = "1950"
-					maxWidth = 170
-					maxHeight = 32
-					format = right
-					Orientation = "UPPER_LEFT"
-				}
+				#instantTextBoxType = {
+				#	name = "airtech_year7"
+				#	position = { x = 60 y = 998 }
+				#	textureFile = ""
+				#	font = "hoi_36header"
+				#	borderSize = {x = 0 y = 4}
+				#	text = "1950"
+				#	maxWidth = 170
+				#	maxHeight = 32
+				#	format = right
+				#	Orientation = "UPPER_LEFT"
+				#}
 			}
 
 
@@ -3382,7 +3382,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1929"
+					text = "1940"
 					maxWidth = 130
 					maxHeight = 32
 					format = left
@@ -3395,7 +3395,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1931"
+					text = "1942"
 					maxWidth = 130
 					maxHeight = 32
 					format = left
@@ -3408,7 +3408,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1932"
+					text = "1943"
 					maxWidth = 130
 					maxHeight = 32
 					format = left
@@ -3421,7 +3421,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1933"
+					text = "1944"
 					maxWidth = 130
 					maxHeight = 32
 					format = left
@@ -3434,7 +3434,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1934"
+					text = "1945"
 					maxWidth = 130
 					maxHeight = 32
 					format = left
@@ -3447,7 +3447,7 @@ guiTypes = {
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
-					text = "1935"
+					text = "1946"
 					maxWidth = 130
 					maxHeight = 32
 					format = left

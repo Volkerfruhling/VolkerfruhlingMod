@@ -256,6 +256,11 @@ technologies = {
 	cavity_magnatron = { #was decimetric radar
 
 		# can build radars/radar boost in air/sea combat depends on radar level
+
+		allow_branch = {
+			always = no
+		}
+
 		allow = {
 	 		ROOT = {
 				is_special_project_completed = sp:sp_air_radar
@@ -351,6 +356,10 @@ technologies = {
 	
 	centimetric_radar = {
 
+		allow_branch = {
+			always = no
+		}
+
 		allow = {
 	 		ROOT = {
 				is_special_project_completed = sp:sp_air_radar
@@ -401,6 +410,11 @@ technologies = {
 	phased_array = {
 		is_special_project_tech = yes
 		# radar boost in air/sea combat depends on radar level
+
+		allow_branch = {
+			always = no
+		}
+
 		allow = {
 			ROOT = {
 				is_special_project_completed = sp:sp_air_radar
@@ -450,6 +464,11 @@ technologies = {
 	monopulse_radar = {
 		is_special_project_tech = yes
 		# radar boost in air/sea combat depends on radar level
+
+		allow_branch = {
+			always = no
+		}
+
 		allow = {
 			ROOT = {
 				is_special_project_completed = sp:sp_air_radar
@@ -1129,6 +1148,10 @@ technologies = {
 	
 	experimental_rockets = {
 
+		allow = {
+			has_country_flag = This_technology_is_not_permitted
+		}
+
 		enable_building = {
 			building = rocket_site
 			level = 3
@@ -1148,7 +1171,7 @@ technologies = {
 		}
 		
 		research_cost = 1.5
-		start_year = 1931
+		start_year = 1942
 		
 		folder = {
 			name = electronics_folder
@@ -1251,6 +1274,7 @@ technologies = {
 
 	sp_rockets_improved_guidance = {
 		allow = {
+			has_country_flag = This_technology_is_not_permitted
 	 		ROOT = {
 				is_special_project_completed = sp:sp_rockets_flying_bomb
 			}
@@ -1285,7 +1309,7 @@ technologies = {
 		}
 		
 		research_cost = 1
-		start_year = 1932
+		start_year = 1943
 		
 		folder = {
 			name = electronics_folder
@@ -1303,6 +1327,7 @@ technologies = {
 
 	sp_rockets_rocket_bomber = {
 		allow = {
+			has_country_flag = This_technology_is_not_permitted
 	 		ROOT = {
 				is_special_project_completed = sp:sp_rockets_flying_bomb
 			}
@@ -1325,7 +1350,7 @@ technologies = {
 		}
 		
 		research_cost = 1
-		start_year = 1933
+		start_year = 1944
 		
 		folder = {
 			name = electronics_folder
@@ -1343,6 +1368,7 @@ technologies = {
 
 	sp_rockets_improved_rocket_bomber = {
 		allow = {
+			has_country_flag = This_technology_is_not_permitted
 	 		ROOT = {
 				is_special_project_completed = sp:sp_rockets_flying_bomb
 			}
@@ -1357,7 +1383,7 @@ technologies = {
 		}
 		
 		research_cost = 1
-		start_year = 1934
+		start_year = 1945
 		
 		folder = {
 			name = electronics_folder
@@ -1522,13 +1548,17 @@ technologies = {
 	atomic_research = {
 
 		research_speed_factor = 0.04
+
+		allow = {
+			has_country_flag = This_technology_is_not_permitted_1920_Nuclear_power
+		}
 		
 		#path = {
 		#	leads_to_tech = nuclear_reactor 
 		#	research_cost_coeff = 1
 		#}
 		
-		start_year = 1929
+		start_year = 1940
 		research_cost = 5
 		
 		folder = {
@@ -1707,6 +1737,7 @@ technologies = {
 
 	sp_rockets_dual_chamber_rocket_engine_1 = {
 		allow = {
+			has_country_flag = This_technology_is_not_permitted
 		 	ROOT = {
 				is_special_project_completed = sp:sp_rocket_interceptor
 			}
@@ -1733,7 +1764,7 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1933
+		start_year = 1944
 		
 		folder = {
 			name = electronics_folder
@@ -1752,6 +1783,7 @@ technologies = {
 
 	sp_rockets_dual_chamber_rocket_engine_2 = {
 		allow = {
+			has_country_flag = This_technology_is_not_permitted
 		 	ROOT = {
 				is_special_project_completed = sp:sp_rocket_interceptor
 			}
@@ -1773,7 +1805,7 @@ technologies = {
 		}		
 		
 		research_cost = 1.5
-		start_year = 1935
+		start_year = 1946
 		
 		folder = {
 			name = electronics_folder
