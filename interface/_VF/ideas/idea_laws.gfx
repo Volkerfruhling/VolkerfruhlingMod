@@ -156,33 +156,53 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_idea_8_hour_workday"
+		name = "GFX_idea__8_hour_workday"
 		texturefile = "gfx/interface/ideas/_laws/VF_8_hour_workday.png"
 	}
 
 	spriteType = {
-		name = "GFX_idea_10_hour_workday"
+		name = "GFX_idea__10_hour_workday"
 		texturefile = "gfx/interface/ideas/_laws/VF_10_hour_workday.png"
 	}
 
 	spriteType = {
-		name = "GFX_idea_12_hour_workday"
+		name = "GFX_idea__12_hour_workday"
 		texturefile = "gfx/interface/ideas/_laws/VF_12_hour_workday.png"
 	}
 
 	spriteType = {
-		name = "GFX_idea_14_hour_workday"
+		name = "GFX_idea__14_hour_workday"
 		texturefile = "gfx/interface/ideas/_laws/VF_14_hour_workday.png"
 	}
 
 	spriteType = {
-		name = "GFX_idea_16_hour_workday"
+		name = "GFX_idea__16_hour_workday"
 		texturefile = "gfx/interface/ideas/_laws/VF_16_hour_workday.png"
 	}
 
 	spriteType = {
 		name = "GFX_idea_No_labor_law"
 		texturefile = "gfx/interface/ideas/_laws/VF_No_labor_law.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Unconditional_combat_missions"
+		texturefile = "gfx/interface/ideas/_laws/VF_Unconditional_combat_missions.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Conditional_combat_missions"
+		texturefile = "gfx/interface/ideas/_laws/VF_Conditional_combat_missions.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Extensive_assistance_missions"
+		texturefile = "gfx/interface/ideas/_laws/VF_Extensive_assistance_missions.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Prohibited_military_service"
+		texturefile = "gfx/interface/ideas/_laws/VF_Prohibited_military_service.png"
 	}
 
 }

@@ -7,6 +7,7 @@ state = {
 
 	resources = {
 		tungsten = 42 # In replacement of Nitrate
+		coal = 1
 	}
 
 	history = {

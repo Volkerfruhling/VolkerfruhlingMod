@@ -5,6 +5,10 @@ state={
 	manpower = 7630651
 	state_category = megalopolis
 
+	resources={
+		coal = 34
+	}
+
 	history={
 		owner = USA
 		add_core_of = USA

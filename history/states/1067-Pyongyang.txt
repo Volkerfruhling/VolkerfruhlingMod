@@ -1,0 +1,25 @@
+state={
+	id=1067
+	name="STATE_1067"
+	manpower = 1201028
+	state_category = rural
+	resources={
+	}
+
+	history={
+		owner = KOR
+		add_core_of = KOR
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+
+	provinces={
+		11992 7204 7175
+	}
+
+	local_supplies=0.0 
+        
+
+}

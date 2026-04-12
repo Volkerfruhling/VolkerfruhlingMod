@@ -1917,7 +1917,7 @@ technologies = {
 				limit = {
 					has_dlc = "Gotterdammerung"
 				}
-				SP_create_variant_based_on_country_armored_engineer = yes
+				#SP_create_variant_based_on_country_armored_engineer = yes
 			}
 		}
 		
@@ -1971,7 +1971,7 @@ technologies = {
 				limit = {
 					has_dlc = "Gotterdammerung"
 				}
-				SP_create_variant_based_on_country_armored_maintenance = yes
+				#SP_create_variant_based_on_country_armored_maintenance = yes
 			}
 		}
 		
@@ -2030,7 +2030,7 @@ technologies = {
 				limit = {
 					has_dlc = "Gotterdammerung"
 				}
-				SP_create_variant_based_on_country_armored_signal = yes
+				#SP_create_variant_based_on_country_armored_signal = yes
 			}
 		}
 		

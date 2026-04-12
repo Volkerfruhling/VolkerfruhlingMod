@@ -1,0 +1,20 @@
+characters = {
+    KHI_Said_Abdullah = {
+        name = KHI_Said_Abdullah
+        portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_KHI_Said_Abdullah"
+			}
+		}
+
+        country_leader = {
+			ideology = despotism_ideology
+			expire = "1964.1.1"
+			id = -1
+			
+			traits = {
+				
+			}
+		}
+    }
+}

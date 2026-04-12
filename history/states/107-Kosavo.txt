@@ -3,6 +3,10 @@ state={
 	id=107
 	name="STATE_107"
 
+	resources={
+		coal = 4
+	}
+	
 	history={
 		owner = SER
 		add_core_of = SER

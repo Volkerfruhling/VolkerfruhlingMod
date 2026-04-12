@@ -25,3 +25,8 @@ TOM = "countries/_middle_eastern.txt"
 #イエメン/Yemen
 YEM = "countries/_middle_eastern.txt"
 
+#ヒヴァ/Khiva
+KHI = "countries/_middle_eastern.txt"
+
+#ブハラ/Bukhara
+BUK = "countries/_middle_eastern.txt"

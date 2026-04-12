@@ -4,21 +4,22 @@ state = {
 	name = "STATE_831" #Khiva
 
 	history = {
-		owner = RUS
-		add_core_of = RUS
+		owner = KHI
+		add_core_of = KHI
 		victory_points = {
 			12465 1
 		}
 		buildings = {
 			infrastructure = 2
-
+			arms_factory = 1
+			industrial_complex = 1
 		}
 		
 		
 	}
 
 	provinces = {
-		 10395 10435 12324 12454 12465
+		 10395 10435 12324 12465
 	}
 	
 	manpower = 258430

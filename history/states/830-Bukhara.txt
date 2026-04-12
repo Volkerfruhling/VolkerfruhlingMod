@@ -5,8 +5,8 @@ state = {
 
 
 	history = {
-		owner = RUS
-		add_core_of = RUS
+		owner = BUK
+		add_core_of = BUK
 		
 		victory_points = {
 			1573 2 
@@ -17,7 +17,7 @@ state = {
 		
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
+			industrial_complex = 2
 			air_base = 1
 		}
 		
@@ -25,9 +25,9 @@ state = {
 	}
 
 	provinces={
-		1573 1623 7639 7775 10205 10470 10671 12161 12239 12722
+		1573 1623 7639 7775 10205 10470 10671 12161 12239 12722 1216
 	}
-	manpower = 2189596
+	manpower = 1889596
 	buildings_max_level_factor = 1.000
 	state_category = rural
 

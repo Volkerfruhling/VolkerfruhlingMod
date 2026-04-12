@@ -1,0 +1,27 @@
+state = {
+	id = 1061
+	name = "STATE_1061" # Kyushu
+	manpower = 52000
+
+	state_category = small_island
+
+	resources = {
+	}
+
+	history = {
+		owner = JAP
+		add_core_of = JAP
+
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+        10011
+	}
+
+	local_supplies = 10.0 
+        
+
+}

@@ -1,0 +1,27 @@
+#tate = {
+#	id = 1059
+#	name = "STATE_1059" # Shikoku
+#	manpower = 1
+#
+#	state_category = large_city
+#
+#	history = {
+#		owner = JAP
+#		add_core_of = JAP
+#
+#		buildings = {
+#			infrastructure = 2
+#		}
+#		
+#
+#		
+#
+#	}
+#	provinces = {
+#	}
+#
+#	local_supplies = 0.0 
+#       
+#
+#
+#

@@ -1,0 +1,36 @@
+
+state = {
+	id = 1056
+	name = "STATE_1056"
+	manpower = 3060
+	state_category = megalopolis 
+
+	history = {
+		owner = JAP
+		add_core_of = JAP
+
+		buildings = {
+			infrastructure = 4
+            industrial_complex = 2
+			arms_factory = 2
+			dockyard = 2
+
+            7072 = {
+				naval_base = 3
+			}
+		}
+
+		victory_points = {
+			7072 40 # Osaka
+		}
+
+	}
+
+	provinces = {
+		7072  
+	}
+
+	local_supplies = 9.0 
+        
+
+}

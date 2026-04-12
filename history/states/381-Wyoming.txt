@@ -5,6 +5,10 @@ state={
 	manpower = 225564
 	state_category = rural
 	
+	resources={
+		coal = 7
+	}
+	
 	history={
 		owner = USA
 		add_core_of = USA

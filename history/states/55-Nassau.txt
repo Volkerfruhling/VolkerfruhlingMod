@@ -5,6 +5,10 @@ state={
 		564 3397 3524 6444 6488 6549 9486 9524 9547 11445 11533 
 	}
 
+	resources={
+		coal = 8 
+	}
+
 	history = {
 		owner = GER
 		add_core_of = GER

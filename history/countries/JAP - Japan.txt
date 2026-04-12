@@ -1,6 +1,6 @@
-capital = 797
+capital = 1051
 
-oob = "standard_templates"
+oob = "JAP_1925"
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -13,9 +13,9 @@ set_technology = {
 	motorised_infantry = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	mobile_warfare = 1
-	trade_interdiction = 1
-	formation_flying = 1
+	#mobile_warfare = 1
+	#trade_interdiction = 1
+	#formation_flying = 1
 	fuel_silos = 1
 	synth_oil_experiments = 1
 	oil_processing = 1
@@ -81,9 +81,9 @@ if = {
 
 
 
-set_research_slots = 3
-set_convoys = 50
-set_stability = 0.75
+set_research_slots = 4
+set_convoys = 150
+set_stability = 0.55
 
 1939.1.1 = {
 
@@ -108,18 +108,18 @@ set_stability = 0.75
 		paratroopers = 1
 
 		#doctrines
-		delay = 1
-		elastic_defence = 1
-		armored_spearhead = 1
-		schwerpunk = 1
-		blitzkrieg = 1
-		convoy_interdiction_ti = 1
-		unrestricted_submarine_warfare = 1
-		raider_patrols = 1
+		#delay = 1
+		#elastic_defence = 1
+		#armored_spearhead = 1
+		#schwerpunk = 1
+		#blitzkrieg = 1
+		#convoy_interdiction_ti = 1
+		#unrestricted_submarine_warfare = 1
+		#raider_patrols = 1
 		#air
-		formation_flying = 1		
-		dive_bombing = 1
-		direct_ground_support = 1
+		#formation_flying = 1		
+		#dive_bombing = 1
+		#direct_ground_support = 1
 
 		#electronics
 		electronic_mechanical_engineering = 1
@@ -149,7 +149,7 @@ set_stability = 0.75
 
 set_politics = {
 	ruling_party = despotism
-	last_election = "1936.1.1"
+	last_election = "1924.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 
@@ -159,6 +159,21 @@ set_popularities = {
 }
 
 recruit_character = JAP_Yusaku_Uehara
+set_country_flag = VF_monarch_diplomacy_portrait_button_flag
+set_variable = { State_Positions_Right_Title = token:JAP_Emperor }
+set_variable = { State_Positions_Left_Title = token:JAP_prime_minister }
+set_variable = { Chief_Portrait = token:JAP_Yoshihito }
 
 add_ideas = {
+	Parliamentary_democracy
+	Incomplete_constitution
+	Limited_elections
+	State_religion
+	Paternalistic_society
+	Racial_discrimination
+	Compulsory_primary_education
+	_12_hour_workday
+	Emerging_countries
+	Vulnerable_Near_Poor
+	Semi_modern_armies
 }

@@ -2,6 +2,10 @@ state={
 	id=816
 	name="STATE_816"
 	state_category = town
+
+	resources={
+		coal = 88
+	}
 	history={
 		owner = USA
 		add_core_of = USA

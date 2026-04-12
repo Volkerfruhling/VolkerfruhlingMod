@@ -9,7 +9,7 @@ characters = {
 		}
 		
 		country_leader = {
-			ideology = social_conservatism
+			ideology = paternalistic_conservatism
 			expire = "1936.1.1"
 			id = -1
 			

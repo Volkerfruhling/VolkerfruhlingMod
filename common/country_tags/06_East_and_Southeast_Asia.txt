@@ -19,6 +19,9 @@ INS = "countries/_asian.txt"
 #日本/Japan
 JAP = "countries/_asian.txt"
 
+#琉球/Ryukyu
+RYU = "countries/_asian.txt"
+
 #コンバウン/Konbaung
 KON = "countries/_asian.txt"
 

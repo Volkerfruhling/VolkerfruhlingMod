@@ -1,9 +1,9 @@
 state = {
 	id = 530
 	name = "STATE_530" # Shikoku
-	manpower = 3310000
+	manpower = 3173000
 
-	state_category = large_city
+	state_category =  large_town 
 
 	history = {
 		owner = JAP
@@ -11,9 +11,7 @@ state = {
 
 		buildings = {
 			infrastructure = 2
-			air_base = 3
-			arms_factory = 1
-			industrial_complex = 2
+            industrial_complex = 1
 		}
 		
 		victory_points = {
@@ -24,9 +22,17 @@ state = {
 			4179 10 # Matsuyama
 		}
 
+		victory_points = {
+			4094 5	
+		}
+
+		victory_points = {
+			9965 3
+		}
+
 	}
 	provinces = {
-		4094 4179 7046 7197 9965 11997 12028
+		7197 9965 11997 12028 13448  7046 4179 4094
 	}
 
 	local_supplies = 0.0 

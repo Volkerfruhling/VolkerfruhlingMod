@@ -1,0 +1,16 @@
+change_leader_rule_never = {
+	type = change_leader_rules
+	trigger = {
+		always = no
+	}
+	available = {
+        always = no
+	}
+
+	can_remove = { 
+	}
+
+	modifier = {
+	}
+
+}

@@ -1,0 +1,47 @@
+
+state={
+	id=1054
+	name="STATE_1054" # Tohoku
+	manpower = 3509000
+	state_category = town 
+	resources={
+		steel = 5
+		coal = 1
+	}
+
+	history={
+		owner = JAP
+		add_core_of = JAP
+		buildings = {
+			infrastructure = 2
+            industrial_complex = 1
+			arms_factory = 0
+            dockyard = 0
+		}
+		
+		victory_points = {
+			7169 15
+		}
+
+		victory_points = {
+			4153 3
+		}
+
+		victory_points = {
+			1024 3
+		}
+
+		victory_points = {
+			4118 2
+		}
+
+	}
+
+	provinces={
+		4122 4153 4118 1024 7169 13429 13430 4067 13440
+	}
+
+	local_supplies=9.0 
+        
+
+}
