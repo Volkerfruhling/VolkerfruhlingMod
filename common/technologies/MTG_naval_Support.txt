@@ -2041,7 +2041,8 @@ technologies = {
 		underway_replenishment_convoy_cost = -0.2
 
 		allow_branch = {
-			 has_dlc = "Gotterdammerung"
+			has_dlc = "Gotterdammerung"
+			always = no
 		}
 
 		allow = {
@@ -2081,6 +2082,10 @@ technologies = {
 
 	sp_standard_tenshioned_replenishment_alongside_method = {
 
+		allow_branch = {
+			always = no
+		}
+		
 		allow = {
 	 		ROOT = {
 				is_special_project_completed = sp:sp_naval_underway_replenishment
