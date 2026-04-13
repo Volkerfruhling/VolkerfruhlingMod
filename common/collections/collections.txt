@@ -23,7 +23,11 @@ democratic_faction_members = {
 	operators = {
 		faction_members
 		limit = {
-			has_government = democratic
+			OR = {
+				has_government = socialism
+				has_government = liberalism
+				has_government = conservatism
+			}
 		}
 	}
 	name = COLLECTION_DEMOCRATIC_FACTION_MEMBERS
@@ -34,7 +38,11 @@ uncapitulated_democratic_faction_members = {
 	operators = {
 		faction_members
 		limit = {
-			has_government = democratic
+			OR = {
+				has_government = socialism
+				has_government = liberalism
+				has_government = conservatism
+			}
 			has_capitulated = no
 		}
 	}
@@ -46,7 +54,11 @@ world_democratic_countries = {
 	name = COLLECTION_WORLD_DEMOCRATIC_COUNTRIES
 	operators = {
 		limit = {
-			has_government = democratic
+			OR = {
+				has_government = socialism
+				has_government = liberalism
+				has_government = conservatism
+			}
 		}
 	}
 }
@@ -57,7 +69,11 @@ world_uncapitulated_democratic_countries_and_dominions = {
 	name = COLLECTION_UNCAPITULATED_DEMOCRATIC_COUNTRIES_AND_DOMINIONS
 	operators = {
 		limit = {
-			has_government = democratic
+			OR = {
+				has_government = socialism
+				has_government = liberalism
+				has_government = conservatism
+			}
 			has_capitulated = no
 			OR = {
 				is_subject = no
@@ -113,7 +129,7 @@ europe_non_aligned_countries = {
 	operators = {
 		limit = {
 			capital_scope = { is_on_continent = europe }
-			has_government = neutrality 
+			has_government = despotism 
 		}
 	}
 }	
@@ -198,7 +214,12 @@ world_non_fascist_controlled_states = {
 	input = game:all_states
 	operators = {
 		limit = {
-			controller = { NOT = { has_government = fascism } }
+			controller = {
+				NOT = {
+				has_government = totalitarianism
+				has_government = ultra_nationalism
+			}
+		}
 		}
 	}
 }
@@ -543,7 +564,10 @@ non_fascist_controlled_states_on_my_continent = {
 	input = collection:states_on_my_continent
 	operators = {
 		limit = {
-			controller = { NOT = { has_government = fascism } }
+			controller = { NOT = {
+				has_government = totalitarianism
+				has_government = ultra_nationalism
+			} }
 		}
 	}
 	name = COLLECTION_NON_FASCIST_STATES_MY_CONTINENT
@@ -561,7 +585,11 @@ non_democratic_controlled_states_on_my_continent = {
 	input = collection:states_on_my_continent
 	operators = {
 		limit = {
-			controller = { NOT = { has_government = democratic } }
+			controller = { NOT = {
+				has_government = socialism
+				has_government = liberalism
+				has_government = conservatism
+				} }
 		}
 	}
 	name = COLLECTION_NON_DEMOCRATIC_STATES_MY_CONTINENT
@@ -655,7 +683,10 @@ fascist_controlled_states_my_continent = {
 		limit = {
 			is_on_same_continent_as = ROOT
 			controller = {
-				has_government = fascism
+				OR = {
+					has_government = totalitarianism
+				    has_government = ultra_nationalism
+				}
 			}
 		}
 	}
@@ -670,8 +701,11 @@ anti_communist_controlled_states_my_continent = {
 			is_on_same_continent_as = ROOT
 			controller = {
 				OR = {
-					has_government = fascism
-					has_government = democratic
+					has_government = totalitarianism
+					has_government = ultra_nationalism
+					has_government = socialism
+					has_government = liberalism
+					has_government = conservatism
 				}
 			}
 		}
@@ -687,7 +721,9 @@ anti_fascist_controlled_states_my_continent = {
 			controller = {
 				OR = {
 					has_government = communism
-					has_government = democratic
+					has_government = socialism
+					has_government = liberalism
+					has_government = conservatism
 				}
 			}
 		}

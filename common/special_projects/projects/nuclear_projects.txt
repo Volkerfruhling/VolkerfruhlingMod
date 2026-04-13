@@ -428,11 +428,11 @@ sp_nuclear_engines = {
 			
 		}
 
-		enable_equipment_modules = {
-			sub_ship_nuclear_engine_1
-			heavy_ship_nuclear_engine_1
-			carrier_ship_nuclear_engine_1
-		}
+		#enable_equipment_modules = {
+		#	sub_ship_nuclear_engine_1
+		#	heavy_ship_nuclear_engine_1
+		#	carrier_ship_nuclear_engine_1
+		#}
 	}
 	
 	empty_reward_weight = {

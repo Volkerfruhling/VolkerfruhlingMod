@@ -56,6 +56,7 @@ ideologies = {
 
 			socialism_ideology = {
 			}
+			marxism = {}
 			socialdemocratism = {}
 			democratic_socialism = {}
 			social_populism = {}

@@ -163,12 +163,12 @@ sp_naval_cruiser_submarine = {
 						}
 					}
 					
-					enable_equipment_modules = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						ship_light_battery_sub
-					}
+					#enable_equipment_modules = {
+					#	limit = {
+					#		has_dlc = "Man the Guns"
+					#	}
+					#	ship_light_battery_sub
+					#}
 				}
 			}
 		}
@@ -606,9 +606,9 @@ sp_naval_rocket_launching_submarine = {
 			rocket_submarine
 		}
 
-		enable_equipment_modules = {
-			sub_missile_launcher
-		}
+		#enable_equipment_modules = {
+		#	sub_missile_launcher
+		#}
 	}
 
 	generic_prototype_rewards = {
@@ -800,12 +800,12 @@ sp_naval_nuclear_missile_submarine = {
 			}
 			nuclear_missile_submarine
 		}
-		enable_equipment_modules = {
-			limit = {
-				 has_dlc = "Man the Guns" 
-			}
-			slbm_launcher
-		}
+		#enable_equipment_modules = {
+		#	limit = {
+		#		 has_dlc = "Man the Guns" 
+		#	}
+		#	slbm_launcher
+		#}
 		
 	}
 
@@ -978,9 +978,9 @@ sp_naval_nuclear_torpedo = {
 		enable_equipments = {
 			
 		}
-		enable_equipment_modules = {
-			ship_torpedo_sub_nuclear
-		}
+		#enable_equipment_modules = {
+		#	ship_torpedo_sub_nuclear
+		#}
 		
 	}
 
@@ -1343,8 +1343,9 @@ sp_naval_aip_engine = {
 			ROOT = { 
 				original_tag = JAP
 				OR = {
-					has_government = fascism
-					has_government = neutrality
+					has_government = totalitarianism
+					has_government = ultra_nationalism
+					has_government = despotism
 				}
 			}
 		}
@@ -1401,12 +1402,12 @@ sp_naval_aip_engine = {
 			}
 			
 		}
-		enable_equipment_modules = {
-			limit = {
-				has_dlc = "Man the Guns"
-			}
-			 ship_engine_sub_aip_1
-		}
+		#enable_equipment_modules = {
+		#	limit = {
+		#		has_dlc = "Man the Guns"
+		#	}
+		#	 ship_engine_sub_aip_1
+		#}
 
 		enable_subunits = { 
 			
@@ -1516,8 +1517,9 @@ sp_naval_anechoic_tiles = {
 			ROOT = { 
 				original_tag = JAP
 				OR = {
-					has_government = fascism
-					has_government = neutrality
+					has_government = totalitarianism
+					has_government = ultra_nationalism
+					has_government = despotism
 				}
 			}
 		}
@@ -1567,13 +1569,13 @@ sp_naval_anechoic_tiles = {
 				}
 			}
 		}
-		enable_equipment_modules = {	
-			limit = { 
-				has_dlc = "Man the Guns" 
-			} 		
-			ship_anechoic_tile
-				
-			}
+		#enable_equipment_modules = {	
+		#	limit = { 
+		#		has_dlc = "Man the Guns" 
+		#	} 		
+		#	ship_anechoic_tile
+		#		
+		#	}
 		
 		
 
@@ -1681,10 +1683,10 @@ specialization = specialization_naval
 		modifier = {
 			factor = 2
 			ROOT = { 
-				original_tag = JAP
 				OR = {
-					has_government = fascism
-					has_government = neutrality
+					has_government = totalitarianism
+					has_government = ultra_nationalism
+					has_government = despotism
 				}
 			}
 		}
@@ -1737,9 +1739,9 @@ specialization = specialization_naval
 			ship_hull_carrier_submarine
 		}
 
-		enable_equipment_modules = {
-			 ship_submarine_deck_space
-		}
+		#enable_equipment_modules = {
+		#	 ship_submarine_deck_space
+		#}
 
 		enable_subunits = { 
 			
@@ -1847,10 +1849,10 @@ sp_naval_torpedo_cruiser = {
 		modifier = {
 			factor = 2
 			ROOT = { 
-				original_tag = JAP
 				OR = {
-					has_government = fascism
-					has_government = neutrality
+					has_government = totalitarianism
+					has_government = ultra_nationalism
+					has_government = despotism
 				}
 			}
 		}
@@ -2050,7 +2052,11 @@ sp_naval_super_heavy_battleship = {
 			factor = 0 
 			AND = {
 				ROOT = { is_major = no } # Pointless unless we are big enough to do this
-				ROOT = { has_government = democratic }# Don't spend the tax payers' money on this, then they won't vote for you again
+				ROOT = { OR = {
+					has_government = socialism
+					has_government = liberalism
+					has_government = conservatism
+				} }# Don't spend the tax payers' money on this, then they won't vote for you again
 			}
 		}
 		modifier = {
@@ -2064,8 +2070,9 @@ sp_naval_super_heavy_battleship = {
 			ROOT = { 
 				original_tag = JAP
 				OR = {
-					has_government = fascism
-					has_government = neutrality
+					has_government = totalitarianism
+					has_government = ultra_nationalism
+					has_government = despotism
 				}
 			}
 		}
@@ -3143,11 +3150,11 @@ sp_naval_ice_carrier = {
 					cost_factor = 0.5
 					equipment = ship_hull_mega_carrier
 				}
-				SP_create_variant_of_habakkuk_for_production_line = yes
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_TECH
-					TECH = sp_refined_pykrete
-				}
+				#SP_create_variant_of_habakkuk_for_production_line = yes
+				#custom_effect_tooltip = {
+				#	localization_key = SP_UNLOCK_TECH
+				#	TECH = sp_refined_pykrete
+				#}
 				add_equipment_production =	{
 					equipment = {
 						type = ship_hull_mega_carrier
@@ -3185,11 +3192,11 @@ sp_naval_ice_carrier = {
 			mega_carrier
 		}
 
-		enable_equipment_modules = {	
-			limit = { has_dlc = "Man the Guns" } 		
-			big_ship_deck_space
-			ship_armor_ice_carrier_deck_1
-		}	
+		#enable_equipment_modules = {	
+		#	limit = { has_dlc = "Man the Guns" } 		
+		#	big_ship_deck_space
+		#	ship_armor_ice_carrier_deck_1
+		#}	
 
 
 	}
@@ -3811,9 +3818,9 @@ specialization = specialization_naval
 			}
 			escort_carrier
 		}
-		enable_equipment_modules = {
-			 ship_escort_deck_space
-		}
+		#enable_equipment_modules = {
+		#	 ship_escort_deck_space
+		#}
 
 		enable_subunits = { 
 			
