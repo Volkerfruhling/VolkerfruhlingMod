@@ -283,10 +283,7 @@ china_potential_core_states = {
 	input = game:all_states
 	operators = {
 		limit = {
-			OR = {
-				is_core_of = CHI
-				is_core_of = PRC
-			}
+
 		}
 	}
 }
@@ -307,10 +304,6 @@ china_core_states_controlled_by_faction_leader_ideology = {
 		faction_members
 		controlled_states
 		limit = {
-			OR = {
-				is_core_of = CHI
-				is_core_of = PRC
-			}
 			controller = {
 				faction_leader = {
 					has_government = PREV
@@ -763,7 +756,6 @@ central_powers_controlled_central_powers_border_states = {
 				NOT = {
 					OR = {
 						original_tag = GER
-						original_tag = AUS
 						original_tag = HUN
 						original_tag = BUL
 					}
@@ -828,19 +820,7 @@ potential_habsburg_countries_total = {
 				}
 				AND = {
 					exists = yes
-					original_tag = AUS
-				}
-				AND = {
-					exists = yes
-					original_tag = CZE
-				}
-				AND = {
-					exists = yes
 					original_tag = UKR
-				}
-				AND = {
-					exists = yes
-					original_tag = SPR
 				}
 				AND = {
 					exists = yes

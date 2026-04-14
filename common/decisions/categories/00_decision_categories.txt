@@ -91,8 +91,6 @@ democratic_on_the_rise = {
 			AND = {
 				has_dlc = "No Step Back"
 				OR = {
-					original_tag = EST
-					original_tag = LAT
 					original_tag = LIT
 					original_tag = POL
 				}
@@ -138,8 +136,6 @@ communism_on_the_rise = {
 			AND = {
 				has_dlc = "No Step Back"
 				OR = {
-					original_tag = EST
-					original_tag = LAT
 					original_tag = LIT
 					original_tag = POL
 				}
@@ -424,7 +420,6 @@ generic_refit_civilian_ships_category = {
 		OR = {
 			original_tag = DEN
 			original_tag = FIN
-			original_tag = ICE
 		}
 		has_dlc = "Arms Against Tyranny"
 	}

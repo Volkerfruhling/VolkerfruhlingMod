@@ -245,8 +245,6 @@ ideas = {
 				}
 				modifier = {
 					factor = 0
-
-					tag = SOV
 					has_war = yes
 					OR = {
 						has_manpower < 2000000
@@ -358,12 +356,6 @@ ideas = {
 		free_trade = {
 
 			available = {
-				if = {
-					limit = {
-						original_tag = SPR
-						has_dlc = "La Resistance"
-					}
-				}
 			}
 
 			cost = 150
@@ -430,20 +422,6 @@ ideas = {
 		export_focus = {
 
 			available = {
-
-				if = {
-					limit = {
-						original_tag = CHI
-						has_dlc = "Waking the Tiger"
-					}
-					NOT = { has_idea = CHI_nine_power_treaty }
-				}
-				if = {
-					limit = {
-						original_tag = SPR
-						has_dlc = "La Resistance"
-					}
-				}
 			}
 
 
@@ -517,19 +495,6 @@ ideas = {
 				}
 
 
-				if = {
-					limit = {
-						original_tag = CHI
-						has_dlc = "Waking the Tiger"
-					}
-					NOT = { has_idea = CHI_nine_power_treaty }
-				}
-				if = {
-					limit = {
-						original_tag = SPR
-						has_dlc = "La Resistance"
-					}
-				}
 			}
 
 			cost = 150
@@ -600,13 +565,6 @@ ideas = {
 					has_idea = tot_economic_mobilisation
 				}
 
-				if = {
-					limit = {
-						original_tag = CHI
-						has_dlc = "Waking the Tiger"
-					}
-					NOT = { has_idea = CHI_nine_power_treaty }
-				}
 			}
 
 			rule = {

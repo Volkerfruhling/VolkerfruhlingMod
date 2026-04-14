@@ -1839,7 +1839,6 @@ early_ship_hull_carrier = {
 				factor = 7
 				OR = {
 					tag = GER
-					tag = HOL
 				}
 			}
 			modifier = {
@@ -1888,7 +1887,6 @@ early_ship_hull_carrier = {
 				factor = 7
 				OR = {
 					tag = GER
-					tag = HOL
 				}
 			}
 		}

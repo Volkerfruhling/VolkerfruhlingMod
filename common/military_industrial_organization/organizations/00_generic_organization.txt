@@ -2244,10 +2244,6 @@ generic_raider_ship_organization = {
 	icon = GFX_idea_generic_naval_manufacturer_3
 
 	allowed = {
-		AND = {
-			has_dlc = "Arms Against Tyranny"
-			original_tag = ICE
-		}
 		#always = no # Archetype only - countries using it have their own versions
 	}
 

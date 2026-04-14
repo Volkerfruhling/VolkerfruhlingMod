@@ -67,7 +67,7 @@ focus_tree = {
 				days = 7
 			}
 			add_stability = -0.1
-			add_ideas = ITA_growing_nationalism
+			#add_ideas = ITA_growing_nationalism
 		}
 
 	}

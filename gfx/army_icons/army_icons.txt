@@ -442,7 +442,7 @@
 				tag = GER
 				tag = ENG
 				tag = USA
-				tag = SOV
+				#tag = SOV
 			}
 		}
 	}
@@ -458,7 +458,7 @@
 				tag = GER
 				tag = ENG
 				tag = USA
-				tag = SOV
+				#tag = SOV
 			}
 		}
 	}
@@ -474,7 +474,7 @@
 				tag = GER
 				tag = ENG
 				tag = USA
-				tag = SOV
+				#tag = SOV
 			}
 		}
 	}
@@ -512,7 +512,7 @@
 				tag = GER
 				tag = ENG
 				tag = USA
-				tag = SOV
+				#tag = SOV
 			}
 		}
 	}
@@ -528,7 +528,7 @@
 				tag = GER
 				tag = ENG
 				tag = USA
-				tag = SOV
+				#tag = SOV
 			}
 		}
 	}
@@ -538,7 +538,7 @@
 		available = 
 		{
 			has_dlc = "Waking the Tiger"
-			tag = SOV
+			#tag = SOV
 		}
 	}
 	icon = {
@@ -547,7 +547,7 @@
 		available = 
 		{
 			has_dlc = "Waking the Tiger"
-			tag = SOV
+			#tag = SOV
 		}
 	}
 	icon = {
@@ -556,7 +556,7 @@
 		available = 
 		{
 			has_dlc = "Waking the Tiger"
-			tag = SOV
+			#tag = SOV
 		}
 	}
 	icon = {
@@ -565,7 +565,7 @@
 		available = 
 		{
 			has_dlc = "Waking the Tiger"
-			tag = SOV
+			#tag = SOV
 		}
 	}
 	icon = {
@@ -574,7 +574,7 @@
 		available = 
 		{
 			has_dlc = "Waking the Tiger"
-			tag = SOV
+			#tag = SOV
 		}
 	}
 	icon = {
@@ -583,7 +583,7 @@
 		available = 
 		{
 			has_dlc = "Waking the Tiger"
-			tag = SOV
+			#tag = SOV
 		}
 	}
 	icon = {
@@ -592,7 +592,7 @@
 		available = 
 		{
 			has_dlc = "Waking the Tiger"
-			tag = SOV
+			#tag = SOV
 		}
 	}
 	icon = {
@@ -601,7 +601,7 @@
 		available = 
 		{
 			has_dlc = "Waking the Tiger"
-			tag = SOV
+			#tag = SOV
 		}
 	}
 	icon = {
@@ -609,7 +609,7 @@
 		name = "213. Tanks"
 		available = {
 			has_dlc = "Waking the Tiger"
-			tag = SOV
+			#tag = SOV
 		}
 	}
 	icon = {
@@ -618,7 +618,7 @@
 		available = 
 		{
 			has_dlc = "Waking the Tiger"
-			tag = SOV
+			#tag = SOV
 		}
 	}
 	icon = {
