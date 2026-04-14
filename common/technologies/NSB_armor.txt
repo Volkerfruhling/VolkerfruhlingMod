@@ -1532,6 +1532,10 @@ technologies = {
 
 	sp_armored_advanced_flamethrower_tech = {
 
+		allow_branch = {
+			always = no
+		}
+
 		allow = {
 			ROOT = {
 				is_special_project_completed = sp:sp_land_flamethrower_tank
@@ -1648,6 +1652,7 @@ technologies = {
 	sp_armored_lc_naval_engine_conversion_tech = {
 		allow_branch = {
 			 has_dlc = "Gotterdammerung"
+			 always = no
 		}
 
 		allow = {
@@ -1722,6 +1727,7 @@ technologies = {
 	sp_armored_lc_transmission_improvements_tech = {
 		allow_branch = {
 			 has_dlc = "Gotterdammerung"
+			 always = no
 		}
 
 		allow = {
@@ -1822,6 +1828,7 @@ technologies = {
 	sp_armored_lc_specialized_field_manuals_tech = {
 		allow_branch = {
 			 has_dlc = "Gotterdammerung"
+			 always = no
 		}
 
 		allow = {
@@ -1892,6 +1899,7 @@ technologies = {
 	sp_armored_lc_weapon_fire_control_tech = {
 		allow_branch = {
 			 has_dlc = "Gotterdammerung"
+			 always = no
 		}
 
 		allow = {
@@ -1956,6 +1964,7 @@ technologies = {
 	sp_armored_lc_high_impact_obliterator_cannon_tech = {
 		allow_branch = {
 			 has_dlc = "Gotterdammerung"
+			 always = no
 		}
 
 		allow = {

@@ -101,7 +101,8 @@ faction_goal_guardians_of_peace = {
 	visible = {
 		date < 1939.1.1
 		FROM = {
-			NOT = { has_government = fascism }
+			NOT = { has_government = totalitarianism }
+			NOT = { has_government = ultra_nationalism }
 			NOT = { has_government = communism }
 			NOT = { has_country_flag = guardians_of_peace_been_at_war_flag }
 		}
@@ -133,7 +134,11 @@ faction_goal_guardians_of_peace = {
 		base = 0
 		modifier = {
 			add = 1
-			has_government = democratic
+			OR = {
+				has_government = socialism
+				has_government = liberalism
+				has_government = conservatism
+			}
 		}
 	}
 }

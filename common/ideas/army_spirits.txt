@@ -63,13 +63,21 @@ ideas = {
 					factor = 0
 					OR = {
 						NOT = { has_dlc = "No Step Back" }
-						NOT = { has_government = democratic }
+						NOT = { OR = {
+							has_government = socialism
+							has_government = liberalism
+							has_government = conservatism
+						} }
 					}
 				}
 
 				modifier = {
 					factor = 2
-					has_government = democratic
+					OR = {
+						has_government = socialism
+						has_government = liberalism
+						has_government = conservatism
+					}
 				}
 			}
 
@@ -113,7 +121,7 @@ ideas = {
 	#
 				#	OR = {
 				#	has_government = fascism
-				#	has_government = neutrality
+				#	has_government = despotism
 				#	}
 				#}
 			}
@@ -129,16 +137,18 @@ ideas = {
 					factor = 0
 					OR = {
 						NOT = { has_dlc = "No Step Back" }
-						NOT = { has_government = fascism }
-						NOT = { has_government = neutrality }
+						NOT = { has_government = totalitarianism }
+						NOT = { has_government = ultra_nationalism }
+						NOT = { has_government = despotism }
 					}
 				}
 
 				modifier = {
 					factor = 2
 					OR = {
-						has_government = fascism
-						has_government = neutrality
+						has_government = totalitarianism
+						has_government = ultra_nationalism
+						has_government = despotism
 					}
 				}
 			}
@@ -445,7 +455,11 @@ ideas = {
 
 		relief_of_command_spirit = {
 			ledger = army
-			visible = { has_government = democratic }
+			visible = { OR = {
+				has_government = socialism
+				has_government = liberalism
+				has_government = conservatism
+			} }
 			modifier = {
 				experience_gain_army_factor = 0.25
 				army_advisor_cost_factor = -0.5
@@ -457,13 +471,21 @@ ideas = {
 					factor = 0
 					OR = {
 						NOT = { has_dlc = "No Step Back" }
-						NOT = {has_government = democratic }
+						NOT = { OR = {
+							has_government = socialism
+							has_government = liberalism
+							has_government = conservatism
+						}}
 					}
 				}
 
 				modifier = {
 					factor = 2
-					has_government = democratic
+					OR = {
+						has_government = socialism
+						has_government = liberalism
+						has_government = conservatism
+					}
 				}
 			}
 		}
@@ -495,7 +517,12 @@ ideas = {
 
 		state_serves_the_military_spirit = {
 			ledger = army
-			visible = { has_government = fascism }
+			visible = {
+				OR = {
+					has_government = totalitarianism
+					has_government = ultra_nationalism
+				}
+			}
 			modifier = {
 				offensive_war_stability_factor = 0.1
 				mobilization_laws_cost_factor = -0.25
@@ -507,13 +534,17 @@ ideas = {
 					factor = 0
 					OR = {
 						NOT = { has_dlc = "No Step Back" }
-						NOT = {has_government = fascism }
+						NOT = { has_government = totalitarianism }
+						NOT = { has_government = ultra_nationalism }
 					}
 				}
 
 				modifier = {
 					factor = 2
-					has_government = fascism
+					OR = {
+						has_government = totalitarianism
+						has_government = ultra_nationalism
+					}
 				}
 			}
 		}

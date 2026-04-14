@@ -626,7 +626,7 @@ FRA_host_the_german_exiles = {
 FRA_reorganized_departments = {
 	valid_relation_trigger = {
 		ROOT = {
-			has_government = neutrality
+			has_government = despotism
 		}
 	}
 	compliance_gain = 0.25
@@ -635,7 +635,10 @@ FRA_reorganized_departments = {
 GER_rescued_mussolini = {
 	valid_relation_trigger = {
 		ROOT = {
-			has_government = fascism
+			OR = {
+				has_government = totalitarianism
+				has_government = ultra_nationalism
+			}
 		}
 	}
 	compliance_gain = 0.5

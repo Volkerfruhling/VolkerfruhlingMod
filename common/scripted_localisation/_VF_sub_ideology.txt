@@ -178,9 +178,9 @@
 
     text = { #共産主義
         trigger = {
-            has_country_leader_ideology = communism_ideolog
+            has_country_leader_ideology = communism_ideology
         }
-        localization_key = communism_ideolog
+        localization_key = communism_ideology
     }
 
     text = { #集権的共産主義
