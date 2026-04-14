@@ -147,10 +147,6 @@ sp_nuclear_reactor = {
 							}
 						}
 						#custom_effect_tooltip = sp_nuclear_isotope_separation_choice_reward_tt
-						add_timed_idea = {
-							idea = special_project_consumer_costs_high
-							days = 365
-						}
 						FROM = { add_project_progress_ratio = constant:sp_progress.gain.high }
 					}
 				}

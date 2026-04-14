@@ -260,6 +260,9 @@ country_event = { # 戦争からの撤退
 	id = event_SER_pol.9
 	title = event_SER_pol.9.title
 	desc = event_SER_pol.9.desc
+
+	fire_only_once = yes 
+	
 	trigger = {
 		tag = HUN
 		has_global_flag = vf_started_balkan_war
@@ -371,11 +374,18 @@ country_event = { # 戦争からの撤退
 			}
 		}
 	}
+
+	option = {
+		name = event_SER_pol.9.a
+	}
 }
 country_event = { # 講話
 	id = event_SER_pol.10
 	title = event_SER_pol.10.title
 	desc = event_SER_pol.10.desc
+
+	fire_only_once = yes 
+
 	trigger = {
 		BUL = {
 			has_global_flag = vf_started_balkan_war
@@ -484,5 +494,9 @@ country_event = { # 講話
 				}
 			}
 		}
+	}
+
+	option = {
+		name = event_SER_pol.10.a
 	}
 }

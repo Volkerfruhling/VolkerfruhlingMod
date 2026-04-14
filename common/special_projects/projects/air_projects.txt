@@ -1447,12 +1447,12 @@ sp_air_supersonic_jet = {
 							add_equipment_bonus = {
 								name = sp_air_supersonic_jet_cost_reduction
 								bonus = {
-									small_plane_airframe_5 = {
-										air_range = -0.05
-										maximum_speed = -0.05
-										reliability = -0.1
-										build_cost_ic = -0.1
-									}
+									#small_plane_airframe_5 = {
+									#	air_range = -0.05
+									#	maximum_speed = -0.05
+									#	reliability = -0.1
+									#	build_cost_ic = -0.1
+									#}
 								}
 							}
 						}
@@ -1460,12 +1460,12 @@ sp_air_supersonic_jet = {
 							add_equipment_bonus = {
 								name = sp_air_supersonic_jet_cost_reduction
 								bonus = {
-									supersonic_fighter_equipment_1 = {
-										air_range = -0.05
-										maximum_speed = -0.05
-										reliability = -0.1
-										build_cost_ic = -0.1
-									}
+									#supersonic_fighter_equipment_1 = {
+									#	air_range = -0.05
+									#	maximum_speed = -0.05
+									#	reliability = -0.1
+									#	build_cost_ic = -0.1
+									#}
 								}
 							}						
 						}
@@ -1484,9 +1484,9 @@ sp_air_supersonic_jet = {
 							add_equipment_bonus = {
 								name = sp_air_supersonic_jet_compromise
 								bonus = {
-									small_plane_airframe_5 = {
-										reliability = 0.03
-									}
+									#small_plane_airframe_5 = {
+									#	reliability = 0.03
+									#}
 								}
 							}
 						}
@@ -1494,9 +1494,9 @@ sp_air_supersonic_jet = {
 							add_equipment_bonus = {
 								name = sp_air_supersonic_jet_compromise
 								bonus = {
-									supersonic_fighter_equipment_1 = {
-										reliability = 0.05
-									}
+									#supersonic_fighter_equipment_1 = {
+									#	reliability = 0.05
+									#}
 								}
 							}						
 						}
@@ -1514,12 +1514,12 @@ sp_air_supersonic_jet = {
 							add_equipment_bonus = {
 								name = sp_air_supersonic_jet_cost_increase
 								bonus = {
-									small_plane_airframe_5 = {
-										reliability = 0.05
-										build_cost_ic = 0.1
-										air_agility = 0.05
-										air_defence = 0.05
-									}
+									#small_plane_airframe_5 = {
+									#	reliability = 0.05
+									#	build_cost_ic = 0.1
+									#	air_agility = 0.05
+									#	air_defence = 0.05
+									#}
 								}
 							}
 						}
@@ -1527,12 +1527,12 @@ sp_air_supersonic_jet = {
 							add_equipment_bonus = {
 								name = sp_air_supersonic_jet_cost_increase
 								bonus = {
-									supersonic_fighter_equipment_1 = {
-										reliability = 0.05
-										build_cost_ic = 0.1
-										air_agility = 0.05
-										air_defence = 0.05
-									}
+									#supersonic_fighter_equipment_1 = {
+									#	reliability = 0.05
+									#	build_cost_ic = 0.1
+									#	air_agility = 0.05
+									#	air_defence = 0.05
+									#}
 								}
 							}						
 						}

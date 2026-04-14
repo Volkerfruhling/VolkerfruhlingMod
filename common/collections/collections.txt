@@ -140,7 +140,7 @@ countries_china = {
 	name = COLLECTION_COUNTRIES_CHINA
 	operators = {
 		limit = {
-			WTT_is_chinese_country = yes 
+			#WTT_is_chinese_country = yes 
 		}
 	}
 }
