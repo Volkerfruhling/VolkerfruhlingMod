@@ -3,7 +3,7 @@ tags={
 	"Alternative History"
 }
 name="Volkerfruhling"
-supported_version="1.17.*"
+supported_version="1.18.*"
 replace_path="common/abilities"
 replace_path="common/autonomous_states"
 replace_path="common/ai_strategy"
