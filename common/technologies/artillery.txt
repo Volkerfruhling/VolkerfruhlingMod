@@ -1344,6 +1344,7 @@ technologies = {
 
 		allow_branch = {
 			 has_dlc = "Gotterdammerung"
+			 always = no
 		}
 
 		allow = {
@@ -1397,6 +1398,7 @@ technologies = {
 		
 		allow_branch = {
 			 has_dlc = "Gotterdammerung"
+			 always = no
 		}
 
 		allow = {
@@ -1450,6 +1452,7 @@ technologies = {
 		
 		allow_branch = {
 			 has_dlc = "Gotterdammerung"
+			 always = no
 		}
 
 		allow = {
@@ -1487,6 +1490,7 @@ technologies = {
 	sp_variable_time_fuze_shells = {
 		allow_branch = {
 			 has_dlc = "Gotterdammerung"
+			 always = no
 		}
 
 		allow = {

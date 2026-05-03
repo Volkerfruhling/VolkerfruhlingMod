@@ -926,7 +926,7 @@ ideas = {
 		law = yes
 		use_list_view = yes
 
-		8_hour_workday = {
+		_8_hour_workday = {
 
             cost = 0
             removal_cost = -1
@@ -955,7 +955,7 @@ ideas = {
     
         }
 
-		10_hour_workday = {
+		_10_hour_workday = {
 
             cost = 0
             removal_cost = -1
@@ -985,7 +985,7 @@ ideas = {
     
         }
 
-		12_hour_workday = {
+		_12_hour_workday = {
 
             cost = 0
             removal_cost = -1
@@ -1013,7 +1013,7 @@ ideas = {
     
         }
 
-		14_hour_workday = {
+		_14_hour_workday = {
 
             cost = 0
             removal_cost = -1
@@ -1040,7 +1040,7 @@ ideas = {
     
         }
 
-		16_hour_workday = {
+		_16_hour_workday = {
 
             cost = 0
             removal_cost = -1

@@ -198,7 +198,6 @@ technologies = {
 		categories = {
 			naval_artillery
 			naval_equipment
-			cl_tech
 			mio_cat_tech_all_screen_ship_and_modules
 			mio_cat_tech_all_cruiser_and_modules
 		}
@@ -247,7 +246,6 @@ technologies = {
 		categories = {
 			naval_artillery
 			naval_equipment
-			cl_tech
 			mio_cat_tech_all_screen_ship_and_modules
 			mio_cat_tech_all_cruiser_and_modules
 		}
@@ -295,7 +293,6 @@ technologies = {
 		categories = {
 			naval_artillery
 			naval_equipment
-			cl_tech
 			mio_cat_tech_all_screen_ship_and_modules
 			mio_cat_tech_all_cruiser_and_modules
 		}
@@ -339,7 +336,6 @@ technologies = {
 		categories = {
 			naval_artillery
 			naval_equipment
-			cl_tech
 			mio_cat_tech_all_screen_ship_and_modules
 			mio_cat_tech_all_cruiser_and_modules
 		}
@@ -796,7 +792,10 @@ technologies = {
 	transport = {
 
 		transport_capacity = -0.33
-		naval_invasion_capacity = 10
+		naval_invasion_capacity = 100 #TODO: Temporary Solution until we will no longer have dependancy on this stat
+		naval_invasion_prep_days = -30
+		naval_invasion_division_cap = 2 
+		naval_invasion_plan_cap = 2
 		
 		path = {
 			leads_to_tech = landing_craft 
@@ -848,9 +847,12 @@ technologies = {
 	
 	landing_craft = {
 
-		invasion_preparation = -0.25
+		#invasion_preparation = -0.25
 		amphibious_invasion_defence = 0.15
-		naval_invasion_capacity = 20
+		naval_invasion_prep_days = -30
+		naval_invasion_division_cap = 2 
+		naval_invasion_plan_cap = 2	
+		#naval_invasion_capacity = 20
 
 		path = {
 			leads_to_tech = tank_landing_craft 
@@ -895,13 +897,13 @@ technologies = {
 				tag = JAP
 				OR = {
 					has_war_with = USA
-					CHI = {  
-						OR = { 
-							has_capitulated = yes 
-							exists = no
-		                    is_subject_of = JAP
-						}
-					}
+					#CHI = {  
+					#	OR = { 
+					#		has_capitulated = yes 
+					#		exists = no
+		            #        is_subject_of = JAP
+					#	}
+					#}
 				}
 			}
 			
@@ -927,7 +929,9 @@ technologies = {
 
 		amphibious_invasion = 0.25
 		amphibious_invasion_defence = 0.5
-		naval_invasion_capacity = 100
+		naval_invasion_prep_days = -15
+		naval_invasion_division_cap = 8 
+		naval_invasion_plan_cap = 4			
 
 		research_cost = 2
 		start_year = 1933

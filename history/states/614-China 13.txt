@@ -6,6 +6,10 @@ state={
 	
 	state_category = town
 
+	resources={
+		coal = 5 
+	}
+
 	history={
 		owner = QIN
 		add_core_of = QIN

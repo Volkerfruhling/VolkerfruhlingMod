@@ -425,10 +425,6 @@ sp_rockets_ballistic_missile = {
 				
 				iteration_output = {
 					country_effects = {
-						add_timed_idea = {
-							idea = special_project_consumer_costs_medium
-							days = 365
-						}
 						FROM = { add_project_progress_ratio = constant:sp_progress.gain.medium }
 					}
 				}
@@ -787,10 +783,6 @@ sp_rockets_long_range_ballistic_missile = {
 
 					country_effects = {
 						set_country_flag = no_new_rocket_facility_built
-						add_timed_idea = {
-							idea = special_project_consumer_costs_low
-							days = 365
-						}
 						FROM = { add_project_progress_ratio = constant:sp_progress.gain.medium }
 						random_owned_controlled_state = {
 								limit = {
@@ -1067,7 +1059,7 @@ sp_rocket_interceptor = {
 			}
 			if = {
 				limit = { has_dlc = "By Blood Alone" }
-				 SP_create_variant_based_on_country_improved_small_airframe_rocket_engine = yes	
+				# SP_create_variant_based_on_country_improved_small_airframe_rocket_engine = yes	
 			}		
 		}
 		enable_equipments = {

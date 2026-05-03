@@ -89,31 +89,6 @@ leader_traits = {
 
 	imperial_sanction = {
 		random = no
-
-		targeted_modifier = {
-			tag = CHI
-			generate_wargoal_tension_against = 0.75
-		}
-		targeted_modifier = {
-			tag = PRC
-			generate_wargoal_tension_against = 0.75
-		}
-		targeted_modifier = {
-			tag = SHX
-			generate_wargoal_tension_against = 0.75
-		}
-		targeted_modifier = {
-			tag = GXC
-			generate_wargoal_tension_against = 0.75
-		}
-		targeted_modifier = {
-			tag = YUN
-			generate_wargoal_tension_against = 0.75
-		}
-		targeted_modifier = {
-			tag = XSM
-			generate_wargoal_tension_against = 0.75
-		}
 		targeted_modifier = {
 			tag = SIK
 			generate_wargoal_tension_against = 0.75
@@ -454,18 +429,18 @@ leader_traits = {
 		}
 	}
 
-	dislikes_soviet = {
-		random = no
-		ai_strategy = {
-			type = antagonize
-			id = "SOV"
-			value = 200
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
+	#dislikes_soviet = {
+	#	random = no
+	#	ai_strategy = {
+	#		type = antagonize
+	#		id = "SOV"
+	#		value = 200
+	#	}
+#
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#}
 
 	likes_germany = {
 		random = no
@@ -1417,18 +1392,18 @@ leader_traits = {
 		justify_war_goal_time = -0.15
 	}
 
-	likes_turkey = {
-		random = no
-		ai_strategy = {
-			type = befriend
-			id = "TUR"
-			value = 50
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
+	#likes_turkey = {
+	#	random = no
+	#	ai_strategy = {
+	#		type = befriend
+	#		id = "TUR"
+	#		value = 50
+	#	}
+#
+	#	ai_will_do = {
+	#		factor = 1
+	#	}
+	#}
 
 	archon_basileus = {
 		random = no
@@ -6452,7 +6427,7 @@ leader_traits = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				not = { has_completed_focus = USA_suspend_the_presecution }
+				#not = { has_completed_focus = USA_suspend_the_presecution }
 				factor = 0
 			}
 		}
@@ -6479,7 +6454,7 @@ leader_traits = {
 			factor = 1
 			modifier = {
 				tag = USA
-				NOT = { has_completed_focus = USA_america_first }
+				#NOT = { has_completed_focus = USA_america_first }
 				factor = 0
 			}
 		}
@@ -6494,7 +6469,7 @@ leader_traits = {
 			factor = 1
 			modifier = {
 				tag = HUN
-				NOT = { has_completed_focus = HUN_invite_the_habsburg_prince }
+				#NOT = { has_completed_focus = HUN_invite_the_habsburg_prince }
 				factor = 0
 			}
 		}

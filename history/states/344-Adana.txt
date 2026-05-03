@@ -6,6 +6,10 @@ state={
 	
 	state_category = town
 
+	resources={
+		coal = 2
+	}
+
 	history={
 		owner = OTT
 		add_core_of = OTT

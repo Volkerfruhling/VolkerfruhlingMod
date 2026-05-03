@@ -83,7 +83,11 @@ no_garrison = {
 
 		modifier = {
 			FROM = {
-				has_government = democratic
+				OR = {
+					has_government = socialism
+					has_government = liberalism
+					has_government = conservatism
+				}
 			}
 			has_active_resistance = no
 			add = 200
@@ -114,7 +118,11 @@ autonomous_occupation = {
 	sound_effect = "Martial_Law_Interface_Autonomous_Occupation_Unique_DEM"
 
 	visible = {
-		has_government = democratic #? on design
+		OR = {
+			has_government = socialism
+			has_government = liberalism
+			has_government = conservatism
+		}
 	}
 
 	state_modifier = {

@@ -5,6 +5,10 @@ state = {
 	
 	state_category = rural
 	
+	resources={
+		coal = 12
+	}
+	
 	history = {
 		owner = BOH
 		add_core_of = BOH

@@ -3,6 +3,7 @@ state={
 	name="STATE_212"
 	resources={
 		chromium=1.000
+		coal = 2
 	}
 	provinces={
 		878 893 3937 6857 6923 9818 9862 11813 

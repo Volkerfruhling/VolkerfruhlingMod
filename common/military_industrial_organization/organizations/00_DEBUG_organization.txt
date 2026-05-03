@@ -125,17 +125,17 @@ DEBUG_generic_escort_ship_organization = {
 	}
 }
 
-DEBUG_generic_raider_ship_organization = {
-	include = generic_raider_ship_organization
-	allowed = {	
-		has_dlc = "Arms Against Tyranny"
-		is_debug = yes
-	}
-
-	visible = { #TODO_Manu: All this needs to be removed later on
-		owner = { has_country_flag = mio_show_all_archetypes_flag }
-	}
-}
+#DEBUG_generic_raider_ship_organization = {
+#	include = generic_raider_ship_organization
+#	allowed = {	
+#		has_dlc = "Arms Against Tyranny"
+#		is_debug = yes
+#	}
+#
+#	visible = { #TODO_Manu: All this needs to be removed later on
+#		owner = { has_country_flag = mio_show_all_archetypes_flag }
+#	}
+#}
 
 DEBUG_generic_submarine_organization = {
 	include = generic_submarine_organization

@@ -1,0 +1,20 @@
+faction_template_generic = {
+
+	manifest = faction_manifest_strength_in_unity
+	can_leader_join_other_factions = yes
+	icon = GFX_faction_logo_generic
+	visible = {
+		always = no # Fallback template, should not be selectable 
+	}
+	available = {
+	}
+
+	goals = {
+	}
+
+	default_rules = {
+		change_leader_rule_never
+	}
+	
+	#
+}

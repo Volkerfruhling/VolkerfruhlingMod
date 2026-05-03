@@ -63,7 +63,6 @@ sp_air_radar = {
 				has_dlc = "Gotterdammerung"
 				has_dlc = "No Step Back"
 			}
-			lc_radar
 		}
 
 		enable_equipment_modules = {

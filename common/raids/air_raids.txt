@@ -72,7 +72,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+            #type = equipment
         }
 
 		unit_requirements = {
@@ -321,7 +321,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+           # type = equipment
         }
 
 		unit_requirements = {
@@ -568,7 +568,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+            #type = equipment
         }
 
 		unit_requirements = {
@@ -890,7 +890,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+            #type = equipment
         }
 		launch_sound = raid_launch_air
 
@@ -1130,13 +1130,13 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+            #type = equipment
         }
 
 		unit_requirements = {
 			equipment = {
 				type = { strategic_bomber }
-				modules = { earthshaker_bomb_release }
+				modules = {}
 				amount = { min = 70 }
 			}
 		}
@@ -1356,7 +1356,7 @@ types = {
 		    type = air
 		}
         unit_model = {
-            type = equipment
+            #type = equipment
         }
 
 		unit_requirements = {

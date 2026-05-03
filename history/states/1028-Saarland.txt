@@ -4,6 +4,11 @@ state={
 	provinces={
 		11531 9575
 	}
+
+	resources={
+		steel=30
+		coal = 10
+	}
 	
 	history = {
 		owner = GER

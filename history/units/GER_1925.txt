@@ -1,8 +1,6 @@
 ﻿division_template = {
 	name = "Infanterie-Division"
 
-	division_names_group = GER_Inf_01
-
 	regiments = {
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
@@ -23,8 +21,6 @@
 
 division_template = {
 	name = "Infanterie-Division (mot.)" 			# Used to be SS division -> New system for SS. Also messed up the civil war by refusing to move to the fascists, and immersion-breaking to have them around as royalists
-
-	division_names_group = GER_MOT_02
 
 	regiments = {
 		motorized = { x = 0 y = 0 }
@@ -48,8 +44,6 @@ division_template = {
 
 division_template = {
 	name = "Gebirgs-Brigade"		# Gebirgsbrigade
-	#Note: precursor to Gebirgs-Divisions
-	division_names_group = GER_Mnt_01
 
 	regiments = {
 		mountaineers = { x = 0 y = 0 }
@@ -63,8 +57,6 @@ division_template = {
 
 division_template = {
 	name = "Kavallerie-Brigade"
-
-	division_names_group = GER_Cav_01
 
 	regiments = {
 		cavalry = { x = 0 y = 0 }
@@ -554,64 +546,5 @@ units = {
 #########################
 ## STARTING PRODUCTION ##
 #########################
-
-instant_effect = {
-
-	add_equipment_production = {
-		equipment = {
-			type = infantry_equipment_1
-			creator = GER
-		}
-		requested_factories = 10
-		progress = 0.1
-		efficiency = 50
-		industrial_manufacturer = mio:GER_mauser_organization
-	}
-
-	add_equipment_production = {
-		equipment = {
-			type = support_equipment_1
-			creator = GER
-		}
-		requested_factories = 2
-		progress = 0.3
-		efficiency = 50
-		industrial_manufacturer = mio:GER_carl_walther_organization
-	}
-
-	add_equipment_production = {
-		equipment = {
-			type = artillery_equipment_1
-			creator = GER 
-		}
-		requested_factories = 1
-		progress = 0.3
-		efficiency = 50
-		industrial_manufacturer = mio:GER_rheinmetall_organization
-	}
-
-	add_equipment_production = {
-		equipment = {
-			type = light_tank_equipment_2
-			creator = GER
-		}
-		requested_factories = 2
-		progress = 0.4
-		efficiency = 50
-		industrial_manufacturer = mio:GER_henschel_organization
-	}
-
-	add_equipment_production = {
-		equipment = {
-			type = motorized_equipment_1
-			creator = GER 
-		}
-		requested_factories = 2
-		progress = 0.4
-		efficiency = 50
-		industrial_manufacturer = mio:GER_opel_organization
-	}
-	
-}
 
 #####################

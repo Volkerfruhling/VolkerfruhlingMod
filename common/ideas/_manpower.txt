@@ -170,12 +170,6 @@ ideas = {
 
 				# china relies a lot on throwing bodies at the enemy
 				modifier = {
-					factor = 3
-
-					original_tag = CHI
-					has_manpower < 300000
-				}
-				modifier = {
 					factor = 0
 					NOT = { has_idea = limited_conscription }
 				}
@@ -242,12 +236,6 @@ ideas = {
 					manpower_per_military_factory >  1000
 				}
 
-				modifier = { # china relies a lot on throwing bodies at the enemy
-					factor = 3
-
-					original_tag = CHI
-					has_manpower < 200000
-				}
 
 
 				modifier = { # germany needs this before russia, badly
@@ -311,19 +299,7 @@ ideas = {
 					factor = 0.5
 					manpower_per_military_factory >  1000
 				}
-				modifier = {
-					#Block has plenty manpower
-					factor = 0
-					NOT = { tag = CHI }
-					manpower_per_military_factory >  2800
-				}
 
-				modifier = { # china relies a lot on throwing bodies at the enemy
-					factor = 3
-
-					tag = CHI
-					has_manpower < 200000
-				}
 
 				modifier = {
 					factor = 0
