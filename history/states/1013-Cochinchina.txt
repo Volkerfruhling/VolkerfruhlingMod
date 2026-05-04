@@ -6,7 +6,7 @@ state={
 	}
 
 	history={
-		owner = FRA
+		owner = DNA
 		add_core_of = DNA
 		victory_points = {
 			4401 3 

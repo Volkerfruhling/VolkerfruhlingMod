@@ -6,7 +6,7 @@ state = {
 	manpower = 530980
 	
 	history = {
-		owner = ENG
+		owner = RAJ
 		add_core_of = KON
 
 		buildings = {
@@ -15,7 +15,7 @@ state = {
 	}
 
 	provinces = {
-		1014 1142 1333 3651 4019 4059 4147 7122 10182 12090 
+		1014 1142 3651 4147 7122 10182 12090 
 	}
 
 	local_supplies = 0.000
