@@ -7,6 +7,18 @@ state={
 	history = {
 		owner = MUG
 		add_core_of = MUG
+
+		victory_points = {
+			3456 25 
+		}
+		buildings = {
+			infrastructure = 2 #was: 5
+			industrial_complex = 1
+			3456 = {
+				naval_base = 4
+			}
+		}
+		
 	}
 	manpower=4524236
 	buildings_max_level_factor=1.000

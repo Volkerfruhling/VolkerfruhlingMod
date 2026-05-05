@@ -408,8 +408,8 @@ HIN ={
 
 #カシミール/Kashmir
 KAS ={
-	color = rgb{ 158 187 217 }
-	color_ui = rgb{ 158 187 217 }
+	color = rgb{ 229 168 139 }
+	color_ui = rgb{ 229 168 139 }
 }
 
 #モルディブ/Maldives
@@ -426,8 +426,8 @@ MUG ={
 
 #ネパール/Nepal
 NEP ={
-	color = rgb{ 253 140 60 }
-	color_ui = rgb{ 253 140 60 }
+	color = rgb{ 192 187 216 }
+	color_ui = rgb{ 192 187 216 }
 }
 
 #ニザーム王国/Nizam
@@ -454,6 +454,23 @@ TRA ={
 	color_ui = rgb{ 228 26 28 }
 }
 
+#カルナータカ/Nawab of the Carnatic
+NTC ={
+	color = rgb{ 128 172 83 }
+	color_ui = rgb{ 128 172 83 }
+}
+
+#ラージャスターン/Rajasthan
+IRJ = {
+	color = rgb{ 136 100 172 }
+	color_ui = rgb{ 136 100 172 }
+}
+
+#ボーパール/Bhopal
+IMP = {
+	color = rgb{ 189 88 68 }
+	color_ui = rgb{ 189 88 68 }
+}
 #### 東・東南アジア/East and Southeast Asia ###
 
 #オーストラリア/Australia
@@ -506,8 +523,8 @@ RYU = {
 
 #コンバウン/Konbaung
 KON ={
-	color = rgb{ 51 160 43 }
-	color_ui = rgb{ 51 160 43 }
+	color = rgb{ 87 93 50 }
+	color_ui = rgb{ 87 93 50 }
 }
 
 #朝鮮/Korea

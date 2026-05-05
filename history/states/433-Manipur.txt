@@ -12,11 +12,15 @@ state={
 	}
 
 	history={
-		owner = MUG
-		add_core_of = MUG
+		owner = IRJ
+		add_core_of = IRJ
 		victory_points = {
 			2054 1
 		}
+		victory_points = {
+			1908 5
+		}
+		
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1

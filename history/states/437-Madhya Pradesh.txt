@@ -2,11 +2,19 @@ state={
 	id=437
 	name="STATE_437"
 	provinces={
-		2092 2105 4106 7080 7205 8076 10816 11993 11995 12080 
+		2105 4106 7205 8076 10816 11993 11995 12080 
 	}
 	history = {
-		owner = MUG
-		add_core_of = MUG
+		owner = IMP
+		add_core_of = IMP
+
+		victory_points = {
+			4106 5
+		}
+		buildings = {
+			infrastructure = 1
+		}
+
 	}
 	manpower=9628198
 	buildings_max_level_factor=1.000

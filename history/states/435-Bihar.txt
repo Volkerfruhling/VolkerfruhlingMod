@@ -11,6 +11,11 @@ state={
 	history = {
 		owner = MUG
 		add_core_of = MUG
+
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+		}
 	}
 	manpower=36574500
 	buildings_max_level_factor=1.000

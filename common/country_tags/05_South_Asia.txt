@@ -28,3 +28,11 @@ SIK = "countries/_middle_eastern.txt"
 #トラヴァンコール/Travancore
 TRA = "countries/_middle_eastern.txt"
 
+#カルナータカ/Nawab of the Carnatic
+NTC = "countries/_middle_eastern.txt"
+
+#ラージャスターン/Rajasthan
+IRJ = "countries/_middle_eastern.txt"
+
+#ボーパール/Bhopal
+IMP = "countries/_middle_eastern.txt"

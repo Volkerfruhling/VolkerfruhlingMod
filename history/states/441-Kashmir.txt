@@ -2,11 +2,17 @@ state={
 	id=441
 	name="STATE_441"
 	provinces={
-		7316 10905 12754 
+		7316 10905 12754 12884 8005 7273
 	}
 	history = {
 		owner = KAS
 		add_core_of = KAS
+
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 1
+		}
 	}
 	manpower=2123700
 	buildings_max_level_factor=1.000

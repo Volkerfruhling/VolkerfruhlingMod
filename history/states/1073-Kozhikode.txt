@@ -1,0 +1,19 @@
+state={
+	id=1073
+	name="STATE_1073"
+	provinces={
+        10190 7391 12275 7363 12247 1409 8067 10808
+	}
+	manpower = 7493300
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+	history={
+		owner = HIN
+		add_core_of = HIN
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
+}

@@ -10,12 +10,13 @@ state={
 		owner = MUG
 		add_core_of = MUG
 		buildings = {
-			infrastructure = 3 #was: 5
+			infrastructure = 3
 			industrial_complex = 1
-			air_base = 4
+			arms_factory = 1
+			air_base = 1
 		}
 		victory_points = {
-			2086 15 
+			2086 30
 		}
 
 	}
