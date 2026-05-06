@@ -11,6 +11,7 @@ state={
 		add_core_of = IRJ
 		buildings = {
 			infrastructure = 1
+			industrial_complex = 1
 		}
 	}
 	buildings_max_level_factor=1.000

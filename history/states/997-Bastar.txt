@@ -15,6 +15,7 @@ state={
 		add_core_of = HIN
 		buildings = {
 			infrastructure = 1 #was: 5
+			industrial_complex = 1
 		}
 
 	}
