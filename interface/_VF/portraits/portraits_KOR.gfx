@@ -1,0 +1,6 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_Portrait_Leader_KOR_Sunjong"
+        texturefile = "gfx/interface/leaders/KOR/Portrait_Leader_KOR_Sunjong.png"
+    }
+}

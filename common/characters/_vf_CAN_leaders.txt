@@ -1,0 +1,25 @@
+characters = {
+	CAN_Julian_Bing = {
+		name = CAN_Julian_Bing 
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_CAN_Julian_Bing"
+			}
+		}
+		country_leader = {
+			ideology = social_liberalism
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+
+        country_leader = {
+			ideology = social_conservatism
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
+}

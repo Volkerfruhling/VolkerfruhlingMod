@@ -1,0 +1,34 @@
+characters = {
+    PER_Leather_Pahlavi = {
+        name = PER_Leather_Pahlavi  
+
+        portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_PER_Leather_Pahlavi"
+			}
+		}
+
+        country_leader = {
+            ideology = paternalistic_conservatism
+            expire = "1936.1.1"
+            id = -1
+            traits = {
+
+            }
+        }
+
+        
+    }
+
+    PER_Ahmad_Shan = {
+        name = PER_Ahmad_Shan
+    }
+
+    PER_Prime_Minister = {
+        name = PER_Prime_Minister
+    }
+
+    PER_Shh = {
+        name = PER_Shh
+    }
+}

@@ -565,8 +565,8 @@ SAR ={
 
 #タイ/Thailand
 THA ={
-	color = rgb{ 208 209 230 }
-	color_ui = rgb{ 208 209 230 }
+	color = rgb{ 151 51 53 }
+	color_ui = rgb{ 151 51 53 }
 }
 
 ### アフリカ/Africa ###

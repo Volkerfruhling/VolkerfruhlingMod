@@ -1,0 +1,17 @@
+characters = {
+	NZL_Charles_Ferguson = {
+		name = NZL_Charles_Ferguson 
+		portraits = {
+			civilian = {
+				large = "GFX_Portrait_Leader_NZL_Charles_Ferguson"
+			}
+		}
+		country_leader = {
+			ideology = social_conservatism
+			expire = "1964.1.1"
+			id = -1
+			traits = {
+			}
+		}
+	}
+}

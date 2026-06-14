@@ -23,8 +23,10 @@ division_template = {
 	regiments = {
 		irregular_infantry = { x = 0 y = 0 }
 		irregular_infantry = { x = 0 y = 1 }
+        irregular_infantry = { x = 0 y = 2 }
 		irregular_infantry = { x = 1 y = 0 }
 		irregular_infantry = { x = 1 y = 1 }
+        irregular_infantry = { x = 1 y = 2 }
 	}
 
     force_allow_recruiting = no
@@ -48,58 +50,82 @@ division_template = {
 
 units = {
     division ={
-        name = "irregular infantry"
-        location = 1573
-        division_template = "irregular infantry"
+        name = "Infantry Division"
+        location = 4052
+        division_template = "Infantry Division"
         start_experience_factor = 0.1
-        start_equipment_factor = 0.6
+        start_equipment_factor = 0.7
     }
 
     division ={
         name = "irregular infantry"
-        location = 1573
+        location = 4052
         division_template = "irregular infantry"
         start_experience_factor = 0.1
-        start_equipment_factor = 0.6
+        start_equipment_factor = 0.3
     }
 
     division ={
         name = "irregular infantry"
-        location = 1573
+        location = 3904
         division_template = "irregular infantry"
         start_experience_factor = 0.1
-        start_equipment_factor = 0.6
+        start_equipment_factor = 0.3
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 7125
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
+    }
+
+    division ={
+        name = "Infantry Division"
+        location = 7125
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
     }
 
     division ={
         name = "irregular infantry"
-        location = 10671
+        location = 7125
         division_template = "irregular infantry"
         start_experience_factor = 0.1
-        start_equipment_factor = 0.6
+        start_equipment_factor = 0.4
     }
 
     division ={
         name = "irregular infantry"
-        location = 10671
+        location = 7125
         division_template = "irregular infantry"
         start_experience_factor = 0.1
-        start_equipment_factor = 0.6
+        start_equipment_factor = 0.4
     }
 
     division ={
         name = "irregular infantry"
-        location = 12161
+        location = 7125
         division_template = "irregular infantry"
         start_experience_factor = 0.1
-        start_equipment_factor = 0.6
+        start_equipment_factor = 0.4
     }
 
     division ={
         name = "irregular infantry"
-        location = 1384
+        location = 4056
         division_template = "irregular infantry"
         start_experience_factor = 0.1
-        start_equipment_factor = 0.6
+        start_equipment_factor = 0.5
+    }
+
+    division ={
+        name = "irregular infantry"
+        location = 11977
+        division_template = "irregular infantry"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.5
     }
 }

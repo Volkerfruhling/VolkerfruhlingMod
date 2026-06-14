@@ -1,0 +1,12 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_Portrait_Leader_PER_Leather_Pahlavi"
+		texturefile = "gfx/interface/leaders/PER/portrait_leader_PER_Leather_Pahlavi.png"
+	}
+
+    spriteType = {
+        name = "GFX_CP_PER_Ahmad_Shan"
+        texturefile = "gfx/interface/leaders/PER/portrait_leader_PER_Ahmad_Shan.png"
+        legacy_lazy_load = no
+    }
+}

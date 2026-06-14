@@ -114,5 +114,5 @@ add_ideas = {
 	Compulsory_primary_education
 	Developed_countries
 	No_draft_exemption
-	Modern_armies
+	Semi_modern_armies
 }

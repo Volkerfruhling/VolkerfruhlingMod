@@ -1,4 +1,8 @@
-capital = 797
+capital = 276
+
+ENG = {
+	puppet = CAN
+}
 
 oob = "standard_templates"
 # Starting tech
@@ -83,7 +87,8 @@ if = {
 
 set_research_slots = 3
 set_convoys = 50
-set_stability = 0.75
+set_stability = 0.60
+set_war_support = 0.20
 
 1939.1.1 = {
 
@@ -149,14 +154,33 @@ set_stability = 0.75
 
 set_politics = {
 	ruling_party = liberalism
-	last_election = "1936.1.1"
+	last_election = "1921.10.19"
 	election_frequency = 48
 	elections_allowed = yes
 
 }
 set_popularities = {
-	liberalism = 100 
+	communism = 2
+	socialism = 8
+	liberalism =  45
+	conservatism = 30
+	despotism = 10
+	totalitarianism = 5
+	ultra_nationalism = 0
 }
 
+recruit_character = CAN_Julian_Bing
+
 add_ideas = {
+	Parliamentary_democracy
+	Incomplete_constitution
+	Universal_suffrage
+	Separation_of_church_and_state
+	Promotion_of_women_s_employment
+	Neutral_stance
+	Compulsory_first_semester_secondary_education
+	10_hour_workday
+	Emerging_countries
+	Semi_modern_armies
+	Total_draft_exemption
 }

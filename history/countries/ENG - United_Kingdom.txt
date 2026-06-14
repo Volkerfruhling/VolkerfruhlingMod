@@ -127,6 +127,6 @@ add_ideas = {
 	Limited_assistance_missions
 	Academic_draft_exemption
 	Basic_military_training
-	Modern_armies
+	Semi_modern_armies
 	free_trade
 }
