@@ -1,0 +1,39 @@
+﻿l_japanese:
+ ### ドイツ帝国のディシジョン（common/decisions/_vf_GER_decisions.txt） ###
+ vf_GER_crownland_reorganization: "オーストリア帝冠領の再編"
+ vf_GER_crownland_reorganization_desc: "帝国の心臓部に横たわる国家内国家を、法と予算の力で帝国へ縫い戻す。"
+ vf_GER_social_policy: "社会保障制度の拡充"
+ vf_GER_social_policy_desc: "人生の苦難から国民を守るセーフティネットを構築する。"
+ vf_GER_government_affairs: "政府の運営"
+ vf_GER_government_affairs_desc: "内閣と帝国の日常の政務。"
+
+ vf_GER_decision_bohemia_statute: "ボヘミア地位法"
+ vf_GER_decision_bohemia_statute_desc: "ボヘミア王国の地位を法で定め、プラハの忠誠に応える。"
+ vf_GER_decision_croatia_statute: "クロアチア地位法"
+ vf_GER_decision_croatia_statute_desc: "クロアチア王国の地位を法で定める。防衛条項が明文化される。"
+ vf_GER_decision_crownland_budget_integration: "帝冠領財政の帝国予算統合"
+ vf_GER_decision_crownland_budget_integration_desc: "ウィーンの金庫を帝国の会計に組み入れる。"
+ vf_GER_decision_austrian_administration: "墺系諸邦の行政通則化"
+ vf_GER_decision_austrian_administration_desc: "墺系諸邦の行政を帝国の通則に合わせる。"
+ vf_GER_decision_crownland_completion: "帝冠領整理の完遂"
+ vf_GER_decision_crownland_completion_desc: "帝冠領の再編が完了し、未解決の遺産が清算される。"
+
+ vf_GER_decision_health_insurance: "健康保険の拡充"
+ vf_GER_decision_health_insurance_desc: "病から国民を守る。"
+ vf_GER_decision_accident_insurance: "労災保険の拡充"
+ vf_GER_decision_accident_insurance_desc: "職場の危険から労働者を守る。"
+ vf_GER_decision_old_age_pension: "老齢年金の拡充"
+ vf_GER_decision_old_age_pension_desc: "老いから国民を守る。"
+
+ vf_GER_decision_appoint_chancellor: "後継宰相の指名"
+ vf_GER_decision_appoint_chancellor_desc: "空位となった宰相の座に、新たな指導者を指名する。"
+ vf_GER_decision_mitteleuropa_partnership: "中欧経済圏の提携"
+ vf_GER_decision_mitteleuropa_partnership_desc: "リトアニアとバルカン諸国を、フランクフルトを中心とする経済圏へ誘う。"
+
+ ### 国名（NF 憲法改正） ###
+ GER_federal_empire: "ドイツ連邦帝国"
+ GER_federal_empire_DEF: "ドイツ連邦帝国"
+ GER_federal_empire_ADJ: "ドイツ"
+
+ ### 自治度変動の表示名 ###
+ vf_autonomy_crownland_statute: "地位法の制定"

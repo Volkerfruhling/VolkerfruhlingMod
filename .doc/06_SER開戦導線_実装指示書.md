@@ -450,7 +450,7 @@ ELSE = { # 既定: POLは中立 }
 | `vf_ITA_grudge_SER` | 伊のアルバニア抗議 | イタリアの対セルビア姿勢 |
 | `vf_POL_tilt_ger` / `vf_POL_tilt_fra` / `vf_POL_tilt_neutral` | 波立危機（1927） | ポーランドの陣営 |
 | `vf_OTT_alignment_fra` / `_ger` / `_neutral` | オスマン危機（1929） | オスマンの去就 |
-| `vf_IST_leaning_ger` / `_ita` | イストリア交渉（GER側NF） | イストリアの帰属 |
+| `vf_IST_leaning_ger` / `_ita` | イストリア交渉（GER側NF） | イストリアの帰属 ※**立てる側は実装済み**（2026-08-27。`event_GER_pol.23`「ローマとの対話」） |
 | `vf_GER_route_parliament` / `_ausgleich` / `_civilwar` | GER「帝国の岐路」（1926） | 開戦時のドイツの国力・体制 |
 
 ---

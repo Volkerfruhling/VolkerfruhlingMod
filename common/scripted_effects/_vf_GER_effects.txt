@@ -1,0 +1,172 @@
+# =========================================================
+# VF / ドイツ帝国：パワーバランス基盤（scripted_effects）
+# 指示書: .doc/08_GER議会ルート_実装指示書.md §6-1
+# NFやイベントでは表現できない共通の変数処理のためここに置く
+#
+# 関連ファイル:
+#   events/_vf_events_GER.txt                 … event_GER_pol.1 が vf_GER_init_power_balance を呼ぶ。
+#                                               各イベントの選択肢が vf_GER_change_power_balance を呼ぶ
+#   common/scripted_triggers/_vf_GER_triggers.txt … 岐路判定（share変数を読む）
+#   common/scripted_localisation/_vf_GER_loc.txt  … 枢密院の傾き表示
+#   common/ideas/_vf_ideas_GER.txt            … 国民精神「勢力均衡」（descがshare変数を表示）
+#
+# 変数:
+#   vf_GER_bop_kaiser / _regent / _assembly        … 三派の勢力（0〜100にクランプ）
+#   vf_GER_bop_kaiser_share / _regent_share / _assembly_share … 相対シェア（%、表示・岐路判定用）
+#   vf_GER_bop_monarch_score                        … 皇帝派+枢密院の岐路判定スコア（本リリース用の器）
+# =========================================================
+
+# 初期化（event_GER_pol.1「皇帝、摂政、議会」の選択肢から呼ぶ）
+# 初期値: 皇帝35 / 摂政30 / 議会30。枢密院の傾きは中立
+vf_GER_init_power_balance = {
+	set_variable = {
+		vf_GER_bop_kaiser = 35
+	}
+	set_variable = {
+		vf_GER_bop_regent = 30
+	}
+	set_variable = {
+		vf_GER_bop_assembly = 30
+	}
+	set_country_flag = vf_GER_privy_neutral
+	vf_GER_recalc_power_balance = yes
+}
+
+# 三派の勢力を変化させる。呼び出し側は事前に temp 変数を設定すること（未設定は0扱い）:
+#   set_temp_variable = { vf_temp_bop_kaiser = 10 }
+#   set_temp_variable = { vf_temp_bop_regent = -10 }
+#   set_temp_variable = { vf_temp_bop_assembly = 0 }
+#   vf_GER_change_power_balance = yes
+# 開戦後（vf_GER_bop_frozen）は変化しない
+vf_GER_change_power_balance = {
+	IF = {
+		limit = {
+			NOT = {
+				has_country_flag = vf_GER_bop_frozen
+			}
+		}
+		add_to_variable = {
+			vf_GER_bop_kaiser = vf_temp_bop_kaiser
+		}
+		add_to_variable = {
+			vf_GER_bop_regent = vf_temp_bop_regent
+		}
+		add_to_variable = {
+			vf_GER_bop_assembly = vf_temp_bop_assembly
+		}
+		vf_GER_recalc_power_balance = yes
+	}
+}
+
+# クランプと相対シェアの再計算。勢力を直接いじった場合は必ずこれを呼ぶこと
+vf_GER_recalc_power_balance = {
+	clamp_variable = {
+		var = vf_GER_bop_kaiser
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = vf_GER_bop_regent
+		min = 0
+		max = 100
+	}
+	clamp_variable = {
+		var = vf_GER_bop_assembly
+		min = 0
+		max = 100
+	}
+	set_temp_variable = {
+		vf_temp_bop_total = vf_GER_bop_kaiser
+	}
+	add_to_temp_variable = {
+		vf_temp_bop_total = vf_GER_bop_regent
+	}
+	add_to_temp_variable = {
+		vf_temp_bop_total = vf_GER_bop_assembly
+	}
+	IF = {
+		limit = {
+			check_variable = {
+				vf_temp_bop_total > 0
+			}
+		}
+		set_variable = {
+			vf_GER_bop_kaiser_share = vf_GER_bop_kaiser
+		}
+		multiply_variable = {
+			vf_GER_bop_kaiser_share = 100
+		}
+		divide_variable = {
+			vf_GER_bop_kaiser_share = vf_temp_bop_total
+		}
+		set_variable = {
+			vf_GER_bop_regent_share = vf_GER_bop_regent
+		}
+		multiply_variable = {
+			vf_GER_bop_regent_share = 100
+		}
+		divide_variable = {
+			vf_GER_bop_regent_share = vf_temp_bop_total
+		}
+		set_variable = {
+			vf_GER_bop_assembly_share = vf_GER_bop_assembly
+		}
+		multiply_variable = {
+			vf_GER_bop_assembly_share = 100
+		}
+		divide_variable = {
+			vf_GER_bop_assembly_share = vf_temp_bop_total
+		}
+	}
+	# 岐路判定スコア（本リリース用の器。βの「帝国の岐路」は議会ルート固定なので使わない）
+	# 皇帝派シェア＋枢密院が皇帝に傾いていれば+10
+	set_variable = {
+		vf_GER_bop_monarch_score = vf_GER_bop_kaiser_share
+	}
+	IF = {
+		limit = {
+			has_country_flag = vf_GER_privy_kaiser
+		}
+		add_to_variable = {
+			vf_GER_bop_monarch_score = 10
+		}
+	}
+}
+
+# 帝冠領再編ディシジョンのコスト再計算（指示書 §8-3）
+# 基準: PP75系 / PP50系。ミヒャエリス在職中（vf_GER_michaelis_in_office）は+50%、
+# 中央党軸（vf_GER_coalition_zentrum）は-25%。
+# HOI4にディシジョンコストの全体modifierは存在しないため、変数コスト（cost = var:）で実装する。
+# 呼び出し箇所: event_GER_pol.1（初期化）/ .13（選挙・連合の重心決定）/ NF 枢密院廃止（ミヒャエリス失職）
+vf_GER_recalc_decision_costs = {
+	set_variable = {
+		vf_GER_decision_cost_75 = 75
+	}
+	set_variable = {
+		vf_GER_decision_cost_50 = 50
+	}
+	IF = {
+		limit = {
+			has_country_flag = vf_GER_michaelis_in_office
+		}
+		multiply_variable = {
+			vf_GER_decision_cost_75 = 1.5
+		}
+		multiply_variable = {
+			vf_GER_decision_cost_50 = 1.5
+		}
+	}
+	IF = {
+		limit = {
+			has_country_flag = vf_GER_coalition_zentrum
+		}
+		multiply_variable = {
+			vf_GER_decision_cost_75 = 0.75
+		}
+		multiply_variable = {
+			vf_GER_decision_cost_50 = 0.75
+		}
+	}
+	round_variable = vf_GER_decision_cost_75
+	round_variable = vf_GER_decision_cost_50
+}

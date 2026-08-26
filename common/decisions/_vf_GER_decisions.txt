@@ -1,0 +1,244 @@
+# =========================================================
+# VF / ドイツ帝国：ディシジョン本体
+# 指示書: .doc/08_GER議会ルート_実装指示書.md §8-3
+#
+# 関連ファイル:
+#   common/decisions/categories/_vf_GER_decision_categories.txt … カテゴリ定義
+#   common/scripted_effects/_vf_GER_effects.txt … コスト変数 vf_GER_decision_cost_75 / _50 の計算
+#     （ミヒャエリス在職中+50%、中央党軸-25%。ディシジョンコストの全体modifierが存在しないため変数コストで実装）
+#   events/_vf_events_GER.txt                 … 地位法の使用時に .16「諸邦の反応」を発火
+#   common/ideas/_vf_ideas_GER.txt            … 社会保障ideaの実体
+#
+# 立てるフラグ: vf_GER_bohemia_statute / vf_GER_croatia_defense_clause / vf_GER_crownland_budget_done /
+#               vf_GER_crownland_admin_done / vf_GER_crownland_complete
+# 読むフラグ:   vf_GER_crownland_decisions_unlocked / vf_GER_welfare_decisions_unlocked /
+#               vf_GER_chancellor_vacant / vf_GER_mitteleuropa_unlocked（Phase 5 のNFが立てる受け口）
+# =========================================================
+
+### オーストリア帝冠領の再編 ###
+vf_GER_crownland_reorganization = {
+	# ボヘミア地位法
+	vf_GER_decision_bohemia_statute = {
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = var:vf_GER_decision_cost_75
+
+		available = {
+			country_exists = BOH
+		}
+
+		complete_effect = {
+			set_country_flag = vf_GER_bohemia_statute
+			# BOHの自治度を上げ、忠誠フラグを立てる（指示書 §8-3）
+			BOH = {
+				add_autonomy_ratio = {
+					value = 0.05
+					localization = vf_autonomy_crownland_statute
+				}
+			}
+			hidden_effect = {
+				set_temp_variable = {
+					vf_temp_bop_regent = -10
+				}
+				vf_GER_change_power_balance = yes
+				country_event = {
+					id = event_GER_pol.16
+					days = 3
+				}
+			}
+		}
+	}
+	# クロアチア地位法
+	vf_GER_decision_croatia_statute = {
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = var:vf_GER_decision_cost_75
+
+		available = {
+			country_exists = CRO
+		}
+
+		complete_effect = {
+			# 防衛条項フラグ（指示書 §8-3）
+			set_country_flag = vf_GER_croatia_defense_clause
+			CRO = {
+				add_autonomy_ratio = {
+					value = 0.05
+					localization = vf_autonomy_crownland_statute
+				}
+			}
+			hidden_effect = {
+				set_temp_variable = {
+					vf_temp_bop_regent = -10
+				}
+				vf_GER_change_power_balance = yes
+				country_event = {
+					id = event_GER_pol.16
+					days = 3
+				}
+			}
+		}
+	}
+	# 帝冠領財政の帝国予算統合
+	vf_GER_decision_crownland_budget_integration = {
+		icon = generic_form_nation
+
+		fire_only_once = yes
+
+		cost = var:vf_GER_decision_cost_50
+
+		complete_effect = {
+			set_country_flag = vf_GER_crownland_budget_done
+			# TODO(VF): 効果の詳細はloreに無いため仮置き（首都に民需工場+1）。主宰へ報告
+			capital_scope = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+	# 墺系諸邦の行政通則化
+	vf_GER_decision_austrian_administration = {
+		icon = generic_form_nation
+
+		fire_only_once = yes
+
+		cost = var:vf_GER_decision_cost_50
+
+		complete_effect = {
+			set_country_flag = vf_GER_crownland_admin_done
+			add_stability = 0.02
+			hidden_effect = {
+				set_temp_variable = {
+					vf_temp_bop_regent = -5
+				}
+				vf_GER_change_power_balance = yes
+			}
+		}
+	}
+	# 帝冠領整理の完遂（上記4種の完了で解禁）
+	vf_GER_decision_crownland_completion = {
+		icon = generic_form_nation
+
+		fire_only_once = yes
+
+		cost = 0
+
+		available = {
+			has_country_flag = vf_GER_bohemia_statute
+			has_country_flag = vf_GER_croatia_defense_clause
+			has_country_flag = vf_GER_crownland_budget_done
+			has_country_flag = vf_GER_crownland_admin_done
+		}
+
+		complete_effect = {
+			set_country_flag = vf_GER_crownland_complete
+			# 国民精神「未解決の遺産」を除去（指示書 §6-2）
+			IF = {
+				limit = {
+					has_idea = idea_GER_unresolved_legacy
+				}
+				remove_ideas = idea_GER_unresolved_legacy
+			}
+			add_political_power = 50
+		}
+	}
+}
+
+### 社会保障制度の拡充 ###
+vf_GER_social_policy = {
+	# 健康保険の拡充
+	vf_GER_decision_health_insurance = {
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_ideas = idea_GER_health_insurance
+		}
+	}
+	# 労災保険の拡充
+	vf_GER_decision_accident_insurance = {
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_ideas = idea_GER_accident_insurance
+		}
+	}
+	# 老齢年金の拡充
+	vf_GER_decision_old_age_pension = {
+		icon = generic_civil_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		complete_effect = {
+			add_ideas = idea_GER_old_age_pension
+		}
+	}
+}
+
+### 政府の運営 ###
+vf_GER_government_affairs = {
+	# 後継宰相の指名（event_GER_pol.2「そろそろ潮時だな」で宰相が空位になると解禁）
+	vf_GER_decision_appoint_chancellor = {
+		icon = generic_political_discourse
+
+		cost = 50
+
+		visible = {
+			has_country_flag = vf_GER_chancellor_vacant
+		}
+
+		complete_effect = {
+			clr_country_flag = vf_GER_chancellor_vacant
+			add_stability = 0.03
+			# TODO(VF): 候補2〜3名からの選択（キャラクター実装）は §12-3 の裁定と併せて本リリースで
+		}
+	}
+	# 中欧経済圏の提携（Phase 5 のNF「中欧経済圏」が vf_GER_mitteleuropa_unlocked を立てると解禁）
+	vf_GER_decision_mitteleuropa_partnership = {
+		icon = generic_trade
+
+		fire_only_once = yes
+
+		cost = 25
+
+		visible = {
+			has_country_flag = vf_GER_mitteleuropa_unlocked
+		}
+
+		complete_effect = {
+			# リトアニア・バルカン諸国と友好+15（指示書 §8-3）
+			every_country = {
+				limit = {
+					OR = {
+						tag = LIT
+						tag = BUL
+						tag = ROM
+						tag = GRE
+						tag = HUN
+					}
+					exists = yes
+				}
+				add_opinion_modifier = {
+					target = GER
+					modifier = vf_opinion_GER_mitteleuropa_partnership
+				}
+			}
+			# TODO(VF): 「730日の相互精神」はβでは省略（主宰へ報告）
+		}
+	}
+}

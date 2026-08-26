@@ -180,6 +180,13 @@ lore.xlsx の日数と70日統一を素直に適用すると、こうなる。
 - (c) 憲法改正の到達に、より多くのNF取得を要求する（前提を増やす）
 - (d) 「1929年1月末」という目標値自体を1928年秋へ改める
 
+> **机上計算の結果（2026-08-27 実装セッション。§18 Phase 1）**
+> 本節の「1928年秋に終わってしまう」という概算は、**幹線8NF（196日）と枢密院会議→岐路の35日遅延を勘定に入れていなかった**。
+> これらを含めた憲法改正への必要NFは30本・計1393日で、ノーロス走行の最短完了は
+> **1928-12-23（枢密院会議で「もう無理だ」を選択）〜 1929-01-27（「もう少し見てみよう」を選択）**。
+> 設計メモの「≒1929年1月末」と机上では一致するため、**調整不要（現状維持）を推奨**。実機のA/B/C型走行（T-GER-6〜8）で確定させること。
+> 前提: ヴァイマル連合の勝利は14日（70日統一の対象外と解釈）、皮職人・伯爵は70日（クリティカルパス外のため完了日に影響なし）。
+
 **この Phase の完了条件**: 空のNFだけで A/B/C 型走行（§11 の T-GER-6〜8）を実行し、**憲法改正の完了日と開戦日（1929年秋）の位置関係を実測して報告する**こと。
 
 ---
@@ -376,6 +383,22 @@ lore.xlsx の日数と70日統一を素直に適用すると、こうなる。
 | `vf_GER_michaelis_in_office` | flag | 開始時に設定 | 帝冠領ディシジョンのコスト修正 |
 | `vf_GER_constitution_done` | flag | 憲法改正の完了 | 戦時休会・戦後再開の判定 |
 | `vf_GER_constitution_suspended` | flag | 開戦時に憲法未完 | **戦時休会**。進行度の保存 |
+
+### 実装時に追加したフラグ・変数（2026-08-27。§10契約への追記）
+
+| 名前 | 種別 | 立てる場所 | 意味 |
+|---|---|---|---|
+| `vf_GER_chancellor_vacant` | country flag | `event_GER_pol.2` 選択肢2 | 宰相空位。後継宰相指名ディシジョンの解禁条件 |
+| `vf_GER_crownland_decisions_unlocked` | country flag | NF 帝冠領整理案 | 帝冠領再編ディシジョンの解禁 |
+| `vf_GER_welfare_decisions_unlocked` | country flag | NF 福祉論争 | 社会保障ディシジョンの解禁 |
+| `vf_GER_mitteleuropa_unlocked` | country flag | NF 中欧経済圏（産業） | 中欧提携ディシジョンの解禁 |
+| `vf_GER_bohemia_statute` / `vf_GER_crownland_budget_done` / `vf_GER_crownland_admin_done` / `vf_GER_crownland_complete` | country flag | 帝冠領再編ディシジョン | 4種の完了記録と完遂 |
+| `vf_GER_croatia_defense_clause` | country flag | クロアチア地位法 | 防衛条項（§8-3） |
+| `vf_GER_bohemia_loyalty` | country flag | `event_GER_pol.16` | ボヘミア忠誠フラグへの入力 |
+| `vf_GER_spain_nonintervention` | **global flag** | NF スペインの対処 | 不干渉の仮置き（スペイン側実装が読む想定） |
+| `vf_IST_leaning_ita` / `vf_IST_leaning_ger` | **global flag** | `event_GER_pol.23`（ローマとの対話） | **`06` の受け口フラグの立てる側を実装**。`vf_greatwar.10` がISTの去就に読む |
+| `vf_GER_decision_cost_75` / `_50` | variable | `vf_GER_recalc_decision_costs` | 帝冠領ディシジョンの可変コスト（ミヒャエリス+50%／中央党軸-25%） |
+| `vf_GER_bop_kaiser_share` / `_regent_share` / `_assembly_share` / `vf_GER_bop_monarch_score` | variable | `vf_GER_recalc_power_balance` | 相対シェア（表示・岐路判定用） |
 
 ---
 
@@ -636,18 +659,36 @@ lore.xlsx の日数と70日統一を素直に適用すると、こうなる。
 
 ## 17. 処理の所在マップ【監査結果をここに記入すること】
 
-§4-0-1 の監査で埋める。`07` 報告書 §14 と同じ形式。
+§4-0-1 の監査で埋める。`07` 報告書 §14 と同じ形式。監査実施 2026-08-27（実装セッション）。
+
+**最重要の所見**: `focus_GER` はリポジトリのどこにも存在しなかった。指示書 §2-2 の言う既存コード `GER_01_NF本体.txt` は設定資料リポジトリ側のものであり、**Mod本体のGERはNF・イベント・国民精神とも完全未着手**。したがって §4-0-2 のID一括リネームは実コード上のリネーム対象が無く、**§14 の正IDで直接新規実装した**（旧IDはリポジトリに一度も入っていない）。
 
 | ファイル | 種別 | 何をしているか | 関連するNF / イベント | 相互参照コメント |
 |---|---|---|---|---|
-| `history/countries/GER - Germany.txt` | history | **英独同盟の `create_faction`（既存・SERタスクで追加）。壊さないこと** | `vf_greatwar.6` | ☑ |
-| | | | | ☐ |
+| `history/countries/GER - Germany.txt` | history | **英独同盟の `create_faction`（既存・SERタスクで追加）。壊すな**。カール1世を指導者に採用、称号トークン（カイザー/摂政）と `Chief_Portrait`（ヴィルヘルム2世）の変数設定、`VF_monarch_diplomacy_portrait_button_flag` | `vf_greatwar.6` | ☑ |
+| `common/characters/_vf_GER_leaders.txt` | characters | GER_wilhelm_ii / GER_Karl_I（country_leader、traits空）/ GER_Geiser / GER_regent（称号用） | 幹線NF（人物差し替えは未実装） | 未（Phase 3以降で改修時に付与） |
+| `common/synchronized_dynamic_tokens/_vf_tokens.txt` | tokens | GER_Geiser（「カイザー」）/ GER_regent / GER_wilhelm_ii の称号トークン | — | 不要 |
+| `common/national_focus/_vf_focus_GER.txt` | NF | **本タスクで新規作成**（Phase 1 骨組み: 幹線8＋議会25＋戦時15） | `event_GER_pol.1〜.9` | ☑ |
+| `events/_vf_events_GER.txt` | event | **本タスクで新規作成**（幹線イベント9本の骨組み＋.10 戦時休会＋.11 対立凍結） | 幹線8NF | ☑ |
+| `common/ideas/` | ideas | GER固有の国民精神は**存在しない**（Phase 2 で新設予定） | — | 不要 |
+| `common/ai_focuses/` | ai_focus | GER関連なし（AI誘導はNF側 `ai_will_do` で対応） | — | 不要 |
+| `common/decisions/` / `common/on_actions/` / `common/scripted_effects/`（GER関連） | — | GER固有処理なし（`01_startup.txt` のコスメティックタグのみ） | — | 不要 |
+| `common/ideologies/00_ideologies.txt` | ideology | communism / socialism / liberalism / conservatism / despotism / totalitarianism / ultra_nationalism の7種。**democracy は存在しない**（選挙実装時の与党は socialism＝SPD を想定。§12 に追加裁定として上程） | 1926年選挙（Phase 4） | 不要 |
+| `localisation/japanese/VF/common/characters/characters_GER_l_japanese.yml` | loc | 既存キャラクターの日本語名 | — | 不要 |
 
-「見たが何も無かった」場所も1行残すこと。
+「見たが何も無かった」場所も1行残すこと。→ 記入済み（上表のとおり）。
 
 ---
 
 ## 18. 着手順チェックリスト
+
+> **実装状況（2026-08-27 実装セッション）**
+> - Phase 0〜4 ＋ Phase 5 の産業13NF・戦時ツリーの主要効果まで実装済み（軍事37NFは骨組み＝効果TODO）。Phase 6（loc）はNF名・イベント本文・国民精神まで済み、軍事・産業・戦時のdescは仮置き
+> - **ツリーの見た目は `.tmp` の旧資料（GER_01_NF本体.txt / GER_02・03_NF.png）準拠**: 幹線はダイヤモンド型（マックス列∥議会列→内閣の行く末）、軍事ツリーは旧コードの座標をそのまま移植（ID3件はスペルミス修正済み）。議会ルートの選挙後は §14/§16 の新設計が旧図を置き換える
+> - 日数の机上計算: 憲法改正の最短完了 1928-12-23〜1929-01-27（§5-3 の追記参照）。裁定1は「現状維持」で確定（2026-08-27 主宰）
+> - lore.xlsx の **NF5/NF6→イベント対応の取り違え**（イストリア問題→「双頭の脳髄」となっていた）は内容で対応付けて修正（イストリア→奇妙な領域／枢密院→双頭の脳髄。設計図 GER_03 とも一致）
+> - §14-3 の見出し「軍事（36＋隠し1）」に対し列挙IDは37本＋隠し1＝**38本**。列挙をすべて実装した（要確認として報告）
+> - 未実装のTODO: 軍事37NFの効果、首相・顧問・キャラクター差し替え（§12-3裁定待ち）、皮職人の諜報スロット、帝冠領工業ボーナス（「偉大なるウィーンの帝冠」）、フランクフルト再会議・影響力行使ディシジョン、「城内平和」SPD分岐、730日相互精神、「正当性+50」
 
 - [ ] `06`／`07` を読み、SER・大戦側の完成状態とリポジトリ規約（`_vf_` 接頭辞、BOM）を把握
 - [ ] Phase 0-1: GER既存コードの棚卸し → §17 の表を記入

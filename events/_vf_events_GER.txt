@@ -1,0 +1,918 @@
+# =========================================================
+# VF / ドイツ帝国：幹線イベント〜帝国の岐路【Phase 1 骨組み】
+# 指示書: .doc/08_GER議会ルート_実装指示書.md §15
+#
+# 関連ファイル:
+#   common/national_focus/_vf_focus_GER.txt   … 幹線8NFが .1〜.8 を発火。.9 が議会ルートを解禁する
+#   events/_vf_events_greatwar.txt            … vf_greatwar_started（.10 戦時休会 / .11 対立凍結のトリガ）
+#
+# イベント対応（§15-2 の番号 = イベントID）:
+#   .1 皇帝、摂政、議会    ← NF 双頭一体の鷲
+#   .2 自由主義の宰相      ← NF プリンツ・マックス
+#   .3 SPDの躍進           ← NF 国民議会
+#   .4 曖昧な帝冠          ← NF オーストリア帝冠領
+#   .5 双頭の脳髄（枢密院）← NF 枢密院      ※lore.xlsxはNF5/6のイベント対応が取り違えのため内容で対応付けた
+#   .6 奇妙な領域（イストリア）← NF イストリア問題
+#   .7 パイと火薬庫        ← NF バルカン同盟（選択肢2はlore誤コピペのため要起草。§4-0-3）
+#   .8 枢密院会議          ← NF 内閣の行く末
+#   .9 帝国の岐路          ← .8 から35日後（または直後）。βは議会ルートのみ選択可
+#   .10 中断された改革（戦時休会）… 開戦時に憲法改正が未完なら発火
+#   .11 対立の凍結         … 帝国の岐路が未解決のまま開戦したら発火
+#
+# 立てるフラグ: vf_GER_route_parliament（.9）/ vf_GER_constitution_suspended（.10）/ vf_GER_bop_frozen（.11）
+# 読むフラグ:   vf_greatwar_started
+#
+# 【Phase 1 の状態】選択肢の効果は Phase 2（パワーバランス変数）・Phase 3（lore payload）で実装する。
+# TODO(VF): .9 のグレーアウト表示 — イベント選択肢に「選択不可の可視表示」はエンジン上できないため、
+#           β未実装の2択は trigger = { always = no } で非表示とし、解放予告は desc 文中に書く方式で仮置き。
+#           表示方法の最終形は主宰に確認すること
+# =========================================================
+add_namespace = event_GER_pol
+
+country_event = { # 皇帝、摂政、議会
+	id = event_GER_pol.1
+	title = event_GER_pol.1.title
+	desc = event_GER_pol.1.desc
+
+	is_triggered_only = yes
+
+	option = { # 理解した。
+		name = event_GER_pol.1.a
+		# パワーバランスのメカニクス有効化（変数初期化＋表示用国民精神）
+		vf_GER_init_power_balance = yes
+		add_ideas = idea_GER_power_balance
+		hidden_effect = {
+			vf_GER_recalc_decision_costs = yes
+		}
+	}
+}
+country_event = { # 自由主義の宰相
+	id = event_GER_pol.2
+	title = event_GER_pol.2.title
+	desc = event_GER_pol.2.desc
+
+	is_triggered_only = yes
+
+	option = { # 議会を尊重しよう！
+		name = event_GER_pol.2.a
+		ai_chance = {
+			factor = 80
+		}
+		add_timed_idea = {
+			idea = idea_GER_liberal_cabinet
+			days = 730 # 2年限定（§15-2 #2）
+		}
+		hidden_effect = {
+			set_temp_variable = {
+				vf_temp_bop_assembly = 10
+			}
+			vf_GER_change_power_balance = yes
+		}
+	}
+	option = { # そろそろ潮時だな
+		name = event_GER_pol.2.b
+		ai_chance = {
+			factor = 20
+		}
+		add_political_power = -50
+		set_country_flag = vf_GER_chancellor_vacant # TODO(VF): Phase 4 で後継宰相指名ディシジョンを解禁（このフラグが受け口）
+		hidden_effect = {
+			set_temp_variable = {
+				vf_temp_bop_kaiser = 5
+			}
+			set_temp_variable = {
+				vf_temp_bop_regent = 5
+			}
+			vf_GER_change_power_balance = yes
+		}
+	}
+}
+country_event = { # SPDの躍進
+	id = event_GER_pol.3
+	title = event_GER_pol.3.title
+	desc = event_GER_pol.3.desc
+
+	is_triggered_only = yes
+
+	option = { # 漸進前進！
+		name = event_GER_pol.3.a
+		ai_chance = {
+			factor = 90
+		}
+		add_timed_idea = {
+			idea = idea_GER_hope_for_social_reform
+			days = 365
+		}
+		hidden_effect = {
+			set_temp_variable = {
+				vf_temp_bop_assembly = 10
+			}
+			vf_GER_change_power_balance = yes
+		}
+	}
+	option = { # マルクスの意思はどうした？
+		name = event_GER_pol.3.b
+		ai_chance = {
+			factor = 10
+		}
+		add_stability = -0.05
+		set_country_flag = vf_GER_communist_spark # βでは死にフラグ。内戦ルート用の受け口（§10）
+		add_timed_idea = {
+			idea = idea_GER_thirst_for_revolution
+			days = 365
+		}
+	}
+}
+country_event = { # 曖昧な帝冠
+	id = event_GER_pol.4
+	title = event_GER_pol.4.title
+	desc = event_GER_pol.4.desc
+
+	is_triggered_only = yes
+
+	option = { # 触れないでおこう
+		name = event_GER_pol.4.a
+		ai_chance = {
+			factor = 60
+		}
+		set_country_flag = vf_GER_crownland_untouched
+		add_ideas = idea_GER_unresolved_legacy # 帝冠領NF（帝冠領整理の完遂）の完了で除去（§6-2）
+		hidden_effect = {
+			set_temp_variable = {
+				vf_temp_bop_regent = -5
+			}
+			vf_GER_change_power_balance = yes
+		}
+	}
+	option = { # 旧国家の残骸だ
+		name = event_GER_pol.4.b
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = vf_GER_crownland_integration
+		# TODO(VF): 内戦発生時に帝冠領の一部が非中核州化する処理は内戦ルート実装時（β対象外）
+		hidden_effect = {
+			set_temp_variable = {
+				vf_temp_bop_regent = -20
+			}
+			set_temp_variable = {
+				vf_temp_bop_kaiser = 10
+			}
+			vf_GER_change_power_balance = yes
+		}
+	}
+	option = { # 偉大なるウィーンの帝冠
+		name = event_GER_pol.4.c
+		ai_chance = {
+			factor = 30
+		}
+		set_country_flag = vf_GER_crownland_dualism
+		# TODO(VF): 帝冠領の工業力・人的資源ボーナスの実体（国民精神）は本リリースで設計（§15-2 #4）
+		hidden_effect = {
+			set_temp_variable = {
+				vf_temp_bop_regent = 15
+			}
+			set_temp_variable = {
+				vf_temp_bop_kaiser = -10
+			}
+			vf_GER_change_power_balance = yes
+		}
+	}
+	option = { # 改革が必要だな【β選択不可: 受け皿ツリー未実装（§15-2 #4）】
+		name = event_GER_pol.4.d
+		trigger = {
+			always = no # TODO(VF): 連邦改革路線の受け皿実装後に解放（vf_GER_crownland_federal）
+		}
+	}
+}
+country_event = { # 双頭の脳髄（枢密院の役割）
+	id = event_GER_pol.5
+	title = event_GER_pol.5.title
+	desc = event_GER_pol.5.desc
+
+	is_triggered_only = yes
+
+	option = { # 中立を維持する
+		name = event_GER_pol.5.a
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = vf_GER_privy_neutral
+	}
+	option = { # 皇帝を優先すべきだ
+		name = event_GER_pol.5.b
+		ai_chance = {
+			factor = 15
+		}
+		clr_country_flag = vf_GER_privy_neutral
+		set_country_flag = vf_GER_privy_kaiser
+		add_ideas = idea_GER_privy_council_kaiser
+		hidden_effect = {
+			set_temp_variable = {
+				vf_temp_bop_kaiser = 10
+			}
+			set_temp_variable = {
+				vf_temp_bop_regent = -10
+			}
+			vf_GER_change_power_balance = yes
+		}
+	}
+	option = { # 摂政を優先すべきだ
+		name = event_GER_pol.5.c
+		ai_chance = {
+			factor = 15
+		}
+		clr_country_flag = vf_GER_privy_neutral
+		set_country_flag = vf_GER_privy_regent
+		add_ideas = idea_GER_privy_council_regent
+		hidden_effect = {
+			set_temp_variable = {
+				vf_temp_bop_regent = 10
+			}
+			set_temp_variable = {
+				vf_temp_bop_kaiser = -10
+			}
+			vf_GER_change_power_balance = yes
+		}
+	}
+	option = { # 憲法外機関は廃止しよう
+		name = event_GER_pol.5.d
+		ai_chance = {
+			factor = 20
+		}
+		clr_country_flag = vf_GER_privy_neutral
+		set_country_flag = vf_GER_privy_abolished
+		add_political_power = 75
+		hidden_effect = {
+			set_temp_variable = {
+				vf_temp_bop_assembly = 15
+			}
+			set_temp_variable = {
+				vf_temp_bop_kaiser = -5
+			}
+			set_temp_variable = {
+				vf_temp_bop_regent = -5
+			}
+			vf_GER_change_power_balance = yes
+		}
+	}
+}
+country_event = { # 奇妙な領域（イストリアの帰属）
+	id = event_GER_pol.6
+	title = event_GER_pol.6.title
+	desc = event_GER_pol.6.desc
+
+	is_triggered_only = yes
+
+	option = { # 干渉地帯は必要だ
+		name = event_GER_pol.6.a
+		ai_chance = {
+			factor = 60
+		}
+		set_country_flag = vf_GER_istria_status_quo
+	}
+	option = { # イタリアにくれてやって良い
+		name = event_GER_pol.6.b
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = vf_GER_istria_to_italy
+		add_opinion_modifier = {
+			target = ITA
+			modifier = vf_opinion_GER_istria_concession
+		}
+		ITA = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = vf_opinion_GER_istria_concession
+			}
+		}
+		# イストリア（IST: 州736・852）へのITAの請求権
+		736 = {
+			add_claim_by = ITA
+		}
+		852 = {
+			add_claim_by = ITA
+		}
+		hidden_effect = {
+			set_temp_variable = {
+				vf_temp_bop_regent = -5
+			}
+			vf_GER_change_power_balance = yes
+		}
+	}
+	option = { # 絶対に保持しなければ
+		name = event_GER_pol.6.c
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = vf_GER_istria_annex
+		736 = {
+			add_core_of = GER
+			remove_claim_by = ITA
+		}
+		852 = {
+			add_core_of = GER
+			remove_claim_by = ITA
+		}
+		ITA = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = vf_opinion_GER_istria_seized
+			}
+		}
+		add_ideas = idea_GER_adriatic_guardian
+	}
+	option = { # 交渉次第だろう
+		name = event_GER_pol.6.d
+		ai_chance = {
+			factor = 20
+		}
+		set_country_flag = vf_GER_istria_negotiate
+		# TODO(VF): Phase 4 でディシジョン「フランクフルト再会議」を解禁（このフラグが受け口）
+	}
+}
+country_event = { # パイと火薬庫（バルカンへの関与）
+	id = event_GER_pol.7
+	title = event_GER_pol.7.title
+	desc = event_GER_pol.7.desc
+
+	is_triggered_only = yes
+
+	option = { # 何故火遊びをしなければならないのだ？
+		name = event_GER_pol.7.a
+		ai_chance = {
+			factor = 20
+		}
+		set_country_flag = vf_GER_balkan_withdraw
+		add_ideas = idea_GER_balkan_withdrawal
+		every_country = {
+			limit = {
+				OR = {
+					tag = BUL
+					tag = HUN
+					tag = ALB
+					tag = MNT
+				}
+				exists = yes
+			}
+			add_opinion_modifier = {
+				target = GER
+				modifier = vf_opinion_GER_balkan_withdrawal
+			}
+		}
+	}
+	option = { # 抑えておこう
+		name = event_GER_pol.7.b
+		ai_chance = {
+			factor = 50
+		}
+		# lore.xlsxの該当セルはイストリアからの誤コピペだったため効果を起草（§4-0-3。主宰へ報告済み）:
+		# バルカン諸国との関係を穏当に維持し、影響力は行使しない
+		set_country_flag = vf_GER_balkan_restrain
+		add_political_power = 25
+		every_country = {
+			limit = {
+				OR = {
+					tag = BUL
+					tag = HUN
+					tag = ALB
+					tag = MNT
+				}
+				exists = yes
+			}
+			add_opinion_modifier = {
+				target = GER
+				modifier = vf_opinion_GER_balkan_restraint
+			}
+		}
+	}
+	option = { # 王冠をこの手に！
+		name = event_GER_pol.7.c
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = vf_GER_balkan_influence
+		# TODO(VF): Phase 4 でBUL・ROM・ALBへの「影響力を行使」ディシジョンを解禁（このフラグが受け口）
+	}
+	option = { # 優位性を保たねば
+		name = event_GER_pol.7.d
+		ai_chance = {
+			factor = 20
+		}
+		set_country_flag = vf_GER_balkan_dominate
+		# TODO(VF): 「バルカン同盟諸国が経済圏に加盟」の実体（貿易精神の相互付与）は Phase 4 のディシジョンで実装
+		capital_scope = {
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+			}
+		}
+	}
+}
+country_event = { # 枢密院会議
+	id = event_GER_pol.8
+	title = event_GER_pol.8.title
+	desc = event_GER_pol.8.desc
+
+	is_triggered_only = yes
+
+	option = { # もう少し見てみよう
+		name = event_GER_pol.8.a
+		ai_chance = {
+			factor = 80
+		}
+		add_stability = -0.10
+		hidden_effect = {
+			country_event = {
+				id = event_GER_pol.9
+				days = 35
+			}
+		}
+	}
+	option = { # もう無理だ
+		name = event_GER_pol.8.b
+		ai_chance = {
+			factor = 20
+		}
+		add_stability = -0.30
+		hidden_effect = {
+			country_event = {
+				id = event_GER_pol.9
+				hours = 6
+			}
+		}
+	}
+}
+country_event = { # 帝国の岐路【βは議会ルートのみ選択可】
+	id = event_GER_pol.9
+	title = event_GER_pol.9.title
+	desc = event_GER_pol.9.desc
+
+	is_triggered_only = yes
+
+	option = { # 議会に未来を託す
+		name = event_GER_pol.9.a
+		set_country_flag = vf_GER_route_parliament
+		add_ideas = idea_GER_parliament_led_government
+		# TODO(VF): 本リリースでは available に vf_GER_bop_route_parliament_possible
+		#           （議会派シェア40%以上。common/scripted_triggers/_vf_GER_triggers.txt）を課す（§6-1）。
+		#           βは議会ルート固定のため条件なし
+	}
+	option = { # 君主こそが国家の礎だ【β未実装: アウスグライヒルート】
+		name = event_GER_pol.9.b
+		trigger = {
+			always = no # TODO(VF): アウスグライヒルート実装後に解放（vf_GER_route_ausgleich）
+		}
+	}
+	option = { # だれ一人として譲らなかった【β未実装: 内戦ルート】
+		name = event_GER_pol.9.c
+		trigger = {
+			always = no # TODO(VF): 内戦ルート実装後に解放（vf_GER_route_civilwar）
+		}
+	}
+}
+country_event = { # 中断された改革（憲法改正の戦時休会）
+	# 開戦時に憲法改正が未完なら発火し、進行度を保存する（指示書 §5-2 項目6）。
+	# 完了済みNFはそのまま残るため、実体はフラグと演出のみ。戦後再開の受け口
+	id = event_GER_pol.10
+	title = event_GER_pol.10.title
+	desc = event_GER_pol.10.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		has_global_flag = vf_greatwar_started
+		has_country_flag = vf_GER_route_parliament
+		NOT = {
+			has_country_flag = vf_GER_constitution_done
+		}
+	}
+
+	immediate = {
+		set_country_flag = vf_GER_constitution_suspended
+	}
+
+	option = { # 銃声の前に、議事は止まる
+		name = event_GER_pol.10.a
+		add_stability = -0.05
+	}
+}
+country_event = { # 対立の凍結
+	# 「帝国の岐路」が未解決のまま開戦した場合の強制イベント（指示書 §9-3）
+	id = event_GER_pol.11
+	title = event_GER_pol.11.title
+	desc = event_GER_pol.11.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		has_global_flag = vf_greatwar_started
+		NOT = {
+			OR = {
+				has_country_flag = vf_GER_route_parliament
+				has_country_flag = vf_GER_route_ausgleich
+				has_country_flag = vf_GER_route_civilwar
+			}
+		}
+	}
+
+	immediate = {
+		set_country_flag = vf_GER_bop_frozen
+		# TODO(VF): Phase 2 でパワーバランス変数の凍結処理を実装
+	}
+
+	option = { # 内輪もめは終わりだ
+		name = event_GER_pol.11.a
+		add_war_support = 0.05
+	}
+}
+
+### 選挙3連イベント（指示書 §8-1。NF 1926年議会選挙 → .12 → .13 → .14） ###
+country_event = { # 選挙戦の季節
+	id = event_GER_pol.12
+	title = event_GER_pol.12.title
+	desc = event_GER_pol.12.desc
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = event_GER_pol.13
+				days = 10
+			}
+		}
+	}
+
+	option = { # 実績を訴える
+		name = event_GER_pol.12.a
+		ai_chance = {
+			factor = 50
+		}
+		add_political_power = 25
+	}
+	option = { # 組織を動員する
+		name = event_GER_pol.12.b
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = 0.02
+	}
+	option = { # 敵失を待つ
+		name = event_GER_pol.12.c
+		ai_chance = {
+			factor = 20
+		}
+		add_political_power = 10
+	}
+}
+country_event = { # 1926年 国民議会選挙（連合の重心を決める）
+	id = event_GER_pol.13
+	title = event_GER_pol.13.title
+	desc = event_GER_pol.13.desc
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = event_GER_pol.14
+				days = 5
+			}
+		}
+	}
+
+	option = { # 労働者の連合（SPD軸）
+		name = event_GER_pol.13.a
+		ai_chance = {
+			factor = 50
+		}
+		set_country_flag = vf_GER_coalition_spd
+		hidden_effect = {
+			vf_GER_recalc_decision_costs = yes
+		}
+	}
+	option = { # 南部との融和（中央党軸）
+		name = event_GER_pol.13.b
+		ai_chance = {
+			factor = 25
+		}
+		set_country_flag = vf_GER_coalition_zentrum
+		hidden_effect = {
+			vf_GER_recalc_decision_costs = yes
+		}
+	}
+	option = { # 産業界との同盟（自由主義軸）
+		name = event_GER_pol.13.c
+		ai_chance = {
+			factor = 25
+		}
+		set_country_flag = vf_GER_coalition_liberal
+		hidden_effect = {
+			vf_GER_recalc_decision_costs = yes
+		}
+	}
+}
+country_event = { # 新内閣の顔ぶれ
+	# TODO(VF): 首相・顧問の差し替え（SPD軸=エーベルト／中央党軸=マルクス（仮）／自由主義軸=シュトレーゼマン（仮））は
+	#           §12-3 の裁定（00_世界の指導者.txt との人名整合）待ち。βはフレーバー＋安定度のみ
+	id = event_GER_pol.14
+	title = event_GER_pol.14.title
+	desc = {
+		text = event_GER_pol.14.desc_spd
+		trigger = {
+			has_country_flag = vf_GER_coalition_spd
+		}
+	}
+	desc = {
+		text = event_GER_pol.14.desc_zentrum
+		trigger = {
+			has_country_flag = vf_GER_coalition_zentrum
+		}
+	}
+	desc = {
+		text = event_GER_pol.14.desc_liberal
+		trigger = {
+			has_country_flag = vf_GER_coalition_liberal
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = event_GER_pol.14.a
+		add_stability = 0.03
+	}
+}
+
+### 合間イベント8本（指示書 §8-2） ###
+country_event = { # ユンカーの抵抗
+	id = event_GER_pol.15
+	title = event_GER_pol.15.title
+	desc = event_GER_pol.15.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		has_country_flag = vf_GER_route_parliament
+		OR = {
+			has_completed_focus = focus_GER_pol_reorganize_crownlands
+			has_completed_focus = focus_GER_pol_abolish_privy_council
+		}
+	}
+
+	option = { # 妥協点を探る
+		name = event_GER_pol.15.a
+		ai_chance = {
+			factor = 60
+		}
+		add_political_power = -50
+	}
+	option = { # 押し切る
+		name = event_GER_pol.15.b
+		ai_chance = {
+			factor = 40
+		}
+		add_stability = -0.05
+		# 中央党軸なら南部の名望家が仲介し、傷が浅い（重心フラグで難度が変わる）
+		IF = {
+			limit = {
+				has_country_flag = vf_GER_coalition_zentrum
+			}
+			add_stability = 0.02
+		}
+	}
+}
+country_event = { # 諸邦の反応
+	# 帝冠領再編ディシジョン（地位法）の使用時に発火（common/decisions/_vf_GER_decisions.txt から）
+	id = event_GER_pol.16
+	title = event_GER_pol.16.title
+	desc = event_GER_pol.16.desc
+
+	is_triggered_only = yes
+
+	option = { # 諸邦に配慮しつつ進める
+		name = event_GER_pol.16.a
+		# ボヘミア忠誠フラグへの入力（GER側の忠誠度実装＝自治度が受け皿。指示書 §8-2）
+		set_country_flag = vf_GER_bohemia_loyalty
+		BOH = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = vf_opinion_GER_state_consideration
+			}
+		}
+	}
+}
+country_event = { # ルールの労働争議
+	id = event_GER_pol.17
+	title = event_GER_pol.17.title
+	desc = event_GER_pol.17.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		has_country_flag = vf_GER_route_parliament
+		date > 1927.1.1
+		date < 1928.6.1
+	}
+
+	option = { # 労働者と交渉する
+		name = event_GER_pol.17.a
+		ai_chance = {
+			factor = 70
+		}
+		# SPD軸なら労組が政府を信頼している（SPD軸で有利）
+		IF = {
+			limit = {
+				has_country_flag = vf_GER_coalition_spd
+			}
+			add_stability = 0.03
+		}
+		ELSE = {
+			add_political_power = -50
+		}
+	}
+	option = { # 憲兵隊を送る
+		name = event_GER_pol.17.b
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = -0.05
+		add_war_support = 0.02
+	}
+}
+country_event = { # 憲法審議の攻防
+	id = event_GER_pol.18
+	title = event_GER_pol.18.title
+	desc = event_GER_pol.18.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		focus_progress = {
+			focus = focus_GER_pol_constitutional_reform
+			progress > 0.1
+		}
+	}
+
+	option = { # 宥和（修正案を受け入れる）
+		name = event_GER_pol.18.a
+		ai_chance = {
+			factor = 70
+		}
+		add_political_power = -75
+	}
+	option = { # 強行（原案のまま押し切る）
+		name = event_GER_pol.18.b
+		ai_chance = {
+			factor = 30
+		}
+		add_stability = -0.05
+	}
+}
+country_event = { # バルカンの砲声
+	# SER側実装（events/_vf_events_SER.txt）が立てる vf_started_balkan_war を読む
+	id = event_GER_pol.19
+	title = event_GER_pol.19.title
+	desc = event_GER_pol.19.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		has_global_flag = vf_started_balkan_war
+	}
+
+	option = {
+		name = event_GER_pol.19.a
+		# 「パイと火薬庫」のフラグで分岐（指示書 §8-2）
+		IF = {
+			limit = {
+				has_country_flag = vf_GER_balkan_withdraw
+			}
+			add_stability = 0.02 # 手を引いていて正解だった
+		}
+		ELSE_IF = {
+			limit = {
+				OR = {
+					has_country_flag = vf_GER_balkan_influence
+					has_country_flag = vf_GER_balkan_dominate
+				}
+			}
+			add_war_support = 0.03 # 我々の勢力圏が撃たれている
+			add_political_power = -25
+		}
+		ELSE = {
+			add_war_support = 0.02
+		}
+	}
+}
+country_event = { # ベオグラードの講和
+	# SER側実装が立てる vf_ended_balkan_war を読む。露仏接近の報
+	id = event_GER_pol.20
+	title = event_GER_pol.20.title
+	desc = event_GER_pol.20.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		has_global_flag = vf_ended_balkan_war
+	}
+
+	option = {
+		name = event_GER_pol.20.a
+		add_war_support = 0.02
+	}
+}
+country_event = { # 嵐の予感（軍事第2ゲート解禁のニュース）
+	# 軍事ツリー第2ゲート（vf_started_balkan_war。Phase 5 §9-1）の解禁を告げる
+	id = event_GER_pol.21
+	title = event_GER_pol.21.title
+	desc = event_GER_pol.21.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		has_global_flag = vf_started_balkan_war
+	}
+
+	option = {
+		name = event_GER_pol.21.a
+		army_experience = 10
+	}
+}
+country_event = { # 進歩の光と影
+	id = event_GER_pol.22
+	title = event_GER_pol.22.title
+	desc = event_GER_pol.22.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		OR = {
+			has_completed_focus = focus_GER_pol_progressivism
+			has_completed_focus = focus_GER_pol_controlled_urban_planning
+		}
+	}
+
+	option = {
+		name = event_GER_pol.22.a
+		add_stability = 0.02
+	}
+}
+country_event = { # ローマとの対話（NF イストリア交渉から発火）
+	# vf_IST_leaning_* はグローバルフラグ。大戦の参戦判定（vf_greatwar.10）がISTの去就に読む
+	id = event_GER_pol.23
+	title = event_GER_pol.23.title
+	desc = event_GER_pol.23.desc
+
+	is_triggered_only = yes
+
+	option = { # イタリアへの完全譲渡
+		name = event_GER_pol.23.a
+		ai_chance = {
+			factor = 15
+		}
+		set_global_flag = vf_IST_leaning_ita
+		add_opinion_modifier = {
+			target = ITA
+			modifier = vf_opinion_GER_istria_concession
+		}
+		ITA = {
+			add_opinion_modifier = {
+				target = GER
+				modifier = vf_opinion_GER_istria_concession
+			}
+		}
+		736 = {
+			add_claim_by = ITA
+		}
+		852 = {
+			add_claim_by = ITA
+		}
+	}
+	option = { # 非武装中立地帯化
+		name = event_GER_pol.23.b
+		ai_chance = {
+			factor = 25
+		}
+		# 中立を確認。フラグは立てない（大戦でもISTは中立が既定）
+		add_political_power = 25
+	}
+	option = { # 現状維持の再確認（帝国の共同管理を続ける）
+		name = event_GER_pol.23.c
+		ai_chance = {
+			factor = 60
+		}
+		set_global_flag = vf_IST_leaning_ger
+	}
+}

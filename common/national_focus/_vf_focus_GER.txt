@@ -1,0 +1,3193 @@
+#!gfx:interface\_VF\goals\goals_ger.gfx
+# =========================================================
+# VF / ドイツ帝国：NF本体（幹線8＋議会ルート25＋戦時15）【Phase 1 骨組み】
+# 指示書: .doc/08_GER議会ルート_実装指示書.md（NF IDは §14 が唯一の正）
+#
+# 関連ファイル:
+#   events/_vf_events_GER.txt                 … event_GER_pol.1〜.11（幹線イベント9本＋戦時休会＋対立凍結）
+#   events/_vf_events_greatwar.txt            … vf_greatwar_started を立てる（戦時切替のトリガ）
+#   events/_vf_events_SER.txt                 … vf_started/ended_balkan_war（軍事第2ゲート・合間イベントが読む）
+#   history/countries/GER - Germany.txt       … 開始時の陣営（英独同盟）・キャラクター
+#
+# 立てるフラグ: （骨組み段階ではNF側は立てない。ルート確定は event_GER_pol.9 が vf_GER_route_parliament を立てる）
+# 読むフラグ:   vf_GER_route_parliament / vf_greatwar_started
+#
+# 【Phase 1 の状態】completion_reward はイベント発火とダミーのみ。効果の実装は Phase 2〜5。
+# 【座標の予約】x=0〜8: 戦時 / x=6〜16: 政治（平時） / x=28〜43: 軍事 / x=46〜54: 産業（Phase 5）
+# 【見た目】幹線ダイヤモンド・軍事ツリーは .tmp の設計図（GER_02/03_NF.png・GER_01_NF本体.txt）準拠
+# =========================================================
+focus_tree = {
+	id = focus_GER
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+	continuous_focus_position = {
+		x = 0
+		y = 2500
+	}
+
+	### 政治：幹線（8） ###
+	# 双頭一体の鷲
+	focus = {
+		id = focus_GER_pol_two_headed_eagle
+
+		# icon = GFX_goal_focus_GER_pol_two_headed_eagle
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 15
+		y = 0
+		available = {
+			# 開戦で平時政治NFはロックされる（中断された改革の演出。指示書 §5-2）
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			country_event = {
+				id = event_GER_pol.1
+			}
+		}
+
+	}
+	# プリンツ・マックス
+	focus = {
+		id = focus_GER_pol_prinz_max
+
+		# icon = GFX_goal_focus_GER_pol_prinz_max
+		icon = GFX_goal_unknown
+
+		cost = 2 # 14日
+
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_pol_two_headed_eagle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_two_headed_eagle
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			country_event = {
+				id = event_GER_pol.2
+			}
+		}
+
+	}
+	# 国民議会
+	focus = {
+		id = focus_GER_pol_national_assembly
+
+		# icon = GFX_goal_focus_GER_pol_national_assembly
+		icon = GFX_goal_unknown
+
+		cost = 2 # 14日
+
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_pol_two_headed_eagle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_two_headed_eagle
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			country_event = {
+				id = event_GER_pol.3
+			}
+		}
+
+	}
+	# オーストリア帝冠領
+	focus = {
+		id = focus_GER_pol_austrian_imperial_crown_lands
+
+		# icon = GFX_goal_focus_GER_pol_austrian_imperial_crown_lands
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_prinz_max
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_prinz_max
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			country_event = {
+				id = event_GER_pol.4
+			}
+		}
+
+	}
+	# イストリア問題
+	# 注意: lore.xlsx はNF5→「双頭の脳髄」/NF6→「奇妙な領域」と記すが、内容的に取り違え
+	# （「双頭の脳髄」は枢密院の、「奇妙な領域」はイストリアのイベント）。ここでは内容で対応付ける
+	focus = {
+		id = focus_GER_pol_istria_problem
+
+		# icon = GFX_goal_focus_GER_pol_istria_problem
+		icon = GFX_goal_unknown
+
+		cost = 2 # 14日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_austrian_imperial_crown_lands
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_austrian_imperial_crown_lands
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			country_event = {
+				id = event_GER_pol.6 # 奇妙な領域（イストリアの帰属）
+			}
+		}
+
+	}
+	# 枢密院
+	focus = {
+		id = focus_GER_pol_privy_council
+
+		# icon = GFX_goal_focus_GER_pol_privy_council
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_national_assembly
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_national_assembly
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			country_event = {
+				id = event_GER_pol.5 # 双頭の脳髄（枢密院の役割）
+			}
+		}
+
+	}
+	# バルカン同盟
+	focus = {
+		id = focus_GER_pol_balkan_alliance
+
+		# icon = GFX_goal_focus_GER_pol_balkan_alliance
+		icon = GFX_goal_unknown
+
+		cost = 2 # 14日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_privy_council
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_privy_council
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			country_event = {
+				id = event_GER_pol.7 # パイと火薬庫
+			}
+		}
+
+	}
+	# 内閣の行く末
+	focus = {
+		id = focus_GER_pol_cabinet_future
+
+		# icon = GFX_goal_focus_GER_pol_cabinet_future
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 4
+		relative_position_id = focus_GER_pol_two_headed_eagle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_istria_problem
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_balkan_alliance
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			country_event = {
+				id = event_GER_pol.8 # 枢密院会議 →（+35日 or 直後）→ .9 帝国の岐路
+			}
+		}
+
+	}
+
+	### 政治：議会ルート・選挙前（9） ###
+	# 帝国の岐路（event_GER_pol.9）で vf_GER_route_parliament が立つと解禁される
+	# 自由の理
+	focus = {
+		id = focus_GER_pol_freedom_principle
+
+		# icon = GFX_goal_focus_GER_pol_freedom_principle
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = -5
+		y = 1
+		relative_position_id = focus_GER_pol_cabinet_future
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_cabinet_future
+		}
+		available = {
+			# 帝国の岐路で議会ルートを選択していること
+			has_country_flag = vf_GER_route_parliament
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_ideas = idea_GER_path_to_liberalism
+		}
+
+	}
+	# 帝冠領整理案
+	focus = {
+		id = focus_GER_pol_reorganize_crownlands
+
+		# icon = GFX_goal_focus_GER_pol_reorganize_crownlands
+		icon = GFX_goal_unknown
+
+		cost = 6 # 42日
+
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_pol_freedom_principle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_freedom_principle
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			# ディシジョン「オーストリア帝冠領の再編」を解禁（common/decisions/_vf_GER_decisions.txt）
+			set_country_flag = vf_GER_crownland_decisions_unlocked
+			hidden_effect = {
+				set_temp_variable = {
+					vf_temp_bop_regent = -10
+				}
+				vf_GER_change_power_balance = yes
+			}
+		}
+
+	}
+	# 内閣集権
+	focus = {
+		id = focus_GER_pol_centralization_of_cabinet
+
+		# icon = GFX_goal_focus_GER_pol_centralization_of_cabinet
+		icon = GFX_goal_unknown
+
+		cost = 6 # 42日
+
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_pol_freedom_principle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_freedom_principle
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_ideas = idea_GER_strengthened_cabinet
+			hidden_effect = {
+				set_temp_variable = {
+					vf_temp_bop_kaiser = -5
+				}
+				set_temp_variable = {
+					vf_temp_bop_regent = -5
+				}
+				vf_GER_change_power_balance = yes
+			}
+		}
+
+	}
+	# スペインの対処【留保】
+	focus = {
+		id = focus_GER_pol_dealing_with_spain
+
+		# icon = GFX_goal_focus_GER_pol_dealing_with_spain
+		icon = GFX_goal_unknown
+
+		cost = 6 # 42日
+
+		x = 3
+		y = 1
+		relative_position_id = focus_GER_pol_freedom_principle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_freedom_principle
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			# §12-4 裁定待ちのため、βは不干渉フラグのみの仮置き（§16 #4）。
+			# スペイン側の実装が後日これを読む可能性があるため global にしてある
+			set_global_flag = vf_GER_spain_nonintervention
+		}
+
+	}
+	# 少数民族問題
+	focus = {
+		id = focus_GER_pol_minority_problem
+
+		# icon = GFX_goal_focus_GER_pol_minority_problem
+		icon = GFX_goal_unknown
+
+		cost = 6 # 42日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_reorganize_crownlands
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_reorganize_crownlands
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_ideas = idea_GER_cultural_tolerance
+			BOH = {
+				add_opinion_modifier = {
+					target = GER
+					modifier = vf_opinion_GER_minority_rights
+				}
+			}
+		}
+
+	}
+	# 国民議会の強化
+	focus = {
+		id = focus_GER_pol_strengthen_national_assembly
+
+		# icon = GFX_goal_focus_GER_pol_strengthen_national_assembly
+		icon = GFX_goal_unknown
+
+		cost = 6 # 42日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_centralization_of_cabinet
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_centralization_of_cabinet
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_ideas = idea_GER_parliamentary_sovereignty
+			hidden_effect = {
+				set_temp_variable = {
+					vf_temp_bop_assembly = 10
+				}
+				vf_GER_change_power_balance = yes
+			}
+		}
+
+	}
+	# 改革準備委員会
+	focus = {
+		id = focus_GER_pol_preparation_committee_for_reform
+
+		# icon = GFX_goal_focus_GER_pol_preparation_committee_for_reform
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 3
+		relative_position_id = focus_GER_pol_freedom_principle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_minority_problem
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_strengthen_national_assembly
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_research_slot = 1
+			add_political_power = 50
+		}
+
+	}
+	# イストリア交渉
+	focus = {
+		id = focus_GER_pol_istria_negotiation
+
+		# icon = GFX_goal_focus_GER_pol_istria_negotiation
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 2
+		relative_position_id = focus_GER_pol_dealing_with_spain
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_dealing_with_spain
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			# ローマとの対話（vf_IST_leaning_* への入力。大戦の参戦判定 vf_greatwar.10 が読む）
+			country_event = {
+				id = event_GER_pol.23
+			}
+		}
+
+	}
+	# 1926年議会選挙
+	focus = {
+		id = focus_GER_pol_1926_election
+
+		# icon = GFX_goal_focus_GER_pol_1926_election
+		icon = GFX_goal_unknown
+
+		cost = 4 # 28日（選挙NF自体は28日。§5-3 確定方針）
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_preparation_committee_for_reform
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_preparation_committee_for_reform
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_istria_negotiation
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			# 選挙3連イベント: 選挙戦の季節（.12）→ 1926年国民議会選挙（.13）→ 新内閣の顔ぶれ（.14）
+			country_event = {
+				id = event_GER_pol.12
+			}
+		}
+
+	}
+
+	### 政治：選挙（2） ###
+	# ヴァイマル連合の勝利
+	focus = {
+		id = focus_GER_pol_victory_of_weimar_coalition
+
+		# icon = GFX_goal_focus_GER_pol_victory_of_weimar_coalition
+		icon = GFX_goal_unknown
+
+		cost = 2 # 14日（選挙結果の確定。70日統一の対象は「選挙後」の14本。§14-2）
+
+		x = -2
+		y = 1
+		relative_position_id = focus_GER_pol_1926_election
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_1926_election
+		}
+		mutually_exclusive = {
+			focus = focus_GER_pol_victory_of_conservative_party
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			# 与党をSPD＝socialismに（このModにdemocracyイデオロギーは無い。§17監査の追加裁定を参照）
+			set_politics = {
+				ruling_party = socialism
+				elections_allowed = yes
+			}
+			add_popularity = {
+				ideology = socialism
+				popularity = 0.35
+			}
+		}
+
+	}
+	# 保守党の勝利【β選択不可。ID・座標のみ確保】
+	focus = {
+		id = focus_GER_pol_victory_of_conservative_party
+
+		# icon = GFX_goal_focus_GER_pol_victory_of_conservative_party
+		icon = GFX_goal_unknown
+
+		cost = 2
+
+		x = 2
+		y = 1
+		relative_position_id = focus_GER_pol_1926_election
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_1926_election
+		}
+		mutually_exclusive = {
+			focus = focus_GER_pol_victory_of_weimar_coalition
+		}
+		available = {
+			# βでは選択不可（グレーアウト＋解放予告ツールチップ。指示書 §5-2）
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_beta_locked_tt
+				always = no
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		completion_reward = {
+		}
+
+	}
+
+	### 政治：議会ルート・選挙後（14） ###
+	# 日数は70日に統一（§5-3 確定方針。xlsx旧値はコメントで残す）
+	# 前進主義
+	focus = {
+		id = focus_GER_pol_progressivism
+
+		# icon = GFX_goal_focus_GER_pol_progressivism
+		icon = GFX_goal_unknown
+
+		cost = 10 # 70日（xlsx: 42）
+
+		x = -2
+		y = 1
+		relative_position_id = focus_GER_pol_victory_of_weimar_coalition
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_victory_of_weimar_coalition
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			# 研究速度:工業+5%は「進歩の時代」の research_bonus に含まれる
+			add_ideas = idea_GER_age_of_progress
+		}
+
+	}
+	# 福祉論争
+	focus = {
+		id = focus_GER_pol_welfare_debate
+
+		# icon = GFX_goal_focus_GER_pol_welfare_debate
+		icon = GFX_goal_unknown
+
+		cost = 10 # 70日（xlsx: 42）
+
+		x = 2
+		y = 1
+		relative_position_id = focus_GER_pol_victory_of_weimar_coalition
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_victory_of_weimar_coalition
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			# ディシジョン「社会保障制度の拡充」を解禁（common/decisions/_vf_GER_decisions.txt）
+			set_country_flag = vf_GER_welfare_decisions_unlocked
+		}
+
+	}
+	# 財政出動
+	focus = {
+		id = focus_GER_pol_fiscal_stimulus
+
+		# icon = GFX_goal_focus_GER_pol_fiscal_stimulus
+		icon = GFX_goal_unknown
+
+		cost = 10 # 70日（xlsx: 56）
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_progressivism
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_progressivism
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			# 民需工場+4＋ランダム3州インフラ+1（産業ツリーとの二重取りは §12-5 裁定待ち）
+			capital_scope = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+		}
+
+	}
+	# 失業保険の導入
+	focus = {
+		id = focus_GER_pol_unemployment_insurance
+
+		# icon = GFX_goal_focus_GER_pol_unemployment_insurance
+		icon = GFX_goal_unknown
+
+		cost = 10 # 70日（xlsx: 56）
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_welfare_debate
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_welfare_debate
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			# 既に「社会国家ドイツ」（エーベルト・プラン）まで進んでいる場合は付与しない（置換チェーンの逆行防止）
+			IF = {
+				limit = {
+					NOT = {
+						has_idea = idea_GER_social_state
+					}
+				}
+				add_ideas = idea_GER_unemployment_insurance
+			}
+		}
+
+	}
+	# 統制された都市計画
+	focus = {
+		id = focus_GER_pol_controlled_urban_planning
+
+		# icon = GFX_goal_focus_GER_pol_controlled_urban_planning
+		icon = GFX_goal_unknown
+
+		cost = 10 # 70日（xlsx: 70）
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_fiscal_stimulus
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_fiscal_stimulus
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			# ベルリン（64）・ハンブルク（1037）・ミュンヘン（53）にインフラ＋建築スロット
+			64 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			1037 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			53 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+
+	}
+	# 大改革宣言
+	focus = {
+		id = focus_GER_pol_great_reform_declaration
+
+		# icon = GFX_goal_focus_GER_pol_great_reform_declaration
+		icon = GFX_goal_unknown
+
+		cost = 10 # 70日（xlsx: 70）
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_unemployment_insurance
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_unemployment_insurance
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_political_power = 150
+			# 3種の体制精神を吸収して除去し、「1928年改革」へ統合（§6-2）
+			remove_ideas = idea_GER_path_to_liberalism
+			remove_ideas = idea_GER_strengthened_cabinet
+			remove_ideas = idea_GER_parliamentary_sovereignty
+			add_ideas = idea_GER_1928_reforms
+		}
+
+	}
+	# エーベルト・プラン
+	focus = {
+		id = focus_GER_pol_ebert_plan
+
+		# icon = GFX_goal_focus_GER_pol_ebert_plan
+		icon = GFX_goal_unknown
+
+		cost = 10 # 70日（xlsx: 70）
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_controlled_urban_planning
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_controlled_urban_planning
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			# §16 #17 の精神「エーベルト・プラン」は §6-2 の「社会国家ドイツ」と同一物と解釈し統合（主宰へ報告済み）。
+			# 「社会国家ドイツ」は「失業保険制度」を置換する
+			remove_ideas = idea_GER_unemployment_insurance
+			add_ideas = idea_GER_social_state
+		}
+
+	}
+	# 枢密院廃止
+	focus = {
+		id = focus_GER_pol_abolish_privy_council
+
+		# icon = GFX_goal_focus_GER_pol_abolish_privy_council
+		icon = GFX_goal_unknown
+
+		cost = 10 # 70日（xlsx: 56）
+
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_pol_great_reform_declaration
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_great_reform_declaration
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = idea_GER_absent_privy_council
+			# 枢密院の消滅: 傾き精神・フラグを一掃し、ミヒャエリスも失職する（ディシジョンコスト+50%が消える）
+			remove_ideas = idea_GER_privy_council_kaiser
+			remove_ideas = idea_GER_privy_council_regent
+			clr_country_flag = vf_GER_privy_kaiser
+			clr_country_flag = vf_GER_privy_regent
+			clr_country_flag = vf_GER_privy_neutral
+			set_country_flag = vf_GER_privy_abolished
+			clr_country_flag = vf_GER_michaelis_in_office
+			hidden_effect = {
+				vf_GER_recalc_decision_costs = yes
+				vf_GER_recalc_power_balance = yes
+			}
+		}
+
+	}
+	# 二元君主の明文化
+	focus = {
+		id = focus_GER_pol_codify_dual_monarchy
+
+		# icon = GFX_goal_focus_GER_pol_codify_dual_monarchy
+		icon = GFX_goal_unknown
+
+		cost = 10 # 70日（xlsx: 56）
+
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_pol_great_reform_declaration
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_great_reform_declaration
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_stability = 0.05
+			# 皇帝派・摂政派の影響力をリセットし無効化（§16 #19）
+			hidden_effect = {
+				set_variable = {
+					vf_GER_bop_kaiser = 0
+				}
+				set_variable = {
+					vf_GER_bop_regent = 0
+				}
+				vf_GER_recalc_power_balance = yes
+			}
+		}
+
+	}
+	# 奉仕勤労団
+	focus = {
+		id = focus_GER_pol_labor_service
+
+		# icon = GFX_goal_focus_GER_pol_labor_service
+		icon = GFX_goal_unknown
+
+		cost = 10 # 70日（xlsx: 56）
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_ebert_plan
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_ebert_plan
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_ideas = idea_GER_national_service
+		}
+
+	}
+	# 連合強化
+	focus = {
+		id = focus_GER_pol_strengthen_coalition
+
+		# icon = GFX_goal_focus_GER_pol_strengthen_coalition
+		icon = GFX_goal_unknown
+
+		cost = 10 # 70日（xlsx: 42）
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_labor_service
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_labor_service
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = socialism
+				popularity = 0.10
+			}
+		}
+
+	}
+	# 憲法改正
+	focus = {
+		id = focus_GER_pol_constitutional_reform
+
+		# icon = GFX_goal_focus_GER_pol_constitutional_reform
+		icon = GFX_goal_unknown
+
+		cost = 10 # 70日（xlsx: 70）
+
+		x = 1
+		y = 3
+		relative_position_id = focus_GER_pol_abolish_privy_council
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_abolish_privy_council
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_codify_dual_monarchy
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_strengthen_coalition
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			set_cosmetic_tag = GER_federal_empire # 国名「ドイツ連邦帝国」
+			remove_ideas = idea_GER_1928_reforms
+			remove_ideas = idea_GER_absent_privy_council
+			add_ideas = idea_GER_1929_constitution
+			set_country_flag = vf_GER_constitution_done
+			# 皇帝派・摂政派を50に固定（§16 #22）
+			hidden_effect = {
+				set_variable = {
+					vf_GER_bop_kaiser = 50
+				}
+				set_variable = {
+					vf_GER_bop_regent = 50
+				}
+				vf_GER_recalc_power_balance = yes
+			}
+			# TODO(VF): 「正当性+50」は亡命政府用の値のため対応を保留（主宰へ報告）
+		}
+
+	}
+	# 皮職人
+	focus = {
+		id = focus_GER_pol_ledermann
+
+		# icon = GFX_goal_focus_GER_pol_ledermann
+		icon = GFX_goal_unknown
+
+		cost = 10 # 70日（xlsx: 35。選挙以降70日統一の適用範囲は §12-1 裁定と併せて要確認）
+
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_pol_constitutional_reform
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_constitutional_reform
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_political_power = 50
+			# TODO(VF): 諜報機関スロット+1とスパイマスター「オイゲン・ランゲ」は
+			#           キャラクター実装（§12-3 裁定）と併せて本リリースで行う
+		}
+
+	}
+	# 伯爵
+	focus = {
+		id = focus_GER_pol_der_graf
+
+		# icon = GFX_goal_focus_GER_pol_der_graf
+		icon = GFX_goal_unknown
+
+		cost = 10 # 70日（xlsx: 35。同上）
+
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_pol_constitutional_reform
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_constitutional_reform
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_peacetime_locked_tt
+				NOT = { has_global_flag = vf_greatwar_started }
+			}
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_ideas = idea_GER_new_era_diplomacy
+		}
+
+	}
+
+	### 戦時ツリー（15）【x=22〜30 予約済み】 ###
+	# vf_greatwar_started（events/_vf_events_greatwar.txt の vf_greatwar.6 が立てる）で解禁。
+	# 平時政治NFは同フラグでロックされ、「中断された改革」の演出を兼ねる（指示書 §5-2）
+	# 城内平和
+	focus = {
+		id = focus_GER_war_burgfrieden
+
+		# icon = GFX_goal_focus_GER_war_burgfrieden
+		icon = GFX_goal_unknown
+
+		cost = 1 # 7日（戦時は短い）
+
+		x = 4
+		y = 0
+		allow_branch = {
+			has_global_flag = vf_greatwar_started
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			add_ideas = idea_GER_burgfrieden
+			# TODO(VF): SPD軸ならさらに安定度+2%の分岐は本リリースで（§6-2）
+		}
+
+	}
+	# 戦時経済体制
+	focus = {
+		id = focus_GER_war_wartime_economy
+
+		# icon = GFX_goal_focus_GER_war_wartime_economy
+		icon = GFX_goal_unknown
+
+		cost = 2 # 14日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_war_burgfrieden
+		prerequisite = { # 前提NF
+			focus = focus_GER_war_burgfrieden
+		}
+		allow_branch = {
+			has_global_flag = vf_greatwar_started
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で戦時経済への移行効果
+			add_political_power = 1
+		}
+
+	}
+	# 最高軍司令部への白紙委任
+	focus = {
+		id = focus_GER_war_carte_blanche_to_ohl
+
+		# icon = GFX_goal_focus_GER_war_carte_blanche_to_ohl
+		icon = GFX_goal_unknown
+
+		cost = 2 # 14日
+
+		x = -3
+		y = 1
+		relative_position_id = focus_GER_war_wartime_economy
+		prerequisite = { # 前提NF
+			focus = focus_GER_war_wartime_economy
+		}
+		mutually_exclusive = {
+			focus = focus_GER_war_parliamentary_war_control
+		}
+		allow_branch = {
+			has_global_flag = vf_greatwar_started
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			add_ideas = idea_GER_road_to_silent_dictatorship
+			# 隠しNF「軍事独裁」（focus_GER_mil_military_dictatorship）はこのNFの完了を allow_branch で読む
+		}
+
+	}
+	# 議会の戦時統制
+	focus = {
+		id = focus_GER_war_parliamentary_war_control
+
+		# icon = GFX_goal_focus_GER_war_parliamentary_war_control
+		icon = GFX_goal_unknown
+
+		cost = 2 # 14日
+
+		x = 3
+		y = 1
+		relative_position_id = focus_GER_war_wartime_economy
+		prerequisite = { # 前提NF
+			focus = focus_GER_war_wartime_economy
+		}
+		mutually_exclusive = {
+			focus = focus_GER_war_carte_blanche_to_ohl
+		}
+		allow_branch = {
+			has_global_flag = vf_greatwar_started
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 50 # βは議会ルートが正史。AIはこちらを優先
+		}
+		completion_reward = {
+			add_ideas = idea_GER_parliaments_war
+		}
+
+	}
+	# 祖国支援勤務法【OHL路線】
+	focus = {
+		id = focus_GER_war_auxiliary_service_act
+
+		# icon = GFX_goal_focus_GER_war_auxiliary_service_act
+		icon = GFX_goal_unknown
+
+		cost = 2 # 14日
+
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_war_carte_blanche_to_ohl
+		prerequisite = { # 前提NF
+			focus = focus_GER_war_carte_blanche_to_ohl
+		}
+		allow_branch = {
+			has_global_flag = vf_greatwar_started
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5
+			add_political_power = 1
+		}
+
+	}
+	# 軍需優先経済【OHL路線】
+	focus = {
+		id = focus_GER_war_military_priority_economy
+
+		# icon = GFX_goal_focus_GER_war_military_priority_economy
+		icon = GFX_goal_unknown
+
+		cost = 2 # 14日
+
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_war_carte_blanche_to_ohl
+		prerequisite = { # 前提NF
+			focus = focus_GER_war_carte_blanche_to_ohl
+		}
+		allow_branch = {
+			has_global_flag = vf_greatwar_started
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5
+			add_political_power = 1
+		}
+
+	}
+	# プロパガンダの強化【OHL路線】
+	focus = {
+		id = focus_GER_war_strengthen_propaganda
+
+		# icon = GFX_goal_focus_GER_war_strengthen_propaganda
+		icon = GFX_goal_unknown
+
+		cost = 2 # 14日
+
+		x = 0
+		y = 2
+		relative_position_id = focus_GER_war_carte_blanche_to_ohl
+		prerequisite = { # 前提NF
+			focus = focus_GER_war_auxiliary_service_act
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_war_military_priority_economy
+		}
+		allow_branch = {
+			has_global_flag = vf_greatwar_started
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5
+			add_political_power = 1
+		}
+
+	}
+	# 戦時社会協約【議会路線】
+	focus = {
+		id = focus_GER_war_wartime_social_pact
+
+		# icon = GFX_goal_focus_GER_war_wartime_social_pact
+		icon = GFX_goal_unknown
+
+		cost = 2 # 14日
+
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_war_parliamentary_war_control
+		prerequisite = { # 前提NF
+			focus = focus_GER_war_parliamentary_war_control
+		}
+		allow_branch = {
+			has_global_flag = vf_greatwar_started
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5
+			add_political_power = 1
+		}
+
+	}
+	# 戦時国債【議会路線】
+	focus = {
+		id = focus_GER_war_war_bonds
+
+		# icon = GFX_goal_focus_GER_war_war_bonds
+		icon = GFX_goal_unknown
+
+		cost = 2 # 14日
+
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_war_parliamentary_war_control
+		prerequisite = { # 前提NF
+			focus = focus_GER_war_parliamentary_war_control
+		}
+		allow_branch = {
+			has_global_flag = vf_greatwar_started
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5
+			add_political_power = 1
+		}
+
+	}
+	# 議会監督委員会【議会路線】
+	focus = {
+		id = focus_GER_war_parliamentary_oversight_committee
+
+		# icon = GFX_goal_focus_GER_war_parliamentary_oversight_committee
+		icon = GFX_goal_unknown
+
+		cost = 2 # 14日
+
+		x = 0
+		y = 2
+		relative_position_id = focus_GER_war_parliamentary_war_control
+		prerequisite = { # 前提NF
+			focus = focus_GER_war_wartime_social_pact
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_war_war_bonds
+		}
+		allow_branch = {
+			has_global_flag = vf_greatwar_started
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5
+			add_political_power = 1
+		}
+
+	}
+	# 緊急動員【緊急軍拡枝】
+	focus = {
+		id = focus_GER_war_emergency_mobilization
+
+		# icon = GFX_goal_focus_GER_war_emergency_mobilization
+		icon = GFX_goal_unknown
+
+		cost = 1 # 7日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_war_wartime_economy
+		prerequisite = { # 前提NF
+			focus = focus_GER_war_wartime_economy
+		}
+		allow_branch = {
+			has_global_flag = vf_greatwar_started
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5
+			add_political_power = 1
+		}
+
+	}
+	# 予備役召集【緊急軍拡枝】
+	focus = {
+		id = focus_GER_war_call_up_reserves
+
+		# icon = GFX_goal_focus_GER_war_call_up_reserves
+		icon = GFX_goal_unknown
+
+		cost = 1 # 7日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_war_emergency_mobilization
+		prerequisite = { # 前提NF
+			focus = focus_GER_war_emergency_mobilization
+		}
+		allow_branch = {
+			has_global_flag = vf_greatwar_started
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5
+			add_political_power = 1
+		}
+
+	}
+	# 工廠の全面稼働【緊急軍拡枝】
+	focus = {
+		id = focus_GER_war_arsenals_full_operation
+
+		# icon = GFX_goal_focus_GER_war_arsenals_full_operation
+		icon = GFX_goal_unknown
+
+		cost = 2 # 14日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_war_call_up_reserves
+		prerequisite = { # 前提NF
+			focus = focus_GER_war_call_up_reserves
+		}
+		allow_branch = {
+			has_global_flag = vf_greatwar_started
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5
+			add_political_power = 1
+		}
+
+	}
+	# 士官速成課程【緊急軍拡枝】
+	focus = {
+		id = focus_GER_war_accelerated_officer_course
+
+		# icon = GFX_goal_focus_GER_war_accelerated_officer_course
+		icon = GFX_goal_unknown
+
+		cost = 2 # 14日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_war_arsenals_full_operation
+		prerequisite = { # 前提NF
+			focus = focus_GER_war_arsenals_full_operation
+		}
+		allow_branch = {
+			has_global_flag = vf_greatwar_started
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5
+			add_political_power = 1
+		}
+
+	}
+	# 総力戦体制の完成
+	focus = {
+		id = focus_GER_war_complete_total_war_system
+
+		# icon = GFX_goal_focus_GER_war_complete_total_war_system
+		icon = GFX_goal_unknown
+
+		cost = 3 # 21日
+
+		x = 0
+		y = 5
+		relative_position_id = focus_GER_war_wartime_economy
+		prerequisite = { # 前提NF（どちらかの路線の完遂）
+			focus = focus_GER_war_strengthen_propaganda
+			focus = focus_GER_war_parliamentary_oversight_committee
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_war_accelerated_officer_course
+		}
+		allow_branch = {
+			has_global_flag = vf_greatwar_started
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 30
+		}
+		completion_reward = {
+			# 「城内平和」と路線精神を吸収し、強化版へ置換（§6-2）
+			remove_ideas = idea_GER_burgfrieden
+			remove_ideas = idea_GER_road_to_silent_dictatorship
+			remove_ideas = idea_GER_parliaments_war
+			add_ideas = idea_GER_total_war_system
+		}
+
+	}
+
+	### 軍事ツリー（37。x=28〜43。レイアウトは .tmp/GER_01_NF本体.txt・GER_02_NF.png 準拠） ###
+	# 第1ゲート: 総力戦研究所に「内閣の行く末」完了を要求（指示書 §9-1）
+	# 第2ゲート: 「嵐へ備える」以降とオストヴァル系に vf_started_balkan_war を要求
+	# ルーデンドルフ⟷グレーナーは mutually_exclusive（§9-1。中央の近代化ラインは共有）
+	# TODO(VF): Phase 5 で効果（ドクトリン・研究ボーナス・OOB等）を起草する。descは本リリース
+	# 総力戦研究所
+	focus = {
+		id = focus_GER_mil_total_war_institute
+
+		# icon = GFX_goal_focus_GER_mil_total_war_institute
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 35
+		y = 0
+		available = {
+			# 第1ゲート: 政治の幹線が「内閣の行く末」まで進んでいること
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_mil_gate1_tt
+				has_completed_focus = focus_GER_pol_cabinet_future
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# ルーデンドルフの提言
+	focus = {
+		id = focus_GER_mil_ludendorff_proposal
+
+		# icon = GFX_goal_focus_GER_mil_ludendorff_proposal
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = -4
+		y = 1
+		relative_position_id = focus_GER_mil_total_war_institute
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_total_war_institute
+		}
+		mutually_exclusive = {
+			focus = focus_GER_mil_groener_proposal
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 包囲殲滅戦の理論深化
+	focus = {
+		id = focus_GER_mil_theoretical_deepening_of_siege_and_annihilation
+
+		# icon = GFX_goal_focus_GER_mil_theoretical_deepening_of_siege_and_annihilation
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_ludendorff_proposal
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_ludendorff_proposal
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 騎兵強化
+	focus = {
+		id = focus_GER_mil_cavalry_strengthening
+
+		# icon = GFX_goal_focus_GER_mil_cavalry_strengthening
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_mil_theoretical_deepening_of_siege_and_annihilation
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_theoretical_deepening_of_siege_and_annihilation
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 政治は戦争指導に従属すべきである
+	focus = {
+		id = focus_GER_mil_politics_should_be_subordinate_to_war_leadership
+
+		# icon = GFX_goal_focus_GER_mil_politics_should_be_subordinate_to_war_leadership
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_mil_theoretical_deepening_of_siege_and_annihilation
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_theoretical_deepening_of_siege_and_annihilation
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 軍事独裁（隠しNF）
+	focus = {
+		id = focus_GER_mil_military_dictatorship
+
+		# icon = GFX_goal_focus_GER_mil_military_dictatorship
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_mil_politics_should_be_subordinate_to_war_leadership
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_politics_should_be_subordinate_to_war_leadership
+		}
+		# 隠しNF: 戦時ツリー「最高軍司令部への白紙委任」の完了で解禁される（指示書 §9-1）
+		allow_branch = {
+			has_completed_focus = focus_GER_war_carte_blanche_to_ohl
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 改良シュリーフェン・プラン
+	focus = {
+		id = focus_GER_mil_improved_schlieffen_plan
+
+		# icon = GFX_goal_focus_GER_mil_improved_schlieffen_plan
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 2
+		relative_position_id = focus_GER_mil_theoretical_deepening_of_siege_and_annihilation
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_cavalry_strengthening
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_politics_should_be_subordinate_to_war_leadership
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 機動戦
+	focus = {
+		id = focus_GER_mil_bewegungskrieg
+
+		# icon = GFX_goal_focus_GER_mil_bewegungskrieg
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_improved_schlieffen_plan
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_improved_schlieffen_plan
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 工兵隊充実化
+	focus = {
+		id = focus_GER_mil_engineer_corps_strengthening
+
+		# icon = GFX_goal_focus_GER_mil_engineer_corps_strengthening
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = -3
+		y = 1
+		relative_position_id = focus_GER_mil_bewegungskrieg
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_bewegungskrieg
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 大規模突破
+	focus = {
+		id = focus_GER_mil_large_scale_breakthrough
+
+		# icon = GFX_goal_focus_GER_mil_large_scale_breakthrough
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 2
+		relative_position_id = focus_GER_mil_engineer_corps_strengthening
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_engineer_corps_strengthening
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_tank_research
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 前進！
+	focus = {
+		id = focus_GER_mil_forward
+
+		# icon = GFX_goal_focus_GER_mil_forward
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_large_scale_breakthrough
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_large_scale_breakthrough
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# グレーナーの提言
+	focus = {
+		id = focus_GER_mil_groener_proposal
+
+		# icon = GFX_goal_focus_GER_mil_groener_proposal
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 4
+		y = 1
+		relative_position_id = focus_GER_mil_total_war_institute
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_total_war_institute
+		}
+		mutually_exclusive = {
+			focus = focus_GER_mil_ludendorff_proposal
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 機関銃陣地の構築理論
+	focus = {
+		id = focus_GER_mil_construction_theory_of_machine_gun_fortifications
+
+		# icon = GFX_goal_focus_GER_mil_construction_theory_of_machine_gun_fortifications
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_groener_proposal
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_groener_proposal
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 兵站部門拡充
+	focus = {
+		id = focus_GER_mil_supply_department_expansion
+
+		# icon = GFX_goal_focus_GER_mil_supply_department_expansion
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 2
+		y = 1
+		relative_position_id = focus_GER_mil_groener_proposal
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_groener_proposal
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 歩兵強化
+	focus = {
+		id = focus_GER_mil_infantry_strengthening
+
+		# icon = GFX_goal_focus_GER_mil_infantry_strengthening
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_mil_construction_theory_of_machine_gun_fortifications
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_construction_theory_of_machine_gun_fortifications
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 鉄道網の整備
+	focus = {
+		id = focus_GER_mil_railway_network_improvement
+
+		# icon = GFX_goal_focus_GER_mil_railway_network_improvement
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_mil_supply_department_expansion
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_construction_theory_of_machine_gun_fortifications
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_supply_department_expansion
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 士官養成
+	focus = {
+		id = focus_GER_mil_officer_training
+
+		# icon = GFX_goal_focus_GER_mil_officer_training
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_mil_supply_department_expansion
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_supply_department_expansion
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 国土防衛計画
+	focus = {
+		id = focus_GER_mil_national_defence_plan
+
+		# icon = GFX_goal_focus_GER_mil_national_defence_plan
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_mil_infantry_strengthening
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_infantry_strengthening
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_railway_network_improvement
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 縦深防御
+	focus = {
+		id = focus_GER_mil_defence_in_depth
+
+		# icon = GFX_goal_focus_GER_mil_defence_in_depth
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_mil_officer_training
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_railway_network_improvement
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_officer_training
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 持久戦
+	focus = {
+		id = focus_GER_mil_stellungskrieg
+
+		# icon = GFX_goal_focus_GER_mil_stellungskrieg
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_national_defence_plan
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_national_defence_plan
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_defence_in_depth
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 軍は国家の道具である
+	focus = {
+		id = focus_GER_mil_the_army_is_a_tool_of_the_state
+
+		# icon = GFX_goal_focus_GER_mil_the_army_is_a_tool_of_the_state
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_mil_officer_training
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_officer_training
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_defence_in_depth
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 文民統制
+	focus = {
+		id = focus_GER_mil_civilian_control
+
+		# icon = GFX_goal_focus_GER_mil_civilian_control
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 2
+		y = 1
+		relative_position_id = focus_GER_mil_defence_in_depth
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_defence_in_depth
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_the_army_is_a_tool_of_the_state
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# オストヴァル
+	focus = {
+		id = focus_GER_mil_ostwall
+
+		# icon = GFX_goal_focus_GER_mil_ostwall
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 2
+		relative_position_id = focus_GER_mil_defence_in_depth
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_defence_in_depth
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_civilian_control
+		}
+		available = {
+			# 第2ゲート: バルカン戦争の勃発で解禁（解禁時に event_GER_pol.21「嵐の予感」が出る）
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_mil_gate2_tt
+				has_global_flag = vf_started_balkan_war
+			}
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# ヴェストヴァル
+	focus = {
+		id = focus_GER_mil_westwall
+
+		# icon = GFX_goal_focus_GER_mil_westwall
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_ostwall
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_ostwall
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 絶対的防御
+	focus = {
+		id = focus_GER_mil_absolute_defence
+
+		# icon = GFX_goal_focus_GER_mil_absolute_defence
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_westwall
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_westwall
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 兵器の近代化
+	focus = {
+		id = focus_GER_mil_weapons_modernization
+
+		# icon = GFX_goal_focus_GER_mil_weapons_modernization
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 2
+		relative_position_id = focus_GER_mil_total_war_institute
+		prerequisite = { # 前提NF（いずれか）
+			focus = focus_GER_mil_ludendorff_proposal
+			focus = focus_GER_mil_groener_proposal
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 自動車の軍事運用
+	focus = {
+		id = focus_GER_mil_automobile_military_use
+
+		# icon = GFX_goal_focus_GER_mil_automobile_military_use
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_weapons_modernization
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_weapons_modernization
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 戦闘機の検証
+	focus = {
+		id = focus_GER_mil_fighter_aircraft_verification
+
+		# icon = GFX_goal_focus_GER_mil_fighter_aircraft_verification
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_automobile_military_use
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_automobile_military_use
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 嵐へ備える
+	focus = {
+		id = focus_GER_mil_prepare_for_storm
+
+		# icon = GFX_goal_focus_GER_mil_prepare_for_storm
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 2
+		relative_position_id = focus_GER_mil_fighter_aircraft_verification
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_fighter_aircraft_verification
+		}
+		prerequisite = { # 前提NF（いずれか）
+			focus = focus_GER_mil_bewegungskrieg
+			focus = focus_GER_mil_stellungskrieg
+		}
+		available = {
+			# 第2ゲート: バルカン戦争の勃発で解禁（解禁時に event_GER_pol.21「嵐の予感」が出る）
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_mil_gate2_tt
+				has_global_flag = vf_started_balkan_war
+			}
+		}
+		# 準備NFのため開戦後はバイパスされる（指示書 §9-1）
+		bypass = {
+			has_global_flag = vf_greatwar_started
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 戦車研究
+	focus = {
+		id = focus_GER_mil_tank_research
+
+		# icon = GFX_goal_focus_GER_mil_tank_research
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = -4
+		y = 1
+		relative_position_id = focus_GER_mil_prepare_for_storm
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_prepare_for_storm
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 装甲車の採用
+	focus = {
+		id = focus_GER_mil_armored_car_use
+
+		# icon = GFX_goal_focus_GER_mil_armored_car_use
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = -2
+		y = 1
+		relative_position_id = focus_GER_mil_prepare_for_storm
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_prepare_for_storm
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 爆撃機の研究
+	focus = {
+		id = focus_GER_mil_bomber_research
+
+		# icon = GFX_goal_focus_GER_mil_bomber_research
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_prepare_for_storm
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_prepare_for_storm
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 集中突破
+	focus = {
+		id = focus_GER_mil_concentration_breakthrough
+
+		# icon = GFX_goal_focus_GER_mil_concentration_breakthrough
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_mil_tank_research
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_tank_research
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_armored_car_use
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 化学兵器製造
+	focus = {
+		id = focus_GER_mil_chemical_weapon_production
+
+		# icon = GFX_goal_focus_GER_mil_chemical_weapon_production
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_mil_armored_car_use
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_armored_car_use
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_bomber_research
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 士気を挫く
+	focus = {
+		id = focus_GER_mil_break_morale
+
+		# icon = GFX_goal_focus_GER_mil_break_morale
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_mil_bomber_research
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_bomber_research
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 膠着突破
+	focus = {
+		id = focus_GER_mil_break_stalemate
+
+		# icon = GFX_goal_focus_GER_mil_break_stalemate
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_chemical_weapon_production
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_concentration_breakthrough
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_chemical_weapon_production
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_break_morale
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 要塞都市の設定
+	focus = {
+		id = focus_GER_mil_fortress_city_setting
+
+		# icon = GFX_goal_focus_GER_mil_fortress_city_setting
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 4
+		y = 1
+		relative_position_id = focus_GER_mil_prepare_for_storm
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_prepare_for_storm
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_ostwall
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+	# 機動的防御
+	focus = {
+		id = focus_GER_mil_maneuver_defence
+
+		# icon = GFX_goal_focus_GER_mil_maneuver_defence
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_fortress_city_setting
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_fortress_city_setting
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			# TODO(VF): Phase 5 で効果を起草
+			add_political_power = 1
+		}
+
+	}
+
+	### 産業ツリー（13。x=46〜54。指示書 §9-2） ###
+	# 全ルート共通の土台。開戦後も継続する（平時ロックを掛けないこと）
+	# 役割分担: 政治側＝国民精神・安定度 / 産業側＝工場・資源・研究枠（二重取りは §12-5 裁定待ち）
+	# 帝国経済会議
+	focus = {
+		id = focus_GER_eco_imperial_economic_council
+
+		# icon = GFX_goal_focus_GER_eco_imperial_economic_council
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 50
+		y = 0
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = vf_GER_industry_bonus
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+			# TODO(VF): 顧問「ラーテナウ」の解禁はキャラクター実装（§12-3）と併せて本リリースで
+		}
+
+	}
+	# 電化計画
+	focus = {
+		id = focus_GER_eco_electrification_plan
+
+		# icon = GFX_goal_focus_GER_eco_electrification_plan
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = -2
+		y = 1
+		relative_position_id = focus_GER_eco_imperial_economic_council
+		prerequisite = { # 前提NF
+			focus = focus_GER_eco_imperial_economic_council
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			# ベルリン（64）・ザクセン（65）に建築スロット+1、民需工場+2ずつ
+			64 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			65 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+		}
+
+	}
+	# 化学産業への投資
+	focus = {
+		id = focus_GER_eco_chemical_industry_investment
+
+		# icon = GFX_goal_focus_GER_eco_chemical_industry_investment
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_eco_imperial_economic_council
+		prerequisite = { # 前提NF
+			focus = focus_GER_eco_imperial_economic_council
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = vf_GER_synth_bonus
+				bonus = 1.0
+				uses = 2
+				category = synth_resources
+			}
+		}
+
+	}
+	# ルール＝シュレージエン増産
+	focus = {
+		id = focus_GER_eco_ruhr_silesia_production
+
+		# icon = GFX_goal_focus_GER_eco_ruhr_silesia_production
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 2
+		y = 1
+		relative_position_id = focus_GER_eco_imperial_economic_council
+		prerequisite = { # 前提NF
+			focus = focus_GER_eco_imperial_economic_council
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = vf_GER_excavation_bonus
+				bonus = 1.0
+				uses = 1
+				category = excavation_tech
+			}
+			# 鋼鉄+12（ヴェストファーレン=ルール）とスロット+1
+			57 = {
+				add_extra_state_shared_building_slots = 1
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}
+		}
+
+	}
+	# 帝国道路計画
+	focus = {
+		id = focus_GER_eco_imperial_road_program
+
+		# icon = GFX_goal_focus_GER_eco_imperial_road_program
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_eco_electrification_plan
+		prerequisite = { # 前提NF
+			focus = focus_GER_eco_electrification_plan
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			# 4州のインフラ+1（ベルリン・ラインラント・オーバーバイエルン・ザクセン）
+			64 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			42 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			53 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+			65 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+				}
+			}
+		}
+
+	}
+	# 中欧経済圏
+	focus = {
+		id = focus_GER_eco_mitteleuropa
+
+		# icon = GFX_goal_focus_GER_eco_mitteleuropa
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = -2
+		y = 3
+		relative_position_id = focus_GER_eco_imperial_economic_council
+		prerequisite = { # 前提NF
+			focus = focus_GER_eco_imperial_economic_council
+		}
+		available = {
+			# 第1ゲート: 「内閣の行く末」完了後（指示書 §9-2）
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_mil_gate1_tt
+				has_completed_focus = focus_GER_pol_cabinet_future
+			}
+		}
+		mutually_exclusive = {
+			focus = focus_GER_eco_autarky
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			add_ideas = idea_GER_mitteleuropa
+			# ディシジョン「中欧経済圏の提携」を解禁（common/decisions/_vf_GER_decisions.txt の受け口）
+			set_country_flag = vf_GER_mitteleuropa_unlocked
+		}
+
+	}
+	# 経済的自立
+	focus = {
+		id = focus_GER_eco_autarky
+
+		# icon = GFX_goal_focus_GER_eco_autarky
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 2
+		y = 3
+		relative_position_id = focus_GER_eco_imperial_economic_council
+		prerequisite = { # 前提NF
+			focus = focus_GER_eco_imperial_economic_council
+		}
+		available = {
+			# 第1ゲート: 「内閣の行く末」完了後（指示書 §9-2）
+			custom_trigger_tooltip = {
+				tooltip = vf_GER_mil_gate1_tt
+				has_completed_focus = focus_GER_pol_cabinet_future
+			}
+		}
+		mutually_exclusive = {
+			focus = focus_GER_eco_mitteleuropa
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			add_ideas = idea_GER_autarky
+		}
+
+	}
+	# 関税同盟の深化
+	focus = {
+		id = focus_GER_eco_deepen_customs_union
+
+		# icon = GFX_goal_focus_GER_eco_deepen_customs_union
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_eco_mitteleuropa
+		prerequisite = { # 前提NF
+			focus = focus_GER_eco_mitteleuropa
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			# 衛星国・同盟国と自国に民需工場+2ずつ（指示書 §9-2）
+			capital_scope = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						is_subject_of = GER
+						is_in_faction_with = GER
+					}
+					NOT = {
+						tag = GER
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+					}
+				}
+			}
+		}
+
+	}
+	# 石炭液化の研究
+	focus = {
+		id = focus_GER_eco_coal_liquefaction_research
+
+		# icon = GFX_goal_focus_GER_eco_coal_liquefaction_research
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 2
+		relative_position_id = focus_GER_eco_chemical_industry_investment
+		prerequisite = { # 前提NF
+			focus = focus_GER_eco_chemical_industry_investment
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = vf_GER_synth_fuel_bonus
+				bonus = 3.0
+				uses = 1
+				category = synth_resources
+			}
+			65 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+
+	}
+	# 合成素材
+	focus = {
+		id = focus_GER_eco_synthetic_materials
+
+		# icon = GFX_goal_focus_GER_eco_synthetic_materials
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_eco_coal_liquefaction_research
+		prerequisite = { # 前提NF
+			focus = focus_GER_eco_coal_liquefaction_research
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			65 = {
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+				}
+			}
+			add_tech_bonus = {
+				name = vf_GER_synth_rubber_bonus
+				bonus = 1.0
+				uses = 1
+				category = synth_resources
+			}
+		}
+
+	}
+	# 合理化運動
+	focus = {
+		id = focus_GER_eco_rationalization_movement
+
+		# icon = GFX_goal_focus_GER_eco_rationalization_movement
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_eco_ruhr_silesia_production
+		prerequisite = { # 前提NF
+			focus = focus_GER_eco_ruhr_silesia_production
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			# 生産効率上限+5%（指示書 §9-2 の選択肢から採用）
+			add_ideas = idea_GER_rationalization
+		}
+
+	}
+	# カイザー・ヴィルヘルム協会の拡充
+	focus = {
+		id = focus_GER_eco_kaiser_wilhelm_society
+
+		# icon = GFX_goal_focus_GER_eco_kaiser_wilhelm_society
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 2
+		y = 1
+		relative_position_id = focus_GER_eco_rationalization_movement
+		prerequisite = { # 前提NF
+			focus = focus_GER_eco_rationalization_movement
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+	}
+	# 科学大国ドイツ
+	focus = {
+		id = focus_GER_eco_scientific_great_power
+
+		# icon = GFX_goal_focus_GER_eco_scientific_great_power
+		icon = GFX_goal_unknown
+
+		cost = 5 # 35日
+
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_eco_kaiser_wilhelm_society
+		prerequisite = { # 前提NF
+			focus = focus_GER_eco_kaiser_wilhelm_society
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+
+	}
+	### 予約: アウスグライヒ・内戦ルート（β実装外、§14-6 の予約IDを使用のこと） ###
+
+}

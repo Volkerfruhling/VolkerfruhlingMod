@@ -1,0 +1,33 @@
+# =========================================================
+# VF / ドイツ帝国：パワーバランス表示用 scripted_localisation
+# 指示書: .doc/08_GER議会ルート_実装指示書.md §6-1
+#
+# 関連ファイル:
+#   common/ideas/_vf_ideas_GER.txt            … 国民精神「勢力均衡」の desc から [GER.VfGerPrivyTilt] で呼ばれる
+#   events/_vf_events_GER.txt                 … event_GER_pol.5（双頭の脳髄）が傾きフラグを立てる
+# =========================================================
+defined_text = {
+	name = VfGerPrivyTilt
+
+	text = {
+		trigger = {
+			has_country_flag = vf_GER_privy_abolished
+		}
+		localization_key = vf_GER_privy_tilt_abolished
+	}
+	text = {
+		trigger = {
+			has_country_flag = vf_GER_privy_kaiser
+		}
+		localization_key = vf_GER_privy_tilt_kaiser
+	}
+	text = {
+		trigger = {
+			has_country_flag = vf_GER_privy_regent
+		}
+		localization_key = vf_GER_privy_tilt_regent
+	}
+	text = {
+		localization_key = vf_GER_privy_tilt_neutral
+	}
+}

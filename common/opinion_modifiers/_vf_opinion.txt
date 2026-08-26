@@ -14,4 +14,34 @@ opinion_modifiers = {
 	vf_opinion_SER_franco_russian_guarantee = {
 		value = 40
 	}
+
+	### GER幹線イベント（events/_vf_events_GER.txt）###
+	# イストリアの譲歩（event_GER_pol.6 選択肢2）
+	vf_opinion_GER_istria_concession = {
+		value = 75
+	}
+	# イストリアの強奪（event_GER_pol.6 選択肢3）
+	vf_opinion_GER_istria_seized = {
+		value = -100
+	}
+	# バルカンからの撤退（event_GER_pol.7 選択肢1）
+	vf_opinion_GER_balkan_withdrawal = {
+		value = -50
+	}
+	# バルカンでの自制（event_GER_pol.7 選択肢2）
+	vf_opinion_GER_balkan_restraint = {
+		value = 10
+	}
+	# 少数民族の権利保障（NF 少数民族問題。BOH→GER）
+	vf_opinion_GER_minority_rights = {
+		value = 10
+	}
+	# 諸邦への配慮（event_GER_pol.16 諸邦の反応）
+	vf_opinion_GER_state_consideration = {
+		value = 10
+	}
+	# 中欧経済圏の提携（vf_GER_decision_mitteleuropa_partnership）
+	vf_opinion_GER_mitteleuropa_partnership = {
+		value = 15
+	}
 }

@@ -1,0 +1,1407 @@
+#!gfx:interface\VF\goals\goals_ger.gfx
+focus_tree = {
+	id = focus_GER
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = GER
+		}
+	}
+	# 双頭一体の鷲
+	focus = {
+		id = focus_GER_pol_two_headed_eagle
+		
+		# icon = GFX_goal_focus_GER_two_headed_eagle
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 15
+		y = 0
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# プリンツ・マックス
+	focus = {
+		id = focus_GER_pol_prinz_max
+		
+		# icon = GFX_goal_focus_GER_prinz_max
+		icon = GFX_goal_unknown
+		
+		cost = 2
+		
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_pol_two_headed_eagle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_two_headed_eagle
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 国民議会
+	focus = {
+		id = focus_GER_pol_national_assembly
+		
+		# icon = GFX_goal_focus_GER_national_assembly
+		icon = GFX_goal_unknown
+		
+		cost = 2
+		
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_pol_two_headed_eagle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_two_headed_eagle
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# オーストリア帝冠領
+	focus = {
+		id = focus_GER_pol_austrian_imperial_crown_lands
+		
+		# icon = GFX_goal_focus_GER_austrian_imperial_crown_lands
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_prinz_max
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_prinz_max
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# イストリア問題
+	focus = {
+		id = focus_GER_pol_istria_problem
+		
+		# icon = GFX_goal_focus_GER_istria_problem
+		icon = GFX_goal_unknown
+		
+		cost = 2
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_austrian_imperial_crown_lands
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_austrian_imperial_crown_lands
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 枢密院
+	focus = {
+		id = focus_GER_pol_privy_council
+		
+		# icon = GFX_goal_focus_GER_privy_council
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_national_assembly
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_national_assembly
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# バルカン同盟
+	focus = {
+		id = focus_GER_pol_balcan_alliance
+		
+		# icon = GFX_goal_focus_GER_balcan_alliance
+		icon = GFX_goal_unknown
+		
+		cost = 2
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_privy_council
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_privy_council
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 内閣の行く末
+	focus = {
+		id = focus_GER_pol_cabinet_future
+		
+		# icon = GFX_goal_focus_GER_cabinet_future
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 4
+		relative_position_id = focus_GER_pol_two_headed_eagle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_istria_problem
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_balcan_alliance
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 自由之理
+	focus = {
+		id = focus_GER_pol_freedom_principle
+		
+		# icon = GFX_goal_focus_GER_freedom_principle
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = -5
+		y = 1
+		relative_position_id = focus_GER_pol_cabinet_future
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_cabinet_future
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 帝冠領整理案
+	focus = {
+		id = focus_GER_pol_proposiation_reform_imperial_crown_lands
+		
+		# icon = GFX_goal_focus_GER_proposiation_reform_imperial_crown_lands
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_pol_freedom_principle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_freedom_principle
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 少数民族問題
+	focus = {
+		id = focus_GER_pol_minority_problem
+		
+		# icon = GFX_goal_focus_GER_minority_problem
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_proposiation_reform_imperial_crown_lands
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_proposiation_reform_imperial_crown_lands
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 内閣集権
+	focus = {
+		id = focus_GER_pol_centralization_of_cabinet
+		
+		# icon = GFX_goal_focus_GER_centralization_of_cabinet
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_pol_freedom_principle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_freedom_principle
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 国民議会の強化
+	focus = {
+		id = focus_GER_pol_strengthen_national_assembly
+		
+		# icon = GFX_goal_focus_GER_strengthen_national_assembly
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_centralization_of_cabinet
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_centralization_of_cabinet
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 改革準備委員会
+	focus = {
+		id = focus_GER_pol_preparation_committee_for_reform
+		
+		# icon = GFX_goal_focus_GER_preparation_committee_for_reform
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 3
+		relative_position_id = focus_GER_pol_freedom_principle
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_minority_problem
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_strengthen_national_assembly
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 1926年議会選挙
+	focus = {
+		id = focus_GER_pol_1926_election
+		
+		# icon = GFX_goal_focus_GER_1926_election
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_preparation_committee_for_reform
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_preparation_committee_for_reform
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# ヴァイマル連立の勝利
+	focus = {
+		id = focus_GER_pol_victory_of_weimar_coalition
+		
+		# icon = GFX_goal_focus_GER_victory_of_weimar_coalition
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = -2
+		y = 1
+		relative_position_id = focus_GER_pol_1926_election
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_1926_election
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 保守党の勝利
+	focus = {
+		id = focus_GER_pol_victory_of_conservative_party
+		
+		# icon = GFX_goal_focus_GER_victory_of_conservative_party
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 2
+		y = 1
+		relative_position_id = focus_GER_pol_1926_election
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_1926_election
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# アウスグライヒ
+	focus = {
+		id = focus_GER_pol_ausgleich
+		
+		# icon = GFX_goal_focus_GER_ausgleich
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_cabinet_future
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_cabinet_future
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 枢密院集権
+	focus = {
+		id = focus_GER_pol_centralization_of_privy_council
+		
+		# icon = GFX_goal_focus_GER_centralization_of_privy_council
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_ausgleich
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_ausgleich
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# スペインへの対処
+	focus = {
+		id = focus_GER_dip_dealing_with_spain
+		
+		# icon = GFX_goal_focus_GER_dealing_with_spain
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = -2
+		y = 1
+		relative_position_id = focus_GER_pol_ausgleich
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_ausgleich
+			focus = focus_GER_pol_freedom_principle
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# イストリア交渉
+	focus = {
+		id = focus_GER_dip_istria_negotiation
+		
+		# icon = GFX_goal_focus_GER_istria_negotiation
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 2
+		relative_position_id = focus_GER_dip_dealing_with_spain
+		prerequisite = { # 前提NF
+			focus = focus_GER_dip_dealing_with_spain
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_centralization_of_privy_council
+			focus = focus_GER_pol_strengthen_national_assembly
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 兄弟闘争
+	focus = {
+		id = focus_GER_pol_brother_fight
+		
+		# icon = GFX_goal_focus_GER_brother_fight
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 5
+		y = 1
+		relative_position_id = focus_GER_pol_cabinet_future
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_cabinet_future
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 凱旋はベルリンへ
+	focus = {
+		id = focus_GER_pol_triumph_is_berlin
+		
+		# icon = GFX_goal_focus_GER_triumph_is_berlin
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_pol_brother_fight
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_brother_fight
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 凱旋はウィーンへ
+	focus = {
+		id = focus_GER_pol_triumph_is_vienna
+		
+		# icon = GFX_goal_focus_GER_triumph_is_vienna
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 6
+		y = 1
+		relative_position_id = focus_GER_pol_brother_fight
+		prerequisite = { # 前提NF
+			focus = focus_GER_pol_brother_fight
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+
+	############################################################
+	##                        軍事NF                          ##
+	############################################################
+	# 総力戦研究所
+	focus = {
+		id = focus_GER_mil_total_war_institute
+		
+		# icon = GFX_goal_focus_GER_total_war_institute
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 35
+		y = 0
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# ルーデンドルフの提言
+	focus = {
+		id = focus_GER_mil_ludendorff_proposal
+		
+		# icon = GFX_goal_focus_GER_ludendorff_proposal
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = -4
+		y = 1
+		relative_position_id = focus_GER_mil_total_war_institute
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_total_war_institute
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 包囲殲滅戦の理論深化
+	focus = {
+		id = focus_GER_mil_theorical_deepning_of_siege_and_annihilation
+		
+		# icon = GFX_goal_focus_GER_theorical_deepning_of_siege_and_annihilation
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_ludendorff_proposal
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_ludendorff_proposal
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 騎兵強化
+	focus = {
+		id = focus_GER_mil_cavalry_strengthening
+		
+		# icon = GFX_goal_focus_GER_cavalry_strengthening
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_mil_theorical_deepning_of_siege_and_annihilation
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_theorical_deepning_of_siege_and_annihilation
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 政治は戦争指導に従属すべきである
+	focus = {
+		id = focus_GER_mil_politics_should_be_subordinate_to_war_leadership
+		
+		# icon = GFX_goal_focus_GER_politics_should_be_subordinate_to_war_leadership
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_mil_theorical_deepning_of_siege_and_annihilation
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_theorical_deepning_of_siege_and_annihilation
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 改良シュリーフェン・プラン
+	focus = {
+		id = focus_GER_mil_improved_schlieffen_plan
+		
+		# icon = GFX_goal_focus_GER_improved_schlieffen_plan
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 2
+		relative_position_id = focus_GER_mil_theorical_deepning_of_siege_and_annihilation
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_cavalry_strengthening
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_politics_should_be_subordinate_to_war_leadership
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 機動戦
+	focus = {
+		id = focus_GER_mil_bewegungskrieg
+		
+		# icon = GFX_goal_focus_GER_bewegungskrieg
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_improved_schlieffen_plan
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_improved_schlieffen_plan
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 工兵隊充実化
+	focus = {
+		id = focus_GER_mil_engineer_corps_strengthening
+		
+		# icon = GFX_goal_focus_GER_engineer_corps_strengthening
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = -3
+		y = 1
+		relative_position_id = focus_GER_mil_bewegungskrieg
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_bewegungskrieg
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 大規模突破
+	focus = {
+		id = focus_GER_mil_large_scale_breakthrough
+		
+		# icon = GFX_goal_focus_GER_large_scale_breakthrough
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 2
+		relative_position_id = focus_GER_mil_engineer_corps_strengthening
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_engineer_corps_strengthening
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_tank_research
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 前進！
+	focus = {
+		id = focus_GER_mil_forward
+		
+		# icon = GFX_goal_focus_GER_forward
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_large_scale_breakthrough
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_large_scale_breakthrough
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# グレーナーの提言
+	focus = {
+		id = focus_GER_mil_groener_proposal
+		
+		# icon = GFX_goal_focus_GER_groener_proposal
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 4
+		y = 1
+		relative_position_id = focus_GER_mil_total_war_institute
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_total_war_institute
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 機関銃陣地の構築理論
+	focus = {
+		id = focus_GER_mil_construction_theory_of_machine_gun_fortifications
+		
+		# icon = GFX_goal_focus_GER_construction_theory_of_machine_gun_fortifications
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_groener_proposal
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_groener_proposal
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 兵站部門拡充
+	focus = {
+		id = focus_GER_mil_supply_department_expansion
+		
+		# icon = GFX_goal_focus_GER_supply_department_expansion
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 2
+		y = 1
+		relative_position_id = focus_GER_mil_groener_proposal
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_groener_proposal
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 歩兵強化
+	focus = {
+		id = focus_GER_mil_infantry_strengthening
+		
+		# icon = GFX_goal_focus_GER_infantry_strengthening
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_mil_construction_theory_of_machine_gun_fortifications
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_construction_theory_of_machine_gun_fortifications
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 鉄道網の整備
+	focus = {
+		id = focus_GER_mil_railway_network_improvement
+		
+		# icon = GFX_goal_focus_GER_railway_network_improvement
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_mil_supply_department_expansion
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_construction_theory_of_machine_gun_fortifications
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_supply_department_expansion
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 士官養成
+	focus = {
+		id = focus_GER_mil_officer_training
+		
+		# icon = GFX_goal_focus_GER_officer_training
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_mil_supply_department_expansion
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_supply_department_expansion
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 国土防衛計画
+	focus = {
+		id = focus_GER_mil_national_defence_plan
+		
+		# icon = GFX_goal_focus_GER_national_defence_plan
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_mil_infantry_strengthening
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_infantry_strengthening
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_railway_network_improvement
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 持久戦
+	focus = {
+		id = focus_GER_mil_stellungskrieg
+		
+		# icon = GFX_goal_focus_GER_stellungskrieg
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_national_defence_plan
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_national_defence_plan
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_defence_in_depth
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 縦深防御
+	focus = {
+		id = focus_GER_mil_defence_in_depth
+		
+		# icon = GFX_goal_focus_GER_defence_in_depth
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = -1
+		y = 1
+		relative_position_id = focus_GER_mil_officer_training
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_railway_network_improvement
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_officer_training
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 軍は国家の道具である
+	focus = {
+		id = focus_GER_mil_the_army_is_a_tool_of_the_state
+		
+		# icon = GFX_goal_focus_GER_the_army_is_a_tool_of_the_state
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_mil_officer_training
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_officer_training
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_defence_in_depth
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 文民統制
+	focus = {
+		id = focus_GER_mil_civilian_control
+		
+		# icon = GFX_goal_focus_GER_civilian_control
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 2
+		y = 1
+		relative_position_id = focus_GER_mil_defence_in_depth
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_defence_in_depth
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_the_army_is_a_tool_of_the_state
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# オストヴァル
+	focus = {
+		id = focus_GER_mil_ostwall
+		
+		# icon = GFX_goal_focus_GER_ostwall
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 2
+		relative_position_id = focus_GER_mil_defence_in_depth
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_defence_in_depth
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_civilian_control
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# ヴェストヴァル
+	focus = {
+		id = focus_GER_mil_westwall
+		
+		# icon = GFX_goal_focus_GER_westwall
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_ostwall
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_ostwall
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 絶対的防御
+	focus = {
+		id = focus_GER_mil_absolute_defence
+		
+		# icon = GFX_goal_focus_GER_absolute_defence
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_westwall
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_westwall
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 兵器の近代化
+	focus = {
+		id = focus_GER_mil_weapons_modernization
+		
+		# icon = GFX_goal_focus_GER_weapons_modernization
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 2
+		relative_position_id = focus_GER_mil_total_war_institute
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_ludendorff_proposal
+			focus = focus_GER_mil_groener_proposal
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 自動車の軍事運用
+	focus = {
+		id = focus_GER_mil_automobile_military_use
+		
+		# icon = GFX_goal_focus_GER_automobile_military_use
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_weapons_modernization
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_weapons_modernization
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 戦闘機の検証
+	focus = {
+		id = focus_GER_mil_fighter_aircraft_verification
+		
+		# icon = GFX_goal_focus_GER_fighter_aircraft_verification
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_automobile_military_use
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_automobile_military_use
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 嵐へ備える
+	focus = {
+		id = focus_GER_mil_prepare_for_storm
+		
+		# icon = GFX_goal_focus_GER_prepare_for_storm
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 2
+		relative_position_id = focus_GER_mil_fighter_aircraft_verification
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_fighter_aircraft_verification
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_bewegungskrieg
+			focus = focus_GER_mil_stellungskrieg
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 戦車研究
+	focus = {
+		id = focus_GER_mil_tank_research
+		
+		# icon = GFX_goal_focus_GER_tank_research
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = -4
+		y = 1
+		relative_position_id = focus_GER_mil_prepare_for_storm
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_prepare_for_storm
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 装甲車の採用
+	focus = {
+		id = focus_GER_mil_armored_car_use
+		
+		# icon = GFX_goal_focus_GER_armored_car_use
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = -2
+		y = 1
+		relative_position_id = focus_GER_mil_prepare_for_storm
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_prepare_for_storm
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 爆撃機の研究
+	focus = {
+		id = focus_GER_mil_bomber_research
+		
+		# icon = GFX_goal_focus_GER_bomber_research
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_prepare_for_storm
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_prepare_for_storm
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 集中突破
+	focus = {
+		id = focus_GER_mil_concentration_breakthrough
+		
+		# icon = GFX_goal_focus_GER_concentration_breakthrough
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_mil_tank_research
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_tank_research
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_armored_car_use
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 化学兵器製造
+	focus = {
+		id = focus_GER_mil_chemical_weapon_production
+		
+		# icon = GFX_goal_focus_GER_chemical_weapon_production
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_mil_armored_car_use
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_armored_car_use
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_bomber_research
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 士気を挫く
+	focus = {
+		id = focus_GER_mil_break_morale
+		
+		# icon = GFX_goal_focus_GER_break_morale
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 1
+		y = 1
+		relative_position_id = focus_GER_mil_bomber_research
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_bomber_research
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 膠着突破
+	focus = {
+		id = focus_GER_mil_break_stalemate
+		
+		# icon = GFX_goal_focus_GER_break_stalemate
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_chemical_weapon_production
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_concentration_breakthrough
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_chemical_weapon_production
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_break_morale
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 要塞都市の設定
+	focus = {
+		id = focus_GER_mil_fortress_city_setting
+		
+		# icon = GFX_goal_focus_GER_fortress_city_setting
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 4
+		y = 1
+		relative_position_id = focus_GER_mil_prepare_for_storm
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_prepare_for_storm
+		}
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_ostwall
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+	# 機動的防御
+	focus = {
+		id = focus_GER_mil_maneuver_defence
+		
+		# icon = GFX_goal_focus_GER_maneuver_defence
+		icon = GFX_goal_unknown
+		
+		cost = 5
+		
+		x = 0
+		y = 1
+		relative_position_id = focus_GER_mil_fortress_city_setting
+		prerequisite = { # 前提NF
+			focus = focus_GER_mil_fortress_city_setting
+		}
+		available = {
+			always = yes
+		}
+		completion_reward = {
+		}
+		
+	}
+}

@@ -1,0 +1,221 @@
+﻿l_japanese:
+ focus_GER: "ドイツ帝国国家方針"
+
+ ### 共通ツールチップ ###
+ vf_GER_peacetime_locked_tt: "世界大戦が始まっていない"
+ vf_GER_beta_locked_tt: "今後のアップデートで解放されます"
+ vf_GER_mil_gate1_tt: "内閣の行く末が定まっている"
+ vf_GER_mil_gate2_tt: "バルカン半島で戦争が起きている"
+
+ ### 政治：幹線（8） ###
+ focus_GER_pol_two_headed_eagle: "双頭一体の鷲"
+ focus_GER_pol_two_headed_eagle_desc: "1848年、フランクフルトに集いし者たちの理想は、現実という名の妥協の前に二つの頭を持つ鷲として結実した。ベルリンに座すホーエンツォレルン家の皇帝と、ウィーンに君臨し摂政位を継ぐハプスブルク家。プロイセンの武威とオーストリアの威光、小ドイツの夢と大ドイツの未練。この奇妙な双頭体制は、70年以上にわたり帝国の平和を保ってきた奇跡の均衡か、それともいつか必ず帝国を引き裂く呪われた宿命か。今、我々はこの鷲が一体となって飛翔するのか、互いを啄み合うのかを見極めねばならない。"
+ focus_GER_pol_prinz_max: "プリンツ・マックス"
+ focus_GER_pol_prinz_max_desc: "宰相の座にあるマクシミリアン・フォン・バーデン、通称「プリンツ・マックス」は、稀代の自由主義者として知られている。彼は皇帝の権威と摂政の伝統、そして国民議会の進歩主義という三つの力の狭間で、巧みな舵取りによって帝国を導いてきた。しかし、その任期は終わりに近づいている。議会勢力は彼の続投を望むが、宮廷の保守派は新たな顔を求めている。この穏健なる公爵の手腕を再び信じるか、あるいは新たな時代のために新たな指導者を立てるか。その選択は、帝国の政治的風向きを大きく左右するだろう。"
+ focus_GER_pol_national_assembly: "国民議会"
+ focus_GER_pol_national_assembly_desc: "パウロ教会に響いた自由と統一の誓いは、今もフランクフルトの国民議会に息づいている。かつての理想は、政党間の駆け引きの場へと姿を変えたが、それでもなお民意の殿堂であることに変わりはない。近年、社会民主党（SPD）が労働者の支持を背景に急速に議席を伸ばし、帝国の政治風景を塗り替えつつある。これは時代の必然か。それとも、かつてマルクスが描いた革命の理想を忘れ、議会政治という安逸に魂を売り渡した者たちの虚しい勝利なのか。議場の喧騒の奥で、真の変革を求める声が再び熱を帯び始めている。"
+ focus_GER_pol_austrian_imperial_crown_lands: "オーストリア帝冠領"
+ focus_GER_pol_austrian_imperial_crown_lands_desc: "ドイツ帝国は一つの国家ではない。その心臓部には、ハプスブルク家が直接統治する広大な「帝国内の帝国」、オーストリア帝冠領が横たわっている。ウィーン、プラハ、ザグレブ…。ここはドイツ人、チェコ人、クロアチア人、そして多くの民族が共存する、帝国の縮図であり、同時に火種でもある。摂政の威光の源泉であるこの特異な領域は、帝国の多様性の証か、それとも統一を阻む最大の障害か。この国家内国家の曖昧な地位を、我々は永遠に許容し続けるわけにはいかないだろう。"
+ focus_GER_pol_istria_problem: "イストリア問題"
+ focus_GER_pol_istria_problem_desc: "アドリア海の宝玉、イストリア。かつてハプスブルクの領地であったこの地は、鉄血宰相ビスマルクの叡智により、イタリアとの融和を象徴する中立の共同管理区域とされた。彼の外交が生んだ絶妙な均衡は、今や過去の遺物となりつつある。イタリアの民族主義者は「未回収の地」への帰還を叫び、帝国内のハプスブルク支持者は失地回復を夢見る。ビスマルクの遺産を尊重し現状を維持するか、イタリアとの友情を深めるために譲歩するか、あるいは断固として帝国の威光を示すか。この半島を巡る決断が、南方の外交政策を決定づける。"
+ focus_GER_pol_privy_council: "枢密院"
+ focus_GER_pol_privy_council_desc: "皇帝と摂政。二つの太陽が衝突せぬよう、かのビスマルクが憲法の外に創り上げた影の機関、それが枢密院である。初代議長として彼が振るった権力は、宰相をも凌駕したと伝えられる。法には定められぬこの評議会は、帝国の複雑な権力構造を円滑にするための潤滑油か、それとも特定の派閥が帝国の舵を密かに握るための温床か。今や形骸化しつつある枢密院の権威を回復させ、皇帝と摂政の調停役として再定義するのか、あるいは議会の名の下にその曖昧な存在に終止符を打つべきか。"
+ focus_GER_pol_balkan_alliance: "バルカン同盟"
+ focus_GER_pol_balkan_alliance_desc: "ヨーロッパの火薬庫、バルカン。かつてのセルビア懲罰戦争の熾烈な炎の中から、地域の新たな秩序としてバルカン同盟は生まれた。セルビアの再興を恐れる現地の小国たちが、帝国の威光を後ろ盾に寄り集まった脆弱な連合体。それは、バルカン半島における我々の影響力の礎であり、同時に我々を新たな紛争へと引きずり込みかねない危険な賭けでもある。我々はこの同盟の後見人として、どこまで深く関与すべきだろうか。腕を伸ばしてその結束を強め、バルカンの覇権を確固たるものにするのか。それとも賢明に距離を置き、いつ爆発するとも知れぬ火薬庫から手を引くべきか。この地での一挙手一投足が、ヨーロッパ全体の平和を揺るがしかねない。"
+ focus_GER_pol_cabinet_future: "内閣の行く末"
+ focus_GER_pol_cabinet_future_desc: "これまでの選択が、帝国の未来を静かに、しかし確実に形作ってきた。宰相の進退、議会への態度、オーストリアの扱い、そして宮廷内の力学。一つ一つの決断が複雑に絡み合い、今や帝国の政治は沸点へと近づいている。皇帝派、摂政派、そして議会派。それぞれの思惑が水面下で激しくぶつかり合い、内閣は嵐の中の小舟のように揺れている。この緊張は新たな時代の幕開けとなるのか、それとも帝国を内側から引き裂く内戦の前触れなのか。運命の賽は、もはや投げられた。"
+
+ ### 政治：議会ルート・選挙前（9） ###
+ focus_GER_pol_freedom_principle: "自由の理"
+ focus_GER_pol_freedom_principle_desc: "皇帝か、摂政か。宮廷内の権力闘争に明け暮れる時代は終わった。真の権力は国民にあり、その意思は議会を通じて示される。今こそ我々は対立ではなく対話を、独裁ではなく理性を選択し、自由の原則に基づいた国家再建への道を歩みださねばならない。"
+ focus_GER_pol_reorganize_crownlands: "帝冠領整理案"
+ focus_GER_pol_reorganize_crownlands_desc: "帝国の心臓部に横たわるハプスブルクの帝冠領は、長らく国家統合の足枷となってきた。ウィーンの威光は尊重しつつも、もはや国家内国家という前時代的な制度は許されない。チェコやクロアチアの同胞たちに新たな地位を約束し、真の連邦国家への第一歩を踏み出す時だ。"
+ focus_GER_pol_centralization_of_cabinet: "内閣集権"
+ focus_GER_pol_centralization_of_cabinet_desc: "皇帝の勅命と摂政の介入が国政を混乱させる日々は、もう終わりにしよう。宰相が率いる内閣は、国民議会に対してのみ責任を負うべきである。行政権を内閣に集約させることで、迅速かつ責任ある政治を実現する。"
+ focus_GER_pol_dealing_with_spain: "スペインの対処"
+ focus_GER_pol_dealing_with_spain_desc: "かつて我々の同胞が王位に就いたスペインは、今もなお内乱の火種を燻らせている。旧体制の権威主義者たちは我々に支援を求めるが、自由を信奉する我々が手を貸すべき相手は誰なのか。あるいは、他国の内政に干渉せず、我々の改革に集中すべきか。"
+ focus_GER_pol_minority_problem: "少数民族問題"
+ focus_GER_pol_minority_problem_desc: "ポーランド人、チェコ人、クロアチア人…。帝国は多くの民族を内包するモザイク国家である。彼らの言語と文化を尊重し、権利を保障することなくして、帝国の真の安定はありえない。抑圧ではなく寛容こそが、帝国を内側から強くする唯一の道だ。"
+ focus_GER_pol_strengthen_national_assembly: "国民議会の強化"
+ focus_GER_pol_strengthen_national_assembly_desc: "国民議会はもはや単なる諮問機関ではない。立法、予算、そして内閣の監督。国家の主権者たる国民の意思を反映する最高機関として、その権威と権限を強化せねばならない。議会の議決こそが、帝国の法となるのだ。"
+ focus_GER_pol_preparation_committee_for_reform: "改革準備委員会"
+ focus_GER_pol_preparation_committee_for_reform_desc: "国家の構造を抜本的に見直すためには、周到な準備が不可欠だ。法学、経済学、行政学の専門家を招聘し、来るべき大改革の青写真を描くための委員会を設立する。彼らの知性が、新時代のドイツの礎となるだろう。"
+ focus_GER_pol_istria_negotiation: "イストリア交渉"
+ focus_GER_pol_istria_negotiation_desc: "ビスマルクの遺産、イストリア。この共同管理区域の未来を、イタリアとの友好に基づき決定する時が来た。我々の寛大さを示すことで、両国の永続的な友好関係を築き、ヨーロッパの平和に貢献しよう。"
+ focus_GER_pol_1926_election: "1926年議会選挙"
+ focus_GER_pol_1926_election_desc: "我々が進めてきた改革の是非を、国民に問う時が来た。この選挙は、ドイツが自由と民主主義の道を歩み続けるか、それとも再び権威主義の過去へ回帰するかの分水嶺となるだろう。国民の審判を厳粛に受け止めよう。"
+
+ ### 政治：選挙（2） ###
+ focus_GER_pol_victory_of_weimar_coalition: "ヴァイマル連合の勝利"
+ focus_GER_pol_victory_of_weimar_coalition_desc: "国民は我々の改革路線を支持した。社会民主党、中央党、そして自由主義者たちが手を携える「ヴァイマル連合」が、国民からの信任を得たのだ。この勝利を糧に、我々はより大胆な社会・経済改革へと駒を進める。"
+ focus_GER_pol_victory_of_conservative_party: "保守党の勝利"
+ focus_GER_pol_victory_of_conservative_party_desc: "保守派が選挙に勝利した。（このルートは今後のアップデートで解放されます）"
+
+ ### 政治：議会ルート・選挙後（14） ###
+ focus_GER_pol_progressivism: "前進主義"
+ focus_GER_pol_progressivism_desc: "もはや過去を振り返る必要はない。我々は未来を見据え、社会のあらゆる分野で前進しなければならない。教育の機会均等、男女の権利平等、そして旧弊な社会構造の打破。進歩こそが我々の旗印だ。"
+ focus_GER_pol_welfare_debate: "福祉論争"
+ focus_GER_pol_welfare_debate_desc: "国民の生活を守ることは国家の責務である。病、失業、そして老い。人生の苦難から国民を守るためのセーフティネットを構築せねばならない。そのコストを巡る論争はあれど、我々は人道を優先する。"
+ focus_GER_pol_fiscal_stimulus: "財政出動"
+ focus_GER_pol_fiscal_stimulus_desc: "経済の停滞を打破するためには、国家が積極的に需要を創出しなければならない。大規模な公共事業を通じて雇用を生み、国内経済を活性化させる。今は緊縮の時ではない、投資の時なのだ。"
+ focus_GER_pol_unemployment_insurance: "失業保険の導入"
+ focus_GER_pol_unemployment_insurance_desc: "職を失うことは、個人の尊厳を脅かす最大の危機の一つだ。国家は、失業者が再び立ち上がるまでの生活を保障する義務がある。失業保険制度の導入は、近代福祉国家として当然の責務である。"
+ focus_GER_pol_controlled_urban_planning: "統制された都市計画"
+ focus_GER_pol_controlled_urban_planning_desc: "工業化が生んだ無秩序な都市の拡大は、劣悪な生活環境を生み出している。合理的で衛生的な都市計画に基づき、国民が健康で文化的な生活を送れるような新たな都市を建設する。"
+ focus_GER_pol_great_reform_declaration: "大改革宣言"
+ focus_GER_pol_great_reform_declaration_desc: "これまで進めてきた個別の改革を統合し、国家の新たな形を内外に宣言する時が来た。我々が目指すのは、自由で、公正で、連帯に基づいた社会である。この宣言は、新時代のドイツの憲章となるだろう。"
+ focus_GER_pol_ebert_plan: "エーベルト・プラン"
+ focus_GER_pol_ebert_plan_desc: "フリードリヒ・エーベルトの名を冠したこの計画は、公共住宅の大量供給と社会インフラの整備を目的とする。全ての国民に、適切な住居と公共サービスへのアクセスを保障する。" # TODO(VF): Phase 4 で「現職首相の看板政策」として書き直す（§16 #17）
+ focus_GER_pol_abolish_privy_council: "枢密院廃止"
+ focus_GER_pol_abolish_privy_council_desc: "憲法外に存在し、宮廷の密かな権力闘争の温床となってきた枢密院は、もはや民主主義国家には不要である。ビスマルクの遺産に別れを告げ、全ての権力を憲法と議会の下に置く。"
+ focus_GER_pol_codify_dual_monarchy: "二元君主の明文化"
+ focus_GER_pol_codify_dual_monarchy_desc: "皇帝と摂政。この双頭体制の曖昧さが、これまでの政治的混乱の根源であった。両君主の権限と継承順位を憲法に明記することで、その地位を国体の象徴として安定させ、将来の権力闘争の芽を摘む。"
+ focus_GER_pol_labor_service: "奉仕勤労団"
+ focus_GER_pol_labor_service_desc: "公共事業と職業訓練を組み合わせ、若者たちに労働の機会と技術を習得する場を提供する。国家への奉仕を通じて、彼らは社会の一員としての自覚と誇りを育むだろう。"
+ focus_GER_pol_strengthen_coalition: "連合強化"
+ focus_GER_pol_strengthen_coalition_desc: "ヴァイマル連合を構成する各党は、来るべき憲法改正に向けてその結束をさらに強化せねばならない。共通の理念の下に団結し、旧体制からの抵抗を乗り越え、改革を最後まで成し遂げる。"
+ focus_GER_pol_constitutional_reform: "憲法改正"
+ focus_GER_pol_constitutional_reform_desc: "1848年の理想、ビスマルクの現実主義、そして我々の改革の成果。その全てを盛り込み、ドイツ帝国の新たな基本法を制定する。この新憲法の下、ドイツは自由と民主主義、そして法の支配が確立された、揺ぎない近代国家として生まれ変わるのだ。"
+ focus_GER_pol_ledermann: "皮職人"
+ focus_GER_pol_ledermann_desc: "新たな憲法体制を国内外の敵から守るため、議会の監督下に置かれた新たな情報機関を設立する。彼らは影の中から共和国に仕え、自由の番人となるだろう。その長官は、ただ「皮職人」と呼ばれる。"
+ focus_GER_pol_der_graf: "伯爵"
+ focus_GER_pol_der_graf_desc: "新時代のドイツを国際社会に代表するためには、旧来の貴族的外交とは一線を画す、専門的な外交官集団が必要だ。彼らは「伯爵」のコードネームで知られる長官に率いられ、国益のために世界を駆け巡る。"
+
+ ### 戦時ツリー（15） ###
+ # 入口・分岐・完成の5本は指示書 §9-3 の名称。それ以外の10本はIDからの仮訳（要主宰確認）
+ focus_GER_war_burgfrieden: "城内平和"
+ focus_GER_war_burgfrieden_desc: "戦争が始まった。党派の対立は国境の前で停止する。" # Descは仮置き
+ focus_GER_war_wartime_economy: "戦時経済体制"
+ focus_GER_war_wartime_economy_desc: "戦時経済体制" # Descは仮置き
+ focus_GER_war_carte_blanche_to_ohl: "最高軍司令部への白紙委任"
+ focus_GER_war_carte_blanche_to_ohl_desc: "最高軍司令部への白紙委任" # Descは仮置き
+ focus_GER_war_parliamentary_war_control: "議会の戦時統制"
+ focus_GER_war_parliamentary_war_control_desc: "議会の戦時統制" # Descは仮置き
+ focus_GER_war_auxiliary_service_act: "祖国支援勤務法" # 仮訳
+ focus_GER_war_auxiliary_service_act_desc: "祖国支援勤務法" # Descは仮置き
+ focus_GER_war_military_priority_economy: "軍需優先経済" # 仮訳
+ focus_GER_war_military_priority_economy_desc: "軍需優先経済" # Descは仮置き
+ focus_GER_war_strengthen_propaganda: "プロパガンダの強化" # 仮訳
+ focus_GER_war_strengthen_propaganda_desc: "プロパガンダの強化" # Descは仮置き
+ focus_GER_war_wartime_social_pact: "戦時社会協約" # 仮訳
+ focus_GER_war_wartime_social_pact_desc: "戦時社会協約" # Descは仮置き
+ focus_GER_war_war_bonds: "戦時国債" # 仮訳
+ focus_GER_war_war_bonds_desc: "戦時国債" # Descは仮置き
+ focus_GER_war_parliamentary_oversight_committee: "議会監督委員会" # 仮訳
+ focus_GER_war_parliamentary_oversight_committee_desc: "議会監督委員会" # Descは仮置き
+ focus_GER_war_emergency_mobilization: "緊急動員" # 仮訳
+ focus_GER_war_emergency_mobilization_desc: "緊急動員" # Descは仮置き
+ focus_GER_war_call_up_reserves: "予備役召集" # 仮訳
+ focus_GER_war_call_up_reserves_desc: "予備役召集" # Descは仮置き
+ focus_GER_war_arsenals_full_operation: "工廠の全面稼働" # 仮訳
+ focus_GER_war_arsenals_full_operation_desc: "工廠の全面稼働" # Descは仮置き
+ focus_GER_war_accelerated_officer_course: "士官速成課程" # 仮訳
+ focus_GER_war_accelerated_officer_course_desc: "士官速成課程" # Descは仮置き
+ focus_GER_war_complete_total_war_system: "総力戦体制の完成"
+ focus_GER_war_complete_total_war_system_desc: "総力戦体制の完成" # Descは仮置き
+
+ ### 軍事ツリー（37＋隠し1。名称は .tmp/GER_00_NFローカライズ.txt 準拠） ###
+ focus_GER_mil_total_war_institute: "総力戦研究所"
+ focus_GER_mil_total_war_institute_desc: "総力戦研究所" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_ludendorff_proposal: "ルーデンドルフの提言"
+ focus_GER_mil_ludendorff_proposal_desc: "ルーデンドルフの提言" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_theoretical_deepening_of_siege_and_annihilation: "包囲殲滅戦の理論深化"
+ focus_GER_mil_theoretical_deepening_of_siege_and_annihilation_desc: "包囲殲滅戦の理論深化" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_cavalry_strengthening: "騎兵強化"
+ focus_GER_mil_cavalry_strengthening_desc: "騎兵強化" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_politics_should_be_subordinate_to_war_leadership: "政治は戦争指導に従属すべきである"
+ focus_GER_mil_politics_should_be_subordinate_to_war_leadership_desc: "政治は戦争指導に従属すべきである" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_military_dictatorship: "軍事独裁"
+ focus_GER_mil_military_dictatorship_desc: "軍事独裁" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_improved_schlieffen_plan: "改良シュリーフェン・プラン"
+ focus_GER_mil_improved_schlieffen_plan_desc: "改良シュリーフェン・プラン" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_bewegungskrieg: "機動戦"
+ focus_GER_mil_bewegungskrieg_desc: "機動戦" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_engineer_corps_strengthening: "工兵隊充実化"
+ focus_GER_mil_engineer_corps_strengthening_desc: "工兵隊充実化" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_large_scale_breakthrough: "大規模突破"
+ focus_GER_mil_large_scale_breakthrough_desc: "大規模突破" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_forward: "前進！"
+ focus_GER_mil_forward_desc: "前進！" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_groener_proposal: "グレーナーの提言"
+ focus_GER_mil_groener_proposal_desc: "グレーナーの提言" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_construction_theory_of_machine_gun_fortifications: "機関銃陣地の構築理論"
+ focus_GER_mil_construction_theory_of_machine_gun_fortifications_desc: "機関銃陣地の構築理論" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_supply_department_expansion: "兵站部門拡充"
+ focus_GER_mil_supply_department_expansion_desc: "兵站部門拡充" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_infantry_strengthening: "歩兵強化"
+ focus_GER_mil_infantry_strengthening_desc: "歩兵強化" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_railway_network_improvement: "鉄道網の整備"
+ focus_GER_mil_railway_network_improvement_desc: "鉄道網の整備" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_officer_training: "士官養成"
+ focus_GER_mil_officer_training_desc: "士官養成" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_national_defence_plan: "国土防衛計画"
+ focus_GER_mil_national_defence_plan_desc: "国土防衛計画" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_stellungskrieg: "持久戦"
+ focus_GER_mil_stellungskrieg_desc: "持久戦" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_defence_in_depth: "縦深防御"
+ focus_GER_mil_defence_in_depth_desc: "縦深防御" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_the_army_is_a_tool_of_the_state: "軍は国家の道具である"
+ focus_GER_mil_the_army_is_a_tool_of_the_state_desc: "軍は国家の道具である" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_civilian_control: "文民統制"
+ focus_GER_mil_civilian_control_desc: "文民統制" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_ostwall: "オストヴァル"
+ focus_GER_mil_ostwall_desc: "オストヴァル" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_westwall: "ヴェストヴァル"
+ focus_GER_mil_westwall_desc: "ヴェストヴァル" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_absolute_defence: "絶対的防御"
+ focus_GER_mil_absolute_defence_desc: "絶対的防御" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_weapons_modernization: "兵器の近代化"
+ focus_GER_mil_weapons_modernization_desc: "兵器の近代化" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_automobile_military_use: "自動車の軍事運用"
+ focus_GER_mil_automobile_military_use_desc: "自動車の軍事運用" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_fighter_aircraft_verification: "戦闘機の検証"
+ focus_GER_mil_fighter_aircraft_verification_desc: "戦闘機の検証" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_prepare_for_storm: "嵐へ備える"
+ focus_GER_mil_prepare_for_storm_desc: "嵐へ備える" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_tank_research: "戦車研究"
+ focus_GER_mil_tank_research_desc: "戦車研究" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_armored_car_use: "装甲車の採用"
+ focus_GER_mil_armored_car_use_desc: "装甲車の採用" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_bomber_research: "爆撃機の研究"
+ focus_GER_mil_bomber_research_desc: "爆撃機の研究" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_concentration_breakthrough: "集中突破"
+ focus_GER_mil_concentration_breakthrough_desc: "集中突破" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_chemical_weapon_production: "化学兵器製造"
+ focus_GER_mil_chemical_weapon_production_desc: "化学兵器製造" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_break_morale: "士気を挫く"
+ focus_GER_mil_break_morale_desc: "士気を挫く" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_break_stalemate: "膠着突破"
+ focus_GER_mil_break_stalemate_desc: "膠着突破" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_fortress_city_setting: "要塞都市の設定"
+ focus_GER_mil_fortress_city_setting_desc: "要塞都市の設定" # Descは本リリースで執筆（指示書 §13）
+ focus_GER_mil_maneuver_defence: "機動的防御"
+ focus_GER_mil_maneuver_defence_desc: "機動的防御" # Descは本リリースで執筆（指示書 §13）
+
+ ### 産業ツリー（13） ###
+ focus_GER_eco_imperial_economic_council: "帝国経済会議"
+ focus_GER_eco_imperial_economic_council_desc: "帝国経済会議" # Descは仮置き
+ focus_GER_eco_electrification_plan: "電化計画"
+ focus_GER_eco_electrification_plan_desc: "電化計画" # Descは仮置き
+ focus_GER_eco_chemical_industry_investment: "化学産業への投資"
+ focus_GER_eco_chemical_industry_investment_desc: "化学産業への投資" # Descは仮置き
+ focus_GER_eco_ruhr_silesia_production: "ルール＝シュレージエン増産"
+ focus_GER_eco_ruhr_silesia_production_desc: "ルール＝シュレージエン増産" # Descは仮置き
+ focus_GER_eco_imperial_road_program: "帝国道路計画"
+ focus_GER_eco_imperial_road_program_desc: "帝国道路計画" # Descは仮置き
+ focus_GER_eco_mitteleuropa: "中欧経済圏"
+ focus_GER_eco_mitteleuropa_desc: "中欧経済圏" # Descは仮置き
+ focus_GER_eco_autarky: "経済的自立"
+ focus_GER_eco_autarky_desc: "経済的自立" # Descは仮置き
+ focus_GER_eco_deepen_customs_union: "関税同盟の深化"
+ focus_GER_eco_deepen_customs_union_desc: "関税同盟の深化" # Descは仮置き
+ focus_GER_eco_coal_liquefaction_research: "石炭液化の研究"
+ focus_GER_eco_coal_liquefaction_research_desc: "石炭液化の研究" # Descは仮置き
+ focus_GER_eco_synthetic_materials: "合成素材"
+ focus_GER_eco_synthetic_materials_desc: "合成素材" # Descは仮置き
+ focus_GER_eco_rationalization_movement: "合理化運動"
+ focus_GER_eco_rationalization_movement_desc: "合理化運動" # Descは仮置き
+ focus_GER_eco_kaiser_wilhelm_society: "カイザー・ヴィルヘルム協会の拡充"
+ focus_GER_eco_kaiser_wilhelm_society_desc: "カイザー・ヴィルヘルム協会の拡充" # Descは仮置き
+ focus_GER_eco_scientific_great_power: "科学大国ドイツ"
+ focus_GER_eco_scientific_great_power_desc: "科学大国ドイツ" # Descは仮置き

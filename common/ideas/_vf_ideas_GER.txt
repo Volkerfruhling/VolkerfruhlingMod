@@ -1,0 +1,478 @@
+# =========================================================
+# VF / ドイツ帝国：国民精神
+# 指示書: .doc/08_GER議会ルート_実装指示書.md §6-2
+#
+# 関連ファイル:
+#   common/national_focus/_vf_focus_GER.txt   … 議会ルートNFが付与・置換する
+#   events/_vf_events_GER.txt                 … 幹線イベントが付与する
+#   common/scripted_effects/_vf_GER_effects.txt … 「勢力均衡」の表示変数を計算する
+#   common/scripted_localisation/_vf_GER_loc.txt … 「勢力均衡」descの枢密院の傾き表示
+#
+# 置換式チェーン（体制）: 自由主義の内閣（2年限定）/ 自由主義への道 / 強化された内閣 / 議会主権
+#   → 「1928年改革」が3種を吸収して除去 → 「1929年憲法」が置換（指示書 §6-2）
+# 注意: ディシジョンコスト-5%系はHOI4に全体modifierが存在しないため（wiki確認済み 2026-08-27）、
+#       各ディシジョン側の cost 修正（has_idea 判定）で実装する。Phase 4 参照
+# =========================================================
+ideas = {
+	country = {
+		### 表示専用 ###
+		# 勢力均衡（効果なし。descで三派の勢力と枢密院の傾きを表示する）
+		idea_GER_power_balance = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+			}
+		}
+
+		### 置換式チェーン（体制） ###
+		# 自由主義の内閣（event_GER_pol.2 選択肢1。730日の時限付与）
+		idea_GER_liberal_cabinet = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+		# 自由主義への道（NF 自由の理）
+		idea_GER_path_to_liberalism = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.10
+			}
+		}
+		# 強化された内閣（NF 内閣集権）
+		idea_GER_strengthened_cabinet = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.10
+				# ディシジョンコスト-5%はディシジョン側で実装（ヘッダ参照）
+			}
+		}
+		# 議会主権（NF 国民議会の強化）
+		idea_GER_parliamentary_sovereignty = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				drift_defence_factor = 0.25
+			}
+		}
+		# 1928年改革（NF 大改革宣言。自由主義への道・強化された内閣・議会主権を吸収して除去）
+		idea_GER_1928_reforms = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.15
+				# ディシジョンコスト-5%はディシジョン側で実装
+			}
+		}
+		# 1929年憲法（NF 憲法改正。1928年改革を置換）
+		idea_GER_1929_constitution = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.15
+				political_power_factor = 0.25
+				drift_defence_factor = 0.25
+			}
+		}
+
+		### 政策精神（併存） ###
+		# 文化的寛容（NF 少数民族問題）
+		idea_GER_cultural_tolerance = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				non_core_manpower = 0.05
+				resistance_target = -0.10
+			}
+		}
+		# 進歩の時代（NF 前進主義）
+		idea_GER_age_of_progress = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				monthly_population = 0.02
+			}
+			research_bonus = {
+				industry = 0.05
+			}
+		}
+		# 失業保険制度（NF 失業保険の導入）
+		idea_GER_unemployment_insurance = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+		# 社会国家ドイツ（失業保険制度を置換。エーベルト・プラン系の完成形）
+		idea_GER_social_state = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				production_speed_industrial_complex_factor = 0.15
+				consumer_goods_factor = 0.04
+			}
+		}
+		# 国家奉仕（NF 奉仕勤労団）
+		idea_GER_national_service = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				training_time_army_factor = -0.10
+				conscription = 0.02
+			}
+		}
+		# 新時代の外交（NF 伯爵）
+		idea_GER_new_era_diplomacy = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				improve_relations_maintain_cost_factor = -0.25
+				opinion_gain_monthly_factor = 0.20
+			}
+		}
+
+		### 緊張精神（除去条件つき） ###
+		# 未解決の遺産（event_GER_pol.4 選択肢1。帝冠領NFの完了で除去）
+		idea_GER_unresolved_legacy = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+			}
+		}
+		# 枢密院の不在（NF 枢密院廃止。憲法改正で除去）
+		idea_GER_absent_privy_council = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = -0.10
+			}
+		}
+
+		### 幹線イベントが付与する時限・分岐精神 ###
+		# 社会改革への期待（event_GER_pol.3 選択肢1。365日）
+		idea_GER_hope_for_social_reform = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				socialism_drift = 0.05
+			}
+		}
+		# 革命への渇望（event_GER_pol.3 選択肢2。365日）
+		idea_GER_thirst_for_revolution = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				communism_drift = 0.05
+			}
+		}
+		# 皇帝の枢密院（event_GER_pol.5 選択肢2）
+		idea_GER_privy_council_kaiser = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+			}
+		}
+		# 摂政の枢密院（event_GER_pol.5 選択肢3）
+		idea_GER_privy_council_regent = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+			}
+		}
+		# アドリア海の守護者（event_GER_pol.6 選択肢3）
+		idea_GER_adriatic_guardian = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_defence_factor = 0.05
+			}
+		}
+		# バルカンからの撤退（event_GER_pol.7 選択肢1）
+		idea_GER_balkan_withdrawal = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		# 議会主導政府（event_GER_pol.9 選択肢1）
+		idea_GER_parliament_led_government = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.05
+			}
+		}
+
+		### 社会保障ディシジョン（common/decisions/_vf_GER_decisions.txt）が付与 ###
+		# 健康保険
+		idea_GER_health_insurance = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.02
+				consumer_goods_factor = 0.01
+			}
+		}
+		# 労災保険
+		idea_GER_accident_insurance = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.02
+				consumer_goods_factor = 0.01
+			}
+		}
+		# 老齢年金
+		idea_GER_old_age_pension = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.02
+				consumer_goods_factor = 0.01
+			}
+		}
+
+		### 産業・戦時系（産業・戦時NFが付与する） ###
+		# 合理化運動（NF 合理化運動。生産効率上限+5%）
+		idea_GER_rationalization = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		# 中欧経済圏（NF 中欧経済圏）
+		idea_GER_mitteleuropa = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				trade_opinion_factor = 0.20
+			}
+		}
+		# 経済的自立（NF 経済的自立）
+		# TODO(VF): 「資源需要-5%系」の厳密なmodifierは要検討（local_resources_factor で仮置き）
+		idea_GER_autarky = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = 0.05
+				consumer_goods_factor = 0.01
+			}
+		}
+		# 城内平和（NF 城内平和。SPD軸ならさらに安定度+2%はPhase 5で分岐実装）
+		idea_GER_burgfrieden = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				stability_factor = 0.10
+			}
+		}
+		# 沈黙の独裁への道（NF 最高軍司令部への白紙委任）
+		idea_GER_road_to_silent_dictatorship = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				political_power_factor = -0.25
+			}
+		}
+		# 議会の戦争（NF 議会の戦時統制）
+		idea_GER_parliaments_war = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				stability_factor = 0.10
+				political_power_factor = 0.15
+				war_support_factor = 0.05
+			}
+		}
+		# 総力戦体制の完成（NF 総力戦体制の完成。城内平和と路線精神を吸収する強化版）
+		idea_GER_total_war_system = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.15
+				stability_factor = 0.10
+				political_power_factor = 0.15
+			}
+		}
+	}
+}

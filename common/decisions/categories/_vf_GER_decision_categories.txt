@@ -1,0 +1,47 @@
+# =========================================================
+# VF / ドイツ帝国：ディシジョンカテゴリ
+# 指示書: .doc/08_GER議会ルート_実装指示書.md §8-3
+#
+# 関連ファイル:
+#   common/decisions/_vf_GER_decisions.txt    … ディシジョン本体
+#   common/national_focus/_vf_focus_GER.txt   … 解禁フラグを立てるNF（帝冠領整理案・福祉論争）
+# =========================================================
+
+# オーストリア帝冠領の再編（NF「帝冠領整理案」で解禁）
+vf_GER_crownland_reorganization = {
+	icon = generic_political_actions
+
+	allowed = {
+		original_tag = GER
+	}
+	visible = {
+		has_country_flag = vf_GER_crownland_decisions_unlocked
+	}
+}
+
+# 社会保障制度の拡充（NF「福祉論争」で解禁）
+vf_GER_social_policy = {
+	icon = generic_political_actions
+
+	allowed = {
+		original_tag = GER
+	}
+	visible = {
+		has_country_flag = vf_GER_welfare_decisions_unlocked
+	}
+}
+
+# 政府の運営（後継宰相指名・中欧経済圏の提携など）
+vf_GER_government_affairs = {
+	icon = generic_political_actions
+
+	allowed = {
+		original_tag = GER
+	}
+	visible = {
+		OR = {
+			has_country_flag = vf_GER_chancellor_vacant
+			has_country_flag = vf_GER_mitteleuropa_unlocked
+		}
+	}
+}

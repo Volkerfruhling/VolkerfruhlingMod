@@ -93,6 +93,10 @@ recruit_character = GER_Karl_I
 
 set_country_flag = VF_monarch_diplomacy_portrait_button_flag
 
+# VF: 枢密院議長ミヒャエリスは開始時から在職（帝冠領再編ディシジョンのコスト+50%。指示書08 §8-3・§10）。
+# NF「枢密院廃止」で失職する
+set_country_flag = vf_GER_michaelis_in_office
+
 set_variable = { State_Positions_Right_Title = token:GER_Geiser }
 
 set_variable = { State_Positions_Left_Title = token:GER_regent }
