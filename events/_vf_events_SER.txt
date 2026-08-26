@@ -1,3 +1,17 @@
+# =========================================================
+# VF / セルビア：バルカン戦争〜幕間枝
+# 指示書: .doc/06_SER開戦導線_実装指示書.md
+#
+# 関連ファイル:
+#   common/national_focus/_vf_focus_SER.txt   … NF本体（幕間枝14本を含む）
+#   events/_vf_events_greatwar.txt            … クロアチア危機〜開戦連鎖（vf_greatwar）
+#   events/_vf_events_HUN.txt                 … event_HUN_pol.1（ハンガリー革命。.8 から30日後に予約）
+#   common/ideas/_vf_ideas_SER.txt            … idea_balkan_war / 幕間枝の国民精神
+#   common/ai_strategy/_vf_Balkan.txt         … vf_started/ended_balkan_war を読むAI戦略
+#
+# 立てるフラグ: vf_started_balkan_war / vf_ended_balkan_war / vf_HUN_left_balkan_war
+#               vf_balkan_war_min_duration_passed / vf_SER_peace_tier_1〜4
+# =========================================================
 add_namespace  = event_SER_pol
 
 country_event = { # モンテネグロへの圧力
@@ -106,6 +120,8 @@ country_event = { # ティラナへの最後通牒
 	}
 }
 country_event = { # アルバニア平定作戦
+	# ALB戦は速攻で終わることが設計想定（泥沼化するとバルカン戦争にもつれ込む）。
+	# 対ALB限定の時限バフを付与し、決着がつかない場合は .12 が120日で強制的に打ち切る
 	id = event_SER_pol.7
 	title = event_SER_pol.7.title
 	desc = event_SER_pol.7.desc
@@ -119,7 +135,54 @@ country_event = { # アルバニア平定作戦
 				target = ALB
 				type = annex_everything
 			}
+			set_country_flag = vf_SER_albania_war
+			add_timed_idea = {
+				idea = idea_SER_albania_pacification
+				days = 180
+			}
 		}
+	}
+}
+country_event = { # アルバニアの崩壊
+	# 平定作戦の決着を保証する。ALBが押され始める（surrender_progress > 0.2）か、
+	# 首都陥落、または開戦から120日経過のいずれかで政府が崩壊し、SERが併合する。
+	# これにより「復讐の日」（available で対ALB戦争中は取得不可）が確実に解禁される
+	id = event_SER_pol.12
+	title = event_SER_pol.12.title
+	desc = event_SER_pol.12.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SER
+		has_war_with = ALB
+		has_country_flag = vf_SER_albania_war
+		OR = {
+			ALB = {
+				surrender_progress > 0.2
+			}
+			ALB = {
+				has_capitulated = yes
+			}
+			# 泥沼化の保険: 開戦から120日で山賊国家は内部から崩壊する
+			has_country_flag = {
+				flag = vf_SER_albania_war
+				days > 120
+			}
+		}
+	}
+
+	immediate = {
+		SER = {
+			annex_country = {
+				target = ALB
+			}
+		}
+	}
+
+	option = {
+		name = event_SER_pol.12.a
+		add_war_support = 0.05
 	}
 }
 country_event = { # 復讐の日
@@ -137,6 +200,12 @@ country_event = { # 復讐の日
 				target = BUL
 				type = annex_everything
 			}
+			# 講和解禁タイマー（330日後に vf_balkan_war_min_duration_passed を立てる）
+			# 固定日付 1928.4.1 だと早期開戦時に戦争が引き延ばされるため（指示書 §4-0-2）
+			country_event = {
+				id = event_SER_pol.11
+				days = 330
+			}
 		}
 		every_country = {
 			limit = {
@@ -145,6 +214,19 @@ country_event = { # 復讐の日
 			add_to_war = {
 				targeted_alliance = SER
 				enemy = BUL
+			}
+		}
+		# BUL側陣営（バルカン協商: BUL・MNT・HUN）を明示的に参戦させる。
+		# 陣営の自動連鎖はAI判断に左右され、HUNが参戦しないと .9 が永久に発火しない（指示書 §4-0-0 衝突3・T15）
+		every_country = {
+			limit = {
+				is_in_faction_with = BUL
+				NOT = { tag = BUL }
+				NOT = { has_war_with = SER }
+			}
+			add_to_war = {
+				targeted_alliance = BUL
+				enemy = SER
 			}
 		}
 		every_country = {
@@ -352,27 +434,10 @@ country_event = { # 戦争からの撤退
 				add_claim_by = HUN
 			}
 		}
-		IF = {
-			limit = {
-				BUL = {
-					has_capitulated = yes
-				}
-			}
-			BUL = {
-				white_peace = {
-					tag = SER
-				}
-			}
-			803 = {
-				transfer_state_to = SER
-			}
-			106 = {
-				transfer_state_to = SER
-			}
-			77 = {
-				transfer_state_to = ROM
-			}
-		}
+		# BULの講和処理はここでは行わず .10 に一本化する（指示書 §4-0-3・0-4）。
+		# 旧実装はここでBULと白紙和平し803/106/77を移譲していたが、
+		# その経路では vf_ended_balkan_war が立たず幕間枝が出現しなかった。
+		# BULが降伏済みの場合は .10 のトリガ（has_capitulated）が拾う。
 	}
 
 	option = {
@@ -387,16 +452,23 @@ country_event = { # 講話
 	fire_only_once = yes 
 
 	trigger = {
-		BUL = {
-			has_global_flag = vf_started_balkan_war
-			NOT = {
-				has_global_flag = vf_ended_balkan_war
-			}
-			OR = {
-				and = {
+		# tag = SER: 旧実装は国指定が無く、任意のAI国のスコープで発火していた（指示書 §4-0-1）
+		tag = SER
+		has_global_flag = vf_started_balkan_war
+		NOT = {
+			has_global_flag = vf_ended_balkan_war
+		}
+		OR = {
+			# 通常講和: 開戦330日経過（.11 が立てる）かつBULが押されている
+			AND = {
+				has_global_flag = vf_balkan_war_min_duration_passed
+				BUL = {
 					surrender_progress > 0
-					date > 1928.4.1
 				}
+			}
+			# BULが完全降伏していれば日数を待たない（指示書 §4-0-2）
+			BUL = {
+				has_capitulated = yes
 			}
 		}
 	}
@@ -404,93 +476,100 @@ country_event = { # 講話
 		set_global_flag = vf_ended_balkan_war
 		BUL = {
 			leave_faction = yes
-			HUN = {
-				leave_faction = yes
-			}
-			IF = {
-				limit = {
-					BUL = {
-						surrender_progress > 0.7
-					}
-				}
+		}
+		HUN = {
+			leave_faction = yes
+		}
+		# 講和段階フラグ vf_SER_peace_tier_1〜4 を立てる（1が最大の戦果）。
+		# 幕間枝（focus_SER_pol_after_the_peace 以降）がこの結果を読む（指示書 §6-4）
+		IF = {
+			limit = {
 				BUL = {
-					white_peace = {
-						tag = SER
-					}
-					803 = {
-						transfer_state_to = SER
-						add_core_of = SER
-						remove_core_of = BUL
-						add_claim_by = BUL
-					}
-					106 = {
-						transfer_state_to = SER
-						add_core_of = SER
-						remove_core_of = BUL
-						add_claim_by = BUL
-					}
-					77 = {
-						transfer_state_to = ROM
-						add_core_of = ROM
-						remove_core_of = BUL
-						add_claim_by = BUL
-					}
-					184 = {
-						transfer_state_to = GRE
-						add_core_of = GRE
-						remove_core_of = BUL
-						add_claim_by = BUL
-					}
-					
+					surrender_progress > 0.7
 				}
 			}
-			ELSE_IF = {
-				limit = {
-					BUL = {
-						surrender_progress > 0.5
-					}
+			set_global_flag = vf_SER_peace_tier_1
+			BUL = {
+				white_peace = {
+					tag = SER
 				}
+				803 = {
+					transfer_state_to = SER
+					add_core_of = SER
+					remove_core_of = BUL
+					add_claim_by = BUL
+				}
+				106 = {
+					transfer_state_to = SER
+					add_core_of = SER
+					remove_core_of = BUL
+					add_claim_by = BUL
+				}
+				77 = {
+					transfer_state_to = ROM
+					add_core_of = ROM
+					remove_core_of = BUL
+					add_claim_by = BUL
+				}
+				184 = {
+					transfer_state_to = GRE
+					add_core_of = GRE
+					remove_core_of = BUL
+					add_claim_by = BUL
+				}
+
+			}
+		}
+		ELSE_IF = {
+			limit = {
 				BUL = {
-					white_peace = {
-						tag = SER
-					}
-					803 = {
-						transfer_state_to = SER
-						add_core_of = SER
-						remove_core_of = BUL
-						add_claim_by = BUL
-					}
-					106 = {
-						transfer_state_to = SER
-						add_core_of = SER
-						remove_core_of = BUL
-						add_claim_by = BUL
-					}
+					surrender_progress > 0.5
 				}
 			}
-			ELSE_IF = {
-				limit = {
-					BUL = {
-						surrender_progress > 0.3
-					}
+			set_global_flag = vf_SER_peace_tier_2
+			BUL = {
+				white_peace = {
+					tag = SER
 				}
-				BUL = {
-					white_peace = {
-						tag = SER
-					}
-					803 = {
-						transfer_state_to = SER
-						add_core_of = SER
-						remove_core_of = BUL
-						add_claim_by = BUL
-					}
+				803 = {
+					transfer_state_to = SER
+					add_core_of = SER
+					remove_core_of = BUL
+					add_claim_by = BUL
+				}
+				106 = {
+					transfer_state_to = SER
+					add_core_of = SER
+					remove_core_of = BUL
+					add_claim_by = BUL
 				}
 			}
-			ELSE = {
+		}
+		ELSE_IF = {
+			limit = {
 				BUL = {
-					white_peace = {
-						tag = SER
-					}
+					surrender_progress > 0.3
+				}
+			}
+			set_global_flag = vf_SER_peace_tier_3
+			BUL = {
+				white_peace = {
+					tag = SER
+				}
+				803 = {
+					transfer_state_to = SER
+					add_core_of = SER
+					remove_core_of = BUL
+					add_claim_by = BUL
+				}
+			}
+		}
+		ELSE = {
+			# 白紙和平。「またしても何も得られなかった」（幕間枝 #11 が安定度ペナルティを課す）
+			set_global_flag = vf_SER_peace_tier_4
+			BUL = {
+				white_peace = {
+					tag = SER
 				}
 			}
 		}
@@ -498,5 +577,20 @@ country_event = { # 講話
 
 	option = {
 		name = event_SER_pol.10.a
+	}
+}
+country_event = { # 講和解禁タイマー（隠しイベント）
+	# .8 から days = 330 で予約される。開戦からの経過日数で講和を解禁する（指示書 §4-0-2）
+	id = event_SER_pol.11
+	hidden = yes
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		set_global_flag = vf_balkan_war_min_duration_passed
+	}
+
+	option = {
 	}
 }

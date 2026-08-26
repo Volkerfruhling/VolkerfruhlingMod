@@ -85,6 +85,12 @@ set_research_slots = 3
 set_convoys = 50
 set_stability = 0.40
 
+# VF: 露仏協商（FRA + RUS）。監査（指示書 §4-0-0）時点で未実装だったため新設（盟主はFRA）。
+# SERはこの陣営には加入しない（救国同盟の盟主のまま共同交戦国。指示書 §10-3 推奨案）。
+# 露仏のSER側参戦は events/_vf_events_greatwar.txt の vf_greatwar.6 が add_to_war で明示的に行う
+create_faction = "露仏協商"
+add_to_faction = RUS
+
 recruit_character = FRA_Victor_Napoleon_Bonaparte
 
 set_country_flag = VF_monarch_diplomacy_portrait_button_flag

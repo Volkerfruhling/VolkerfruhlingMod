@@ -1,0 +1,92 @@
+# =========================================================
+# VF / 自治領邦（Krondomäne）
+# 指示書: .doc/06_SER開戦導線_実装指示書.md §5
+#
+# ハプスブルク家の下にある半自治王国（BOH・CRO）用の自治レベル。
+#   - 資源・工場は宗主（GER）が実質アクセスできる（貿易・建設共有）
+#   - 外交はベルリンに委任（自主的な陣営加入・宣戦をしない）
+#   - 宗主の戦争に自動参戦し、参戦要請を拒否できない
+#   - 単独講和不可（講和スコアは宗主へ移譲）
+#   - 自治度は上下する。BOHは「忠誠度」の受け皿として使う（GER側実装で参照）
+#
+# 「CROへの宣戦が確実にGERとの全面戦争へ拡大すること」がβの最重要要件（T8）。
+# 自動参戦が働かない場合のフォールバックは events/_vf_events_greatwar.txt の vf_greatwar.6 にある。
+#
+# 関連ファイル:
+#   history/countries/CRO - Croatia.txt       … GERの自治領邦として開始
+#   history/countries/BOH - Bohemia.txt       … 同上
+#   events/_vf_events_greatwar.txt            … 宣戦の連鎖（vf_greatwar.6）
+# =========================================================
+autonomy_state = {
+	id = autonomy_vf_crown_dominion
+
+	is_puppet = yes
+
+	# 自治度は上下する（忠誠度の受け皿）。下限は低めに置く
+	min_freedom_level = 0.3
+
+	manpower_influence = 0.5
+
+	rule = {
+		desc = "RULE_DESC_IS_A_SUBJECT"
+
+		can_not_declare_war = yes
+		can_decline_call_to_war = no
+		can_join_factions = no
+		can_send_volunteers = no
+		can_be_spymaster = no
+		contributes_operatives = no
+		can_create_collaboration_government = no
+	}
+
+	modifier = {
+		autonomy_manpower_share = 0.5
+		can_master_build_for_us = 1
+		extra_trade_to_overlord_factor = 1.0
+		overlord_trade_cost_factor = -1.0
+		# 単独講和不可の裏付け: 講和スコアは全て宗主が扱う
+		peace_score_ratio_transferred_to_overlord = 1.0
+		research_sharing_per_country_bonus_factor = -0.25
+	}
+
+	ai_subject_wants_higher = {
+		factor = 1.0
+	}
+
+	ai_overlord_wants_lower = {
+		factor = 1.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+		OR = {
+			original_tag = BOH
+			original_tag = CRO
+		}
+	}
+
+	# 講和会議では通常の傀儡と同様に扱う（βは簡易でよい。指示書 §5-3）
+	use_for_peace_conference_weight = {
+		base = 0
+		modifier = {
+			add = 10
+			FROM = {
+				OR = {
+					has_wargoal_against = { target = ROOT type = puppet_wargoal_focus }
+					has_rule = can_puppet
+				}
+			}
+		}
+	}
+
+	can_take_level = {
+		#trigger here
+	}
+
+	can_lose_level = {
+		#trigger here
+	}
+}

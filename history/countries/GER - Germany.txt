@@ -83,6 +83,12 @@ set_research_slots = 4
 set_convoys = 50
 set_stability = 0.75
 
+# VF: 英独同盟（GER + ENG）。監査（指示書 §4-0-0）時点で未実装だったため新設。
+# ENGの大戦参戦（vf_greatwar.6）はこの陣営連鎖に依存する（T12・T8）。
+# 中央保障条約（GER・ITA・BOH・CRO）はfaction化しない（指示書の推奨。ITAは無所属の天秤、BOH・CROは属国＋保障で表現）
+create_faction = "英独同盟"
+add_to_faction = ENG
+
 recruit_character = GER_Karl_I
 
 set_country_flag = VF_monarch_diplomacy_portrait_button_flag

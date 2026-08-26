@@ -1,0 +1,491 @@
+# =========================================================
+# VF / クロアチア危機〜世界大戦の発火連鎖
+# 指示書: .doc/06_SER開戦導線_実装指示書.md §7
+#
+# 関連ファイル:
+#   common/national_focus/_vf_focus_SER.txt   … 幕間枝の終端 focus_SER_pol_sarajevo_again が .1 を発火、
+#                                               focus_SER_pol_demand_srem_and_macva が .7 / .8 を発火
+#   events/_vf_events_SER.txt                 … バルカン戦争（前段。vf_ended_balkan_war がこの連鎖の前提）
+#   common/autonomous_states/_vf_autonomy_crown_dominion.txt … 自治領邦（CROへの宣戦がGERへ拡大する根拠）
+#   history/countries/GER - Germany.txt       … 英独同盟（create_faction）。ENGの参戦はこれに依存
+#   history/countries/FRA - France.txt        … 露仏協商（create_faction）。表示用。露仏の参戦は .6 の add_to_war
+#
+# 危機の口実: 国境衝突型（主宰裁定 2026-08-26。指示書 §10-4）
+#   スレム国境でセルビア義勇兵とクロアチア国境警備隊が衝突し、両軍の応射で死者が出る
+#
+# 連鎖の時系列（史実の七月危機に倣い約5週間。日数は .1 からの相対）:
+#   .1 (Day 0)  SER: スレム国境の銃撃戦（危機の開始）
+#   .2 (Day 3)  GER: 帝国の対応（強硬／仲裁／黙認）
+#   .3 (Day 7)  SER: 露仏の保障確認
+#   .4 (Day 14) SER: GERからの最後通牒（拒否＝開戦へ／受諾＝危機延期）
+#   .5 (Day 21) SER: 動員の連鎖（.9 を各大国へ）
+#   .6 (Day 35) SER: 開戦（§7-2b: 参戦連鎖は add_to_war で明示）
+#   .10 (Day 36) POL/OTT/ITA/IST: 参戦判定（幕間フラグ未設定でも完走する。§7-4）
+#   .20/.21     大戦の終結処理（β簡易版。§7-5）
+#
+# 立てるフラグ: vf_croatia_crisis_started / vf_croatia_crisis_deferred /
+#               vf_greatwar_started / vf_greatwar_chain_incomplete（←立っていたらバグ。要報告）
+# 読むフラグ:   vf_SER_patronage_russia / vf_POL_tilt_* / vf_OTT_alignment_* /
+#               vf_ITA_regime_* / vf_ITA_grudge_SER / vf_IST_leaning_*（幕間危機3件が後日立てる。未設定が既定）
+# =========================================================
+add_namespace = vf_greatwar
+
+country_event = { # スレム国境の銃撃戦（危機の開始）
+	# focus_SER_pol_sarajevo_again から発火。宥和で延期された場合は .4 から210日後に再発火するため
+	# fire_only_once にしないこと（指示書 §7-3）
+	id = vf_greatwar.1
+	title = vf_greatwar.1.title
+	desc = vf_greatwar.1.desc
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = vf_croatia_crisis_started
+		hidden_effect = {
+			# 危機の時間割を一括予約する（Day 3 / 7 / 14）
+			GER = {
+				country_event = {
+					id = vf_greatwar.2
+					days = 3
+				}
+			}
+			SER = {
+				country_event = {
+					id = vf_greatwar.3
+					days = 7
+				}
+				country_event = {
+					id = vf_greatwar.4
+					days = 14
+				}
+			}
+		}
+	}
+
+	option = { # 引き返せぬ一線
+		name = vf_greatwar.1.a
+		add_war_support = 0.05
+		add_named_threat = {
+			threat = 2
+			name = vf_threat_srem_incident
+		}
+	}
+}
+country_event = { # 帝国の対応
+	id = vf_greatwar.2
+	title = vf_greatwar.2.title
+	desc = vf_greatwar.2.desc
+
+	is_triggered_only = yes
+
+	option = { # 強硬（最後通牒へ）: βの既定路線
+		name = vf_greatwar.2.a
+		ai_chance = {
+			factor = 90
+		}
+		add_war_support = 0.05
+		add_named_threat = {
+			threat = 1
+			name = vf_threat_ger_hardline
+		}
+	}
+	option = { # 仲裁を試みる
+		name = vf_greatwar.2.b
+		ai_chance = {
+			factor = 5
+		}
+		add_political_power = 25
+	}
+	option = { # 黙認
+		name = vf_greatwar.2.c
+		ai_chance = {
+			factor = 5
+		}
+		add_stability = -0.03
+	}
+}
+country_event = { # 露仏の保障確認
+	id = vf_greatwar.3
+	title = vf_greatwar.3.title
+	desc = { # 露の後援あり
+		text = vf_greatwar.3.desc
+		trigger = {
+			has_global_flag = vf_SER_patronage_russia
+		}
+	}
+	desc = { # 露の後援なし
+		text = vf_greatwar.3.desc_no_patron
+		trigger = {
+			NOT = {
+				has_global_flag = vf_SER_patronage_russia
+			}
+		}
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = vf_greatwar.3.a
+		IF = {
+			limit = {
+				has_global_flag = vf_SER_patronage_russia
+			}
+			add_war_support = 0.05
+		}
+		ELSE = {
+			add_stability = -0.05
+		}
+	}
+}
+country_event = { # GERからの最後通牒
+	id = vf_greatwar.4
+	title = vf_greatwar.4.title
+	desc = vf_greatwar.4.desc
+
+	is_triggered_only = yes
+
+	option = { # 拒否（開戦へ）
+		name = vf_greatwar.4.a
+		ai_chance = {
+			factor = 90
+		}
+		add_war_support = 0.05
+		hidden_effect = {
+			SER = {
+				country_event = {
+					id = vf_greatwar.5
+					days = 7
+				}
+			}
+		}
+	}
+	option = { # 受諾（屈服＝危機の延期。回避ではない。指示書 §7-3）
+		name = vf_greatwar.4.b
+		ai_chance = {
+			factor = 10
+		}
+		set_global_flag = vf_croatia_crisis_deferred
+		clr_global_flag = vf_croatia_crisis_started
+		add_stability = -0.15
+		add_war_support = -0.15
+		add_political_power = -150
+		hidden_effect = {
+			# 約7ヶ月後に危機が再発する（.1 から連鎖をやり直す）
+			SER = {
+				country_event = {
+					id = vf_greatwar.1
+					days = 210
+				}
+			}
+		}
+	}
+}
+country_event = { # 動員の連鎖
+	id = vf_greatwar.5
+	title = vf_greatwar.5.title
+	desc = vf_greatwar.5.desc
+
+	is_triggered_only = yes
+
+	immediate = {
+		add_named_threat = {
+			threat = 3
+			name = vf_threat_mobilization
+		}
+		hidden_effect = {
+			# 各大国へ警告ニュース
+			every_country = {
+				limit = {
+					OR = {
+						tag = GER
+						tag = ENG
+						tag = FRA
+						tag = RUS
+						tag = ITA
+					}
+				}
+				country_event = {
+					id = vf_greatwar.9
+					days = 1
+				}
+			}
+			SER = {
+				country_event = {
+					id = vf_greatwar.6
+					days = 14
+				}
+			}
+		}
+	}
+
+	option = {
+		name = vf_greatwar.5.a
+	}
+}
+country_event = { # 開戦（世界大戦の発火）
+	# 参戦連鎖は「陣営任せ」にしない（指示書 §7-2b）:
+	#   1. SERがCROへ宣戦
+	#   2. 自動連鎖分（GER=自治領邦の宗主参戦、ENG=英独同盟）を has_war_with で検証し、
+	#      失敗していれば vf_greatwar_chain_incomplete を立てた上でフォールバックの add_to_war を行う
+	#   3. 自動連鎖で表現できない分（露仏のSER側参戦。SERは救国同盟の盟主のまま共同交戦国）は add_to_war で明示
+	#   4. POL / OTT / ITA / IST の参戦判定は .10 へ
+	# vf_greatwar_chain_incomplete が立った状態はバグである（T16）
+	id = vf_greatwar.6
+	title = vf_greatwar.6.title
+	desc = vf_greatwar.6.desc
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = vf_greatwar_started
+		SER = {
+			declare_war_on = {
+				target = CRO
+				type = annex_everything
+			}
+		}
+		hidden_effect = {
+			# --- 検証: GERの自動参戦（自治領邦の規定） ---
+			IF = {
+				limit = {
+					GER = {
+						NOT = { has_war_with = SER }
+					}
+				}
+				set_global_flag = vf_greatwar_chain_incomplete
+				GER = {
+					add_to_war = {
+						targeted_alliance = CRO
+						enemy = SER
+					}
+				}
+			}
+			# --- 検証: ENGの同盟参戦（英独同盟） ---
+			IF = {
+				limit = {
+					ENG = {
+						NOT = { has_war_with = SER }
+					}
+				}
+				set_global_flag = vf_greatwar_chain_incomplete
+				ENG = {
+					add_to_war = {
+						targeted_alliance = GER
+						enemy = SER
+					}
+				}
+			}
+			# --- 露仏のSER側参戦（faction では表現できない。§4-0-0 衝突2） ---
+			RUS = {
+				add_to_war = {
+					targeted_alliance = SER
+					enemy = GER
+				}
+			}
+			FRA = {
+				add_to_war = {
+					targeted_alliance = SER
+					enemy = GER
+				}
+			}
+			# --- 各国の参戦判定へ ---
+			every_country = {
+				limit = {
+					OR = {
+						tag = POL
+						tag = OTT
+						tag = ITA
+						tag = IST
+					}
+				}
+				country_event = {
+					id = vf_greatwar.10
+					days = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = vf_greatwar.6.a
+		add_war_support = 0.10
+	}
+}
+country_event = { # ベルリンへの要求（GER向け通知）
+	# focus_SER_pol_demand_srem_and_macva から発火
+	id = vf_greatwar.7
+	title = vf_greatwar.7.title
+	desc = vf_greatwar.7.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = vf_greatwar.7.a
+		add_war_support = 0.03
+	}
+}
+country_event = { # ザグレブへの要求（CRO向け通知）
+	# focus_SER_pol_demand_srem_and_macva から発火
+	id = vf_greatwar.8
+	title = vf_greatwar.8.title
+	desc = vf_greatwar.8.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = vf_greatwar.8.a
+		add_stability = -0.05
+	}
+}
+country_event = { # 動員の警告（各大国向けニュース）
+	id = vf_greatwar.9
+	title = vf_greatwar.9.title
+	desc = vf_greatwar.9.desc
+
+	is_triggered_only = yes
+
+	option = {
+		name = vf_greatwar.9.a
+	}
+}
+country_event = { # 参戦判定（POL / OTT / ITA / IST）
+	# 幕間の危機3件（ローマ進軍・波立危機・オスマン危機）が立てるフラグを読むが、
+	# それらは未実装のため「フラグが1つも無い」状態が既定。必ずELSEで完走すること（指示書 §7-4）。
+	# フラグは「既定（中立）からのズレ」としてのみ作用する
+	id = vf_greatwar.10
+	title = vf_greatwar.10.title
+	desc = vf_greatwar.10.desc
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			# --- ポーランド（波立危機 1927 が立てる vf_POL_tilt_* を読む） ---
+			IF = {
+				limit = {
+					tag = POL
+					has_global_flag = vf_POL_tilt_fra
+				}
+				add_to_war = {
+					targeted_alliance = SER
+					enemy = GER
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					tag = POL
+					has_global_flag = vf_POL_tilt_ger
+				}
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = SER
+				}
+			}
+			# ELSE: 既定はPOL中立（vf_POL_tilt_neutral も同じ）
+
+			# --- オスマン（オスマン危機 1929 が立てる vf_OTT_alignment_* を読む） ---
+			IF = {
+				limit = {
+					tag = OTT
+					has_global_flag = vf_OTT_alignment_fra
+				}
+				add_to_war = {
+					targeted_alliance = SER
+					enemy = GER
+				}
+			}
+			ELSE_IF = {
+				limit = {
+					tag = OTT
+					has_global_flag = vf_OTT_alignment_ger
+				}
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = SER
+				}
+			}
+			# ELSE: 既定はOTT中立
+
+			# --- イタリア（ローマ進軍 1925 の vf_ITA_regime_* と対セルビア遺恨を読む） ---
+			IF = {
+				limit = {
+					tag = ITA
+					has_global_flag = vf_ITA_regime_fascist
+					has_global_flag = vf_ITA_grudge_SER
+				}
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = SER
+				}
+			}
+			# ELSE: 既定はITA中立（天秤のまま。リベラル政体も中立）
+
+			# --- イストリア（GER側NFが立てる vf_IST_leaning_* を読む） ---
+			IF = {
+				limit = {
+					tag = IST
+					has_global_flag = vf_IST_leaning_ger
+				}
+				add_to_war = {
+					targeted_alliance = GER
+					enemy = SER
+				}
+			}
+			# ELSE: 既定はIST中立
+		}
+	}
+
+	option = {
+		name = vf_greatwar.10.a
+	}
+}
+country_event = { # 大戦の終結: セルビア側の勝利（β簡易版）
+	# GERの降伏をもって趨勢決定とみなす。講和会議はバニラに任せるが、
+	# 争点のスレム・マチュヴァ（州109）だけは帰属を明示する（指示書 §5-3・§7-5）
+	id = vf_greatwar.20
+	title = vf_greatwar.20.title
+	desc = vf_greatwar.20.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SER
+		has_global_flag = vf_greatwar_started
+		GER = {
+			has_capitulated = yes
+		}
+		CRO = {
+			has_capitulated = yes
+		}
+	}
+
+	immediate = {
+		109 = {
+			transfer_state_to = SER
+			add_core_of = SER
+			add_claim_by = CRO
+		}
+	}
+
+	option = {
+		name = vf_greatwar.20.a
+		add_stability = 0.10
+	}
+}
+country_event = { # 大戦の終結: セルビア側の敗北（β簡易版）
+	id = vf_greatwar.21
+	title = vf_greatwar.21.title
+	desc = vf_greatwar.21.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SER
+		has_global_flag = vf_greatwar_started
+		has_capitulated = yes
+	}
+
+	option = {
+		name = vf_greatwar.21.a
+	}
+}

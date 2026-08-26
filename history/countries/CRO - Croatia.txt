@@ -1,7 +1,15 @@
 capital = 109
 
+# VF: GERの自治領邦（autonomy_vf_crown_dominion）。
+# 定義は common/autonomous_states/_vf_autonomy_crown_dominion.txt。
+# SERの宣戦が宗主GERへ拡大することが大戦の起点になる（指示書 §5・T8）
 GER = {
 	puppet = CRO
+	set_autonomy = {
+		target = CRO
+		autonomous_state = autonomy_vf_crown_dominion
+		freedom_level = 0.4
+	}
 }
 
 oob = "CRO_1925"

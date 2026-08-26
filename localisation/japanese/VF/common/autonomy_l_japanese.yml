@@ -1,0 +1,6 @@
+﻿l_japanese:
+ ### 自治領邦（common/autonomous_states/_vf_autonomy_crown_dominion.txt） ###
+ autonomy_vf_crown_dominion: "自治領邦"
+ VF_AUTONOMY_vf_crown_dominion: "自治領邦"
+ # 在クロアチア同胞への呼びかけ（focus_SER_pol_call_to_serbs_in_croatia）による自治度低下の表示名
+ vf_autonomy_serb_agitation: "セルビア人住民の扇動"

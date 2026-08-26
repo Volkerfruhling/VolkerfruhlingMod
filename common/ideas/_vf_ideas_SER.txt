@@ -44,6 +44,27 @@ ideas = {
 				army_defence_factor = -0.1
 			}
 		}
+		# ウィーン条約の軍備制限
+		# 監査（指示書 §6-3 #5）時点で該当ideaが存在しなかったため新規作成。
+		# history/countries/SER - Serbia.txt で開始時に付与され、
+		# 幕間枝 focus_SER_mil_abrogate_vienna_treaty が除去する。
+		# バルカン戦争（1927）の勝敗バランスを崩さないよう戦闘補正は入れないこと
+		idea_SER_vienna_arms_limit = {
+			picture = generic_disjointed_gov
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				# 徴兵ペナルティは入れないこと。開戦前（アルバニア平定・バルカン戦争）の
+				# 軍規模バランスを崩し、戦争が泥沼化する（2026-08-26 テストで確認）
+				production_speed_arms_factory_factor = -0.10
+				training_time_army_factor = 0.10
+			}
+		}
 
 	}
 	country = {
@@ -101,6 +122,70 @@ ideas = {
 			modifier = {
 				experience_gain_army = 0.33
 				training_time_army_factor = -0.33
+			}
+		}
+		### 幕間枝（1928春〜1929夏）でNFにより付与 ###
+		# 汎スラヴの大義（focus_SER_pol_panslavic_cause）
+		idea_SER_pol_panslavic_cause = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				conscription_factor = 0.05
+			}
+		}
+		# 参謀本部の戦争計画（focus_SER_mil_general_staff_war_plan）
+		idea_SER_mil_general_staff_war_plan = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.25
+				max_planning = 0.10
+			}
+		}
+		# 最後の失地（focus_SER_pol_the_last_irredenta）
+		idea_SER_pol_last_irredenta = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				war_support_factor = 0.10
+				justify_war_goal_time = -0.25
+			}
+		}
+		# アルバニア平定作戦（event_SER_pol.7 が180日付与）
+		# ALBは民兵7個師団・山岳地形のため、素の戦力差では戦争が泥沼化する。
+		# 「ALBは速やかに轢き殺される」という設計想定をこのバフと event_SER_pol.12（強制崩壊）で保証する
+		idea_SER_albania_pacification = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_org = 10
+				ai_focus_aggressive_factor = 1.00
+			}
+			targeted_modifier = {
+				tag = ALB
+				attack_bonus_against = 0.50
+				defense_bonus_against = 0.50
 			}
 		}
 		idea_balkan_war = { # バルカン戦争用バフ

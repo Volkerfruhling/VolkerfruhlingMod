@@ -165,6 +165,9 @@ add_ideas = { # 国民精神
 	idea_SER_huge_compensation
 	idea_SER_ljotic_dictatorship
 	idea_SER_humiliating_defeat
+	# ウィーン条約の軍備制限。幕間枝の focus_SER_mil_abrogate_vienna_treaty が除去する（指示書 §6-3 #5）。
+	# バルカン戦争の勝敗バランスを崩さないよう、戦闘補正ではなく徴兵・生産系の弱い制限に留めてある
+	idea_SER_vienna_arms_limit
 }
 add_ideas = { # 法律
 	Presidential_democracy

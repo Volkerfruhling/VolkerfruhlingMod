@@ -1,5 +1,5 @@
 ﻿l_japanese:
- l_japanese:
+ focus_SER: "セルビア国家方針"
 
  ### 政治ツリー ###
  # リョティッチの演説
@@ -179,3 +179,51 @@
  # 科学技術の軍事転用
  focus_SER_eco_military_use_of_science_and_technology: "科学技術の軍事転用"
  focus_SER_eco_military_use_of_science_and_technology_desc: "科学技術の軍事転用" # Descは仮置き
+
+ # アルバニアからの略奪（設計図35の終端を補完。主宰裁定 2026-08-26）
+ focus_SER_eco_plunder_albania: "アルバニアからの略奪"
+ focus_SER_eco_plunder_albania_desc: "平定されたアルバニアは、鉄の意志を貫いた我々にとって格好の供給源である。接収は「戦後管理」の名の下に行われる。"
+
+ ### 幕間枝（1928春〜1929夏） ###
+ # 講和の後で
+ focus_SER_pol_after_the_peace: "講和の後で"
+ focus_SER_pol_after_the_peace_desc: "バルカン戦争は終わった。だが、これは終わりではない。ベオグラードの視線は、すでに北西の最後の失地へと注がれている。"
+ # 露国軍事使節の受入
+ focus_SER_pol_receive_russian_mission: "露国軍事使節の受入"
+ focus_SER_pol_receive_russian_mission_desc: "ペテルブルクからの軍事使節団がベオグラードに到着した。ロシアの後援こそが、来るべき戦いの生命線である。"
+ # 汎スラヴの大義
+ focus_SER_pol_panslavic_cause: "汎スラヴの大義"
+ focus_SER_pol_panslavic_cause_desc: "スラヴの兄弟は一つの旗の下に。正教と血の絆を掲げるプロパガンダが、国民を来るべき聖戦へと束ねていく。"
+ # 露仏の保障
+ focus_SER_pol_franco_russian_guarantee: "露仏の保障"
+ focus_SER_pol_franco_russian_guarantee_desc: "ペテルブルクとパリが、セルビアの独立に対する保障を宣言した。フランクフルトはこれを挑発と受け取るだろう。だが、もはや我々は孤立していない。"
+ # ウィーン条約軍備制限の破棄
+ focus_SER_mil_abrogate_vienna_treaty: "ウィーン条約軍備制限の破棄"
+ focus_SER_mil_abrogate_vienna_treaty_desc: "1915年の屈辱的な軍備制限を、我々は一方的に破棄する。査察官は国境まで丁重に送り届けられた。"
+ # 露式装備の導入
+ focus_SER_mil_russian_equipment: "露式装備の導入"
+ focus_SER_mil_russian_equipment_desc: "ロシア製の小銃と火砲が、夜陰に紛れてドナウを渡ってくる。"
+ # 突撃隊の正規編入
+ focus_SER_mil_integrate_zbor_battalions: "突撃隊の正規編入"
+ focus_SER_mil_integrate_zbor_battalions_desc: "ZBOR戦闘団は正規軍の指揮系統に編入される。狂信は規律を得て、初めて兵器となる。"
+ # 参謀本部の戦争計画
+ focus_SER_mil_general_staff_war_plan: "参謀本部の戦争計画"
+ focus_SER_mil_general_staff_war_plan_desc: "刷新された参謀本部が、対クロアチア戦の作戦計画を完成させた。サヴァ川を渡る全ての橋が、地図の上で番号を振られている。"
+ # 回復地の統合
+ focus_SER_eco_integrate_recovered_lands: "回復地の統合"
+ focus_SER_eco_integrate_recovered_lands_desc: "講和で取り戻した土地を、一日も早く国家の身体に縫い戻さねばならない。"
+ # 軍需産業の拡張
+ focus_SER_eco_expand_arms_industry: "軍需産業の拡張"
+ focus_SER_eco_expand_arms_industry_desc: "賠償と制限の軛を脱した今、ベオグラード近郊の工場群は昼夜三交代で稼働を始める。"
+ # 最後の失地
+ focus_SER_pol_the_last_irredenta: "最後の失地"
+ focus_SER_pol_the_last_irredenta_desc: "スレムとマチュヴァ。ウィーン条約で奪われた最後の故地に対する我々の要求を、今こそ公式のものとする。"
+ # 在クロアチア同胞への呼びかけ
+ focus_SER_pol_call_to_serbs_in_croatia: "在クロアチア同胞への呼びかけ"
+ focus_SER_pol_call_to_serbs_in_croatia_desc: "帝冠領クロアチアに暮らすセルビア人同胞よ、立ち上がれ。ベオグラードのラジオ放送が、国境の向こうで密かに聴かれている。"
+ # スレムとマチュヴァの要求
+ focus_SER_pol_demand_srem_and_macva: "スレムとマチュヴァの要求"
+ focus_SER_pol_demand_srem_and_macva_desc: "セルビア政府は、フランクフルトとザグレブに対し公式にスレム・マチュヴァの返還を要求した。欧州の各紙が一斉に一面でこれを報じる。"
+ # サラエボの再来
+ focus_SER_pol_sarajevo_again: "サラエボの再来"
+ focus_SER_pol_sarajevo_again_desc: "張り詰めた国境で、一発の銃声が響くのを誰もが待っている。それが引かれた時、世界は再び燃え上がるだろう。"

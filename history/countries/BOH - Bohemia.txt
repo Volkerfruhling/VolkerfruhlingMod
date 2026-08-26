@@ -1,7 +1,15 @@
 capital = 9
 
+# VF: GERの自治領邦（autonomy_vf_crown_dominion）。
+# 定義は common/autonomous_states/_vf_autonomy_crown_dominion.txt。
+# 自治度は「忠誠度」の受け皿として使う（GER側実装で参照。指示書 §5-2）
 GER = {
 	puppet = BOH
+	set_autonomy = {
+		target = BOH
+		autonomous_state = autonomy_vf_crown_dominion
+		freedom_level = 0.4
+	}
 }
 
 oob = "BOH_1925"

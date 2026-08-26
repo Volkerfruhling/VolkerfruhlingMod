@@ -18,3 +18,26 @@
  event_SER_pol.7.title: "アルバニアへの侵攻"
  event_SER_pol.7.desc: "やっぱりアルバニアはゆるせないよねー！"
  event_SER_pol.7.a: "３日で終わらせろ！"
+ event_SER_pol.5.title: "提案の拒否"
+ event_SER_pol.5.desc: "モンテネグロは我々の最終提案を拒否した。ならば、統合は別の手段で成し遂げられるだろう。"
+ event_SER_pol.5.a: "自ら選んだ道だ"
+
+ event_SER_pol.6.title: "ティラナへの最後通牒"
+ event_SER_pol.6.desc: "コソボの返還を求める最後通牒に、ティラナは屈した。奪われた故地が戻ってくる。"
+ event_SER_pol.6.a: "当然の帰結だ"
+
+ event_SER_pol.8.title: "復讐の日"
+ event_SER_pol.8.desc: "1915年の屈辱を晴らす時が来た。国境の全部隊に進撃命令が下る。ブルガリアとその同盟者どもに、セルビアの怒りを思い知らせよ。"
+ event_SER_pol.8.a: "進め、セルビアの兵士たちよ！"
+
+ event_SER_pol.9.title: "ハンガリーの戦線離脱"
+ event_SER_pol.9.desc: "国土を蚕食され、革命の混乱に喘ぐハンガリーは、単独講和に応じて戦争から離脱した。"
+ event_SER_pol.9.a: "一つ片付いた"
+
+ event_SER_pol.10.title: "バルカン戦争の講和"
+ event_SER_pol.10.desc: "長い戦いが終わった。講和条約が結ばれ、バルカンの地図は再び描き直される。だが、ベオグラードの野望はまだ満たされてはいない。"
+ event_SER_pol.10.a: "これは始まりに過ぎない"
+
+ event_SER_pol.12.title: "アルバニアの崩壊"
+ event_SER_pol.12.desc: "セルビア軍の圧力の前に、アルバニア公国は内部から瓦解した。部族長たちは相次いで降伏し、ティラナの政府はもはや存在しない。平定作戦は完了した。"
+ event_SER_pol.12.a: "バルカンの秩序は我々が定める"

@@ -1,3 +1,20 @@
+# =========================================================
+# VF / バルカン諸国のAI戦略
+# 指示書: .doc/06_SER開戦導線_実装指示書.md
+#
+# 関連ファイル:
+#   common/national_focus/_vf_focus_SER.txt   … 開戦準備フラグ vf_SER_preparing_war_* を hidden_effect で立てる
+#   events/_vf_events_SER.txt                 … vf_started/ended_balkan_war を立てる
+#   events/_vf_events_greatwar.txt            … vf_greatwar_started を立てる
+#
+# 読むフラグ: vf_started_balkan_war / vf_ended_balkan_war / vf_greatwar_started /
+#             vf_SER_preparing_war_ALB / _BUL / _CRO
+#
+# 既知の問題（2026-08-26 監査。主宰裁定待ちのため未修正）:
+#   VF_balkan_strategy の allowed 内に original_tag が7行並んでいるが、
+#   トリガはAND判定のため常に偽＝この戦略は一度も有効になっていない。
+#   OR = { } で包めば有効化できるが、全バルカン諸国の師団数が激変するため裁定を待つこと
+# =========================================================
 VF_balkan_strategy = {
 	allowed = {
 		original_tag = SER
@@ -28,10 +45,51 @@ VF_balkan_strategy = {
 		value = 100
 	}
 }
+# VF / 開戦前のAI集結制御
+# 「宣戦したのに国境ががら空き／戦線が薄くて突破できない」を防ぐため、
+# NFの裏効果（hidden_effect のグローバルフラグ）を読んで開戦前から国境へ軍を寄せる。
+#   vf_SER_preparing_war_ALB … focus_SER_pol_lost_kosovo が立てる（平定作戦の2NF前）
+#   vf_SER_preparing_war_BUL … focus_SER_pol_oppose_balkan_pact が立てる（復讐の日の1NF前）
+#   vf_SER_preparing_war_CRO … focus_SER_pol_the_last_irredenta が立てる（開戦の3NF前）
+VF_serbia_prep_albania_strategy = {
+	allowed = {
+		original_tag = SER
+	}
+	enable = {
+		original_tag = SER
+		has_global_flag = vf_SER_preparing_war_ALB
+		country_exists = ALB
+		NOT = {
+			has_war_with = ALB
+		}
+	}
+	abort_when_not_enabled = yes
+	# 全軍をALB国境の戦線へ（他国境は薄くてよい）
+	ai_strategy = {
+		type = front_unit_request
+		tag = ALB
+		value = 300
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = ALB
+		value = 200
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = BUL
+		value = -100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = HUN
+		value = -100
+	}
+}
 VF_serbia_albania_invation_strategy = {
 	allowed = {
 		original_tag = SER
-		
+
 	}
 	enable = {
 		original_tag = SER
@@ -55,6 +113,21 @@ VF_serbia_albania_invation_strategy = {
 		type = prepare_for_war
 		id = HUN
 		value = -200
+	}
+	# 戦争中もALB戦線へ増援を要求し続ける
+	ai_strategy = {
+		type = front_unit_request
+		tag = ALB
+		value = 300
+	}
+	# ALB戦線の攻勢命令を強制実行（様子見で止まらせない）
+	ai_strategy = {
+		type = front_control
+		tag = ALB
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		priority = 100
 	}
 }
 VF_serbia_strategy = {
@@ -92,8 +165,42 @@ VF_serbia_strategy = {
 		value = 100
 	}
 }
+# 復讐の日の1NF前（vf_SER_preparing_war_BUL）からBUL・HUN国境へ軍を寄せる
+VF_serbia_prep_balkan_war_strategy = {
+	allowed = {
+		original_tag = SER
+	}
+	enable = {
+		original_tag = SER
+		has_global_flag = vf_SER_preparing_war_BUL
+		NOT = {
+			has_global_flag = vf_started_balkan_war
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		tag = BUL
+		value = 200
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = HUN
+		value = 150
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = BUL
+		value = 200
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = HUN
+		value = 150
+	}
+}
 VF_serbia_bw_strategy = {
-	
+
 	allowed = {
 		original_tag = SER
 	}
@@ -124,6 +231,71 @@ VF_serbia_bw_strategy = {
 		id = HUN
 		value = 100
 	}
+	# 戦争中もBUL・HUN戦線へ増援を要求し続ける（戦線が薄くて突破できない対策）
+	ai_strategy = {
+		type = front_unit_request
+		tag = BUL
+		value = 200
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = HUN
+		value = 150
+	}
+}
+# 救国同盟の同盟国も開戦前〜戦中は担当戦線へ軍を寄せる
+VF_romania_prep_balkan_war_strategy = {
+	allowed = {
+		original_tag = ROM
+	}
+	enable = {
+		original_tag = ROM
+		is_in_faction_with = SER
+		has_global_flag = vf_SER_preparing_war_BUL
+		NOT = {
+			has_global_flag = vf_ended_balkan_war
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		tag = HUN
+		value = 200
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = BUL
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = HUN
+		value = 200
+	}
+}
+VF_greece_prep_balkan_war_strategy = {
+	allowed = {
+		original_tag = GRE
+	}
+	enable = {
+		original_tag = GRE
+		is_in_faction_with = SER
+		has_global_flag = vf_SER_preparing_war_BUL
+		NOT = {
+			has_global_flag = vf_ended_balkan_war
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		tag = BUL
+		value = 200
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = BUL
+		value = 200
+	}
 }
 VF_serbia_after_bw_strategy = {
 	
@@ -151,6 +323,92 @@ VF_serbia_after_bw_strategy = {
 		type = prepare_for_war
 		id = HUN
 		value = 100
+	}
+}
+# VF / SER幕間枝〜大戦準備（指示書 §6・T17）
+# 講和後のSERがクロアチア国境（スレム・マチュヴァ＝州109）に備えるようにする。
+# 開戦そのものは events/_vf_events_greatwar.txt の vf_greatwar.6 が行う
+VF_serbia_greatwar_prep_strategy = {
+
+	allowed = {
+		original_tag = SER
+	}
+	enable = {
+		original_tag = SER
+		has_global_flag = vf_ended_balkan_war
+		NOT = {
+			has_global_flag = vf_greatwar_started
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = prepare_for_war
+		id = CRO
+		value = 200
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = GER
+		value = 100
+	}
+}
+# 最後の失地（vf_SER_preparing_war_CRO）以降、開戦までに全軍をCRO国境へ寄せる
+VF_serbia_prep_greatwar_strategy = {
+
+	allowed = {
+		original_tag = SER
+	}
+	enable = {
+		original_tag = SER
+		has_global_flag = vf_SER_preparing_war_CRO
+		NOT = {
+			has_global_flag = vf_greatwar_started
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		tag = CRO
+		value = 300
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = GER
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = CRO
+		value = 300
+	}
+}
+# 大戦勃発後: 争点のスレム・マチュヴァ（CRO戦線）へ攻勢を集中する
+VF_serbia_greatwar_offensive_strategy = {
+
+	allowed = {
+		original_tag = SER
+	}
+	enable = {
+		original_tag = SER
+		has_global_flag = vf_greatwar_started
+		CRO = {
+			exists = yes
+			has_war_with = SER
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = front_unit_request
+		tag = CRO
+		value = 200
+	}
+	ai_strategy = {
+		type = front_control
+		tag = CRO
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+		priority = 100
 	}
 }
 VF_bulgaria_strategy = {

@@ -1,4 +1,18 @@
 #!gfx:interface\_VF\goals\goals_ser.gfx
+# =========================================================
+# VF / セルビア：NF本体（開始〜バルカン戦争〜幕間枝14本）
+# 指示書: .doc/06_SER開戦導線_実装指示書.md
+#
+# 関連ファイル:
+#   events/_vf_events_SER.txt                 … event_SER_pol.1〜.11（バルカン戦争の開戦・講和）
+#   events/_vf_events_greatwar.txt            … クロアチア危機〜開戦連鎖（幕間枝の終端が発火する）
+#   common/ideas/_vf_ideas_SER.txt            … NFが付与・除去する国民精神
+#   common/ai_strategy/_vf_Balkan.txt         … SERのAI戦略（vf_フラグを読む）
+#   history/countries/SER - Serbia.txt        … 開始時の国民精神（idea_SER_vienna_arms_limit 等）
+#
+# 立てるフラグ: vf_SER_patronage_russia / vf_SER_franco_russian_guarantee / vf_SER_agitating_croatia
+# 読むフラグ:   vf_ended_balkan_war / vf_SER_peace_tier_1〜4
+# =========================================================
 focus_tree = {
 	id = focus_SER # 焦点ツリーのID。一意なものにする。ファイル名と一致させておくのがおすすめ。
 	country = {
@@ -284,29 +298,7 @@ focus_tree = {
 
 	}
 	## アルバニアツリー ##
-	# # アルバニアの脅威認識
-	# focus = {
-	# 	id = focus_SER_pol_albania_threat
-	
-	# 	icon = GFX_goal_unknown
-	# 	# アイコン名の規則 : GFX_goal_<NF名の英訳>
-	
-	# 	cost = 4 # 1 = 7days
-	
-	# 	x = -2
-	# 	y = 1
-	# 	relative_position_id = focus_SER_pol_final_proposal # 親NFのID
-	# 	prerequisite = { # 前提NF
-	# 		focus = focus_SER_pol_final_proposal
-	# 	}
-	# 	available = {
-	# 		always = yes
-	# 	}
-	# 	completion_reward = {
-	# 		add_war_support = 0.10
-	# 	}
-
-	# }
+	# 「アルバニアの脅威認識」は主宰裁定（2026-08-26）により削除確定。現行の並び（最終提案→失われたコソボ）を正とする
 	# 失われたコソボ
 	focus = {
 		id = focus_SER_pol_lost_kosovo
@@ -331,6 +323,11 @@ focus_tree = {
 				remove_core_of = ALB
 				start_resistance = SER
 				add_resistance_target = 50
+			}
+			hidden_effect = {
+				# AI用: アルバニア平定作戦（2NF先）に備え、全軍をALB国境へ寄せる。
+				# common/ai_strategy/_vf_Balkan.txt の VF_serbia_prep_albania_strategy が読む
+				set_global_flag = vf_SER_preparing_war_ALB
 			}
 		}
 
@@ -568,6 +565,11 @@ focus_tree = {
 					}
 				}
 			}
+			hidden_effect = {
+				# AI用: 復讐の日（次NF）に備え、SER・GRE・ROMの軍をBUL・HUN国境へ寄せる。
+				# common/ai_strategy/_vf_Balkan.txt の VF_*_prep_balkan_war_strategy が読む
+				set_global_flag = vf_SER_preparing_war_BUL
+			}
 		}
 
 	}
@@ -587,7 +589,15 @@ focus_tree = {
 			focus = focus_SER_pol_oppose_balkan_pact
 		}
 		available = {
-			always = yes
+			# 救国同盟なしで開戦してSERが単独でBUL・HUNと戦う事態を塞ぐ（指示書 §4-0-0・T14）。
+			# 前提NF連鎖（対抗←救国同盟）でも保証されているが、二重に明示しておく
+			has_completed_focus = focus_SER_pol_alliance_for_salvation
+			is_in_faction = yes
+			# アルバニア戦の決着前にバルカン戦争へもつれ込むのを防ぐ（2026-08-26 テストで泥沼化を確認）。
+			# 決着は event_SER_pol.12 が最大120日で保証する
+			NOT = {
+				has_war_with = ALB
+			}
 		}
 		completion_reward = {
 			country_event = event_SER_pol.8
@@ -1226,12 +1236,12 @@ focus_tree = {
 	# 略奪への道
 	focus = {
 		id = focus_SER_eco_path_to_plunder
-		
+
 		# icon = GFX_goal_focus_SER_path_to_plunder
 		icon = GFX_goal_unknown
-		
+
 		cost = 4
-		
+
 		x = 0
 		y = 1
 		relative_position_id = focus_SER_eco_dependence_on_domestic_resources
@@ -1243,7 +1253,45 @@ focus_tree = {
 		}
 		completion_reward = {
 		}
-		
+
+	}
+	# アルバニアからの略奪
+	# 主宰裁定（2026-08-26）: 設計図35の終端を補完。「復讐の日」ルートは実装を正とする（指示書 §10-1）
+	focus = {
+		id = focus_SER_eco_plunder_albania
+
+		# icon = GFX_goal_focus_SER_eco_plunder_albania
+		icon = GFX_goal_unknown
+
+		cost = 4
+
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_eco_path_to_plunder
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_path_to_plunder
+		}
+		available = {
+			# アルバニア平定が済んでいること（併合済み、または降伏済み）
+			OR = {
+				NOT = { country_exists = ALB }
+				ALB = { has_capitulated = yes }
+			}
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 5000
+			}
+			107 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+
 	}
 	# 鉄の意志
 	focus = {
@@ -1383,12 +1431,12 @@ focus_tree = {
 	# 科学技術の軍事転用
 	focus = {
 		id = focus_SER_eco_military_use_of_science_and_technology
-		
+
 		# icon = GFX_goal_focus_SER_military_use_of_science_and_technology
 		icon = GFX_goal_unknown
-		
+
 		cost = 4
-		
+
 		x = 0
 		y = 3
 		relative_position_id = focus_SER_eco_iron_will
@@ -1404,7 +1452,576 @@ focus_tree = {
 		completion_reward = {
 			add_research_slot = 1
 		}
-		
+
+	}
+
+	### 幕間枝（1928春〜1929夏） ###
+	# バルカン戦争講和（vf_ended_balkan_war）後に解禁される開戦導線。指示書 §6。
+	# cost = 5 標準（14本 × 35日 = 490日 ≒ 講和1928.4 → 危機1929.8）
+	# 終端は直接宣戦せず、クロアチア危機連鎖（events/_vf_events_greatwar.txt）へ投げる
+
+	# 講和の後で（幕間枝の入口）
+	focus = {
+		id = focus_SER_pol_after_the_peace
+
+		# icon = GFX_goal_focus_SER_pol_after_the_peace
+		icon = GFX_goal_unknown
+
+		cost = 5
+
+		x = 36
+		y = 0
+		allow_branch = {
+			has_global_flag = vf_ended_balkan_war
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+
+	}
+	# 露国軍事使節の受入
+	focus = {
+		id = focus_SER_pol_receive_russian_mission
+
+		# icon = GFX_goal_focus_SER_pol_receive_russian_mission
+		icon = GFX_goal_unknown
+
+		cost = 5
+
+		x = -4
+		y = 1
+		relative_position_id = focus_SER_pol_after_the_peace
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_after_the_peace
+		}
+		allow_branch = {
+			has_global_flag = vf_ended_balkan_war
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			set_global_flag = vf_SER_patronage_russia
+			add_opinion_modifier = {
+				target = RUS
+				modifier = vf_opinion_SER_russian_mission
+			}
+			RUS = {
+				add_opinion_modifier = {
+					target = SER
+					modifier = vf_opinion_SER_russian_mission
+				}
+			}
+		}
+
+	}
+	# 汎スラヴの大義
+	focus = {
+		id = focus_SER_pol_panslavic_cause
+
+		# icon = GFX_goal_focus_SER_pol_panslavic_cause
+		icon = GFX_goal_unknown
+
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_pol_receive_russian_mission
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_receive_russian_mission
+		}
+		allow_branch = {
+			has_global_flag = vf_ended_balkan_war
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_ideas = idea_SER_pol_panslavic_cause
+		}
+
+	}
+	# 露仏の保障
+	# 主宰裁定待ちのためβは共同交戦国方式（指示書 §10-3 推奨案）: 陣営加入はせず、保障＋関係改善＋フラグのみ。
+	# 開戦時の露仏参戦は vf_greatwar.6 の add_to_war が担う
+	focus = {
+		id = focus_SER_pol_franco_russian_guarantee
+
+		# icon = GFX_goal_focus_SER_pol_franco_russian_guarantee
+		icon = GFX_goal_unknown
+
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_pol_panslavic_cause
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_panslavic_cause
+		}
+		allow_branch = {
+			has_global_flag = vf_ended_balkan_war
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			set_global_flag = vf_SER_franco_russian_guarantee
+			RUS = {
+				give_guarantee = SER
+				add_opinion_modifier = {
+					target = SER
+					modifier = vf_opinion_SER_franco_russian_guarantee
+				}
+			}
+			FRA = {
+				give_guarantee = SER
+				add_opinion_modifier = {
+					target = SER
+					modifier = vf_opinion_SER_franco_russian_guarantee
+				}
+			}
+		}
+
+	}
+	# ウィーン条約軍備制限の破棄
+	focus = {
+		id = focus_SER_mil_abrogate_vienna_treaty
+
+		# icon = GFX_goal_focus_SER_mil_abrogate_vienna_treaty
+		icon = GFX_goal_unknown
+
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_pol_after_the_peace
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_after_the_peace
+		}
+		allow_branch = {
+			has_global_flag = vf_ended_balkan_war
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			# idea_SER_vienna_arms_limit は監査時点で未実装だったため新規作成し、
+			# history/countries/SER - Serbia.txt の開始idea群に追加した（指示書 §6-3 #5）
+			remove_ideas = idea_SER_vienna_arms_limit
+			add_war_support = 0.05
+		}
+
+	}
+	# 露式装備の導入
+	focus = {
+		id = focus_SER_mil_russian_equipment
+
+		# icon = GFX_goal_focus_SER_mil_russian_equipment
+		icon = GFX_goal_unknown
+
+		cost = 5
+
+		x = -1
+		y = 1
+		relative_position_id = focus_SER_mil_abrogate_vienna_treaty
+		prerequisite = { # 前提NF
+			focus = focus_SER_mil_abrogate_vienna_treaty
+		}
+		allow_branch = {
+			has_global_flag = vf_ended_balkan_war
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_equipment
+				bonus = 1
+				uses = 2
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 8000
+			}
+		}
+
+	}
+	# 突撃隊の正規編入
+	# 既存 focus_SER_mil_zbor_battalion（ZBOR戦闘団）の続きとして機能する（座標上は幕間枝側に配置）
+	focus = {
+		id = focus_SER_mil_integrate_zbor_battalions
+
+		# icon = GFX_goal_focus_SER_mil_integrate_zbor_battalions
+		icon = GFX_goal_unknown
+
+		cost = 5
+
+		x = 1
+		y = 1
+		relative_position_id = focus_SER_mil_abrogate_vienna_treaty
+		prerequisite = { # 前提NF
+			focus = focus_SER_mil_abrogate_vienna_treaty
+		}
+		allow_branch = {
+			has_global_flag = vf_ended_balkan_war
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_manpower = 20000
+			army_experience = 15
+		}
+
+	}
+	# 参謀本部の戦争計画
+	focus = {
+		id = focus_SER_mil_general_staff_war_plan
+
+		# icon = GFX_goal_focus_SER_mil_general_staff_war_plan
+		icon = GFX_goal_unknown
+
+		cost = 5
+
+		x = 0
+		y = 2
+		relative_position_id = focus_SER_mil_abrogate_vienna_treaty
+		prerequisite = { # 前提NF
+			focus = focus_SER_mil_russian_equipment
+		}
+		prerequisite = { # 前提NF
+			focus = focus_SER_mil_integrate_zbor_battalions
+		}
+		allow_branch = {
+			has_global_flag = vf_ended_balkan_war
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			army_experience = 25
+			add_ideas = idea_SER_mil_general_staff_war_plan
+		}
+
+	}
+	# 回復地の統合
+	focus = {
+		id = focus_SER_eco_integrate_recovered_lands
+
+		# icon = GFX_goal_focus_SER_eco_integrate_recovered_lands
+		icon = GFX_goal_unknown
+
+		cost = 5
+
+		x = 4
+		y = 1
+		relative_position_id = focus_SER_pol_after_the_peace
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_after_the_peace
+		}
+		allow_branch = {
+			has_global_flag = vf_ended_balkan_war
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			# 講和の勝ち方（vf_SER_peace_tier_*）で保有州が変わるため、
+			# 保有していない州はスキップする（指示書 §6-3 #9・T7）
+			IF = {
+				limit = {
+					controls_state = 803
+				}
+				803 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+			}
+			IF = {
+				limit = {
+					controls_state = 106
+				}
+				106 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+					}
+				}
+			}
+			IF = {
+				limit = {
+					controls_state = 764
+				}
+				764 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+					}
+				}
+			}
+			# 白紙和平などで何も保有していない場合の救済
+			IF = {
+				limit = {
+					NOT = { controls_state = 803 }
+					NOT = { controls_state = 106 }
+					NOT = { controls_state = 764 }
+				}
+				add_political_power = 25
+			}
+		}
+
+	}
+	# 軍需産業の拡張
+	focus = {
+		id = focus_SER_eco_expand_arms_industry
+
+		# icon = GFX_goal_focus_SER_eco_expand_arms_industry
+		icon = GFX_goal_unknown
+
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_eco_integrate_recovered_lands
+		prerequisite = { # 前提NF
+			focus = focus_SER_eco_integrate_recovered_lands
+		}
+		allow_branch = {
+			has_global_flag = vf_ended_balkan_war
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			107 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+				}
+			}
+			# 803・106を両方保持している場合は+1（バルカン戦争の勝ち方が効く。指示書 §6-4）
+			IF = {
+				limit = {
+					controls_state = 803
+					controls_state = 106
+				}
+				106 = {
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+					}
+				}
+			}
+		}
+
+	}
+	# 最後の失地
+	focus = {
+		id = focus_SER_pol_the_last_irredenta
+
+		# icon = GFX_goal_focus_SER_pol_the_last_irredenta
+		icon = GFX_goal_unknown
+
+		cost = 5
+
+		x = -2
+		y = 4
+		relative_position_id = focus_SER_pol_after_the_peace
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_franco_russian_guarantee
+		}
+		prerequisite = { # 前提NF
+			focus = focus_SER_mil_general_staff_war_plan
+		}
+		allow_branch = {
+			has_global_flag = vf_ended_balkan_war
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			# スレム・マチュヴァ＝州109（帝冠領クロアチア領・東クロアチア）への請求権
+			109 = {
+				add_claim_by = SER
+			}
+			add_ideas = idea_SER_pol_last_irredenta
+			# 白紙和平だった場合は「またしても何も得られなかった」（指示書 §6-4）
+			IF = {
+				limit = {
+					has_global_flag = vf_SER_peace_tier_4
+				}
+				add_stability = -0.10
+			}
+			hidden_effect = {
+				# AI用: クロアチア危機〜開戦（3NF＋危機5週間先）に備え、全軍をCRO国境へ寄せる。
+				# common/ai_strategy/_vf_Balkan.txt の VF_serbia_prep_greatwar_strategy が読む
+				set_global_flag = vf_SER_preparing_war_CRO
+			}
+		}
+
+	}
+	# 在クロアチア同胞への呼びかけ
+	focus = {
+		id = focus_SER_pol_call_to_serbs_in_croatia
+
+		# icon = GFX_goal_focus_SER_pol_call_to_serbs_in_croatia
+		icon = GFX_goal_unknown
+
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_pol_the_last_irredenta
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_the_last_irredenta
+		}
+		allow_branch = {
+			has_global_flag = vf_ended_balkan_war
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			set_global_flag = vf_SER_agitating_croatia
+			CRO = {
+				add_stability = -0.10
+				# 宗主GERへの依存を強め、自治度を圧迫する
+				add_autonomy_ratio = {
+					value = -0.05
+					localization = vf_autonomy_serb_agitation
+				}
+			}
+		}
+
+	}
+	# スレムとマチュヴァの要求
+	focus = {
+		id = focus_SER_pol_demand_srem_and_macva
+
+		# icon = GFX_goal_focus_SER_pol_demand_srem_and_macva
+		icon = GFX_goal_unknown
+
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_pol_call_to_serbs_in_croatia
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_call_to_serbs_in_croatia
+		}
+		allow_branch = {
+			has_global_flag = vf_ended_balkan_war
+		}
+		available = {
+			always = yes
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_named_threat = {
+				threat = 2
+				name = vf_threat_demand_srem_and_macva
+			}
+			GER = {
+				country_event = {
+					id = vf_greatwar.7
+					days = 1
+				}
+			}
+			CRO = {
+				country_event = {
+					id = vf_greatwar.8
+					days = 1
+				}
+			}
+		}
+
+	}
+	# サラエボの再来
+	# 終端NF。直接宣戦せず、クロアチア危機連鎖 vf_greatwar.1 を発火する（指示書 §6-3 #14）
+	focus = {
+		id = focus_SER_pol_sarajevo_again
+
+		# icon = GFX_goal_focus_SER_pol_sarajevo_again
+		icon = GFX_goal_unknown
+
+		cost = 5
+
+		x = 0
+		y = 1
+		relative_position_id = focus_SER_pol_demand_srem_and_macva
+		prerequisite = { # 前提NF
+			focus = focus_SER_pol_demand_srem_and_macva
+		}
+		allow_branch = {
+			has_global_flag = vf_ended_balkan_war
+		}
+		available = {
+			# 最短走行でも1929年夏より前には危機が起きない（指示書 §6-2。開戦年はβでは1929年固定 §10-5）
+			date > 1929.6.1
+		}
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			country_event = {
+				id = vf_greatwar.1
+			}
+		}
+		will_lead_to_war_with = CRO
+		will_lead_to_war_with = GER
+
 	}
 
 }

@@ -434,6 +434,11 @@ ELSE = { # 既定: POLは中立 }
 | `vf_croatia_crisis_deferred` | global flag | `vf_greatwar.4` | 宥和により危機が延期された |
 | `vf_greatwar_started` | global flag | `vf_greatwar.6` | 世界大戦の勃発 |
 | `vf_greatwar_chain_incomplete` | global flag | `vf_greatwar.6` | **参戦連鎖の検証に失敗した（＝バグ）**。立っていたら報告すること |
+| `vf_SER_franco_russian_guarantee` | global flag | NF #4 | 露仏がSERを保障した（実装時に追加。2026-08-26） |
+| `vf_SER_albania_war` | **country flag (SER)** | `event_SER_pol.7` | アルバニア平定作戦の開戦。`.12`（アルバニアの崩壊）が経過日数判定に使う（実装時に追加。2026-08-26。ALB戦泥沼化対策） |
+| `vf_SER_preparing_war_ALB` | global flag | NF `focus_SER_pol_lost_kosovo`（hidden_effect） | AI用。平定作戦に備えALB国境へ集結（`_vf_Balkan.txt` が読む。2026-08-26追加） |
+| `vf_SER_preparing_war_BUL` | global flag | NF `focus_SER_pol_oppose_balkan_pact`（hidden_effect） | AI用。復讐の日に備えSER・GRE・ROMがBUL・HUN国境へ集結（同上） |
+| `vf_SER_preparing_war_CRO` | global flag | NF `focus_SER_pol_the_last_irredenta`（hidden_effect） | AI用。大戦に備えCRO国境へ集結（同上） |
 
 ### 受け口だけ用意する（本タスクでは立てない・読むだけ）
 
@@ -478,6 +483,15 @@ ELSE = { # 既定: POLは中立 }
 ---
 
 ## 10. 要裁定（主宰の判断を待つこと。実装するな）
+
+> **裁定記録（2026-08-26 主宰）**
+> 1. 実装済みの「復讐の日」を正とし、「アルバニアからの略奪」（`focus_SER_eco_plunder_albania`）のみ補完 → 実装済み
+> 2. 「アルバニアの脅威認識」は削除して確定 → 実装済み
+> 3. βは共同交戦国方式（推奨案どおり）。NF #4 は保障＋関係改善＋フラグのみ → 実装済み
+> 4. クロアチア危機の口実は**国境衝突型** → 実装済み
+> 5. βは1929年固定（推奨どおり） → 実装済み
+> 6. 衝突1: 中央保障条約はfaction化せずITA無所属（推奨どおり）／衝突2: 共同交戦国＋`add_to_war`（推奨どおり）／衝突3: 実装上CROはバルカン協商に非加盟で既に回避
+> 追加裁定: `event_HUN_pol.1` は既存の革命（内戦）イベントを正とし維持する
 
 以下は設計資料と実装が食い違っている、または未決定の項目。**該当箇所に達したら手を止め、推奨案を添えて確認を求めること。**
 
@@ -567,23 +581,29 @@ ELSE = { # 既定: POLは中立 }
 
 §4-0-0 の監査で埋める。**「実装状況」が「未実装」の行があれば、それが大戦の連鎖を止める原因になる。**
 
+監査実施 2026-08-26（実装セッション）。監査時点では英独同盟・露仏協商とも**未実装**だったため、本タスクで新設した。
+
 | 陣営 | 想定盟主 | 想定構成 | 実装状況（記入） | faction key（記入） | 備考 |
 |---|---|---|---|---|---|
-| 英独同盟 | GER | GER, ENG（+ LIT） | | | ENGの参戦はここに依存。**必須** |
-| 露仏協商 | FRA または RUS | FRA, RUS | | | 露仏のSER側参戦は §7-2b の `add_to_war` で明示的に処理する |
-| 中央保障条約 | GER | GER, ITA, BOH, CRO | | | **衝突1**。faction化しないことを推奨 |
-| 仏伊協商 | FRA | FRA, ITA | | | 衝突1。ITAは天秤として無所属が推奨 |
-| 対セルビア包囲同盟 | HUN? | HUN, CRO, ALB, BUL | | | **衝突3**。HUNの参戦はここに依存。**必須**。CROの扱いに注意 |
-| 救国同盟 | SER | SER, GRE, ROM | NF `focus_SER_pol_alliance_for_salvation` で生成 | | **衝突2**。`.8` がこの陣営に依存している |
-| 伊洪協商 | ITA | ITA, HUN | | | 1850年からの伝統的友好。faction化は不要と思われる |
+| 英独同盟 | GER | GER, ENG（+ LIT） | **本タスクで新設**（`history/countries/GER - Germany.txt` の `create_faction`）。構成 GER+ENG。LITは陣営外（GERの保障のみ） | `"英独同盟"`（リテラル文字列） | ENGの参戦はここに依存。**必須** |
+| 露仏協商 | FRA または RUS | FRA, RUS | **本タスクで新設**（`history/countries/FRA - France.txt`）。盟主FRA、構成 FRA+RUS | `"露仏協商"`（リテラル文字列） | 露仏のSER側参戦は `vf_greatwar.6` の `add_to_war` で明示的に処理する |
+| 中央保障条約 | GER | GER, ITA, BOH, CRO | **faction化せず**（推奨案どおり）。BOH・CROはGERの自治領邦、ITAは無所属の天秤で開始 | — | **衝突1** → 解決（ITA無所属） |
+| 仏伊協商 | FRA | FRA, ITA | 未実装（faction化せず）。ITAは無所属 | — | 衝突1。ITAは天秤として無所属 |
+| 対セルビア包囲同盟 | HUN? | HUN, CRO, ALB, BUL | **「バルカン協商」として実装済み**（`history/countries/BUL - Bulgaria.txt`）。盟主BUL、構成 BUL+MNT+HUN。**CRO・ALBは非加盟** | `"バルカン協商"`（リテラル文字列） | **衝突3** → CRO非加盟のため既に回避されている。HUNの参戦は `.8` の明示的 `add_to_war` でも保証（T15） |
+| 救国同盟 | SER | SER, GRE, ROM | NF `focus_SER_pol_alliance_for_salvation` で生成（実装済み） | `"救国同盟"`（リテラル文字列） | **衝突2** → SERは盟主のまま共同交戦国方式（`vf_greatwar.6` の `add_to_war`）で解決 |
+| 伊洪協商 | ITA | ITA, HUN | 未実装（faction化せず） | — | 1850年からの伝統的友好。faction化は不要 |
 
 **属国関係（陣営とは別に確認）**
 
 | 宗主 | 属国 | 自治レベル | 実装状況（記入） | 備考 |
 |---|---|---|---|---|
-| GER | CRO | 自治領邦（Phase 1で新設） | | **T8の要。ここが繋がらないと大戦が起きない** |
-| GER | BOH | 自治領邦（Phase 1で新設） | | |
-| GER | LIT | （要確認） | | 親独衛星国 |
+| GER | CRO | 自治領邦（Phase 1で新設） | **実装済み**。`puppet` + `set_autonomy = autonomy_vf_crown_dominion`（`common/autonomous_states/_vf_autonomy_crown_dominion.txt`） | **T8の要**。自動参戦が働かない場合のフォールバックは `vf_greatwar.6` にある |
+| GER | BOH | 自治領邦（Phase 1で新設） | **実装済み**。同上 | 自治度を「忠誠度」の受け皿として使う |
+| GER | LIT | （要確認） | 属国ではない。GERがLITを保障（`history/countries/LIT - Lithuania.txt` の `diplomatic_relation = guarantee`） | 親独衛星国は保障で表現されている |
+
+**補足（監査で判明した注意点）**
+- MNTが「バルカン協商」に加盟したまま `event_SER_pol.4` で併合される。`annex_country` は強制実行されるため動作はするが、併合前に「復讐の日」へ達した場合はMNTもBUL側で参戦する（`.8` の明示的 `add_to_war` の対象になる）。挙動としては設定に反しない。
+- `event_HUN_pol.1` は指示書0-5の想定（フレーバー）と異なり**ハンガリー共産革命（内戦生成）イベントとして実装済み**。主宰裁定（2026-08-26）により革命イベントを正とし、指示書側のズレとして記録する。
 
 ---
 
@@ -591,11 +611,31 @@ ELSE = { # 既定: POLは中立 }
 
 §4-0-0b の監査で埋める。**NF・イベント以外の場所にある処理をすべて洗い出し、相互参照コメント（§11-1）を張った上でここに記録する。**
 
+監査実施 2026-08-26（実装セッション）。grep対象: `vf_` / `focus_SER` / `event_SER_pol` / `SER` / `BUL` / `HUN` / `CRO` / `BOH` / `balkan` / `faction`
+
+**実パスの注記**: 実リポジトリの命名は指示書の想定と異なり、VF固有ファイルは `_vf_` 接頭辞（例: `events/_vf_events_SER.txt`、`common/national_focus/_vf_focus_SER.txt`）。本タスクの新規ファイルもこの規約に合わせた。
+
 | ファイル | 種別 | 何をしているか | 関連するNF / イベント | 相互参照コメント |
 |---|---|---|---|---|
-| （例）`common/on_actions/vf_on_actions.txt` | on_action | `on_startup` で陣営を組んでいる | — | ☐ |
-| | | | | ☐ |
-| | | | | ☐ |
+| `common/ai_strategy/_vf_Balkan.txt` | ai_strategy | `vf_started/ended_balkan_war` を読み、バルカン諸国AIの開戦準備・師団比率を制御。**本タスクで大戦準備（対CRO）の `VF_serbia_greatwar_prep_strategy` を追記** | `event_SER_pol.8` / `.10`、幕間枝全般 | ☑ |
+| `common/ideas/_vf_ideas_SER.txt` | ideas | `idea_balkan_war`（`.8` が180日付与）、SER開始時国民精神、**本タスクで軍備制限・幕間枝の国民精神を追加** | `event_SER_pol.8`、NF #3/#5/#8/#11 | ☑ |
+| `common/scripted_effects/01_startup.txt` | scripted_effect | `startup_cosmetic_tag`（開始時の国名コスメティックタグ一括設定のみ。陣営・SER処理なし） | — | 不要（無関係） |
+| `common/opinion_modifiers/_vf_opinion.txt` | opinion_modifier | **本タスクで新設**。幕間枝 #2/#4 の関係値改善の実体 | NF #2/#4 | ☑ |
+| `common/autonomous_states/_vf_autonomy_crown_dominion.txt` | autonomy_state | **本タスクで新設**。自治領邦（BOH・CRO）。NFでは表現できない属国規則のためここに置く | `vf_greatwar.6`（T8） | ☑ |
+| `history/countries/GER - Germany.txt` | history | **本タスクで英独同盟の `create_faction` を追加** | `vf_greatwar.6` | ☑ |
+| `history/countries/FRA - France.txt` | history | **本タスクで露仏協商の `create_faction` を追加** | `vf_greatwar.6` | ☑ |
+| `history/countries/BUL - Bulgaria.txt` | history | 開始時に「バルカン協商」（BUL+MNT+HUN）を生成（既存） | `event_SER_pol.8` / `.9` | 既存のためコメント未付与（変更せず） |
+| `history/countries/CRO - Croatia.txt` / `BOH - Bohemia.txt` | history | GERの属国。**本タスクで自治領邦レベルへ変更** | `vf_greatwar.6` | ☑ |
+| `history/countries/SER - Serbia.txt` | history | 開始時国民精神。**本タスクで `idea_SER_vienna_arms_limit` を追加** | NF #5 | ☑ |
+| `history/countries/LIT - Lithuania.txt` | history | GERがLITを保障（既存） | — | 既存のため変更せず |
+| `events/_vf_events_HUN.txt` | event | `event_HUN_pol.1`＝ハンガリー共産革命（内戦生成）。`.8` から30日後に予約される（既存。裁定により維持） | `event_SER_pol.8` | 既存のため変更せず |
+| `events/_vf_events_ITA.txt` / `common/national_focus/_vf_focus_ITA.txt` | event / NF | ITA固有処理。`vf_ITA_pol` namespace のみで、SER・大戦フラグの読み書きなし | — | 不要（無関係） |
+| `common/decisions/` | decision | SER・大戦関連なし（`VF_debug.txt` にデバッグ用「テスト陣営」の `create_faction` があるのみ） | — | 不要 |
+| `common/on_actions/` | on_action | VF固有の処理なし（バニラ由来のみ） | — | 不要 |
+| `common/scripted_triggers/` | scripted_trigger | SER関連なし | — | 不要 |
+| `common/ai_focuses/` | ai_focus | SER関連なし（幕間枝のAI誘導はNF側の `ai_will_do = 20` で対応） | 幕間枝全般（T17） | 不要 |
+| `common/bookmarks/the_gathering_storm.txt` | bookmark | `startup_cosmetic_tag` を呼ぶ（コスメティックのみ） | — | 不要 |
+| `history/states/` | state | 州803/106/77→BUL、764/82/83/84→HUN、184→BUL、109（スレム・マチュヴァ）→CRO を確認済み | `.9` / `.10`、NF #9/#11、`vf_greatwar.20` | 不要（初期所有のみ） |
 
 **記入時の注意**
 
