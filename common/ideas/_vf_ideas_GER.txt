@@ -373,6 +373,90 @@ ideas = {
 			}
 		}
 
+		### 軍事ツリーが付与する国民精神 ###
+		# 改良シュリーフェン・プラン（NF 改良シュリーフェン・プラン）
+		idea_GER_schlieffen_plan = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				planning_speed = 0.25
+				max_planning = 0.10
+			}
+		}
+		# 前進！（NF 前進！）
+		idea_GER_forward = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.05
+				army_morale_factor = 0.05
+			}
+		}
+		# 兵站改革（NF 兵站部門拡充）
+		idea_GER_supply_reform = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				supply_consumption_factor = -0.05
+				out_of_supply_factor = -0.10
+			}
+		}
+		# オストヴァル（NF オストヴァル。要塞の実配置は本リリースでTODO）
+		idea_GER_ostwall = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.05
+			}
+		}
+		# 東西の防壁（NF ヴェストヴァル。オストヴァルを置換）
+		idea_GER_wall_system = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.10
+			}
+		}
+		# 絶対的防御（NF 絶対的防御。東西の防壁を置換）
+		idea_GER_absolute_defence = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.15
+				max_dig_in_factor = 0.10
+			}
+		}
+
 		### 産業・戦時系（産業・戦時NFが付与する） ###
 		# 合理化運動（NF 合理化運動。生産効率上限+5%）
 		idea_GER_rationalization = {

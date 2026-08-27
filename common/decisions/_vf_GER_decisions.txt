@@ -205,7 +205,8 @@ vf_GER_government_affairs = {
 		complete_effect = {
 			clr_country_flag = vf_GER_chancellor_vacant
 			add_stability = 0.03
-			# TODO(VF): 候補2〜3名からの選択（キャラクター実装）は §12-3 の裁定と併せて本リリースで
+			# TODO(VF): 候補2〜3名からの選択は §12-3 の裁定と併せて本リリースで。
+			# βでは暫定の首相を立てず空位のまま安定度だけ回復する（選挙イベント .14 が正式な首相を就ける）
 		}
 	}
 	# 中欧経済圏の提携（Phase 5 のNF「中欧経済圏」が vf_GER_mitteleuropa_unlocked を立てると解禁）

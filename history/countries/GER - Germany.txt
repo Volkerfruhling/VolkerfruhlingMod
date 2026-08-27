@@ -91,6 +91,14 @@ add_to_faction = ENG
 
 recruit_character = GER_Karl_I
 
+# VF: 首相は閣僚枠（prime_minister_idea）の顧問として実装。手動解任不可（can_be_fired = no）。
+# 開始時はプリンツ・マックスが在任。差し替えは event_GER_pol.2 / .14 のスクリプトのみ
+recruit_character = GER_prinz_max
+recruit_character = GER_friedrich_ebert
+recruit_character = GER_wilhelm_marx
+recruit_character = GER_gustav_stresemann
+activate_advisor = vf_GER_pm_prinz_max
+
 set_country_flag = VF_monarch_diplomacy_portrait_button_flag
 
 # VF: 枢密院議長ミヒャエリスは開始時から在職（帝冠領再編ディシジョンのコスト+50%。指示書08 §8-3・§10）。

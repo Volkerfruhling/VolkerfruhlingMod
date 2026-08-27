@@ -75,7 +75,13 @@ country_event = { # 自由主義の宰相
 			factor = 20
 		}
 		add_political_power = -50
-		set_country_flag = vf_GER_chancellor_vacant # TODO(VF): Phase 4 で後継宰相指名ディシジョンを解禁（このフラグが受け口）
+		# プリンツ・マックスは退陣する（首相枠は選挙まで空位。後継宰相指名ディシジョンが解禁される）
+		set_country_flag = vf_GER_chancellor_vacant
+		set_country_flag = vf_GER_prinz_max_retired
+		remove_advisor_role = {
+			character = GER_prinz_max
+			slot = prime_minister_idea
+		}
 		hidden_effect = {
 			set_temp_variable = {
 				vf_temp_bop_kaiser = 5
@@ -617,8 +623,8 @@ country_event = { # 1926年 国民議会選挙（連合の重心を決める）
 	}
 }
 country_event = { # 新内閣の顔ぶれ
-	# TODO(VF): 首相・顧問の差し替え（SPD軸=エーベルト／中央党軸=マルクス（仮）／自由主義軸=シュトレーゼマン（仮））は
-	#           §12-3 の裁定（00_世界の指導者.txt との人名整合）待ち。βはフレーバー＋安定度のみ
+	# 首相顧問（prime_minister_idea。手動交換不可）を連合の重心に応じて差し替える。
+	# SPD軸=エーベルト／中央党軸=マルクス（仮）／自由主義軸=シュトレーゼマン（仮。人名は §12-3 裁定待ち）
 	id = event_GER_pol.14
 	title = event_GER_pol.14.title
 	desc = {
@@ -641,6 +647,42 @@ country_event = { # 新内閣の顔ぶれ
 	}
 
 	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			# 旧首相（プリンツ・マックス）が在任中なら退任させる
+			IF = {
+				limit = {
+					has_idea = vf_GER_pm_prinz_max
+				}
+				set_country_flag = vf_GER_prinz_max_retired
+				remove_advisor_role = {
+					character = GER_prinz_max
+					slot = prime_minister_idea
+				}
+			}
+			clr_country_flag = vf_GER_chancellor_vacant
+			# 連合の重心に応じた新首相を就任させる
+			IF = {
+				limit = {
+					has_country_flag = vf_GER_coalition_spd
+				}
+				activate_advisor = vf_GER_pm_ebert
+			}
+			ELSE_IF = {
+				limit = {
+					has_country_flag = vf_GER_coalition_zentrum
+				}
+				activate_advisor = vf_GER_pm_marx
+			}
+			ELSE_IF = {
+				limit = {
+					has_country_flag = vf_GER_coalition_liberal
+				}
+				activate_advisor = vf_GER_pm_stresemann
+			}
+		}
+	}
 
 	option = {
 		name = event_GER_pol.14.a

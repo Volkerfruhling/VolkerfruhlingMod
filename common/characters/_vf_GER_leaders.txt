@@ -1,20 +1,134 @@
+# =========================================================
+# VF / ドイツ帝国：キャラクター
+# 指示書: .doc/08_GER議会ルート_実装指示書.md §8-1・§12-3
+#
+# 国家元首欄は二元君主（皇帝ヴィルヘルム2世＝Chief_Portrait変数、摂政カール1世＝country_leader）で固定。
+# 政権交代（ヴァイマル連合の勝利で与党socialism化）後もカール1世が元首に留まるよう、
+# NF側で add_country_leader_role により socialism 側のロールを追加する（_vf_focus_GER.txt 参照）。
+#
+# 首相は閣僚枠（prime_minister_idea スロット。common/idea_tags/_VF_idea.txt）の政治顧問として実装。
+# can_be_fired = no により手動での解任・交換は不可。差し替えはスクリプトのみ
+# （開始時=プリンツ・マックス／event_GER_pol.2 選択肢2で退陣／.14 新内閣の顔ぶれで連合の重心に応じて交代）。
+# 首相人名の裁定（2026-08-27 主宰）: プリンツ・マックス／エーベルトは確定。
+# マルクス／シュトレーゼマンは暫定採用（登場方針は了承済み。最終確定は 00_世界の指導者.txt との整合確認後）
+# =========================================================
 characters = {
 	GER_wilhelm_ii = {
 		name = GER_wilhelm_ii
-		
+
 		portraits = {
 			civilian = {
 				large = "GFX_Portrait_Leader_GER_wilhelm_ii"
 			}
 		}
-		
+
 		country_leader = {
 			ideology = paternalistic_conservatism
 			expire = "1936.1.1"
 			id = -1
-			
+
 			traits = {
-				
+
+			}
+		}
+	}
+	# 首相: マクシミリアン・フォン・バーデン（プリンツ・マックス）。開始時から在任
+	GER_prinz_max = {
+		name = GER_prinz_max
+
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_1"
+			}
+		}
+
+		advisor = {
+			slot = prime_minister_idea
+			idea_token = vf_GER_pm_prinz_max
+			ledger = civilian
+			cost = 0
+			# 手動での解任・交換不可（差し替えはスクリプトのみ）
+			can_be_fired = no
+			# 退陣後は候補一覧にも出さない
+			visible = {
+				NOT = {
+					has_country_flag = vf_GER_prinz_max_retired
+				}
+			}
+			traits = {
+				vf_GER_trait_chancellor
+			}
+		}
+	}
+	# 首相候補: フリードリヒ・エーベルト（SPD軸。労働者の信望）
+	GER_friedrich_ebert = {
+		name = GER_friedrich_ebert
+
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_2"
+			}
+		}
+
+		advisor = {
+			slot = prime_minister_idea
+			idea_token = vf_GER_pm_ebert
+			ledger = civilian
+			cost = 0
+			can_be_fired = no
+			visible = {
+				has_country_flag = vf_GER_coalition_spd
+			}
+			traits = {
+				vf_GER_trait_chancellor
+			}
+		}
+	}
+	# 首相候補: ヴィルヘルム・マルクス（中央党軸。南部の融和者。暫定採用＝2026-08-27 裁定）
+	GER_wilhelm_marx = {
+		name = GER_wilhelm_marx
+
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_3"
+			}
+		}
+
+		advisor = {
+			slot = prime_minister_idea
+			idea_token = vf_GER_pm_marx
+			ledger = civilian
+			cost = 0
+			can_be_fired = no
+			visible = {
+				has_country_flag = vf_GER_coalition_zentrum
+			}
+			traits = {
+				vf_GER_trait_chancellor
+			}
+		}
+	}
+	# 首相候補: グスタフ・シュトレーゼマン（自由主義軸。産業界の代弁者。暫定採用＝2026-08-27 裁定）
+	GER_gustav_stresemann = {
+		name = GER_gustav_stresemann
+
+		portraits = {
+			civilian = {
+				small = "GFX_idea_generic_political_advisor_europe_1"
+			}
+		}
+
+		advisor = {
+			slot = prime_minister_idea
+			idea_token = vf_GER_pm_stresemann
+			ledger = civilian
+			cost = 0
+			can_be_fired = no
+			visible = {
+				has_country_flag = vf_GER_coalition_liberal
+			}
+			traits = {
+				vf_GER_trait_chancellor
 			}
 		}
 	}

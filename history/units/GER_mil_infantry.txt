@@ -1,0 +1,62 @@
+# =========================================================
+# VF / GER: NF「歩兵強化」（focus_GER_mil_infantry_strengthening）が load_oob で生成する増設歩兵
+# 師団テンプレートは GER_1925.txt で定義済みのものを使用
+# =========================================================
+units = {
+	division = {
+		name = "Infanterie-Division"
+		location = 6334
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Infanterie-Division"
+		location = 6334
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Infanterie-Division"
+		location = 537
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Infanterie-Division"
+		location = 537
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Infanterie-Division"
+		location = 478
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Infanterie-Division"
+		location = 478
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Infanterie-Division"
+		location = 6334
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Infanterie-Division"
+		location = 537
+		division_template = "Infanterie-Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+}

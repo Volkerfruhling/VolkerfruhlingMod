@@ -1,0 +1,33 @@
+# =========================================================
+# VF / GER: NF「騎兵強化」（focus_GER_mil_cavalry_strengthening）が load_oob で生成する騎兵旅団
+# =========================================================
+units = {
+	division = {
+		name = "Kavallerie-Brigade"
+		location = 6334
+		division_template = "Kavallerie-Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Kavallerie-Brigade"
+		location = 537
+		division_template = "Kavallerie-Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Kavallerie-Brigade"
+		location = 478
+		division_template = "Kavallerie-Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+	division = {
+		name = "Kavallerie-Brigade"
+		location = 6334
+		division_template = "Kavallerie-Brigade"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+	}
+}

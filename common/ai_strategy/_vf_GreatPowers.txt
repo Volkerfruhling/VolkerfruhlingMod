@@ -1,0 +1,285 @@
+# =========================================================
+# VF / 大国のAI軍拡戦略
+# 指示書: .doc/08_GER議会ルート_実装指示書.md（GERのβ合格ライン「1929年秋の大戦で戦える」）
+#
+# 背景: この世界は「凍りついた平和」で1929年まで戦争の脅威が無く、
+# バニラAIは軍拡の動機を持たない（GERは開戦時に44個師団しかいなかった。2026-08-27 実機確認）。
+# 段階エスカレーション方式で、バルカン戦争（1927）→講和（1928）→クロアチア危機（1929）と
+# 進むにつれて大国の建軍・軍需転換・開戦準備を強めていく。
+#
+# 関連ファイル:
+#   common/ai_strategy/_vf_Balkan.txt         … バルカン諸国側のAI戦略（同じフラグを読む）
+#   events/_vf_events_SER.txt                 … vf_started/ended_balkan_war
+#   events/_vf_events_greatwar.txt            … vf_croatia_crisis_started / vf_greatwar_started
+#   common/national_focus/_vf_focus_GER.txt   … NF側の直接軍拡（load_oob・徴兵法・軍需工場）と併用
+#
+# 読むフラグ: vf_started_balkan_war / vf_ended_balkan_war / vf_croatia_crisis_started / vf_greatwar_started
+# =========================================================
+
+### ドイツ帝国 ###
+# 平時（1925〜）: 恒常的な建軍意欲の底上げ
+VF_GER_base_buildup_strategy = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		original_tag = GER
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 100
+	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 25
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 80
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = artillery
+		value = 40
+	}
+}
+# バルカン戦争勃発（1927）〜: 半島の戦火を見て軍備を意識する
+VF_GER_balkan_war_buildup_strategy = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		original_tag = GER
+		has_global_flag = vf_started_balkan_war
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 50
+	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 25
+	}
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 20
+	}
+}
+# 講和（1928春）〜: 露仏のセルビア接近を受けて本格的な戦争準備へ
+VF_GER_prewar_buildup_strategy = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		original_tag = GER
+		has_global_flag = vf_ended_balkan_war
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 100
+	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 50
+	}
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 20
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SER
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = RUS
+		value = 50
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = FRA
+		value = 50
+	}
+}
+# クロアチア危機（1929夏）〜: 総動員
+VF_GER_crisis_buildup_strategy = {
+	allowed = {
+		original_tag = GER
+	}
+	enable = {
+		original_tag = GER
+		has_global_flag = vf_croatia_crisis_started
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = force_build_armies
+		value = 100
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SER
+		value = 200
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = RUS
+		value = 150
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = FRA
+		value = 150
+	}
+}
+
+### 露仏協商（RUS・FRA）: 対独開戦に備える ###
+VF_RUS_buildup_strategy = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		original_tag = RUS
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 100
+	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 25
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 80
+	}
+}
+VF_RUS_prewar_strategy = {
+	allowed = {
+		original_tag = RUS
+	}
+	enable = {
+		original_tag = RUS
+		has_global_flag = vf_ended_balkan_war
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 50
+	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 50
+	}
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 20
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = GER
+		value = 100
+	}
+}
+VF_FRA_buildup_strategy = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		original_tag = FRA
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 100
+	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 25
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = infantry
+		value = 80
+	}
+}
+VF_FRA_prewar_strategy = {
+	allowed = {
+		original_tag = FRA
+	}
+	enable = {
+		original_tag = FRA
+		has_global_flag = vf_ended_balkan_war
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 50
+	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 50
+	}
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 20
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = GER
+		value = 100
+	}
+}
+
+### 英独同盟（ENG）: 同盟国ドイツの戦争に備える ###
+VF_ENG_buildup_strategy = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		original_tag = ENG
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = ai_wanted_divisions_factor
+		value = 50
+	}
+	ai_strategy = {
+		type = force_build_armies
+		value = 25
+	}
+}
+VF_ENG_prewar_strategy = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		original_tag = ENG
+		has_global_flag = vf_ended_balkan_war
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = force_build_armies
+		value = 50
+	}
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = 15
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = FRA
+		value = 75
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = RUS
+		value = 75
+	}
+}
