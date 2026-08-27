@@ -15,15 +15,14 @@ state = {
 		buildings = {
 			infrastructure = 3 #was: 6
 			industrial_complex = 2
+			# VF 2026-08-28: 同一州内で province 6332 の buildings ブロックが2つあり、
+			# 後の { naval_base = 5 } が前の { bunker = 1 } を上書きしてトーチカが消えていた
+			# （error.log: statehistory.cpp:245）。1ブロックに統合
 			6332 = {
 				bunker = 1
-
+				naval_base = 5
 			}
 			anti_air_building = 2
-			6332 = {
-				naval_base = 5
-
-			}
 			air_base = 6
 		}
 		

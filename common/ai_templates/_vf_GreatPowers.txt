@@ -1,0 +1,230 @@
+# =========================================================
+# VF / 大国のAI師団設計図（仮）
+#
+# 【なぜこのファイルが必要か】
+# バニラ由来の common/ai_templates/generic.txt は GER / FRA / ITA / RUS を blocked_for で除外している。
+# バニラでは各国専用の ai_templates ファイルが別に存在するためだが、このModにはそれが無い。
+# 結果としてこの4か国は「どの役割の設計図も持たない」状態になり、AIが師団を設計・更新・生産できない。
+# （09 §7 の「開戦時にGERが44個師団しかいない」問題の主因。ENG/USA/JAPは除外されていないので generic を使えている）
+#
+# 【方針】
+# βでは4か国共通の最小構成を与える。国ごとの作り分けは本リリースで行う（下の TODO(VF) 参照）。
+# 開始時OOB（history/units/*_1925.txt）の編成に近い形を early に置き、AIが開幕から
+# 大規模な再設計でXPを浪費しないようにしてある。
+#
+# 関連ファイル:
+#   common/ai_templates/generic.txt         … ENG/USA/JAP等が使う汎用設計図。4か国を blocked_for で除外している
+#   common/ai_strategy/_vf_GreatPowers.txt  … role_ratio（infantry/artillery）と ai_wanted_divisions_factor
+#   history/units/GER_1925.txt 他            … 開始時OOBの division_template
+#
+# 参照する role: infantry / armor / mountaineer
+#   ※ generic.txt に実在する role トークンのみを使用している（cavalry_generic と motorized_generic は
+#     generic.txt 側で role = marine になっているが、バニラ由来のため本ファイルでは踏襲せず触らない）
+# =========================================================
+
+### 歩兵線（4大国共通） ###
+vf_major_line_infantry = {
+	available_for = {
+		GER
+		FRA
+		ITA
+		RUS
+	}
+	role = infantry
+	upgrade_prio = {
+		base = 100
+	}
+
+	# 1925年の標準師団。開始時OOBの「Infanterie-Division」「Russian Infantry Division」等に対応する
+	vf_major_infantry_early = {
+		upgrade_prio = {
+			base = 10
+		}
+		can_upgrade_in_field = {
+			has_equipment = {
+				infantry_equipment > 100
+			}
+		}
+		target_template = {
+			support = {
+				engineer = 1
+				artillery = 1
+			}
+			regiments = {
+				infantry = 9
+			}
+		}
+		replace_at_match = 0.1
+		target_min_match = 0.1
+		replace_with = vf_major_infantry_upgraded
+	}
+
+	# 軍需工場が育ってきたら砲兵を組み込んだ編成へ移行する
+	vf_major_infantry_upgraded = {
+		upgrade_prio = {
+			base = 0
+			modifier = {
+				add = 10000
+				num_of_military_factories > 18
+			}
+		}
+		can_upgrade_in_field = {
+			has_equipment = {
+				infantry_equipment > 100
+			}
+		}
+		target_template = {
+			support = {
+				engineer = 1
+				recon = 1
+				artillery = 1
+			}
+			regiments = {
+				infantry = 9
+				artillery_brigade = 1
+			}
+		}
+		replace_at_match = 0.1
+		target_min_match = 0.1
+	}
+
+	# 認識用（優先度0）。開始時の騎兵旅団を歩兵線の一部としてAIに認識させ、
+	# 更新の対象に含める。ここが無いと騎兵師団が「役割不明」のまま放置される
+	vf_major_cavalry_legacy = {
+		upgrade_prio = {
+			base = 0
+		}
+		can_upgrade_in_field = {
+			has_equipment = {
+				infantry_equipment > 100
+			}
+		}
+		target_template = {
+			support = {
+				recon = 1
+				artillery = 1
+			}
+			regiments = {
+				cavalry = 4
+			}
+		}
+		replace_at_match = 0.1
+		target_min_match = 0.1
+	}
+}
+
+### 機甲線（4大国共通） ###
+vf_major_line_armor = {
+	available_for = {
+		GER
+		FRA
+		ITA
+		RUS
+	}
+	role = armor
+	upgrade_prio = {
+		base = 10
+		modifier = {
+			add = 10000
+			OR = {
+				has_tech = basic_medium_tank
+				has_tech = basic_medium_tank_chassis
+			}
+		}
+	}
+
+	vf_major_light_armor = {
+		upgrade_prio = {
+			base = 10
+		}
+		can_upgrade_in_field = {
+			has_equipment = {
+				light_tank_chassis < 250
+			}
+		}
+		target_template = {
+			support = {
+				mot_recon = 1
+				engineer = 1
+			}
+			regiments = {
+				light_armor = 6
+				motorized = 4
+			}
+		}
+		replace_at_match = 0.1
+		target_min_match = 0.1
+		replace_with = vf_major_medium_armor
+	}
+
+	vf_major_medium_armor = {
+		upgrade_prio = {
+			base = 0
+			modifier = {
+				add = 10000
+				OR = {
+					has_tech = basic_medium_tank
+					has_tech = basic_medium_tank_chassis
+				}
+			}
+		}
+		can_upgrade_in_field = {
+			has_equipment = {
+				medium_tank_chassis < 500
+			}
+		}
+		target_template = {
+			support = {
+				mot_recon = 1
+				engineer = 1
+				logistics_company = 1
+			}
+			regiments = {
+				medium_armor = 6
+				motorized = 4
+			}
+		}
+		replace_at_match = 0.1
+		target_min_match = 0.1
+	}
+}
+
+### 山岳線（GER・ITA のみ。開始時OOBに山岳部隊を持つ2か国） ###
+vf_major_line_mountaineer = {
+	available_for = {
+		GER
+		ITA
+	}
+	role = mountaineer
+	upgrade_prio = {
+		base = 100
+	}
+
+	vf_major_mountaineer = {
+		upgrade_prio = {
+			base = 100
+		}
+		can_upgrade_in_field = {
+			has_equipment = {
+				infantry_equipment > 100
+			}
+		}
+		target_template = {
+			support = {
+				engineer = 1
+				recon = 1
+			}
+			regiments = {
+				mountaineers = 6
+			}
+		}
+		replace_at_match = 0.1
+		target_min_match = 0.1
+	}
+}
+
+# TODO(VF): 本リリースで国ごとに分割する。想定する差別化:
+#   GER … 浸透戦術・突撃工兵を反映した攻勢型（軍事NF「機動戦」「大規模突破」と連動）
+#   FRA … 縦深防御・砲兵重視（要塞線ドクトリンと連動）
+#   RUS … 人海型の安価な大量編成（人的資源は潤沢だが工業が細い）
+#   ITA … 山岳・軽師団中心

@@ -1,4 +1,9 @@
-capital = 797
+# VF 2026-08-28: capital = 797 は CAR が保有していない州で、error.log に
+# 「Attempting to set capital state #797 for ... they dont own it!」が出ていた
+# （多数の国が capital = 797（OTT領）のままというコピー由来の不具合）。
+# 保有州のうち勝利点・インフラが最上位の 317（317-Nicaragua.txt）を採用する。
+# TODO(VF): 各地域の担当者は本来の首都に差し替えること
+capital = 317
 
 oob = "standard_templates"
 # Starting tech

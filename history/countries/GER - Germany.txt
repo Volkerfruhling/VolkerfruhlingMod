@@ -82,6 +82,9 @@ if = {
 set_research_slots = 4
 set_convoys = 50
 set_stability = 0.75
+# VF: 追補10 §1。他の大国（RUS 0.29 / ENG 0.49）と横並びで明示。
+# 経済法を平時にAIが引き上げられる下限（low > 0.15 / partial > 0.25）を跨ぐ値
+set_war_support = 0.30
 
 # VF: 英独同盟（GER + ENG）。監査（指示書 §4-0-0）時点で未実装だったため新設。
 # ENGの大戦参戦（vf_greatwar.6）はこの陣営連鎖に依存する（T12・T8）。
@@ -124,7 +127,19 @@ set_popularities = {
 }
 
 # 法律
+# VF: 追補10 §1（記述漏れの修正 2026-08-27 主宰裁定）。
+#   徴兵法 limited_conscription … RUSと同格。この Mod の extensive_conscription は
+#     available に has_war = yes を要求するため、AIは平時に徴兵法を上げられない。
+#     開始時の水準がNF「国土防衛計画」まで固定される（09 §7 の44個師団問題の直接原因）
+#   経済法 low_economic_mobilisation … 既定 civilian_economy の1段上、RUS(partial)の1段下
+#   貿易法 export_focus … 既定と同一。明示のみ（ENGの free_trade は海洋交易国ゆえの特例）
+#   → 引き上げるNF: 軍事「国土防衛計画」=extensive / 戦時「緊急動員」=service_by_requirement
+#      戦時「戦時経済体制」=war_economy / 戦時「軍需優先経済」=tot_economic_mobilisation
 add_ideas = {
+	limited_conscription
+	low_economic_mobilisation
+	export_focus
+
 	Parliamentary_democracy
 	Incomplete_constitution
 	Universal_suffrage

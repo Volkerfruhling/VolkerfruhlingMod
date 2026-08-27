@@ -8,6 +8,9 @@
 # 進むにつれて大国の建軍・軍需転換・開戦準備を強めていく。
 #
 # 関連ファイル:
+#   common/ai_templates/_vf_GreatPowers.txt   … **本ファイルの前提**。GER/FRA/ITA/RUS のAI師団設計図。
+#                                               これが無いと4か国はどの役割の設計図も持たず、
+#                                               下の force_build_armies / role_ratio が空振りする
 #   common/ai_strategy/_vf_Balkan.txt         … バルカン諸国側のAI戦略（同じフラグを読む）
 #   events/_vf_events_SER.txt                 … vf_started/ended_balkan_war
 #   events/_vf_events_greatwar.txt            … vf_croatia_crisis_started / vf_greatwar_started
@@ -18,6 +21,12 @@
 
 ### ドイツ帝国 ###
 # 平時（1925〜）: 恒常的な建軍意欲の底上げ
+#
+# 追補10 §1-2（2026-08-27）: GERの開始時法（limited_conscription / low_economic_mobilisation）を
+# history に明記したことで、平時の人的資源が約1.67倍・工場建設ペナルティが -30%→-10% となり、
+# AI建軍が自然に進むようになった。二重に効きすぎないよう平時の底上げを 100 → 50 へ半減。
+# 段階合計: 平時50 → バルカン戦争後100 → 講和後200（RUS/FRAは同時点で150）。
+# 開戦時の師団数が目安（70〜90）を大きく外れた場合は、まずこの値を戻す/削る（唯一のノブ）
 VF_GER_base_buildup_strategy = {
 	allowed = {
 		original_tag = GER
@@ -28,7 +37,7 @@ VF_GER_base_buildup_strategy = {
 	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = ai_wanted_divisions_factor
-		value = 100
+		value = 50
 	}
 	ai_strategy = {
 		type = force_build_armies

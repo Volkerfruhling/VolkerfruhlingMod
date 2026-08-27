@@ -14,9 +14,14 @@ state = {
 		buildings = {
 			infrastructure = 3 #was: 6
 			industrial_complex = 1
-			925 = {
-				naval_base = 4
-			}
+			# VF 2026-08-28: province 925 は州の切り直しで state 157 の所有から外れており、
+			# この指定はエンジンに無視されていた（error.log: statehistory.cpp:315
+			# "Trying to set province building in state that doesn't own it"）。
+			# 挙動を変えないため無効化する。現在の所属は 990-Marche（ITA）。
+			# TODO(VF): 地図担当者はこの軍港を移設先の州へ再定義するか、廃止するかを判断すること
+			#925 = {
+			#naval_base = 4
+			#}
 			6831 = {
 				naval_base = 1
 			}

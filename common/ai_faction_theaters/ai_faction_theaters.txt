@@ -610,7 +610,8 @@ middle_east = {
 		236 # South Arabia
 		239 # Alborz
 		116 # Central Iranian Range
-		298 # Eastern Zagros
+		# VF 2026-08-28: リージョン298はこのModの地図に存在しない（最大294）。error.log 対策で無効化
+		#298 # Eastern Zagros
 		
 	}
 	cancel = {
@@ -651,12 +652,14 @@ persia = {
 	regions = {
 		239 # Alborz
 		116 # Central Iranian Range
-		298 # Eastern Zagros
+		# VF 2026-08-28: リージョン298はこのModの地図に存在しない（最大294）。error.log 対策で無効化
+		#298 # Eastern Zagros
 		203 # Persian Gulf
 		232 # Levant
 		28 # Middle East
 		241 # Dash-E Kavir
-		297 # Eastern Iranian Range
+		# VF 2026-08-28: リージョン297はこのModの地図に存在しない（最大294）。error.log 対策で無効化
+		#297 # Eastern Iranian Range
 		291 # Baluchistan
 		289 # South Afghanistan 
 		134 # Caucasus
@@ -863,9 +866,11 @@ northern_india = {
 		162 # North Afghanistan
 		289 # South Afghanistan
 		291 # Baluchistan
-		296 # Gujarat
+		# VF 2026-08-28: リージョン296はこのModの地図に存在しない（最大294）。error.log 対策で無効化
+		#296 # Gujarat
 		251  # Ngari
-		297  # Eastern Iranian range
+		# VF 2026-08-28: リージョン297はこのModの地図に存在しない（最大294）。error.log 対策で無効化
+		#297  # Eastern Iranian range
 		104  # Arabian Sea
 	}
 	cancel = {

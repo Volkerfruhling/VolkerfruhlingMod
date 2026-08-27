@@ -20,9 +20,14 @@ state={
 			1468 = {
 				naval_base = 2
 			}
-			4696 = {
-				naval_base = 2
-			}
+			# VF 2026-08-28: province 4696 は州の切り直しで state 719 の所有から外れており、
+			# この指定はエンジンに無視されていた（error.log: statehistory.cpp:315
+			# "Trying to set province building in state that doesn't own it"）。
+			# 挙動を変えないため無効化する。現在の所属は 681-Soviet Lakes（CAP）。
+			# TODO(VF): 地図担当者はこの軍港を移設先の州へ再定義するか、廃止するかを判断すること
+			#4696 = {
+			#naval_base = 2
+			#}
 		}
 		victory_points = {
 			1468 3 

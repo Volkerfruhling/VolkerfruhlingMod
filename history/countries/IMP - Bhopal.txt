@@ -1,4 +1,17 @@
-capital = 797
+# =========================================================
+# VF / IMP（ボーパール王国）
+#
+# 2026-08-28 新規作成。common/country_tags/05_South_Asia.txt でタグは定義されていたが
+# history ファイルが存在せず、error.log に以下が出ていた:
+#   history.cpp:279  IMP - is missing a history file
+#   country.cpp:7156 IMP has NO capital defined
+# 首都が無いとAIが機能せず降伏判定も正しく働かないため、近隣国 KAS - Kashmir.txt の
+# 構成をそのまま踏襲した最小構成を用意する。
+#
+# TODO(VF): 首都は暫定。保有州は437のみ（勝利点5・軍需/民需工場あり）。
+#           南アジア担当者は首都・政体・国民精神を本来の設定に差し替えること
+# =========================================================
+capital = 437
 
 oob = "standard_templates"
 # Starting tech
@@ -155,7 +168,7 @@ set_politics = {
 
 }
 set_popularities = {
-	liberalism = 100 
+	liberalism= 100 
 }
 
 add_ideas = {

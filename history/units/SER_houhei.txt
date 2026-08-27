@@ -1,3 +1,16 @@
+# =========================================================
+# VF / SER: NF「闇市場からの調達」（focus_SER_eco_source_from_black_market）が load_oob で読む
+#
+# 2026-08-28（主宰裁定）: regiments に支援型の `artillery` を2つ置いていたため
+# error.log に `Subunit is of support type: artillery`（history/units/SER_houhei.txt:14）が出ていた。
+# エンジンはこの2行を無視しており、テンプレートは実際には歩兵9のみとして生成されていた。
+# バルカン戦争（1927）の戦力比を動かさないため、**現在の実挙動に合わせて砲兵2個を削除**する
+# （`artillery_brigade` へ直して設計意図どおりにする案は不採用。06/07 で実機確認済みの講和 tier が動くため）。
+#
+# 注記: このファイルには `units = {}` ブロックが無く、テンプレートを定義するだけで師団を生成していない。
+# NF側は装備の備蓄付与と併せて師団の追加を意図していた可能性があるが、
+# 師団を足すとSER側の戦力が増えるため本セッションでは触っていない（要判断）。
+# =========================================================
 division_template = {
 	name = "Millita9a"
 	regiments = {
@@ -10,7 +23,5 @@ division_template = {
 		infantry = { x = 2 y = 0 }
 		infantry = { x = 2 y = 1 }
 		infantry = { x = 2 y = 2 }
-		artillery = { x = 3 y = 0 }
-		artillery = { x = 3 y = 1 }
 	}
 }

@@ -65,7 +65,7 @@ spriteTypes = {
 		legacy_lazy_load = no
 	}
 	spriteType = {
-		name = "GFX_goal_focus_ITA_pol_dem_facta_regime_strict_guard"
+		name = "GFX_goal_focus_ITA_pol_dem_facta_regime_strict_guard_shine"
 		texturefile = "gfx/interface/goals/ITA/goal_focus_ITA_pol_dem_facta_regime_strict_guard.dds"
 			effectFile = "gfx/FX/buttonstate.lua"
 		animation = {

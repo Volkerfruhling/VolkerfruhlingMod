@@ -524,6 +524,15 @@ guiTypes = {
 			Orientation = CENTER
 		}
 		
+		# VF 2026-08-28: 本体1.19系が要求する要素。欠落していたため error.log に
+		# 「nationalfocusview.gui (line 493): Could not find "overlay" in window national_focus_item」が
+		# 出ていた（旧ログで543行）。バニラ interface/nationalfocusview.gui から移植
+		iconType = {
+		    name = "overlay"
+		    position = { x = -9 y = -28 }
+		    alwaystransparent = yes
+		}
+
 		iconType = {
 			name = "historical"
 			position = { x = 140 y = 71 }

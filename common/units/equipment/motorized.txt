@@ -48,7 +48,50 @@ equipments = {
 		year = 1900
 
 		archetype = motorized_equipment
+		parent = motorized_equipment_0 # VF 2026-08-28: バニラにある指定が欠落していたので補完
 		priority = 30			
+	}
+
+	# VF 2026-08-28: 以下2つはバニラ common/units/equipment/motorized.txt から移植。
+	# 本ファイルが旧バージョンのコピーで motorbike_equipment を欠いていたため、
+	# これを参照する common/units/military_police.txt が読み込めず、error.log に
+	# 「Invalid equipment type: motorbike_equipment」「Unexpected token: motorbike_equipment」が出ていた。
+	# year はこのファイルの他の archetype と同じく 1900 に揃えてある（バニラは 1938。開始1925のため）
+	motorbike_equipment = {
+		year = 1900
+
+		is_archetype = yes
+		picture = archetype_motorized_equipment
+		is_buildable = no
+		type = {
+			motorized
+			support
+		}
+		group_by = archetype
+
+		interface_category = interface_category_land
+
+		maximum_speed = 12
+		reliability = 0.9
+
+		breakthrough = 1
+
+		#Space taken in convoy
+		lend_lease_cost = 2
+
+		build_cost_ic = 1.5
+		resources = {
+			rubber = 1
+			steel = 1
+		}
+
+		fuel_consumption = 0.5
+	}
+
+	motorbike_equipment_1 = {
+
+		archetype = motorbike_equipment
+		priority = 1 #Very low
 	}
 
 }

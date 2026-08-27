@@ -14,12 +14,13 @@ state = {
 			industrial_complex = 2
 			air_base = 1
 
+			# VF 2026-08-28: 同一州内で province 12589 の buildings ブロックが2つあり、
+			# 後の { dam = 1 } が前の { naval_base = 4 } を上書きして軍港が消えていた
+			# （error.log: statehistory.cpp:245 Province buildings being overridden）。1ブロックに統合
 			12589 = {
 				naval_base = 4
+				dam = 1 # Woodhead Dam
 			}
-
-			# Woodhead Dam
-			12589 = { dam = 1 }
 
 		}
 

@@ -54,6 +54,18 @@ guiTypes = {
 			alwaystransparent = yes
 		}
 
+		# VF 2026-08-28: 本体1.19系が要求する要素。欠落していたため error.log に
+		# 「mapicons.gui (line 17): Could not find "active_abilities" in window unit_counter」が
+		# 出続けていた（旧ログで973行）。バニラ interface/mapicons.gui から移植。
+		# 直下の iconType "active_ability"（単数）は旧バージョンの名残で現行エンジンは参照しない
+		gridBoxType = {
+			name = "active_abilities"
+			position = { x=55 y=-9 }
+			slotsize = { width=25 height=25 }
+			max_slots_vertical = 1
+			format = "UPPER_LEFT"
+		}
+
 		iconType = {
 			name = "active_ability"
 			spriteType = "GFX_onmap_unit_counter_active_ability"
@@ -791,6 +803,18 @@ guiTypes = {
 				maxHeight = 20
 				alwaystransparent = yes
 				format = left
+			}
+
+			# VF 2026-08-28: 本体1.19系が要求する要素。欠落していたため error.log に
+			# 「mapicons.gui (line 748): Could not find "dam_icon" in window construction_info_window」が
+			# 出ていた（旧ログで256行）。バニラ interface/mapicons.gui から移植
+			iconType = {
+				name = "dam_icon"
+				quadTextureSprite = "GFX_dam_icon_small"
+				position = { x=64 y=21 }
+				frame = 1
+				scale = 0.8
+				Orientation = "UPPER_LEFT"
 			}
 		}
 

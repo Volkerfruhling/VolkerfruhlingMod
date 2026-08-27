@@ -1,6 +1,32 @@
 # =========================================================
 # VF / GER: NF「騎兵強化」（focus_GER_mil_cavalry_strengthening）が load_oob で生成する騎兵旅団
+#
+# 【重要】師団テンプレートは必ずこのファイル内で定義すること（2026-08-28 修正）。
+# 従来は GER_1925.txt の "Kavallerie-Brigade" を名前で参照するだけだったため、load_oob 実行時に
+# テンプレート名を解決できず、error.log に以下が出て**騎兵4個師団が1個も生成されなかった**:
+#   persistent.cpp:67  Malformed token: Kavallerie-Brigade
+#   country.cpp:1301   Invalid division
+#   unit.cpp:3475      Kavallerie-Brigade ( GER ) unit in 6334 has no division template set
+# （実機ログ 1930.01.22。AIが ai_templates で師団設計を管理するようになり、
+#   使われなくなった騎兵テンプレートが失われたことが引き金と見られる）
+# 動作しているSER側のOOB（history/units/SER_mountain.txt）も同じくテンプレートを同梱している。
 # =========================================================
+division_template = {
+	name = "Kavallerie-Brigade"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+
+	support = {
+		recon = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+
 units = {
 	division = {
 		name = "Kavallerie-Brigade"

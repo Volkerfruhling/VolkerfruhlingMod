@@ -180,7 +180,7 @@ add_ideas = {
 	Promotion_of_women_s_employment
 	Neutral_stance
 	Compulsory_first_semester_secondary_education
-	10_hour_workday
+	_10_hour_workday
 	Emerging_countries
 	Early_20th_century_armies
 	Total_draft_exemption

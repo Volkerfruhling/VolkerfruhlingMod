@@ -1,88 +1,119 @@
 # =========================================================
 # VF / GER: 戦時NF「予備役召集」（focus_GER_war_call_up_reserves）が load_oob で生成する予備役師団
+#
+# 【重要】師団テンプレートは必ずこのファイル内で定義すること（2026-08-28 修正）。
+# GER_1925.txt の定義を名前で参照するだけだと、load_oob 実行時にテンプレート名を解決できず
+# 師団が1個も生成されない（GER_mil_cavalry.txt で実際に発生。error.log 1930.01.22）。
+#
+# ここでは主力の "Infanterie-Division" を再定義せず、**専用の "Reserve-Division" を用意する**。
+# 理由: 本NFは開戦後に発火するため、主力テンプレートを1925年仕様で上書きすると
+# AIが ai_templates で積み上げた改良（軍需工場18超での砲兵大隊追加など）を戦時に剥がしてしまう。
+# 予備役は装備・練度が劣るという設定にも合う（支援は工兵のみ、装備優先度は低）。
 # =========================================================
+division_template = {
+	name = "Reserve-Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+
+	priority = 0
+}
+
 units = {
 	division = {
-		name = "Infanterie-Division"
+		name = "Reserve-Division"
 		location = 6334
-		division_template = "Infanterie-Division"
+		division_template = "Reserve-Division"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
 	}
 	division = {
-		name = "Infanterie-Division"
+		name = "Reserve-Division"
 		location = 537
-		division_template = "Infanterie-Division"
+		division_template = "Reserve-Division"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
 	}
 	division = {
-		name = "Infanterie-Division"
+		name = "Reserve-Division"
 		location = 478
-		division_template = "Infanterie-Division"
+		division_template = "Reserve-Division"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
 	}
 	division = {
-		name = "Infanterie-Division"
+		name = "Reserve-Division"
 		location = 6334
-		division_template = "Infanterie-Division"
+		division_template = "Reserve-Division"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
 	}
 	division = {
-		name = "Infanterie-Division"
+		name = "Reserve-Division"
 		location = 537
-		division_template = "Infanterie-Division"
+		division_template = "Reserve-Division"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
 	}
 	division = {
-		name = "Infanterie-Division"
+		name = "Reserve-Division"
 		location = 478
-		division_template = "Infanterie-Division"
+		division_template = "Reserve-Division"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
 	}
 	division = {
-		name = "Infanterie-Division"
+		name = "Reserve-Division"
 		location = 6334
-		division_template = "Infanterie-Division"
+		division_template = "Reserve-Division"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
 	}
 	division = {
-		name = "Infanterie-Division"
+		name = "Reserve-Division"
 		location = 537
-		division_template = "Infanterie-Division"
+		division_template = "Reserve-Division"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
 	}
 	division = {
-		name = "Infanterie-Division"
+		name = "Reserve-Division"
 		location = 478
-		division_template = "Infanterie-Division"
+		division_template = "Reserve-Division"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
 	}
 	division = {
-		name = "Infanterie-Division"
+		name = "Reserve-Division"
 		location = 6334
-		division_template = "Infanterie-Division"
+		division_template = "Reserve-Division"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
 	}
 	division = {
-		name = "Infanterie-Division"
+		name = "Reserve-Division"
 		location = 537
-		division_template = "Infanterie-Division"
+		division_template = "Reserve-Division"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
 	}
 	division = {
-		name = "Infanterie-Division"
+		name = "Reserve-Division"
 		location = 478
-		division_template = "Infanterie-Division"
+		division_template = "Reserve-Division"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.5
 	}

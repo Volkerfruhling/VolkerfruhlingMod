@@ -198,7 +198,11 @@ recruit_character = IST_Istrian_Stewardship_Committee
 
 add_ideas = {
 	International_Administrative_Region
-	Government_of_the_International_Control_Area
+	# VF 2026-08-28: Government_of_the_International_Control_Area はどこにも定義されておらず
+	# error.log に `add_ideas: Invalid idea` が出ていた。constitution_idea グループの欠落なので
+	# 実在する既定値を明示する（イストリアは国際共同管理下で独自の憲法を持たない）。
+	# 固有の精神として作り直す場合は common/ideas/ に constitution_idea として追加すること
+	Constitution_not_yet_enacted
 	Limited_elections
 	Separation_of_church_and_state
 	Paternalistic_society

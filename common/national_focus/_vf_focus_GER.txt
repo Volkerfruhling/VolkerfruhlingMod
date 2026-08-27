@@ -1089,9 +1089,17 @@ focus_tree = {
 			factor = 20
 		}
 		completion_reward = {
+			# 追補10 §3-3（2026-08-27 主宰裁定 = 案(b)）:
+			# lore の「民主主義イデオロギーの支持率 +10%」は、このModに democracy が存在しないため
+			# ヴァイマル連合の連立の実態（SPD = socialism ＋ 中央党・自由主義者 = liberalism）へ読み替える。
+			# 中央党は liberalism のサブ christian_democracism に対応するため liberalism でまとめて表現する
 			add_popularity = {
 				ideology = socialism
-				popularity = 0.10
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = liberalism
+				popularity = 0.05
 			}
 		}
 
@@ -1142,7 +1150,10 @@ focus_tree = {
 				}
 				vf_GER_recalc_power_balance = yes
 			}
-			# TODO(VF): 「正当性+50」は亡命政府用の値のため対応を保留（主宰へ報告）
+			# 追補10 §3-4（2026-08-27）: lore の「正当性 +50」は**恒久的に削除**した。
+			# HOI4 の legitimacy は亡命政府（government in exile）専用のメカニクスであり、
+			# 主権国家である GER には値そのものが存在しない（このModにも独自の正当性メカニクスは無い。
+			# `legitimacy_*` はバニラの指導者特性でのみ使用）。上の安定度・PP・イデオロギー変動耐性で代替する
 		}
 
 	}
@@ -1261,10 +1272,11 @@ focus_tree = {
 			factor = 50
 		}
 		completion_reward = {
-			# 経済法を戦時経済へ
+			# 経済法を戦時経済へ（開始時 low_economic_mobilisation から2段上。追補10 §1-2）
+			# NOT に複数条件を並べると NOT(AND) になるため NOR を使う
 			IF = {
 				limit = {
-					NOT = {
+					NOR = {
 						has_idea = war_economy
 						has_idea = tot_economic_mobilisation
 					}
@@ -1395,7 +1407,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			# 経済法を総動員体制へ（war_economy から自動で置き換わる）
-			add_ideas = tot_economic_mobilisation
+			IF = {
+				limit = {
+					NOT = { has_idea = tot_economic_mobilisation }
+				}
+				add_ideas = tot_economic_mobilisation
+			}
 		}
 
 	}
@@ -1547,7 +1564,18 @@ focus_tree = {
 			factor = 30
 		}
 		completion_reward = {
-			add_ideas = extensive_conscription
+			# 追補10 §1-2: 開始時 limited、平時NF「国土防衛計画」で extensive。
+			# 戦時の緊急動員はそのさらに1段上（要員徴発）
+			IF = {
+				limit = {
+					NOR = {
+						has_idea = service_by_requirement
+						has_idea = all_adults_serve
+						has_idea = scraping_the_barrel
+					}
+				}
+				add_ideas = service_by_requirement
+			}
 		}
 
 	}
@@ -2460,16 +2488,20 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			# GERは開始時に徴兵法を持たない（ウィーン体制の常備軍）。ここで限定徴兵制を導入する
+			# 追補10 §1（2026-08-27 主宰裁定）: GERは開始時に limited_conscription を持つ（history）。
+			# 本NFはその1段上の大規模徴兵制へ引き上げる。
+			# ※ この Mod の extensive_conscription は available に has_war = yes を要求するため、
+			#    平時にこの水準へ到達できるのは本NFだけである（add_ideas は available を無視する）
 			IF = {
 				limit = {
-					NOT = {
-						has_idea = limited_conscription
+					NOR = {
 						has_idea = extensive_conscription
 						has_idea = service_by_requirement
+						has_idea = all_adults_serve
+						has_idea = scraping_the_barrel
 					}
 				}
-				add_ideas = limited_conscription
+				add_ideas = extensive_conscription
 			}
 		}
 

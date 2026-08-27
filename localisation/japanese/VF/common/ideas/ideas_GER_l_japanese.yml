@@ -1,8 +1,7 @@
 ﻿l_japanese:
  ### ドイツ帝国の国民精神（common/ideas/_vf_ideas_GER.txt） ###
  idea_GER_power_balance: "勢力均衡"
- idea_GER_power_balance_desc: "帝国は皇帝、摂政、議会の均衡の上に成り立っている。§Y皇帝派§!: [?vf_GER_bop_kaiser|0]（[?vf_GER_bop_kaiser_share|0]%%）／§Y摂政派§!: [?vf_GER_bop_regent|0]（[?vf_GER_bop_regent_share|0]%%）／§Y議会派§!: [?vf_GER_bop_assembly|0]（[?vf_GER_bop_assembly_share|0]%%）
-枢密院の傾き: [GER.VfGerPrivyTilt]"
+ idea_GER_power_balance_desc: "帝国は皇帝、摂政、議会の均衡の上に成り立っている。§Y皇帝派§!: [?vf_GER_bop_kaiser|0]（[?vf_GER_bop_kaiser_share|0]%%）／§Y摂政派§!: [?vf_GER_bop_regent|0]（[?vf_GER_bop_regent_share|0]%%）／§Y議会派§!: [?vf_GER_bop_assembly|0]（[?vf_GER_bop_assembly_share|0]%%）\n枢密院の傾き: [GER.VfGerPrivyTilt]"
 
  idea_GER_liberal_cabinet: "自由主義の内閣"
  idea_GER_liberal_cabinet_desc: "プリンツ・マックスの内閣は続投を果たした。だがこの信任は無期限ではない。"

@@ -238,10 +238,21 @@ country_event = { # 開戦（世界大戦の発火）
 
 	immediate = {
 		set_global_flag = vf_greatwar_started
-		SER = {
-			declare_war_on = {
-				target = CRO
-				type = annex_everything
+		# VF 2026-08-28: 本イベントは vf_greatwar.5 から days = 14 で遅延発火するため、
+		# その間にSERのAIが自力でCROへ宣戦していることがある（実機 error.log 1929.08.13:
+		# 「SER already at war with CRO」）。既に開戦済みなら宣戦をスキップする。
+		# 挙動は変わらない（どちらの経路でも SER vs CRO の戦争は成立している）
+		IF = {
+			limit = {
+				SER = {
+					NOT = { has_war_with = CRO }
+				}
+			}
+			SER = {
+				declare_war_on = {
+					target = CRO
+					type = annex_everything
+				}
 			}
 		}
 		hidden_effect = {

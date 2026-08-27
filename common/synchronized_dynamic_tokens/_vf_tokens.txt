@@ -48,6 +48,12 @@ RUS_commander
 SPA_King
 SPA_prime_minister
 SPA_Alfonso_XIII
+# VF 2026-08-28: PER（イラン）のトークンが未登録で、error.log に
+# 「Token PER_Shh is a dynamic token, this can cause OOS ...」が出ていた。
+# 定義元 common/characters/_vf_PER_leadsrs.txt / 使用元 history/countries/PER - Iran.txt
+PER_Shh
+PER_Prime_Minister
+PER_Ahmad_Shan
 USA_vice_president
 USA_president
 USA_Charles_Gates_Dawes
